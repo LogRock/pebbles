@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/LogRock/pebbles/compare/v1.1.0...v1.1.1) (2021-11-28)
+
+
+### Bug Fixes
+
+* **project:** :bug: fix release script order ([2780932](https://github.com/LogRock/pebbles/commit/2780932993e3c146d16df019ab83b49eec2c32bd))
+
 # [1.1.0](https://github.com/LogRock/pebbles/compare/v1.0.0...v1.1.0) (2021-11-28)
 
 
