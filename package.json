@@ -44,6 +44,7 @@
     "jest-circus": "^27.3.1",
     "jest-scss-transform": "^1.0.1",
     "jest-watch-typeahead": "^1.0.0",
+    "lint-staged": ">=10",
     "pinst": "^2.1.6",
     "postcss-syntax": "^0.36.2",
     "prettier": "2.5.0",
@@ -107,5 +108,11 @@
         ]
       }
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
+    "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
+    "src/**/*.{js,jsx,ts,tsx}": "yarn jest --bail --findRelatedTests"
   }
 }

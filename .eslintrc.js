@@ -7,6 +7,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["plugin:react/recommended", "standard", "prettier"],
   parser: "@typescript-eslint/parser",
@@ -18,6 +19,10 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-console": "error",
+  },
   ignorePatterns: ["dist/", "node_modules/"],
 };
