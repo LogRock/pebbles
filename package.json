@@ -11,14 +11,15 @@
       "require": "./dist/logrock-pebbles.umd.js"
     }
   },
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -28,6 +29,8 @@
     "@babel/preset-typescript": "^7.16.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.1",
@@ -61,6 +64,7 @@
     "prettier": "2.5.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "semantic-release": "^18.0.1",
     "styled-breakpoints": "^10.0.1",
     "styled-components": "^5.3.3",
     "stylelint": "^14.0.1",
@@ -121,9 +125,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
     "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
     "src/**/*.{js,jsx,ts,tsx}": "yarn jest --bail --findRelatedTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LogRock/pebbles.git"
   }
 }

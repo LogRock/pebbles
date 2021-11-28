@@ -26,7 +26,7 @@ jobs:
       - name: StyleLint
         run: yarn stylelint .
 
-      - name: Test Website
+      - name: Test
         run: yarn jest --coverage
 
       - name: Coverage
