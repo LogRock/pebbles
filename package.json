@@ -1,5 +1,16 @@
 {
-  "name": "pebbles",
+  "name": "@logrock/pebbles",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/logrock-pebbles.umd.js",
+  "module": "./dist/logrock-pebbles.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/logrock-pebbles.es.js",
+      "require": "./dist/logrock-pebbles.umd.js"
+    }
+  },
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
