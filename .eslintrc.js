@@ -1,30 +1,23 @@
 module.exports = {
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: "detect",
+    },
   },
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard'
-  ],
-  parser: '@typescript-eslint/parser',
+  extends: ["plugin:react/recommended", "standard", "prettier"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 13,
-    sourceType: 'module'
+    sourceType: "module",
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
-  rules: {
-  },
-  ignorePatterns: ['dist/', 'node_modules/']
-}
+  plugins: ["react", "@typescript-eslint"],
+  rules: {},
+  ignorePatterns: ["dist/", "node_modules/"],
+};
