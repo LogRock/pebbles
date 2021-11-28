@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/LogRock/pebbles/compare/v1.1.1...v1.1.2) (2021-11-28)
+
+
+### Bug Fixes
+
+* **project:** :bug: fix release message format with gitmoji ([373a684](https://github.com/LogRock/pebbles/commit/373a6846f88285054724d9cdaad340f09f75ff13))
+
 ## [1.1.1](https://github.com/LogRock/pebbles/compare/v1.1.0...v1.1.1) (2021-11-28)
 
 
