@@ -7,5 +7,7 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "conventionalCommits.scopes": [
     "project"
-  ]
+  ],
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }
