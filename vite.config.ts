@@ -1,28 +1,27 @@
-const path = require("path");
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+const path = require('path')
+import preact from '@preact/preset-vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
+   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "@logrock/pebbles",
-      fileName: (format) => `logrock-pebbles.${format}.js`,
+      entry: path.resolve(__dirname, 'lib/main.ts'),
+      name: '@logrock/pebbles',
+      fileName: (format) => `logrock-pebbles.${format}.js`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["react", "styled-components", "styled-breakpoints"],
+      external: ['preact'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          react: "React",
-          "styled-components": "styled-components",
-        },
-      },
-    },
+          preact: 'Preact'
+        }
+      }
+    }
   },
-});
+  plugins: [preact()]
+})

@@ -15,123 +15,19 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
-    "semantic-release": "semantic-release"
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.5.15"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-syntax-jsx": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@stylelint/postcss-css-in-js": "^0.37.2",
-    "@testing-library/dom": "^8.11.1",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/node": "^16.11.10",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/styled-components": "^5.1.15",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "@vitejs/plugin-react": "^1.0.0",
-    "babel-jest": "^27.3.1",
-    "babel-preset-react-app": "^10.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.1",
-    "eslint-plugin-react": "^7.27.1",
-    "husky": "^7.0.4",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.3.1",
-    "jest-circus": "^27.3.1",
-    "jest-scss-transform": "^1.0.1",
-    "jest-watch-typeahead": "^1.0.0",
-    "lint-staged": ">=10",
-    "pinst": "^2.1.6",
-    "postcss-syntax": "^0.36.2",
-    "prettier": "2.5.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "semantic-release": "^18.0.1",
-    "styled-breakpoints": "^10.0.1",
-    "styled-components": "^5.3.3",
-    "stylelint": "^14.0.1",
-    "stylelint-config-property-sort-order-smacss": "^8.0.0",
-    "stylelint-config-recommended": "^6.0.0",
-    "stylelint-order": "^5.0.0",
-    "typescript": "^4.3.2",
-    "vite": "^2.6.4"
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@preact/preset-vite": "^2.1.7",
+    "@types/node": "^17.0.19",
+    "babel-plugin-transform-hook-names": "^1.0.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
   },
-  "packageManager": "yarn@3.1.1",
-  "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "styled-breakpoints": "*",
-    "styled-components": "*"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest/mocks/jest.setup.js"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "transform": {
-      "^.+\\.[jt]sx?$": "<rootDir>/jest/jest-preprocess.js",
-      "^.+\\.scss$": "jest-scss-transform",
-      "^.+\\.css$": "<rootDir>/jest/mocks/cssMock.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "resetMocks": true
-  },
-  "babel": {
-    "env": {
-      "test": {
-        "presets": [
-          "react-app"
-        ]
-      }
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
-    "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
-    "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
-    "src/**/*.{js,jsx,ts,tsx}": "yarn jest --bail --findRelatedTests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LogRock/pebbles.git"
-  }
+  "packageManager": "yarn@3.2.0"
 }
