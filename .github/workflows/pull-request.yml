@@ -23,17 +23,17 @@ jobs:
       - name: ESLint
         run: yarn eslint .
 
-      - name: Test
-        run: yarn jest --coverage
+      # - name: Test
+      #   run: yarn jest --coverage
 
-      - name: Coverage
-        uses: andybelltree/lcov-reporter-action@v1.0.0
-        with:
-          title: Code Coverage
-          filter-changed-files: true
-          delete-old-comments: false
-          lcov-file: ./coverage/lcov.info
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Coverage
+      #   uses: andybelltree/lcov-reporter-action@v1.0.0
+      #   with:
+      #     title: Code Coverage
+      #     filter-changed-files: true
+      #     delete-old-comments: false
+      #     lcov-file: ./coverage/lcov.info
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: yarn build

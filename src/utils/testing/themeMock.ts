@@ -1,4 +1,4 @@
-import { Theme } from "../../types/theme";
+import { Theme } from "../../../lib/types/theme";
 
 const mockTheme: Theme = {
   breakpoints: {
