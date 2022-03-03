@@ -79,8 +79,10 @@
     "prettier": "2.5.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "rollup-plugin-typescript": "1.0.1",
     "semantic-release": "^18.0.1",
     "semantic-release-slack-bot": "^3.5.2",
+    "storybook-addon-styled-component-theme": "^2.0.0",
     "styled-breakpoints": "^10.0.1",
     "styled-components": "^5.3.3",
     "stylelint": "^14.0.1",
@@ -150,9 +152,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LogRock/pebbles-react.git"
-  },
-  "dependencies": {
-    "storybook-addon-styled-component-theme": "^2.0.0"
   },
   "config": {
     "commitizen": {

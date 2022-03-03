@@ -3848,6 +3848,7 @@ __metadata:
     prettier: 2.5.0
     react: ^17.0.0
     react-dom: ^17.0.0
+    rollup-plugin-typescript: 1.0.1
     semantic-release: ^18.0.1
     semantic-release-slack-bot: ^3.5.2
     storybook-addon-styled-component-theme: ^2.0.0
@@ -11221,6 +11222,13 @@ __metadata:
     "@babel/types": ^7.2.0
     c8: ^7.6.0
   checksum: a4584d0c60b80ce41abe91b11052f5d48635e811c67839942c4ebd51aa33d9f9b156ad615f71ceae2a8260b5e3054f36d73db6d0d2a3b9951483f4b6187495c8
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "estree-walker@npm:0.6.1"
+  checksum: 9d6f82a4921f11eec18f8089fb3cce6e53bcf45a8e545c42a2674d02d055fb30f25f90495f8be60803df6c39680c80dcee7f944526867eb7aa1fc9254883b23d
   languageName: node
   linkType: hard
 
@@ -19653,6 +19661,28 @@ __metadata:
     hash-base: ^3.0.0
     inherits: ^2.0.1
   checksum: 006accc40578ee2beae382757c4ce2908a826b27e2b079efdcd2959ee544ddf210b7b5d7d5e80467807604244e7388427330f5c6d4cd61e6edaddc5773ccc393
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-typescript@npm:1.0.1":
+  version: 1.0.1
+  resolution: "rollup-plugin-typescript@npm:1.0.1"
+  dependencies:
+    resolve: ^1.10.0
+    rollup-pluginutils: ^2.5.0
+  peerDependencies:
+    tslib: "*"
+    typescript: ">=2.1.0"
+  checksum: e54fa3f11130d93ea15d19c5ef805a6db4f4ebf0798255210e2f3ffca0fc268d6890f3c311f03236d73781864d2299e51f81824c96bc916729357cdcef91a0f3
+  languageName: node
+  linkType: hard
+
+"rollup-pluginutils@npm:^2.5.0":
+  version: 2.8.2
+  resolution: "rollup-pluginutils@npm:2.8.2"
+  dependencies:
+    estree-walker: ^0.6.1
+  checksum: 339fdf866d8f4ff6e408fa274c0525412f7edb01dc46b5ccda51f575b7e0d20ad72965773376fb5db95a77a7fcfcab97bf841ec08dbadf5d6b08af02b7a2cf5e
   languageName: node
   linkType: hard
 

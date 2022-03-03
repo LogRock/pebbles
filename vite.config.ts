@@ -36,6 +36,7 @@ export default defineConfig({
           declarationDir: resolvePath("dist"),
           exclude: resolvePath("node_modules/**"),
           allowSyntheticDefaultImports: true,
+          tsconfig: resolvePath("tsconfig.json"),
         }),
       ],
     },
