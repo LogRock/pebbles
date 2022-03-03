@@ -13,13 +13,14 @@
   },
   "version": "1.1.2",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -29,8 +30,19 @@
     "@babel/preset-typescript": "^7.16.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@fontsource/archivo": "^4.5.3",
+    "@mdx-js/react": "^1.6.22",
+    "@react-theming/storybook-addon": "^1.1.5",
+    "@rollup/plugin-typescript": "^8.3.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.1",
@@ -44,6 +56,7 @@
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-react": "^1.0.0",
     "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -52,6 +65,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-storybook": "^0.5.7",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
@@ -76,6 +90,7 @@
   },
   "packageManager": "yarn@3.1.1",
   "peerDependencies": {
+    "@fontsource/archivo": "*",
     "react": "*",
     "react-dom": "*",
     "styled-breakpoints": "*",
@@ -133,5 +148,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LogRock/pebbles.git"
+  },
+  "dependencies": {
+    "storybook-addon-styled-component-theme": "^2.0.0"
   }
 }

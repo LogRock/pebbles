@@ -1,42 +1,49 @@
 on:
   pull_request:
-    branches: 
+    branches:
       - main
-    
+
 jobs:
-  CI:
-    name: CI
+  PR_CI:
+    name: PR CI
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-        
+
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
-          cache: 'yarn'
+          node-version: "16.x"
+          cache: "yarn"
 
       - name: Install Deps
         run: yarn install
-    
+
       - name: ESLint
         run: yarn eslint .
 
-      - name: StyleLint
-        run: yarn stylelint .
+      - name: Prettier
+        run: yarn prettier .
 
-      - name: Test
-        run: yarn jest --coverage
-
-      - name: Coverage
-        uses: andybelltree/lcov-reporter-action@v1.0.0
-        with:
-          title: Code Coverage
-          filter-changed-files: true
-          delete-old-comments: false
-          lcov-file: ./coverage/lcov.info
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build
+      - name: Build Lib
         run: yarn build
+
+      - name: Build Storybook
+        run: yarn build-storybook
+
+      - name: Deploy Preview
+        id: deploy
+        run: |
+          netlify deploy --dir "storybook-static" --alias ${{ github.event.number }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --site ${{ secrets.NETLIFY_PEBBLES_ID }} > deploy.log
+          mystr="$(cat deploy.log | grep -Eo "(https)://[a-zA-Z0-9./?=_%:-]*.netlify.app" | sort -u)"
+          echo "::set-output name=msg::$mystr"
+
+      - name: "Comment PR"
+        uses: actions/github-script@v5
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue: { number: issue_number }, repo: { owner, repo }  } = context;
+            github.rest.issues.createComment({ issue_number, owner, repo, body: '# Netlify Preview Deployed \n\n Preview: ${{ steps.deploy.outputs.msg }} \n\n ## View on Browserstack \n\n https://live.browserstack.com/dashboard#os=iOS&os_version=15.0&device_browser=safari&zoom_to_fit=true&full_screen=true&url=${{ steps.deploy.outputs.msg }}&speed=1' });

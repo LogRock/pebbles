@@ -1,49 +1,68 @@
-# LogRock Pebbles
+# @LogRock/Pebbles
 
-> Small UI building blocks
+Welcome to our Component Library! This is an implementation of our Asphalt Design System.
 
-## Usage
+Here are some useful links:
 
-Pre requisites:
+[Documentation/Storybook](https://logrock-pebbles.netlify.app/)
 
-1. install [styled-components](https://styled-components.com/docs/basics#installation).
-2. install [styled-breakpoints](https://www.npmjs.com/package/styled-breakpoints)
+[NPMJS registry](https://www.npmjs.com/package/@logrock/pebbles)
 
-Install from NPM
+About us: https://logrock.com
 
-```console
-# With Yarn
+## Using this library:
+
+This library is meant to be used in React projects. To use it, you will have to setup your prefered React environment and add a few other dependencies first:
+
+```bash
+# styled components
+yarn add styled-components
+yarn add styled-breakpoints
+
+# fonts
+yarn add @fontsource/archivo
+```
+
+Make the Archivo font available in your project by importing it
+
+```js
+import "@fontsource/archivo
+import "@fontsource/archivo/variable-full.css";
+```
+
+If you customize the theme by changing any of the fontFamily properties, make sure that the font you want to use is also made available, by exposing it in any ways you like (fontsource is the best!)
+
+Install this lib:
+
+```bash
 yarn add @logrock/pebbles
-
-# With the other bad one
-npm install @logrock/pebbles
 ```
 
-Import components from it
+Now, wrap your app (or whatever components you plan on using this library at) with a styled-components' `ThemeProvider`, passing along a theme.
 
-```javascript
-import { NavBar } from "@logrock/pebbles";
-```
+```js
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "@logrock/pebbles";
 
-## Theming
-
-This lib requires styled-components theming to work properly. Just pass a Theme object and you are good to go.
-
-A `Theme` type is also exposed to guide you, you can also see its source code [here](https://github.com/LogRock/pebbles/blob/main/src/types/theme.ts)
-
-```javascript
-import { ThemeProvider } from 'styled-components'
-import { Theme } from '@logrock/pebbles'
-
-const myTheme: Theme = {
-    navbar: {
-        background: #ff0000
-    }
-}
-
-const MyNavbar = () => (
-    <ThemeProvider theme={myTheme}>
-        <NavBar />
+const MyApp = () => {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <MyAppContent />
     </ThemeProvider>
-)
+  );
+};
 ```
+
+For your convenience, we currently provide a light and a dark theme that you can use and override as you see fit. Check out all it's options at [theme.ts](https://github.com/LogRock/pebbles/blob/main/lib/theme/light/theme.ts)
+
+We also expose a `Theme` type if you use Typescript, autocomplete at will!
+
+```ts
+import { Theme } from "@logrock/pebbles";
+```
+
+And you are all set! From now on, just import and use any components you want. You can also access the theme variables using styled-components' own ThemeContext anywhere (and also as a theme prop in your custom styled components)
+
+## Contributing
+
+Thank you for your interest, check out [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
