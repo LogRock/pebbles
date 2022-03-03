@@ -13,14 +13,14 @@
   },
   "version": "1.1.2",
   "scripts": {
-    "build": "tsc && vite build",
-    "serve": "vite preview",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
-    "semantic-release": "semantic-release",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "commit": "cz"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -58,6 +58,7 @@
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.0",
+    "commitizen": "^4.2.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -73,7 +74,7 @@
     "jest-scss-transform": "^1.0.1",
     "jest-watch-typeahead": "^1.0.0",
     "lint-staged": ">=10",
-    "pinst": "^2.1.6",
+    "pinst": "^3.0.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "2.5.0",
     "react": "^17.0.0",
@@ -151,5 +152,10 @@
   },
   "dependencies": {
     "storybook-addon-styled-component-theme": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
