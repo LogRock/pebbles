@@ -1,3 +1,9 @@
+# [3.1.0](https://github.com/LogRock/pebbles-react/compare/v3.0.0...v3.1.0) (2022-03-03)
+
+### Features
+
+- **project:** :sparkles: add type definitions ([b59b907](https://github.com/LogRock/pebbles-react/commit/b59b9071bbe9cceffa00dd70e6e2caa7fd91742c))
+
 # [3.0.0](https://github.com/LogRock/pebbles-react/compare/v2.3.2...v3.0.0) (2022-03-03)
 
 ### Bug Fixes
