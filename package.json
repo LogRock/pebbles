@@ -1,10 +1,12 @@
 {
   "name": "@logrock/pebbles",
+  "author": "lipe-dev",
   "files": [
     "dist"
   ],
   "main": "./dist/logrock-pebbles.umd.js",
   "module": "./dist/logrock-pebbles.es.js",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/logrock-pebbles.es.js",
