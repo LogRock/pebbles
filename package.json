@@ -149,7 +149,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LogRock/pebbles.git"
+    "url": "https://github.com/LogRock/pebbles-react.git"
   },
   "dependencies": {
     "storybook-addon-styled-component-theme": "^2.0.0"
