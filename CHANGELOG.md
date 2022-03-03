@@ -1,3 +1,19 @@
+# [3.0.0](https://github.com/LogRock/pebbles-react/compare/v2.3.2...v3.0.0) (2022-03-03)
+
+### Bug Fixes
+
+- **husky:** make git hooks executable ([65e78a2](https://github.com/LogRock/pebbles-react/commit/65e78a22d02545b8996784546ef228489ae28710))
+- **project:** :bug: fix project repo address ([69440db](https://github.com/LogRock/pebbles-react/commit/69440dbd34f45772ed3f28dcca6a05f0349edd45))
+
+### Features
+
+- **project:** :sparkles: catch up to pebbles preact functions ([2443886](https://github.com/LogRock/pebbles-react/commit/244388625517cc2de77b258f44b8ae447f14479b))
+- **project:** add code quality tools ([961c49b](https://github.com/LogRock/pebbles-react/commit/961c49b2ec209fff23bec7b8978658e4433cc192))
+
+### BREAKING CHANGES
+
+- **project:** move back to React
+
 ## [2.3.1](https://github.com/LogRock/pebbles/compare/v2.3.0...v2.3.1) (2022-03-02)
 
 ### Bug Fixes
