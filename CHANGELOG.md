@@ -1,3 +1,9 @@
+## [3.1.1](https://github.com/LogRock/pebbles-react/compare/v3.1.0...v3.1.1) (2022-03-03)
+
+### Bug Fixes
+
+- **project:** :bug: add types field to package.json ([530d3f9](https://github.com/LogRock/pebbles-react/commit/530d3f9eb366e565c3078ddbd1014a21475d3d01))
+
 # [3.1.0](https://github.com/LogRock/pebbles-react/compare/v3.0.0...v3.1.0) (2022-03-03)
 
 ### Features
