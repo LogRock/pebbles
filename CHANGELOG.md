@@ -1,26 +1,26 @@
-## [3.1.1](https://github.com/LogRock/pebbles-react/compare/v3.1.0...v3.1.1) (2022-03-03)
+## [3.1.1](https://github.com/LogRock/pebbles/compare/v3.1.0...v3.1.1) (2022-03-03)
 
 ### Bug Fixes
 
-- **project:** :bug: add types field to package.json ([530d3f9](https://github.com/LogRock/pebbles-react/commit/530d3f9eb366e565c3078ddbd1014a21475d3d01))
+- **project:** :bug: add types field to package.json ([530d3f9](https://github.com/LogRock/pebbles/commit/530d3f9eb366e565c3078ddbd1014a21475d3d01))
 
-# [3.1.0](https://github.com/LogRock/pebbles-react/compare/v3.0.0...v3.1.0) (2022-03-03)
+# [3.1.0](https://github.com/LogRock/pebbles/compare/v3.0.0...v3.1.0) (2022-03-03)
 
 ### Features
 
-- **project:** :sparkles: add type definitions ([b59b907](https://github.com/LogRock/pebbles-react/commit/b59b9071bbe9cceffa00dd70e6e2caa7fd91742c))
+- **project:** :sparkles: add type definitions ([b59b907](https://github.com/LogRock/pebbles/commit/b59b9071bbe9cceffa00dd70e6e2caa7fd91742c))
 
-# [3.0.0](https://github.com/LogRock/pebbles-react/compare/v2.3.2...v3.0.0) (2022-03-03)
+# [3.0.0](https://github.com/LogRock/pebbles/compare/v2.3.2...v3.0.0) (2022-03-03)
 
 ### Bug Fixes
 
-- **husky:** make git hooks executable ([65e78a2](https://github.com/LogRock/pebbles-react/commit/65e78a22d02545b8996784546ef228489ae28710))
-- **project:** :bug: fix project repo address ([69440db](https://github.com/LogRock/pebbles-react/commit/69440dbd34f45772ed3f28dcca6a05f0349edd45))
+- **husky:** make git hooks executable ([65e78a2](https://github.com/LogRock/pebbles/commit/65e78a22d02545b8996784546ef228489ae28710))
+- **project:** :bug: fix project repo address ([69440db](https://github.com/LogRock/pebbles/commit/69440dbd34f45772ed3f28dcca6a05f0349edd45))
 
 ### Features
 
-- **project:** :sparkles: catch up to pebbles preact functions ([2443886](https://github.com/LogRock/pebbles-react/commit/244388625517cc2de77b258f44b8ae447f14479b))
-- **project:** add code quality tools ([961c49b](https://github.com/LogRock/pebbles-react/commit/961c49b2ec209fff23bec7b8978658e4433cc192))
+- **project:** :sparkles: catch up to pebbles preact functions ([2443886](https://github.com/LogRock/pebbles/commit/244388625517cc2de77b258f44b8ae447f14479b))
+- **project:** add code quality tools ([961c49b](https://github.com/LogRock/pebbles/commit/961c49b2ec209fff23bec7b8978658e4433cc192))
 
 ### BREAKING CHANGES
 
