@@ -31,3 +31,12 @@ We have some automated checks/code quality tools in place to help you write code
   - For your convenience, we have a commitizen script setup, you can run it with `yarn cz` once you are ready to commit (and your files are all staged).
 
 That's about it. It sounds like a lot, but most of these tools run automatically and you can just write your code in your prefferred manner and they will mostly make it compliant for you, and if not, let you know what you need to change.
+
+## Node Version
+
+We recommend using the LTS version of Node (currently 16.x.x). We have an .nvmrc file setup for that.
+If you use NVM, you might run into problems with the git hooks while committing. In that case:
+
+- copy the included `.huskyrc` file to `~/.huskyrc`. If this works, great, if not:
+- set the default NVM version to 16 with `nvm alias default 16`. This should work, if not:
+- It's probably a problem with Husky, try looking for solutions at their repo.
