@@ -31,29 +31,42 @@ const baseIconCSS = css`
 
 const buttonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
   ${({ buttonSize, theme }) => css`
-    padding: ${theme.buttons.regular[buttonSize].verticalPadding}
-      ${theme.buttons.regular[buttonSize].horizontalPadding};
+    padding: ${theme.buttons.regular[buttonSize || "medium"].verticalPadding}
+      ${theme.buttons.regular[buttonSize || "medium"].horizontalPadding};
 
-    border-radius: ${theme.buttons.regular[buttonSize].borderRadius};
-    font-size: ${theme.buttons.regular[buttonSize].fontSize};
+    border-radius: ${theme.buttons.regular[buttonSize || "medium"]
+      .borderRadius};
+    font-size: ${theme.buttons.regular[buttonSize || "medium"].fontSize};
   `}
 `;
 
 const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
   ${({ theme, buttonStyle }) => css`
-    background: ${theme.buttons.regular.disabled[buttonStyle].background};
-    border-color: ${theme.buttons.regular.disabled[buttonStyle].borderColor};
-    border-width: ${theme.buttons.regular.disabled[buttonStyle].borderWidth};
-    color: ${theme.buttons.regular.disabled[buttonStyle].contentColor};
+    background: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .background};
+    border-color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .borderColor};
+    border-width: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .borderWidth};
+    color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .contentColor};
   `}
 `;
 
 const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
   ${({ theme, buttonStyle, variant }) => css`
-    background: ${theme.buttons.regular[variant][buttonStyle].background};
-    border-color: ${theme.buttons.regular[variant][buttonStyle].borderColor};
-    border-width: ${theme.buttons.regular[variant][buttonStyle].borderWidth};
-    color: ${theme.buttons.regular[variant][buttonStyle].contentColor};
+    background: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].background};
+    border-color: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].borderColor};
+    border-width: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].borderWidth};
+    color: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].contentColor};
   `}
 `;
 
@@ -68,7 +81,7 @@ export const RegularButton = styled.button<
 
 const startIconMargin = css<Pick<ButtonProps, "buttonSize">>`
   margin-right: ${({ theme, buttonSize }) =>
-    theme.buttons.regular[buttonSize].iconPadding};
+    theme.buttons.regular[buttonSize || "medium"].iconPadding};
 `;
 
 export const StartIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
@@ -78,7 +91,7 @@ export const StartIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
 
 const endIconMargin = css<Pick<ButtonProps, "buttonSize">>`
   margin-left: ${({ theme, buttonSize }) =>
-    theme.buttons.regular[buttonSize].iconPadding};
+    theme.buttons.regular[buttonSize || "medium"].iconPadding};
 `;
 
 export const EndIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
@@ -90,19 +103,19 @@ export const EndIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
 
 const iconButtonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
   ${({ buttonSize, theme }) => css`
-    padding: ${theme.buttons.icon[buttonSize].verticalPadding}
-      ${theme.buttons.icon[buttonSize].horizontalPadding};
+    padding: ${theme.buttons.icon[buttonSize || "medium"].verticalPadding}
+      ${theme.buttons.icon[buttonSize || "medium"].horizontalPadding};
 
-    border-radius: ${theme.buttons.icon[buttonSize].borderRadius};
-    font-size: ${theme.buttons.icon[buttonSize].fontSize};
+    border-radius: ${theme.buttons.icon[buttonSize || "medium"].borderRadius};
+    font-size: ${theme.buttons.icon[buttonSize || "medium"].fontSize};
   `}
 `;
 
 const iconButtonIconSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
   width: ${({ theme, buttonSize }) =>
-    theme.buttons.icon[buttonSize].buttonSize};
+    theme.buttons.icon[buttonSize || "medium"].buttonSize};
   height: ${({ theme, buttonSize }) =>
-    theme.buttons.icon[buttonSize].buttonSize};
+    theme.buttons.icon[buttonSize || "medium"].buttonSize};
 `;
 
 export const IconButtonIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
