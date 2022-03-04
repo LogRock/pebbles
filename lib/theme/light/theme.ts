@@ -1,4 +1,4 @@
-import Theme, { Buttons, ButtonVariant } from "../../types/theme";
+import Theme, { Buttons, ButtonVariant, InputBox } from "../../types/theme";
 import {
   neutral,
   error,
@@ -205,6 +205,104 @@ const buttons: Buttons = {
   },
 };
 
+const shadows = {
+  xSmall: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+  small:
+    "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1)",
+  medium:
+    "0px 4px 6px -1px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.1)",
+  large:
+    "0px 10px 15px -3px rgba(16, 24, 40, 0.1), 0px 4px 6px -4px rgba(16, 24, 40, 0.1)",
+  xLarge:
+    "0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1)",
+  xxLarge: "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
+  upXSmall: "0px -1px 2px rgba(16, 24, 40, 0.05)",
+  upSmall:
+    "0px -1px 3px rgba(16, 24, 40, 0.1), 0px -1px 2px -1px rgba(16, 24, 40, 0.1)",
+  upMedium:
+    "0px -4px 6px -1px rgba(16, 24, 40, 0.1), 0px -2px 4px -2px rgba(16, 24, 40, 0.1)",
+  upLarge:
+    "0px -10px 15px -3px rgba(16, 24, 40, 0.1), 0px -4px 6px -4px rgba(16, 24, 40, 0.1)",
+  upXLarge:
+    "0px -20px 25px -5px rgba(16, 24, 40, 0.1), 0px -8px 10px -6px rgba(16, 24, 40, 0.1)",
+  upXxLarge: "0px -25px 50px -12px rgba(16, 24, 40, 0.25)",
+};
+
+const inputBox: InputBox = {
+  fontFamily: "Archivo",
+  fontWeight: "normal",
+  fontStyle: "normal",
+  fontSize: "16px",
+  lineHeight: "24px",
+  fontFeatureSettings: "'salt' on",
+  padding: "10px 12px",
+  boxSizing: "border-box",
+  boxShadow: shadows.xSmall,
+  borderRadius: "2px",
+  border: "1px solid #D1D5DB",
+  margin: "8px 0px",
+  background: "white",
+  height: "50px",
+  width: "100%",
+
+  error: {
+    color: error[900],
+    border: `1px solid ${error[300]}`,
+    boxShadow: shadows.xSmall,
+    hintColor: neutral[500],
+    helperColor: error[600],
+    focused: {
+      boxSizing: "border-box",
+      boxShadow: `0px 0px 0px 4px ${error["100"]}`,
+      borderRadius: "2px",
+      border: `1px solid ${error["300"]}`,
+    },
+  },
+  info: {
+    color: neutral[900],
+    border: "1px solid #D1D5DB",
+    boxShadow: shadows.xSmall,
+    hintColor: neutral[500],
+    helperColor: neutral[500],
+    focused: {
+      boxSizing: "border-box",
+      boxShadow: `0px 0px 0px 4px ${primary["100"]}`,
+      borderRadius: "2px",
+      border: `1px solid ${primary["300"]}`,
+    },
+  },
+
+  label: {
+    color: "black",
+    fontStyle: "normal",
+    fontSize: "16px",
+    lineHeight: "24px",
+    fontWeight: 500,
+  },
+  helper: {
+    fontStyle: "normal",
+    fontSize: "14px",
+    lineHeight: "20px",
+    fontWeight: 500,
+    margin: "0px 8px",
+  },
+  disabled: {
+    boxSizing: "border-box",
+    boxShadow: shadows.xSmall,
+    borderRadius: "2px",
+    border: `1px solid ${neutral["300"]}`,
+  },
+  hint: {
+    background: "white",
+    top: "1px",
+    right: "2px",
+    margin: "1px 0px",
+  },
+  placeholder: {
+    color: neutral[400],
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -238,28 +336,7 @@ const theme: Theme = {
     overlineMedium,
     overlineSmall,
   },
-  shadows: {
-    xSmall: "0px 1px 2px rgba(16, 24, 40, 0.05)",
-    small:
-      "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1)",
-    medium:
-      "0px 4px 6px -1px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.1)",
-    large:
-      "0px 10px 15px -3px rgba(16, 24, 40, 0.1), 0px 4px 6px -4px rgba(16, 24, 40, 0.1)",
-    xLarge:
-      "0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1)",
-    xxLarge: "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
-    upXSmall: "0px -1px 2px rgba(16, 24, 40, 0.05)",
-    upSmall:
-      "0px -1px 3px rgba(16, 24, 40, 0.1), 0px -1px 2px -1px rgba(16, 24, 40, 0.1)",
-    upMedium:
-      "0px -4px 6px -1px rgba(16, 24, 40, 0.1), 0px -2px 4px -2px rgba(16, 24, 40, 0.1)",
-    upLarge:
-      "0px -10px 15px -3px rgba(16, 24, 40, 0.1), 0px -4px 6px -4px rgba(16, 24, 40, 0.1)",
-    upXLarge:
-      "0px -20px 25px -5px rgba(16, 24, 40, 0.1), 0px -8px 10px -6px rgba(16, 24, 40, 0.1)",
-    upXxLarge: "0px -25px 50px -12px rgba(16, 24, 40, 0.25)",
-  },
+  shadows,
   blurs: {
     none: "0",
     small: "8px",
@@ -280,6 +357,7 @@ const theme: Theme = {
     teaLeaves,
   },
   buttons,
+  inputBox,
 };
 
 export default theme;
