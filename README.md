@@ -26,9 +26,14 @@ yarn add @fontsource/archivo
 Make the Archivo font available in your project by importing it
 
 ```js
-import "@fontsource/archivo
-import "@fontsource/archivo/variable-full.css";
+import "@fontsource/archivo/400.css";
+import "@fontsource/archivo/500.css";
+import "@fontsource/archivo/600.css";
+import "@fontsource/archivo/700.css";
+import "@fontsource/archivo/800.css";
 ```
+
+You can, alternatively, make it available as a Variable font if you want. The only requirement is having all weights from 400 to 800 available for the default theme to work best.
 
 If you customize the theme by changing any of the fontFamily properties, make sure that the font you want to use is also made available, by exposing it in any ways you like (fontsource is the best!)
 
