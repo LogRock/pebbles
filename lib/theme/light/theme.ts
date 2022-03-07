@@ -1,4 +1,9 @@
-import Theme, { Buttons, ButtonVariant, InputBox } from "../../types/theme";
+import Theme, {
+  Buttons,
+  ButtonVariant,
+  InputBox,
+  Select,
+} from "../../types/theme";
 import {
   neutral,
   error,
@@ -303,6 +308,15 @@ const inputBox: InputBox = {
   },
 };
 
+const select: Select = {
+  items: {
+    hover: {
+      background: primary["50"],
+    },
+    shadow: "1px 1px 2px rgba(0, 0, 0, 0.3)",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -358,6 +372,7 @@ const theme: Theme = {
   },
   buttons,
   inputBox,
+  select,
 };
 
 export default theme;

@@ -287,6 +287,15 @@ export interface InputBox {
   };
 }
 
+export interface Select {
+  items: {
+    hover: {
+      background: CSS.Property.Background;
+    };
+    shadow: "1px 1px 2px rgba(0, 0, 0, 0.3)";
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -301,4 +310,5 @@ export default interface Theme {
   gradients: Gradients;
   buttons: Buttons;
   inputBox: InputBox;
+  select: Select;
 }

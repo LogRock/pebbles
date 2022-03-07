@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Icon from "@mdi/react";
 import { InputBoxProps } from "./InputBox";
 
+const defaultStatus = "info";
+
 export const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,7 +26,8 @@ export const HelperDiv = styled.div`
 export const Helper = styled(Label)<Pick<InputBoxProps, "status">>`
   margin: ${({ theme }) => theme.inputBox.helper.margin};
 
-  color: ${({ theme, status }) => theme.inputBox[status].helperColor};
+  color: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].helperColor};
   font-size: ${({ theme }) => theme.inputBox.helper.fontSize};
   font-style: ${({ theme }) => theme.inputBox.helper.fontStyle};
   font-weight: ${({ theme }) => theme.inputBox.helper.fontWeight};
@@ -32,7 +35,8 @@ export const Helper = styled(Label)<Pick<InputBoxProps, "status">>`
 `;
 
 export const HelperIcon = styled(Icon)<Pick<InputBoxProps, "status">>`
-  color: ${({ theme, status }) => theme.inputBox[status].helperColor};
+  color: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].helperColor};
 `;
 
 export const HintDiv = styled.div`
@@ -50,13 +54,15 @@ export const HintDiv = styled.div`
 export const Hint = styled(Label)<Pick<InputBoxProps, "status">>`
   margin: ${({ theme }) => theme.inputBox.hint.margin};
 
-  color: ${({ theme, status }) => theme.inputBox[status].hintColor};
+  color: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].hintColor};
 `;
 
 export const HintIcon = styled(Icon)<Pick<InputBoxProps, "status">>`
   margin: 4px 4px;
 
-  color: ${({ theme, status }) => theme.inputBox[status].hintColor};
+  color: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].hintColor};
 `;
 
 export const InputDiv = styled.div`
@@ -75,26 +81,30 @@ export const StyledInput = styled.input<Pick<InputBoxProps, "status">>`
   margin: ${({ theme }) => theme.inputBox.margin};
   padding: ${({ theme }) => theme.inputBox.padding};
 
-  border: ${({ theme, status }) => theme.inputBox[status].border};
+  border: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].border};
   border-radius: ${({ theme }) => theme.inputBox.borderRadius};
 
   background: ${({ theme }) => theme.inputBox.background};
-  box-shadow: ${({ theme, status }) => theme.inputBox[status].boxShadow};
+  box-shadow: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].boxShadow};
 
-  color: ${({ theme, status }) => theme.inputBox[status].color};
+  color: ${({ theme, status }) =>
+    theme.inputBox[status || defaultStatus].color};
 
   &:focus {
     box-sizing: ${({ theme, status }) =>
-      theme.inputBox[status].focused.boxSizing};
+      theme.inputBox[status || defaultStatus].focused.boxSizing};
 
-    border: ${({ theme, status }) => theme.inputBox[status].focused.border};
+    border: ${({ theme, status }) =>
+      theme.inputBox[status || defaultStatus].focused.border};
     border-radius: ${({ theme, status }) =>
-      theme.inputBox[status].focused.borderRadius};
+      theme.inputBox[status || defaultStatus].focused.borderRadius};
     outline: none;
 
     background: ${({ theme }) => theme.inputBox.background};
     box-shadow: ${({ theme, status }) =>
-      theme.inputBox[status].focused.boxShadow};
+      theme.inputBox[status || defaultStatus].focused.boxShadow};
   }
   &:disabled {
     box-sizing: ${({ theme }) => theme.inputBox.disabled.boxSizing};
