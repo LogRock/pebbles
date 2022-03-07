@@ -42,7 +42,11 @@ export default {
 };
 
 const Template = (args) => (
-  <Select autoCompleteItems={autoCompleteItems} {...args} />
+  <>
+    <Select autoCompleteItems={autoCompleteItems} {...args} />
+    <Select autoCompleteItems={autoCompleteItems} {...args} />
+    <Select autoCompleteItems={autoCompleteItems} {...args} />
+  </>
 );
 
 export const Default = Template.bind({});
