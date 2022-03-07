@@ -2,14 +2,15 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
-export const DefaultItem = styled.button`
+export const DefaultItem = styled.button<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   box-sizing: border-box;
   padding: 18px 10px;
 
   border: none;
 
-  background: none;
+  background: ${({ theme, highlighted }) =>
+    highlighted ? theme.select.items.hover.background : "none"};
 
   text-align: left;
 
