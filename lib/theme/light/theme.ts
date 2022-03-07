@@ -4,6 +4,7 @@ import Theme, {
   CheckBox,
   InputBox,
   Select,
+  Loader,
 } from "../../types/theme";
 import {
   neutral,
@@ -257,7 +258,7 @@ const inputBox: InputBox = {
     border: `1px solid ${error[300]}`,
     boxShadow: shadows.xSmall,
     hintColor: neutral[500],
-    helperColor: error[600],
+    helperColor: error["600"],
     focused: {
       boxSizing: "border-box",
       boxShadow: `0px 0px 0px 4px ${error["100"]}`,
@@ -346,6 +347,15 @@ const checkBox: CheckBox = {
   },
 };
 
+const loader: Loader = {
+  fontFamily: "Archivo",
+  size: "32px",
+  loaderColor: {
+    loaderBar: primary[500],
+    background: primary[50],
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -401,6 +411,7 @@ const theme: Theme = {
   },
   buttons,
   inputBox,
+  loader,
   select,
   checkBox,
 };
