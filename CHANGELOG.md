@@ -1,3 +1,18 @@
+# [3.2.0](https://github.com/LogRock/pebbles/compare/v3.1.1...v3.2.0) (2022-03-07)
+
+### Bug Fixes
+
+- **button:** :label: make button props optional ([7806cdc](https://github.com/LogRock/pebbles/commit/7806cdcd389f96602d802a0ccfe63e3362ee811a))
+- **project:** :bug: fix husky config ([47ed825](https://github.com/LogRock/pebbles/commit/47ed82514dd168a6bbec3ec7063e98a78954ab9d))
+- **select:** :lipstick: fix styling on mobile screens ([b0679fd](https://github.com/LogRock/pebbles/commit/b0679fd1ba6583c2f75a318e29550dd22437db17))
+- **select:** :lipstick: fix z-index interactions with other components ([301d688](https://github.com/LogRock/pebbles/commit/301d688e535077311691626bbbb4645cd61de1e5))
+
+### Features
+
+- **input-box:** react input box custom component ([fe7a727](https://github.com/LogRock/pebbles/commit/fe7a7272f7cf414484348fb2f3ab51f370e39398))
+- **select:** :lipstick: add styling for the highlighted state of the simple-item ([386b829](https://github.com/LogRock/pebbles/commit/386b8293334811b633f1530c512e7b7ecd1f09fa))
+- **select:** :sparkles: add select component ([56381e1](https://github.com/LogRock/pebbles/commit/56381e1491dc5897323b031c04c0949706757c97))
+
 ## [3.1.1](https://github.com/LogRock/pebbles/compare/v3.1.0...v3.1.1) (2022-03-03)
 
 ### Bug Fixes
