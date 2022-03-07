@@ -320,6 +320,15 @@ export interface CheckBox {
   checked: CheckBoc;
 }
 
+export interface Loader {
+  fontFamily: CSS.Property.FontFamily;
+  size: CSS.Property.Width;
+  loaderColor: {
+    background: CSS.Property.Color;
+    loaderBar: CSS.Property.Color;
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -336,4 +345,5 @@ export default interface Theme {
   inputBox: InputBox;
   select: Select;
   checkBox: CheckBox;
+  loader: Loader;
 }
