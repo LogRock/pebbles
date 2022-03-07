@@ -13,7 +13,9 @@ const AutoCompleteWrapper = styled.div<{ focus?: boolean }>`
   right: 0;
   bottom: 0;
   left: 0;
+  box-sizing: border-box;
   padding: ${({ theme, focus }) => (focus ? theme.spacings.md : undefined)};
+  overflow-x: auto;
 
   background: ${({ theme, focus }) =>
     focus ? theme.colors.shades["0"] : "none"};
@@ -28,8 +30,8 @@ const AutoCompleteWrapper = styled.div<{ focus?: boolean }>`
 
 const AutoCompleteItems = styled.div<{ focus?: boolean }>`
   display: ${({ focus }) => (focus ? "flex" : "none")};
-  position: absolute;
   z-index: 9999;
+  box-sizing: border-box;
   flex-flow: column nowrap;
   width: 100%;
 
@@ -38,6 +40,7 @@ const AutoCompleteItems = styled.div<{ focus?: boolean }>`
 
   ${up("desktop")} {
     display: flex;
+    position: absolute;
 
     box-shadow: ${({ theme }) => theme.select.items.shadow};
   }

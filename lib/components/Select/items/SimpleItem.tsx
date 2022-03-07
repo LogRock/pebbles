@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
 export const DefaultItem = styled.button`
-  padding: 18px 10px;
   ${paragraphMediumCSS}
+  box-sizing: border-box;
+  padding: 18px 10px;
+
   border: none;
 
   background: none;

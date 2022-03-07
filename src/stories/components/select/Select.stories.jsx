@@ -18,6 +18,22 @@ const autoCompleteItems = [
     id: 4,
     name: "You guessed it",
   },
+  {
+    id: 5,
+    name: "First Item",
+  },
+  {
+    id: 6,
+    name: "Second Item",
+  },
+  {
+    id: 7,
+    name: "Third Item",
+  },
+  {
+    id: 8,
+    name: "You guessed it",
+  },
 ];
 
 export default {
