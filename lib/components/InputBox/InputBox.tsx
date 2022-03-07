@@ -15,17 +15,19 @@ import {
 import { mdiAlert } from "@mdi/js";
 
 export type InputBoxProps = {
-  description: string;
-  hint: {
+  description?: string;
+  hint?: {
     content: string;
-    icon: null;
+    icon: string;
   };
-  status: "info" | "error";
-  helper: string;
-  placeholder: string;
-  disabled: boolean;
-  onChange: () => {};
-  theme: Theme;
+  status?: "info" | "error";
+  helper?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  onChange?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
+  theme?: Theme;
 };
 
 const InputBox: FC<InputBoxProps> = (props) => {
@@ -39,17 +41,20 @@ const InputBox: FC<InputBoxProps> = (props) => {
           disabled={props.disabled}
           onChange={props.onChange}
           type="text"
+          {...props}
         />
-        <HintDiv>
-          <Hint status={props.status}>{props.hint.content}</Hint>
-          {props.hint.icon && (
-            <HintIcon
-              status={props.status}
-              path={props.hint.icon}
-              size={0.72}
-            />
-          )}
-        </HintDiv>
+        {props.hint && (
+          <HintDiv>
+            <Hint status={props.status}>{props.hint.content}</Hint>
+            {props.hint.icon && (
+              <HintIcon
+                status={props.status}
+                path={props.hint.icon}
+                size={0.72}
+              />
+            )}
+          </HintDiv>
+        )}
       </InputDiv>
       <HelperDiv>
         {props.status === "error" && (
