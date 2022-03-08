@@ -1,3 +1,9 @@
+## [3.2.2](https://github.com/LogRock/pebbles/compare/v3.2.1...v3.2.2) (2022-03-08)
+
+### Bug Fixes
+
+- **input-box:** :bug: remove Icon from the setup and make icons be any renderable ([fbdfab4](https://github.com/LogRock/pebbles/commit/fbdfab4a95bce59898db8f1bd366cbc1cc762309))
+
 ## [3.2.1](https://github.com/LogRock/pebbles/compare/v3.2.0...v3.2.1) (2022-03-08)
 
 ### Bug Fixes
