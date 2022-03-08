@@ -1,3 +1,13 @@
+# [4.0.0](https://github.com/LogRock/pebbles/compare/v3.2.2...v4.0.0) (2022-03-08)
+
+### Bug Fixes
+
+- **input-box:** :bug: make props optional and error icon fixed ([d801f5e](https://github.com/LogRock/pebbles/commit/d801f5ea47636d5f258c941f6da190f6438087ae))
+
+### BREAKING CHANGES
+
+- **input-box:** errorIcon prop no longer suported
+
 ## [3.2.2](https://github.com/LogRock/pebbles/compare/v3.2.1...v3.2.2) (2022-03-08)
 
 ### Bug Fixes
