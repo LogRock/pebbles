@@ -1,4 +1,5 @@
 import { mdiUnfoldMoreHorizontal } from "@mdi/js";
+import Icon from "@mdi/react";
 import React, { useCallback, useEffect, useState } from "react";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
@@ -91,7 +92,9 @@ const Select = <ItemType extends BaseItemType>({
           setCurrentHighlight((oldHighlight) => {
             setShowDropdown(false);
             if (autoCompleteItems.length) {
-              onItemSelected(autoCompleteItems[oldHighlight]);
+              if (onItemSelected && typeof onItemSelected === "function") {
+                onItemSelected(autoCompleteItems[oldHighlight]);
+              }
             }
             return 0;
           });
@@ -120,7 +123,7 @@ const Select = <ItemType extends BaseItemType>({
         onFocus={() => setHasFocus(true)}
         onBlur={() => setHasFocus(false)}
         hint={{
-          icon: mdiUnfoldMoreHorizontal,
+          icon: <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />,
           content: "",
         }}
       />
@@ -133,7 +136,9 @@ const Select = <ItemType extends BaseItemType>({
               item={item}
               onClick={() => {
                 setShowDropdown(false);
-                onItemSelected(autoCompleteItems[index]);
+                if (onItemSelected && typeof onItemSelected === "function") {
+                  onItemSelected(autoCompleteItems[index]);
+                }
                 setCurrentHighlight(0);
               }}
               onMouseEnter={() => setCurrentHighlight(index)}

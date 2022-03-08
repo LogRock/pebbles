@@ -1,3 +1,5 @@
+import { mdiAlert } from "@mdi/js";
+import Icon from "@mdi/react";
 import React, { FC } from "react";
 import Theme from "../../types/theme";
 import {
@@ -19,7 +21,6 @@ export type InputBoxProps = {
     content: string;
     icon: React.ReactNode;
   };
-  errorIcon?: React.ReactNode;
   status?: "info" | "error";
   helper?: string;
   placeholder?: string;
@@ -28,6 +29,7 @@ export type InputBoxProps = {
   onFocus?: () => void;
   onBlur?: () => void;
   theme?: Theme;
+  type?: string;
 };
 
 const InputBox: FC<InputBoxProps> = (props) => {
@@ -40,7 +42,7 @@ const InputBox: FC<InputBoxProps> = (props) => {
           placeholder={props.placeholder}
           disabled={props.disabled}
           onChange={props.onChange}
-          type="text"
+          type={props.type || "text"}
           {...props}
         />
         {props.hint && (
@@ -56,7 +58,9 @@ const InputBox: FC<InputBoxProps> = (props) => {
       </InputDiv>
       <HelperDiv>
         {props.status === "error" && (
-          <HelperIcon status={props.status}>{props.errorIcon}</HelperIcon>
+          <HelperIcon status={props.status}>
+            <Icon path={mdiAlert} size={0.7} />
+          </HelperIcon>
         )}
         <Helper status={props.status}>{props.helper}</Helper>
       </HelperDiv>
