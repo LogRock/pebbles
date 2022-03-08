@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Icon from "@mdi/react";
 import { InputBoxProps } from "./InputBox";
 
 const defaultStatus = "info";
@@ -34,7 +33,7 @@ export const Helper = styled(Label)<Pick<InputBoxProps, "status">>`
   line-height: ${({ theme }) => theme.inputBox.helper.lineHeight};
 `;
 
-export const HelperIcon = styled(Icon)<Pick<InputBoxProps, "status">>`
+export const HelperIcon = styled.div<Pick<InputBoxProps, "status">>`
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].helperColor};
 `;
@@ -47,8 +46,6 @@ export const HintDiv = styled.div`
   flex-direction: row;
   margin: ${({ theme }) => theme.inputBox.margin};
   padding: ${({ theme }) => theme.inputBox.padding};
-
-  background: ${({ theme }) => theme.inputBox.hint.background};
 `;
 
 export const Hint = styled(Label)<Pick<InputBoxProps, "status">>`
@@ -58,7 +55,7 @@ export const Hint = styled(Label)<Pick<InputBoxProps, "status">>`
     theme.inputBox[status || defaultStatus].hintColor};
 `;
 
-export const HintIcon = styled(Icon)<Pick<InputBoxProps, "status">>`
+export const HintIconWrapper = styled.div<Pick<InputBoxProps, "status">>`
   margin: 4px 4px;
 
   color: ${({ theme, status }) =>
