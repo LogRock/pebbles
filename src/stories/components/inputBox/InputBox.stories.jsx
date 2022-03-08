@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
-import { mdiCardAccountDetailsOutline, mdiEmailOutline } from "@mdi/js";
+import {
+  mdiAlert,
+  mdiCardAccountDetailsOutline,
+  mdiEmailOutline,
+} from "@mdi/js";
+import { Icon } from "@mdi/react";
 
 export default {
   title: "Components/InputBox",
@@ -20,7 +25,7 @@ Default.args = {
   description: "Profile information",
   hint: {
     content: "username",
-    icon: mdiCardAccountDetailsOutline,
+    icon: <Icon size={0.7} path={mdiCardAccountDetailsOutline} />,
   },
   status: "info",
   helper: "",
@@ -37,6 +42,7 @@ InputBoxError.args = {
   helper: "please provide the VIN number",
   status: "error",
   placeholder: "VIN",
+  errorIcon: <Icon size={0.7} path={mdiAlert} />,
 };
 
 export const HintedInputBox = Template.bind({});
@@ -44,7 +50,7 @@ HintedInputBox.args = {
   description: "",
   hint: {
     content: "e-mail",
-    icon: mdiEmailOutline,
+    icon: <Icon size={0.7} path={mdiEmailOutline} />,
   },
   status: "info",
   helper: "",
@@ -71,7 +77,7 @@ InteractiveInputBox.args = {
     description: "",
     hint: {
       content: "e-mail",
-      icon: mdiEmailOutline,
+      icon: <Icon size={0.7} path={mdiEmailOutline} />,
     },
     status: "info",
     helper: "",

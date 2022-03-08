@@ -5,21 +5,21 @@ import {
   Label,
   Helper,
   HelperDiv,
-  HelperIcon,
   Hint,
   HintDiv,
-  HintIcon,
   InputDiv,
   StyledInput,
+  HintIconWrapper,
+  HelperIcon,
 } from "./InputBox.styled";
-import { mdiAlert } from "@mdi/js";
 
 export type InputBoxProps = {
   description?: string;
   hint?: {
     content: string;
-    icon: string;
+    icon: React.ReactNode;
   };
+  errorIcon?: React.ReactNode;
   status?: "info" | "error";
   helper?: string;
   placeholder?: string;
@@ -47,18 +47,16 @@ const InputBox: FC<InputBoxProps> = (props) => {
           <HintDiv>
             <Hint status={props.status}>{props.hint.content}</Hint>
             {props.hint.icon && (
-              <HintIcon
-                status={props.status}
-                path={props.hint.icon}
-                size={0.72}
-              />
+              <HintIconWrapper status={props.status}>
+                {props.hint.icon}
+              </HintIconWrapper>
             )}
           </HintDiv>
         )}
       </InputDiv>
       <HelperDiv>
         {props.status === "error" && (
-          <HelperIcon status={props.status} path={mdiAlert} size={0.72} />
+          <HelperIcon status={props.status}>{props.errorIcon}</HelperIcon>
         )}
         <Helper status={props.status}>{props.helper}</Helper>
       </HelperDiv>
