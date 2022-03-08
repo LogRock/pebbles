@@ -18,13 +18,13 @@ export type SelectProps<ItemType> = {
   helper?: string;
   placeholder?: string;
   autoCompleteItems: ItemType[];
-  renderItem: FC<{
+  renderItem?: FC<{
     item?: ItemType;
     onClick: () => void;
     onMouseEnter: () => void;
     highlighted?: boolean;
   }>;
-  renderHeader: FC;
-  onItemSelected: (item: ItemType) => void;
-  inputProps: InputBoxProps;
+  renderHeader?: FC;
+  onItemSelected?: (item: ItemType) => void;
+  inputProps?: InputBoxProps;
 };
