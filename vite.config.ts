@@ -27,7 +27,7 @@ export default defineConfig({
           "styled-components": "styled",
           "styled-breakpoints": "styled-breakpoints",
           "@mdi/js": "mdijs",
-          "@mdi/react": "mdireact",
+          "@mdi/react": "Icon",
         },
       },
       plugins: [
