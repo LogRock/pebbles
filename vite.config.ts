@@ -24,8 +24,10 @@ export default defineConfig({
         // for externalized deps
         globals: {
           react: "React",
-          "styled-components": "styled-components",
+          "styled-components": "styled",
           "styled-breakpoints": "styled-breakpoints",
+          "@mdi/js": "mdijs",
+          "@mdi/react": "mdireact",
         },
       },
       plugins: [
