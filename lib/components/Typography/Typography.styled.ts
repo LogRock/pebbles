@@ -17,6 +17,8 @@ const decorationsFromProps = ({
 };
 
 export const DisplayLarge = styled.h1<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.displayLarge.fontFamily};
   font-size: ${({ theme }) => theme.typography.displayLarge.mobile.fontSize};
@@ -43,6 +45,8 @@ export const DisplayLarge = styled.h1<TypographyHeaderProps>`
 `;
 
 export const DisplaySmall = styled.h2<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.displaySmall.fontFamily};
   font-size: ${({ theme }) => theme.typography.displaySmall.mobile.fontSize};
@@ -69,6 +73,8 @@ export const DisplaySmall = styled.h2<TypographyHeaderProps>`
 `;
 
 export const HeadingH1 = styled.h1<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH1.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH1.mobile.fontSize};
@@ -93,6 +99,8 @@ export const HeadingH1 = styled.h1<TypographyHeaderProps>`
 `;
 
 export const HeadingH2 = styled.h2<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH2.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH2.mobile.fontSize};
@@ -117,6 +125,8 @@ export const HeadingH2 = styled.h2<TypographyHeaderProps>`
 `;
 
 export const HeadingH3 = styled.h3<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH3.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH3.mobile.fontSize};
@@ -141,6 +151,8 @@ export const HeadingH3 = styled.h3<TypographyHeaderProps>`
 `;
 
 export const HeadingH4 = styled.h4<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH4.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH4.mobile.fontSize};
@@ -165,6 +177,8 @@ export const HeadingH4 = styled.h4<TypographyHeaderProps>`
 `;
 
 export const HeadingH5 = styled.h5<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH5.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH5.mobile.fontSize};
@@ -189,6 +203,8 @@ export const HeadingH5 = styled.h5<TypographyHeaderProps>`
 `;
 
 export const HeadingH6 = styled.h6<TypographyHeaderProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH6.fontFamily};
   font-size: ${({ theme }) => theme.typography.headingH6.mobile.fontSize};
@@ -213,6 +229,8 @@ export const HeadingH6 = styled.h6<TypographyHeaderProps>`
 `;
 
 export const ParagraphLarge = styled.p<TypographyParagraphProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphLarge.fontFamily};
   font-size: ${({ theme }) => theme.typography.paragraphLarge.fontSize};
@@ -226,6 +244,8 @@ export const ParagraphLarge = styled.p<TypographyParagraphProps>`
 `;
 
 export const paragraphMediumCSS = css<TypographyParagraphProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphMedium.fontFamily};
   font-size: ${({ theme }) => theme.typography.paragraphMedium.fontSize};
@@ -243,6 +263,8 @@ export const ParagraphMedium = styled.p<TypographyParagraphProps>`
 `;
 
 export const ParagraphSmall = styled.p<TypographyParagraphProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphSmall.fontFamily};
   font-size: ${({ theme }) => theme.typography.paragraphSmall.fontSize};
@@ -256,6 +278,8 @@ export const ParagraphSmall = styled.p<TypographyParagraphProps>`
 `;
 
 export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphXSmall.fontFamily};
   font-size: ${({ theme }) => theme.typography.paragraphXSmall.fontSize};
@@ -269,6 +293,8 @@ export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
 `;
 
 export const OverlineLarge = styled.p<TypographyOverlineProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineLarge.fontFamily};
   font-size: ${({ theme }) => theme.typography.overlineLarge.fontSize};
@@ -279,6 +305,8 @@ export const OverlineLarge = styled.p<TypographyOverlineProps>`
 `;
 
 export const OverlineMedium = styled.p<TypographyOverlineProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineMedium.fontFamily};
   font-size: ${({ theme }) => theme.typography.overlineMedium.fontSize};
@@ -289,6 +317,8 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
 `;
 
 export const OverlineSmall = styled.p<TypographyOverlineProps>`
+  margin: 0;
+
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineSmall.fontFamily};
   font-size: ${({ theme }) => theme.typography.overlineSmall.fontSize};

@@ -30,3 +30,9 @@ export type {
 // expose Button
 export { default as Button } from "./components/Button";
 export type { ButtonProps } from "./components/Button";
+
+// expose InputBox
+export { InputBox } from "./components/InputBox";
+
+// expose Select
+export { default as Select } from "./components/Select";
