@@ -1,3 +1,9 @@
+## [3.2.1](https://github.com/LogRock/pebbles/compare/v3.2.0...v3.2.1) (2022-03-08)
+
+### Bug Fixes
+
+- **project:** :bug: export missing components and fix typography spacings ([d930058](https://github.com/LogRock/pebbles/commit/d930058478304205656b717604df346765ac1700))
+
 # [3.2.0](https://github.com/LogRock/pebbles/compare/v3.1.1...v3.2.0) (2022-03-07)
 
 ### Bug Fixes
