@@ -31,7 +31,11 @@ const AutoCompleteWrapper = styled.div<{ focus?: boolean }>`
   }
 `;
 
-const AutoCompleteItems = styled.div<{ focus?: boolean }>`
+const AutoCompleteItems = styled.div<{
+  focus?: boolean;
+  helper?: string;
+  description?: string;
+}>`
   display: ${({ focus }) => (focus ? "flex" : "none")};
   box-sizing: border-box;
   flex-flow: column nowrap;
@@ -48,7 +52,13 @@ const AutoCompleteItems = styled.div<{ focus?: boolean }>`
     display: ${({ focus }) => (focus ? "flex" : "none")};
     position: absolute;
     z-index: 9999;
-    top: ${({ theme }) => theme.spacings.xxlg};
+    top: ${({ theme, description, helper }) =>
+      `calc(
+        ${theme.spacings.xxlg} 
+        + ${description ? theme.inputBox.label.lineHeight : "0px"} 
+        + -${helper ? theme.inputBox.helper.fontSize : "0px"}
+        + ${helper ? "14px" : "0px"}
+      )`};
     flex-grow: unset;
     flex-shrink: unset;
 
@@ -123,12 +133,18 @@ const Select = <ItemType extends BaseItemType>({
         onFocus={() => setHasFocus(true)}
         onBlur={() => setHasFocus(false)}
         hint={{
-          icon: <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />,
-          content: "",
+          icon: inputProps?.hint?.icon || (
+            <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />
+          ),
+          content: inputProps?.hint?.content || "",
         }}
       />
       {showDropdown && (
-        <AutoCompleteItems focus={hasFocus}>
+        <AutoCompleteItems
+          focus={hasFocus}
+          helper={inputProps?.helper}
+          description={inputProps?.description}
+        >
           {autoCompleteItems?.length > 0 && <Header />}
           {autoCompleteItems?.map((item, index) => (
             <Item
