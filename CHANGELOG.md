@@ -1,3 +1,15 @@
+# [4.2.0](https://github.com/LogRock/pebbles/compare/v4.1.1...v4.2.0) (2022-03-09)
+
+### Bug Fixes
+
+- **button:** :lipstick: make primary outlined button yellow (primary color) ([b6a5e74](https://github.com/LogRock/pebbles/commit/b6a5e741bdae7c2324347115b731dd4c33ee38b7))
+- **checkbox:** :lipstick: remove gray background on hover ([d36b26a](https://github.com/LogRock/pebbles/commit/d36b26a972c8ad240f1847226c3dceb45f099bf8))
+
+### Features
+
+- **button:** :lipstick: make button have an outline while active ([58995bc](https://github.com/LogRock/pebbles/commit/58995bcf156120bb306c0ff5740631a70148a413))
+- **button:** :sparkles: make Button accept all props from button tag ([9fc13ca](https://github.com/LogRock/pebbles/commit/9fc13cade39dfddc0c157687567b0cd4f63c8b0b))
+
 ## [4.1.1](https://github.com/LogRock/pebbles/compare/v4.1.0...v4.1.1) (2022-03-09)
 
 ### Bug Fixes
