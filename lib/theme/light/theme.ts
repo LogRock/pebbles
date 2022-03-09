@@ -147,6 +147,7 @@ const disabledVariant: ButtonVariant = {
 const buttons: Buttons = {
   fontFamily: "Archivo, sans-serif",
   fontWeight: 500,
+  outline: `3px solid ${primary[200]}`,
   regular: {
     xSmall: {
       borderRadius: "2px",
