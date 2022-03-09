@@ -1,3 +1,9 @@
+## [4.1.1](https://github.com/LogRock/pebbles/compare/v4.1.0...v4.1.1) (2022-03-09)
+
+### Bug Fixes
+
+- **checkbox:** :bug: expose checkbox ([41c40b6](https://github.com/LogRock/pebbles/commit/41c40b612161b88d79ac9085ba161faa3d09b254))
+
 # [4.1.0](https://github.com/LogRock/pebbles/compare/v4.0.2...v4.1.0) (2022-03-09)
 
 ### Bug Fixes
