@@ -84,9 +84,9 @@ const primaryVariant: ButtonVariant = {
   },
   outlined: {
     background: "transparent",
-    borderColor: neutral["200"],
+    borderColor: primary["500"],
     borderWidth: "1px",
-    contentColor: neutral["700"],
+    contentColor: primary["500"],
   },
 };
 
