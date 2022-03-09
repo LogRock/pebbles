@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { InputBoxProps } from "../InputBox/InputBox";
+import { InputBoxProps } from "../InputBox";
 
 export interface BaseItemType {
   id: string | number;

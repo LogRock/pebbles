@@ -1,14 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import styled from "styled-components";
 
-import InputBox, { InputBoxProps } from "./InputBox";
+import InputBox, { BaseInputBoxProps } from "./BaseInputBox";
 import Button from "../Button";
 
 const NumberInputBoxWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 4px 4px;
 `;
 
 const StyledInputBox = styled(InputBox)`
@@ -22,12 +21,24 @@ const StyledButton = styled(Button)`
   font-weight: bold;
 `;
 
-const NumberInputBox: FC<InputBoxProps> = (props) => {
+const NumberInputBox: FC<BaseInputBoxProps> = (props) => {
+  let [inputBoxValue, setinputBoxValue] = useState(0);
+
+  const onAdd = () => {
+    inputBoxValue++;
+    setinputBoxValue(inputBoxValue);
+  };
+
+  const onSubtract = () => {
+    if (inputBoxValue > 0) inputBoxValue--;
+    setinputBoxValue(inputBoxValue);
+  };
+
   return (
     <NumberInputBoxWrapper>
-      <StyledButton>-</StyledButton>
-      <StyledInputBox />
-      <StyledButton>+</StyledButton>
+      <StyledButton onClick={onSubtract}>-</StyledButton>
+      <StyledInputBox value={inputBoxValue} {...props} />
+      <StyledButton onClick={onAdd}>+</StyledButton>
     </NumberInputBoxWrapper>
   );
 };

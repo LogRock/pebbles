@@ -1,9 +1,9 @@
 import React from "react";
-import { NumberInputBox } from "../../../../lib/components/InputBox";
+import { InputBox } from "../../../../lib/components/InputBox";
 
 export default {
   title: "Components/NumberInputBox",
-  component: NumberInputBox,
+  component: InputBox,
   argTypes: {
     disabled: {
       defautValue: false,
@@ -11,5 +11,9 @@ export default {
     },
   },
 };
+const Template = (args) => <InputBox {...args} />;
 
-export const Default = <NumberInputBox />;
+export const Default = Template.bind({});
+Default.args = {
+  type: "number",
+};
