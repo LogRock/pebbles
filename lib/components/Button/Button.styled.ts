@@ -7,7 +7,9 @@ const baseButtonCSS = css`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+
   border-style: solid;
+
   font-family: ${({ theme }) => theme.buttons.fontFamily};
 
   &,
@@ -18,6 +20,10 @@ const baseButtonCSS = css`
   & path {
     fill: currentColor;
     fill-rule: evenodd;
+  }
+
+  &:active {
+    outline: ${({ theme }) => theme.buttons.outline};
   }
 `;
 
@@ -36,18 +42,21 @@ const buttonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
 
     border-radius: ${theme.buttons.regular[buttonSize || "medium"]
       .borderRadius};
+
     font-size: ${theme.buttons.regular[buttonSize || "medium"].fontSize};
   `}
 `;
 
 const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
   ${({ theme, buttonStyle }) => css`
-    background: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
-      .background};
-    border-color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
-      .borderColor};
     border-width: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .borderWidth};
+    border-color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .borderColor};
+
+    background: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
+      .background};
+
     color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .contentColor};
   `}
@@ -55,15 +64,17 @@ const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
 
 const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
   ${({ theme, buttonStyle, variant }) => css`
-    background: ${theme.buttons.regular[variant || "primary"][
-      buttonStyle || "primary"
-    ].background};
-    border-color: ${theme.buttons.regular[variant || "primary"][
-      buttonStyle || "primary"
-    ].borderColor};
     border-width: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].borderWidth};
+    border-color: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].borderColor};
+
+    background: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].background};
+
     color: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].contentColor};
@@ -107,6 +118,7 @@ const iconButtonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
       ${theme.buttons.icon[buttonSize || "medium"].horizontalPadding};
 
     border-radius: ${theme.buttons.icon[buttonSize || "medium"].borderRadius};
+
     font-size: ${theme.buttons.icon[buttonSize || "medium"].fontSize};
   `}
 `;
