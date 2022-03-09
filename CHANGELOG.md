@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/LogRock/pebbles/compare/v4.0.0...v4.0.1) (2022-03-09)
+
+### Bug Fixes
+
+- **project:** :building_construction: externalize some dependencies ([6e8b3d2](https://github.com/LogRock/pebbles/commit/6e8b3d25c0a632974b7dc6a0ba16603c95cf6ada))
+- **project:** :building_construction: externalize some dependencies ([85acb5a](https://github.com/LogRock/pebbles/commit/85acb5a06a1c0a52ac75d40169fa9cdf0b9a74c3))
+
 # [4.0.0](https://github.com/LogRock/pebbles/compare/v3.2.2...v4.0.0) (2022-03-08)
 
 ### Bug Fixes
