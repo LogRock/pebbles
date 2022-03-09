@@ -1,3 +1,9 @@
+## [4.3.1](https://github.com/LogRock/pebbles/compare/v4.3.0...v4.3.1) (2022-03-09)
+
+### Bug Fixes
+
+- **select:** :bug: fix select event handling ([2f89b5d](https://github.com/LogRock/pebbles/commit/2f89b5d52fe802b9d5684b0f16060683c0c0f948))
+
 # [4.3.0](https://github.com/LogRock/pebbles/compare/v4.2.0...v4.3.0) (2022-03-09)
 
 ### Features
