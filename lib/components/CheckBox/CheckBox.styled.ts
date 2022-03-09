@@ -33,7 +33,7 @@ export const CheckMark = styled.span<{ disabled?: boolean }>`
   }
 `;
 
-export const Label = styled.label<{ disabled?: boolean, spaced?: boolean }>`
+export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
   ${paragraphMediumCSS}
   ${({ theme, disabled }) =>
     disabled ? `color: ${theme.colors.neutral[300]};` : ""}
@@ -42,10 +42,10 @@ export const Label = styled.label<{ disabled?: boolean, spaced?: boolean }>`
   flex-flow: row-reverse nowrap;
   align-items: start;
   justify-content: flex-end;
-  margin-top: ${({ theme, spaced }) => spaced ? theme.inputBox.spacing : 0};
+  margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
 
   &:hover input ~ ${CheckMark} {
-    background-color: ${({ theme }) => theme.colors.neutral[300]};
+    border-color: ${({ theme }) => theme.checkBox.checked.background};
   }
 `;
 
