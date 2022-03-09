@@ -43,9 +43,21 @@ export default {
 
 const Template = (args) => (
   <>
-    <Select autoCompleteItems={autoCompleteItems} {...args} />
-    <Select autoCompleteItems={autoCompleteItems} {...args} />
-    <Select autoCompleteItems={autoCompleteItems} {...args} />
+    <Select
+      autoCompleteItems={autoCompleteItems}
+      {...args}
+      inputProps={{ description: "Select your stuff" }}
+    />
+    <Select
+      autoCompleteItems={autoCompleteItems}
+      {...args}
+      inputProps={{ helper: "Foo" }}
+    />
+    <Select
+      autoCompleteItems={autoCompleteItems}
+      {...args}
+      inputProps={{ description: "Select your stuff", helper: "Foo" }}
+    />
   </>
 );
 
