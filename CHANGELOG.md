@@ -1,3 +1,14 @@
+# [4.1.0](https://github.com/LogRock/pebbles/compare/v4.0.2...v4.1.0) (2022-03-09)
+
+### Bug Fixes
+
+- **select:** :lipstick: make dropdown spaced relative to the input ([9feae63](https://github.com/LogRock/pebbles/commit/9feae63b980e1b852fd88dada08dddb26bc82e25))
+
+### Features
+
+- **checkbox:** :sparkles: add the checkbox component ([26049e6](https://github.com/LogRock/pebbles/commit/26049e6b5b1288daf57d5bc697350c4f0b19ab92))
+- **components:** :sparkles: add spaced prop to all current inputs ([1f077a4](https://github.com/LogRock/pebbles/commit/1f077a4df152c3f49a7b56d0759c2161d136b7c7))
+
 ## [4.0.2](https://github.com/LogRock/pebbles/compare/v4.0.1...v4.0.2) (2022-03-09)
 
 ### Bug Fixes
