@@ -1,3 +1,9 @@
+## [4.0.2](https://github.com/LogRock/pebbles/compare/v4.0.1...v4.0.2) (2022-03-09)
+
+### Bug Fixes
+
+- **project:** :bug: correct how libs are externalized ([ce2ce20](https://github.com/LogRock/pebbles/commit/ce2ce20a51e8c235a945ac521115fe6673ce9302))
+
 ## [4.0.1](https://github.com/LogRock/pebbles/compare/v4.0.0...v4.0.1) (2022-03-09)
 
 ### Bug Fixes
