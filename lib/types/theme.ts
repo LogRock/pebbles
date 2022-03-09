@@ -323,6 +323,7 @@ export interface CheckBox {
 export interface Loader {
   fontFamily: CSS.Property.FontFamily;
   size: CSS.Property.Width;
+  background: CSS.Property.Color;
   loaderColor: {
     background: CSS.Property.Color;
     loaderBar: CSS.Property.Color;
