@@ -1,3 +1,11 @@
+# [4.3.0](https://github.com/LogRock/pebbles/compare/v4.2.0...v4.3.0) (2022-03-09)
+
+### Features
+
+- **input-box:** :sparkles: make InputBox able to receive all input attributes as props ([5052449](https://github.com/LogRock/pebbles/commit/5052449dfeff18987659fdeb1da32c1cd811851b))
+- **progress-loader:** progress loader showing the progress of loading a page ([57dcbbf](https://github.com/LogRock/pebbles/commit/57dcbbfcc062177f0920b6d1d31792e2f0fd42b4))
+- **simple-loader:** simple loader that only show it's processing ([e742f44](https://github.com/LogRock/pebbles/commit/e742f44a9ef828a54e3999a54b73687fd08e8896))
+
 # [4.2.0](https://github.com/LogRock/pebbles/compare/v4.1.1...v4.2.0) (2022-03-09)
 
 ### Bug Fixes
