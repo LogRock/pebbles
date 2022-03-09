@@ -296,6 +296,28 @@ export interface Select {
   };
 }
 
+export interface CheckBoc {
+  background: CSS.Property.Background;
+  borderColor: CSS.Property.BorderColor;
+  borderWidth: CSS.Property.BorderWidth;
+  borderRadius: CSS.Property.BorderRadius;
+  borderStyle: CSS.Property.BorderStyle;
+}
+export interface CheckBox {
+  checkMark: {
+    color: CSS.Property.Color;
+    width: CSS.Property.Width;
+    height: CSS.Property.Height;
+    top: CSS.Property.Top;
+    left: CSS.Property.Left;
+  };
+  width: CSS.Property.Width;
+  height: CSS.Property.Height;
+  marginRight: CSS.Property.MarginRight;
+  default: CheckBoc;
+  checked: CheckBoc;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -311,4 +333,5 @@ export default interface Theme {
   buttons: Buttons;
   inputBox: InputBox;
   select: Select;
+  checkBox: CheckBox;
 }

@@ -1,6 +1,7 @@
 import Theme, {
   Buttons,
   ButtonVariant,
+  CheckBox,
   InputBox,
   Select,
 } from "../../types/theme";
@@ -317,6 +318,33 @@ const select: Select = {
   },
 };
 
+const checkBox: CheckBox = {
+  checkMark: {
+    color: shades[0],
+    width: "3px",
+    height: "6px",
+    left: "5px",
+    top: "2px",
+  },
+  width: spacings.md,
+  height: spacings.md,
+  marginRight: spacings.sm,
+  default: {
+    background: shades[0],
+    borderColor: neutral[300],
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "1.33333px",
+  },
+  checked: {
+    background: primary["500"],
+    borderColor: primary["500"],
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "1.33333px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -373,6 +401,7 @@ const theme: Theme = {
   buttons,
   inputBox,
   select,
+  checkBox,
 };
 
 export default theme;
