@@ -235,6 +235,7 @@ const shadows = {
 };
 
 const inputBox: InputBox = {
+  spacing: spacings.xxbig,
   fontFamily: "Archivo",
   fontWeight: "normal",
   fontStyle: "normal",

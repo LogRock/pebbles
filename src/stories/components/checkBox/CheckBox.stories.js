@@ -70,3 +70,18 @@ MultipleChildrenDoneWrong.args = {
     </>
   ),
 };
+
+const MultiTemplate = (args) => (
+  <>
+    <CheckBox {...args}>{args.label}</CheckBox>
+    <CheckBox {...args}>{args.label}</CheckBox>
+    <CheckBox {...args}>{args.label}</CheckBox>
+    <CheckBox {...args}>{args.label}</CheckBox>
+  </>
+);
+
+export const Spaced = MultiTemplate.bind({});
+Spaced.args = {
+  spaced: true,
+  label: "These have some extra head space",
+};

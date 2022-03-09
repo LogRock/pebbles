@@ -3,9 +3,10 @@ import { InputBoxProps } from "./InputBox";
 
 const defaultStatus = "info";
 
-export const StyledDiv = styled.div`
+export const StyledDiv = styled.div<{ spaced?: boolean }>`
   display: flex;
   flex-direction: column;
+  margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
 `;
 
 export const Label = styled.span`

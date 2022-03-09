@@ -27,4 +27,5 @@ export type SelectProps<ItemType> = {
   renderHeader?: FC;
   onItemSelected?: (item: ItemType) => void;
   inputProps?: InputBoxProps;
+  spaced?: boolean;
 };
