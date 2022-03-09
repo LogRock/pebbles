@@ -1,7 +1,6 @@
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
 import React, { FC } from "react";
-import Theme from "../../types/theme";
 import {
   StyledDiv,
   Label,
@@ -15,7 +14,8 @@ import {
   HelperIcon,
 } from "./InputBox.styled";
 
-export type InputBoxProps = {
+export interface InputBoxProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   description?: string;
   hint?: {
     content: string;
@@ -23,47 +23,38 @@ export type InputBoxProps = {
   };
   status?: "info" | "error";
   helper?: string;
-  placeholder?: string;
-  disabled?: boolean;
-  onChange?: () => void;
-  onFocus?: () => void;
-  onBlur?: () => void;
-  theme?: Theme;
-  type?: string;
   spaced?: boolean;
-};
+}
 
-const InputBox: FC<InputBoxProps> = (props) => {
+const InputBox: FC<InputBoxProps> = ({
+  spaced,
+  description,
+  status,
+  hint,
+  helper,
+  ...inputProps
+}) => {
   return (
-    <StyledDiv spaced={props.spaced}>
-      <Label>{props.description}</Label>
+    <StyledDiv spaced={spaced}>
+      <Label>{description}</Label>
       <InputDiv>
-        <StyledInput
-          status={props.status}
-          placeholder={props.placeholder}
-          disabled={props.disabled}
-          onChange={props.onChange}
-          type={props.type || "text"}
-          {...props}
-        />
-        {props.hint && (
+        <StyledInput status={status} {...inputProps} />
+        {hint && (
           <HintDiv>
-            <Hint status={props.status}>{props.hint.content}</Hint>
-            {props.hint.icon && (
-              <HintIconWrapper status={props.status}>
-                {props.hint.icon}
-              </HintIconWrapper>
+            <Hint status={status}>{hint.content}</Hint>
+            {hint.icon && (
+              <HintIconWrapper status={status}>{hint.icon}</HintIconWrapper>
             )}
           </HintDiv>
         )}
       </InputDiv>
       <HelperDiv>
-        {props.status === "error" && (
-          <HelperIcon status={props.status}>
+        {status === "error" && (
+          <HelperIcon status={status}>
             <Icon path={mdiAlert} size={0.7} />
           </HelperIcon>
         )}
-        <Helper status={props.status}>{props.helper}</Helper>
+        <Helper status={status}>{helper}</Helper>
       </HelperDiv>
     </StyledDiv>
   );
