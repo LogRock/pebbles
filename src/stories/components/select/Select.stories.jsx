@@ -80,3 +80,6 @@ export const Spaced = Template.bind({});
 Spaced.args = {
   spaced: true,
 };
+
+export const WithCallback = Template.bind({});
+WithCallback.args = {};

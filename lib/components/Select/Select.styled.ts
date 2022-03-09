@@ -31,7 +31,7 @@ export const SelectItems = styled.div<{
   helper?: string;
   description?: string;
 }>`
-  display: ${({ focus }) => (focus ? "flex" : "none")};
+  display: ${({ focus }) => (focus ? "flex" : "hidden")};
   box-sizing: border-box;
   flex-flow: column nowrap;
   flex-grow: 1;

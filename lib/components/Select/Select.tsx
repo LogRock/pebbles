@@ -1,6 +1,6 @@
 import { mdiUnfoldMoreHorizontal } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { InputBox } from "../InputBox";
 import SimpleItem from "./items/SimpleItem";
 import { SelectItems, SelectWrapper } from "./Select.styled";
@@ -17,15 +17,17 @@ const Select = <ItemType extends BaseItemType>({
   const Header = renderHeader || (() => null);
   const Item = renderItem || SimpleItem;
 
-  const [showDropdown, setShowDropdown] = useState(false);
   const [currentHighlight, setCurrentHighlight] = useState(0);
   const [hasFocus, setHasFocus] = useState(false);
+  const [firstFocus, setFirstFocus] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
 
   const keyPressHandler = useCallback(
     (e: KeyboardEvent) => {
       switch (e.key) {
         case "Escape":
-          setShowDropdown(false);
+          setHasFocus(false);
           break;
         case "ArrowUp":
           setCurrentHighlight((oldHighlight) =>
@@ -41,7 +43,6 @@ const Select = <ItemType extends BaseItemType>({
           break;
         case "Enter":
           setCurrentHighlight((oldHighlight) => {
-            setShowDropdown(false);
             if (autoCompleteItems.length) {
               if (onItemSelected && typeof onItemSelected === "function") {
                 onItemSelected(autoCompleteItems[oldHighlight]);
@@ -55,24 +56,47 @@ const Select = <ItemType extends BaseItemType>({
     [autoCompleteItems, onItemSelected]
   );
 
+  const clickListener = (event: { target: any }) => {
+    // Do nothing if clicking ref's element or descendent elements
+    if (!ref.current || ref.current.contains(event.target)) {
+      return;
+    }
+    setHasFocus(false);
+  };
+
   useEffect(() => {
     document.addEventListener("keydown", keyPressHandler, false);
+    document.addEventListener("mousedown", clickListener);
+    document.addEventListener("touchstart", clickListener);
 
     return () => {
       document.removeEventListener("keydown", keyPressHandler, false);
+      document.removeEventListener("mousedown", clickListener);
+      document.removeEventListener("touchstart", clickListener);
     };
   }, [keyPressHandler]);
 
   useEffect(() => {
-    setShowDropdown(true);
-  }, [autoCompleteItems]);
+    if (firstFocus) {
+      setHasFocus(true);
+    }
+  }, [autoCompleteItems, firstFocus]);
 
   return (
-    <SelectWrapper focus={hasFocus} spaced={spaced || inputProps?.spaced}>
+    <SelectWrapper
+      focus={hasFocus}
+      spaced={spaced || inputProps?.spaced}
+      ref={ref}
+    >
       <InputBox
         {...inputProps}
-        onFocus={() => setHasFocus(true)}
-        onBlur={() => setHasFocus(false)}
+        onFocus={() => {
+          setFirstFocus(true);
+          setHasFocus(true);
+        }}
+        onClick={() => {
+          setHasFocus(true);
+        }}
         hint={{
           icon: inputProps?.hint?.icon || (
             <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />
@@ -81,7 +105,7 @@ const Select = <ItemType extends BaseItemType>({
         }}
         spaced={false}
       />
-      {showDropdown && (
+      {hasFocus && (
         <SelectItems
           focus={hasFocus}
           helper={inputProps?.helper}
@@ -93,11 +117,9 @@ const Select = <ItemType extends BaseItemType>({
               key={item.id}
               item={item}
               onClick={() => {
-                setShowDropdown(false);
-                if (onItemSelected && typeof onItemSelected === "function") {
-                  onItemSelected(autoCompleteItems[index]);
-                }
+                onItemSelected?.(autoCompleteItems[index]);
                 setCurrentHighlight(0);
+                setHasFocus(false);
               }}
               onMouseEnter={() => setCurrentHighlight(index)}
               highlighted={currentHighlight === index}
