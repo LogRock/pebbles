@@ -349,7 +349,8 @@ const checkBox: CheckBox = {
 
 const loader: Loader = {
   fontFamily: "Archivo",
-  size: "32px",
+  size: "50px",
+  background: "white",
   loaderColor: {
     loaderBar: primary[500],
     background: primary[50],
