@@ -84,3 +84,18 @@ InteractiveInputBox.args = {
     placeholder: "no ads or spams.",
   },
 };
+
+const MultiTemplate = (args) => (
+  <>
+    <InputBox {...args} />
+    <InputBox {...args} />
+    <InputBox {...args} />
+    <InputBox {...args} />
+  </>
+);
+
+export const Spaced = MultiTemplate.bind({});
+Spaced.args = {
+  spaced: true,
+  description: "These have some extra head space",
+};

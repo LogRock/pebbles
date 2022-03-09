@@ -30,11 +30,12 @@ export type InputBoxProps = {
   onBlur?: () => void;
   theme?: Theme;
   type?: string;
+  spaced?: boolean;
 };
 
 const InputBox: FC<InputBoxProps> = (props) => {
   return (
-    <StyledDiv>
+    <StyledDiv spaced={props.spaced}>
       <Label>{props.description}</Label>
       <InputDiv>
         <StyledInput

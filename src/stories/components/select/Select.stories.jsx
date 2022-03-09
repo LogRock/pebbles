@@ -75,3 +75,8 @@ CustomHeader.args = {
     <h3>This is a custom header, great for table-like lists</h3>
   ),
 };
+
+export const Spaced = Template.bind({});
+Spaced.args = {
+  spaced: true,
+};
