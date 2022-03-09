@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputBoxProps } from "./InputBox";
+import { BaseInputBoxProps } from "./BaseInputBox";
 
 const defaultStatus = "info";
 
@@ -23,7 +23,7 @@ export const HelperDiv = styled.div`
   display: flex;
 `;
 
-export const Helper = styled(Label)<Pick<InputBoxProps, "status">>`
+export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`
   margin: ${({ theme }) => theme.inputBox.helper.margin};
 
   color: ${({ theme, status }) =>
@@ -34,7 +34,7 @@ export const Helper = styled(Label)<Pick<InputBoxProps, "status">>`
   line-height: ${({ theme }) => theme.inputBox.helper.lineHeight};
 `;
 
-export const HelperIcon = styled.div<Pick<InputBoxProps, "status">>`
+export const HelperIcon = styled.div<Pick<BaseInputBoxProps, "status">>`
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].helperColor};
 `;
@@ -49,14 +49,14 @@ export const HintDiv = styled.div`
   padding: ${({ theme }) => theme.inputBox.padding};
 `;
 
-export const Hint = styled(Label)<Pick<InputBoxProps, "status">>`
+export const Hint = styled(Label)<Pick<BaseInputBoxProps, "status">>`
   margin: ${({ theme }) => theme.inputBox.hint.margin};
 
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].hintColor};
 `;
 
-export const HintIconWrapper = styled.div<Pick<InputBoxProps, "status">>`
+export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "status">>`
   margin: 4px 4px;
 
   color: ${({ theme, status }) =>
@@ -67,7 +67,7 @@ export const InputDiv = styled.div`
   position: relative;
 `;
 
-export const StyledInput = styled.input<Pick<InputBoxProps, "status">>`
+export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
   flex-direction: row;
