@@ -1,3 +1,18 @@
+# [5.0.0](https://github.com/LogRock/pebbles/compare/v4.3.1...v5.0.0) (2022-03-10)
+
+### Bug Fixes
+
+- **number-picker:** fix flaky issue while add or subtract and using icons instead of signs ([88c6035](https://github.com/LogRock/pebbles/commit/88c6035da04191d9c818e59691d81a30c4e22512))
+
+### Features
+
+- **number-picker:** improve InputBox component to be semantic correct based on type ([8a901f0](https://github.com/LogRock/pebbles/commit/8a901f09556857bebe4f273bb0b6764c7d68e30b))
+- **number-picker:** number picker skeleton ([88ac5db](https://github.com/LogRock/pebbles/commit/88ac5db33a7cb7fa89c0438bf4c583336fe997b8))
+
+### BREAKING CHANGES
+
+- **number-picker:** changes button API size options
+
 ## [4.3.1](https://github.com/LogRock/pebbles/compare/v4.3.0...v4.3.1) (2022-03-09)
 
 ### Bug Fixes
