@@ -1,8 +1,9 @@
 import React, { FC, useState } from "react";
 import styled from "styled-components";
-
+import { mdiMinus, mdiPlus } from "@mdi/js";
 import InputBox, { BaseInputBoxProps } from "./BaseInputBox";
 import Button from "../Button";
+import { Icon } from "@mdi/react";
 
 const NumberInputBoxWrapper = styled.div`
   display: flex;
@@ -16,29 +17,26 @@ const StyledInputBox = styled(InputBox)`
   text-align: center;
 `;
 
-const StyledButton = styled(Button)`
-  font-size: 24px;
-  font-weight: bold;
-`;
-
 const NumberInputBox: FC<BaseInputBoxProps> = (props) => {
-  let [inputBoxValue, setinputBoxValue] = useState(0);
+  const [inputBoxValue, setinputBoxValue] = useState(0);
 
   const onAdd = () => {
-    inputBoxValue++;
-    setinputBoxValue(inputBoxValue);
+    setinputBoxValue((oldValue) => oldValue + 1);
   };
 
   const onSubtract = () => {
-    if (inputBoxValue > 0) inputBoxValue--;
-    setinputBoxValue(inputBoxValue);
+    setinputBoxValue((oldValue) => (oldValue > 0 ? oldValue - 1 : oldValue));
   };
 
   return (
     <NumberInputBoxWrapper>
-      <StyledButton onClick={onSubtract}>-</StyledButton>
-      <StyledInputBox value={inputBoxValue} {...props} />
-      <StyledButton onClick={onAdd}>+</StyledButton>
+      <Button onClick={onSubtract} buttonSize="xSmall">
+        <Icon path={mdiMinus} size={1.35} />
+      </Button>
+      <StyledInputBox readOnly value={inputBoxValue} {...props} />
+      <Button onClick={onAdd} buttonSize="xSmall">
+        <Icon path={mdiPlus} size={1.35} />
+      </Button>
     </NumberInputBoxWrapper>
   );
 };
