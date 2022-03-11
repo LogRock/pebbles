@@ -90,12 +90,14 @@ const Select = <ItemType extends BaseItemType>({
     >
       <InputBox
         {...inputProps}
-        onFocus={() => {
+        onFocus={(e) => {
           setFirstFocus(true);
           setHasFocus(true);
+          inputProps?.onFocus?.(e);
         }}
-        onClick={() => {
+        onClick={(e) => {
           setHasFocus(true);
+          inputProps?.onClick?.(e);
         }}
         hint={{
           icon: inputProps?.hint?.icon || (
