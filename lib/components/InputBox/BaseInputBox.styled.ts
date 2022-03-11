@@ -24,8 +24,6 @@ export const HelperDiv = styled.div`
 `;
 
 export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`
-  margin: ${({ theme }) => theme.inputBox.helper.margin};
-
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].helperColor};
   font-size: ${({ theme }) => theme.inputBox.helper.fontSize};
@@ -35,6 +33,8 @@ export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`
 `;
 
 export const HelperIcon = styled.div<Pick<BaseInputBoxProps, "status">>`
+  margin-right: ${({ theme }) => theme.inputBox.helper.margin};
+
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].helperColor};
 `;
@@ -89,6 +89,8 @@ export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
 
   color: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].color};
+  font-family: ${({ theme }) => theme.inputBox.fontFamily};
+  font-size: ${({ theme }) => theme.inputBox.fontSize};
 
   &:focus {
     box-sizing: ${({ theme, status }) =>

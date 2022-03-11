@@ -17,3 +17,14 @@ export const Default = Template.bind({});
 Default.args = {
   type: "number",
 };
+
+export const WithAllInputProps = Template.bind({});
+WithAllInputProps.args = {
+  type: "number",
+  description: "Description",
+  hint: {
+    content: "Some hint",
+    icon: "I",
+  },
+  helper: "Some Helper",
+};
