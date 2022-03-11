@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/LogRock/pebbles/compare/v5.0.0...v5.0.1) (2022-03-11)
+
+### Bug Fixes
+
+- **input-box:** :bug: make number input trigger dom events properly ([d944443](https://github.com/LogRock/pebbles/commit/d9444439dfb416ab396f088809c1e5f0a2d920ec))
+- **input-box:** :bug: make the number version properly support all props ([264c346](https://github.com/LogRock/pebbles/commit/264c346cb5c669b4b8a290e82ae9f90544beaa38))
+
 # [5.0.0](https://github.com/LogRock/pebbles/compare/v4.3.1...v5.0.0) (2022-03-10)
 
 ### Bug Fixes
