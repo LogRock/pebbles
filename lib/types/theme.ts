@@ -330,6 +330,41 @@ export interface Loader {
   };
 }
 
+interface AlertColor {
+  descriptionColor: CSS.Property.Color;
+  background: CSS.Property.Background;
+  borderColor: CSS.Property.Color;
+  iconColor: CSS.Property.Color;
+  titleColor: CSS.Property.Color;
+}
+
+export interface Alert {
+  neutral: AlertColor;
+  primary: AlertColor;
+  warning: AlertColor;
+  success: AlertColor;
+  error: AlertColor;
+  title: {
+    fontSize: CSS.Property.FontSize;
+    fontWeight: CSS.Property.FontWeight;
+    lineHeight: CSS.Property.LineHeight;
+    height: CSS.Property.Height;
+  };
+  description: {
+    fontSize: CSS.Property.FontSize;
+    fontWeight: CSS.Property.FontWeight;
+    lineHeight: CSS.Property.LineHeight;
+    height: CSS.Property.Height;
+  };
+  hint: {
+    fontSize: CSS.Property.FontSize;
+    fontWeight: CSS.Property.FontWeight;
+    lineHeight: CSS.Property.LineHeight;
+    height: CSS.Property.Height;
+  };
+  fontFamily: CSS.Property.FontFamily;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -347,4 +382,5 @@ export default interface Theme {
   select: Select;
   checkBox: CheckBox;
   loader: Loader;
+  alert: Alert;
 }
