@@ -1,3 +1,9 @@
+## [5.0.2](https://github.com/LogRock/pebbles/compare/v5.0.1...v5.0.2) (2022-03-11)
+
+### Bug Fixes
+
+- **select:** :bug: make select pass on event handlers properly ([064f662](https://github.com/LogRock/pebbles/commit/064f662b0e6d4f7202e6c524993df4d0d4369778))
+
 ## [5.0.1](https://github.com/LogRock/pebbles/compare/v5.0.0...v5.0.1) (2022-03-11)
 
 ### Bug Fixes
