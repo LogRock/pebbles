@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button";
 import Icon from "@mdi/react";
@@ -9,9 +9,14 @@ export interface AlertProps {
   description?: string;
   hint?: string;
   status?: "neutral" | "primary" | "success" | "warning" | "error";
+  visible?: boolean;
 }
 
-const AlertWrapper = styled.div<Pick<AlertProps, "status">>`
+export interface AlertInlineProps extends AlertProps {
+  close: Function;
+}
+
+const AlertWrapper = styled.div<Pick<AlertInlineProps, "status">>`
   display: flex;
   position: static;
   box-sizing: border-box;
@@ -32,7 +37,7 @@ const AlertWrapper = styled.div<Pick<AlertProps, "status">>`
   font-feature-settings: "salt" on;
 `;
 
-const IconPanel = styled.div<Pick<AlertProps, "status">>`
+const IconPanel = styled.div<Pick<AlertInlineProps, "status">>`
   display: flex;
   justify-content: center;
 
@@ -52,8 +57,7 @@ const Actions = styled.div`
   align-items: center;
 `;
 
-const Title = styled.span<Pick<AlertProps, "status">>`
-  height: 30px;
+const Title = styled.span<Pick<AlertInlineProps, "status">>`
   height: ${({ theme }) => theme.alert.title.height};
 
   color: ${({ theme, status }) => theme.alert[status || "neutral"].titleColor};
@@ -62,8 +66,8 @@ const Title = styled.span<Pick<AlertProps, "status">>`
   line-height: ${({ theme }) => theme.alert.title.lineWeight};
 `;
 
-const Description = styled.span<Pick<AlertProps, "status">>`
-  height: 30px;
+const Description = styled.span<Pick<AlertInlineProps, "status">>`
+  margin: 8px 0px;
 
   font-size: ${({ theme }) => theme.alert.description.fontSize};
   font-weight: ${({ theme }) => theme.alert.description.fontWeight};
@@ -73,10 +77,9 @@ const Description = styled.span<Pick<AlertProps, "status">>`
 const Hint = styled.span`
   display: flex;
   align-items: center;
-  height: 30px;
   margin: 0px 10px;
 
-  color: #000000;
+  color: ${({ theme }) => theme.alert.hint.lineHeight};
   font-size: ${({ theme }) => theme.alert.hint.fontSize};
   font-weight: ${({ theme }) => theme.alert.hint.fontWeight};
   line-height: ${({ theme }) => theme.alert.hint.lineHeight};
@@ -84,7 +87,7 @@ const Hint = styled.span`
   text-decoration-line: underline;
 `;
 
-const AlertInline: FC<AlertProps> = (props) => {
+const AlertInline: FC<AlertInlineProps> = (props) => {
   return (
     <AlertWrapper status={props.status}>
       <IconPanel status={props.status}>
@@ -127,11 +130,28 @@ const AlertInline: FC<AlertProps> = (props) => {
           <Hint> {props.hint}</Hint>
         </Actions>
       </MainPanel>
-      <IconPanel status={props.status}>
+      <IconPanel
+        onClick={() => {
+          props.close();
+        }}
+        status={props.status}
+      >
         <Icon path={mdiClose} size={0.7} />
       </IconPanel>
     </AlertWrapper>
   );
 };
 
-export default AlertInline;
+const Alert: FC<AlertProps> = ({ visible = true, ...props }) => {
+  const [isAlertVisible, setIsAlertVisible] = useState(visible);
+
+  return (
+    <>
+      {isAlertVisible && (
+        <AlertInline close={() => setIsAlertVisible(false)} {...props} />
+      )}
+    </>
+  );
+};
+
+export default Alert;

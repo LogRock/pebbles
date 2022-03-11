@@ -412,6 +412,7 @@ const alert: Alert = {
     fontSize: "14px",
     lineHeight: "20px",
     height: "20px",
+    color: "black",
   },
   fontFamily: "Archivo",
 };

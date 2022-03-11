@@ -361,6 +361,7 @@ export interface Alert {
     fontWeight: CSS.Property.FontWeight;
     lineHeight: CSS.Property.LineHeight;
     height: CSS.Property.Height;
+    color: CSS.Property.Color;
   };
   fontFamily: CSS.Property.FontFamily;
 }
