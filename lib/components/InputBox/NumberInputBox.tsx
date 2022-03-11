@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { mdiAlert, mdiMinus, mdiPlus } from "@mdi/js";
 import { BaseInputBoxProps } from "./BaseInputBox";
@@ -46,15 +46,31 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
   helper,
   ...props
 }) => {
-  const [inputBoxValue, setinputBoxValue] = useState(0);
+  const [inputBoxValue, setinputBoxValue] = useState(Number(props.value) || 0);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const onAdd = () => {
-    setinputBoxValue((oldValue) => oldValue + 1);
+    setinputBoxValue((oldValue) => {
+      return oldValue + 1;
+    });
   };
 
   const onSubtract = () => {
-    setinputBoxValue((oldValue) => (oldValue > 0 ? oldValue - 1 : oldValue));
+    setinputBoxValue((oldValue) => {
+      return oldValue > 0 ? oldValue - 1 : oldValue;
+    });
   };
+
+  useEffect(() => {
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+      window?.HTMLInputElement?.prototype,
+      "value"
+    )?.set;
+    nativeInputValueSetter?.call?.(inputRef.current, `${inputBoxValue}`);
+
+    const ev2 = new Event("input", { bubbles: true });
+    inputRef?.current?.dispatchEvent(ev2);
+  }, [inputBoxValue]);
 
   return (
     <StyledDiv spaced={spaced}>
@@ -64,7 +80,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           <Icon path={mdiMinus} size={1.35} />
         </StyledButton>
         <InputWrapper>
-          <StyledStyledInput status={status} {...props} value={inputBoxValue} />
+          <StyledStyledInput status={status} {...props} ref={inputRef} />
           {hint && (
             <HintDiv>
               <Hint status={status}>{hint.content}</Hint>
