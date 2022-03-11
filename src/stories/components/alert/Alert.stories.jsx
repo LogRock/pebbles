@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Alert from "../../../../lib/components/Alert";
 
 export default {
@@ -15,6 +15,7 @@ Default.args = {
   hint: "Hint here",
   status: "neutral",
   visible: true,
+  labelButton: "OK",
 };
 
 export const Primary = Template.bind({});
@@ -24,6 +25,7 @@ Primary.args = {
   hint: "Hint here",
   status: "primary",
   visible: true,
+  labelButton: "OK",
 };
 
 export const Success = Template.bind({});
@@ -33,6 +35,7 @@ Success.args = {
   hint: "Hint here",
   status: "success",
   visible: true,
+  labelButton: "OK",
 };
 
 export const Warning = Template.bind({});
@@ -42,6 +45,7 @@ Warning.args = {
   hint: "Hint here",
   status: "warning",
   visible: true,
+  labelButton: "OK",
 };
 
 export const Error = Template.bind({});
@@ -51,4 +55,30 @@ Error.args = {
   hint: "Hint here",
   status: "error",
   visible: true,
+  labelButton: "OK",
+};
+
+const InteractiveTemplate = (args) => {
+  const [eventTriggered, setEventTriggered] = useState("");
+
+  return (
+    <div>
+      <Alert
+        {...args}
+        onButtonClick={() => setEventTriggered("button got triggered")}
+        onHintClick={() => setEventTriggered("hint got triggered")}
+      />
+      <span>{eventTriggered}</span>
+    </div>
+  );
+};
+
+export const InteractiveAlert = InteractiveTemplate.bind({});
+InteractiveAlert.args = {
+  title: "Title here",
+  description: "Description here",
+  hint: "Hint here",
+  status: "error",
+  visible: true,
+  labelButton: "OK",
 };
