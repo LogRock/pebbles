@@ -5,6 +5,7 @@ import Theme, {
   InputBox,
   Select,
   Loader,
+  Alert,
 } from "../../types/theme";
 import {
   neutral,
@@ -358,6 +359,63 @@ const loader: Loader = {
   },
 };
 
+const alert: Alert = {
+  neutral: {
+    background: neutral[50],
+    borderColor: neutral[200],
+    titleColor: neutral[800],
+    descriptionColor: neutral[700],
+    iconColor: neutral[500],
+  },
+  primary: {
+    background: primary[50],
+    borderColor: primary[600],
+    titleColor: primary[900],
+    descriptionColor: primary[700],
+    iconColor: primary[600],
+  },
+  success: {
+    background: success[50],
+    borderColor: success[200],
+    titleColor: success[800],
+    descriptionColor: success[700],
+    iconColor: success[500],
+  },
+  warning: {
+    background: warning[50],
+    borderColor: warning[200],
+    titleColor: warning[800],
+    descriptionColor: warning[700],
+    iconColor: warning[500],
+  },
+  error: {
+    background: error[50],
+    borderColor: error[200],
+    titleColor: error[800],
+    descriptionColor: error[700],
+    iconColor: error[500],
+  },
+  title: {
+    fontWeight: "600",
+    fontSize: "16px",
+    lineHeight: "24px",
+    height: "24px",
+  },
+  description: {
+    fontWeight: "400",
+    fontSize: "14px",
+    lineHeight: "20px",
+    height: "20px",
+  },
+  hint: {
+    fontWeight: "400",
+    fontSize: "14px",
+    lineHeight: "20px",
+    height: "20px",
+  },
+  fontFamily: "Archivo",
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -413,9 +471,10 @@ const theme: Theme = {
   },
   buttons,
   inputBox,
-  loader,
   select,
   checkBox,
+  loader,
+  alert,
 };
 
 export default theme;

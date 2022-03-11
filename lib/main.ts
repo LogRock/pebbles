@@ -45,3 +45,7 @@ export { default as TableHeader } from "./components/Select/headers/TableHeader"
 // expose CheckBox
 export { default as CheckBox } from "./components/CheckBox";
 export type { CheckBoxProps } from "./components/CheckBox";
+
+// expose Alert
+export { default as AlertInline } from "./components/Alert";
+export type { AlertProps } from "./components/Alert";

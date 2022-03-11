@@ -12,32 +12,30 @@ export interface AlertProps {
 }
 
 const AlertWrapper = styled.div<Pick<AlertProps, "status">>`
-  /* Auto layout */
   display: flex;
+  position: static;
+  box-sizing: border-box;
   flex-direction: row;
   align-items: flex-start;
-  position: static;
   padding: 12px 20px;
-
-  font-family: ${({ theme }) => theme.alert.fontFamily};
-  font-size: ${({ theme }) => theme.alert.fontSize};
-  font-feature-settings: "salt" on;
-
-  color: ${({ theme, status }) =>
-    theme.alert[status || "neutral"].descriptionColor};
-  background: ${({ theme, status }) =>
-    theme.alert[status || "neutral"].background};
 
   border: 1px solid
     ${({ theme, status }) => theme.alert[status || "neutral"].borderColor};
-  box-sizing: border-box;
   border-radius: 2px;
+
+  background: ${({ theme, status }) =>
+    theme.alert[status || "neutral"].background};
+
+  color: ${({ theme, status }) =>
+    theme.alert[status || "neutral"].descriptionColor};
+  font-family: ${({ theme }) => theme.alert.fontFamily};
+  font-feature-settings: "salt" on;
 `;
 
 const IconPanel = styled.div<Pick<AlertProps, "status">>`
   display: flex;
   justify-content: center;
-  padding-top: 2px;
+
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
 `;
 
@@ -56,33 +54,34 @@ const Actions = styled.div`
 
 const Title = styled.span<Pick<AlertProps, "status">>`
   height: 30px;
+  height: ${({ theme }) => theme.alert.title.height};
+
   color: ${({ theme, status }) => theme.alert[status || "neutral"].titleColor};
-  font-style: ${({ theme }) => theme.alert.title.fontStyle};
+  font-size: ${({ theme }) => theme.alert.title.fontSize};
   font-weight: ${({ theme }) => theme.alert.title.fontWeight};
   line-height: ${({ theme }) => theme.alert.title.lineWeight};
 `;
 
 const Description = styled.span<Pick<AlertProps, "status">>`
-  font-style: ${({ theme }) => theme.alert.description.fontStyle};
-  font-weight: ${({ theme }) => theme.alert.description.fontWeight};
-  line-height: ${({ theme }) => theme.alert.description.lineWeight};
   height: 30px;
+
+  font-size: ${({ theme }) => theme.alert.description.fontSize};
+  font-weight: ${({ theme }) => theme.alert.description.fontWeight};
+  line-height: ${({ theme }) => theme.alert.description.lineHeight};
 `;
 
 const Hint = styled.span`
-  font-style: ${({ theme }) => theme.alert.hint.fontStyle};
-  font-weight: ${({ theme }) => theme.alert.hint.fontWeight};
-  line-height: ${({ theme }) => theme.alert.hint.lineWeight};
-  margin: 0px 10px;
-
   display: flex;
   align-items: center;
-  text-align: center;
-  text-decoration-line: underline;
+  height: 30px;
+  margin: 0px 10px;
 
   color: #000000;
-
-  height: 30px;
+  font-size: ${({ theme }) => theme.alert.hint.fontSize};
+  font-weight: ${({ theme }) => theme.alert.hint.fontWeight};
+  line-height: ${({ theme }) => theme.alert.hint.lineHeight};
+  text-align: center;
+  text-decoration-line: underline;
 `;
 
 const AlertInline: FC<AlertProps> = (props) => {
