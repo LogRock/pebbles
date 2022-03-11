@@ -10,10 +10,13 @@ export interface AlertProps {
   hint?: string;
   status?: "neutral" | "primary" | "success" | "warning" | "error";
   visible?: boolean;
+  labelButton?: string;
+  onButtonClick?: () => void;
+  onHintClick?: () => void;
 }
 
 export interface AlertInlineProps extends AlertProps {
-  close: Function;
+  close: () => void;
 }
 
 const AlertWrapper = styled.div<Pick<AlertInlineProps, "status">>`
@@ -42,6 +45,9 @@ const IconPanel = styled.div<Pick<AlertInlineProps, "status">>`
   justify-content: center;
 
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
+  > * {
+    cursor: pointer;
+  }
 `;
 
 const MainPanel = styled.div`
@@ -78,6 +84,7 @@ const Hint = styled.span`
   display: flex;
   align-items: center;
   margin: 0px 10px;
+  cursor: pointer;
 
   color: ${({ theme }) => theme.alert.hint.lineHeight};
   font-size: ${({ theme }) => theme.alert.hint.fontSize};
@@ -98,36 +105,68 @@ const AlertInline: FC<AlertInlineProps> = (props) => {
         <Description>{props.description}</Description>
         <Actions>
           {(props.status === "neutral" || !props.status) && (
-            <Button buttonStyle="outlined" variant="primary">
-              {" "}
-              OK{" "}
+            <Button
+              onClick={() => {
+                props.onButtonClick && props.onButtonClick();
+              }}
+              buttonStyle="outlined"
+              variant="primary"
+            >
+              {props.labelButton}
             </Button>
           )}
           {props.status === "primary" && (
-            <Button buttonStyle="primary" variant="primary">
-              {" "}
-              OK{" "}
+            <Button
+              onClick={() => {
+                props.onButtonClick && props.onButtonClick();
+              }}
+              buttonStyle="primary"
+              variant="primary"
+            >
+              {props.labelButton}
             </Button>
           )}
           {props.status === "success" && (
-            <Button buttonStyle="primary" variant="primary">
-              {" "}
-              OK{" "}
+            <Button
+              onClick={() => {
+                props.onButtonClick && props.onButtonClick();
+              }}
+              buttonStyle="primary"
+              variant="primary"
+            >
+              {props.labelButton}
             </Button>
           )}
           {props.status === "warning" && (
-            <Button buttonStyle="secondary" variant="primary">
-              {" "}
-              OK{" "}
+            <Button
+              onClick={() => {
+                props.onButtonClick && props.onButtonClick();
+              }}
+              buttonStyle="secondary"
+              variant="primary"
+            >
+              {props.labelButton}
             </Button>
           )}
           {props.status === "error" && (
-            <Button buttonStyle="primary" variant="destructive">
-              {" "}
-              OK{" "}
+            <Button
+              onClick={() => {
+                props.onButtonClick && props.onButtonClick();
+              }}
+              buttonStyle="primary"
+              variant="destructive"
+            >
+              {props.labelButton}
             </Button>
           )}
-          <Hint> {props.hint}</Hint>
+          <Hint
+            onClick={() => {
+              props.onHintClick && props.onHintClick();
+            }}
+          >
+            {" "}
+            {props.hint}
+          </Hint>
         </Actions>
       </MainPanel>
       <IconPanel
@@ -145,10 +184,35 @@ const AlertInline: FC<AlertInlineProps> = (props) => {
 const Alert: FC<AlertProps> = ({ visible = true, ...props }) => {
   const [isAlertVisible, setIsAlertVisible] = useState(visible);
 
+  const onButtonClickHandler = () => {
+    try {
+      props.onButtonClick && props.onButtonClick();
+      setIsAlertVisible(false);
+    } catch (e) {
+      props.status = "error";
+    }
+  };
+  const onHintClickHandler = () => {
+    try {
+      props.onHintClick && props.onHintClick();
+      setIsAlertVisible(false);
+    } catch (e) {
+      props.status = "error";
+    }
+  };
   return (
     <>
       {isAlertVisible && (
-        <AlertInline close={() => setIsAlertVisible(false)} {...props} />
+        <AlertInline
+          {...props}
+          close={() => setIsAlertVisible(false)}
+          onButtonClick={() => {
+            onButtonClickHandler();
+          }}
+          onHintClick={() => {
+            onHintClickHandler();
+          }}
+        />
       )}
     </>
   );
