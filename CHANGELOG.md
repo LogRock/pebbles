@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/LogRock/pebbles/compare/v5.1.0...v5.1.1) (2022-03-14)
+
+### Bug Fixes
+
+- **select:** :bug: fix web semantics issue with thead and th ([d60c760](https://github.com/LogRock/pebbles/commit/d60c7602b94919d5f75a8f8ec431f57bb9a90dca))
+- **select:** :lipstick: fix min width of th on table header ([a35fda1](https://github.com/LogRock/pebbles/commit/a35fda1325c2b93a084cf6fe763dbadb497f3e14))
+
 # [5.1.0](https://github.com/LogRock/pebbles/compare/v5.0.2...v5.1.0) (2022-03-14)
 
 ### Features
