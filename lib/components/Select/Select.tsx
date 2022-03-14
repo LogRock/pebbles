@@ -45,6 +45,7 @@ const Select = <ItemType extends BaseItemType>({
             if (autoCompleteItems.length) {
               if (onItemSelected && typeof onItemSelected === "function") {
                 onItemSelected(autoCompleteItems[oldHighlight]);
+                setHasFocus(false);
               }
             }
             return 0;
