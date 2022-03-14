@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
-export const THead = styled.thead<{ highlighted?: boolean }>`
+export const THead = styled.div<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   display: flex;
   box-sizing: border-box;
@@ -16,20 +16,20 @@ export const THead = styled.thead<{ highlighted?: boolean }>`
   text-align: left;
 `;
 
-const TR = styled.th`
+const TR = styled.tr`
   display: flex;
   width: 100%;
 
   font-weight: bold;
 `;
 
-const IDTD = styled.td`
+const IDTH = styled.th`
   flex-basis: ${({ theme }) => theme.spacings.huge};
   flex-grow: 0;
   padding-right: ${({ theme }) => theme.spacings.md};
 `;
 
-const NameTD = styled.td`
+const NameTH = styled.th`
   flex-grow: 1;
 `;
 
@@ -37,8 +37,8 @@ const TableHeader: FC<{ id: string; name: string }> = (props) => {
   return (
     <THead {...props}>
       <TR>
-        <IDTD>{props.id}</IDTD>
-        <NameTD>{props.name}</NameTD>
+        <IDTH>{props.id}</IDTH>
+        <NameTH>{props.name}</NameTH>
       </TR>
     </THead>
   );
