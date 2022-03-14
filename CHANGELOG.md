@@ -1,3 +1,9 @@
+# [5.1.0](https://github.com/LogRock/pebbles/compare/v5.0.2...v5.1.0) (2022-03-14)
+
+### Features
+
+- **select:** :sparkles: add default table items and headers for use ([647d928](https://github.com/LogRock/pebbles/commit/647d928814e00da4d9672ac62c9a53077dd43a53))
+
 ## [5.0.2](https://github.com/LogRock/pebbles/compare/v5.0.1...v5.0.2) (2022-03-11)
 
 ### Bug Fixes
