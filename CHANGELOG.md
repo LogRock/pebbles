@@ -1,3 +1,11 @@
+## [5.1.3](https://github.com/LogRock/pebbles/compare/v5.1.2...v5.1.3) (2022-03-14)
+
+### Bug Fixes
+
+- **select:** :bug: fix select item callback ([1e38a9c](https://github.com/LogRock/pebbles/commit/1e38a9c49d3680e66acca82546452533b41045ec))
+- **select:** :bug: fix select structure ([a6fa69e](https://github.com/LogRock/pebbles/commit/a6fa69e235f07335d5b497ea8567a79f241dfbf7))
+- **select:** :bug: make select lose focus upon pressing the enter key ([78b5891](https://github.com/LogRock/pebbles/commit/78b589130a289bd246912d0a96acf9430b77bbef))
+
 ## [5.1.2](https://github.com/LogRock/pebbles/compare/v5.1.1...v5.1.2) (2022-03-14)
 
 ### Bug Fixes
