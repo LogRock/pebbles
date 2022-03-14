@@ -16,20 +16,20 @@ export const THead = styled.div<{ highlighted?: boolean }>`
   text-align: left;
 `;
 
-const TR = styled.tr`
+const TR = styled.div`
   display: flex;
   width: 100%;
 
   font-weight: bold;
 `;
 
-const IDTH = styled.th`
+const IDTH = styled.div`
   flex-basis: ${({ theme }) => theme.spacings.xhuge};
   flex-grow: 0;
   padding-right: ${({ theme }) => theme.spacings.md};
 `;
 
-const NameTH = styled.th`
+const NameTH = styled.div`
   flex-grow: 1;
 `;
 

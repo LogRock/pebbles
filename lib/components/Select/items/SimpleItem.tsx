@@ -27,7 +27,7 @@ const SimpleItem: FC<{
   };
 }> = (props) => {
   return (
-    <DefaultItem {...props}>
+    <DefaultItem {...props} type="button">
       {props?.item?.name || props?.item?.label || props?.item?.toString?.()}
     </DefaultItem>
   );

@@ -44,7 +44,7 @@ const TableItem: FC<{
   };
 }> = (props) => {
   return (
-    <DefaultItem {...props}>
+    <DefaultItem {...props} type="button">
       <TR>
         <IDTD>{props?.item?.id}</IDTD>
         <NameTD>
