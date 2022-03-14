@@ -1,3 +1,9 @@
+## [5.1.2](https://github.com/LogRock/pebbles/compare/v5.1.1...v5.1.2) (2022-03-14)
+
+### Bug Fixes
+
+- **select:** :bug: fix select structure ([c54f7e0](https://github.com/LogRock/pebbles/commit/c54f7e0763c1740e48355113d6b5b0cd4ac24528))
+
 ## [5.1.1](https://github.com/LogRock/pebbles/compare/v5.1.0...v5.1.1) (2022-03-14)
 
 ### Bug Fixes
