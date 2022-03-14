@@ -20,18 +20,18 @@ export const DefaultItem = styled.button<{ highlighted?: boolean }>`
   }
 `;
 
-const TR = styled.tr`
+const TR = styled.div`
   display: flex;
   width: 100%;
 `;
 
-const IDTD = styled.td`
+const IDTD = styled.div`
   flex-basis: ${({ theme }) => theme.spacings.huge};
   flex-grow: 0;
   padding-right: ${({ theme }) => theme.spacings.md};
 `;
 
-const NameTD = styled.td`
+const NameTD = styled.div`
   flex-grow: 1;
 `;
 
