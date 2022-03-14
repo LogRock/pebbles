@@ -24,7 +24,7 @@ const TR = styled.tr`
 `;
 
 const IDTH = styled.th`
-  flex-basis: ${({ theme }) => theme.spacings.huge};
+  flex-basis: ${({ theme }) => theme.spacings.xhuge};
   flex-grow: 0;
   padding-right: ${({ theme }) => theme.spacings.md};
 `;
