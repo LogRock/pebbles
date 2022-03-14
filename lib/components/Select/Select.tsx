@@ -14,7 +14,6 @@ const Select = <ItemType extends BaseItemType>({
   onItemSelected,
   spaced,
 }: SelectProps<ItemType>) => {
-  const Header = renderHeader || (() => null);
   const Item = renderItem || SimpleItem;
 
   const [currentHighlight, setCurrentHighlight] = useState(0);
@@ -113,7 +112,7 @@ const Select = <ItemType extends BaseItemType>({
           helper={inputProps?.helper}
           description={inputProps?.description}
         >
-          {autoCompleteItems?.length > 0 && <Header />}
+          {renderHeader || null}
           {autoCompleteItems?.map((item, index) => (
             <Item
               key={item.id}

@@ -37,6 +37,11 @@ export { InputBox } from "./components/InputBox";
 // expose Select
 export { default as Select } from "./components/Select";
 
+export { default as SimpleItem } from "./components/Select/items/SimpleItem";
+export { default as TableItem } from "./components/Select/items/TableItem";
+
+export { default as TableHeader } from "./components/Select/headers/TableHeader";
+
 // expose CheckBox
 export { default as CheckBox } from "./components/CheckBox";
 export type { CheckBoxProps } from "./components/CheckBox";

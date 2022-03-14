@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { InputBoxProps } from "../InputBox";
 
 export interface BaseItemType {
@@ -24,7 +24,7 @@ export type SelectProps<ItemType> = {
     onMouseEnter: () => void;
     highlighted?: boolean;
   }>;
-  renderHeader?: FC;
+  renderHeader?: React.ReactNode;
   onItemSelected?: (item: ItemType) => void;
   inputProps?: InputBoxProps;
   spaced?: boolean;

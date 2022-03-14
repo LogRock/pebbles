@@ -1,5 +1,7 @@
 import React from "react";
 import Select from "../../../../lib/components/Select";
+import TableItem from "../../../../lib/components/Select/items/TableItem";
+import TableHeader from "../../../../lib/components/Select/headers/TableHeader";
 
 const autoCompleteItems = [
   {
@@ -83,3 +85,9 @@ Spaced.args = {
 
 export const WithCallback = Template.bind({});
 WithCallback.args = {};
+
+export const WithTableItemRendering = Template.bind({});
+WithTableItemRendering.args = {
+  renderItem: TableItem,
+  renderHeader: <TableHeader id="ID" name="NAME" />,
+};
