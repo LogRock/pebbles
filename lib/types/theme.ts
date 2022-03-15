@@ -168,6 +168,7 @@ interface ButtonStyle {
   borderColor: CSS.Property.BorderColor;
   borderWidth: CSS.Property.BorderWidth;
   contentColor: CSS.Property.Color;
+  textDecorationLine?: CSS.Property.TextDecorationLine;
 }
 
 export interface ButtonVariant {
@@ -355,13 +356,6 @@ export interface Alert {
     fontWeight: CSS.Property.FontWeight;
     lineHeight: CSS.Property.LineHeight;
     height: CSS.Property.Height;
-  };
-  hint: {
-    fontSize: CSS.Property.FontSize;
-    fontWeight: CSS.Property.FontWeight;
-    lineHeight: CSS.Property.LineHeight;
-    height: CSS.Property.Height;
-    color: CSS.Property.Color;
   };
   fontFamily: CSS.Property.FontFamily;
 }
