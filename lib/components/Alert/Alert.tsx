@@ -16,7 +16,7 @@ export interface AlertProps {
 }
 
 export interface AlertInlineProps extends AlertProps {
-  close: () => void;
+  onCloseRequested: () => void;
 }
 
 const AlertWrapper = styled.div<Pick<AlertInlineProps, "status">>`
@@ -78,20 +78,6 @@ const Description = styled.span<Pick<AlertInlineProps, "status">>`
   font-size: ${({ theme }) => theme.alert.description.fontSize};
   font-weight: ${({ theme }) => theme.alert.description.fontWeight};
   line-height: ${({ theme }) => theme.alert.description.lineHeight};
-`;
-
-const Hint = styled.span`
-  display: flex;
-  align-items: center;
-  margin: 0px 10px;
-  cursor: pointer;
-
-  color: ${({ theme }) => theme.alert.hint.lineHeight};
-  font-size: ${({ theme }) => theme.alert.hint.fontSize};
-  font-weight: ${({ theme }) => theme.alert.hint.fontWeight};
-  line-height: ${({ theme }) => theme.alert.hint.lineHeight};
-  text-align: center;
-  text-decoration-line: underline;
 `;
 
 const AlertInline: FC<AlertInlineProps> = (props) => {
@@ -159,19 +145,19 @@ const AlertInline: FC<AlertInlineProps> = (props) => {
               {props.labelButton}
             </Button>
           )}
-          <Hint
+          <Button
+            buttonStyle="tertiary"
             onClick={() => {
               props.onHintClick && props.onHintClick();
             }}
           >
-            {" "}
             {props.hint}
-          </Hint>
+          </Button>
         </Actions>
       </MainPanel>
       <IconPanel
         onClick={() => {
-          props.close();
+          props.onCloseRequested();
         }}
         status={props.status}
       >
@@ -205,7 +191,7 @@ const Alert: FC<AlertProps> = ({ visible = true, ...props }) => {
       {isAlertVisible && (
         <AlertInline
           {...props}
-          close={() => setIsAlertVisible(false)}
+          onCloseRequested={() => setIsAlertVisible(false)}
           onButtonClick={() => {
             onButtonClickHandler();
           }}

@@ -78,6 +78,9 @@ const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
     color: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].contentColor};
+    text-decoration-line: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].textDecorationLine || "none"};
   `}
 `;
 
@@ -86,7 +89,7 @@ export const RegularButton = styled.button<
 >`
   ${baseButtonCSS}
   ${buttonSizeCSS}
-  
+
   ${({ disabled }) => (disabled ? buttonDisabledCSS : buttonVariantCSS)}
 `;
 

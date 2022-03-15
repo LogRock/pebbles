@@ -83,6 +83,7 @@ const primaryVariant: ButtonVariant = {
     borderColor: "transparent",
     borderWidth: 0,
     contentColor: primary["800"],
+    textDecorationLine: "underline",
   },
   outlined: {
     background: "transparent",
@@ -110,6 +111,7 @@ const destructiveVariant: ButtonVariant = {
     borderColor: "transparent",
     borderWidth: 0,
     contentColor: error["600"],
+    textDecorationLine: "underline",
   },
   outlined: {
     background: "transparent",
@@ -137,6 +139,7 @@ const disabledVariant: ButtonVariant = {
     borderColor: "transparent",
     borderWidth: 0,
     contentColor: neutral["300"],
+    textDecorationLine: "underline",
   },
   outlined: {
     background: "transparent",
@@ -152,28 +155,28 @@ const buttons: Buttons = {
   outline: `3px solid ${primary[200]}`,
   regular: {
     xSmall: {
-      borderRadius: "2px",
+      borderRadius: "200px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: "10px",
       verticalPadding: "6px",
     },
     small: {
-      borderRadius: "2px",
+      borderRadius: "200px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.md,
       verticalPadding: spacings.xsm,
     },
     medium: {
-      borderRadius: "2px",
+      borderRadius: "200px",
       fontSize: "16px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.big,
       verticalPadding: spacings.xsm,
     },
     large: {
-      borderRadius: "2px",
+      borderRadius: "200px",
       fontSize: "18px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.xbig,
@@ -407,13 +410,7 @@ const alert: Alert = {
     lineHeight: "20px",
     height: "20px",
   },
-  hint: {
-    fontWeight: "400",
-    fontSize: "14px",
-    lineHeight: "20px",
-    height: "20px",
-    color: "black",
-  },
+
   fontFamily: "Archivo",
 };
 
