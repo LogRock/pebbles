@@ -155,28 +155,28 @@ const buttons: Buttons = {
   outline: `3px solid ${primary[200]}`,
   regular: {
     xSmall: {
-      borderRadius: "200px",
+      borderRadius: "2px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: "10px",
       verticalPadding: "6px",
     },
     small: {
-      borderRadius: "200px",
+      borderRadius: "2px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.md,
       verticalPadding: spacings.xsm,
     },
     medium: {
-      borderRadius: "200px",
+      borderRadius: "2px",
       fontSize: "16px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.big,
       verticalPadding: spacings.xsm,
     },
     large: {
-      borderRadius: "200px",
+      borderRadius: "2px",
       fontSize: "18px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.xbig,
