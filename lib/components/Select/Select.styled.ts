@@ -1,3 +1,4 @@
+import React from "react";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
 
@@ -28,7 +29,7 @@ export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
 
 export const SelectItems = styled.div<{
   focus?: boolean;
-  helper?: string;
+  helper?: React.ReactNode;
   description?: string;
 }>`
   display: ${({ focus }) => (focus ? "flex" : "hidden")};

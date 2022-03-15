@@ -22,7 +22,7 @@ export interface BaseInputBoxProps
     icon: React.ReactNode;
   };
   status?: "info" | "error";
-  helper?: string;
+  helper?: React.ReactNode;
   spaced?: boolean;
 }
 
