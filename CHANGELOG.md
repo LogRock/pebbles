@@ -1,3 +1,9 @@
+# [5.2.0](https://github.com/LogRock/pebbles/compare/v5.1.3...v5.2.0) (2022-03-15)
+
+### Features
+
+- **input-box:** :sparkles: make input box helper accept any renderable ([27e5960](https://github.com/LogRock/pebbles/commit/27e5960549788cef403e0fcf7a9063a111a6fbd1))
+
 ## [5.1.3](https://github.com/LogRock/pebbles/compare/v5.1.2...v5.1.3) (2022-03-14)
 
 ### Bug Fixes
