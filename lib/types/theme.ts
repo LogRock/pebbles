@@ -360,6 +360,17 @@ export interface Alert {
   fontFamily: CSS.Property.FontFamily;
 }
 
+export interface ProgressBar {
+  barColor: CSS.Property.Color;
+  bgColor: CSS.Property.Color;
+  sizes: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+    xLarge: CSS.Property.Width;
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -378,4 +389,5 @@ export default interface Theme {
   checkBox: CheckBox;
   loader: Loader;
   alert: Alert;
+  progressBar: ProgressBar;
 }
