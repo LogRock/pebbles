@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React, { FC } from "react";
 
+import { LoaderProps } from "./Loader.types";
+
 const StyledLoader = styled.div`
   width: ${({ theme }) => theme.loader.size};
   height: ${({ theme }) => theme.loader.size};
@@ -32,10 +34,6 @@ const Label = styled.span`
 
   font-family: ${({ theme }) => theme.loader.fontFamily};
 `;
-
-export type LoaderProps = {
-  message: string;
-};
 
 const Loader: FC<LoaderProps> = (props) => {
   return (
