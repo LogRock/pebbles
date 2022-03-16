@@ -424,6 +424,12 @@ const progressBar: ProgressBar = {
     large: "24px",
     xLarge: "32px",
   },
+  borderRadius: {
+    small: "16px",
+    medium: "32px",
+    large: "48px",
+    xLarge: "64px",
+  },
 };
 
 const theme: Theme = {
