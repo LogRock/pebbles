@@ -13,19 +13,21 @@ export interface AlertProps {
   labelButton?: string;
   onButtonClick?: () => void;
   onHintClick?: () => void;
+  sticky?: boolean;
 }
 
 export interface AlertInlineProps extends AlertProps {
   onCloseRequested: () => void;
 }
 
-const AlertWrapper = styled.div<Pick<AlertInlineProps, "status">>`
+const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   display: flex;
   position: static;
   box-sizing: border-box;
   flex-direction: row;
   align-items: flex-start;
-  padding: 12px 20px;
+  padding: ${({ sticky }) => (sticky ? "6px 10px" : "12px 20px")};
+  margin: 8px;
 
   border: 1px solid
     ${({ theme, status }) => theme.alert[status || "neutral"].borderColor};
@@ -40,21 +42,22 @@ const AlertWrapper = styled.div<Pick<AlertInlineProps, "status">>`
   font-feature-settings: "salt" on;
 `;
 
-const IconPanel = styled.div<Pick<AlertInlineProps, "status">>`
+const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   display: flex;
   justify-content: center;
-
+  margin: ${({ sticky }) => (sticky ? "4px 0px" : "2px 0px")};
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
   > * {
     cursor: pointer;
   }
 `;
 
-const MainPanel = styled.div`
+const MainPanel = styled.div<Pick<AlertInlineProps, "sticky">>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ sticky }) => (sticky ? "row" : "column")};
   width: 100%;
   padding: 0px 10px;
+  justify-content: space-between;
 `;
 
 const Actions = styled.div`
@@ -72,87 +75,80 @@ const Title = styled.span<Pick<AlertInlineProps, "status">>`
   line-height: ${({ theme }) => theme.alert.title.lineWeight};
 `;
 
-const Description = styled.span<Pick<AlertInlineProps, "status">>`
-  margin: 8px 0px;
+const Description = styled.span<Pick<AlertInlineProps, "status" | "sticky">>`
+  margin: ${({ sticky }) => (sticky ? "4px 0px" : "8px 0px")};
 
   font-size: ${({ theme }) => theme.alert.description.fontSize};
   font-weight: ${({ theme }) => theme.alert.description.fontWeight};
   line-height: ${({ theme }) => theme.alert.description.lineHeight};
 `;
 
+const StyledButton = styled(Button)`
+  margin: 0px 4px;
+`;
+
+const mainButtonStyle = {
+  neutral: {
+    buttonStyle: "outlined",
+    variant: "primary",
+  },
+  primary: {
+    buttonStyle: "primary",
+    variant: "primary",
+  },
+  success: {
+    buttonStyle: "primary",
+    variant: "primary",
+  },
+  warning: {
+    buttonStyle: "secondary",
+    variant: "primary",
+  },
+  error: {
+    buttonStyle: "primary",
+    variant: "destructive",
+  },
+};
+
 const AlertInline: FC<AlertInlineProps> = (props) => {
+  const btnStyle: any = mainButtonStyle[props.status || "primary"].buttonStyle;
+  const variant: any = mainButtonStyle[props.status || "primary"].variant;
+  const btnSize: any = props.sticky ? "xSmall" : "small";
+
+  const hintBtnStyle: any = props.sticky ? btnStyle : "tertiary";
+  const hintVariant: any = props.sticky ? variant : "primary";
+
   return (
-    <AlertWrapper status={props.status}>
-      <IconPanel status={props.status}>
+    <AlertWrapper status={props.status} sticky={props.sticky || false}>
+      <IconPanel sticky={props.sticky || false} status={props.status}>
         <Icon path={mdiInformationOutline} size={0.7} />
       </IconPanel>
-      <MainPanel>
-        <Title status={props.status}>{props.title}</Title>
-        <Description>{props.description}</Description>
+      <MainPanel sticky={props.sticky || false}>
+        {!props?.sticky && <Title status={props.status}>{props.title}</Title>}
+        <Description sticky={props.sticky || false}>
+          {props.description}
+        </Description>
         <Actions>
-          {(props.status === "neutral" || !props.status) && (
-            <Button
-              onClick={() => {
-                props.onButtonClick && props.onButtonClick();
-              }}
-              buttonStyle="outlined"
-              variant="primary"
-            >
-              {props.labelButton}
-            </Button>
-          )}
-          {props.status === "primary" && (
-            <Button
-              onClick={() => {
-                props.onButtonClick && props.onButtonClick();
-              }}
-              buttonStyle="primary"
-              variant="primary"
-            >
-              {props.labelButton}
-            </Button>
-          )}
-          {props.status === "success" && (
-            <Button
-              onClick={() => {
-                props.onButtonClick && props.onButtonClick();
-              }}
-              buttonStyle="primary"
-              variant="primary"
-            >
-              {props.labelButton}
-            </Button>
-          )}
-          {props.status === "warning" && (
-            <Button
-              onClick={() => {
-                props.onButtonClick && props.onButtonClick();
-              }}
-              buttonStyle="secondary"
-              variant="primary"
-            >
-              {props.labelButton}
-            </Button>
-          )}
-          {props.status === "error" && (
-            <Button
-              onClick={() => {
-                props.onButtonClick && props.onButtonClick();
-              }}
-              buttonStyle="primary"
-              variant="destructive"
-            >
-              {props.labelButton}
-            </Button>
-          )}
-          <Button
-            buttonStyle="tertiary"
+          <StyledButton
+            onClick={() => {
+              props.onButtonClick && props.onButtonClick();
+            }}
+            buttonStyle={btnStyle}
+            variant={variant}
+            buttonSize={btnSize}
+          >
+            {props.labelButton}
+          </StyledButton>
+          <StyledButton
+            buttonStyle={hintBtnStyle}
+            variant={hintVariant}
             onClick={() => {
               props.onHintClick && props.onHintClick();
             }}
+            buttonSize={btnSize}
           >
             {props.hint}
-          </Button>
+          </StyledButton>
         </Actions>
       </MainPanel>
       <IconPanel
@@ -160,6 +156,7 @@ const AlertInline: FC<AlertInlineProps> = (props) => {
           props.onCloseRequested();
         }}
         status={props.status}
+        sticky={props.sticky || false}
       >
         <Icon path={mdiClose} size={0.7} />
       </IconPanel>
