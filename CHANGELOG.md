@@ -1,3 +1,16 @@
+# [5.3.0](https://github.com/LogRock/pebbles/compare/v5.2.0...v5.3.0) (2022-03-16)
+
+### Bug Fixes
+
+- **alert-inline:** label hint to button hint and fix button styles to accomodate the layout required ([fd206d3](https://github.com/LogRock/pebbles/commit/fd206d3dced17af5a95f2cd86aeca4623df17cb4))
+
+### Features
+
+- **alert-inline:** adding event handlers for hint, button and close ([36373fd](https://github.com/LogRock/pebbles/commit/36373fd7483e09d492d4b3c498b9a3faf797d8d4))
+- **alert-inline:** alert inline skeleton and styling ([5cf4645](https://github.com/LogRock/pebbles/commit/5cf464574b7c615cc054ef8c8d081ecb4b99cfdc))
+- **alert-inline:** alert styling improvement ([3565b09](https://github.com/LogRock/pebbles/commit/3565b09f4e3bd8280542742ed3f93a9e66049ea2))
+- **alert-inline:** styling improvements and close modal event ([d06bcfa](https://github.com/LogRock/pebbles/commit/d06bcfa3188a7663db36751803e5c4ceaa69cc60))
+
 # [5.2.0](https://github.com/LogRock/pebbles/compare/v5.1.3...v5.2.0) (2022-03-15)
 
 ### Features
