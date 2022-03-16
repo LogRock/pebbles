@@ -6,6 +6,7 @@ import Theme, {
   Select,
   Loader,
   Alert,
+  ProgressBar,
 } from "../../types/theme";
 import {
   neutral,
@@ -414,6 +415,17 @@ const alert: Alert = {
   fontFamily: "Archivo",
 };
 
+const progressBar: ProgressBar = {
+  barColor: primary[500],
+  bgColor: neutral[100],
+  sizes: {
+    small: "8px",
+    medium: "16px",
+    large: "24px",
+    xLarge: "32px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -473,6 +485,7 @@ const theme: Theme = {
   checkBox,
   loader,
   alert,
+  progressBar,
 };
 
 export default theme;
