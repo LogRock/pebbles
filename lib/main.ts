@@ -59,3 +59,7 @@ export type {
   ProgressBarProps,
   LoaderProps,
 } from "./components/Loader/Loader.types";
+
+// expose List & List Items
+export { default as List, ListItem } from "./components/List";
+export type { ListProps, ListItemProps } from "./components/List";
