@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export type ProgressBarProps = {
-  percentage: number;
-  size: "small" | "medium" | "large" | "xLarge";
-};
+import { ProgressBarProps } from "./Loader.types";
 
 const Bar = styled.div<Pick<ProgressBarProps, "size">>`
   position: relative;

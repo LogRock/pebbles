@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import React, { FC } from "react";
 
-export type ProgressLoaderProps = {
-  percentage: number;
-};
+import { ProgressLoaderProps } from "./Loader.types";
 
 function percentageToDegree(percentage: number): number {
   if (percentage > 100) return 180;
