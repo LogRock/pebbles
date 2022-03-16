@@ -377,6 +377,38 @@ export interface ProgressBar {
   };
 }
 
+export interface List {
+  item: {
+    paddingY: CSS.Property.PaddingLeft;
+    paddingX: CSS.Property.PaddingTop;
+    internalPadding: CSS.Property.Padding;
+    margin: CSS.Property.Margin;
+    background: {
+      regular: CSS.Property.BackgroundColor;
+      hover: CSS.Property.BackgroundColor;
+      active: CSS.Property.BackgroundColor;
+    };
+    borderRadius: CSS.Property.BorderRadius;
+    label: {
+      color: CSS.Property.Color;
+      weight: CSS.Property.FontWeight;
+    };
+    description: {
+      color: CSS.Property.Color;
+      weight: CSS.Property.FontWeight;
+    };
+    large: {
+      typography: ParagraphProps;
+    };
+    medium: {
+      typography: ParagraphProps;
+    };
+    small: {
+      typography: ParagraphProps;
+    };
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -396,4 +428,5 @@ export default interface Theme {
   loader: Loader;
   alert: Alert;
   progressBar: ProgressBar;
+  list: List;
 }

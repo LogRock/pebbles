@@ -7,6 +7,7 @@ import Theme, {
   Loader,
   Alert,
   ProgressBar,
+  List,
 } from "../../types/theme";
 import {
   neutral,
@@ -432,6 +433,38 @@ const progressBar: ProgressBar = {
   },
 };
 
+const list: List = {
+  item: {
+    paddingY: spacings.sm,
+    paddingX: spacings.xbig,
+    internalPadding: spacings.big,
+    margin: spacings.xxxbig,
+    background: {
+      regular: shades[0],
+      hover: neutral[50],
+      active: neutral[100],
+    },
+    borderRadius: spacings.xxsm,
+    label: {
+      color: neutral[500],
+      weight: 400,
+    },
+    description: {
+      color: neutral[900],
+      weight: 500,
+    },
+    large: {
+      typography: paragraphLarge,
+    },
+    medium: {
+      typography: paragraphMedium,
+    },
+    small: {
+      typography: paragraphSmall,
+    },
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -492,6 +525,7 @@ const theme: Theme = {
   loader,
   alert,
   progressBar,
+  list,
 };
 
 export default theme;
