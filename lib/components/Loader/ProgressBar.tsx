@@ -12,7 +12,8 @@ const Bar = styled.div<Pick<ProgressBarProps, "size">>`
   height: ${({ theme, size }) => theme.progressBar.sizes[size || "medium"]};
   overflow: hidden;
 
-  border-radius: 48px;
+  border-radius: ${({ theme, size }) =>
+    theme.progressBar.borderRadius[size || "medium"]};
 
   background-color: ${({ theme }) => theme.progressBar.bgColor};
 `;
@@ -22,7 +23,8 @@ const InnerBar = styled.div`
   width: ${(props: ProgressBarProps) => `${props.percentage}%` || "0%"};
   height: ${({ theme, size }) => theme.progressBar.sizes[size || "medium"]};
 
-  border-radius: 48px;
+  border-radius: ${({ theme, size }) =>
+    theme.progressBar.borderRadius[size || "medium"]};
 
   background-color: ${({ theme }) => theme.progressBar.barColor};
 `;

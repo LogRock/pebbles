@@ -369,6 +369,12 @@ export interface ProgressBar {
     large: CSS.Property.Width;
     xLarge: CSS.Property.Width;
   };
+  borderRadius: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+    xLarge: CSS.Property.Width;
+  };
 }
 
 export default interface Theme {
