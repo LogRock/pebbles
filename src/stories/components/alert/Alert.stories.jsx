@@ -58,6 +58,24 @@ Error.args = {
   labelButton: "OK",
 };
 
+const MultiStickyTemplate = (args) => (
+  <>
+    <Alert status="primary" sticky {...args} />
+    <Alert status="neutral" sticky {...args} />
+    <Alert status="success" sticky {...args} />
+    <Alert status="warning" sticky {...args} />
+    <Alert status="error" sticky {...args} />
+  </>
+);
+
+export const MultiSticky = MultiStickyTemplate.bind({});
+MultiSticky.args = {
+  description: "Description here",
+  hint: "Hint",
+  visible: true,
+  labelButton: "OK",
+};
+
 const InteractiveTemplate = (args) => {
   const [eventTriggered, setEventTriggered] = useState("");
 
