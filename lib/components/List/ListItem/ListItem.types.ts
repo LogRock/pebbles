@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface ListItemProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ListItemProps extends React.HTMLAttributes<HTMLLIElement> {
   contentStart?: React.ReactNode;
   label?: React.ReactNode;
   description?: React.ReactNode;

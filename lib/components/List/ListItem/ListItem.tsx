@@ -16,9 +16,10 @@ const ListItem: FC<ListItemProps> = ({
   description,
   label,
   size = "medium",
+  ...props
 }) => {
   return (
-    <ListItemWrapper size={size}>
+    <ListItemWrapper size={size} {...props}>
       {contentStart && (
         <ListItemContentStart>{contentStart}</ListItemContentStart>
       )}
