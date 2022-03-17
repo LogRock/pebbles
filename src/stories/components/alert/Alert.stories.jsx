@@ -1,3 +1,11 @@
+import {
+  mdiAlert,
+  mdiAlertBox,
+  mdiCheckCircle,
+  mdiHeart,
+  mdiInformationOutline,
+} from "@mdi/js";
+import Icon from "@mdi/react";
 import React, { useState } from "react";
 import Alert from "../../../../lib/components/Alert";
 
@@ -11,51 +19,61 @@ const Template = (args) => <Alert {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "neutral",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiInformationOutline} size={0.7} />,
+  showCloseButton: true,
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "primary",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiInformationOutline} size={0.7} />,
+  showCloseButton: true,
 };
 
 export const Success = Template.bind({});
 Success.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "success",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiCheckCircle} size={0.7} />,
+  showCloseButton: true,
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "warning",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiAlertBox} size={0.7} />,
+  showCloseButton: true,
 };
 
 export const Error = Template.bind({});
 Error.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "error",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiAlert} size={0.7} />,
+  showCloseButton: true,
 };
 
 const MultiStickyTemplate = (args) => (
@@ -70,10 +88,12 @@ const MultiStickyTemplate = (args) => (
 
 export const MultiSticky = MultiStickyTemplate.bind({});
 MultiSticky.args = {
-  description: "Description here",
-  hint: "Hint",
+  children: "Description here",
+  auxButtonContent: "Hint",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiHeart} size={0.7} />,
+  showCloseButton: true,
 };
 
 const InteractiveTemplate = (args) => {
@@ -83,8 +103,8 @@ const InteractiveTemplate = (args) => {
     <div>
       <Alert
         {...args}
-        onButtonClick={() => setEventTriggered("button got triggered")}
-        onHintClick={() => setEventTriggered("hint got triggered")}
+        onButtonClick={() => setEventTriggered("mainButton got triggered")}
+        onHintClick={() => setEventTriggered("auxButton got triggered")}
       />
       <span>{eventTriggered}</span>
     </div>
@@ -94,9 +114,16 @@ const InteractiveTemplate = (args) => {
 export const InteractiveAlert = InteractiveTemplate.bind({});
 InteractiveAlert.args = {
   title: "Title here",
-  description: "Description here",
-  hint: "Hint here",
+  children: "Description here",
+  auxButtonContent: "Hint here",
   status: "error",
   visible: true,
-  labelButton: "OK",
+  mainButtonContent: "OK",
+  icon: <Icon path={mdiAlert} size={0.7} />,
+  showCloseButton: true,
+};
+
+export const TextOnly = Template.bind({});
+TextOnly.args = {
+  children: "Text only",
 };

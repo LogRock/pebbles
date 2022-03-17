@@ -1,23 +1,24 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button";
 import Icon from "@mdi/react";
-import { mdiClose, mdiInformationOutline } from "@mdi/js";
+import { mdiClose } from "@mdi/js";
 
 export interface AlertProps {
-  title?: string;
-  description?: string;
-  hint?: string;
+  title?: React.ReactNode;
   status?: "neutral" | "primary" | "success" | "warning" | "error";
   visible?: boolean;
-  labelButton?: string;
-  onButtonClick?: () => void;
-  onHintClick?: () => void;
+  mainButtonContent?: React.ReactNode;
+  auxButtonContent?: React.ReactNode;
+  onMainButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onAuxButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   sticky?: boolean;
+  icon?: React.ReactNode;
 }
 
 export interface AlertInlineProps extends AlertProps {
-  onCloseRequested: () => void;
+  onCloseRequested: (event: React.MouseEvent<HTMLDivElement>) => void;
+  showCloseButton?: boolean;
 }
 
 const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
@@ -45,7 +46,7 @@ const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
 const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   display: flex;
   justify-content: center;
-  margin: ${({ sticky }) => (sticky ? "4px 0px" : "2px 0px")};
+  margin: ${({ sticky }) => (sticky ? "4px 0px" : "0px")};
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
   > * {
     cursor: pointer;
@@ -83,8 +84,8 @@ const Description = styled.span<Pick<AlertInlineProps, "status" | "sticky">>`
   line-height: ${({ theme }) => theme.alert.description.lineHeight};
 `;
 
-const StyledButton = styled(Button)`
-  margin: 0px 4px;
+const StyledButton = styled(Button)<Pick<AlertInlineProps, "sticky">>`
+  margin: ${({ sticky }) => (sticky ? "0px 4px" : undefined)};
 `;
 
 const mainButtonStyle = {
@@ -110,77 +111,108 @@ const mainButtonStyle = {
   },
 };
 
-const AlertInline: FC<AlertInlineProps> = (props) => {
-  const btnStyle: any = mainButtonStyle[props.status || "primary"].buttonStyle;
-  const variant: any = mainButtonStyle[props.status || "primary"].variant;
-  const btnSize: any = props.sticky ? "xSmall" : "small";
+const AlertInline: FC<AlertInlineProps> = ({
+  status,
+  sticky,
+  title,
+  icon,
+  children,
+  mainButtonContent,
+  onMainButtonClick,
+  auxButtonContent,
+  onAuxButtonClick,
+  onCloseRequested,
+  showCloseButton,
+}) => {
+  const btnStyle: any = mainButtonStyle[status || "primary"].buttonStyle;
+  const variant: any = mainButtonStyle[status || "primary"].variant;
+  const btnSize: any = sticky ? "xSmall" : "small";
 
-  const hintBtnStyle: any = props.sticky ? btnStyle : "tertiary";
-  const hintVariant: any = props.sticky ? variant : "primary";
+  const hintBtnStyle: any = sticky ? btnStyle : "tertiary";
+  const hintVariant: any = sticky ? variant : "primary";
 
   return (
-    <AlertWrapper status={props.status} sticky={props.sticky || false}>
-      <IconPanel sticky={props.sticky || false} status={props.status}>
-        <Icon path={mdiInformationOutline} size={0.7} />
-      </IconPanel>
-      <MainPanel sticky={props.sticky || false}>
-        {!props?.sticky && <Title status={props.status}>{props.title}</Title>}
-        <Description sticky={props.sticky || false}>
-          {props.description}
-        </Description>
-        <Actions>
-          <StyledButton
-            onClick={() => {
-              props.onButtonClick && props.onButtonClick();
-            }}
-            buttonStyle={btnStyle}
-            variant={variant}
-            buttonSize={btnSize}
-          >
-            {props.labelButton}
-          </StyledButton>
-          <StyledButton
-            buttonStyle={hintBtnStyle}
-            variant={hintVariant}
-            onClick={() => {
-              props.onHintClick && props.onHintClick();
-            }}
-            buttonSize={btnSize}
-          >
-            {props.hint}
-          </StyledButton>
-        </Actions>
+    <AlertWrapper status={status} sticky={sticky || false}>
+      {icon && (
+        <IconPanel sticky={sticky || false} status={status}>
+          {icon}
+        </IconPanel>
+      )}
+      <MainPanel sticky={sticky || false}>
+        {!sticky && !!title && <Title status={status}>{title}</Title>}
+        {!!children && (
+          <Description sticky={sticky || false}>{children}</Description>
+        )}
+        {(!!mainButtonContent || !!auxButtonContent) && (
+          <Actions>
+            <StyledButton
+              onClick={(event) => {
+                onMainButtonClick && onMainButtonClick(event);
+              }}
+              buttonStyle={btnStyle}
+              variant={variant}
+              buttonSize={btnSize}
+              sticky={sticky}
+            >
+              {mainButtonContent}
+            </StyledButton>
+            <StyledButton
+              buttonStyle={hintBtnStyle}
+              variant={hintVariant}
+              onClick={(event) => {
+                onAuxButtonClick && onAuxButtonClick(event);
+              }}
+              buttonSize={btnSize}
+              sticky={sticky}
+            >
+              {auxButtonContent}
+            </StyledButton>
+          </Actions>
+        )}
       </MainPanel>
-      <IconPanel
-        onClick={() => {
-          props.onCloseRequested();
-        }}
-        status={props.status}
-        sticky={props.sticky || false}
-      >
-        <Icon path={mdiClose} size={0.7} />
-      </IconPanel>
+      {showCloseButton && (
+        <IconPanel
+          onClick={(event) => {
+            onCloseRequested(event);
+          }}
+          status={status}
+          sticky={sticky || false}
+        >
+          <Icon path={mdiClose} size={0.7} />
+        </IconPanel>
+      )}
     </AlertWrapper>
   );
 };
 
-const Alert: FC<AlertProps> = ({ visible = true, ...props }) => {
+const Alert: FC<AlertProps> = ({
+  visible = true,
+  status,
+  onMainButtonClick,
+  onAuxButtonClick,
+  ...props
+}) => {
   const [isAlertVisible, setIsAlertVisible] = useState(visible);
+  const [statusState, setStatusState] = useState(status);
 
-  const onButtonClickHandler = () => {
+  useEffect(() => {
+    setStatusState(statusState);
+  }, [status]);
+
+  const onButtonClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     try {
-      props.onButtonClick && props.onButtonClick();
+      if (onMainButtonClick) onMainButtonClick(event);
       setIsAlertVisible(false);
     } catch (e) {
-      props.status = "error";
+      setStatusState("error");
     }
   };
-  const onHintClickHandler = () => {
+  const onHintClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     try {
-      props.onHintClick && props.onHintClick();
+      if (onAuxButtonClick) onAuxButtonClick(event);
       setIsAlertVisible(false);
     } catch (e) {
-      props.status = "error";
+      setStatusState("error");
     }
   };
   return (
@@ -188,13 +220,10 @@ const Alert: FC<AlertProps> = ({ visible = true, ...props }) => {
       {isAlertVisible && (
         <AlertInline
           {...props}
+          status={statusState}
           onCloseRequested={() => setIsAlertVisible(false)}
-          onButtonClick={() => {
-            onButtonClickHandler();
-          }}
-          onHintClick={() => {
-            onHintClickHandler();
-          }}
+          onMainButtonClick={onButtonClickHandler}
+          onAuxButtonClick={onHintClickHandler}
         />
       )}
     </>
