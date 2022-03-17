@@ -1,3 +1,9 @@
+## [5.5.3](https://github.com/LogRock/pebbles/compare/v5.5.2...v5.5.3) (2022-03-17)
+
+### Bug Fixes
+
+- **list:** :bug: make list item properly pass props forward ([7d50bd8](https://github.com/LogRock/pebbles/commit/7d50bd8af4bbfaca10935df5bec57b1ed3b998e1))
+
 ## [5.5.2](https://github.com/LogRock/pebbles/compare/v5.5.1...v5.5.2) (2022-03-17)
 
 ### Bug Fixes
