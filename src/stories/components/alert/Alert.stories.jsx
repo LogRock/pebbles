@@ -1,12 +1,14 @@
 import {
   mdiAlert,
   mdiAlertBox,
+  mdiBrain,
   mdiCheckCircle,
   mdiHeart,
   mdiInformationOutline,
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import React, { useState } from "react";
+import styled from "styled-components";
 import Alert from "../../../../lib/components/Alert";
 
 export default {
@@ -126,4 +128,16 @@ InteractiveAlert.args = {
 export const TextOnly = Template.bind({});
 TextOnly.args = {
   children: "Text only",
+};
+
+const StyledAlert = styled(Alert)`
+  margin: 200px;
+  background: red;
+`;
+const CustomTemplate = (args) => <StyledAlert {...args} />;
+export const CustomizedWithStyled = CustomTemplate.bind({});
+CustomizedWithStyled.args = {
+  children: "This is a styled(Alert) with some wacky styles added",
+  icon: <Icon path={mdiBrain} size={0.7} />,
+  showCloseButton: true,
 };
