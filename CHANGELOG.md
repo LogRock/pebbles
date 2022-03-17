@@ -1,3 +1,9 @@
+## [5.5.2](https://github.com/LogRock/pebbles/compare/v5.5.1...v5.5.2) (2022-03-17)
+
+### Bug Fixes
+
+- **alert:** :bug: make Alert able to be styled with styled-components ([d31b991](https://github.com/LogRock/pebbles/commit/d31b99198b261cabe5a4843cb7f2e57099ffc38e))
+
 ## [5.5.1](https://github.com/LogRock/pebbles/compare/v5.5.0...v5.5.1) (2022-03-17)
 
 ### Bug Fixes
