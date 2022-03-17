@@ -8,6 +8,7 @@ import Theme, {
   Alert,
   ProgressBar,
   List,
+  Toggle,
 } from "../../types/theme";
 import {
   neutral,
@@ -465,6 +466,35 @@ const list: List = {
   },
 };
 
+const toggle: Toggle = {
+  indicator: {
+    color: shades[0],
+    width: "22px",
+    height: "22px",
+    left1: "1px",
+    left2: "16px",
+    top: "1px",
+  },
+  width: "39px",
+  height: "24px",
+  borderRadius: "28px",
+  marginRight: spacings.sm,
+  default: {
+    background: neutral[300],
+    borderColor: neutral[300],
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "48px",
+  },
+  checked: {
+    background: primary["500"],
+    borderColor: primary["500"],
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "48px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -526,6 +556,7 @@ const theme: Theme = {
   alert,
   progressBar,
   list,
+  toggle,
 };
 
 export default theme;

@@ -409,6 +409,23 @@ export interface List {
   };
 }
 
+export interface Toggle {
+  indicator: {
+    color: CSS.Property.Color;
+    width: CSS.Property.Width;
+    height: CSS.Property.Height;
+    left1: CSS.Property.Left;
+    left2: CSS.Property.Left;
+    top: CSS.Property.Top;
+  };
+  width: CSS.Property.Width;
+  height: CSS.Property.Height;
+  borderRadius: CSS.Property.BorderRadius;
+  marginRight: CSS.Property.MarginRight;
+  default: CheckBoc;
+  checked: CheckBoc;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -429,4 +446,5 @@ export default interface Theme {
   alert: Alert;
   progressBar: ProgressBar;
   list: List;
+  toggle: Toggle;
 }

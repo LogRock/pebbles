@@ -63,3 +63,7 @@ export type {
 // expose List & List Items
 export { default as List, ListItem } from "./components/List";
 export type { ListProps, ListItemProps } from "./components/List";
+
+// expose Toggle
+export { default as Toggle } from "./components/Toggle";
+export type { ToggleProps } from "./components/Toggle";
