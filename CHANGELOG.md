@@ -1,3 +1,9 @@
+## [5.5.1](https://github.com/LogRock/pebbles/compare/v5.5.0...v5.5.1) (2022-03-17)
+
+### Bug Fixes
+
+- **list:** :lipstick: remove padding from list component ([02b6557](https://github.com/LogRock/pebbles/commit/02b65570f6cf7343f5c200ca60da4c5925d411bb))
+
 # [5.5.0](https://github.com/LogRock/pebbles/compare/v5.4.0...v5.5.0) (2022-03-17)
 
 ### Features
