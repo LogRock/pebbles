@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/LogRock/pebbles/compare/v5.3.0...v5.4.0) (2022-03-17)
+
+### Features
+
+- **alert-sticky:** :alert::window: built alert stick mode ([7139510](https://github.com/LogRock/pebbles/commit/7139510efcf725ae5330204dbb53131ba63abcea))
+- **list:** :sparkles: add List and ListItem components ([9cdaba9](https://github.com/LogRock/pebbles/commit/9cdaba9c3571ab653da238f87ef170a5d59cfeaa))
+
 # [5.3.0](https://github.com/LogRock/pebbles/compare/v5.2.0...v5.3.0) (2022-03-16)
 
 ### Bug Fixes
