@@ -27,8 +27,8 @@ const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   box-sizing: border-box;
   flex-direction: row;
   align-items: flex-start;
-  padding: ${({ sticky }) => (sticky ? "6px 10px" : "12px 20px")};
   margin: 8px;
+  padding: ${({ sticky }) => (sticky ? "6px 10px" : "12px 20px")};
 
   border: 1px solid
     ${({ theme, status }) => theme.alert[status || "neutral"].borderColor};
@@ -47,6 +47,7 @@ const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   display: flex;
   justify-content: center;
   margin: ${({ sticky }) => (sticky ? "4px 0px" : "0px")};
+
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
   > * {
     cursor: pointer;
@@ -56,9 +57,9 @@ const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
 const MainPanel = styled.div<Pick<AlertInlineProps, "sticky">>`
   display: flex;
   flex-direction: ${({ sticky }) => (sticky ? "row" : "column")};
+  justify-content: space-between;
   width: 100%;
   padding: 0px 10px;
-  justify-content: space-between;
 `;
 
 const Actions = styled.div`
@@ -123,6 +124,7 @@ const AlertInline: FC<AlertInlineProps> = ({
   onAuxButtonClick,
   onCloseRequested,
   showCloseButton,
+  ...props
 }) => {
   const btnStyle: any = mainButtonStyle[status || "primary"].buttonStyle;
   const variant: any = mainButtonStyle[status || "primary"].variant;
@@ -132,7 +134,7 @@ const AlertInline: FC<AlertInlineProps> = ({
   const hintVariant: any = sticky ? variant : "primary";
 
   return (
-    <AlertWrapper status={status} sticky={sticky || false}>
+    <AlertWrapper status={status} sticky={sticky || false} {...props}>
       {icon && (
         <IconPanel sticky={sticky || false} status={status}>
           {icon}
@@ -215,19 +217,18 @@ const Alert: FC<AlertProps> = ({
       setStatusState("error");
     }
   };
-  return (
-    <>
-      {isAlertVisible && (
-        <AlertInline
-          {...props}
-          status={statusState}
-          onCloseRequested={() => setIsAlertVisible(false)}
-          onMainButtonClick={onButtonClickHandler}
-          onAuxButtonClick={onHintClickHandler}
-        />
-      )}
-    </>
-  );
+  if (isAlertVisible) {
+    return (
+      <AlertInline
+        {...props}
+        status={statusState}
+        onCloseRequested={() => setIsAlertVisible(false)}
+        onMainButtonClick={onButtonClickHandler}
+        onAuxButtonClick={onHintClickHandler}
+      />
+    );
+  }
+  return null;
 };
 
 export default Alert;
