@@ -5,6 +5,7 @@ export const ListWrapper = styled.ul`
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: flex-start;
+  padding: 0;
 
   list-style: none;
 `;
