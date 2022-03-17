@@ -1,3 +1,9 @@
+# [5.5.0](https://github.com/LogRock/pebbles/compare/v5.4.0...v5.5.0) (2022-03-17)
+
+### Features
+
+- **alert:** :sparkles: make some props optional, to allow for text-only alerts ([b0770ed](https://github.com/LogRock/pebbles/commit/b0770edf7059ef89a4df21f38aa5543fcfc9bf2f))
+
 # [5.4.0](https://github.com/LogRock/pebbles/compare/v5.3.0...v5.4.0) (2022-03-17)
 
 ### Features
