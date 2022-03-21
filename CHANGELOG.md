@@ -1,3 +1,9 @@
+# [5.6.0](https://github.com/LogRock/pebbles/compare/v5.5.3...v5.6.0) (2022-03-21)
+
+### Features
+
+- **stepper component:** added the stepper component to pebbles library ([135321a](https://github.com/LogRock/pebbles/commit/135321a2aa4bd49f1f9b882a14c8a9ba77149607))
+
 ## [5.5.3](https://github.com/LogRock/pebbles/compare/v5.5.2...v5.5.3) (2022-03-17)
 
 ### Bug Fixes
