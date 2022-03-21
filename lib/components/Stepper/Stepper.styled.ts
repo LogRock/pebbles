@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
-const getCircleSize = (isFinished: boolean) => {
-  return isFinished ? "35px" : "36px";
-};
-
 export const StepIndex = styled.div<{
   isCurStep: Boolean;
-  isFirstItem: Boolean;
   isLastItem: Boolean;
   isFinished: Boolean;
 }>`
@@ -14,8 +9,8 @@ export const StepIndex = styled.div<{
   position: relative;
   align-items: center;
   justify-content: center;
-  width: ${(props: any) => getCircleSize(props.isFinished)};
-  height: ${(props: any) => getCircleSize(props.isFinished)};
+  width: 36px;
+  height: 36px;
   margin-right: ${({ theme }) => theme.spacings.md};
 
   border: 2px solid
@@ -41,32 +36,22 @@ export const StepIndex = styled.div<{
     font-weight: 500;
   }
 
-  &:before {
+  &:after {
     content: "";
 
     display: ${(props: any) => (props.isLastItem ? "none" : "block")};
     position: absolute;
-    top: 37px;
+    top: 38px;
     left: 50%;
-    height: 16px;
+    height: 32px;
 
     transform: translate(-50%, 0);
 
-    border: 1px solid ${({ theme }) => theme.colors.neutral[200]};
-  }
-
-  &:after {
-    content: "";
-
-    display: ${(props: any) => (props.isFirstItem ? "none" : "block")};
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 16px;
-
-    transform: translate(-50%, -20px);
-
-    border: 1px solid ${({ theme }) => theme.colors.neutral[200]};
+    border: 1px solid
+      ${(props: any) =>
+        props.isFinished
+          ? props.theme.colors.primary[500]
+          : props.theme.colors.neutral[200]};
   }
 `;
 
