@@ -27,7 +27,6 @@ const Stepper = (props: StepperProps) => {
   if (labels) {
     itens = labels.map((label, index) => {
       const stepNum = index + 1;
-      const first = index === 0;
       const last = stepNum === labels.length;
       const current = stepNum === curStep;
       const finished = stepIsFinished(stepNum);
@@ -41,7 +40,6 @@ const Stepper = (props: StepperProps) => {
         >
           <StepIndex
             isCurStep={current}
-            isFirstItem={first}
             isLastItem={last}
             isFinished={finished}
           >
