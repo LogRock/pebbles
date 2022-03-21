@@ -1,3 +1,9 @@
+# [5.7.0](https://github.com/LogRock/pebbles/compare/v5.6.0...v5.7.0) (2022-03-21)
+
+### Features
+
+- **comment on export stepper:** comment on export stepper - force release ([cedd94c](https://github.com/LogRock/pebbles/commit/cedd94cfb0ae07f1a83eacb734c2fc0be6785dfd))
+
 # [5.6.0](https://github.com/LogRock/pebbles/compare/v5.5.3...v5.6.0) (2022-03-21)
 
 ### Features
