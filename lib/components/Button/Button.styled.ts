@@ -35,13 +35,24 @@ const baseIconCSS = css`
 
 // REGULAR BUTTON DEFINITIONS
 
-const buttonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
-  ${({ buttonSize, theme }) => css`
+const buttonSizeCSS = css<
+  Pick<ButtonProps, "buttonSize" | "variant" | "buttonStyle">
+>`
+  ${({ buttonSize, variant, buttonStyle, theme }) => css`
     padding: ${theme.buttons.regular[buttonSize || "medium"].verticalPadding}
       ${theme.buttons.regular[buttonSize || "medium"].horizontalPadding};
 
-    border-radius: ${theme.buttons.regular[buttonSize || "medium"]
-      .borderRadius};
+    border-radius: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].borderRadius ||
+    theme.buttons.regular[buttonSize || "medium"].borderRadius};
+
+    box-shadow: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].boxShadow};
+    filter: ${theme.buttons.regular[variant || "primary"][
+      buttonStyle || "primary"
+    ].filter};
 
     font-size: ${theme.buttons.regular[buttonSize || "medium"].fontSize};
   `}
@@ -53,7 +64,6 @@ const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
       .borderWidth};
     border-color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .borderColor};
-
     background: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .background};
 

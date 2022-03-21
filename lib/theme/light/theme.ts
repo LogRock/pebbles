@@ -68,18 +68,45 @@ const spacings = {
   xxxhuge: "192px",
 };
 
+const shadows = {
+  xSmall: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+  small:
+    "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1)",
+  medium:
+    "0px 4px 6px -1px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.1)",
+  large:
+    "0px 10px 15px -3px rgba(16, 24, 40, 0.1), 0px 4px 6px -4px rgba(16, 24, 40, 0.1)",
+  xLarge:
+    "0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1)",
+  xxLarge: "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
+  upXSmall: "0px -1px 2px rgba(16, 24, 40, 0.05)",
+  upSmall:
+    "0px -1px 3px rgba(16, 24, 40, 0.1), 0px -1px 2px -1px rgba(16, 24, 40, 0.1)",
+  upMedium:
+    "0px -4px 6px -1px rgba(16, 24, 40, 0.1), 0px -2px 4px -2px rgba(16, 24, 40, 0.1)",
+  upLarge:
+    "0px -10px 15px -3px rgba(16, 24, 40, 0.1), 0px -4px 6px -4px rgba(16, 24, 40, 0.1)",
+  upXLarge:
+    "0px -20px 25px -5px rgba(16, 24, 40, 0.1), 0px -8px 10px -6px rgba(16, 24, 40, 0.1)",
+  upXxLarge: "0px -25px 50px -12px rgba(16, 24, 40, 0.25)",
+};
+
 const primaryVariant: ButtonVariant = {
   primary: {
     background: primary["500"],
     borderColor: primary["500"],
     borderWidth: 0,
     contentColor: shades["100"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   secondary: {
     background: primary["200"],
     borderColor: primary["200"],
     borderWidth: 0,
     contentColor: shades["100"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   tertiary: {
     background: "transparent",
@@ -102,12 +129,16 @@ const destructiveVariant: ButtonVariant = {
     borderColor: error["500"],
     borderWidth: 0,
     contentColor: shades["0"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   secondary: {
     background: error["50"],
     borderColor: error["50"],
     borderWidth: 0,
     contentColor: error["600"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   tertiary: {
     background: "transparent",
@@ -130,12 +161,16 @@ const disabledVariant: ButtonVariant = {
     borderColor: neutral["200"],
     borderWidth: 0,
     contentColor: neutral["400"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   secondary: {
     background: neutral["200"],
     borderColor: neutral["200"],
     borderWidth: 0,
     contentColor: neutral["400"],
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   tertiary: {
     background: "transparent",
@@ -152,34 +187,70 @@ const disabledVariant: ButtonVariant = {
   },
 };
 
+const roundedVariant: ButtonVariant = {
+  primary: {
+    background: primary["500"],
+    borderColor: primary["500"],
+    borderWidth: 0,
+    contentColor: shades["100"],
+    borderRadius: "100px",
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
+  },
+  secondary: {
+    background: primary["200"],
+    borderColor: primary["200"],
+    borderWidth: 0,
+    contentColor: shades["100"],
+    borderRadius: "100px",
+    boxShadow: shadows.small,
+    filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
+  },
+  tertiary: {
+    background: "transparent",
+    borderColor: "transparent",
+    borderWidth: 0,
+    contentColor: primary["800"],
+    textDecorationLine: "underline",
+    borderRadius: "100px",
+  },
+  outlined: {
+    background: "transparent",
+    borderColor: primary["500"],
+    borderWidth: "1px",
+    contentColor: primary["500"],
+    borderRadius: "100px",
+  },
+};
+
 const buttons: Buttons = {
   fontFamily: "Archivo, sans-serif",
   fontWeight: 500,
   outline: `3px solid ${primary[200]}`,
   regular: {
     xSmall: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: "10px",
       verticalPadding: "6px",
     },
     small: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       fontSize: "14px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.md,
       verticalPadding: spacings.xsm,
     },
     medium: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       fontSize: "16px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.big,
       verticalPadding: spacings.xsm,
     },
     large: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       fontSize: "18px",
       iconPadding: spacings.xxsm,
       horizontalPadding: spacings.xbig,
@@ -188,28 +259,29 @@ const buttons: Buttons = {
     primary: primaryVariant,
     destructive: destructiveVariant,
     disabled: disabledVariant,
+    rounded: roundedVariant,
   },
   icon: {
     xSmall: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       size: "14px",
       horizontalPadding: "11px",
       verticalPadding: "10px",
     },
     small: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       size: "14px",
       horizontalPadding: "13px",
       verticalPadding: "14px",
     },
     medium: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       size: spacings.md,
       horizontalPadding: "14px",
       verticalPadding: spacings.md,
     },
     large: {
-      borderRadius: "2px",
+      borderRadius: "6px",
       size: spacings.md,
       horizontalPadding: spacings.md,
       verticalPadding: "22px",
@@ -218,29 +290,6 @@ const buttons: Buttons = {
     destructive: destructiveVariant,
     disabled: disabledVariant,
   },
-};
-
-const shadows = {
-  xSmall: "0px 1px 2px rgba(16, 24, 40, 0.05)",
-  small:
-    "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1)",
-  medium:
-    "0px 4px 6px -1px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.1)",
-  large:
-    "0px 10px 15px -3px rgba(16, 24, 40, 0.1), 0px 4px 6px -4px rgba(16, 24, 40, 0.1)",
-  xLarge:
-    "0px 20px 25px -5px rgba(16, 24, 40, 0.1), 0px 8px 10px -6px rgba(16, 24, 40, 0.1)",
-  xxLarge: "0px 25px 50px -12px rgba(16, 24, 40, 0.25)",
-  upXSmall: "0px -1px 2px rgba(16, 24, 40, 0.05)",
-  upSmall:
-    "0px -1px 3px rgba(16, 24, 40, 0.1), 0px -1px 2px -1px rgba(16, 24, 40, 0.1)",
-  upMedium:
-    "0px -4px 6px -1px rgba(16, 24, 40, 0.1), 0px -2px 4px -2px rgba(16, 24, 40, 0.1)",
-  upLarge:
-    "0px -10px 15px -3px rgba(16, 24, 40, 0.1), 0px -4px 6px -4px rgba(16, 24, 40, 0.1)",
-  upXLarge:
-    "0px -20px 25px -5px rgba(16, 24, 40, 0.1), 0px -8px 10px -6px rgba(16, 24, 40, 0.1)",
-  upXxLarge: "0px -25px 50px -12px rgba(16, 24, 40, 0.25)",
 };
 
 const inputBox: InputBox = {
