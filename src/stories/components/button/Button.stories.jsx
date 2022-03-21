@@ -16,7 +16,7 @@ export default {
       control: { type: "boolean" },
     },
     variant: {
-      options: ["primary", "destructive"],
+      options: ["primary", "destructive", "rounded"],
       control: { type: "radio" },
     },
     buttonStyle: {
@@ -25,33 +25,42 @@ export default {
     },
   },
 };
+const TwoButtonsTemplate = (args) => (
+  <>
+    <Button {...args}>{args.content}</Button>
+    <div style={{ height: "30px" }}></div>
+    <Button variant="rounded" {...args}>
+      {args.content}
+    </Button>
+  </>
+);
 
 const Template = (args) => <Button {...args}>{args.content}</Button>;
 
-export const Default = Template.bind({});
+export const Default = TwoButtonsTemplate.bind({});
 Default.args = {
   content: "Default Button",
 };
 
-export const SizeXSmall = Template.bind({});
+export const SizeXSmall = TwoButtonsTemplate.bind({});
 SizeXSmall.args = {
   buttonSize: "xSmall",
   content: "X Small Button",
 };
 
-export const SizeSmall = Template.bind({});
+export const SizeSmall = TwoButtonsTemplate.bind({});
 SizeSmall.args = {
   buttonSize: "small",
   content: "Small Button",
 };
 
-export const SizeMedium = Template.bind({});
+export const SizeMedium = TwoButtonsTemplate.bind({});
 SizeMedium.args = {
   buttonSize: "medium",
   content: "Medium Button",
 };
 
-export const SizeLarge = Template.bind({});
+export const SizeLarge = TwoButtonsTemplate.bind({});
 SizeLarge.args = {
   buttonSize: "large",
   content: "Large Button",
@@ -69,31 +78,37 @@ VariantDestructive.args = {
   variant: "destructive",
 };
 
+export const VariantRounded = Template.bind({});
+VariantRounded.args = {
+  content: "Rounded Button",
+  variant: "rounded",
+};
+
 export const VariantDisabled = Template.bind({});
 VariantDisabled.args = {
   disabled: true,
   content: "Disabled Button",
 };
 
-export const StylePrimary = Template.bind({});
+export const StylePrimary = TwoButtonsTemplate.bind({});
 StylePrimary.args = {
   content: "Primary Button",
   buttonStyle: "primary",
 };
 
-export const StyleSecondary = Template.bind({});
+export const StyleSecondary = TwoButtonsTemplate.bind({});
 StyleSecondary.args = {
   content: "Secondary Button",
   buttonStyle: "secondary",
 };
 
-export const StyleTertiary = Template.bind({});
+export const StyleTertiary = TwoButtonsTemplate.bind({});
 StyleTertiary.args = {
   content: "Tertiary Button",
   buttonStyle: "tertiary",
 };
 
-export const StyleOutlined = Template.bind({});
+export const StyleOutlined = TwoButtonsTemplate.bind({});
 StyleOutlined.args = {
   content: "Outlined Button",
   buttonStyle: "outlined",

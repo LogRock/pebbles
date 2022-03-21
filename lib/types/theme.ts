@@ -169,6 +169,9 @@ interface ButtonStyle {
   borderWidth: CSS.Property.BorderWidth;
   contentColor: CSS.Property.Color;
   textDecorationLine?: CSS.Property.TextDecorationLine;
+  borderRadius?: CSS.Property.BorderRadius;
+  boxShadow?: CSS.Property.BoxShadow;
+  filter?: CSS.Property.Filter;
 }
 
 export interface ButtonVariant {
@@ -205,6 +208,7 @@ export interface Buttons {
     primary: ButtonVariant;
     destructive: ButtonVariant;
     disabled: ButtonVariant;
+    rounded: ButtonVariant;
   };
   icon: {
     large: IconButtonSize;
