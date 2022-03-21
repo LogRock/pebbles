@@ -67,3 +67,7 @@ export type { ListProps, ListItemProps } from "./components/List";
 // expose Toggle
 export { default as Toggle } from "./components/Toggle";
 export type { ToggleProps } from "./components/Toggle";
+
+// expose Stepper
+export { default as Stepper } from "./components/Stepper";
+export type { StepperProps } from "./components/Stepper";
