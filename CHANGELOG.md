@@ -1,3 +1,13 @@
+# [6.0.0](https://github.com/LogRock/pebbles/compare/v5.9.1...v6.0.0) (2022-03-25)
+
+### Features
+
+- **added new loader ring component:** loader ring substitutes old progress loader component ([403aab5](https://github.com/LogRock/pebbles/commit/403aab52e5db85b268b6320f71d17d2406803f1a))
+
+### BREAKING CHANGES
+
+- **added new loader ring component:** removed old ProgressLoader component
+
 ## [5.9.1](https://github.com/LogRock/pebbles/compare/v5.9.0...v5.9.1) (2022-03-25)
 
 ### Bug Fixes
