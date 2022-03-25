@@ -1,3 +1,9 @@
+## [5.9.1](https://github.com/LogRock/pebbles/compare/v5.9.0...v5.9.1) (2022-03-25)
+
+### Bug Fixes
+
+- **select:** :bug: make select accept all props ([cd749be](https://github.com/LogRock/pebbles/commit/cd749be639b65accaee26e2ddd68654a98297ca8))
+
 # [5.9.0](https://github.com/LogRock/pebbles/compare/v5.8.2...v5.9.0) (2022-03-25)
 
 ### Features
