@@ -13,6 +13,7 @@ const Select = <ItemType extends BaseItemType>({
   renderHeader,
   onItemSelected,
   spaced,
+  ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
 
@@ -87,6 +88,7 @@ const Select = <ItemType extends BaseItemType>({
       focus={hasFocus}
       spaced={spaced || inputProps?.spaced}
       ref={ref}
+      {...props}
     >
       <InputBox
         {...inputProps}
