@@ -426,7 +426,7 @@ const alert: Alert = {
     background: primary[50],
     borderColor: primary[600],
     titleColor: primary[900],
-    descriptionColor: primary[700],
+    descriptionColor: neutral[700],
     iconColor: primary[600],
   },
   success: {
@@ -452,18 +452,19 @@ const alert: Alert = {
   },
   title: {
     fontWeight: "600",
-    fontSize: "16px",
+    fontSize: "18px",
     lineHeight: "24px",
     height: "24px",
   },
   description: {
     fontWeight: "400",
-    fontSize: "14px",
+    fontSize: "18px",
     lineHeight: "20px",
     height: "20px",
   },
 
   fontFamily: "Archivo",
+  borderRadius: spacings.sm,
 };
 
 const progressBar: ProgressBar = {

@@ -210,7 +210,7 @@ export const headingH6: HeaderProps = {
 
 export const paragraphLarge: ParagraphProps = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "18px",
+  fontSize: "20px",
   lineHeight: "28px",
   weights: {
     normal: 400,
@@ -221,7 +221,7 @@ export const paragraphLarge: ParagraphProps = {
 
 export const paragraphMedium: ParagraphProps = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "16px",
+  fontSize: "18px",
   lineHeight: "24px",
   weights: {
     normal: 400,
@@ -232,7 +232,7 @@ export const paragraphMedium: ParagraphProps = {
 
 export const paragraphSmall: ParagraphProps = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "14px",
+  fontSize: "16px",
   lineHeight: "20px",
   weights: {
     normal: 400,

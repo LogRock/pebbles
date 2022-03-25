@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../Button";
 import Icon from "@mdi/react";
 import { mdiClose } from "@mdi/js";
+import { paragraphMediumCSS } from "../Typography/Typography.styled";
 
 export interface AlertProps {
   title?: React.ReactNode;
@@ -22,6 +23,8 @@ export interface AlertInlineProps extends AlertProps {
 }
 
 const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
+  ${paragraphMediumCSS}
+
   display: flex;
   position: static;
   box-sizing: border-box;
@@ -30,17 +33,13 @@ const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   margin: 8px;
   padding: ${({ sticky }) => (sticky ? "6px 10px" : "12px 20px")};
 
-  border: 1px solid
-    ${({ theme, status }) => theme.alert[status || "neutral"].borderColor};
-  border-radius: 2px;
+  border-radius: ${({ theme, status }) => theme.alert.borderRadius};
 
   background: ${({ theme, status }) =>
     theme.alert[status || "neutral"].background};
 
   color: ${({ theme, status }) =>
     theme.alert[status || "neutral"].descriptionColor};
-  font-family: ${({ theme }) => theme.alert.fontFamily};
-  font-feature-settings: "salt" on;
 `;
 
 const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
@@ -69,20 +68,19 @@ const Actions = styled.div`
 `;
 
 const Title = styled.span<Pick<AlertInlineProps, "status">>`
+  ${paragraphMediumCSS}
+
   height: ${({ theme }) => theme.alert.title.height};
 
   color: ${({ theme, status }) => theme.alert[status || "neutral"].titleColor};
-  font-size: ${({ theme }) => theme.alert.title.fontSize};
   font-weight: ${({ theme }) => theme.alert.title.fontWeight};
   line-height: ${({ theme }) => theme.alert.title.lineWeight};
 `;
 
 const Description = styled.span<Pick<AlertInlineProps, "status" | "sticky">>`
-  margin: ${({ sticky }) => (sticky ? "4px 0px" : "8px 0px")};
+  ${paragraphMediumCSS}
 
-  font-size: ${({ theme }) => theme.alert.description.fontSize};
-  font-weight: ${({ theme }) => theme.alert.description.fontWeight};
-  line-height: ${({ theme }) => theme.alert.description.lineHeight};
+  margin: ${({ sticky }) => (sticky ? "4px 0px" : "8px 0px")};
 `;
 
 const StyledButton = styled(Button)<Pick<AlertInlineProps, "sticky">>`

@@ -362,6 +362,7 @@ export interface Alert {
     height: CSS.Property.Height;
   };
   fontFamily: CSS.Property.FontFamily;
+  borderRadius: CSS.Property.BorderRadius;
 }
 
 export interface ProgressBar {
