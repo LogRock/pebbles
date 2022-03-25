@@ -24,6 +24,7 @@ export const ListItemWrapper = styled.li<Pick<ListItemProps, "size">>`
   border-radius: ${({ theme }) => theme.list.item.borderRadius};
 
   background-color: ${({ theme }) => theme.list.item.background.regular};
+  box-shadow: ${({ theme }) => theme.list.item.shadow};
 
   ${typographyCSS}
 

@@ -362,6 +362,7 @@ export interface Alert {
     height: CSS.Property.Height;
   };
   fontFamily: CSS.Property.FontFamily;
+  borderRadius: CSS.Property.BorderRadius;
 }
 
 export interface ProgressBar {
@@ -387,6 +388,7 @@ export interface List {
     paddingX: CSS.Property.PaddingTop;
     internalPadding: CSS.Property.Padding;
     margin: CSS.Property.Margin;
+    shadow: CSS.Property.BoxShadow;
     background: {
       regular: CSS.Property.BackgroundColor;
       hover: CSS.Property.BackgroundColor;

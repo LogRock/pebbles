@@ -1,3 +1,37 @@
+## [5.9.1](https://github.com/LogRock/pebbles/compare/v5.9.0...v5.9.1) (2022-03-25)
+
+### Bug Fixes
+
+- **select:** :bug: make select accept all props ([cd749be](https://github.com/LogRock/pebbles/commit/cd749be639b65accaee26e2ddd68654a98297ca8))
+
+# [5.9.0](https://github.com/LogRock/pebbles/compare/v5.8.2...v5.9.0) (2022-03-25)
+
+### Features
+
+- **list:** :lipstick: add shadow to list items ([ab414df](https://github.com/LogRock/pebbles/commit/ab414df050fc20ca0858804565eb9973b1a316b4))
+
+## [5.8.2](https://github.com/LogRock/pebbles/compare/v5.8.1...v5.8.2) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: increase z-index of select dropdown ([f5dd6b2](https://github.com/LogRock/pebbles/commit/f5dd6b2730cc45a123c766588ca02f3dfacfbc0c))
+
+## [5.8.1](https://github.com/LogRock/pebbles/compare/v5.8.0...v5.8.1) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: bump font sizes back down, leave only alert size changes ([a157b81](https://github.com/LogRock/pebbles/commit/a157b81e81088511768f4068a2417d3ebc3f8303))
+
+# [5.8.0](https://github.com/LogRock/pebbles/compare/v5.7.0...v5.8.0) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: bump up font-sizes ([8ef5002](https://github.com/LogRock/pebbles/commit/8ef50024eccf8c83acd7e5902c2d20cdfaaed37d))
+
+### Features
+
+- **rounded-button:** create a new button variant rounded ([ded7dcc](https://github.com/LogRock/pebbles/commit/ded7dccb4ebc07fe6ad2e8704821e8bbd94f5952))
+
 # [5.7.0](https://github.com/LogRock/pebbles/compare/v5.6.0...v5.7.0) (2022-03-21)
 
 ### Features

@@ -28,4 +28,4 @@ export type SelectProps<ItemType> = {
   onItemSelected?: (item: ItemType) => void;
   inputProps?: InputBoxProps;
   spaced?: boolean;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
