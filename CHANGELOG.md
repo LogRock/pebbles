@@ -1,3 +1,9 @@
+## [5.8.1](https://github.com/LogRock/pebbles/compare/v5.8.0...v5.8.1) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: bump font sizes back down, leave only alert size changes ([a157b81](https://github.com/LogRock/pebbles/commit/a157b81e81088511768f4068a2417d3ebc3f8303))
+
 # [5.8.0](https://github.com/LogRock/pebbles/compare/v5.7.0...v5.8.0) (2022-03-25)
 
 ### Bug Fixes
