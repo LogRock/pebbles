@@ -51,13 +51,13 @@ export { default as Alert } from "./components/Alert";
 export type { AlertProps } from "./components/Alert";
 
 // expose Loaders
-export { default as ProgressLoader } from "./components/Loader/ProgressLoader";
 export { default as ProgressBar } from "./components/Loader/ProgressBar";
+export { default as ProgressRing } from "./components/Loader/ProgressRing";
 export { default as Loader } from "./components/Loader/Loader";
 export type {
-  ProgressLoaderProps,
   ProgressBarProps,
   LoaderProps,
+  ProgressRingProps,
 } from "./components/Loader/Loader.types";
 
 // expose List & List Items

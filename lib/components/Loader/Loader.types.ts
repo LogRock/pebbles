@@ -7,6 +7,10 @@ export interface LoaderProps {
   message: string;
 }
 
-export interface ProgressLoaderProps {
+export interface ProgressRingProps {
+  radius: number;
   percentage: number;
+  stroke: number;
+  colorGradient?: boolean;
+  showBaseRing?: boolean;
 }
