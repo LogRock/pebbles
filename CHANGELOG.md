@@ -1,3 +1,9 @@
+# [5.9.0](https://github.com/LogRock/pebbles/compare/v5.8.2...v5.9.0) (2022-03-25)
+
+### Features
+
+- **list:** :lipstick: add shadow to list items ([ab414df](https://github.com/LogRock/pebbles/commit/ab414df050fc20ca0858804565eb9973b1a316b4))
+
 ## [5.8.2](https://github.com/LogRock/pebbles/compare/v5.8.1...v5.8.2) (2022-03-25)
 
 ### Bug Fixes
