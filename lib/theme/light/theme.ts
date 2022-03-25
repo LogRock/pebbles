@@ -490,6 +490,7 @@ const list: List = {
     paddingX: spacings.xbig,
     internalPadding: spacings.big,
     margin: spacings.xxxbig,
+    shadow: shadows.small,
     background: {
       regular: shades[0],
       hover: neutral[50],
