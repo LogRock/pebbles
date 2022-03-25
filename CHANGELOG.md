@@ -1,3 +1,13 @@
+# [5.8.0](https://github.com/LogRock/pebbles/compare/v5.7.0...v5.8.0) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: bump up font-sizes ([8ef5002](https://github.com/LogRock/pebbles/commit/8ef50024eccf8c83acd7e5902c2d20cdfaaed37d))
+
+### Features
+
+- **rounded-button:** create a new button variant rounded ([ded7dcc](https://github.com/LogRock/pebbles/commit/ded7dccb4ebc07fe6ad2e8704821e8bbd94f5952))
+
 # [5.7.0](https://github.com/LogRock/pebbles/compare/v5.6.0...v5.7.0) (2022-03-21)
 
 ### Features
