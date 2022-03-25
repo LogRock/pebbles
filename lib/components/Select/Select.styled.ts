@@ -47,7 +47,7 @@ export const SelectItems = styled.div<{
   ${up("desktop")} {
     display: ${({ focus }) => (focus ? "flex" : "none")};
     position: absolute;
-    z-index: 9999;
+    z-index: 99999999;
     top: ${({ theme, description, helper }) =>
       `calc(
         ${theme.spacings.xxlg} 
