@@ -1,3 +1,9 @@
+## [5.8.2](https://github.com/LogRock/pebbles/compare/v5.8.1...v5.8.2) (2022-03-25)
+
+### Bug Fixes
+
+- **components:** :lipstick: increase z-index of select dropdown ([f5dd6b2](https://github.com/LogRock/pebbles/commit/f5dd6b2730cc45a123c766588ca02f3dfacfbc0c))
+
 ## [5.8.1](https://github.com/LogRock/pebbles/compare/v5.8.0...v5.8.1) (2022-03-25)
 
 ### Bug Fixes
