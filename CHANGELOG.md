@@ -1,3 +1,9 @@
+# [6.1.0](https://github.com/LogRock/pebbles/compare/v6.0.0...v6.1.0) (2022-03-28)
+
+### Features
+
+- **added label as a param:** loader label as a component param, more robust than using children ([d7791b3](https://github.com/LogRock/pebbles/commit/d7791b36d6950dceda41cb8ca678da51e007f1d2))
+
 # [6.0.0](https://github.com/LogRock/pebbles/compare/v5.9.1...v6.0.0) (2022-03-25)
 
 ### Features
