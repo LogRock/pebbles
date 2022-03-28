@@ -50,6 +50,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
   percentage,
   colorGradient,
   showBaseRing,
+  label,
   ...inputProps
 }) => {
   const theme = useContext(ThemeContext);
@@ -102,8 +103,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
           cy={radius}
         />
       </svg>
-
-      <Label>{children}</Label>
+      {label && <Label>{label}</Label>}
     </RingWrapper>
   );
 };
