@@ -21,7 +21,7 @@ SolidColorNoBaseRing.args = {
   percentage: 75,
   radius: 30,
   stroke: 4,
-  children: "75%",
+  label: "75%",
 };
 
 export const GradientColor = Template.bind({});
@@ -31,5 +31,5 @@ GradientColor.args = {
   stroke: 6,
   colorGradient: true,
   showBaseRing: true,
-  children: "2 of 5",
+  label: "2 of 5",
 };

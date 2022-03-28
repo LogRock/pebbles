@@ -13,4 +13,5 @@ export interface ProgressRingProps {
   stroke: number;
   colorGradient?: boolean;
   showBaseRing?: boolean;
+  label?: string;
 }
