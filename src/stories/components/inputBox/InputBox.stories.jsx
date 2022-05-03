@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
 import {
   mdiAlert,
+  mdiCalendar,
   mdiCardAccountDetailsOutline,
   mdiEmailOutline,
 } from "@mdi/js";
@@ -60,9 +61,13 @@ HintedInputBox.args = {
 export const DateInputBox = Template.bind({});
 DateInputBox.args = {
   type: "date",
-  description: "",
+  description: "Valid until:",
+  hint: {
+    content: "",
+    icon: <Icon size={0.7} path={mdiCalendar} />,
+  },
   status: "info",
-  helper: "",
+  helper: "please input a date",
   placeholder: "input date",
 };
 

@@ -1,11 +1,71 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { Theme } from "../../main";
+import { BaseInputBoxProps } from "./BaseInputBox";
 
-export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
-    .logrock-datepicker {
-        /* border: 2px solid red; */
+const defaultStatus = "info";
+
+export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
+  input {
+    display: flex;
+    box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
+    flex-direction: row;
+    flex-grow: 0;
+    align-items: center;
+    align-self: stretch;
+    width: ${({ theme }) => theme.inputBox.width};
+    height: ${({ theme }) => theme.inputBox.height};
+    margin: ${({ theme }) => theme.inputBox.margin};
+    padding: ${({ theme }) => theme.inputBox.padding};
+
+    border: ${({ theme, status }) =>
+      theme.inputBox[status || defaultStatus].border};
+    border-radius: ${({ theme }) => theme.inputBox.borderRadius};
+
+    background: ${({ theme }) => theme.inputBox.background};
+    box-shadow: ${({ theme, status }) =>
+      theme.inputBox[status || defaultStatus].boxShadow};
+
+    color: ${({ theme, status }) =>
+      theme.inputBox[status || defaultStatus].color};
+    font-family: ${({ theme }) => theme.inputBox.fontFamily};
+    font-size: ${({ theme }) => theme.inputBox.fontSize};
+
+    &:focus {
+      box-sizing: ${({ theme, status }) =>
+        theme.inputBox[status || defaultStatus].focused.boxSizing};
+
+      border: ${({ theme, status }) =>
+        theme.inputBox[status || defaultStatus].focused.border};
+      border-radius: ${({ theme, status }) =>
+        theme.inputBox[status || defaultStatus].focused.borderRadius};
+      outline: none;
+
+      background: ${({ theme }) => theme.inputBox.background};
+      box-shadow: ${({ theme, status }) =>
+        theme.inputBox[status || defaultStatus].focused.boxShadow};
     }
-    
+    &:disabled {
+      box-sizing: ${({ theme }) => theme.inputBox.disabled.boxSizing};
+      align-items: center;
+      padding: ${({ theme }) => theme.inputBox.padding};
+
+      border: ${({ theme }) => theme.inputBox.disabled.border};
+      border-radius: ${({ theme }) => theme.inputBox.disabled.borderRadius};
+
+      background: ${({ theme }) => theme.inputBox.background};
+      box-shadow: ${({ theme }) => theme.inputBox.disabled.boxShadow};
+    }
+    &:placeholder {
+      display: flex;
+      align-items: center;
+
+      color: ${({ theme }) => theme.inputBox.placeholder.color};
+    }
+  }
+`;
+
+// This set-ups the "popup" styles
+export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
     .react-datepicker {      
       border: 1px solid rgba(0,0,0,0.04);
 
