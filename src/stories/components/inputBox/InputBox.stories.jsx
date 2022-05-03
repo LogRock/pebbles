@@ -57,6 +57,15 @@ HintedInputBox.args = {
   placeholder: "no ads or spams.",
 };
 
+export const DateInputBox = Template.bind({});
+DateInputBox.args = {
+  type: "date",
+  description: "",
+  status: "info",
+  helper: "",
+  placeholder: "input date",
+};
+
 const InteractiveTemplate = (args) => {
   const [labelContent, setLabelContent] = useState("");
   const onChangeInputBox = (event) => {

@@ -163,5 +163,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@types/react-datepicker": "^4.4.1",
+    "react-datepicker": "^4.7.0"
   }
 }

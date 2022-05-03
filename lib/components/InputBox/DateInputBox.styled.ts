@@ -1,0 +1,133 @@
+import { createGlobalStyle } from "styled-components";
+import { Theme } from "../../main";
+
+export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
+    .logrock-datepicker {
+        /* border: 2px solid red; */
+    }
+    
+    .react-datepicker {      
+      border: 1px solid rgba(0,0,0,0.04);
+
+      box-shadow: ${({ theme }) => theme.shadows.large};
+
+      /* Top triangle, that "connects" the date picker to the form field */
+      &__triangle {
+        &::before {
+          border-bottom-color: #e2e2e2;
+        }
+        &::after {
+          border-bottom-color: #f2f2f2;
+        }
+      }
+
+      /* Left and right arrows that change the month/year */
+      &__navigation {
+        top:24px;
+
+        &--previous {
+          left: 24px;
+        }
+
+        &--next {
+          right: 24px;
+        }
+      }
+
+      /* Header, contains month/year and also week days indicator */
+      &__header {
+        padding: ${({ theme }) => theme.spacings.xbig};
+
+        border-bottom: none;
+
+        background-color: transparent;
+      }
+
+      &__day-names {
+        margin-top: 16px;
+        margin-bottom: -52px;
+      }
+
+      &__day-name {
+        color: ${({ theme }) => theme.colors.neutral[400]};
+      }
+
+      /* Month/year dropdowns (select menu) */
+      &__year-dropdown,
+      &__month-dropdown,
+      &__month-year-dropdown {
+        border: 1px solid rgba(0,0,0,0.04);
+
+        background-color: ${({ theme }) => theme.colors.shades[0]};
+        box-shadow: ${({ theme }) => theme.shadows.xxLarge};
+      }
+
+      &__year-option,
+      &__month-option,
+      &__month-year-option {
+        padding: 4px 0;
+
+        &:hover {
+          background-color: ${({ theme }) => theme.colors.neutral[100]};
+        }
+      }
+
+      &__month-option--selected_month,
+      &__year-option--selected_year {
+        color: ${({ theme }) => theme.colors.primary[400]};
+        font-weight: 500;
+
+        & > span {
+          display: none;
+        }
+      }
+
+      &__current-month,
+      &-time__header,
+      &-year-header {
+        margin-bottom: 8px;
+
+        color: ${({ theme }) => theme.colors.neutral[600]};
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &__month {
+        padding: ${({ theme }) => theme.spacings.xbig};
+      }
+
+      &__day, &__month, &__quarter, &__year {
+        border-radius: 4px;
+
+        color: ${({ theme }) => theme.colors.neutral[900]};
+
+        &--in-range, &--in-selecting-range {
+          background-color: ${({ theme }) =>
+            theme.colors.neutral[100]} !important;
+
+          &:hover {
+            background-color: ${({ theme }) =>
+              theme.colors.primary[200]} !important;
+          }
+        }
+
+        &--selected {
+          background-color: ${({ theme }) =>
+            theme.colors.primary[400]} !important;
+
+          &:hover {
+            background-color: ${({ theme }) =>
+              theme.colors.primary[200]} !important;
+          }
+        }
+
+        &--keyboard-selected {
+          background-color: ${({ theme }) => theme.colors.secondary[400]};
+
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.secondary[200]};
+          }
+        }
+      }
+    }    
+`;
