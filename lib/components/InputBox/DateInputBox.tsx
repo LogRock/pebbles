@@ -16,7 +16,10 @@ import {
   HintIconWrapper,
   HelperIcon,
 } from "./BaseInputBox.styled";
-import { DatePickerWrapperStyles } from "./DateInputBox.styled";
+import {
+  DatePickerWrapperStyles,
+  StyledDatePicker,
+} from "./DateInputBox.styled";
 
 export interface DateInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -43,10 +46,12 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   return (
     <StyledDiv spaced={spaced}>
       <Label>{description}</Label>
-      <InputDiv>
-        {/* <StyledInput status={status} {...inputProps} /> */}
 
-        <>
+      {/* TO-DO: Just to test inputted status, REMOVE THIS */}
+      <Label>Status prop is: {status}</Label>
+
+      <InputDiv>
+        <StyledDatePicker status={status} {...inputProps}>
           <DatePicker
             id="input-date"
             data-testid="input-date"
@@ -57,7 +62,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
             showMonthDropdown
           />
           <DatePickerWrapperStyles />
-        </>
+        </StyledDatePicker>
         {hint && (
           <HintDiv>
             <Hint status={status}>{hint.content}</Hint>
