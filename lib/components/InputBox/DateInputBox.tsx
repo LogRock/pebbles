@@ -50,7 +50,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
         <StyledDatePicker status={status}>
           {
             // @ts-ignore
-            // typescript issue here, the date picker onChange event has a different type than the HTML input
+            // typescript issue here, the date picker onChange event has a different type than the HTML input's event
             <DatePicker
               id="input-date"
               data-testid="input-date"
