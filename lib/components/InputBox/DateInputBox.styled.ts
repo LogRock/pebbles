@@ -66,10 +66,12 @@ export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
 
 // This set-ups the "popup" styles
 export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
-    .react-datepicker {      
+    .react-datepicker {
       border: 1px solid rgba(0,0,0,0.04);
 
-      box-shadow: ${({ theme }) => theme.shadows.large};
+      box-shadow: ${({ theme }) => theme.shadows.large};      
+
+      font-family: ${({ theme }) => theme.inputBox.fontFamily};
 
       /* Top triangle, that "connects" the date picker to the form field */
       &__triangle {
