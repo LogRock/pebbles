@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -31,6 +31,7 @@ export interface DateInputBoxProps
   status?: "info" | "error";
   helper?: React.ReactNode;
   spaced?: boolean;
+  onChange?: any;
 }
 
 const DateInputBox: FC<DateInputBoxProps> = ({
@@ -41,21 +42,24 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   helper,
   ...inputProps
 }) => {
-  const [date, setDate] = useState<Date | null>(new Date(Date.now()));
-
   return (
     <StyledDiv spaced={spaced}>
       <Label>{description}</Label>
 
       <InputDiv>
-        <StyledDatePicker status={status} {...inputProps}>
-          <DatePicker
-            id="input-date"
-            data-testid="input-date"
-            wrapperClassName="logrock-datepicker"
-            selected={date}
-            onChange={(date: Date) => setDate(date)}
-          />
+        <StyledDatePicker status={status}>
+          {
+            // @ts-ignore
+            // typescript issue here, the date picker onChange event has a different type than the HTML input
+            <DatePicker
+              id="input-date"
+              data-testid="input-date"
+              wrapperClassName="logrock-datepicker"
+              showMonthDropdown
+              showYearDropdown
+              {...inputProps}
+            />
+          }
           <DatePickerWrapperStyles />
         </StyledDatePicker>
         {hint && (
