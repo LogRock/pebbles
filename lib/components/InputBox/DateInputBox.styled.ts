@@ -64,12 +64,12 @@ export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
   }
 `;
 
-// This set-ups the "popup" styles
+// This set-ups the "calendar popup" styles
 export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
     .react-datepicker {
       border: 1px solid rgba(0,0,0,0.04);
 
-      box-shadow: ${({ theme }) => theme.shadows.large};      
+      box-shadow: ${({ theme }) => theme.shadows.large};
 
       font-family: ${({ theme }) => theme.inputBox.fontFamily};
 
@@ -108,6 +108,17 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
         border-bottom: none;
 
         background-color: transparent;
+
+        &__dropdown {
+          display: flex;
+          justify-content: space-around;
+          padding: 0 16px;
+        }
+      }
+
+      &__month-read-view--down-arrow {
+        top: -2px;
+        right: -20px;
       }
 
       &__day-names {

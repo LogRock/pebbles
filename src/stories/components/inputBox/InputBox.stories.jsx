@@ -69,6 +69,8 @@ DateInputBox.args = {
   status: "info",
   helper: "",
   placeholder: "input date",
+  onChange: (evt) => alert(evt),
+  selected: new Date("05-20-2023 00:00:00"),
 };
 
 const InteractiveTemplate = (args) => {
