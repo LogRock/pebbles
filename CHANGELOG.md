@@ -1,3 +1,15 @@
+# [6.2.0](https://github.com/LogRock/pebbles/compare/v6.1.0...v6.2.0) (2022-05-04)
+
+### Bug Fixes
+
+- calendar with Archivo font family ([1a6c5e9](https://github.com/LogRock/pebbles/commit/1a6c5e9d5fdcba80bd9a46c7e0d51e043c2373f2))
+- fixed misalignment of top triangle input conector ([fa21ebe](https://github.com/LogRock/pebbles/commit/fa21ebe4fdf2157f62c4599c4399b65f62511950))
+
+### Features
+
+- added standard input styles to date picker input area ([598e3e8](https://github.com/LogRock/pebbles/commit/598e3e8b012821fc53349c963d4ab6bf3dd5d76c))
+- input type date now uses react-datepicker, date popup styles added ([181f3f6](https://github.com/LogRock/pebbles/commit/181f3f6a1247018acad639a61e823611ef28e2e2))
+
 # [6.1.0](https://github.com/LogRock/pebbles/compare/v6.0.0...v6.1.0) (2022-03-28)
 
 ### Features
