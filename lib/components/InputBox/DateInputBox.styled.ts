@@ -73,6 +73,11 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
 
       /* Top triangle, that "connects" the date picker to the form field */
       &__triangle {
+        position: absolute !important;
+        left: 50% !important;
+
+        transform: none !important;
+
         &::before {
           border-bottom-color: #e2e2e2;
         }

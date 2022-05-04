@@ -67,7 +67,7 @@ DateInputBox.args = {
     icon: <Icon size={0.7} path={mdiCalendar} />,
   },
   status: "info",
-  helper: "please input a date",
+  helper: "",
   placeholder: "input date",
 };
 

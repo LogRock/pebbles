@@ -47,9 +47,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
     <StyledDiv spaced={spaced}>
       <Label>{description}</Label>
 
-      {/* TO-DO: Just to test inputted status, REMOVE THIS */}
-      <Label>Status prop is: {status}</Label>
-
       <InputDiv>
         <StyledDatePicker status={status} {...inputProps}>
           <DatePicker
@@ -58,8 +55,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
             wrapperClassName="logrock-datepicker"
             selected={date}
             onChange={(date: Date) => setDate(date)}
-            showYearDropdown
-            showMonthDropdown
           />
           <DatePickerWrapperStyles />
         </StyledDatePicker>
