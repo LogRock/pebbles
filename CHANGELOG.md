@@ -1,3 +1,10 @@
+## [6.2.1](https://github.com/LogRock/pebbles/compare/v6.2.0...v6.2.1) (2022-05-04)
+
+### Bug Fixes
+
+- date input, removed internal state for selected and onChange, must test now ([2a844c4](https://github.com/LogRock/pebbles/commit/2a844c4292f5f347d3b9b3470f5c44eee8a6e214))
+- small changes ([609762a](https://github.com/LogRock/pebbles/commit/609762ab824386693d2206a0a9459d798330ab43))
+
 # [6.2.0](https://github.com/LogRock/pebbles/compare/v6.1.0...v6.2.0) (2022-05-04)
 
 ### Bug Fixes
