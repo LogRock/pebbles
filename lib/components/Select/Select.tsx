@@ -124,7 +124,7 @@ const Select = <ItemType extends BaseItemType>({
               item={item}
               onClick={() => {
                 setHasFocus(false);
-                setCurrentHighlight(0);
+                setCurrentHighlight(index);
                 onItemSelected?.(autoCompleteItems[index]);
               }}
               onMouseEnter={() => setCurrentHighlight(index)}
