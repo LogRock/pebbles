@@ -1,3 +1,14 @@
+# [6.3.0](https://github.com/LogRock/pebbles/compare/v6.2.1...v6.3.0) (2022-05-05)
+
+### Bug Fixes
+
+- **input date:** commented out specific input for type date, for now, some issues ([2fc6680](https://github.com/LogRock/pebbles/commit/2fc66801f7985001a6ac6a55a52b6f6b1e35db8a))
+- **select component:** fix select highlight ([2048537](https://github.com/LogRock/pebbles/commit/204853788109719afe852d18fe283eb51fa3e18c))
+
+### Features
+
+- **select input now has a max height option, defaults to 240px:** select with max height ([e895b35](https://github.com/LogRock/pebbles/commit/e895b3593c4b73563a648282cb9503524d91fd39))
+
 ## [6.2.1](https://github.com/LogRock/pebbles/compare/v6.2.0...v6.2.1) (2022-05-04)
 
 ### Bug Fixes
