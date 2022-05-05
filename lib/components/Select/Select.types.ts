@@ -28,4 +28,5 @@ export type SelectProps<ItemType> = {
   onItemSelected?: (item: ItemType) => void;
   inputProps?: InputBoxProps;
   spaced?: boolean;
+  maxHeight?: number;
 } & React.HTMLAttributes<HTMLDivElement>;

@@ -13,6 +13,7 @@ const Select = <ItemType extends BaseItemType>({
   renderHeader,
   onItemSelected,
   spaced,
+  maxHeight,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
@@ -114,6 +115,7 @@ const Select = <ItemType extends BaseItemType>({
           focus={hasFocus}
           helper={inputProps?.helper}
           description={inputProps?.description}
+          maxHeight={maxHeight}
         >
           {renderHeader || null}
           {autoCompleteItems?.map((item, index) => (
