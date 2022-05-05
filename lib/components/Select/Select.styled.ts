@@ -31,6 +31,7 @@ export const SelectItems = styled.div<{
   focus?: boolean;
   helper?: React.ReactNode;
   description?: string;
+  maxHeight?: number;
 }>`
   display: ${({ focus }) => (focus ? "flex" : "hidden")};
   box-sizing: border-box;
@@ -38,6 +39,7 @@ export const SelectItems = styled.div<{
   flex-grow: 1;
   flex-shrink: 1;
   width: 100%;
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight + "px" : "240px")};
   overflow-y: auto;
 
   background: ${({ theme }) => theme.colors.shades["0"]};

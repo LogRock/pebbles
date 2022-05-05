@@ -83,6 +83,11 @@ Spaced.args = {
   spaced: true,
 };
 
+export const WithMaxHeight = Template.bind({});
+WithMaxHeight.args = {
+  maxHeight: 170,
+};
+
 export const WithCallback = Template.bind({});
 WithCallback.args = {};
 
