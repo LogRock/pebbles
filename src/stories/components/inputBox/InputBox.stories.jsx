@@ -58,6 +58,20 @@ HintedInputBox.args = {
   placeholder: "no ads or spams.",
 };
 
+export const DisabledInputBox = Template.bind({});
+DisabledInputBox.args = {
+  description: "",
+  hint: {
+    content: "e-mail",
+    icon: <Icon size={0.7} path={mdiEmailOutline} />,
+  },
+  status: "info",
+  helper: "",
+  placeholder: "this input is disabled, sorry",
+  disabled: true,
+  value: "Some value here",
+};
+
 export const DateInputBox = Template.bind({});
 DateInputBox.args = {
   type: "date",

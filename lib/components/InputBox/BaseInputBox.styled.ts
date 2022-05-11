@@ -49,18 +49,18 @@ export const HintDiv = styled.div`
   padding: ${({ theme }) => theme.inputBox.padding};
 `;
 
-export const Hint = styled(Label)<Pick<BaseInputBoxProps, "status">>`
+export const Hint = styled(Label)<Pick<BaseInputBoxProps, "disabled">>`
   margin: ${({ theme }) => theme.inputBox.hint.margin};
 
-  color: ${({ theme, status }) =>
-    theme.inputBox[status || defaultStatus].hintColor};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
 `;
 
-export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "status">>`
+export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "disabled">>`
   margin: 4px 4px;
 
-  color: ${({ theme, status }) =>
-    theme.inputBox[status || defaultStatus].hintColor};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
 `;
 
 export const InputDiv = styled.div`
@@ -106,21 +106,30 @@ export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
     box-shadow: ${({ theme, status }) =>
       theme.inputBox[status || defaultStatus].focused.boxShadow};
   }
+
+  &::placeholder {
+    display: flex;
+    align-items: center;
+
+    color: ${(props: any) =>
+      props.disabled
+        ? props.theme.colors.neutral[300]
+        : props.theme.inputBox.placeholder.color};
+  }
+
   &:disabled {
     box-sizing: ${({ theme }) => theme.inputBox.disabled.boxSizing};
     align-items: center;
     padding: ${({ theme }) => theme.inputBox.padding};
 
     border: ${({ theme }) => theme.inputBox.disabled.border};
-    border-radius: ${({ theme }) => theme.inputBox.disabled.borderRadius};
+    border-radius: ${({ theme }) => theme.inputBox.borderRadius};
 
     background: ${({ theme }) => theme.inputBox.background};
     box-shadow: ${({ theme }) => theme.inputBox.disabled.boxShadow};
-  }
-  &:placeholder {
-    display: flex;
-    align-items: center;
 
-    color: ${({ theme }) => theme.inputBox.placeholder.color};
+    color: ${({ theme }) => theme.colors.neutral[300]};
+
+    cursor: not-allowed;
   }
 `;
