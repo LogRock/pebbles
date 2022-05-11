@@ -303,7 +303,7 @@ const inputBox: InputBox = {
   padding: `10px ${spacings.sm}`,
   boxSizing: "border-box",
   boxShadow: shadows.xSmall,
-  borderRadius: "2px",
+  borderRadius: "8px",
   border: "1px solid #D1D5DB",
   margin: `${spacings.xsm} 0px`,
   background: "white",
@@ -315,7 +315,6 @@ const inputBox: InputBox = {
     border: `1px solid ${error[300]}`,
     boxShadow: shadows.xSmall,
     hintColor: neutral[500],
-    helperColor: error["600"],
     focused: {
       boxSizing: "border-box",
       boxShadow: `0px 0px 0px ${spacings.xxsm} ${error["100"]}`,
@@ -328,7 +327,6 @@ const inputBox: InputBox = {
     border: "1px solid #D1D5DB",
     boxShadow: shadows.xSmall,
     hintColor: neutral[500],
-    helperColor: neutral[500],
     focused: {
       boxSizing: "border-box",
       boxShadow: `0px 0px 0px 4px ${primary["100"]}`,
@@ -345,6 +343,7 @@ const inputBox: InputBox = {
     fontWeight: 500,
   },
   helper: {
+    color: neutral[500],
     fontStyle: "normal",
     fontSize: "14px",
     lineHeight: "20px",
@@ -354,7 +353,6 @@ const inputBox: InputBox = {
   disabled: {
     boxSizing: "border-box",
     boxShadow: shadows.xSmall,
-    borderRadius: "2px",
     border: `1px solid ${neutral["300"]}`,
   },
   hint: {

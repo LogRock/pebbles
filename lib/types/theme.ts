@@ -255,7 +255,6 @@ export interface InputBox {
     border: CSS.Property.Border;
     boxShadow: CSS.Property.BoxShadow;
     hintColor: CSS.Property.Color;
-    helperColor: CSS.Property.Color;
     focused: Focused;
   };
   info: {
@@ -263,13 +262,11 @@ export interface InputBox {
     border: CSS.Property.Border;
     boxShadow: CSS.Property.BoxShadow;
     hintColor: CSS.Property.Color;
-    helperColor: CSS.Property.Color;
     focused: Focused;
   };
   disabled: {
     boxSizing: CSS.Property.BoxSizing;
     boxShadow: CSS.Property.BoxShadow;
-    borderRadius: CSS.Property.BorderRadius;
     border: CSS.Property.Border;
   };
   label: {
@@ -280,6 +277,7 @@ export interface InputBox {
     lineHeight: CSS.Property.LineHeight;
   };
   helper: {
+    color: CSS.Property.Color;
     fontStyle: CSS.Property.FontStyle;
     fontSize: CSS.Property.FontSize;
     fontWeight: CSS.Property.FontWeight;
