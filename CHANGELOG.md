@@ -1,3 +1,13 @@
+# [6.4.0](https://github.com/LogRock/pebbles/compare/v6.3.0...v6.4.0) (2022-05-12)
+
+### Bug Fixes
+
+- **fixed errors on date and number input hints:** fixed errors on date and number input hints ([aadddcf](https://github.com/LogRock/pebbles/commit/aadddcfb6006332c596715f4528ef1fd9559e9ce))
+
+### Features
+
+- **new input design styles:** input with 8px border radius, disabled light gray color ([8926070](https://github.com/LogRock/pebbles/commit/8926070e906d2b463209875ec1c01b6d1a0d1d38))
+
 # [6.3.0](https://github.com/LogRock/pebbles/compare/v6.2.1...v6.3.0) (2022-05-05)
 
 ### Bug Fixes
