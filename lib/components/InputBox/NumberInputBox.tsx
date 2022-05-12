@@ -83,9 +83,11 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           <StyledStyledInput status={status} {...props} ref={inputRef} />
           {hint && (
             <HintDiv>
-              <Hint status={status}>{hint.content}</Hint>
+              <Hint disabled={props.disabled}>{hint.content}</Hint>
               {hint.icon && (
-                <HintIconWrapper status={status}>{hint.icon}</HintIconWrapper>
+                <HintIconWrapper disabled={props.disabled}>
+                  {hint.icon}
+                </HintIconWrapper>
               )}
             </HintDiv>
           )}
