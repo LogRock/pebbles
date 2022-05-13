@@ -32,6 +32,7 @@ export interface DateInputBoxProps
   helper?: React.ReactNode;
   spaced?: boolean;
   onChange?: any;
+  name?: string;
 }
 
 const DateInputBox: FC<DateInputBoxProps> = ({
@@ -52,8 +53,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
             // @ts-ignore
             // typescript issue here, the date picker onChange event has a different type than the HTML input's event
             <DatePicker
-              id="input-date"
-              data-testid="input-date"
               wrapperClassName="logrock-datepicker"
               showMonthDropdown
               showYearDropdown
