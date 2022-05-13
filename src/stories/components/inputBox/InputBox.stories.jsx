@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
 import {
   mdiAlert,
-  mdiCalendar,
   mdiCardAccountDetailsOutline,
   mdiEmailOutline,
 } from "@mdi/js";
@@ -70,21 +69,6 @@ DisabledInputBox.args = {
   placeholder: "this input is disabled, sorry",
   disabled: true,
   value: "Some value here",
-};
-
-export const DateInputBox = Template.bind({});
-DateInputBox.args = {
-  type: "date",
-  description: "Valid until:",
-  hint: {
-    content: "",
-    icon: <Icon size={0.7} path={mdiCalendar} />,
-  },
-  status: "info",
-  helper: "",
-  placeholder: "input date",
-  onChange: (evt) => alert(evt),
-  selected: new Date("05-20-2023 00:00:00"),
 };
 
 const InteractiveTemplate = (args) => {
