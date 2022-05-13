@@ -1,3 +1,11 @@
+## [6.4.1](https://github.com/LogRock/pebbles/compare/v6.4.0...v6.4.1) (2022-05-13)
+
+### Bug Fixes
+
+- remove hardcoded name and id ([638a73e](https://github.com/LogRock/pebbles/commit/638a73e436df3fcb900989036bd7779ff4b585a8))
+- test dynamic form using date picker ([5003547](https://github.com/LogRock/pebbles/commit/500354762552f4fd12f2cecd70561c6acae70f86))
+- turn on datepicker for input date ([ae59799](https://github.com/LogRock/pebbles/commit/ae597991de4fa5633a7230e89b310ca424af9ccf))
+
 # [6.4.0](https://github.com/LogRock/pebbles/compare/v6.3.0...v6.4.0) (2022-05-12)
 
 ### Bug Fixes
