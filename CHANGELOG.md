@@ -1,3 +1,9 @@
+# [6.5.0](https://github.com/LogRock/pebbles/compare/v6.4.1...v6.5.0) (2022-05-17)
+
+### Features
+
+- **numer input:** added 2 params, to have option to disable minus or plus buttons ([ec50fc5](https://github.com/LogRock/pebbles/commit/ec50fc5f79bcea3f2c951e2dbfd6394e11eee0ae))
+
 ## [6.4.1](https://github.com/LogRock/pebbles/compare/v6.4.0...v6.4.1) (2022-05-13)
 
 ### Bug Fixes
