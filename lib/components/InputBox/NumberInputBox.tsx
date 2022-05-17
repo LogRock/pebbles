@@ -44,6 +44,8 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
   description,
   hint,
   helper,
+  disableMinus,
+  disablePlus,
   ...props
 }) => {
   const [inputBoxValue, setinputBoxValue] = useState(Number(props.value) || 0);
@@ -76,7 +78,11 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
     <StyledDiv spaced={spaced}>
       <Label>{description}</Label>
       <NumberInputBoxWrapper>
-        <StyledButton onClick={onSubtract} buttonSize="xSmall">
+        <StyledButton
+          onClick={onSubtract}
+          buttonSize="xSmall"
+          disabled={disableMinus}
+        >
           <Icon path={mdiMinus} size={1.35} />
         </StyledButton>
         <InputWrapper>
@@ -92,7 +98,11 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
             </HintDiv>
           )}
         </InputWrapper>
-        <StyledButton onClick={onAdd} buttonSize="xSmall">
+        <StyledButton
+          onClick={onAdd}
+          buttonSize="xSmall"
+          disabled={disablePlus}
+        >
           <Icon path={mdiPlus} size={1.35} />
         </StyledButton>
       </NumberInputBoxWrapper>

@@ -28,3 +28,27 @@ WithAllInputProps.args = {
   },
   helper: "Some Helper",
 };
+
+export const DisabledMinus = Template.bind({});
+DisabledMinus.args = {
+  type: "number",
+  description: "DisabledMinus",
+  hint: {
+    content: "Some hint",
+    icon: "I",
+  },
+  helper: "Some Helper",
+  disableMinus: true,
+};
+
+export const DisabledPlus = Template.bind({});
+DisabledPlus.args = {
+  type: "number",
+  description: "DisabledPlus",
+  hint: {
+    content: "Some hint",
+    icon: "I",
+  },
+  helper: "Some Helper",
+  disablePlus: true,
+};
