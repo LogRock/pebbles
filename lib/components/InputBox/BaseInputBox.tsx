@@ -24,6 +24,8 @@ export interface BaseInputBoxProps
   status?: "info" | "error";
   helper?: React.ReactNode;
   spaced?: boolean;
+  disableMinus?: boolean;
+  disablePlus?: boolean;
 }
 
 const BaseInputBox: FC<BaseInputBoxProps> = ({
