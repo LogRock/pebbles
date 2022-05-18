@@ -1,3 +1,9 @@
+## [6.5.3](https://github.com/LogRock/pebbles/compare/v6.5.2...v6.5.3) (2022-05-18)
+
+### Bug Fixes
+
+- set accessibility of close alert ([5f90e3b](https://github.com/LogRock/pebbles/commit/5f90e3b9ebee111c9ed866957ef85fd9632a0ac7))
+
 ## [6.5.2](https://github.com/LogRock/pebbles/compare/v6.5.1...v6.5.2) (2022-05-18)
 
 ### Bug Fixes
