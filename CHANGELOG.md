@@ -1,3 +1,10 @@
+## [6.5.4](https://github.com/LogRock/pebbles/compare/v6.5.3...v6.5.4) (2022-05-18)
+
+### Bug Fixes
+
+- remove alert close event to be required ([b35a6ee](https://github.com/LogRock/pebbles/commit/b35a6eea38f718f0b513585cbe928ff20b42378d))
+- trigger only if it's not null ([9b93916](https://github.com/LogRock/pebbles/commit/9b93916a36724c1bc569f2898e4f0daacd589316))
+
 ## [6.5.3](https://github.com/LogRock/pebbles/compare/v6.5.2...v6.5.3) (2022-05-18)
 
 ### Bug Fixes
