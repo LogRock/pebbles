@@ -15,14 +15,11 @@ export interface AlertProps {
   onAuxButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   sticky?: boolean;
   icon?: React.ReactNode;
-}
-
-export interface AlertInlineProps extends AlertProps {
   onCloseRequested: (event: React.MouseEvent<HTMLDivElement>) => void;
   showCloseButton?: boolean;
 }
 
-const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
+const AlertWrapper = styled.div<Pick<AlertProps, "status" | "sticky">>`
   ${paragraphMediumCSS}
 
   display: flex;
@@ -42,7 +39,7 @@ const AlertWrapper = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
     theme.alert[status || "neutral"].descriptionColor};
 `;
 
-const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
+const IconPanel = styled.div<Pick<AlertProps, "status" | "sticky">>`
   display: flex;
   justify-content: center;
   margin: ${({ sticky }) => (sticky ? "4px 0px" : "0px")};
@@ -53,7 +50,7 @@ const IconPanel = styled.div<Pick<AlertInlineProps, "status" | "sticky">>`
   }
 `;
 
-const MainPanel = styled.div<Pick<AlertInlineProps, "sticky">>`
+const MainPanel = styled.div<Pick<AlertProps, "sticky">>`
   display: flex;
   flex-direction: ${({ sticky }) => (sticky ? "row" : "column")};
   justify-content: space-between;
@@ -67,7 +64,7 @@ const Actions = styled.div`
   align-items: center;
 `;
 
-const Title = styled.span<Pick<AlertInlineProps, "status">>`
+const Title = styled.span<Pick<AlertProps, "status">>`
   ${paragraphMediumCSS}
 
   height: ${({ theme }) => theme.alert.title.height};
@@ -77,13 +74,13 @@ const Title = styled.span<Pick<AlertInlineProps, "status">>`
   line-height: ${({ theme }) => theme.alert.title.lineWeight};
 `;
 
-const Description = styled.span<Pick<AlertInlineProps, "status" | "sticky">>`
+const Description = styled.span<Pick<AlertProps, "status" | "sticky">>`
   ${paragraphMediumCSS}
 
   margin: ${({ sticky }) => (sticky ? "4px 0px" : "8px 0px")};
 `;
 
-const StyledButton = styled(Button)<Pick<AlertInlineProps, "sticky">>`
+const StyledButton = styled(Button)<Pick<AlertProps, "sticky">>`
   margin: ${({ sticky }) => (sticky ? "0px 4px" : undefined)};
 `;
 
@@ -110,7 +107,7 @@ const mainButtonStyle = {
   },
 };
 
-const AlertInline: FC<AlertInlineProps> = ({
+const AlertInline: FC<AlertProps> = ({
   status,
   sticky,
   title,
@@ -215,12 +212,22 @@ const Alert: FC<AlertProps> = ({
       setStatusState("error");
     }
   };
+
+  const handleOnCloseRequested = (event: React.MouseEvent<HTMLDivElement>) => {
+    try {
+      if (props.onCloseRequested) props.onCloseRequested(event);
+      setIsAlertVisible(false);
+    } catch (e) {
+      setStatusState("error");
+    }
+  };
+
   if (isAlertVisible) {
     return (
       <AlertInline
         {...props}
         status={statusState}
-        onCloseRequested={() => setIsAlertVisible(false)}
+        onCloseRequested={handleOnCloseRequested}
         onMainButtonClick={onButtonClickHandler}
         onAuxButtonClick={onHintClickHandler}
       />

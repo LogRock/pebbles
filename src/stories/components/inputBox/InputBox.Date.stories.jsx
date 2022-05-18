@@ -48,6 +48,7 @@ const CustomDatePicker = function (props: any) {
     <InputBox
       type="date"
       data-testid={props.id}
+      name={props.id}
       description={props.schema.title}
       onChange={(date) => {
         setMyDate(date);
@@ -60,9 +61,7 @@ const CustomDatePicker = function (props: any) {
         );
       }}
       selected={myDate}
-      helper={
-        props?.rawErrors?.length ? props.rawErrors.join("; ") : undefined
-      }
+      helper={props?.rawErrors?.length ? props.rawErrors.join("; ") : undefined}
       status={props?.rawErrors?.length ? "error" : "info"}
       disabled={props?.disabled || false}
     />
