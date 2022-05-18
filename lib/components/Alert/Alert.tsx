@@ -13,9 +13,9 @@ export interface AlertProps {
   auxButtonContent?: React.ReactNode;
   onMainButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onAuxButtonClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onCloseRequested?: (event: React.MouseEvent<HTMLDivElement>) => void;
   sticky?: boolean;
   icon?: React.ReactNode;
-  onCloseRequested: (event: React.MouseEvent<HTMLDivElement>) => void;
   showCloseButton?: boolean;
 }
 
