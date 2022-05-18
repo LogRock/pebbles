@@ -105,8 +105,9 @@ const InteractiveTemplate = (args) => {
     <div>
       <Alert
         {...args}
-        onButtonClick={() => setEventTriggered("mainButton got triggered")}
-        onHintClick={() => setEventTriggered("auxButton got triggered")}
+        onMainButtonClick={() => setEventTriggered("mainButton got triggered")}
+        onAuxButtonClick={() => setEventTriggered("auxButton got triggered")}
+        onCloseRequested={() => setEventTriggered("close button got triggered")}
       />
       <span>{eventTriggered}</span>
     </div>
