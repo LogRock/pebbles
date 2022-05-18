@@ -170,7 +170,7 @@ const AlertInline: FC<AlertProps> = ({
       {showCloseButton && (
         <IconPanel
           onClick={(event) => {
-            onCloseRequested(event);
+            if (onCloseRequested) onCloseRequested(event);
           }}
           status={status}
           sticky={sticky || false}
