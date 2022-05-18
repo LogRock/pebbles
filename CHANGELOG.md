@@ -1,3 +1,9 @@
+## [6.5.1](https://github.com/LogRock/pebbles/compare/v6.5.0...v6.5.1) (2022-05-18)
+
+### Bug Fixes
+
+- **number input:** changes how input values are updated, when plusminus btns are clicked ([c463bec](https://github.com/LogRock/pebbles/commit/c463bec0f6a720f173501565eaea2c66dba182a3))
+
 # [6.5.0](https://github.com/LogRock/pebbles/compare/v6.4.1...v6.5.0) (2022-05-17)
 
 ### Features
