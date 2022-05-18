@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { mdiAlert, mdiMinus, mdiPlus } from "@mdi/js";
 import { BaseInputBoxProps } from "./BaseInputBox";
@@ -48,38 +48,41 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
   disablePlus,
   ...props
 }) => {
-  const [inputBoxValue, setinputBoxValue] = useState(Number(props.value) || 0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const onAdd = () => {
-    setinputBoxValue((oldValue) => {
-      return oldValue + 1;
-    });
-  };
-
-  const onSubtract = () => {
-    setinputBoxValue((oldValue) => {
-      return oldValue > 0 ? oldValue - 1 : oldValue;
-    });
-  };
-
-  useEffect(() => {
+  const updatedInputValue = (inputValue: number) => {
     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
       window?.HTMLInputElement?.prototype,
       "value"
     )?.set;
-    nativeInputValueSetter?.call?.(inputRef.current, `${inputBoxValue}`);
+
+    let updatedValue = inputRef?.current?.value
+      ? +inputRef?.current?.value + inputValue
+      : inputValue;
+
+    if (props.min && updatedValue < props.min) {
+      updatedValue = +props.min;
+    }
+    if (props.max && updatedValue > props.max) {
+      updatedValue = +props.max;
+    }
+
+    nativeInputValueSetter?.call?.(inputRef.current, updatedValue);
 
     const ev2 = new Event("input", { bubbles: true });
     inputRef?.current?.dispatchEvent(ev2);
-  }, [inputBoxValue]);
+  };
+
+  useEffect(() => {
+    updatedInputValue(props.min ? +props.min : 0);
+  }, []);
 
   return (
     <StyledDiv spaced={spaced}>
       <Label>{description}</Label>
       <NumberInputBoxWrapper>
         <StyledButton
-          onClick={onSubtract}
+          onClick={() => updatedInputValue(-1)}
           buttonSize="xSmall"
           disabled={disableMinus}
         >
@@ -99,7 +102,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           )}
         </InputWrapper>
         <StyledButton
-          onClick={onAdd}
+          onClick={() => updatedInputValue(1)}
           buttonSize="xSmall"
           disabled={disablePlus}
         >
