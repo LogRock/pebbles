@@ -1,3 +1,9 @@
+## [6.5.2](https://github.com/LogRock/pebbles/compare/v6.5.1...v6.5.2) (2022-05-18)
+
+### Bug Fixes
+
+- remove alert close event that was overriden, ignoring any event user set ([73d68ee](https://github.com/LogRock/pebbles/commit/73d68ee6ba062e3b57cd4e85dc0c23d39febc709))
+
 ## [6.5.1](https://github.com/LogRock/pebbles/compare/v6.5.0...v6.5.1) (2022-05-18)
 
 ### Bug Fixes
