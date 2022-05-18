@@ -175,7 +175,7 @@ const AlertInline: FC<AlertProps> = ({
           status={status}
           sticky={sticky || false}
         >
-          <Icon path={mdiClose} size={0.7} />
+          <Icon path={mdiClose} size={0.7} aria-label="close modal" />
         </IconPanel>
       )}
     </AlertWrapper>
