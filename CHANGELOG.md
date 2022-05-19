@@ -1,3 +1,9 @@
+# [6.6.0](https://github.com/LogRock/pebbles/compare/v6.5.5...v6.6.0) (2022-05-19)
+
+### Features
+
+- **input-box:** :wheelchair: add label to input linking via ID ([c6cb8d3](https://github.com/LogRock/pebbles/commit/c6cb8d3647c7fd123651664f71e5e954eb103d19))
+
 ## [6.5.5](https://github.com/LogRock/pebbles/compare/v6.5.4...v6.5.5) (2022-05-19)
 
 ### Bug Fixes
