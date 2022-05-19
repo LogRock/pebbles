@@ -9,7 +9,7 @@ export const StyledDiv = styled.div<{ spaced?: boolean }>`
   margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
 `;
 
-export const Label = styled.span`
+export const Label = styled.label`
   color: ${({ theme }) => theme.inputBox.label.color};
   font-family: ${({ theme }) => theme.inputBox.fontFamily};
   font-size: ${({ theme }) => theme.inputBox.label.fontSize};

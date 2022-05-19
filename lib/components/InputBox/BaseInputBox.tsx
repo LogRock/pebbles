@@ -1,6 +1,6 @@
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import {
   StyledDiv,
   Label,
@@ -13,6 +13,7 @@ import {
   HintIconWrapper,
   HelperIcon,
 } from "./BaseInputBox.styled";
+import uniqueid from "lodash.uniqueid";
 
 export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -36,11 +37,13 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   helper,
   ...inputProps
 }) => {
+  const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
+
   return (
     <StyledDiv spaced={spaced}>
-      <Label>{description}</Label>
+      <Label htmlFor={inputID}>{description}</Label>
       <InputDiv>
-        <StyledInput status={status} {...inputProps} />
+        <StyledInput status={status} {...inputProps} id={inputID} />
         {hint && (
           <HintDiv>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
