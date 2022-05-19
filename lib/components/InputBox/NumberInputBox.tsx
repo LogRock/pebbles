@@ -82,6 +82,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
       <Label>{description}</Label>
       <NumberInputBoxWrapper>
         <StyledButton
+          aria-label="decrease"
           onClick={() => updatedInputValue(-1)}
           buttonSize="xSmall"
           disabled={disableMinus}
@@ -102,6 +103,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           )}
         </InputWrapper>
         <StyledButton
+          aria-label="increase"
           onClick={() => updatedInputValue(1)}
           buttonSize="xSmall"
           disabled={disablePlus}
