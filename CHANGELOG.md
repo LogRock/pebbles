@@ -1,3 +1,9 @@
+## [6.5.5](https://github.com/LogRock/pebbles/compare/v6.5.4...v6.5.5) (2022-05-19)
+
+### Bug Fixes
+
+- **number input:** changed number input buttons aria labels ([70cae49](https://github.com/LogRock/pebbles/commit/70cae4904c5a5735c43d75ba941a27e181ba2608))
+
 ## [6.5.4](https://github.com/LogRock/pebbles/compare/v6.5.3...v6.5.4) (2022-05-18)
 
 ### Bug Fixes
