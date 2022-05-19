@@ -2417,6 +2417,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.15.1
     "@testing-library/react": ^12.1.2
     "@testing-library/user-event": ^13.5.0
+    "@types/lodash.uniqueid": ^4.0.7
     "@types/node": ^16.11.10
     "@types/react": ^17.0.0
     "@types/react-datepicker": ^4.4.1
@@ -4881,6 +4882,22 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: e60b153664572116dfea673c5bda7778dbff150498f44f998e34b5886d8afc47f16799280e4b6e241c0472aef1bc36add771c569c68fc5125fc2ae519a3eb9ac
+  languageName: node
+  linkType: hard
+
+"@types/lodash.uniqueid@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "@types/lodash.uniqueid@npm:4.0.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 30e537775e312f1bd559608f03d952bae1b7b46211e47e05e176d99bd1d08a1059f2c91f43ddf9fcf2ad56c2fb30c0b8052a8a68bb5b9df924e4b058191dfeeb
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.182
+  resolution: "@types/lodash@npm:4.14.182"
+  checksum: 7dd137aa9dbabd632408bd37009d984655164fa1ecc3f2b6eb94afe35bf0a5852cbab6183148d883e9c73a958b7fec9a9bcf7c8e45d41195add6a18c34958209
   languageName: node
   linkType: hard
 
