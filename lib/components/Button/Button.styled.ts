@@ -64,11 +64,14 @@ const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
       .borderWidth};
     border-color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .borderColor};
+
     background: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .background};
 
     color: ${theme.buttons.regular.disabled[buttonStyle || "primary"]
       .contentColor};
+
+    cursor: not-allowed;
   `}
 `;
 
@@ -91,6 +94,12 @@ const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
     text-decoration-line: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].textDecorationLine || "none"};
+
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.05);
+    }
   `}
 `;
 
