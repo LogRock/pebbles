@@ -1,3 +1,9 @@
+# [6.7.0](https://github.com/LogRock/pebbles/compare/v6.6.0...v6.7.0) (2022-05-20)
+
+### Features
+
+- **button styles:** updated button colors, added hover effect, cursor hover icon ([941bbba](https://github.com/LogRock/pebbles/commit/941bbba439f58ef5b186d7dd8d40a80e3fbde094))
+
 # [6.6.0](https://github.com/LogRock/pebbles/compare/v6.5.5...v6.6.0) (2022-05-19)
 
 ### Features
