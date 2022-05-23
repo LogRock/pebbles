@@ -1,3 +1,10 @@
+## [6.7.1](https://github.com/LogRock/pebbles/compare/v6.7.0...v6.7.1) (2022-05-23)
+
+### Bug Fixes
+
+- **input label:** new styles for the input label ([b3b1b8e](https://github.com/LogRock/pebbles/commit/b3b1b8ec283500b5bd4409cbab0fb4325b8c3b6d))
+- stepper indicator, both current and finished allowed now ([6c4970d](https://github.com/LogRock/pebbles/commit/6c4970d8cebe5850ddc6f7b3873bb11d0a6fbf99))
+
 # [6.7.0](https://github.com/LogRock/pebbles/compare/v6.6.0...v6.7.0) (2022-05-20)
 
 ### Features
