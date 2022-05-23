@@ -17,6 +17,8 @@ export const Label = styled.label`
   font-weight: ${({ theme }) => theme.inputBox.fontWeight};
   line-height: ${({ theme }) => theme.inputBox.label.lineHeight};
   font-feature-settings: ${({ theme }) => theme.inputBox.fontFeatureSettings};
+
+  text-transform: uppercase;
 `;
 
 export const HelperDiv = styled.div`
