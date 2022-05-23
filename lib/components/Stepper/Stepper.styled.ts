@@ -59,8 +59,7 @@ export const StepCheckMark = styled.div<{
   isCurStep: Boolean;
   isFinished: Boolean;
 }>`
-  display: ${(props: any) =>
-    props.isFinished && !props.isCurStep ? "block" : "none"};
+  display: ${(props: any) => (props.isFinished ? "block" : "none")};
   position: relative;
 
   transform: translate(0, 0) rotate(45deg);
