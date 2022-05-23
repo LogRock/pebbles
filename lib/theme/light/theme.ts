@@ -336,11 +336,11 @@ const inputBox: InputBox = {
   },
 
   label: {
-    color: "black",
+    color: neutral[500],
     fontStyle: "normal",
-    fontSize: "16px",
-    lineHeight: "24px",
-    fontWeight: 500,
+    fontSize: "11px",
+    lineHeight: "20px",
+    fontWeight: 600,
   },
   helper: {
     color: neutral[500],
