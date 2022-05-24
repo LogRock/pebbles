@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import typescript from "@rollup/plugin-typescript";
@@ -9,6 +12,15 @@ const resolvePath = (str: string) => path.resolve(__dirname, str);
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // @ts-ignore
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./lib/test/setup.ts",
+    coverage: {
+      reporter: ["text", "lcov"],
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "lib/main.ts"),

@@ -26,6 +26,15 @@ jobs:
       - name: Prettier
         run: yarn prettier .
 
+      - name: Test
+        run: yarn coverage
+
+      - name: Report Coverage
+        uses: coverallsapp/github-action@1.1.3
+        with:
+          path-to-lcov: ./coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build Lib
         run: yarn build
 
