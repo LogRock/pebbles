@@ -23,7 +23,10 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -51,9 +54,10 @@
     "@storybook/testing-library": "^0.0.9",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@testing-library/dom": "^8.11.1",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@testing-library/user-event": "^14.2.0",
     "@types/lodash.uniqueid": "^4.0.7",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.0",
@@ -62,6 +66,7 @@
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-react": "^1.0.0",
+    "@vitest/ui": "latest",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.0",
@@ -76,10 +81,10 @@
     "eslint-plugin-storybook": "^0.5.7",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.3.1",
     "jest-circus": "^27.3.1",
     "jest-scss-transform": "^1.0.1",
     "jest-watch-typeahead": "^1.0.0",
+    "jsdom": "latest",
     "lint-staged": "12.3.4",
     "pinst": "^3.0.0",
     "postcss-syntax": "^0.36.2",
@@ -98,7 +103,8 @@
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-order": "^5.0.0",
     "typescript": "^4.3.2",
-    "vite": "^2.6.4"
+    "vite": "^2.6.4",
+    "vitest": "latest"
   },
   "packageManager": "yarn@3.2.0",
   "peerDependencies": {
@@ -109,54 +115,10 @@
     "styled-breakpoints": "*",
     "styled-components": "*"
   },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest/mocks/jest.setup.js"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "transform": {
-      "^.+\\.[jt]sx?$": "<rootDir>/jest/jest-preprocess.js",
-      "^.+\\.scss$": "jest-scss-transform",
-      "^.+\\.css$": "<rootDir>/jest/mocks/cssMock.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "resetMocks": true
-  },
-  "babel": {
-    "env": {
-      "test": {
-        "presets": [
-          "react-app"
-        ]
-      }
-    }
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
-    "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
-    "src/**/*.{js,jsx,ts,tsx}": "yarn jest --bail --findRelatedTests"
+    "*.{css,md,js,jsx,ts,tsx}": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -171,5 +133,8 @@
     "@types/react-datepicker": "^4.4.1",
     "lodash.uniqueid": "^4.0.1",
     "react-datepicker": "^4.7.0"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test:ui"
   }
 }
