@@ -1,5 +1,7 @@
 # @LogRock/Pebbles
 
+[![Coverage Status](https://coveralls.io/repos/github/LogRock/pebbles/badge.svg?branch=main)](https://coveralls.io/github/LogRock/pebbles?branch=main)
+
 Welcome to our Component Library! This is an implementation of our Asphalt Design System.
 
 Here are some useful links:
