@@ -119,7 +119,7 @@
     "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
     "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
-    "src/**/*.{js,jsx,ts,tsx}": "vitest related"
+    "lib/**/*.{js,jsx,ts,tsx}": "vitest related"
   },
   "repository": {
     "type": "git",
