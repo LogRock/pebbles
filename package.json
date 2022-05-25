@@ -118,8 +118,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
-    "*.{css,md,js,jsx,ts,tsx}": "prettier --write",
-    "lib/**/*.{js,jsx,ts,tsx}": "vitest related"
+    "*.{css,md,js,jsx,ts,tsx}": "prettier --write"
   },
   "repository": {
     "type": "git",
