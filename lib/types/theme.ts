@@ -430,6 +430,43 @@ export interface Toggle {
   checked: CheckBoc;
 }
 
+export interface StatusNumber {
+  backgroundColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  borderColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  iconColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  labelColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  containerSize: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+  };
+  labelSize: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -451,4 +488,5 @@ export default interface Theme {
   progressBar: ProgressBar;
   list: List;
   toggle: Toggle;
+  statusNumber: StatusNumber;
 }

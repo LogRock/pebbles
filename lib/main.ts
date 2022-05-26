@@ -71,3 +71,7 @@ export type { ToggleProps } from "./components/Toggle";
 // expose Stepper component
 export { default as Stepper } from "./components/Stepper";
 export type { StepperProps } from "./components/Stepper";
+
+// expose StatusNumber
+export { default as StatusNumber } from "./components/StatusNumber";
+export type { StatusNumberProps } from "./components/StatusNumber";
