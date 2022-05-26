@@ -604,9 +604,9 @@ const statusTag: StatusTag = {
     large: "44px",
   },
   labelSize: {
-    small: "12px",
-    medium: "14px",
-    large: "16px",
+    small: "11px",
+    medium: "12px",
+    large: "14px",
   },
 };
 

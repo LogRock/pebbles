@@ -1,13 +1,5 @@
 import React, { FC } from "react";
 
-import Icon from "@mdi/react";
-import {
-  mdiAlert,
-  mdiAlertCircle,
-  mdiMinusCircle,
-  mdiCheckCircle,
-} from "@mdi/js";
-
 import { StatusTagProps } from "./StatusTag.types";
 import {
   IconWrapper,
@@ -19,40 +11,15 @@ const StatusTag: FC<StatusTagProps> = ({
   label,
   size = "medium",
   variant = "neutral",
+  icon,
 }) => {
-  const getIcon = () => {
-    switch (variant) {
-      case "error":
-        return mdiAlert;
-      case "warning":
-        return mdiAlertCircle;
-      case "success":
-        return mdiCheckCircle;
-      case "neutral":
-        return mdiMinusCircle;
-      default:
-        return mdiMinusCircle;
-    }
-  };
-
-  const getIconSize = () => {
-    switch (size) {
-      case "small":
-        return 0.6;
-      case "medium":
-        return 0.75;
-      case "large":
-        return 0.85;
-      default:
-        return 0.75;
-    }
-  };
-
   return (
     <StatusTagWrapper variant={variant} size={size}>
-      <IconWrapper variant={variant} label={label}>
-        <Icon path={getIcon()} size={getIconSize()} />
-      </IconWrapper>
+      {icon && (
+        <IconWrapper variant={variant} label={label}>
+          {icon}
+        </IconWrapper>
+      )}
       <StyledOverlineLarge variant={variant} size={size}>
         {label}
       </StyledOverlineLarge>
