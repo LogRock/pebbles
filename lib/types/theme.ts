@@ -455,16 +455,6 @@ export interface StatusNumber {
     success: CSS.Property.Color;
     neutral: CSS.Property.Color;
   };
-  containerSize: {
-    small: CSS.Property.Width;
-    medium: CSS.Property.Width;
-    large: CSS.Property.Width;
-  };
-  labelSize: {
-    small: CSS.Property.Width;
-    medium: CSS.Property.Width;
-    large: CSS.Property.Width;
-  };
 }
 
 export default interface Theme {
