@@ -9,6 +9,7 @@ import Theme, {
   ProgressBar,
   List,
   Toggle,
+  StatusNumber,
 } from "../../types/theme";
 import {
   neutral,
@@ -544,6 +545,43 @@ const toggle: Toggle = {
   },
 };
 
+const statusNumber: StatusNumber = {
+  backgroundColor: {
+    error: error["50"],
+    warning: warning["50"],
+    success: success["50"],
+    neutral: neutral["50"],
+  },
+  borderColor: {
+    error: error["200"],
+    warning: warning["200"],
+    success: success["200"],
+    neutral: neutral["200"],
+  },
+  iconColor: {
+    error: error["600"],
+    warning: warning["600"],
+    success: success["600"],
+    neutral: neutral["600"],
+  },
+  labelColor: {
+    error: error["600"],
+    warning: warning["600"],
+    success: success["600"],
+    neutral: neutral["600"],
+  },
+  containerSize: {
+    small: "28px",
+    medium: "36px",
+    large: "44px",
+  },
+  labelSize: {
+    small: "16px",
+    medium: "18px",
+    large: "20px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -606,6 +644,7 @@ const theme: Theme = {
   progressBar,
   list,
   toggle,
+  statusNumber,
 };
 
 export default theme;
