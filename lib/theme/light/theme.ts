@@ -570,16 +570,6 @@ const statusNumber: StatusNumber = {
     success: success["600"],
     neutral: neutral["600"],
   },
-  containerSize: {
-    small: "28px",
-    medium: "36px",
-    large: "44px",
-  },
-  labelSize: {
-    small: "16px",
-    medium: "18px",
-    large: "20px",
-  },
 };
 
 const theme: Theme = {
