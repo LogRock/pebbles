@@ -15,7 +15,11 @@ import {
   StyledOverlineLarge,
 } from "./StatusTag.styled";
 
-const StatusTag: FC<StatusTagProps> = ({ label, size, variant }) => {
+const StatusTag: FC<StatusTagProps> = ({
+  label,
+  size = "medium",
+  variant = "neutral",
+}) => {
   const getIcon = () => {
     switch (variant) {
       case "error":
@@ -46,7 +50,7 @@ const StatusTag: FC<StatusTagProps> = ({ label, size, variant }) => {
 
   return (
     <StatusTagWrapper variant={variant} size={size}>
-      <IconWrapper variant={variant}>
+      <IconWrapper variant={variant} label={label}>
         <Icon path={getIcon()} size={getIconSize()} />
       </IconWrapper>
       <StyledOverlineLarge variant={variant} size={size}>

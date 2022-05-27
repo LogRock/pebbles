@@ -10,30 +10,29 @@ export const StatusTagWrapper = styled.div<
   align-items: center;
   justify-content: center;
   width: max-content;
-  height: ${({ theme, size }) => theme.statusTag.tagSize[size || "medium"]};
-  padding: 0 16px;
+  height: ${({ theme, size }) => theme.statusTag.tagSize[size]};
+  padding: 0 ${({ theme }) => theme.spacings.md};
 
   border: 1px solid
-    ${({ theme, variant }) => theme.statusTag.borderColor[variant || "neutral"]};
+    ${({ theme, variant }) => theme.statusTag.borderColor[variant]};
   border-radius: 64px;
 
   background-color: ${({ theme, variant }) =>
-    theme.statusTag.backgroundColor[variant || "neutral"]};
+    theme.statusTag.backgroundColor[variant]};
 `;
 
-export const IconWrapper = styled.div<Pick<StatusTagProps, "variant">>`
-  margin-right: 14px;
-  margin-bottom: -3px;
+export const IconWrapper = styled.div<
+  Pick<StatusTagProps, "variant" | "label">
+>`
+  margin-right: ${({ theme, label }) => (label ? theme.spacings.sm : 0)};
+  margin-bottom: -2px;
 
-  color: ${({ theme, variant }) =>
-    theme.statusTag.iconColor[variant || "neutral"]};
+  color: ${({ theme, variant }) => theme.statusTag.iconColor[variant]};
 `;
 
 export const StyledOverlineLarge = styled(OverlineLarge)<
   Pick<StatusTagProps, "variant" | "size">
 >`
-  color: ${({ theme, variant }) =>
-    theme.statusTag.labelColor[variant || "neutral"]};
-  font-size: ${({ theme, size }) =>
-    theme.statusTag.labelSize[size || "medium"]};
+  color: ${({ theme, variant }) => theme.statusTag.labelColor[variant]};
+  font-size: ${({ theme, size }) => theme.statusTag.labelSize[size]};
 `;
