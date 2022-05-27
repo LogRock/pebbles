@@ -8,20 +8,20 @@ import {
 } from "./StatusTag.styled";
 
 const StatusTag: FC<StatusTagProps> = ({
-  label,
   size = "medium",
   variant = "neutral",
   icon,
+  children,
 }) => {
   return (
     <StatusTagWrapper variant={variant} size={size}>
       {icon && (
-        <IconWrapper variant={variant} label={label}>
+        <IconWrapper variant={variant} hasLabel={Boolean(children)}>
           {icon}
         </IconWrapper>
       )}
       <StyledOverlineLarge variant={variant} size={size}>
-        {label}
+        {children}
       </StyledOverlineLarge>
     </StatusTagWrapper>
   );
