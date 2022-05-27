@@ -45,6 +45,24 @@ export const StatusTrendSymbol: FC<StatusTrendProps> = ({
           />
         </svg>
       )}
+      {direction === "neutral" && (
+        <svg
+          width="30"
+          height="4"
+          viewBox="0 0 30 4"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ marginTop: "5px" }}
+        >
+          <path
+            d="M28 2H2"
+            stroke={theme.statusTrend.iconColor[variant]}
+            strokeWidth="2.67"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
     </>
   );
 };
