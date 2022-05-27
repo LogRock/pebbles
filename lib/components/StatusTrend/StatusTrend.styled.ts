@@ -10,12 +10,12 @@ export const StatusTrendWrapper = styled.div<Pick<StatusTrendProps, "variant">>`
   width: max-content;
 `;
 
-export const LabelWrapper = styled.div`
+export const LabelWrapper = styled.div<{ hasSecondaryLabel: Boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: -7px;
+  margin-top: ${(props: any) => (props.hasSecondaryLabel ? "-7px" : "-4px")};
   margin-left: ${({ theme }) => theme.spacings.sm};
 `;
 
