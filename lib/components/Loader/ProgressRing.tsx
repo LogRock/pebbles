@@ -68,7 +68,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
       {showBaseRing && (
         <svg height={radius * 2} width={radius * 2}>
           <circle
-            stroke={theme.colors.neutral[200]}
+            stroke={theme.colors.primary[50]}
             fill="transparent"
             strokeWidth={stroke}
             style={{ strokeDashoffset }}
