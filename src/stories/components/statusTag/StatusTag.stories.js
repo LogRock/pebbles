@@ -35,3 +35,10 @@ Neutral.args = {
   size: "medium",
   variant: "neutral",
 };
+
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  label: null,
+  size: "medium",
+  variant: "neutral",
+};
