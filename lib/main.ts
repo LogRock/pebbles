@@ -75,3 +75,7 @@ export type { StepperProps } from "./components/Stepper";
 // expose StatusNumber
 export { default as StatusNumber } from "./components/StatusNumber";
 export type { StatusNumberProps } from "./components/StatusNumber";
+
+// expose StatusTag
+export { default as StatusTag } from "./components/StatusTag";
+export type { StatusTagProps } from "./components/StatusTag";
