@@ -457,6 +457,43 @@ export interface StatusNumber {
   };
 }
 
+export interface StatusTag {
+  backgroundColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  borderColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  iconColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  labelColor: {
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  tagSize: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+  };
+  labelSize: {
+    small: CSS.Property.Width;
+    medium: CSS.Property.Width;
+    large: CSS.Property.Width;
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -479,4 +516,5 @@ export default interface Theme {
   list: List;
   toggle: Toggle;
   statusNumber: StatusNumber;
+  statusTag: StatusTag;
 }

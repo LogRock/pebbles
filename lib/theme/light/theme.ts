@@ -10,6 +10,7 @@ import Theme, {
   List,
   Toggle,
   StatusNumber,
+  StatusTag,
 } from "../../types/theme";
 import {
   neutral,
@@ -572,6 +573,43 @@ const statusNumber: StatusNumber = {
   },
 };
 
+const statusTag: StatusTag = {
+  backgroundColor: {
+    error: error["50"],
+    warning: warning["50"],
+    success: success["50"],
+    neutral: neutral["50"],
+  },
+  borderColor: {
+    error: error["200"],
+    warning: warning["200"],
+    success: success["200"],
+    neutral: neutral["200"],
+  },
+  iconColor: {
+    error: error["600"],
+    warning: warning["600"],
+    success: success["600"],
+    neutral: neutral["600"],
+  },
+  labelColor: {
+    error: error["600"],
+    warning: warning["600"],
+    success: success["600"],
+    neutral: neutral["600"],
+  },
+  tagSize: {
+    small: "28px",
+    medium: "36px",
+    large: "44px",
+  },
+  labelSize: {
+    small: "12px",
+    medium: "14px",
+    large: "16px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -635,6 +673,7 @@ const theme: Theme = {
   list,
   toggle,
   statusNumber,
+  statusTag,
 };
 
 export default theme;
