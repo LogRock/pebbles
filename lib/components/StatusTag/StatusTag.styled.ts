@@ -21,10 +21,8 @@ export const StatusTagWrapper = styled.div<
     theme.statusTag.backgroundColor[variant]};
 `;
 
-export const IconWrapper = styled.div<
-  Pick<StatusTagProps, "variant" | "label">
->`
-  margin-right: ${({ theme, label }) => (label ? theme.spacings.sm : 0)};
+export const IconWrapper = styled.div<Pick<any, "variant" | "hasLabel">>`
+  margin-right: ${({ theme, hasLabel }) => (hasLabel ? theme.spacings.sm : 0)};
   margin-bottom: -2px;
 
   color: ${({ theme, variant }) => theme.statusTag.iconColor[variant]};
