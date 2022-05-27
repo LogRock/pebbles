@@ -48,3 +48,10 @@ Neutral.args = {
   direction: "neutral",
   variant: "neutral",
 };
+
+export const NoSecondaryLabel = Template.bind({});
+NoSecondaryLabel.args = {
+  labelPrimary: "-42.2%",
+  direction: "up",
+  variant: "negative",
+};
