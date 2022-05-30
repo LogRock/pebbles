@@ -573,6 +573,14 @@ const statusTrend: StatusTrend = {
     negative: error["600"],
     neutral: neutral["600"],
   },
+  primaryLabel: {
+    fontSize: "16px",
+    fontWeight: 500,
+  },
+  secondaryLabel: {
+    fontSize: "12px",
+    fontWeight: 400,
+  },
 };
 
 const statusTag: StatusTag = {

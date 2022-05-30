@@ -23,15 +23,15 @@ export const StyledPrimaryLabel = styled(ParagraphLarge)<
   Pick<StatusTrendProps, "variant">
 >`
   color: ${({ theme, variant }) => theme.statusTrend.labelColor[variant]};
-  font-size: 16px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.statusTrend.primaryLabel.fontSize};
+  font-weight: ${({ theme }) => theme.statusTrend.primaryLabel.fontWeight};
 `;
 
 export const StyledSecondaryLabel = styled(ParagraphLarge)`
   margin-top: -2px;
 
   color: ${({ theme }) => theme.colors.neutral[700]};
-  font-size: 12px;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.statusTrend.secondaryLabel.fontSize};
+  font-weight: ${({ theme }) => theme.statusTrend.secondaryLabel.fontWeight};
   text-transform: uppercase;
 `;
