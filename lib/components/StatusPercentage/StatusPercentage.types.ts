@@ -1,4 +1,4 @@
 export interface StatusPercentageProps {
   percentage: number;
-  size?: "small" | "medium" | "large";
+  size: "small" | "medium" | "large";
 }

@@ -494,6 +494,16 @@ export interface StatusTag {
   };
 }
 
+export interface StatusPercentage {
+  fontFamily: CSS.Property.FontFamily;
+  fontWeight: CSS.Property.FontWeight;
+  fontSize: {
+    small: CSS.Property.FontSize;
+    medium: CSS.Property.FontSize;
+    large: CSS.Property.FontSize;
+  };
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -517,4 +527,5 @@ export default interface Theme {
   toggle: Toggle;
   statusNumber: StatusNumber;
   statusTag: StatusTag;
+  statusPercentage: StatusPercentage;
 }
