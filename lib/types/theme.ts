@@ -431,18 +431,6 @@ export interface Toggle {
 }
 
 export interface StatusNumber {
-  backgroundColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
-  borderColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
   iconColor: {
     error: CSS.Property.Color;
     warning: CSS.Property.Color;
@@ -453,6 +441,19 @@ export interface StatusNumber {
     error: CSS.Property.Color;
     warning: CSS.Property.Color;
     success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+}
+
+export interface StatusTrend {
+  iconColor: {
+    positive: CSS.Property.Color;
+    negative: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  labelColor: {
+    positive: CSS.Property.Color;
+    negative: CSS.Property.Color;
     neutral: CSS.Property.Color;
   };
 }
@@ -528,4 +529,5 @@ export default interface Theme {
   statusNumber: StatusNumber;
   statusTag: StatusTag;
   statusPercentage: StatusPercentage;
+  statusTrend: StatusTrend;
 }

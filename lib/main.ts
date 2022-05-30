@@ -79,3 +79,7 @@ export type { StatusNumberProps } from "./components/StatusNumber";
 // expose StatusTag
 export { default as StatusTag } from "./components/StatusTag";
 export type { StatusTagProps } from "./components/StatusTag";
+
+// expose StatusTrend
+export { default as StatusTrend } from "./components/StatusTrend";
+export type { StatusTrendProps } from "./components/StatusTrend";
