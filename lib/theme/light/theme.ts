@@ -11,6 +11,7 @@ import Theme, {
   Toggle,
   StatusNumber,
   StatusTag,
+  StatusPercentage,
 } from "../../types/theme";
 import {
   neutral,
@@ -610,6 +611,16 @@ const statusTag: StatusTag = {
   },
 };
 
+const statusPercentage: StatusPercentage = {
+  fontFamily: "Archivo",
+  fontWeight: 500,
+  fontSize: {
+    small: "24px",
+    medium: "28px",
+    large: "32px",
+  },
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -674,6 +685,7 @@ const theme: Theme = {
   toggle,
   statusNumber,
   statusTag,
+  statusPercentage,
 };
 
 export default theme;

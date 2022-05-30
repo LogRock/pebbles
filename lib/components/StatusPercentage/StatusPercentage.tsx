@@ -14,34 +14,21 @@ const StatusPercentage: FC<StatusPercentageProps> = ({
   size = "medium",
   children,
 }) => {
-  const getRingSize = (): StatusPercentageSizeType => {
-    switch (size) {
-      case "small":
-        return { radius: 18, stroke: 4 };
-      case "medium":
-        return { radius: 20, stroke: 4 };
-      case "large":
-        return { radius: 24, stroke: 5 };
-    }
-  };
-
-  const getTextSize = (): string => {
-    switch (size) {
-      case "small":
-        return "24px";
-      case "medium":
-        return "28px";
-      case "large":
-        return "32px";
-    }
+  const getSizeParams = (): StatusPercentageSizeType => {
+    const sizes = {
+      small: { radius: 18, stroke: 4 },
+      medium: { radius: 20, stroke: 4 },
+      large: { radius: 24, stroke: 5 },
+    };
+    return sizes[size] as StatusPercentageSizeType;
   };
 
   return (
-    <StatusPctWrapper fontSize={getTextSize()}>
+    <StatusPctWrapper size={size}>
       <ProgressRing
         percentage={percentage}
-        radius={getRingSize().radius}
-        stroke={getRingSize().stroke}
+        radius={getSizeParams().radius}
+        stroke={getSizeParams().stroke}
         showBaseRing
       />
       {children}
