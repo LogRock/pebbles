@@ -1,3 +1,25 @@
+# [6.8.0](https://github.com/LogRock/pebbles/compare/v6.7.1...v6.8.0) (2022-05-30)
+
+### Bug Fixes
+
+- adjusted vert margin when no icon ([bda3d81](https://github.com/LogRock/pebbles/commit/bda3d814dad89ba432785824e64da79760e88ff0))
+- merged with main, fixed conflicts ([22043b9](https://github.com/LogRock/pebbles/commit/22043b92f826965a68e96d93f62ebd8e21763316))
+- merged with main, fixed conflicts ([9a801d1](https://github.com/LogRock/pebbles/commit/9a801d1913a1b907d3ff1fb7e0a1e09461e369af))
+- merged with main, fixed conflicts part II ([9e6c371](https://github.com/LogRock/pebbles/commit/9e6c371d24ce6d5d44e80ff43c3467d87416b9e4))
+- primary secondary label font params now on theme ([cd2c379](https://github.com/LogRock/pebbles/commit/cd2c3793a029e5a770a69179a3fd3c514d39bd45))
+- removed unnecessary theme params ([a9f553f](https://github.com/LogRock/pebbles/commit/a9f553f8cf56129088672a6b7ce4cd6846340957))
+- simplified progress ring sizes logic ([9a603db](https://github.com/LogRock/pebbles/commit/9a603db1fa0f3fc0af52c9fdd0e4e5274b7ecd2c))
+
+### Features
+
+- added neutral icon, indicator ([cf05c47](https://github.com/LogRock/pebbles/commit/cf05c473c5458a344d5a103414c57fbd446fbfe5))
+- added StatusNumber component ([be95d0c](https://github.com/LogRock/pebbles/commit/be95d0cb8f82d3b79d9425e4b979d0f58fde4791))
+- added StatusPercentage component ([af06be1](https://github.com/LogRock/pebbles/commit/af06be1537bf3400777645c7e40ae9eccf35cded))
+- status percentage label params on theme, simplified getSize method ([78f51cc](https://github.com/LogRock/pebbles/commit/78f51cc0c2c44d98f9530e721b01f6e1fa5e71c8))
+- status tag now accepts children, more versatile ([4eba17b](https://github.com/LogRock/pebbles/commit/4eba17bc3ee5634b246b8368527c8bd94520423a))
+- status tag receives icon as param, more flexible now ([ba628fb](https://github.com/LogRock/pebbles/commit/ba628fb2dd65b9c5d35915daa0a9e0cad7172e7a))
+- updated theme colors ([ad947a6](https://github.com/LogRock/pebbles/commit/ad947a65c353ab16e387aaa7ca9a7338c13e505d))
+
 ## [6.7.1](https://github.com/LogRock/pebbles/compare/v6.7.0...v6.7.1) (2022-05-23)
 
 ### Bug Fixes
