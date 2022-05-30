@@ -43,10 +43,9 @@ Neutral.args = {
   variant: "neutral",
 };
 
-export const NoLabel = Template.bind({});
-NoLabel.args = {
+export const NoIcon = Template.bind({});
+NoIcon.args = {
   currentValue: 85,
   totalValue: 85,
-  variant: "neutral",
-  icon: <Icon size={0.95} path={mdiAlert} />,
+  variant: "error",
 };

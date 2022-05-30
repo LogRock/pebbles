@@ -12,6 +12,7 @@ import Theme, {
   StatusNumber,
   StatusTag,
   StatusPercentage,
+  StatusTrend,
 } from "../../types/theme";
 import {
   neutral,
@@ -548,18 +549,6 @@ const toggle: Toggle = {
 };
 
 const statusNumber: StatusNumber = {
-  backgroundColor: {
-    error: error["50"],
-    warning: warning["50"],
-    success: success["50"],
-    neutral: neutral["50"],
-  },
-  borderColor: {
-    error: error["200"],
-    warning: warning["200"],
-    success: success["200"],
-    neutral: neutral["200"],
-  },
   iconColor: {
     error: error["600"],
     warning: warning["600"],
@@ -570,6 +559,18 @@ const statusNumber: StatusNumber = {
     error: error["600"],
     warning: warning["600"],
     success: success["600"],
+    neutral: neutral["600"],
+  },
+};
+const statusTrend: StatusTrend = {
+  iconColor: {
+    positive: success["600"],
+    negative: error["600"],
+    neutral: neutral["600"],
+  },
+  labelColor: {
+    positive: success["600"],
+    negative: error["600"],
     neutral: neutral["600"],
   },
 };
@@ -686,6 +687,7 @@ const theme: Theme = {
   statusNumber,
   statusTag,
   statusPercentage,
+  statusTrend,
 };
 
 export default theme;
