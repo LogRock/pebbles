@@ -456,6 +456,14 @@ export interface StatusTrend {
     negative: CSS.Property.Color;
     neutral: CSS.Property.Color;
   };
+  primaryLabel: {
+    fontSize: CSS.Property.FontSize;
+    fontWeight: CSS.Property.FontWeight;
+  };
+  secondaryLabel: {
+    fontSize: CSS.Property.FontSize;
+    fontWeight: CSS.Property.FontWeight;
+  };
 }
 
 export interface StatusTag {
