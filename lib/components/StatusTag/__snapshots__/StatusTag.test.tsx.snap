@@ -1,3 +1,11 @@
 // Vitest Snapshot v1
 
-exports[`StatusTag > renders properly 1`] = `children`;
+exports[`StatusTag > renders properly 1`] = `
+<div
+  class="sc-bqiRlB hnTmEE"
+>
+  <p
+    class="sc-iqseJM sc-hBUSln xyHVy kNuOeK"
+  />
+</div>
+`;
