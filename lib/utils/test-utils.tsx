@@ -13,7 +13,7 @@ const customRender = (ui: React.ReactElement, options = {}) =>
   render(ui, {
     // wrap provider(s) here if needed
     wrapper: ({ children }) => (
-      <ThemeProvider theme={theme}>children</ThemeProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     ),
     ...options,
   });
