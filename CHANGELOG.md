@@ -1,3 +1,16 @@
+# [6.9.0](https://github.com/LogRock/pebbles/compare/v6.8.0...v6.9.0) (2022-05-31)
+
+### Bug Fixes
+
+- allow E164NUmber as input value attribute ([ffbe784](https://github.com/LogRock/pebbles/commit/ffbe784210feb46c389473e198f0cdae71a95842))
+- render children was not using children as variable, but as a simple text ([303d2f6](https://github.com/LogRock/pebbles/commit/303d2f684ed400aa006d624877055a98b060f08f))
+- update snapshot ([6dd7c59](https://github.com/LogRock/pebbles/commit/6dd7c594b392408d86853d21e904c474a6d28c82))
+- update snapshot ([b785d58](https://github.com/LogRock/pebbles/commit/b785d5829962628dc3a39db79ec0aeeb2fd02773))
+
+### Features
+
+- pebbles phone input box ([7d28912](https://github.com/LogRock/pebbles/commit/7d289128aa2cfd141a862b141280e80250d3b5ec))
+
 # [6.8.0](https://github.com/LogRock/pebbles/compare/v6.7.1...v6.8.0) (2022-05-30)
 
 ### Bug Fixes
