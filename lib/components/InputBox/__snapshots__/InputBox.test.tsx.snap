@@ -53,7 +53,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <input
-        class="sc-pVTFL kDuVFp"
+        class="sc-pVTFL iOYcnD"
         id="pebbles__input__1"
       />
     </div>
@@ -98,7 +98,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-fotOHu dxYPcb"
       >
         <input
-          class="sc-pVTFL sc-hBUSln kDuVFp gPlzbG"
+          class="sc-pVTFL sc-hBUSln iOYcnD gPlzbG"
           type="number"
         />
       </div>
@@ -142,7 +142,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <div
-        class="sc-bkkeKt fhNlGl PhoneInput"
+        class="sc-bkkeKt wUAyr PhoneInput"
       >
         <div
           class="PhoneInputCountry"
