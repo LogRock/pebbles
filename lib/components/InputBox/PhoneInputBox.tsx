@@ -3,7 +3,6 @@ import React, { FC } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import styled from "styled-components";
-import { E164Number } from "libphonenumber-js";
 
 import BaseInputBox, { BaseInputBoxProps } from "./BaseInputBox";
 import { BaseStyleInput } from "./BaseInputBox.styled";
@@ -24,8 +23,6 @@ const StyledPhoneInputBox = styled(PhoneInput)<
 `;
 
 export interface PhoneInputBoxProps extends BaseInputBoxProps {
-  value?: E164Number;
-  onChange?: (data: any) => {};
   countryOptionsOrder?: string[];
   defaultCountry?: string;
 }
