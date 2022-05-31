@@ -43,7 +43,10 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
     <StyledDiv spaced={spaced}>
       <Label htmlFor={inputID}>{description}</Label>
       <InputDiv>
-        <StyledInput status={status} {...inputProps} id={inputID} />
+        {!inputProps?.children && (
+          <StyledInput status={status} {...inputProps} id={inputID} />
+        )}
+        {inputProps?.children && inputProps?.children}
         {hint && (
           <HintDiv>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
