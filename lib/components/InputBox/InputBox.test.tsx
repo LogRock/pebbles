@@ -25,6 +25,7 @@ describe("InputBox", () => {
     );
     const textInput = screen.getByLabelText("User Name");
     await userEvent.type(textInput, "Mascarenhas");
+    // @ts-ignore
     expect(textInput.value).toBe("Mascarenhas");
     expect(container).toMatchSnapshot();
     expect(textInput).not.toBeNull();
@@ -41,7 +42,12 @@ describe("InputBox", () => {
   });
   it("renders Phone InputBox properly", () => {
     const { container } = render(
-      <InputBox type="tel" defaultCountry="US" onChange={(data) => {}} />
+      <InputBox
+        type="tel"
+        // @ts-ignore
+        defaultCountry="US"
+        onChange={(data) => {}}
+      />
     );
 
     expect(container).toMatchSnapshot();
@@ -53,6 +59,7 @@ describe("InputBox", () => {
           type="tel"
           id="phoneId"
           description="Phone Info"
+          // @ts-ignore
           defaultCountry="US"
           onChange={(data) => {}}
         />
@@ -60,6 +67,8 @@ describe("InputBox", () => {
     );
     const phoneInput = screen.getByLabelText("Phone Info");
     await userEvent.type(phoneInput, "4158604422");
+    // @ts-ignore
+    expect(phoneInput.value).toBe("(415) 860-4422");
     expect(container).toMatchSnapshot();
     expect(phoneInput).not.toBeNull();
   });
