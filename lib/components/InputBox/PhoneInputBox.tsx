@@ -42,6 +42,7 @@ const PhoneInputBox: FC<PhoneInputBoxProps> = ({
         defaultCountry={defaultCountry}
         value={value}
         onChange={onChange}
+        {...inputProps}
       />
     </BaseInputBox>
   );
