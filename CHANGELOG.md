@@ -1,3 +1,10 @@
+## [6.9.1](https://github.com/LogRock/pebbles/compare/v6.9.0...v6.9.1) (2022-06-01)
+
+### Bug Fixes
+
+- add 'label for' for phone input ([2a947ba](https://github.com/LogRock/pebbles/commit/2a947bacf651be9b5ec23f807ceb9be8433c20d5))
+- ignore ts checks for tests purposes ([18f9c28](https://github.com/LogRock/pebbles/commit/18f9c28990e9d6cb28f1394a6f88430d24e2d4da))
+
 # [6.9.0](https://github.com/LogRock/pebbles/compare/v6.8.0...v6.9.0) (2022-05-31)
 
 ### Bug Fixes
