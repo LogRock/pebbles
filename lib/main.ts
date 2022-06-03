@@ -83,3 +83,7 @@ export type { StatusTagProps } from "./components/StatusTag";
 // expose StatusTrend
 export { default as StatusTrend } from "./components/StatusTrend";
 export type { StatusTrendProps } from "./components/StatusTrend";
+
+// expose Card
+export { default as Card } from "./components/Card";
+export type { CardProps } from "./components/Card";
