@@ -513,6 +513,12 @@ export interface StatusPercentage {
   };
 }
 
+export interface Card {
+  fontFamily: CSS.Property.FontFamily;
+  fontWeight: CSS.Property.FontWeight;
+  fontSize: CSS.Property.FontSize;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -538,4 +544,5 @@ export default interface Theme {
   statusTag: StatusTag;
   statusPercentage: StatusPercentage;
   statusTrend: StatusTrend;
+  card: Card;
 }

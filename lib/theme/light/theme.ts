@@ -13,6 +13,7 @@ import Theme, {
   StatusTag,
   StatusPercentage,
   StatusTrend,
+  Card,
 } from "../../types/theme";
 import {
   neutral,
@@ -630,6 +631,12 @@ const statusPercentage: StatusPercentage = {
   },
 };
 
+const card: Card = {
+  fontFamily: "Archivo",
+  fontWeight: 500,
+  fontSize: "24px",
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -696,6 +703,7 @@ const theme: Theme = {
   statusTag,
   statusPercentage,
   statusTrend,
+  card,
 };
 
 export default theme;
