@@ -1,3 +1,9 @@
+# [6.10.0](https://github.com/LogRock/pebbles/compare/v6.9.1...v6.10.0) (2022-06-03)
+
+### Features
+
+- added Card component and sub-components ([f784d85](https://github.com/LogRock/pebbles/commit/f784d85effe23968477d0e94e084d60062701264))
+
 ## [6.9.1](https://github.com/LogRock/pebbles/compare/v6.9.0...v6.9.1) (2022-06-01)
 
 ### Bug Fixes
