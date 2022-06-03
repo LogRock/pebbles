@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BaseInputBoxProps } from "./BaseInputBox";
 
 const defaultStatus = "info";
@@ -69,7 +69,7 @@ export const InputDiv = styled.div`
   position: relative;
 `;
 
-export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
+export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
   flex-direction: row;
@@ -134,4 +134,8 @@ export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
 
     cursor: not-allowed;
   }
+`;
+
+export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
+  ${BaseStyleInput}
 `;

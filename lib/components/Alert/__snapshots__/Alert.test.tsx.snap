@@ -1,3 +1,17 @@
 // Vitest Snapshot v1
 
-exports[`Alert > renders properly 1`] = `children`;
+exports[`Alert > renders properly 1`] = `
+<div
+  class="sc-bkkeKt dpagFv"
+>
+  <div
+    class="sc-dJjYzT iNMcR"
+  >
+    <span
+      class="sc-kfPuZi cBfVti"
+    >
+      Foo
+    </span>
+  </div>
+</div>
+`;

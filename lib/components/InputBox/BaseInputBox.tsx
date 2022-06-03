@@ -14,6 +14,7 @@ import {
   HelperIcon,
 } from "./BaseInputBox.styled";
 import uniqueid from "lodash.uniqueid";
+import { E164Number } from "libphonenumber-js";
 
 export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -27,6 +28,7 @@ export interface BaseInputBoxProps
   spaced?: boolean;
   disableMinus?: boolean;
   disablePlus?: boolean;
+  value?: string | ReadonlyArray<string> | number | E164Number | undefined;
 }
 
 const BaseInputBox: FC<BaseInputBoxProps> = ({
@@ -43,7 +45,10 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
     <StyledDiv spaced={spaced}>
       <Label htmlFor={inputID}>{description}</Label>
       <InputDiv>
-        <StyledInput status={status} {...inputProps} id={inputID} />
+        {!inputProps?.children && (
+          <StyledInput status={status} {...inputProps} id={inputID} />
+        )}
+        {inputProps?.children && inputProps?.children}
         {hint && (
           <HintDiv>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
