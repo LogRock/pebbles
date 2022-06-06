@@ -32,6 +32,7 @@ export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`
   font-style: ${({ theme }) => theme.inputBox.helper.fontStyle};
   font-weight: ${({ theme }) => theme.inputBox.helper.fontWeight};
   line-height: ${({ theme }) => theme.inputBox.helper.lineHeight};
+  text-transform: none;
 `;
 
 export const HelperIcon = styled.div<Pick<BaseInputBoxProps, "status">>`
