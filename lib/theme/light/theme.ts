@@ -14,6 +14,7 @@ import Theme, {
   StatusPercentage,
   StatusTrend,
   Card,
+  TabView,
 } from "../../types/theme";
 import {
   neutral,
@@ -637,6 +638,12 @@ const card: Card = {
   fontSize: "24px",
 };
 
+const tabView: TabView = {
+  fontFamily: "Archivo",
+  fontWeight: 500,
+  fontSize: "16px",
+};
+
 const theme: Theme = {
   name: "light",
   breakpoints: {
@@ -704,6 +711,7 @@ const theme: Theme = {
   statusPercentage,
   statusTrend,
   card,
+  tabView,
 };
 
 export default theme;

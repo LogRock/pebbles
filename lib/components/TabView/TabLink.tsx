@@ -4,23 +4,21 @@ import styled from "styled-components";
 
 import { TabViewProps } from "./TabView.types";
 
-export const TabLinkWrapper = styled.li<
+export const TabLinkWrapper = styled.a<
   Pick<TabViewProps, "isActive" | "disabled">
 >`
   display: flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: ${({ theme }) => `${theme.spacings.xxsm} ${theme.spacings.xbig}`};
 
   border-bottom: ${({ isActive }) => (isActive ? "4px solid" : "none")};
   border-color: ${({ theme }) => theme.colors.primary[500]};
 
   color: ${({ theme, isActive }) =>
     isActive ? theme.colors.neutral[900] : theme.colors.neutral[400]};
-  font-family: Archivo, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 24px;
+  font-family: ${({ theme }) => theme.tabView.fontFamily};
+  font-size: ${({ theme }) => theme.tabView.fontSize};
+  font-weight: ${({ theme }) => theme.tabView.fontWeight};
   text-align: left;
 
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
