@@ -519,6 +519,12 @@ export interface Card {
   fontSize: CSS.Property.FontSize;
 }
 
+export interface TabView {
+  fontFamily: CSS.Property.FontFamily;
+  fontWeight: CSS.Property.FontWeight;
+  fontSize: CSS.Property.FontSize;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -545,4 +551,5 @@ export default interface Theme {
   statusPercentage: StatusPercentage;
   statusTrend: StatusTrend;
   card: Card;
+  tabView: TabView;
 }
