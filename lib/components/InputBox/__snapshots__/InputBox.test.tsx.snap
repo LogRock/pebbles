@@ -25,7 +25,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
         class="sc-dkPtRN cgynxk"
       >
         <label
-          class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+          class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
         />
       </div>
     </div>
@@ -1317,7 +1317,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         class="sc-dkPtRN cgynxk"
       >
         <label
-          class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+          class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
         />
       </div>
     </div>
@@ -1358,7 +1358,7 @@ exports[`InputBox > renders Date InputBox properly 1`] = `
       class="sc-dkPtRN cgynxk"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
       />
     </div>
   </div>
@@ -1386,7 +1386,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       class="sc-dkPtRN cgynxk"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
       />
     </div>
   </div>
@@ -1447,7 +1447,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       class="sc-dkPtRN cgynxk"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
       />
     </div>
   </div>
@@ -2733,7 +2733,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-dkPtRN cgynxk"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu brJnzi"
+        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
       />
     </div>
   </div>
