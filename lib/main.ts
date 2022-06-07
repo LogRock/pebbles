@@ -87,3 +87,7 @@ export type { StatusTrendProps } from "./components/StatusTrend";
 // expose Card
 export { default as Card } from "./components/Card";
 export type { CardProps } from "./components/Card";
+
+// expose Card
+export { default as MultiSelect } from "./components/MultiSelect";
+export type { MultiSelectProps } from "./components/MultiSelect";
