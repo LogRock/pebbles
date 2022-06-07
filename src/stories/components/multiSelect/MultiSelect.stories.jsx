@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { MultiSelect } from "../../../../lib/components/MultiSelect";
+import MultiSelect from "../../../../lib/components/MultiSelect";
 import Form from "@rjsf/core";
 
 export default {
