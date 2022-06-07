@@ -29,7 +29,7 @@ describe("MultiSelect Component", () => {
     expect(screen.getByText(/you should provide a value/)).toBeInTheDocument();
   });
   it("should select options to trigger change event", () => {
-    const onChange = (data) => {};
+    const onChange = (data: {}) => {};
     const onChangeMock = vi.fn().mockImplementation(onChange);
 
     render(
