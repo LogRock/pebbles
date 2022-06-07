@@ -1,3 +1,10 @@
+## [6.11.1](https://github.com/LogRock/pebbles/compare/v6.11.0...v6.11.1) (2022-06-07)
+
+### Bug Fixes
+
+- expose multi-select component ([47c5d69](https://github.com/LogRock/pebbles/commit/47c5d69d4281163bf4abb4ce48414dcdcc51ae43))
+- multi-select storybook import ([5c8cb5d](https://github.com/LogRock/pebbles/commit/5c8cb5dc77b2db2cce398d44c7a47e27b681a21d))
+
 # [6.11.0](https://github.com/LogRock/pebbles/compare/v6.10.0...v6.11.0) (2022-06-07)
 
 ### Bug Fixes
