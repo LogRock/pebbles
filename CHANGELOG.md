@@ -1,3 +1,16 @@
+# [6.11.0](https://github.com/LogRock/pebbles/compare/v6.10.0...v6.11.0) (2022-06-07)
+
+### Bug Fixes
+
+- fixed InputBox test snapshot ([2bf2e08](https://github.com/LogRock/pebbles/commit/2bf2e080e670149d9f209a3a4d353a8d20c002f7))
+- input helper no longer with uppercase letters ([4b6ee5c](https://github.com/LogRock/pebbles/commit/4b6ee5c0e6990624cb5ebadf722da602b2d389a6))
+- missing data type ([cfd86d3](https://github.com/LogRock/pebbles/commit/cfd86d3d31a3d01c0ccb4cf5d52f510706106a28))
+- update snapshot ([2327305](https://github.com/LogRock/pebbles/commit/2327305530ed0c36abc5f2f5b030184d855f960e))
+
+### Features
+
+- multi-select component ([4230405](https://github.com/LogRock/pebbles/commit/4230405bea1da96740cbce24aba7a379f790a754))
+
 # [6.10.0](https://github.com/LogRock/pebbles/compare/v6.9.1...v6.10.0) (2022-06-03)
 
 ### Features
