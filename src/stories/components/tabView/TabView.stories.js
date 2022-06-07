@@ -13,13 +13,15 @@ export default {
   component: TabView,
 };
 
-const Template = (args) => <div {...args}></div>;
+const Template = (args) => <TabView {...args}></TabView>;
 
 export const FirstTabActive = Template.bind({});
 FirstTabActive.args = {
+  bgColor: "fafafa",
+  borderRadius: 16,
   children: (
-    <TabView>
-      <TabLinks bgColor="#fafafa" justify="flex-start">
+    <>
+      <TabLinks>
         <TabLink href="" isActive>
           Tab 1
         </TabLink>
@@ -31,9 +33,9 @@ FirstTabActive.args = {
         </TabLink>
         <TabLink href="">Tab 4</TabLink>
       </TabLinks>
-      <TabContent bgColor="#f1f1f1">
+      <TabContent>
         <h4>Tab Content here</h4>
       </TabContent>
-    </TabView>
+    </>
   ),
 };
