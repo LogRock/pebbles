@@ -1,0 +1,37 @@
+// Vitest Snapshot v1
+
+exports[`TabView > renders TabView properly 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL gPNyoh"
+  >
+    <div
+      class="sc-gsDKAQ bYWZAm"
+    >
+      <a
+        class="sc-dkPtRN hHAmYe"
+      >
+        Tab 1
+      </a>
+      <a
+        class="sc-dkPtRN dVgcUS"
+      >
+        Tab 2
+      </a>
+      <a
+        class="sc-dkPtRN bBLTCq"
+        disabled=""
+      >
+        Tab 3
+      </a>
+    </div>
+    <div
+      class="sc-hKwDye gkAWeJ"
+    >
+      <h4>
+        Tab Content here
+      </h4>
+    </div>
+  </div>
+</div>
+`;
