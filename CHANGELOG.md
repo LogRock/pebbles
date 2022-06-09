@@ -1,3 +1,16 @@
+# [6.12.0](https://github.com/LogRock/pebbles/compare/v6.11.1...v6.12.0) (2022-06-09)
+
+### Bug Fixes
+
+- exposed TabView component on main.ts ([99ad67a](https://github.com/LogRock/pebbles/commit/99ad67a5b1523773c318272eea384a6d8e745222))
+- rebased main, fixed conflicts ([73db8bf](https://github.com/LogRock/pebbles/commit/73db8bf35a7893d51d2c5b87c95302597d1a44eb))
+
+### Features
+
+- added TabView and related components, basic logic and css ([8881b47](https://github.com/LogRock/pebbles/commit/8881b470b573483926e9fba8ae97ba4106831e72))
+- added TabView unit test ([087bf58](https://github.com/LogRock/pebbles/commit/087bf58e89901460d7a392a3d8e28c4971328bfc))
+- simplified styles, borderRadius and bgColor impacts whole tabview ([40fe804](https://github.com/LogRock/pebbles/commit/40fe8040c77ea28830bb4b8589010d9e01d6c26f))
+
 ## [6.11.1](https://github.com/LogRock/pebbles/compare/v6.11.0...v6.11.1) (2022-06-07)
 
 ### Bug Fixes
