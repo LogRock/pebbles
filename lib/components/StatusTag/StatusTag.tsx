@@ -11,17 +11,18 @@ const StatusTag: FC<StatusTagProps> = ({
   size = "medium",
   variant = "neutral",
   icon,
+  collapsed,
   children,
   ...props
 }) => {
   return (
-    <StatusTagWrapper variant={variant} size={size} {...props}>
+    <StatusTagWrapper variant={variant} size={size} collapsed={collapsed} {...props}>
       {icon && (
         <IconWrapper variant={variant} hasLabel={Boolean(children)}>
           {icon}
         </IconWrapper>
       )}
-      <StyledOverlineLarge variant={variant} size={size}>
+      <StyledOverlineLarge variant={variant} size={size} collapsed={collapsed}>
         {children}
       </StyledOverlineLarge>
     </StatusTagWrapper>
