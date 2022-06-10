@@ -2,11 +2,21 @@
 
 exports[`StatusTag > renders properly 1`] = `
 <div
-  class="sc-bqiRlB hnTmEE"
+  class="sc-bqiRlB cuedwd"
   label="High Risk"
 >
   <p
     class="sc-iqseJM sc-hBUSln xyHVy kNuOeK"
+  />
+</div>
+`;
+
+exports[`StatusTag > should render Notification Status 1`] = `
+<div
+  class="sc-bqiRlB gSFxob"
+>
+  <p
+    class="sc-iqseJM sc-hBUSln xyHVy ccsOTq"
   />
 </div>
 `;
