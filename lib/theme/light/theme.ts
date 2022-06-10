@@ -586,39 +586,51 @@ const statusTrend: StatusTrend = {
 };
 
 const statusTag: StatusTag = {
-  backgroundColor: {
-    error: error["50"],
-    warning: warning["50"],
-    success: success["50"],
-    neutral: neutral["50"],
+  color: {
+    background: {
+      error: error["50"],
+      warning: warning["50"],
+      success: success["50"],
+      neutral: neutral["100"],
+      collapsed: {
+        error: error["500"],
+        warning: warning["500"],
+        success: success["500"],
+        neutral: neutral["500"],
+      },
+    },
+    icon: {
+      error: error["600"],
+      warning: warning["600"],
+      success: success["600"],
+      neutral: neutral["600"],
+    },
+    label: {
+      error: error["600"],
+      warning: warning["600"],
+      success: success["600"],
+      neutral: neutral["600"],
+      collapsed: {
+        error: neutral["50"],
+        warning: neutral["50"],
+        success: neutral["50"],
+        neutral: neutral["50"],
+      },
+    },
   },
-  borderColor: {
-    error: error["200"],
-    warning: warning["200"],
-    success: success["200"],
-    neutral: neutral["200"],
-  },
-  iconColor: {
-    error: error["600"],
-    warning: warning["600"],
-    success: success["600"],
-    neutral: neutral["600"],
-  },
-  labelColor: {
-    error: error["600"],
-    warning: warning["600"],
-    success: success["600"],
-    neutral: neutral["600"],
-  },
-  tagSize: {
-    small: "28px",
-    medium: "36px",
-    large: "44px",
-  },
-  labelSize: {
-    small: "11px",
-    medium: "12px",
-    large: "14px",
+  size: {
+    tag: {
+      micro: "13px",
+      small: "28px",
+      medium: "36px",
+      large: "44px",
+    },
+    label: {
+      micro: "8px",
+      small: "11px",
+      medium: "12px",
+      large: "14px",
+    },
   },
 };
 

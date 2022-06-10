@@ -430,19 +430,23 @@ export interface Toggle {
   checked: CheckBoc;
 }
 
+interface ColorByVariant {
+  error: CSS.Property.Color;
+  warning: CSS.Property.Color;
+  success: CSS.Property.Color;
+  neutral: CSS.Property.Color;
+}
+
 export interface StatusNumber {
-  iconColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
-  labelColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
+  iconColor: ColorByVariant;
+  labelColor: ColorByVariant;
+}
+
+interface SizeByCategory {
+  micro?: CSS.Property.Inset;
+  small: CSS.Property.Inset;
+  medium: CSS.Property.Inset;
+  large: CSS.Property.Inset;
 }
 
 export interface StatusTrend {
@@ -466,40 +470,19 @@ export interface StatusTrend {
   };
 }
 
+interface StatusTagColor extends ColorByVariant {
+  collapsed?: ColorByVariant;
+}
+
 export interface StatusTag {
-  backgroundColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
+  color: {
+    background: StatusTagColor;
+    icon: ColorByVariant;
+    label: StatusTagColor;
   };
-  borderColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
-  iconColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
-  labelColor: {
-    error: CSS.Property.Color;
-    warning: CSS.Property.Color;
-    success: CSS.Property.Color;
-    neutral: CSS.Property.Color;
-  };
-  tagSize: {
-    small: CSS.Property.Width;
-    medium: CSS.Property.Width;
-    large: CSS.Property.Width;
-  };
-  labelSize: {
-    small: CSS.Property.Width;
-    medium: CSS.Property.Width;
-    large: CSS.Property.Width;
+  size: {
+    tag: SizeByCategory;
+    label: SizeByCategory;
   };
 }
 

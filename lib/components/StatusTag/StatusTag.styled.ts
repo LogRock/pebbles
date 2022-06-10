@@ -4,33 +4,44 @@ import { OverlineLarge } from "../Typography";
 import { StatusTagProps } from "./StatusTag.types";
 
 export const StatusTagWrapper = styled.div<
-  Pick<StatusTagProps, "variant" | "size">
+  Pick<StatusTagProps, "variant" | "size" | "collapsed">
 >`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: max-content;
-  height: ${({ theme, size }) => theme.statusTag.tagSize[size]};
-  padding: 0 ${({ theme }) => theme.spacings.md};
+  width: ${({ theme, size, collapsed }) => {
+    return collapsed ? theme.statusTag.size.tag[size] : "max-content";
+  }};
+  height: ${({ theme, size }) => theme.statusTag.size.tag[size]};
+  padding: 0
+    ${({ theme, collapsed }) => {
+      return collapsed ? 0 : theme.spacings.md;
+    }};
 
-  border: 1px solid
-    ${({ theme, variant }) => theme.statusTag.borderColor[variant]};
-  border-radius: 64px;
+  border: 0px;
+  border-radius: 12px;
 
-  background-color: ${({ theme, variant }) =>
-    theme.statusTag.backgroundColor[variant]};
+  background-color: ${({ theme, variant, collapsed }) => {
+    return collapsed
+      ? theme.statusTag.color.background.collapsed[variant]
+      : theme.statusTag.color.background[variant];
+  }};
 `;
 
 export const IconWrapper = styled.div<Pick<any, "variant" | "hasLabel">>`
   margin-right: ${({ theme, hasLabel }) => (hasLabel ? theme.spacings.sm : 0)};
   margin-bottom: -2px;
 
-  color: ${({ theme, variant }) => theme.statusTag.iconColor[variant]};
+  color: ${({ theme, variant }) => theme.statusTag.color.icon[variant]};
 `;
 
 export const StyledOverlineLarge = styled(OverlineLarge)<
-  Pick<StatusTagProps, "variant" | "size">
+  Pick<StatusTagProps, "variant" | "size" | "collapsed">
 >`
-  color: ${({ theme, variant }) => theme.statusTag.labelColor[variant]};
-  font-size: ${({ theme, size }) => theme.statusTag.labelSize[size]};
+  color: ${({ theme, variant, collapsed }) => {
+    return collapsed
+      ? theme.statusTag.color.label.collapsed[variant]
+      : theme.statusTag.color.label[variant];
+  }};
+  font-size: ${({ theme, size }) => theme.statusTag.size.label[size]};
 `;
