@@ -1,3 +1,15 @@
+# [6.13.0](https://github.com/LogRock/pebbles/compare/v6.12.0...v6.13.0) (2022-06-10)
+
+### Bug Fixes
+
+- changed from ...rest to ...props ([2a49bdd](https://github.com/LogRock/pebbles/commit/2a49bddcda9ea0b3f3b51957b17bf19e7d4bc016))
+- exposes Card and Tab sub components on main.ts ([8ebfb2a](https://github.com/LogRock/pebbles/commit/8ebfb2ae79761b6f65d64108374a790742437de7))
+- update test snapshot ([17918da](https://github.com/LogRock/pebbles/commit/17918da3e6b1fc95d8150698aa4b10fff07be899))
+
+### Features
+
+- added rest props to allow setting css from outside ([607b160](https://github.com/LogRock/pebbles/commit/607b1608111fc98154391c7bf346ad0a731933f7))
+
 # [6.12.0](https://github.com/LogRock/pebbles/compare/v6.11.1...v6.12.0) (2022-06-09)
 
 ### Bug Fixes
