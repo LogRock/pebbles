@@ -86,6 +86,9 @@ export type { StatusTrendProps } from "./components/StatusTrend";
 
 // expose Card
 export { default as Card } from "./components/Card";
+export { default as CardHeader } from "./components/Card/CardHeader";
+export { default as CardContent } from "./components/Card/CardContent";
+export { default as CardFooter } from "./components/Card/CardFooter";
 export type { CardProps } from "./components/Card";
 
 // expose MultiSelect
@@ -94,4 +97,7 @@ export type { MultiSelectProps } from "./components/MultiSelect";
 
 // expose TabView
 export { default as TabView } from "./components/TabView";
+export { default as TabLink } from "./components/TabView/TabLink";
+export { default as TabLinks } from "./components/TabView/TabLinks";
+export { default as TabContent } from "./components/TabView/TabContent";
 export type { TabViewProps } from "./components/TabView";
