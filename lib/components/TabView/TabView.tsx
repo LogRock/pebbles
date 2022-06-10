@@ -6,10 +6,10 @@ const TabView: FC<TabViewProps> = ({
   bgColor = "#fff",
   borderRadius = 10,
   children,
-  ...rest
+  ...props
 }) => {
   return (
-    <TabViewWrapper bgColor={bgColor} borderRadius={borderRadius} {...rest}>
+    <TabViewWrapper bgColor={bgColor} borderRadius={borderRadius} {...props}>
       {children}
     </TabViewWrapper>
   );

@@ -8,7 +8,7 @@ const Card: FC<CardProps> = ({
   padding = 24,
   shadow = true,
   children,
-  ...rest
+  ...props
 }) => {
   return (
     <CardWrapper
@@ -16,7 +16,7 @@ const Card: FC<CardProps> = ({
       borderRadius={borderRadius}
       padding={padding}
       shadow={shadow}
-      {...rest}
+      {...props}
     >
       {children}
     </CardWrapper>
