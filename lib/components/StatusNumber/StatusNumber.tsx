@@ -14,10 +14,10 @@ const StatusNumber: FC<StatusNumberProps> = ({
   totalValue = 0,
   variant = "neutral",
   icon,
-  ...rest
+  ...props
 }) => {
   return (
-    <StatusNumberWrapper variant={variant} {...rest}>
+    <StatusNumberWrapper variant={variant} {...props}>
       {icon && <IconWrapper variant={variant}>{icon}</IconWrapper>}
       <LabelWrapper>
         <StyledValueLarge variant={variant}>{currentValue}</StyledValueLarge>

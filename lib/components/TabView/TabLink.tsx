@@ -32,10 +32,10 @@ const TabLink: FC<TabViewProps> = ({
   isActive = false,
   disabled = false,
   children,
-  ...rest
+  ...props
 }) => {
   return (
-    <TabLinkWrapper isActive={isActive} disabled={disabled} {...rest}>
+    <TabLinkWrapper isActive={isActive} disabled={disabled} {...props}>
       {children}
     </TabLinkWrapper>
   );
