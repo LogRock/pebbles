@@ -1,3 +1,10 @@
+# [6.14.0](https://github.com/LogRock/pebbles/compare/v6.13.0...v6.14.0) (2022-06-10)
+
+### Features
+
+- status notification added as a the status tag prop collapsed ([00223b0](https://github.com/LogRock/pebbles/commit/00223b0189e19dceb5584a002453f8de1dab55bb))
+- status notification tag story ([c373f18](https://github.com/LogRock/pebbles/commit/c373f1854f22a35c4a37b93d963f13be391ff5b2))
+
 # [6.13.0](https://github.com/LogRock/pebbles/compare/v6.12.0...v6.13.0) (2022-06-10)
 
 ### Bug Fixes
