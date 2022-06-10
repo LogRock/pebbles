@@ -14,9 +14,10 @@ const StatusTrend: FC<StatusTrendProps> = ({
   labelSecondary,
   direction = "neutral",
   variant = "neutral",
+  ...rest
 }) => {
   return (
-    <StatusTrendWrapper variant={variant}>
+    <StatusTrendWrapper variant={variant} {...rest}>
       <StatusTrendSymbol direction={direction} variant={variant} />
       <LabelWrapper hasSecondaryLabel={Boolean(labelSecondary)}>
         <StyledPrimaryLabel variant={variant}>

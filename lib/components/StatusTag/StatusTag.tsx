@@ -12,9 +12,10 @@ const StatusTag: FC<StatusTagProps> = ({
   variant = "neutral",
   icon,
   children,
+  ...rest
 }) => {
   return (
-    <StatusTagWrapper variant={variant} size={size}>
+    <StatusTagWrapper variant={variant} size={size} {...rest}>
       {icon && (
         <IconWrapper variant={variant} hasLabel={Boolean(children)}>
           {icon}

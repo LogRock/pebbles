@@ -13,6 +13,7 @@ const StatusPercentage: FC<StatusPercentageProps> = ({
   percentage,
   size = "medium",
   children,
+  ...rest
 }) => {
   const sizes = {
     small: { radius: 16, stroke: 4 },
@@ -21,7 +22,7 @@ const StatusPercentage: FC<StatusPercentageProps> = ({
   };
 
   return (
-    <StatusPctWrapper size={size}>
+    <StatusPctWrapper size={size} {...rest}>
       <ProgressRing
         percentage={percentage}
         radius={sizes[size].radius}
