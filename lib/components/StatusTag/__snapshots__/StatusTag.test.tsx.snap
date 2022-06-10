@@ -3,6 +3,7 @@
 exports[`StatusTag > renders properly 1`] = `
 <div
   class="sc-bqiRlB hnTmEE"
+  label="High Risk"
 >
   <p
     class="sc-iqseJM sc-hBUSln xyHVy kNuOeK"
