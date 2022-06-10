@@ -12,4 +12,11 @@ describe("StatusTag", () => {
 
     expect(container.firstChild).toMatchSnapshot();
   });
+  it("should render Notification Status", () => {
+    const { container } = render(
+      <StatusTag size="micro" variant="error" collapsed />
+    );
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
