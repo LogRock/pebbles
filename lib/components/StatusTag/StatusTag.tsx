@@ -3,8 +3,9 @@ import React, { FC } from "react";
 import { StatusTagProps } from "./StatusTag.types";
 import {
   IconWrapper,
-  StatusTagWrapper,
+  StatusTagBackground,
   StyledOverlineLarge,
+  StatusTagContainer,
 } from "./StatusTag.styled";
 
 const StatusTag: FC<StatusTagProps> = ({
@@ -16,16 +17,27 @@ const StatusTag: FC<StatusTagProps> = ({
   ...props
 }) => {
   return (
-    <StatusTagWrapper variant={variant} size={size} collapsed={collapsed} {...props}>
-      {icon && (
-        <IconWrapper variant={variant} hasLabel={Boolean(children)}>
-          {icon}
-        </IconWrapper>
-      )}
-      <StyledOverlineLarge variant={variant} size={size} collapsed={collapsed}>
-        {children}
-      </StyledOverlineLarge>
-    </StatusTagWrapper>
+    <StatusTagContainer size={size}>
+      <StatusTagBackground
+        variant={variant}
+        size={size}
+        collapsed={collapsed}
+        {...props}
+      >
+        {icon && (
+          <IconWrapper variant={variant} hasLabel={Boolean(children)}>
+            {icon}
+          </IconWrapper>
+        )}
+        <StyledOverlineLarge
+          variant={variant}
+          size={size}
+          collapsed={collapsed}
+        >
+          {children}
+        </StyledOverlineLarge>
+      </StatusTagBackground>
+    </StatusTagContainer>
   );
 };
 
