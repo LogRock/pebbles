@@ -6,7 +6,6 @@ import { TabViewProps } from "./TabView.types";
 
 export const TabContentWrapper = styled.div<Pick<TabViewProps, "bgColor">>`
   min-height: 100px;
-  padding: ${({ theme }) => theme.spacings.xbig};
 
   font-family: ${({ theme }) => theme.tabView.fontFamily};
   font-size: ${({ theme }) => theme.tabView.fontSize};

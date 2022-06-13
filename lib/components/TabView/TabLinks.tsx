@@ -6,8 +6,9 @@ import { TabViewProps } from "./TabView.types";
 
 export const TabLinksWrapper = styled.div<Pick<TabViewProps, "bgColor">>`
   display: flex;
-  align-items: center;
-  padding: ${({ theme }) => `${theme.spacings.md} ${theme.spacings.xbig}`};
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
 `;
 
 const TabLinks: FC<TabViewProps> = ({ bgColor = "#fff", children }) => {

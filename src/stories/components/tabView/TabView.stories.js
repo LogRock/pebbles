@@ -23,7 +23,8 @@ FirstTabActive.args = {
     <>
       <TabLinks>
         <TabLink href="" isActive>
-          Tab 1
+          Tab 1 <br />
+          Multiline!
         </TabLink>
         <TabLink href="">
           <Icon size={0.95} path={mdiAlert} /> Tab 2
