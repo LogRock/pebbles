@@ -14,16 +14,16 @@ const Template = (args) => <StatusNumber {...args}>{args.label}</StatusNumber>;
 
 export const Error = Template.bind({});
 Error.args = {
-  currentValue: 85,
-  totalValue: 85,
+  currentValue: "85",
+  totalValue: "85",
   variant: "error",
   icon: <Icon size={0.95} path={mdiAlert} />,
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
-  currentValue: 75,
-  totalValue: 85,
+  currentValue: "75",
+  totalValue: "85",
   variant: "warning",
   icon: <Icon size={0.95} path={mdiAlertCircle} />,
 };
@@ -38,14 +38,26 @@ Success.args = {
 
 export const Neutral = Template.bind({});
 Neutral.args = {
-  currentValue: 0,
-  totalValue: 0,
+  currentValue: "0",
+  totalValue: "0",
   variant: "neutral",
+};
+
+export const NoValues = Template.bind({});
+NoValues.args = {
+  variant: "warning",
+};
+
+export const NullValues = Template.bind({});
+NullValues.args = {
+  currentValue: null,
+  totalValue: null,
+  variant: "warning",
 };
 
 export const NoIcon = Template.bind({});
 NoIcon.args = {
-  currentValue: 85,
-  totalValue: 85,
+  currentValue: "85",
+  totalValue: "85",
   variant: "error",
 };
