@@ -1,3 +1,10 @@
+## [6.14.3](https://github.com/LogRock/pebbles/compare/v6.14.2...v6.14.3) (2022-06-13)
+
+### Bug Fixes
+
+- :lipstick: fix tabs styling to match design ([2a9a364](https://github.com/LogRock/pebbles/commit/2a9a36483dd39486a8c7bbe7f8ca3eed0a84fb11))
+- **tab-view:** :lipstick: fix tab alignment ([d84f9ba](https://github.com/LogRock/pebbles/commit/d84f9ba8e76b7580950786d27e6700ce7332a5ee))
+
 ## [6.14.2](https://github.com/LogRock/pebbles/compare/v6.14.1...v6.14.2) (2022-06-13)
 
 ### Bug Fixes
