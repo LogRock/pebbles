@@ -1,3 +1,9 @@
+# [6.15.0](https://github.com/LogRock/pebbles/compare/v6.14.3...v6.15.0) (2022-06-13)
+
+### Features
+
+- **theme:** :lipstick: add gradient colors breakdown ([c69d6ca](https://github.com/LogRock/pebbles/commit/c69d6cabfbd2f26bda3c6097eeb301fb04cdaef8))
+
 ## [6.14.3](https://github.com/LogRock/pebbles/compare/v6.14.2...v6.14.3) (2022-06-13)
 
 ### Bug Fixes
