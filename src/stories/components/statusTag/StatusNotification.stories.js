@@ -10,15 +10,15 @@ export default {
 
 const Template = (args) => (
   <>
-    <div style={{ display: "flex" }}>
+    <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
       <ParagraphLarge> Sample Title </ParagraphLarge>
       <StatusTag variant="error" {...args} />
     </div>
-    <div style={{ display: "flex" }}>
+    <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
       <ParagraphLarge> Sample Title </ParagraphLarge>
       <StatusTag variant="warning" {...args} />
     </div>
-    <div style={{ display: "flex" }}>
+    <div style={{ height: "60px", display: "flex", alignItems: "center" }}>
       <ParagraphLarge> Sample Title </ParagraphLarge>
       <StatusTag variant="success" {...args} />
     </div>
@@ -27,14 +27,14 @@ const Template = (args) => (
 
 export const StatusNotification = Template.bind({});
 StatusNotification.args = {
-  size: "micro",
+  size: "small",
   collapsed: true,
   children: "",
 };
 
 export const StatusNotificationLabeled = Template.bind({});
 StatusNotificationLabeled.args = {
-  size: "micro",
+  size: "small",
   collapsed: true,
   children: "7",
 };

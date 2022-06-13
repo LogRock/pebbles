@@ -626,7 +626,7 @@ const statusTag: StatusTag = {
       large: "44px",
     },
     label: {
-      micro: "8px",
+      micro: "9px",
       small: "11px",
       medium: "12px",
       large: "14px",

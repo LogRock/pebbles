@@ -3,16 +3,25 @@ import styled from "styled-components";
 import { OverlineLarge } from "../Typography";
 import { StatusTagProps } from "./StatusTag.types";
 
-export const StatusTagWrapper = styled.div<
+export const StatusTagContainer = styled.div<Pick<StatusTagProps, "size">>`
+  height: ${({ theme, size }) => theme.statusTag.size.tag[size]};
+  margin: "0px";
+`;
+
+export const StatusTagBackground = styled.div<
   Pick<StatusTagProps, "variant" | "size" | "collapsed">
 >`
   display: flex;
   align-items: center;
   justify-content: center;
   width: ${({ theme, size, collapsed }) => {
-    return collapsed ? theme.statusTag.size.tag[size] : "max-content";
+    return collapsed ? theme.statusTag.size.tag.micro : "max-content";
   }};
-  height: ${({ theme, size }) => theme.statusTag.size.tag[size]};
+  height: ${({ theme, size, collapsed }) => {
+    return collapsed
+      ? theme.statusTag.size.tag.micro
+      : theme.statusTag.size.tag[size];
+  }};
   padding: 0
     ${({ theme, collapsed }) => {
       return collapsed ? 0 : theme.spacings.md;
@@ -43,5 +52,9 @@ export const StyledOverlineLarge = styled(OverlineLarge)<
       ? theme.statusTag.color.label.collapsed[variant]
       : theme.statusTag.color.label[variant];
   }};
-  font-size: ${({ theme, size }) => theme.statusTag.size.label[size]};
+  font-size: ${({ theme, size, collapsed }) => {
+    return collapsed
+      ? theme.statusTag.size.label.micro
+      : theme.statusTag.size.label[size];
+  }};
 `;
