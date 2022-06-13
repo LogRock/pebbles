@@ -9,17 +9,17 @@ exports[`TabView > renders TabView properly 1`] = `
       class="sc-gsDKAQ kkuJso"
     >
       <a
-        class="sc-dkPtRN dEBpKf"
+        class="sc-dkPtRN gVfxRV"
       >
         Tab 1
       </a>
       <a
-        class="sc-dkPtRN cKhKfI"
+        class="sc-dkPtRN hxbIje"
       >
         Tab 2
       </a>
       <a
-        class="sc-dkPtRN jzrFoQ"
+        class="sc-dkPtRN fVa-Dfy"
         disabled=""
       >
         Tab 3

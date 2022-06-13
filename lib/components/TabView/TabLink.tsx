@@ -9,7 +9,7 @@ export const TabLinkWrapper = styled.a<
 >`
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 0;
   padding-right: ${({ theme }) => theme.spacings.xbig};
   padding-bottom: ${({ theme }) => theme.spacings.md};
