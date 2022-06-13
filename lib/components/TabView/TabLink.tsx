@@ -1,12 +1,8 @@
-import React, { FC } from "react";
-
 import styled, { css } from "styled-components";
 
 import { TabLinkProps } from "./TabView.types";
 
-export const TabLinkWrapper = styled.a<
-  Pick<TabLinkProps, "isActive" | "disabled">
->`
+const TabLink = styled.a<TabLinkProps>`
   display: flex;
   position: relative;
   align-items: flex-end;
@@ -15,8 +11,8 @@ export const TabLinkWrapper = styled.a<
   padding-bottom: ${({ theme }) => theme.spacings.md};
   padding-left: ${({ theme }) => theme.spacings.xbig};
 
-  color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.neutral[900] : theme.colors.neutral[400]};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.neutral[900] : theme.colors.neutral[400]};
   font-family: ${({ theme }) => theme.tabView.fontFamily};
   font-size: ${({ theme }) => theme.tabView.fontSize};
   font-weight: ${({ theme }) => theme.tabView.fontWeight};
@@ -29,37 +25,28 @@ export const TabLinkWrapper = styled.a<
     color: ${({ theme, disabled }) => !disabled && theme.colors.neutral[900]};
   }
 
-  ${({ isActive, theme }) =>
-    css`
-      &:after {
-        content: " ";
+  ${({ active, theme }) => {
+    if (active) {
+      return css`
+        &:after {
+          content: " ";
 
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
 
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
 
-        background: ${theme.colors.primary[500]};
-      }
-    `}
+          background: ${theme.colors.primary[500]};
+        }
+      `;
+    }
+    return "";
+  }}
 `;
-
-const TabLink: FC<TabLinkProps> = ({
-  isActive = false,
-  disabled = false,
-  children,
-  ...props
-}) => {
-  return (
-    <TabLinkWrapper isActive={isActive} disabled={disabled} {...props}>
-      {children}
-    </TabLinkWrapper>
-  );
-};
 
 export default TabLink;

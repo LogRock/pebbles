@@ -1,18 +1,7 @@
-import React, { FC } from "react";
-import { TabViewWrapper } from "./TabView.styled";
-import { TabViewProps } from "./TabView.types";
+import styled from "styled-components";
 
-const TabView: FC<TabViewProps> = ({
-  bgColor = "#fff",
-  borderRadius = 10,
-  children,
-  ...props
-}) => {
-  return (
-    <TabViewWrapper bgColor={bgColor} borderRadius={borderRadius} {...props}>
-      {children}
-    </TabViewWrapper>
-  );
-};
+const TabView = styled.div`
+  width: 100%;
+`;
 
 export default TabView;

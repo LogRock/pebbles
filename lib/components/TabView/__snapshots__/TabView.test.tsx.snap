@@ -3,23 +3,23 @@
 exports[`TabView > renders TabView properly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL gPNyoh"
+    class="sc-bdvvtL eukWAO"
   >
     <div
       class="sc-gsDKAQ kkuJso"
     >
       <a
-        class="sc-dkPtRN gVfxRV"
+        class="sc-dkPtRN fTTcnx"
       >
         Tab 1
       </a>
       <a
-        class="sc-dkPtRN hxbIje"
+        class="sc-dkPtRN gRvnxv"
       >
         Tab 2
       </a>
       <a
-        class="sc-dkPtRN fVa-Dfy"
+        class="sc-dkPtRN fwuZnX"
         disabled=""
       >
         Tab 3

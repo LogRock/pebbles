@@ -13,7 +13,7 @@ describe("TabView", () => {
     const { container } = render(
       <TabView>
         <TabLinks>
-          <TabLink isActive>Tab 1</TabLink>
+          <TabLink active>Tab 1</TabLink>
           <TabLink>Tab 2</TabLink>
           <TabLink disabled>Tab 3</TabLink>
         </TabLinks>
