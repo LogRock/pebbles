@@ -96,11 +96,13 @@ export { default as MultiSelect } from "./components/MultiSelect";
 export type { MultiSelectProps } from "./components/MultiSelect";
 
 // expose TabView
-export { default as TabView } from "./components/TabView";
-export { default as TabLink } from "./components/TabView/TabLink";
-export { default as TabLinks } from "./components/TabView/TabLinks";
-export { default as TabContent } from "./components/TabView/TabContent";
-export type { TabViewProps } from "./components/TabView";
+export {
+  default as TabView,
+  TabLink,
+  TabLinks,
+  TabContent,
+} from "./components/TabView";
+export type { TabLinkProps } from "./components/TabView";
 
 // expose StatusPercentage
 export { default as StatusPercentage } from "./components/StatusPercentage";
