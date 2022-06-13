@@ -1,3 +1,9 @@
+## [6.14.2](https://github.com/LogRock/pebbles/compare/v6.14.1...v6.14.2) (2022-06-13)
+
+### Bug Fixes
+
+- esposes StatusPercentage component on main.ts ([720403a](https://github.com/LogRock/pebbles/commit/720403a1706d282a15c79ec86af1e05ca7919d00))
+
 ## [6.14.1](https://github.com/LogRock/pebbles/compare/v6.14.0...v6.14.1) (2022-06-13)
 
 ### Bug Fixes
