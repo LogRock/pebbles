@@ -22,7 +22,7 @@ FirstTabActive.args = {
   children: (
     <>
       <TabLinks>
-        <TabLink href="" isActive>
+        <TabLink href="" active>
           Tab 1 <br />
           Multiline!
         </TabLink>
