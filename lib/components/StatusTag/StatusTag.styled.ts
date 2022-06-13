@@ -32,8 +32,8 @@ export const StatusTagBackground = styled.div<
 
   background-color: ${({ theme, variant, collapsed }) => {
     return collapsed
-      ? theme.statusTag.color.background.collapsed[variant]
-      : theme.statusTag.color.background[variant];
+      ? theme.statusTag.color.background.collapsed[variant || "neutral"]
+      : theme.statusTag.color.background[variant || "neutral"];
   }};
 `;
 
@@ -41,7 +41,8 @@ export const IconWrapper = styled.div<Pick<any, "variant" | "hasLabel">>`
   margin-right: ${({ theme, hasLabel }) => (hasLabel ? theme.spacings.sm : 0)};
   margin-bottom: -2px;
 
-  color: ${({ theme, variant }) => theme.statusTag.color.icon[variant]};
+  color: ${({ theme, variant }) =>
+    theme.statusTag.color.icon[variant || "neutral"]};
 `;
 
 export const StyledOverlineLarge = styled(OverlineLarge)<
@@ -49,8 +50,8 @@ export const StyledOverlineLarge = styled(OverlineLarge)<
 >`
   color: ${({ theme, variant, collapsed }) => {
     return collapsed
-      ? theme.statusTag.color.label.collapsed[variant]
-      : theme.statusTag.color.label[variant];
+      ? theme.statusTag.color.label.collapsed[variant || "neutral"]
+      : theme.statusTag.color.label[variant || "neutral"];
   }};
   font-size: ${({ theme, size, collapsed }) => {
     return collapsed
