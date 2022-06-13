@@ -2,10 +2,10 @@ import React, { FC } from "react";
 
 import styled, { css } from "styled-components";
 
-import { TabViewProps } from "./TabView.types";
+import { TabLinkProps } from "./TabView.types";
 
 export const TabLinkWrapper = styled.a<
-  Pick<TabViewProps, "isActive" | "disabled">
+  Pick<TabLinkProps, "isActive" | "disabled">
 >`
   display: flex;
   position: relative;
@@ -49,7 +49,7 @@ export const TabLinkWrapper = styled.a<
     `}
 `;
 
-const TabLink: FC<TabViewProps> = ({
+const TabLink: FC<TabLinkProps> = ({
   isActive = false,
   disabled = false,
   children,
