@@ -10,19 +10,30 @@ import {
 } from "./StatusNumber.styled";
 
 const StatusNumber: FC<StatusNumberProps> = ({
-  currentValue = 0,
-  totalValue = 0,
+  currentValue,
+  totalValue,
   variant = "neutral",
   icon,
   ...props
 }) => {
+  const adaptValue = (value: string | number | null | undefined) => {
+    if (!value) {
+      return "--";
+    }
+    return value;
+  };
+
   return (
     <StatusNumberWrapper variant={variant} {...props}>
       {icon && <IconWrapper variant={variant}>{icon}</IconWrapper>}
       <LabelWrapper>
-        <StyledValueLarge variant={variant}>{currentValue}</StyledValueLarge>
+        <StyledValueLarge variant={variant}>
+          {adaptValue(currentValue)}
+        </StyledValueLarge>
         <StyledValueMedium variant={variant}>/</StyledValueMedium>
-        <StyledValueMedium variant={variant}>{totalValue}</StyledValueMedium>
+        <StyledValueMedium variant={variant}>
+          {adaptValue(totalValue)}
+        </StyledValueMedium>
       </LabelWrapper>
     </StatusNumberWrapper>
   );
