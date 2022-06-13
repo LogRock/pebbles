@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface StatusTagProps {
+export interface StatusTagProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string;
   size: "micro" | "small" | "medium" | "large";
   variant?: "error" | "warning" | "success" | "neutral";
