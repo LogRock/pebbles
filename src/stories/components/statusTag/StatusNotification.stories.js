@@ -37,4 +37,5 @@ StatusNotificationLabeled.args = {
   size: "small",
   collapsed: true,
   children: "7",
+  role: "fmcsa-notification",
 };
