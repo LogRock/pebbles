@@ -1,3 +1,12 @@
+## [6.15.2](https://github.com/LogRock/pebbles/compare/v6.15.1...v6.15.2) (2022-06-13)
+
+### Bug Fixes
+
+- allow status tag to set role or aria lable ([0795cd8](https://github.com/LogRock/pebbles/commit/0795cd8191a3c64bfc987079ad2aca614c4848c2))
+- refactor and cleanup ([b196af5](https://github.com/LogRock/pebbles/commit/b196af5fc9cd5db592061de6ce8de33481910e37))
+- **tab-view:** :fire: remove all dead code ([cdc08fb](https://github.com/LogRock/pebbles/commit/cdc08fb241f3a34d8b91cae5e983a704c3bf2643))
+- **tab-view:** :label: make tablink accept all anchor props ([6f8880b](https://github.com/LogRock/pebbles/commit/6f8880be0370d94f4cb147738f34945055cafdf6))
+
 ## [6.15.1](https://github.com/LogRock/pebbles/compare/v6.15.0...v6.15.1) (2022-06-13)
 
 ### Bug Fixes
