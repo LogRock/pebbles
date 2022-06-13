@@ -1,3 +1,12 @@
+## [6.14.1](https://github.com/LogRock/pebbles/compare/v6.14.0...v6.14.1) (2022-06-13)
+
+### Bug Fixes
+
+- keep status notification at top, besides content justification ([463f9e2](https://github.com/LogRock/pebbles/commit/463f9e2a07fa46743045c4ccd345b5f043ba55f9))
+- set default param for a nullable variable ([21df802](https://github.com/LogRock/pebbles/commit/21df802b9ef2970f3db5cdfc41e2ad98541ab837))
+- status number now accepts num, string or null values, shows -- when no values ([49fb939](https://github.com/LogRock/pebbles/commit/49fb939f682254c9a70f1b7ba83013548e6bd221))
+- update snapshot ([0652f8b](https://github.com/LogRock/pebbles/commit/0652f8b9232f7dbb87e7d333396cceecd34c5aa4))
+
 # [6.14.0](https://github.com/LogRock/pebbles/compare/v6.13.0...v6.14.0) (2022-06-10)
 
 ### Features
