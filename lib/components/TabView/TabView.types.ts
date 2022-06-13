@@ -1,8 +1,6 @@
 import React from "react";
 
 export interface TabLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
-  isActive?: boolean;
+  active?: boolean;
   disabled?: boolean;
-  bgColor?: string;
-  borderRadius?: number;
 }
