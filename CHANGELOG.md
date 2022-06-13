@@ -1,3 +1,9 @@
+## [6.15.1](https://github.com/LogRock/pebbles/compare/v6.15.0...v6.15.1) (2022-06-13)
+
+### Bug Fixes
+
+- **card:** :lipstick: remove unnecessary card width property ([e168fad](https://github.com/LogRock/pebbles/commit/e168fada6f6961f7222099b53e5825c7a4bf88c8))
+
 # [6.15.0](https://github.com/LogRock/pebbles/compare/v6.14.3...v6.15.0) (2022-06-13)
 
 ### Features
