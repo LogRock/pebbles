@@ -7,7 +7,6 @@ export const CardWrapper = styled.div<
 >`
   display: flex;
   flex-direction: column;
-  width: max-content;
   padding: ${({ padding }) => (padding ? `${padding}px` : "0px")};
 
   border-radius: ${({ borderRadius }) =>
