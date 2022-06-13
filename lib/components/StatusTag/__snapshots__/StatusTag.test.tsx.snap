@@ -2,14 +2,14 @@
 
 exports[`StatusTag > renders properly 1`] = `
 <div
-  class="sc-bqiRlB lpmcWM"
+  class="sc-bqiRlB djBTmM"
 >
   <div
-    class="sc-ksdxgE laSaIJ"
+    class="sc-ksdxgE Eewgt"
     label="High Risk"
   >
     <p
-      class="sc-iqseJM sc-fotOHu xyHVy eQnoQT"
+      class="sc-iqseJM sc-fotOHu xyHVy bjDOzb"
     />
   </div>
 </div>
@@ -17,13 +17,13 @@ exports[`StatusTag > renders properly 1`] = `
 
 exports[`StatusTag > should render Notification Status 1`] = `
 <div
-  class="sc-bqiRlB lowtcP"
+  class="sc-bqiRlB gbZIMP"
 >
   <div
-    class="sc-ksdxgE gjGcRT"
+    class="sc-ksdxgE iMoYvL"
   >
     <p
-      class="sc-iqseJM sc-fotOHu xyHVy ewSGrG"
+      class="sc-iqseJM sc-fotOHu xyHVy eiKoEC"
     />
   </div>
 </div>
