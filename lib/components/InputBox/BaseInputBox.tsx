@@ -1,6 +1,6 @@
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { FC, HTMLInputTypeAttribute, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import {
   StyledDiv,
   Label,
@@ -12,7 +12,7 @@ import {
   StyledInput,
   HintIconWrapper,
   HelperIcon,
-  ShowHidePwdBtn,
+  ShowHidePasswordBtn,
 } from "./BaseInputBox.styled";
 import uniqueid from "lodash.uniqueid";
 import { E164Number } from "libphonenumber-js";
@@ -42,23 +42,10 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   ...inputProps
 }) => {
   const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
-  const [isPassword, setIsPassword] = useState(false);
-  const [showPwd, setShowPwd] = useState(false);
-  const [inputType, setInputType] = useState<HTMLInputTypeAttribute>();
+  const [showPassword, setShowPassword] = useState(false);
 
-  useEffect(() => {
-    inputProps?.type === "password" && setIsPassword(true);
-    inputProps.type && setInputType(inputProps.type);
-  }, []);
-
-  useEffect(() => {
-    if (isPassword) {
-      showPwd ? setInputType("text") : setInputType("password");
-    }
-  }, [showPwd, isPassword]);
-
-  const switchShowPwd = () => {
-    setShowPwd((prevState) => !prevState);
+  const switchShowPassword = () => {
+    setShowPassword((prevState) => !prevState);
   };
 
   return (
@@ -69,7 +56,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
           <StyledInput
             status={status}
             {...inputProps}
-            type={inputType}
+            type={showPassword ? "text" : inputProps.type}
             id={inputID}
           />
         )}
@@ -77,13 +64,15 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
 
         {hint && (
           <HintDiv>
-            {isPassword && (
-              <ShowHidePwdBtn
+            {inputProps?.type === "password" && (
+              <ShowHidePasswordBtn
                 disabled={inputProps.disabled}
-                onClick={() => switchShowPwd()}
+                onClick={() => switchShowPassword()}
               >
-                <ParagraphMedium>{showPwd ? "hide" : "show"}</ParagraphMedium>
-              </ShowHidePwdBtn>
+                <ParagraphMedium>
+                  {showPassword ? "hide" : "show"}
+                </ParagraphMedium>
+              </ShowHidePasswordBtn>
             )}
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
             {hint.icon && (

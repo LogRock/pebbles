@@ -142,7 +142,9 @@ export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
   ${BaseStyleInput}
 `;
 
-export const ShowHidePwdBtn = styled.div<{ disabled: boolean | undefined }>`
+export const ShowHidePasswordBtn = styled.div<{
+  disabled: boolean | undefined;
+}>`
   display: flex;
   align-items: center;
   margin-right: 12px;
