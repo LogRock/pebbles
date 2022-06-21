@@ -72,19 +72,6 @@ DisabledInputBox.args = {
   value: "Some value here",
 };
 
-export const PasswordInput = Template.bind({});
-PasswordInput.args = {
-  type: "password",
-  description: "",
-  hint: {
-    content: "",
-    icon: <Icon size={0.7} path={mdiLock} />,
-  },
-  status: "info",
-  helper: "",
-  isPassword: true,
-};
-
 const InteractiveTemplate = (args) => {
   const [labelContent, setLabelContent] = useState("");
   const onChangeInputBox = (event) => {
@@ -110,6 +97,22 @@ InteractiveInputBox.args = {
     status: "info",
     helper: "",
     placeholder: "no ads or spams.",
+  },
+};
+
+export const InteractivePwdInput = InteractiveTemplate.bind({});
+InteractivePwdInput.args = {
+  inputBoxArgs: {
+    type: "password",
+    description: "",
+    hint: {
+      content: "",
+      icon: <Icon size={0.7} path={mdiLock} />,
+    },
+    status: "info",
+    helper: "",
+    placeholder: "input your password",
+    isPassword: true,
   },
 };
 

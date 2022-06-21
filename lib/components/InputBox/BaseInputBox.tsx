@@ -31,7 +31,6 @@ export interface BaseInputBoxProps
   disableMinus?: boolean;
   disablePlus?: boolean;
   value?: string | ReadonlyArray<string> | number | E164Number | undefined;
-  isPassword?: boolean;
 }
 
 const BaseInputBox: FC<BaseInputBoxProps> = ({
@@ -40,14 +39,15 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   status,
   hint,
   helper,
-  isPassword,
   ...inputProps
 }) => {
   const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
+  const [isPassword, setIsPassword] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
   const [inputType, setInputType] = useState<HTMLInputTypeAttribute>();
 
   useEffect(() => {
+    inputProps?.type === "password" && setIsPassword(true);
     inputProps.type && setInputType(inputProps.type);
   }, []);
 
