@@ -1,3 +1,15 @@
+# [6.16.0](https://github.com/LogRock/pebbles/compare/v6.15.2...v6.16.0) (2022-06-21)
+
+### Bug Fixes
+
+- fixed test snapshots ([8eedd4e](https://github.com/LogRock/pebbles/commit/8eedd4e69e2feb4b46e9237a1a4c5c7fe10cffbf))
+- made the code simpler, without useEffect and useState stuff ([d8ba576](https://github.com/LogRock/pebbles/commit/d8ba576d8ac3892debb89119ac1ba54110b8687c))
+- simplified isPassword logic, no extra prop, simple state ([fad20e6](https://github.com/LogRock/pebbles/commit/fad20e69026dcc364bd908e5c41f11553f84c7ec))
+
+### Features
+
+- added show-hide btn toggle to password input ([ef965de](https://github.com/LogRock/pebbles/commit/ef965de40cbf00f15d5278f153a582d6b04bbd71))
+
 ## [6.15.2](https://github.com/LogRock/pebbles/compare/v6.15.1...v6.15.2) (2022-06-13)
 
 ### Bug Fixes
