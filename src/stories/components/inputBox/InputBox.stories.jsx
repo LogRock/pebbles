@@ -4,6 +4,7 @@ import {
   mdiAlert,
   mdiCardAccountDetailsOutline,
   mdiEmailOutline,
+  mdiLock,
 } from "@mdi/js";
 import { Icon } from "@mdi/react";
 
@@ -67,8 +68,21 @@ DisabledInputBox.args = {
   status: "info",
   helper: "",
   placeholder: "this input is disabled, sorry",
-  disabled: true,
+  disabled: false,
   value: "Some value here",
+};
+
+export const PasswordInput = Template.bind({});
+PasswordInput.args = {
+  type: "password",
+  description: "",
+  hint: {
+    content: "",
+    icon: <Icon size={0.7} path={mdiLock} />,
+  },
+  status: "info",
+  helper: "",
+  isPassword: true,
 };
 
 const InteractiveTemplate = (args) => {
