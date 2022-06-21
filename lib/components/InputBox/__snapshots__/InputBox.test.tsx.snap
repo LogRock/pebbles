@@ -49,7 +49,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         class="sc-furwcr gLQxJk"
       >
         <div
-          class="sc-bkkeKt wUAyr PhoneInput PhoneInput--focus"
+          class="sc-ikJyIC kLbbrU PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1337,7 +1337,7 @@ exports[`InputBox > renders Date InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <div
-        class="sc-jrQzAO fqA-dLJ"
+        class="sc-fKVqWL cjJymR"
       >
         <div
           class="react-datepicker-wrapper logrock-datepicker"
@@ -1402,11 +1402,11 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       class="sc-gsDKAQ dhbaiu"
     />
     <div
-      class="sc-ksdxgE ilziB"
+      class="sc-giYglK kGrFoY"
     >
       <button
         aria-label="decrease button"
-        class="sc-kDTinF cqxnnj sc-fFeiMQ fiiHIf"
+        class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
       >
         <svg
           role="presentation"
@@ -1420,16 +1420,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         </svg>
       </button>
       <div
-        class="sc-fotOHu dxYPcb"
+        class="sc-bYoBSM dZxkAw"
       >
         <input
-          class="sc-pVTFL sc-hBUSln iOYcnD gPlzbG"
+          class="sc-pVTFL sc-ezbkAF iOYcnD hPUPOl"
           type="number"
         />
       </div>
       <button
         aria-label="increase button"
-        class="sc-kDTinF cqxnnj sc-fFeiMQ fiiHIf"
+        class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
       >
         <svg
           role="presentation"
@@ -1467,7 +1467,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <div
-        class="sc-bkkeKt wUAyr PhoneInput"
+        class="sc-ikJyIC kLbbrU PhoneInput"
       >
         <div
           class="PhoneInputCountry"
