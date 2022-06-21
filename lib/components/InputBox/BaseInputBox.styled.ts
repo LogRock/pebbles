@@ -48,6 +48,7 @@ export const HintDiv = styled.div`
   top: ${({ theme }) => theme.inputBox.hint.top};
   right: ${({ theme }) => theme.inputBox.hint.right};
   flex-direction: row;
+  align-items: center;
   margin: ${({ theme }) => theme.inputBox.margin};
   padding: ${({ theme }) => theme.inputBox.padding};
 `;
@@ -139,4 +140,21 @@ export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
 
 export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
   ${BaseStyleInput}
+`;
+
+export const ShowHidePwdBtn = styled.div<{ disabled: boolean | undefined }>`
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+
+  p {
+    color: ${({ theme, disabled }) =>
+      disabled ? theme.colors.neutral[400] : theme.colors.neutral[900]};
+    font-family: Archivo, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  }
 `;
