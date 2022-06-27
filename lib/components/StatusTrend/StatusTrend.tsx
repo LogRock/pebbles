@@ -7,17 +7,12 @@ import { StatusTrendSymbol } from "./StatusTrendSymbol";
 const StatusTrend: FC<StatusTrendProps> = ({
   direction = "neutral",
   variant = "neutral",
-  iconSize,
   children,
   ...props
 }) => {
   return (
     <StatusTrendWrapper variant={variant} {...props}>
-      <StatusTrendSymbol
-        direction={direction}
-        variant={variant}
-        iconSize={iconSize}
-      />
+      <StatusTrendSymbol direction={direction} variant={variant} />
       {children}
     </StatusTrendWrapper>
   );
