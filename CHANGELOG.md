@@ -1,3 +1,9 @@
+## [7.0.1](https://github.com/LogRock/pebbles/compare/v7.0.0...v7.0.1) (2022-06-27)
+
+### Bug Fixes
+
+- **status-trend:** :label: remove unused prop ([7a46234](https://github.com/LogRock/pebbles/commit/7a4623424b5a7c4f4b5ae6b77d095685c9c45405))
+
 # [7.0.0](https://github.com/LogRock/pebbles/compare/v6.16.0...v7.0.0) (2022-06-27)
 
 ### Features
