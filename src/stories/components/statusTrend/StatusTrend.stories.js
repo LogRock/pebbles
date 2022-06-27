@@ -11,47 +11,42 @@ const Template = (args) => <StatusTrend {...args}></StatusTrend>;
 
 export const UpIsBad = Template.bind({});
 UpIsBad.args = {
-  labelPrimary: "+10.3%",
-  labelSecondary: "vs prev month",
+  children: "+10.3%",
   direction: "down",
   variant: "negative",
 };
 
 export const DownIsGood = Template.bind({});
 DownIsGood.args = {
-  labelPrimary: "-21.0%",
-  labelSecondary: "vs prev month",
+  children: "-21.0%",
   direction: "up",
   variant: "positive",
 };
 
 export const UpIsGood = Template.bind({});
 UpIsGood.args = {
-  labelPrimary: "+6.8%",
-  labelSecondary: "vs prev month",
+  children: "+6.8%",
   direction: "down",
   variant: "positive",
 };
 
 export const DownIsBad = Template.bind({});
 DownIsBad.args = {
-  labelPrimary: "-42.2%",
-  labelSecondary: "vs prev month",
+  children: "-42.2%",
   direction: "up",
   variant: "negative",
 };
 
 export const Neutral = Template.bind({});
 Neutral.args = {
-  labelPrimary: "0.0%",
-  labelSecondary: "vs prev month",
+  children: "0.0%",
   direction: "neutral",
   variant: "neutral",
 };
 
 export const NoSecondaryLabel = Template.bind({});
 NoSecondaryLabel.args = {
-  labelPrimary: "-42.2%",
+  children: "-42.2%",
   direction: "up",
   variant: "negative",
 };
