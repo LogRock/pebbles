@@ -1,3 +1,13 @@
+# [7.0.0](https://github.com/LogRock/pebbles/compare/v6.16.0...v7.0.0) (2022-06-27)
+
+### Features
+
+- :sparkles: change status trend to new style ([84a6f7c](https://github.com/LogRock/pebbles/commit/84a6f7cab306ba627d281e0eb2d4918a38b43826))
+
+### BREAKING CHANGES
+
+- status trend API changed
+
 # [6.16.0](https://github.com/LogRock/pebbles/compare/v6.15.2...v6.16.0) (2022-06-21)
 
 ### Bug Fixes
