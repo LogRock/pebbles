@@ -45,7 +45,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   const [showPassword, setShowPassword] = useState(false);
 
   const switchShowPassword = () => {
-    setShowPassword((prevState) => !prevState);
+    if (!inputProps?.disabled) setShowPassword((prevState) => !prevState);
   };
 
   return (

@@ -68,7 +68,7 @@ DisabledInputBox.args = {
   status: "info",
   helper: "",
   placeholder: "this input is disabled, sorry",
-  disabled: false,
+  disabled: true,
   value: "Some value here",
 };
 
@@ -113,6 +113,22 @@ InteractivePwdInput.args = {
     helper: "",
     placeholder: "input your password",
     isPassword: true,
+  },
+};
+export const DisabledPwdInput = InteractiveTemplate.bind({});
+DisabledPwdInput.args = {
+  inputBoxArgs: {
+    type: "password",
+    description: "",
+    hint: {
+      content: "",
+      icon: <Icon size={0.7} path={mdiLock} />,
+    },
+    status: "info",
+    helper: "",
+    placeholder: "input your password",
+    isPassword: true,
+    disabled: true,
   },
 };
 
