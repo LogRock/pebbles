@@ -1,3 +1,9 @@
+## [7.0.2](https://github.com/LogRock/pebbles/compare/v7.0.1...v7.0.2) (2022-06-28)
+
+### Bug Fixes
+
+- disable input pwd show/hide behavior when disabled ([a3a0342](https://github.com/LogRock/pebbles/commit/a3a03427fe4ffc7a9954a4f95f9c6b8bc3c07ae4))
+
 ## [7.0.1](https://github.com/LogRock/pebbles/compare/v7.0.0...v7.0.1) (2022-06-27)
 
 ### Bug Fixes
