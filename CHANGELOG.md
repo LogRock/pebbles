@@ -1,3 +1,9 @@
+# [7.1.0](https://github.com/LogRock/pebbles/compare/v7.0.2...v7.1.0) (2022-06-30)
+
+### Features
+
+- **table:** :sparkles: add table component to library ([3a7a6a2](https://github.com/LogRock/pebbles/commit/3a7a6a2cea2b4bad8278b20a5bc547c5b0f24b07))
+
 ## [7.0.2](https://github.com/LogRock/pebbles/compare/v7.0.1...v7.0.2) (2022-06-28)
 
 ### Bug Fixes
