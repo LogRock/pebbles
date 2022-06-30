@@ -1,124 +1,22 @@
 // Vitest Snapshot v1
 
-exports[`Table > renders the footer 1`] = `
-<table
-  class="sc-bqiRlB VdJgK"
->
-  <thead
-    class="sc-ksdxgE"
-  >
-    <tr
-      class="sc-ieecCq iIsGhM"
-    >
-      <th
-        class="sc-fFeiMQ kbeicr"
-      >
-        TH
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="sc-hBUSln"
-  >
-    <tr
-      class="sc-ieecCq iIsGhM"
-    >
-      <td
-        class="sc-bkkeKt ePzeis"
-      >
-        TD
-      </td>
-    </tr>
-  </tbody>
-  <tfoot
-    class="sc-fotOHu bfbkII"
-  >
-    <tr>
-      <td
-        colspan="100"
-      >
-        <span>
-          - of 
-        </span>
-        <button
-          class="sc-hGPBjI junydo"
-        >
-          foo
-        </button>
-      </td>
-    </tr>
-  </tfoot>
-</table>
-`;
-
-exports[`Table > renders with customized footer 1`] = `
-<table
-  class="sc-bqiRlB VdJgK"
->
-  <thead
-    class="sc-ksdxgE"
-  >
-    <tr
-      class="sc-ieecCq iIsGhM"
-    >
-      <th
-        class="sc-fFeiMQ kbeicr"
-      >
-        TH
-      </th>
-    </tr>
-  </thead>
-  <tbody
-    class="sc-hBUSln"
-  >
-    <tr
-      class="sc-ieecCq iIsGhM"
-    >
-      <td
-        class="sc-bkkeKt ePzeis"
-      >
-        TD
-      </td>
-    </tr>
-  </tbody>
-  <tfoot
-    class="sc-fotOHu bfbkII"
-  >
-    <tr>
-      <td
-        colspan="100"
-      >
-        <span>
-          0**100***9999
-        </span>
-        <button
-          class="sc-hGPBjI junydo"
-        >
-          foo
-        </button>
-      </td>
-    </tr>
-  </tfoot>
-</table>
-`;
-
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-bqiRlB VdJgK"
+  class="sc-bqiRlB fRKOoo"
 >
   <thead
-    class="sc-ksdxgE"
+    class="sc-ksdxgE cKrAHV"
   >
     <tr
-      class="sc-ieecCq iIsGhM"
+      class="sc-ieecCq hQAIoa"
     >
       <th
-        class="sc-fFeiMQ kbeicr"
+        class="sc-fFeiMQ cGlYYl"
       >
         Header A
       </th>
       <th
-        class="sc-fFeiMQ kbeicr"
+        class="sc-fFeiMQ cGlYYl"
       >
         Header A
         <svg
@@ -146,7 +44,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-fFeiMQ kbeicr"
+        class="sc-fFeiMQ cGlYYl"
       >
         Header B
         <svg
@@ -166,7 +64,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-fFeiMQ kbeicr"
+        class="sc-fFeiMQ cGlYYl"
       >
         Header C
         <svg
@@ -186,58 +84,58 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       />
     </tr>
   </thead>
   <tbody
-    class="sc-hBUSln"
+    class="sc-hBUSln QoxkZ"
   >
     <tr
-      class="sc-ieecCq iIsGhM"
+      class="sc-ieecCq hQAIoa"
     >
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content A1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content B1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content C1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       />
     </tr>
     <tr
-      class="sc-ieecCq kgtdLl"
+      class="sc-ieecCq iqgojR"
     >
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content A1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content B1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         Content C1
       </td>
       <td
-        class="sc-bkkeKt ePzeis"
+        class="sc-bkkeKt iKZsIB"
       >
         <span
-          class="sc-dJjYzT cnkYcE"
+          class="sc-dJjYzT cSXeVl"
         >
           New
         </span>
