@@ -9,11 +9,15 @@ export {
   HeadingH6,
   OverlineLarge,
   OverlineMedium,
-  OverlineSmall,
+  OverlineXSmall,
+  overlineXSmallCSS,
   ParagraphLarge,
   ParagraphMedium,
+  paragraphMediumCSS,
   ParagraphSmall,
+  paragraphSmallCSS,
   ParagraphXSmall,
+  paragraphXSmallCSS,
 } from "./Typography.styled";
 export type {
   TypographyHeaderProps,

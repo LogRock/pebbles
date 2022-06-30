@@ -15,11 +15,15 @@ export {
   HeadingH6,
   OverlineLarge,
   OverlineMedium,
-  OverlineSmall,
+  OverlineXSmall,
+  overlineXSmallCSS,
   ParagraphLarge,
+  paragraphMediumCSS,
   ParagraphMedium,
   ParagraphSmall,
+  paragraphSmallCSS,
   ParagraphXSmall,
+  paragraphXSmallCSS,
 } from "./components/Typography";
 export type {
   TypographyHeaderProps,
@@ -37,10 +41,10 @@ export { InputBox } from "./components/InputBox";
 // expose Select
 export { default as Select } from "./components/Select";
 
-export { default as SimpleItem } from "./components/Select/items/SimpleItem";
-export { default as TableItem } from "./components/Select/items/TableItem";
+export { default as SelectSimpleItem } from "./components/Select/items/SimpleItem";
+export { default as SelectTableItem } from "./components/Select/items/TableItem";
 
-export { default as TableHeader } from "./components/Select/headers/TableHeader";
+export { default as SelectTableHeader } from "./components/Select/headers/TableHeader";
 
 // expose CheckBox
 export { default as CheckBox } from "./components/CheckBox";
@@ -107,3 +111,21 @@ export type { TabLinkProps } from "./components/TabView";
 // expose StatusPercentage
 export { default as StatusPercentage } from "./components/StatusPercentage";
 export type { StatusPercentageProps } from "./components/StatusPercentage";
+
+// Table
+export {
+  default as Table,
+  TableBody,
+  TableDatum,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./components/Table";
+export type {
+  OrderingEnum,
+  OrderingProps,
+  TableFooterProps,
+  TableHeaderProps,
+  TableRowProps,
+} from "./components/Table";

@@ -1,0 +1,248 @@
+// Vitest Snapshot v1
+
+exports[`Table > renders the footer 1`] = `
+<table
+  class="sc-bqiRlB VdJgK"
+>
+  <thead
+    class="sc-ksdxgE"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        TH
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="sc-hBUSln"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        TD
+      </td>
+    </tr>
+  </tbody>
+  <tfoot
+    class="sc-fotOHu bfbkII"
+  >
+    <tr>
+      <td
+        colspan="100"
+      >
+        <span>
+          - of 
+        </span>
+        <button
+          class="sc-hGPBjI junydo"
+        >
+          foo
+        </button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+`;
+
+exports[`Table > renders with customized footer 1`] = `
+<table
+  class="sc-bqiRlB VdJgK"
+>
+  <thead
+    class="sc-ksdxgE"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        TH
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="sc-hBUSln"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        TD
+      </td>
+    </tr>
+  </tbody>
+  <tfoot
+    class="sc-fotOHu bfbkII"
+  >
+    <tr>
+      <td
+        colspan="100"
+      >
+        <span>
+          0**100***9999
+        </span>
+        <button
+          class="sc-hGPBjI junydo"
+        >
+          foo
+        </button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+`;
+
+exports[`Table > renders with some content 1`] = `
+<table
+  class="sc-bqiRlB VdJgK"
+>
+  <thead
+    class="sc-ksdxgE"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        Header A
+      </th>
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        Header A
+        <svg
+          fill="none"
+          height="16"
+          style="vertical-align: middle;"
+          viewBox="0 0 11 16"
+          width="11"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.375 5L5.375 1L9.375 5M9.375"
+            stroke="#9CA3AF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.67"
+          />
+          <path
+            d="M1.375 5M9.375 11L5.375 15L1.375 11"
+            stroke="#9CA3AF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.67"
+          />
+        </svg>
+      </th>
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        Header B
+        <svg
+          fill="none"
+          height="7"
+          viewBox="0 0 12 7"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 6L6 1L1 6"
+            stroke="#6B7280"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.67"
+          />
+        </svg>
+      </th>
+      <th
+        class="sc-fFeiMQ kbeicr"
+      >
+        Header C
+        <svg
+          fill="none"
+          height="7"
+          viewBox="0 0 12 7"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 1L6 6L1 1"
+            stroke="#6B7280"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.67"
+          />
+        </svg>
+      </th>
+      <td
+        class="sc-bkkeKt ePzeis"
+      />
+    </tr>
+  </thead>
+  <tbody
+    class="sc-hBUSln"
+  >
+    <tr
+      class="sc-ieecCq iIsGhM"
+    >
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content A1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content B1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content C1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      />
+    </tr>
+    <tr
+      class="sc-ieecCq kgtdLl"
+    >
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content A1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content B1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        Content C1
+      </td>
+      <td
+        class="sc-bkkeKt ePzeis"
+      >
+        <span
+          class="sc-dJjYzT cnkYcE"
+        >
+          New
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

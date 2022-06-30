@@ -105,7 +105,7 @@ interface Typography {
   paragraphXSmall: ParagraphProps;
   overlineLarge: OverlineProps;
   overlineMedium: OverlineProps;
-  overlineSmall: OverlineProps;
+  overlineXSmall: OverlineProps;
 }
 
 interface Shadows {

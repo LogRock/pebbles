@@ -36,7 +36,7 @@ import {
   headingH6,
   overlineLarge,
   overlineMedium,
-  overlineSmall,
+  overlineXSmall,
   paragraphLarge,
   paragraphMedium,
   paragraphSmall,
@@ -681,7 +681,7 @@ const theme: Theme = {
     paragraphXSmall,
     overlineLarge,
     overlineMedium,
-    overlineSmall,
+    overlineXSmall,
   },
   shadows,
   blurs: {

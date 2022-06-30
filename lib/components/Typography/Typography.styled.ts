@@ -262,7 +262,7 @@ export const ParagraphMedium = styled.p<TypographyParagraphProps>`
   ${paragraphMediumCSS}
 `;
 
-export const ParagraphSmall = styled.p<TypographyParagraphProps>`
+export const paragraphSmallCSS = css<TypographyParagraphProps>`
   margin: 0;
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
@@ -277,7 +277,11 @@ export const ParagraphSmall = styled.p<TypographyParagraphProps>`
   text-decoration: ${decorationsFromProps};
 `;
 
-export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
+export const ParagraphSmall = styled.p<TypographyParagraphProps>`
+  ${paragraphSmallCSS}
+`;
+
+export const paragraphXSmallCSS = css<TypographyParagraphProps>`
   margin: 0;
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
@@ -290,6 +294,10 @@ export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
       : theme.typography.paragraphXSmall.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphXSmall.lineHeight};
   text-decoration: ${decorationsFromProps};
+`;
+
+export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
+  ${paragraphXSmallCSS}
 `;
 
 export const OverlineLarge = styled.p<TypographyOverlineProps>`
@@ -316,14 +324,18 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
   text-transform: uppercase;
 `;
 
-export const OverlineSmall = styled.p<TypographyOverlineProps>`
+export const overlineXSmallCSS = css`
   margin: 0;
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
-  font-family: ${({ theme }) => theme.typography.overlineSmall.fontFamily};
-  font-size: ${({ theme }) => theme.typography.overlineSmall.fontSize};
-  font-weight: ${({ theme }) => theme.typography.overlineSmall.weight};
+  font-family: ${({ theme }) => theme.typography.overlineXSmall.fontFamily};
+  font-size: ${({ theme }) => theme.typography.overlineXSmall.fontSize};
+  font-weight: ${({ theme }) => theme.typography.overlineXSmall.weight};
   letter-spacing: 1px;
-  line-height: ${({ theme }) => theme.typography.overlineSmall.lineHeight};
+  line-height: ${({ theme }) => theme.typography.overlineXSmall.lineHeight};
   text-transform: uppercase;
+`;
+
+export const OverlineXSmall = styled.p<TypographyOverlineProps>`
+  ${overlineXSmallCSS}
 `;

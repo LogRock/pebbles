@@ -268,7 +268,7 @@ export const overlineMedium: OverlineProps = {
   textTransform: "uppercase",
 };
 
-export const overlineSmall: OverlineProps = {
+export const overlineXSmall: OverlineProps = {
   fontFamily: "Archivo, sans-serif",
   fontSize: "11px",
   lineHeight: "20px",
