@@ -1,3 +1,9 @@
+# [7.2.0](https://github.com/LogRock/pebbles/compare/v7.1.0...v7.2.0) (2022-07-01)
+
+### Features
+
+- **table:** :label: export enum as value and not as type ([c22a2b8](https://github.com/LogRock/pebbles/commit/c22a2b8330ff552931726f622e5a5edcb78d33e8))
+
 # [7.1.0](https://github.com/LogRock/pebbles/compare/v7.0.2...v7.1.0) (2022-06-30)
 
 ### Features
