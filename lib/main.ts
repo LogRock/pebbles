@@ -122,8 +122,8 @@ export {
   TableHeader,
   TableRow,
 } from "./components/Table";
+export { OrderingEnum } from "./components/Table";
 export type {
-  OrderingEnum,
   OrderingProps,
   TableFooterProps,
   TableHeaderProps,
