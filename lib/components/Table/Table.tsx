@@ -82,6 +82,7 @@ export const TableFooter: FC<TableFooterProps> = ({
   showGoToLastPage,
   goToLastPageContent,
   onGoToLastPageClicked,
+  children,
 }) => {
   const theme = useContext(ThemeContext);
 
@@ -199,6 +200,7 @@ export const TableFooter: FC<TableFooterProps> = ({
     <TFoot>
       <tr>
         <td colSpan={100}>
+          {children}
           {itemsCount}
           {goToFirstPage}
           {goToPreviousPage}

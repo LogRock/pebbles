@@ -243,3 +243,52 @@ export const WithCustomStuffInFooter = () => (
     ></TableFooter>
   </Table>
 );
+
+export const CustomFooterContent = () => {
+  return (
+    <Table>
+      <TableHead>
+        <TableRow addEmptyTDAtEnd>
+          <TableHeader showOrdering currentOrder={OrderingEnum.DESC} center>
+            Ordered DESC
+          </TableHeader>
+          <TableHeader showOrdering currentOrder={OrderingEnum.ASC} center>
+            Ordered ASC
+          </TableHeader>
+          <TableHeader showOrdering center>
+            Orderable
+          </TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow isNew>
+          <TableDatum center>1</TableDatum>
+          <TableDatum center>A</TableDatum>
+          <TableDatum center>Some Guy</TableDatum>
+        </TableRow>
+        <TableRow addEmptyTDAtEnd>
+          <TableDatum center>2</TableDatum>
+          <TableDatum center>B</TableDatum>
+          <TableDatum center>Some Girl</TableDatum>
+        </TableRow>
+        <TableRow isNew>
+          <TableDatum center>3</TableDatum>
+          <TableDatum center>C</TableDatum>
+          <TableDatum center>Some Non-Binary Individual</TableDatum>
+        </TableRow>
+      </TableBody>
+      <TableFooter>
+        <span
+          style={{
+            textAlign: "center",
+            width: "100%",
+            display: "block",
+            background: "red",
+          }}
+        >
+          Some Content
+        </span>
+      </TableFooter>
+    </Table>
+  );
+};
