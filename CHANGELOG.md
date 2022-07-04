@@ -1,3 +1,9 @@
+# [7.3.0](https://github.com/LogRock/pebbles/compare/v7.2.0...v7.3.0) (2022-07-04)
+
+### Features
+
+- **table:** :sparkles: make footer support custom children ([fc114a6](https://github.com/LogRock/pebbles/commit/fc114a66171f5129a97d862064e2d7fe4e83bccc))
+
 # [7.2.0](https://github.com/LogRock/pebbles/compare/v7.1.0...v7.2.0) (2022-07-01)
 
 ### Features
