@@ -38,6 +38,10 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SEMANTIC_RELEASE_SLACK_WEBHOOK }}
         run: yarn semantic-release
 
+      - name: Deploy Storybook
+        id: deploy
+        run: netlify deploy --dir "storybook-static" --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --site ${{ secrets.NETLIFY_PEBBLES_ID }} --prod
+
       - uses: masci/datadog@v1
         with:
           api-key: ${{ secrets.DATADOG_API_KEY }}
@@ -49,7 +53,3 @@ jobs:
               tags:
                 - "project:${{ github.repository }}"
                 - "env:production"
-
-      - name: Deploy Storybook
-        id: deploy
-        run: netlify deploy --dir "storybook-static" --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --site ${{ secrets.NETLIFY_PEBBLES_ID }} --prod
