@@ -41,15 +41,3 @@ jobs:
       - name: Deploy Storybook
         id: deploy
         run: netlify deploy --dir "storybook-static" --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --site ${{ secrets.NETLIFY_PEBBLES_ID }} --prod
-
-      - uses: masci/datadog@v1
-        with:
-          api-key: ${{ secrets.DATADOG_API_KEY }}
-          metrics: |
-            - type: "count"
-              name: "logrock.deploy"
-              value: 1.0
-              host: ${{ github.repository_owner }}
-              tags:
-                - "project:${{ github.repository }}"
-                - "env:production"
