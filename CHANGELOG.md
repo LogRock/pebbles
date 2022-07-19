@@ -1,3 +1,13 @@
+# [7.4.0](https://github.com/LogRock/pebbles/compare/v7.3.0...v7.4.0) (2022-07-19)
+
+### Bug Fixes
+
+- **DORA:** Changes ordering of the steps ([373f3d9](https://github.com/LogRock/pebbles/commit/373f3d981d844e82cfbd31ea5f1a6be6979b6adf))
+
+### Features
+
+- **DORA:** Start reporting deploys in production in datadog ([b80d698](https://github.com/LogRock/pebbles/commit/b80d6987b971561d971c491c6d98efc53656d3a1))
+
 # [7.3.0](https://github.com/LogRock/pebbles/compare/v7.2.0...v7.3.0) (2022-07-04)
 
 ### Features
