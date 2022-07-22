@@ -13,6 +13,7 @@ const StatusPercentage: FC<StatusPercentageProps> = ({
   percentage,
   size = "medium",
   children,
+  variant = "warning",
   ...props
 }) => {
   const sizes = {
@@ -28,6 +29,7 @@ const StatusPercentage: FC<StatusPercentageProps> = ({
         radius={sizes[size].radius}
         stroke={sizes[size].stroke}
         showBaseRing
+        variant={variant}
       />
       {children}
     </StatusPctWrapper>

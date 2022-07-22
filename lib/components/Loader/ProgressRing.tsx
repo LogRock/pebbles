@@ -51,7 +51,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
   colorGradient,
   showBaseRing,
   label,
-  variant,
+  variant = "primary",
   ...inputProps
 }) => {
   const theme = useContext(ThemeContext);
@@ -64,18 +64,14 @@ const ProgressRing: FC<ProgressRingProps> = ({
     if (colorGradient) {
       return "url(#ring_gradient)";
     }
-    return variant
-      ? theme.progressRing.ringForegroundColor[variant]
-      : theme.progressRing.ringForegroundColor.primary;
+    return theme.progressRing.ringForegroundColor[variant];
   };
 
   const getRingBackgroundColor = () => {
     if (colorGradient) {
       return theme.progressRing.ringBackgroundColor.primary;
     }
-    return variant
-      ? theme.progressRing.ringBackgroundColor[variant]
-      : theme.progressRing.ringBackgroundColor.primary;
+    return theme.progressRing.ringBackgroundColor[variant];
   };
 
   return (
