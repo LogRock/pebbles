@@ -380,6 +380,25 @@ export interface ProgressBar {
   };
 }
 
+export interface ProgressRing {
+  ringForegroundColor: {
+    primary: CSS.Property.Color;
+    secondary: CSS.Property.Color;
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+  ringBackgroundColor: {
+    primary: CSS.Property.Color;
+    secondary: CSS.Property.Color;
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+  };
+}
+
 export interface List {
   item: {
     paddingY: CSS.Property.PaddingLeft;
@@ -521,6 +540,7 @@ export default interface Theme {
   loader: Loader;
   alert: Alert;
   progressBar: ProgressBar;
+  progressRing: ProgressRing;
   list: List;
   toggle: Toggle;
   statusNumber: StatusNumber;
