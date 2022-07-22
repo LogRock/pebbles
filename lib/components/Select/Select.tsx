@@ -103,8 +103,22 @@ const Select = <ItemType extends BaseItemType>({
           inputProps?.onClick?.(e);
         }}
         hint={{
-          icon: inputProps?.hint?.icon || (
-            <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />
+          icon: inputProps?.hint?.icon ? (
+            <span
+              onClick={() => {
+                setHasFocus((focus) => !focus);
+              }}
+            >
+              {inputProps.hint.icon}
+            </span>
+          ) : (
+            <span
+              onClick={() => {
+                setHasFocus((focus) => !focus);
+              }}
+            >
+              <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />
+            </span>
           ),
           content: inputProps?.hint?.content || "",
         }}
