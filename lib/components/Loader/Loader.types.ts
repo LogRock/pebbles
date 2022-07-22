@@ -14,5 +14,11 @@ export interface ProgressRingProps {
   colorGradient?: boolean;
   showBaseRing?: boolean;
   label?: string;
-  variant?: string;
+  variant?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning"
+    | "neutral";
 }

@@ -9,6 +9,12 @@ export default {
 
 const Template = (args) => <StatusPercentage {...args}></StatusPercentage>;
 
+export const Basic = Template.bind({});
+Basic.args = {
+  percentage: 80,
+  children: "80%",
+};
+
 export const Small = Template.bind({});
 Small.args = {
   percentage: 50,
@@ -28,6 +34,38 @@ Large.args = {
   percentage: 67,
   size: "large",
   children: "2 of 3",
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  percentage: 67,
+  size: "large",
+  children: "67%",
+  variant: "success",
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  percentage: 67,
+  size: "large",
+  children: "67%",
+  variant: "error",
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  percentage: 67,
+  size: "large",
+  children: "67%",
+  variant: "primary",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  percentage: 67,
+  size: "large",
+  children: "67%",
+  variant: "secondary",
 };
 
 export const UseChildren = Template.bind({});
