@@ -1,3 +1,9 @@
+## [7.4.2](https://github.com/LogRock/pebbles/compare/v7.4.1...v7.4.2) (2022-07-22)
+
+### Bug Fixes
+
+- **tab-view:** :lipstick: fix tab alignment to the left ([7816555](https://github.com/LogRock/pebbles/commit/7816555456117dc3e32cfa1c80796d815963e617))
+
 ## [7.4.1](https://github.com/LogRock/pebbles/compare/v7.4.0...v7.4.1) (2022-07-22)
 
 ### Bug Fixes
