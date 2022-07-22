@@ -51,6 +51,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
   colorGradient,
   showBaseRing,
   label,
+  variant,
   ...inputProps
 }) => {
   const theme = useContext(ThemeContext);
@@ -59,8 +60,22 @@ const ProgressRing: FC<ProgressRingProps> = ({
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
-  const getRingColor = () => {
-    return colorGradient ? "url(#ring_gradient)" : theme.colors.primary[500];
+  const getRingForegroundColor = () => {
+    if (colorGradient) {
+      return "url(#ring_gradient)";
+    }
+    return variant
+      ? theme.progressRing.ringForegroundColor[variant]
+      : theme.progressRing.ringForegroundColor.primary;
+  };
+
+  const getRingBackgroundColor = () => {
+    if (colorGradient) {
+      return theme.progressRing.ringBackgroundColor.primary;
+    }
+    return variant
+      ? theme.progressRing.ringBackgroundColor[variant]
+      : theme.progressRing.ringBackgroundColor.primary;
   };
 
   return (
@@ -68,7 +83,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
       {showBaseRing && (
         <svg height={radius * 2} width={radius * 2}>
           <circle
-            stroke={theme.colors.primary[50]}
+            stroke={getRingBackgroundColor()}
             fill="transparent"
             strokeWidth={stroke}
             style={{ strokeDashoffset }}
@@ -93,7 +108,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
           </linearGradient>
         </defs>
         <circle
-          stroke={getRingColor()}
+          stroke={getRingForegroundColor()}
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference + " " + circumference}
