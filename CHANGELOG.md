@@ -1,3 +1,10 @@
+## [7.4.1](https://github.com/LogRock/pebbles/compare/v7.4.0...v7.4.1) (2022-07-22)
+
+### Bug Fixes
+
+- **DORA:** remove metric reporting because its a public project ([b78cc19](https://github.com/LogRock/pebbles/commit/b78cc19d2d9c9d2e1908d6ecdb5dedf9c174f4e3))
+- **select:** :bug: fix select not expanding upon icon click ([d7e65b0](https://github.com/LogRock/pebbles/commit/d7e65b022af32ec7b4a010d285c832724e11a002))
+
 # [7.4.0](https://github.com/LogRock/pebbles/compare/v7.3.0...v7.4.0) (2022-07-19)
 
 ### Bug Fixes
