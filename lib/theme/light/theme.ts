@@ -7,6 +7,7 @@ import Theme, {
   Loader,
   Alert,
   ProgressBar,
+  ProgressRing,
   List,
   Toggle,
   StatusNumber,
@@ -488,6 +489,25 @@ const progressBar: ProgressBar = {
   },
 };
 
+const progressRing: ProgressRing = {
+  ringForegroundColor: {
+    primary: primary["500"],
+    secondary: secondary["500"],
+    error: error["500"],
+    warning: warning["500"],
+    success: success["500"],
+    neutral: neutral["500"],
+  },
+  ringBackgroundColor: {
+    primary: primary["50"],
+    secondary: secondary["50"],
+    error: error["50"],
+    warning: warning["50"],
+    success: success["50"],
+    neutral: neutral["50"],
+  },
+};
+
 const list: List = {
   item: {
     paddingY: spacings.sm,
@@ -710,6 +730,7 @@ const theme: Theme = {
   loader,
   alert,
   progressBar,
+  progressRing,
   list,
   toggle,
   statusNumber,
