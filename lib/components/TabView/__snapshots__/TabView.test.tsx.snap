@@ -6,20 +6,20 @@ exports[`TabView > renders TabView properly 1`] = `
     class="sc-bdvvtL eukWAO"
   >
     <div
-      class="sc-gsDKAQ kkuJso"
+      class="sc-gsDKAQ lfSFVJ"
     >
       <a
-        class="sc-dkPtRN fTTcnx"
+        class="sc-dkPtRN htQWIk"
       >
         Tab 1
       </a>
       <a
-        class="sc-dkPtRN gRvnxv"
+        class="sc-dkPtRN pjDii"
       >
         Tab 2
       </a>
       <a
-        class="sc-dkPtRN fwuZnX"
+        class="sc-dkPtRN dBSncu"
         disabled=""
       >
         Tab 3
