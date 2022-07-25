@@ -1,4 +1,4 @@
-import React, { FC, useContext } from "react";
+import React, { FC, useContext, useMemo } from "react";
 
 import styled, { ThemeContext } from "styled-components";
 import { TypographyParagraphProps } from "../Typography";
@@ -60,26 +60,26 @@ const ProgressRing: FC<ProgressRingProps> = ({
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
-  const getRingForegroundColor = () => {
+  const getRingForegroundColor = useMemo(() => {
     if (colorGradient) {
       return "url(#ring_gradient)";
     }
     return theme.progressRing.ringForegroundColor[variant];
-  };
+  }, [colorGradient, variant]);
 
-  const getRingBackgroundColor = () => {
+  const getRingBackgroundColor = useMemo(() => {
     if (colorGradient) {
       return theme.progressRing.ringBackgroundColor.primary;
     }
     return theme.progressRing.ringBackgroundColor[variant];
-  };
+  }, [colorGradient, variant]);
 
   return (
     <RingWrapper size={radius * 2}>
       {showBaseRing && (
         <svg height={radius * 2} width={radius * 2}>
           <circle
-            stroke={getRingBackgroundColor()}
+            stroke={getRingBackgroundColor}
             fill="transparent"
             strokeWidth={stroke}
             style={{ strokeDashoffset }}
@@ -104,7 +104,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
           </linearGradient>
         </defs>
         <circle
-          stroke={getRingForegroundColor()}
+          stroke={getRingForegroundColor}
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference + " " + circumference}
