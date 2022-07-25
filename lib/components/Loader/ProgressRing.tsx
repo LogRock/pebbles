@@ -79,6 +79,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
       {showBaseRing && (
         <svg height={radius * 2} width={radius * 2}>
           <circle
+            data-testid="ring"
             stroke={getRingBackgroundColor}
             fill="transparent"
             strokeWidth={stroke}

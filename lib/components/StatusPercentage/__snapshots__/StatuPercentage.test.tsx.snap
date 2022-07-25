@@ -1,0 +1,62 @@
+// Vitest Snapshot v1
+
+exports[`StatusPercentage tests > shows main UI element 1`] = `
+<div
+  class="sc-dkPtRN hlCbZg"
+>
+  <div
+    class="sc-bdvvtL iLkRqh"
+    size="40"
+  >
+    <svg
+      height="40"
+      width="40"
+    >
+      <circle
+        cx="20"
+        cy="20"
+        data-testid="ring"
+        fill="transparent"
+        r="12"
+        stroke="#D4F9E1"
+        stroke-width="4"
+        style="stroke-dashoffset: 37.69911184307752;"
+      />
+    </svg>
+    <svg
+      height="40"
+      width="40"
+    >
+      <defs>
+        <lineargradient
+          gradientUnits="userSpaceOnUse"
+          id="ring_gradient"
+          x1="0"
+          x2="71.8942"
+          y1="0"
+          y2="10.6352"
+        >
+          <stop
+            stop-color="#FF5F6D"
+          />
+          <stop
+            offset="1"
+            stop-color="#FFC371"
+          />
+        </lineargradient>
+      </defs>
+      <circle
+        cx="20"
+        cy="20"
+        fill="transparent"
+        r="12"
+        stroke="#1BB954"
+        stroke-dasharray="75.39822368615503 75.39822368615503"
+        stroke-width="4"
+        style="stroke-dashoffset: 37.69911184307752;"
+      />
+    </svg>
+  </div>
+  50
+</div>
+`;
