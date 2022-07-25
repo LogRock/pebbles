@@ -1,3 +1,14 @@
+# [7.5.0](https://github.com/LogRock/pebbles/compare/v7.4.2...v7.5.0) (2022-07-25)
+
+### Bug Fixes
+
+- getRingColor methods now with useMemo ([6597842](https://github.com/LogRock/pebbles/commit/659784269ae304ec9386899ad1783529c825ac9c))
+
+### Features
+
+- now ProgressRing accepts variant param, changes color accordingly ([479a146](https://github.com/LogRock/pebbles/commit/479a1460ae4877b52d0b81af6d1be71d615e6777))
+- now StatusPercentage has variant param, changes color accordingly ([ec72241](https://github.com/LogRock/pebbles/commit/ec72241729dfaa1c897d4ce32d237a3572a2facc))
+
 ## [7.4.2](https://github.com/LogRock/pebbles/compare/v7.4.1...v7.4.2) (2022-07-22)
 
 ### Bug Fixes
