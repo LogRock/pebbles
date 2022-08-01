@@ -22,6 +22,14 @@ Error.args = {
   size: "medium",
   variant: "error",
   icon: <Icon size={0.75} path={mdiAlert} />,
+  children: "Risk",
+};
+
+export const ErrorAlt = Template.bind({});
+ErrorAlt.args = {
+  size: "medium",
+  variant: "errorAlt",
+  icon: <Icon size={0.75} path={mdiAlert} />,
   children: "High Risk",
 };
 
@@ -37,6 +45,14 @@ export const Warning = Template.bind({});
 Warning.args = {
   size: "medium",
   variant: "warning",
+  icon: <Icon size={0.75} path={mdiAlertCircle} />,
+  children: "Optional",
+};
+
+export const WarningAlt = Template.bind({});
+WarningAlt.args = {
+  size: "medium",
+  variant: "warningAlt",
   icon: <Icon size={0.75} path={mdiAlertCircle} />,
   children: "Optional",
 };
