@@ -43,6 +43,7 @@ export { default as Select } from "./components/Select";
 
 export { default as SelectSimpleItem } from "./components/Select/items/SimpleItem";
 export { default as SelectTableItem } from "./components/Select/items/TableItem";
+export { default as SelectCheckBoxItem } from "./components/Select/items/CheckBoxItem";
 
 export { default as SelectTableHeader } from "./components/Select/headers/TableHeader";
 

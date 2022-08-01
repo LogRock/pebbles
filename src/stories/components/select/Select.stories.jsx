@@ -2,6 +2,7 @@ import React from "react";
 import Select from "../../../../lib/components/Select";
 import TableItem from "../../../../lib/components/Select/items/TableItem";
 import TableHeader from "../../../../lib/components/Select/headers/TableHeader";
+import CheckBoxItem from "../../../../lib/components/Select/items/CheckBoxItem";
 
 const autoCompleteItems = [
   {
@@ -95,4 +96,12 @@ export const WithTableItemRendering = Template.bind({});
 WithTableItemRendering.args = {
   renderItem: TableItem,
   renderHeader: <TableHeader id="ID" name="NAME" />,
+};
+
+export const MultiSelect = Template.bind({});
+MultiSelect.args = {
+  multiSelect: true,
+  renderItem: ({ item }) => (
+    <CheckBoxItem item={item} inputProps={{ checked: Math.random() > 0.5 }} />
+  ),
 };

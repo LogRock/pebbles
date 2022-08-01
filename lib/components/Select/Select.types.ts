@@ -9,6 +9,7 @@ export interface BaseItemType {
 }
 
 export type SelectProps<ItemType> = {
+  multiSelect?: boolean;
   description?: string;
   hint?: {
     content: string;
@@ -23,6 +24,7 @@ export type SelectProps<ItemType> = {
     onClick: () => void;
     onMouseEnter: () => void;
     highlighted?: boolean;
+    selected?: boolean;
   }>;
   renderHeader?: React.ReactNode;
   onItemSelected?: (item: ItemType) => void;
