@@ -40,6 +40,16 @@ export const SimpleTable = () => (
         <TableDatum>C</TableDatum>
         <TableDatum>Some Non-Binary Individual</TableDatum>
       </TableRow>
+      <TableRow isSelected>
+        <TableDatum>4</TableDatum>
+        <TableDatum>D</TableDatum>
+        <TableDatum>Not sure Who</TableDatum>
+      </TableRow>
+      <TableRow isNew>
+        <TableDatum>5</TableDatum>
+        <TableDatum>E</TableDatum>
+        <TableDatum>Someone I Knew</TableDatum>
+      </TableRow>
     </TableBody>
   </Table>
 );

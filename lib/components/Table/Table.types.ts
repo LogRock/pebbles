@@ -19,6 +19,7 @@ export interface OrderingProps {
 
 export interface TableRowProps extends React.ComponentPropsWithoutRef<"tr"> {
   isNew?: boolean;
+  isSelected?: boolean;
   addEmptyTDAtEnd?: boolean;
 }
 
