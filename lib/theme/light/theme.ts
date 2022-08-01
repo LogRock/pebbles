@@ -603,25 +603,33 @@ const statusTag: StatusTag = {
   color: {
     background: {
       error: error["50"],
+      errorAlt: error["400"],
       warning: warning["50"],
+      warningAlt: warning["50"],
       success: success["50"],
       neutral: neutral["100"],
       collapsed: {
         error: error["500"],
+        errorAlt: error["500"],
         warning: warning["500"],
+        warningAlt: warning["500"],
         success: success["500"],
         neutral: neutral["500"],
       },
     },
     icon: {
       error: error["600"],
+      errorAlt: neutral["50"],
       warning: warning["600"],
+      warningAlt: warning["900"],
       success: success["600"],
       neutral: neutral["600"],
     },
     label: {
       error: error["600"],
+      errorAlt: neutral["50"],
       warning: warning["600"],
+      warningAlt: warning["900"],
       success: success["600"],
       neutral: neutral["600"],
       collapsed: {

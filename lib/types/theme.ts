@@ -451,7 +451,9 @@ export interface Toggle {
 
 interface ColorByVariant {
   error: CSS.Property.Color;
+  errorAlt?: CSS.Property.Color;
   warning: CSS.Property.Color;
+  warningAlt?: CSS.Property.Color;
   success: CSS.Property.Color;
   neutral: CSS.Property.Color;
 }
