@@ -102,6 +102,6 @@ export const MultiSelect = Template.bind({});
 MultiSelect.args = {
   multiSelect: true,
   renderItem: ({ item }) => (
-    <CheckBoxItem item={item} inputProps={{ checked: Math.random() > 0.5 }} />
+    <CheckBoxItem item={item} selected={Math.random() > 0.5} />
   ),
 };
