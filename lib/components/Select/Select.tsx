@@ -14,6 +14,7 @@ const Select = <ItemType extends BaseItemType>({
   onItemSelected,
   spaced,
   maxHeight,
+  multiSelect,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
@@ -137,7 +138,9 @@ const Select = <ItemType extends BaseItemType>({
               key={item.id}
               item={item}
               onClick={() => {
-                setHasFocus(false);
+                if (!multiSelect) {
+                  setHasFocus(false);
+                }
                 setCurrentHighlight(index);
                 onItemSelected?.(autoCompleteItems[index]);
               }}

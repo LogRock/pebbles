@@ -2,6 +2,7 @@ import Select from ".";
 import React from "react";
 import { render, userEvent } from "../../utils/test-utils";
 import { screen, waitFor } from "@testing-library/react";
+import CheckBoxItem from "./items/CheckBoxItem";
 
 const autoCompleteItems = [
   {
@@ -61,5 +62,36 @@ describe("Select", () => {
     await waitFor(() =>
       expect(screen.queryAllByText("You guessed it").length).toBe(2)
     );
+  });
+
+  it("renders in multi select mode with checbox items", async () => {
+    render(
+      <Select
+        autoCompleteItems={autoCompleteItems}
+        renderItem={(props) => <CheckBoxItem {...props} selected={true} />}
+        multiSelect
+        inputProps={{
+          hint: {
+            icon: "drop",
+            content: "",
+          },
+        }}
+      />
+    );
+
+    expect(screen.queryAllByText("You guessed it").length).toBe(0);
+
+    userEvent.click(
+      screen.getByText("drop").closest("span") as HTMLSpanElement
+    );
+
+    await waitFor(() =>
+      expect(screen.queryAllByText("You guessed it").length).toBe(2)
+    );
+
+    expect(
+      (screen.queryAllByLabelText("You guessed it")[0] as HTMLInputElement)
+        .checked
+    ).toBeTruthy();
   });
 });
