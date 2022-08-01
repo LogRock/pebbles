@@ -65,8 +65,13 @@ export const TableDatum = styled.td<{ center?: boolean }>`
 export const TR = styled.tr<TableRowProps>`
   position: relative;
 
-  background-color: ${({ theme, isNew }) =>
-    isNew ? "#FAFFFC" : theme.colors.shades[0]};
+  background-color: ${({ theme, isSelected }) =>
+    isSelected ? theme.colors.primary[50] : theme.colors.shades[0]} !important;
+
+  &:nth-child(even) {
+    background-color: ${({ theme, isSelected }) =>
+      !isSelected && theme.colors.neutral[100]}!important;
+  }
 
   ${TableDatum} {
     font-weight: ${({ isNew }) => (isNew ? 600 : 400)} !important;
