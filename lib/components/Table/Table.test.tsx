@@ -43,4 +43,39 @@ describe("Table", () => {
       ).container.firstChild
     ).toMatchSnapshot();
   });
+
+  it("renders selected rows", () => {
+    expect(
+      render(
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader>Header A</TableHeader>
+              <TableHeader>Header B</TableHeader>
+              <TableHeader>Header C</TableHeader>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableDatum>Content A1</TableDatum>
+              <TableDatum>Content B1</TableDatum>
+              <TableDatum>Content C1</TableDatum>
+            </TableRow>
+
+            <TableRow isSelected>
+              <TableDatum>Content A2</TableDatum>
+              <TableDatum>Content B2</TableDatum>
+              <TableDatum>Content C2</TableDatum>
+            </TableRow>
+
+            <TableRow>
+              <TableDatum>Content A3</TableDatum>
+              <TableDatum>Content B3</TableDatum>
+              <TableDatum>Content C3</TableDatum>
+            </TableRow>
+          </TableBody>
+        </Table>
+      ).container.firstChild
+    ).toMatchSnapshot();
+  });
 });

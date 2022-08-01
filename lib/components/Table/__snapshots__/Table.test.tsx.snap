@@ -1,5 +1,96 @@
 // Vitest Snapshot v1
 
+exports[`Table > renders selected rows 1`] = `
+<table
+  class="sc-bqiRlB fRKOoo"
+>
+  <thead
+    class="sc-ksdxgE cKrAHV"
+  >
+    <tr
+      class="sc-ieecCq eLhPso"
+    >
+      <th
+        class="sc-fFeiMQ cGlYYl"
+      >
+        Header A
+      </th>
+      <th
+        class="sc-fFeiMQ cGlYYl"
+      >
+        Header B
+      </th>
+      <th
+        class="sc-fFeiMQ cGlYYl"
+      >
+        Header C
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    class="sc-hBUSln QoxkZ"
+  >
+    <tr
+      class="sc-ieecCq eLhPso"
+    >
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content A1
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content B1
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content C1
+      </td>
+    </tr>
+    <tr
+      class="sc-ieecCq CGNBR"
+    >
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content A2
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content B2
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content C2
+      </td>
+    </tr>
+    <tr
+      class="sc-ieecCq eLhPso"
+    >
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content A3
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content B3
+      </td>
+      <td
+        class="sc-bkkeKt iKZsIB"
+      >
+        Content C3
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Table > renders with some content 1`] = `
 <table
   class="sc-bqiRlB fRKOoo"
