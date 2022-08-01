@@ -1,3 +1,15 @@
+# [7.6.0](https://github.com/LogRock/pebbles/compare/v7.5.0...v7.6.0) (2022-08-01)
+
+### Bug Fixes
+
+- **select:** :bug: fix callback issue ([c944ea6](https://github.com/LogRock/pebbles/commit/c944ea6e8a0ddb56701abf9bc1b61fb1af351a1e))
+
+### Features
+
+- **select:** :sparkles: make select support multi selection ([a396d00](https://github.com/LogRock/pebbles/commit/a396d00876ebdd6804f9b4a097cb79c1eb84f101))
+- status tag upgrade with alt colors ([136b37f](https://github.com/LogRock/pebbles/commit/136b37fabb37111424feca07abc56f3eae7f6a9e))
+- zebra rows and table row isSelected color ([72e5432](https://github.com/LogRock/pebbles/commit/72e543264ad2ad221a2ec71b505dace17a022ab1))
+
 # [7.5.0](https://github.com/LogRock/pebbles/compare/v7.4.2...v7.5.0) (2022-07-25)
 
 ### Bug Fixes
