@@ -32,7 +32,11 @@ const CheckBoxItem: FC<{
 }> = (props) => {
   return (
     <CheckBoxItemWrapper>
-      <CheckBox checked={props.selected} onClick={props.onClick}>
+      <CheckBox
+        checked={props.selected}
+        onClick={props.onClick}
+        onChange={() => null}
+      >
         {props?.item?.name || props?.item?.label || props?.item?.toString?.()}
       </CheckBox>
     </CheckBoxItemWrapper>
