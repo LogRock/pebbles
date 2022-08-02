@@ -1,3 +1,9 @@
+## [7.6.1](https://github.com/LogRock/pebbles/compare/v7.6.0...v7.6.1) (2022-08-02)
+
+### Bug Fixes
+
+- fixed StatusTag variant types ([f8b81e4](https://github.com/LogRock/pebbles/commit/f8b81e482ae8cb9aeb3142a6916cee673dbf3779))
+
 # [7.6.0](https://github.com/LogRock/pebbles/compare/v7.5.0...v7.6.0) (2022-08-01)
 
 ### Bug Fixes
