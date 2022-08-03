@@ -13,6 +13,21 @@ export const Table = styled.table`
   border-spacing: 0;
 
   border-radius: 10px;
+
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+
+  tbody tr::after,
+  tfoot tr::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: ${({ theme }) => theme.spacings.md};
+    left: ${({ theme }) => theme.spacings.md};
+    height: 1px;
+
+    background-color: ${({ theme }) => theme.colors.neutral[200]};
+  }
 `;
 
 export const TableHead = styled.thead`
@@ -24,6 +39,7 @@ export const TableBody = styled.tbody`
 `;
 
 export const TFoot = styled.tfoot`
+  position: relative;
   ${paragraphXSmallCSS}
 
   width: 100%;
@@ -70,7 +86,11 @@ export const TR = styled.tr<TableRowProps>`
 
   &:nth-child(even) {
     background-color: ${({ theme, isSelected }) =>
-      !isSelected && theme.colors.neutral[100]}!important;
+      !isSelected && theme.colors.neutral[50]} !important;
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.neutral[100]} !important;
   }
 
   ${TableDatum} {
