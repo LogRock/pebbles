@@ -28,6 +28,10 @@ export const Table = styled.table`
 
     background-color: ${({ theme }) => theme.colors.neutral[200]};
   }
+
+  tbody tr:hover {
+    background-color: ${({ theme }) => theme.colors.neutral[100]} !important;
+  }
 `;
 
 export const TableHead = styled.thead`
@@ -87,10 +91,6 @@ export const TR = styled.tr<TableRowProps>`
   &:nth-child(even) {
     background-color: ${({ theme, isSelected }) =>
       !isSelected && theme.colors.neutral[50]} !important;
-  }
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.neutral[100]} !important;
   }
 
   ${TableDatum} {
