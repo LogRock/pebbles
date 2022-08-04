@@ -1,3 +1,9 @@
+# [7.7.0](https://github.com/LogRock/pebbles/compare/v7.6.1...v7.7.0) (2022-08-04)
+
+### Features
+
+- table rows with border, table container shadow ([271e0aa](https://github.com/LogRock/pebbles/commit/271e0aa9bc7f7d8adc05a9a2203e6f33da64ec21))
+
 ## [7.6.1](https://github.com/LogRock/pebbles/compare/v7.6.0...v7.6.1) (2022-08-02)
 
 ### Bug Fixes
