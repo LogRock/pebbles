@@ -1,3 +1,9 @@
+## [7.7.1](https://github.com/LogRock/pebbles/compare/v7.7.0...v7.7.1) (2022-08-04)
+
+### Bug Fixes
+
+- no hover effect on the table head row ([2d89acf](https://github.com/LogRock/pebbles/commit/2d89acfa4465a727d98ac8889c69b9dda5cac23c))
+
 # [7.7.0](https://github.com/LogRock/pebbles/compare/v7.6.1...v7.7.0) (2022-08-04)
 
 ### Features
