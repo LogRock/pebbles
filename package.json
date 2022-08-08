@@ -134,7 +134,8 @@
     "libphonenumber-js": "^1.10.6",
     "lodash.uniqueid": "^4.0.1",
     "react-datepicker": "^4.7.0",
-    "react-phone-number-input": "^3.2.2"
+    "react-phone-number-input": "^3.2.2",
+    "react-text-mask": "^5.4.3"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
