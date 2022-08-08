@@ -2366,6 +2366,7 @@ __metadata:
     react-dom: ^17.0.0
     react-jsonschema-form: ^1.8.1
     react-phone-number-input: ^3.2.2
+    react-text-mask: ^5.4.3
     rollup-plugin-typescript: 1.0.1
     semantic-release: ^18.0.1
     semantic-release-slack-bot: ^3.5.2
@@ -16648,7 +16649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.6, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -17236,6 +17237,17 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: fa03880a887bc0c79c0be25fc35924980d75f684f8d05620272bdfcbb9f119f45bb7f8ddd92b9e944103964a4e094b99750d0b19c992fd86f2ce0b70266e89c3
+  languageName: node
+  linkType: hard
+
+"react-text-mask@npm:^5.4.3":
+  version: 5.4.3
+  resolution: "react-text-mask@npm:5.4.3"
+  dependencies:
+    prop-types: ^15.5.6
+  peerDependencies:
+    react: ^0.14.0 || ^15.0.0 || ^16.0.0
+  checksum: ee9c560f47d2f67d0193636eeea36852503d6d7bfd16d75ecb8170256606923d786bbb3511971deedbd01136340acf597fe2b6ba0be3cddb2a17a602767eb7b9
   languageName: node
   linkType: hard
 

@@ -4,6 +4,7 @@ import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import MaskedTextInput from "react-text-mask";
 
 import {
   StyledDiv,
@@ -56,6 +57,23 @@ const DateInputBox: FC<DateInputBoxProps> = ({
               wrapperClassName="logrock-datepicker"
               showMonthDropdown
               showYearDropdown
+              customInput={
+                <MaskedTextInput
+                  type="text"
+                  mask={[
+                    /\d/,
+                    /\d/,
+                    "/",
+                    /\d/,
+                    /\d/,
+                    "/",
+                    /\d/,
+                    /\d/,
+                    /\d/,
+                    /\d/,
+                  ]}
+                />
+              }
               {...inputProps}
             />
           }
