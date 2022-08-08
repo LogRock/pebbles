@@ -216,5 +216,53 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
           }
         }
       }
+
+      &__year-option:first-of-type {
+        position: relative;
+        height: 24px;
+
+        &::after {
+          content: '';
+
+          display: inline-block;
+          position: absolute;
+          top: 12px;
+          left: 50%;
+          width: 0.45em;
+          height: 0.45em;
+
+          transform: translate(-50%, 0) rotate(-45deg);
+
+          border-width: 0.25em 0.25em 0 0;
+          border-style: solid;
+          border-color: #bbb;
+
+          vertical-align: top;
+        }
+      }
+
+      &__year-option:last-of-type {
+        position: relative;
+        height: 24px;
+
+        &::after {
+          content: '';
+
+          display: inline-block;
+          position: absolute;
+          top: 12px;
+          left: 50%;
+          width: 0.45em;
+          height: 0.45em;
+
+	        transform: translate(-50%, 0) rotate(135deg) ;
+
+          border-width: 0.25em 0.25em 0 0;
+          border-style: solid;
+          border-color: #bbb;
+
+          vertical-align: top;
+        }
+      }
     }    
 `;
