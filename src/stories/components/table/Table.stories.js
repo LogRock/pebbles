@@ -157,6 +157,14 @@ export const NewRows = () => (
   </Table>
 );
 
+const ITEMS_PER_PAGE_OPTIONS = [
+  { id: 10, label: "10" },
+  { id: 20, label: "20" },
+  { id: 50, label: "50" },
+  { id: 100, label: "100" },
+  { id: 200, label: "200" },
+];
+
 export const WithFooter = () => (
   <Table>
     <TableHead>
@@ -198,6 +206,8 @@ export const WithFooter = () => (
       itemsFrom="0"
       itemsTo="100"
       itemsTotal="1000"
+      itemsPerPage={ITEMS_PER_PAGE_OPTIONS[0]}
+      itemsPerPageOptions={ITEMS_PER_PAGE_OPTIONS}
     ></TableFooter>
   </Table>
 );
