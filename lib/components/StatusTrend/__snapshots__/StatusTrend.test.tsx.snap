@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`StatusTrend > renders properly 1`] = `
+<div
+  class="sc-bdvvtL hpBitc"
+>
+  <svg
+    data-testid="down-arrow"
+    fill="none"
+    height="6"
+    viewBox="0 0 30 18"
+    width="10"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M16.4444 1.77783H28M28 1.77783V13.3334M28 1.77783L16.4444 13.3334L10.6667 7.55561L2 16.2223"
+      data-testid="down-arrow-path"
+      stroke="#DC2626"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2.67"
+    />
+  </svg>
+  +10.3%
+</div>
+`;
