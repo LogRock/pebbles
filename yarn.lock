@@ -2332,6 +2332,7 @@ __metadata:
     "@types/react": ^17.0.0
     "@types/react-datepicker": ^4.4.1
     "@types/react-dom": ^17.0.0
+    "@types/react-text-mask": ^5.4.11
     "@types/styled-components": ^5.1.15
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
@@ -5032,6 +5033,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 8f4dce3eb5c70178c5ec2f7434983d632d02a0371a80c31ea012e37a2b8b2174bee482c3b85764333cbe3bcba9132b95307e23ac56d05d490e485e371bdcea46
+  languageName: node
+  linkType: hard
+
+"@types/react-text-mask@npm:^5.4.11":
+  version: 5.4.11
+  resolution: "@types/react-text-mask@npm:5.4.11"
+  dependencies:
+    "@types/react": "*"
+  checksum: 4defba1467e61b73bfdae74d0b1bea0f27846aabf5283f137fa372ef05bf23accfdf04fffaba33272e9eff5abf00a74863e9c24ca6974c731d73f3fae6efc577
   languageName: node
   linkType: hard
 
