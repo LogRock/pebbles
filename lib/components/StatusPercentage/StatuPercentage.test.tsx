@@ -18,7 +18,7 @@ describe("StatusPercentage tests", () => {
         50
       </StatusPercentage>
     );
-    screen.debug();
+
     expect(screen.getByText("50")).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe("StatusPercentage tests", () => {
         50
       </StatusPercentage>
     );
-    screen.debug();
+
     expect(screen.getByTestId("ring")).toHaveAttribute("stroke", "#D4F9E1");
   });
 });
