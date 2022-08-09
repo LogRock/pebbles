@@ -16,6 +16,9 @@ import {
   TFoot,
   TH,
   TR,
+  TablePerPage,
+  TablePerPageLabel,
+  TablePerPageSelector,
 } from "./Table.styled";
 import {
   TableHeaderProps,
@@ -82,6 +85,9 @@ export const TableFooter: FC<TableFooterProps> = ({
   showGoToLastPage,
   goToLastPageContent,
   onGoToLastPageClicked,
+  itemsPerPage,
+  itemsPerPageOptions,
+  onSetItemsPerPage,
   children,
 }) => {
   const theme = useContext(ThemeContext);
@@ -196,17 +202,50 @@ export const TableFooter: FC<TableFooterProps> = ({
     return "";
   }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
 
+  const itemsPerPageSelector = useMemo(() => {
+    if (itemsPerPage) {
+      return (
+        <TablePerPage>
+          <TablePerPageLabel
+            weight="bolder"
+            style={{ textTransform: "uppercase" }}
+            onClick={
+              isFunction(onSetItemsPerPage) ? onSetItemsPerPage : () => null
+            }
+          >
+            Items per page
+          </TablePerPageLabel>
+          <TablePerPageSelector
+            id="itemsPerPage"
+            autoCompleteItems={itemsPerPageOptions || []}
+            onItemSelected={onSetItemsPerPage}
+            inputProps={{
+              value: itemsPerPage.id,
+            }}
+          />
+        </TablePerPage>
+      );
+    }
+
+    return "";
+  }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
+
   return (
     <TFoot>
       <tr>
-        <td colSpan={100}>
-          {children}
+        <td colSpan={50}>
+          {itemsPerPageSelector}
           {itemsCount}
+        </td>
+        <td colSpan={50}>
           {goToFirstPage}
           {goToPreviousPage}
           {goToNextPage}
           {goToLastPage}
         </td>
+      </tr>
+      <tr>
+        <td colSpan={100}>{children}</td>
       </tr>
     </TFoot>
   );

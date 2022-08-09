@@ -1,4 +1,5 @@
 import React from "react";
+import { BaseItemType } from "../Select/Select.types";
 
 export interface TableHeaderProps extends React.ComponentPropsWithoutRef<"th"> {
   showOrdering?: boolean;
@@ -45,4 +46,7 @@ export interface TableFooterProps {
   showGoToLastPage?: boolean;
   goToLastPageContent?: React.ReactNode;
   onGoToLastPageClicked?: () => void;
+  itemsPerPage?: number;
+  itemsPerPageOptions?: BaseItemType[];
+  onSetItemsPerPage?: () => void;
 }

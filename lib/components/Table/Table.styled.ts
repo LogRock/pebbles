@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
+import Select from "../Select";
 import {
   overlineXSmallCSS,
   paragraphMediumCSS,
   paragraphSmallCSS,
+  ParagraphXSmall,
   paragraphXSmallCSS,
 } from "../Typography";
 
@@ -55,6 +57,7 @@ export const TFoot = styled.tfoot`
       padding-top: ${({ theme }) => theme.spacings.md};
       padding-right: ${({ theme }) => theme.spacings.big};
       padding-bottom: ${({ theme }) => theme.spacings.md};
+      padding-left: ${({ theme }) => theme.spacings.big};
 
       text-align: right;
       vertical-align: middle;
@@ -143,4 +146,21 @@ export const TablePaginationButton = styled.button`
   &:active {
     background-color: ${({ theme }) => theme.colors.neutral[100]};
   }
+`;
+
+export const TablePerPage = styled.div`
+  display: flex;
+  align-items: center;
+  width: max-content;
+`;
+
+export const TablePerPageLabel = styled(ParagraphXSmall)`
+  margin-right: 8px;
+
+  color: ${({ theme }) => theme.colors.neutral[500]};
+  text-transform: uppercase;
+`;
+
+export const TablePerPageSelector = styled(Select)`
+  max-width: 100px;
 `;
