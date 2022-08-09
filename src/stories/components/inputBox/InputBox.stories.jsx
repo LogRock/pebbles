@@ -100,8 +100,8 @@ InteractiveInputBox.args = {
   },
 };
 
-export const InteractivePwdInput = InteractiveTemplate.bind({});
-InteractivePwdInput.args = {
+export const InteractivePasswordInput = InteractiveTemplate.bind({});
+InteractivePasswordInput.args = {
   inputBoxArgs: {
     type: "password",
     description: "",
@@ -115,8 +115,8 @@ InteractivePwdInput.args = {
     isPassword: true,
   },
 };
-export const DisabledPwdInput = InteractiveTemplate.bind({});
-DisabledPwdInput.args = {
+export const DisabledPasswordInput = InteractiveTemplate.bind({});
+DisabledPasswordInput.args = {
   inputBoxArgs: {
     type: "password",
     description: "",

@@ -63,3 +63,16 @@ export const SelectItems = styled.div<{
     box-shadow: ${({ theme }) => theme.select.items.shadow};
   }
 `;
+
+export const IconWrapper = styled.span`
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  height: 100%;
+  padding-left: 16px;
+
+  border-left: 1px solid ${({ theme }) => theme.colors.neutral[100]};
+`;

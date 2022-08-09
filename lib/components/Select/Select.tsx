@@ -1,9 +1,9 @@
-import { mdiUnfoldMoreHorizontal } from "@mdi/js";
+import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
 import Icon from "@mdi/react";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { InputBox } from "../InputBox";
 import SimpleItem from "./items/SimpleItem";
-import { SelectItems, SelectWrapper } from "./Select.styled";
+import { IconWrapper, SelectItems, SelectWrapper } from "./Select.styled";
 import { BaseItemType, SelectProps } from "./Select.types";
 
 const Select = <ItemType extends BaseItemType>({
@@ -105,21 +105,24 @@ const Select = <ItemType extends BaseItemType>({
         }}
         hint={{
           icon: inputProps?.hint?.icon ? (
-            <span
+            <IconWrapper
               onClick={() => {
                 setHasFocus((focus) => !focus);
               }}
             >
               {inputProps.hint.icon}
-            </span>
+            </IconWrapper>
           ) : (
-            <span
+            <IconWrapper
               onClick={() => {
                 setHasFocus((focus) => !focus);
               }}
             >
-              <Icon path={mdiUnfoldMoreHorizontal} size={0.7} />
-            </span>
+              <Icon
+                path={hasFocus ? mdiChevronUp : mdiChevronDown}
+                size={0.9}
+              />
+            </IconWrapper>
           ),
           content: inputProps?.hint?.content || "",
         }}

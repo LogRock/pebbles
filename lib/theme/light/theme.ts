@@ -311,7 +311,7 @@ const inputBox: InputBox = {
   boxSizing: "border-box",
   boxShadow: shadows.xSmall,
   borderRadius: "8px",
-  border: "1px solid #D1D5DB",
+  border: `1px solid ${neutral[100]}`,
   margin: `${spacings.xsm} 0px`,
   background: "white",
   height: "50px",
@@ -331,7 +331,7 @@ const inputBox: InputBox = {
   },
   info: {
     color: neutral[900],
-    border: "1px solid #D1D5DB",
+    border: `1px solid ${neutral[100]}`,
     boxShadow: shadows.xSmall,
     hintColor: neutral[500],
     focused: {

@@ -16,7 +16,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
         class="sc-furwcr gLQxJk"
       >
         <input
-          class="sc-pVTFL iOYcnD"
+          class="sc-pVTFL giPpy"
           id="textId"
           type="text"
         />
@@ -49,7 +49,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         class="sc-furwcr gLQxJk"
       >
         <div
-          class="sc-ikJyIC kLbbrU PhoneInput PhoneInput--focus"
+          class="sc-ikJyIC hbEFSh PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1325,6 +1325,46 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 </div>
 `;
 
+exports[`InputBox > renders Date InputBox properly 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL dsMVeT"
+  >
+    <label
+      class="sc-gsDKAQ dhbaiu"
+    />
+    <div
+      class="sc-furwcr gLQxJk"
+    >
+      <div
+        class="sc-fKVqWL WaWDk"
+      >
+        <div
+          class="react-datepicker-wrapper logrock-datepicker"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <input
+              class=""
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-dkPtRN cgynxk"
+    >
+      <label
+        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div
@@ -1338,7 +1378,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <input
-        class="sc-pVTFL iOYcnD"
+        class="sc-pVTFL giPpy"
         id="pebbles__input__1"
       />
     </div>
@@ -1383,7 +1423,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-bYoBSM dZxkAw"
       >
         <input
-          class="sc-pVTFL sc-ezbkAF iOYcnD hPUPOl"
+          class="sc-pVTFL sc-ezbkAF giPpy hPUPOl"
           type="number"
         />
       </div>
@@ -1427,7 +1467,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-furwcr gLQxJk"
     >
       <div
-        class="sc-ikJyIC kLbbrU PhoneInput"
+        class="sc-ikJyIC hbEFSh PhoneInput"
       >
         <div
           class="PhoneInputCountry"

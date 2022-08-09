@@ -45,23 +45,24 @@ export const HelperIcon = styled.div<Pick<BaseInputBoxProps, "status">>`
 export const HintDiv = styled.div`
   display: flex;
   position: absolute;
-  top: ${({ theme }) => theme.inputBox.hint.top};
-  right: ${({ theme }) => theme.inputBox.hint.right};
+  top: 0;
+  right: 16px;
   flex-direction: row;
   align-items: center;
+  height: calc(100% - 16px);
   margin: ${({ theme }) => theme.inputBox.margin};
-  padding: ${({ theme }) => theme.inputBox.padding};
 `;
 
 export const Hint = styled(Label)<Pick<BaseInputBoxProps, "disabled">>`
-  margin: ${({ theme }) => theme.inputBox.hint.margin};
-
   color: ${({ theme, disabled }) =>
     disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
 `;
 
 export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "disabled">>`
-  margin: 4px 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-left: 4px;
 
   color: ${({ theme, disabled }) =>
     disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
