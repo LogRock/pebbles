@@ -1,0 +1,11 @@
+// Vitest Snapshot v1
+
+exports[`ProgressBar tests > shows the number percentage 1`] = `
+<div
+  class="sc-bdvvtL gmMwPz"
+>
+  <div
+    class="sc-gsDKAQ drCyrQ"
+  />
+</div>
+`;
