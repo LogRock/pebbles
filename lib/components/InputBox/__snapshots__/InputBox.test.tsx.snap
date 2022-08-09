@@ -1325,46 +1325,6 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 </div>
 `;
 
-exports[`InputBox > renders Date InputBox properly 1`] = `
-<div>
-  <div
-    class="sc-bdvvtL dsMVeT"
-  >
-    <label
-      class="sc-gsDKAQ dhbaiu"
-    />
-    <div
-      class="sc-furwcr gLQxJk"
-    >
-      <div
-        class="sc-fKVqWL cjJymR"
-      >
-        <div
-          class="react-datepicker-wrapper logrock-datepicker"
-        >
-          <div
-            class="react-datepicker__input-container"
-          >
-            <input
-              class=""
-              type="text"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="sc-dkPtRN cgynxk"
-    >
-      <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
-      />
-    </div>
-  </div>
-</div>
-`;
-
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div

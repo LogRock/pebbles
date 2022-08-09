@@ -131,6 +131,7 @@
   },
   "dependencies": {
     "@types/react-datepicker": "^4.4.1",
+    "@types/react-text-mask": "^5.4.11",
     "libphonenumber-js": "^1.10.6",
     "lodash.uniqueid": "^4.0.1",
     "react-datepicker": "^4.7.0",
