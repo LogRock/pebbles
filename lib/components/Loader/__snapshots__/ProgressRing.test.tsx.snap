@@ -1,0 +1,47 @@
+// Vitest Snapshot v1
+
+exports[`ProgressRing tests > matches the component snapshot 1`] = `
+<div
+  class="sc-bdvvtL kBayUF"
+  size="60"
+>
+  <svg
+    height="60"
+    width="60"
+  >
+    <defs>
+      <lineargradient
+        gradientUnits="userSpaceOnUse"
+        id="ring_gradient"
+        x1="0"
+        x2="71.8942"
+        y1="0"
+        y2="10.6352"
+      >
+        <stop
+          stop-color="#FF5F6D"
+        />
+        <stop
+          offset="1"
+          stop-color="#FFC371"
+        />
+      </lineargradient>
+    </defs>
+    <circle
+      cx="30"
+      cy="30"
+      fill="transparent"
+      r="22"
+      stroke="#F1B72C"
+      stroke-dasharray="138.23007675795088 138.23007675795088"
+      stroke-width="4"
+      style="stroke-dashoffset: 34.55751918948772;"
+    />
+  </svg>
+  <div
+    class="sc-gsDKAQ iayCK"
+  >
+    75%
+  </div>
+</div>
+`;
