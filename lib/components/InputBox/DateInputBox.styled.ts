@@ -125,7 +125,7 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
         }
       }
 
-      &__month-read-view--down-arrow {
+      &__month-read-view--down-arrow, &__year-read-view--down-arrow {
         top: -2px;
         right: -20px;
       }
@@ -220,6 +220,11 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
       &__year-option:first-of-type {
         position: relative;
         height: 24px;
+
+        /* this fixes a bug - it was hard/impossible to select the uppermost year */
+        a {
+          display: none;
+        }
 
         &::after {
           content: '';
