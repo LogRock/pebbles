@@ -2,87 +2,87 @@
 
 exports[`Table > renders selected rows 1`] = `
 <table
-  class="sc-bqiRlB fUMlMK"
+  class="sc-cidDSM cdTFTp"
 >
   <thead
-    class="sc-ksdxgE cKrAHV"
+    class="sc-jcFjpl eFRaem"
   >
     <tr
-      class="sc-ieecCq jNhGtX"
+      class="sc-cTAqQK RxiWO"
     >
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header A
       </th>
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header B
       </th>
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header C
       </th>
     </tr>
   </thead>
   <tbody
-    class="sc-hBUSln QoxkZ"
+    class="sc-caiLqq imryLE"
   >
     <tr
-      class="sc-ieecCq jNhGtX"
+      class="sc-cTAqQK RxiWO"
     >
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content A1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content B1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content C1
       </td>
     </tr>
     <tr
-      class="sc-ieecCq WbcjJ"
+      class="sc-cTAqQK dDNzqc"
     >
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content A2
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content B2
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content C2
       </td>
     </tr>
     <tr
-      class="sc-ieecCq jNhGtX"
+      class="sc-cTAqQK RxiWO"
     >
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content A3
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content B3
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content C3
       </td>
@@ -93,21 +93,21 @@ exports[`Table > renders selected rows 1`] = `
 
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-bqiRlB fUMlMK"
+  class="sc-cidDSM cdTFTp"
 >
   <thead
-    class="sc-ksdxgE cKrAHV"
+    class="sc-jcFjpl eFRaem"
   >
     <tr
-      class="sc-ieecCq jNhGtX"
+      class="sc-cTAqQK RxiWO"
     >
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header A
       </th>
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header A
         <svg
@@ -135,7 +135,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header B
         <svg
@@ -155,7 +155,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-fFeiMQ cGlYYl"
+        class="sc-iAKWXU iotlQI"
       >
         Header C
         <svg
@@ -175,58 +175,58 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       />
     </tr>
   </thead>
   <tbody
-    class="sc-hBUSln QoxkZ"
+    class="sc-caiLqq imryLE"
   >
     <tr
-      class="sc-ieecCq jNhGtX"
+      class="sc-cTAqQK RxiWO"
     >
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content A1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content B1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content C1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       />
     </tr>
     <tr
-      class="sc-ieecCq eFzLoa"
+      class="sc-cTAqQK fgcAtr"
     >
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content A1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content B1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         Content C1
       </td>
       <td
-        class="sc-bkkeKt iKZsIB"
+        class="sc-efQSVx kHVprq"
       >
         <span
-          class="sc-dJjYzT cSXeVl"
+          class="sc-jObWnj geYXMO"
         >
           New
         </span>
