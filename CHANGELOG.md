@@ -1,3 +1,19 @@
+# [7.8.0](https://github.com/LogRock/pebbles/compare/v7.7.1...v7.8.0) (2022-08-10)
+
+### Bug Fixes
+
+- fixed bug, hard to select the uppermost year on the year select menu ([0b3982c](https://github.com/LogRock/pebbles/commit/0b3982c49ebdc16715fa53967c168348379a009d))
+- fixed tests snapshots, gap between selector and items menu ([1a9e87a](https://github.com/LogRock/pebbles/commit/1a9e87a7a399f0df433992993547eeec56e4fad4))
+
+### Features
+
+- added items per page selector to Table component ([6ae425c](https://github.com/LogRock/pebbles/commit/6ae425c213185366d6ef3a481f5d3448b63a86fc))
+- added mask to datepicker input, using react-text-mask library ([9abe24f](https://github.com/LogRock/pebbles/commit/9abe24f9754ae7f5435f725bfb0ce8ed45aa09eb))
+- fixed layout, added select logic to items per page on the table ([752d867](https://github.com/LogRock/pebbles/commit/752d867045dcc012599bc4a900834f9c2847cc92))
+- on datetime picker, added up and down arrows, on the year selector ([f264c8c](https://github.com/LogRock/pebbles/commit/f264c8c55633f77c702dc6274302e3ba0f6c668a))
+- **select:** :lipstick: update select UI to match design ([a4c07a8](https://github.com/LogRock/pebbles/commit/a4c07a80e4323e61be5695dcc11bd09797ae598c))
+- **select:** :lipstick: update select UI to match design ([1329d80](https://github.com/LogRock/pebbles/commit/1329d803ca29e5e6951ec3ab04e5764ab9cbf91a))
+
 ## [7.7.1](https://github.com/LogRock/pebbles/compare/v7.7.0...v7.7.1) (2022-08-04)
 
 ### Bug Fixes
