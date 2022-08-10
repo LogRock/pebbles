@@ -11,7 +11,6 @@ import {
 import { TableHeaderProps, TableRowProps } from "./Table.types";
 
 export const Table = styled.table`
-  overflow: hidden;
   border-spacing: 0;
 
   border-radius: 10px;
@@ -154,13 +153,32 @@ export const TablePerPage = styled.div`
   width: max-content;
 `;
 
+export const FooterLeftArea = styled.td`
+  display: flex;
+  align-items: center;
+`;
+
+export const TablePerPageSelector = styled(Select)`
+  max-width: 120px;
+  margin-right: ${({ theme }) => theme.spacings.md};
+
+  input,
+  button {
+    height: 36px !important;
+
+    font-size: 14px !important;
+  }
+
+  button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
 export const TablePerPageLabel = styled(ParagraphXSmall)`
   margin-right: 8px;
 
   color: ${({ theme }) => theme.colors.neutral[500]};
   text-transform: uppercase;
-`;
-
-export const TablePerPageSelector = styled(Select)`
-  max-width: 100px;
 `;
