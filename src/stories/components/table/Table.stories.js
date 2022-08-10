@@ -165,52 +165,55 @@ const ITEMS_PER_PAGE_OPTIONS = [
   { id: 200, label: "200" },
 ];
 
-export const WithFooter = () => (
-  <Table>
-    <TableHead>
-      <TableRow addEmptyTDAtEnd>
-        <TableHeader showOrdering currentOrder={OrderingEnum.DESC} center>
-          Ordered DESC
-        </TableHeader>
-        <TableHeader showOrdering currentOrder={OrderingEnum.ASC} center>
-          Ordered ASC
-        </TableHeader>
-        <TableHeader showOrdering center>
-          Orderable
-        </TableHeader>
-      </TableRow>
-    </TableHead>
-    <TableBody>
-      <TableRow isNew>
-        <TableDatum center>1</TableDatum>
-        <TableDatum center>A</TableDatum>
-        <TableDatum center>Some Guy</TableDatum>
-      </TableRow>
-      <TableRow addEmptyTDAtEnd>
-        <TableDatum center>2</TableDatum>
-        <TableDatum center>B</TableDatum>
-        <TableDatum center>Some Girl</TableDatum>
-      </TableRow>
-      <TableRow isNew>
-        <TableDatum center>3</TableDatum>
-        <TableDatum center>C</TableDatum>
-        <TableDatum center>Some Non-Binary Individual</TableDatum>
-      </TableRow>
-    </TableBody>
-    <TableFooter
-      showGoToFirstPage
-      showGoToLastPage
-      showGoToPreviousPage
-      showGoToNextPage
-      showItemsCount
-      itemsFrom="0"
-      itemsTo="100"
-      itemsTotal="1000"
-      itemsPerPage={ITEMS_PER_PAGE_OPTIONS[0]}
-      itemsPerPageOptions={ITEMS_PER_PAGE_OPTIONS}
-    ></TableFooter>
-  </Table>
-);
+export const WithFooter = () => {
+  return (
+    <Table>
+      <TableHead>
+        <TableRow addEmptyTDAtEnd>
+          <TableHeader showOrdering currentOrder={OrderingEnum.DESC} center>
+            Ordered DESC
+          </TableHeader>
+          <TableHeader showOrdering currentOrder={OrderingEnum.ASC} center>
+            Ordered ASC
+          </TableHeader>
+          <TableHeader showOrdering center>
+            Orderable
+          </TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow isNew>
+          <TableDatum center>1</TableDatum>
+          <TableDatum center>A</TableDatum>
+          <TableDatum center>Some Guy</TableDatum>
+        </TableRow>
+        <TableRow addEmptyTDAtEnd>
+          <TableDatum center>2</TableDatum>
+          <TableDatum center>B</TableDatum>
+          <TableDatum center>Some Girl</TableDatum>
+        </TableRow>
+        <TableRow isNew>
+          <TableDatum center>3</TableDatum>
+          <TableDatum center>C</TableDatum>
+          <TableDatum center>Some Non-Binary Individual</TableDatum>
+        </TableRow>
+      </TableBody>
+      <TableFooter
+        showGoToFirstPage
+        showGoToLastPage
+        showGoToPreviousPage
+        showGoToNextPage
+        showItemsCount
+        itemsFrom="0"
+        itemsTo="100"
+        itemsTotal="1000"
+        itemsPerPage={+ITEMS_PER_PAGE_OPTIONS[1].label}
+        itemsPerPageOptions={ITEMS_PER_PAGE_OPTIONS}
+        onSetItemsPerPage={() => null}
+      ></TableFooter>
+    </Table>
+  );
+};
 
 export const WithCustomStuffInFooter = () => (
   <Table>

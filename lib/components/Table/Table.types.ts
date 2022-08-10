@@ -48,5 +48,5 @@ export interface TableFooterProps {
   onGoToLastPageClicked?: () => void;
   itemsPerPage?: number;
   itemsPerPageOptions?: BaseItemType[];
-  onSetItemsPerPage?: () => void;
+  onSetItemsPerPage?: (item: BaseItemType) => void;
 }

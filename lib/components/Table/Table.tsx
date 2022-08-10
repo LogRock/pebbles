@@ -8,6 +8,8 @@ import Icon from "@mdi/react";
 import { isFunction } from "lodash";
 import React, { FC, useContext, useMemo } from "react";
 import { ThemeContext } from "styled-components";
+import { BaseItemType } from "../Select/Select.types";
+import { ParagraphSmall } from "../Typography";
 import Ordering from "./Ordering";
 import {
   New,
@@ -19,6 +21,7 @@ import {
   TablePerPage,
   TablePerPageLabel,
   TablePerPageSelector,
+  FooterLeftArea,
 } from "./Table.styled";
 import {
   TableHeaderProps,
@@ -87,7 +90,7 @@ export const TableFooter: FC<TableFooterProps> = ({
   onGoToLastPageClicked,
   itemsPerPage,
   itemsPerPageOptions,
-  onSetItemsPerPage,
+  onSetItemsPerPage = () => null,
   children,
 }) => {
   const theme = useContext(ThemeContext);
@@ -99,7 +102,9 @@ export const TableFooter: FC<TableFooterProps> = ({
           `${from}-${to} of ${total}`;
 
   const itemsCount = showItemsCount ? (
-    <span>{format(itemsFrom || "", itemsTo || "", itemsTotal || "")}</span>
+    <ParagraphSmall>
+      {format(itemsFrom || "", itemsTo || "", itemsTotal || "")}
+    </ParagraphSmall>
   ) : null;
 
   const goToFirstPage = useMemo(() => {
@@ -203,24 +208,19 @@ export const TableFooter: FC<TableFooterProps> = ({
   }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
 
   const itemsPerPageSelector = useMemo(() => {
-    if (itemsPerPage) {
+    if (itemsPerPage && itemsPerPageOptions) {
       return (
         <TablePerPage>
-          <TablePerPageLabel
-            weight="bolder"
-            style={{ textTransform: "uppercase" }}
-            onClick={
-              isFunction(onSetItemsPerPage) ? onSetItemsPerPage : () => null
-            }
-          >
-            Items per page
-          </TablePerPageLabel>
+          <TablePerPageLabel weight="bolder">Items per page</TablePerPageLabel>
           <TablePerPageSelector
-            id="itemsPerPage"
+            id="itemsPerPageSelector"
             autoCompleteItems={itemsPerPageOptions || []}
-            onItemSelected={onSetItemsPerPage}
+            onItemSelected={(item) => {
+              const option = item as BaseItemType;
+              onSetItemsPerPage(option);
+            }}
             inputProps={{
-              value: itemsPerPage.id,
+              value: itemsPerPage,
             }}
           />
         </TablePerPage>
@@ -233,10 +233,10 @@ export const TableFooter: FC<TableFooterProps> = ({
   return (
     <TFoot>
       <tr>
-        <td colSpan={50}>
+        <FooterLeftArea colSpan={50}>
           {itemsPerPageSelector}
           {itemsCount}
-        </td>
+        </FooterLeftArea>
         <td colSpan={50}>
           {goToFirstPage}
           {goToPreviousPage}
@@ -244,9 +244,11 @@ export const TableFooter: FC<TableFooterProps> = ({
           {goToLastPage}
         </td>
       </tr>
-      <tr>
-        <td colSpan={100}>{children}</td>
-      </tr>
+      {children && (
+        <tr>
+          <td colSpan={100}>{children}</td>
+        </tr>
+      )}
     </TFoot>
   );
 };
