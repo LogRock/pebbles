@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Select from "../Select";
+import { SelectItems } from "../Select/Select.styled";
 import {
   overlineXSmallCSS,
   paragraphMediumCSS,
@@ -173,6 +174,10 @@ export const TablePerPageSelector = styled(Select)`
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  ${SelectItems} {
+    top: 48px;
   }
 `;
 
