@@ -219,7 +219,7 @@ export const TableFooter: FC<TableFooterProps> = ({
             }))}
             inputProps={{
               value: pageSize,
-              onChange: () => null,
+              readOnly: true,
             }}
             onItemSelected={(pageSizeSelectedSelectItem) =>
               onPageSizeSelected(pageSizeSelectedSelectItem.id as number)
