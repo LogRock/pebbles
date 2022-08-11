@@ -1,3 +1,9 @@
+## [7.8.2](https://github.com/LogRock/pebbles/compare/v7.8.1...v7.8.2) (2022-08-11)
+
+### Bug Fixes
+
+- table footer, removed extra pageSize selector, code cleanup, updated snapshot ([d584d11](https://github.com/LogRock/pebbles/commit/d584d1190dfbfb6d9f746931c40e991ba4de2149))
+
 ## [7.8.1](https://github.com/LogRock/pebbles/compare/v7.8.0...v7.8.1) (2022-08-11)
 
 ### Bug Fixes
