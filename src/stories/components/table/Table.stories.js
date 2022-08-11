@@ -157,23 +157,11 @@ export const NewRows = () => (
   </Table>
 );
 
-const ITEMS_PER_PAGE_OPTIONS = [
-  { id: 10, label: "10" },
-  { id: 20, label: "20" },
-  { id: 50, label: "50" },
-  { id: 100, label: "100" },
-  { id: 200, label: "200" },
-];
-
 export const WithFooter = () => {
-  // const [pageLimit, setPageLimit] = useState(+ITEMS_PER_PAGE_OPTIONS[0].id);
+  const [pageLimit, setPageLimit] = React.useState(10);
 
-  // useEffect(() => {
-  //   console.log("pageLimit: ", pageLimit);
-  // }, [pageLimit]);
-
-  const handleItemsPerPageChange = (limit) => {
-    // console.log("handleItemsPerPageChange | limit: ", limit);
+  const pageSizeChangedHandler = (pageSize) => {
+    setPageLimit(pageSize);
   };
 
   return (
@@ -251,8 +239,9 @@ export const WithFooter = () => {
         itemsFrom="0"
         itemsTo="100"
         itemsTotal="1000"
-        itemsPerPageOptions={ITEMS_PER_PAGE_OPTIONS}
-        onSetItemsPerPage={(option) => handleItemsPerPageChange(option.id)}
+        pageSize={pageLimit}
+        pageSizeOptions={[10, 20, 30, 40, 9999]}
+        onPageSizeSelected={pageSizeChangedHandler}
       ></TableFooter>
     </Table>
   );
