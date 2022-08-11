@@ -6,7 +6,7 @@ import {
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import { isFunction } from "lodash";
-import React, { FC, useContext, useMemo } from "react";
+import React, { FC, useContext, useEffect, useMemo, useState } from "react";
 import { ThemeContext } from "styled-components";
 import { BaseItemType } from "../Select/Select.types";
 import { ParagraphSmall } from "../Typography";
@@ -21,7 +21,7 @@ import {
   TablePerPage,
   TablePerPageLabel,
   TablePerPageSelector,
-  FooterLeftArea,
+  FooterSection,
 } from "./Table.styled";
 import {
   TableHeaderProps,
@@ -88,12 +88,17 @@ export const TableFooter: FC<TableFooterProps> = ({
   showGoToLastPage,
   goToLastPageContent,
   onGoToLastPageClicked,
-  itemsPerPage,
   itemsPerPageOptions,
-  onSetItemsPerPage = () => null,
+  onSetItemsPerPage,
   children,
 }) => {
   const theme = useContext(ThemeContext);
+
+  const [pageLimit, setPageLimit] = useState(10);
+
+  useEffect(() => {
+    // console.log("pageLimit: ", pageLimit);
+  }, [pageLimit]);
 
   const format =
     itemsFromToTotalFormatter && isFunction(itemsFromToTotalFormatter)
@@ -208,19 +213,22 @@ export const TableFooter: FC<TableFooterProps> = ({
   }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
 
   const itemsPerPageSelector = useMemo(() => {
-    if (itemsPerPage && itemsPerPageOptions) {
+    if (itemsPerPageOptions) {
       return (
         <TablePerPage>
           <TablePerPageLabel weight="bolder">Items per page</TablePerPageLabel>
           <TablePerPageSelector
             id="itemsPerPageSelector"
             autoCompleteItems={itemsPerPageOptions || []}
+            inputProps={{
+              value: pageLimit,
+            }}
             onItemSelected={(item) => {
               const option = item as BaseItemType;
-              onSetItemsPerPage(option);
-            }}
-            inputProps={{
-              value: itemsPerPage,
+              setPageLimit(+option.id);
+              return isFunction(onSetItemsPerPage)
+                ? onSetItemsPerPage(option)
+                : () => null;
             }}
           />
         </TablePerPage>
@@ -232,18 +240,32 @@ export const TableFooter: FC<TableFooterProps> = ({
 
   return (
     <TFoot>
-      <tr>
-        <FooterLeftArea colSpan={50}>
-          {itemsPerPageSelector}
-          {itemsCount}
-        </FooterLeftArea>
-        <td colSpan={50}>
+      {/* <tr>
+        <td>{itemsPerPageSelector}</td>
+        <td>{itemsCount}</td>
+        <td></td>
+        <td colSpan={4}>
           {goToFirstPage}
           {goToPreviousPage}
           {goToNextPage}
           {goToLastPage}
         </td>
+      </tr> */}
+      <tr>
+        <td colSpan={100}>
+          <FooterSection>
+            {itemsPerPageSelector}
+            {itemsCount}
+          </FooterSection>
+          <FooterSection>
+            {goToFirstPage}
+            {goToPreviousPage}
+            {goToNextPage}
+            {goToLastPage}
+          </FooterSection>
+        </td>
       </tr>
+
       {children && (
         <tr>
           <td colSpan={100}>{children}</td>

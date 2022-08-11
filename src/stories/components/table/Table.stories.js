@@ -166,18 +166,37 @@ const ITEMS_PER_PAGE_OPTIONS = [
 ];
 
 export const WithFooter = () => {
+  // const [pageLimit, setPageLimit] = useState(+ITEMS_PER_PAGE_OPTIONS[0].id);
+
+  // useEffect(() => {
+  //   console.log("pageLimit: ", pageLimit);
+  // }, [pageLimit]);
+
+  const handleItemsPerPageChange = (limit) => {
+    // console.log("handleItemsPerPageChange | limit: ", limit);
+  };
+
   return (
     <Table>
       <TableHead>
         <TableRow addEmptyTDAtEnd>
           <TableHeader showOrdering currentOrder={OrderingEnum.DESC} center>
-            Ordered DESC
+            User ID
           </TableHeader>
           <TableHeader showOrdering currentOrder={OrderingEnum.ASC} center>
             Ordered ASC
           </TableHeader>
           <TableHeader showOrdering center>
             Orderable
+          </TableHeader>
+          <TableHeader showOrdering center>
+            Age
+          </TableHeader>
+          <TableHeader showOrdering center>
+            Country
+          </TableHeader>
+          <TableHeader showOrdering center>
+            Hobby
           </TableHeader>
         </TableRow>
       </TableHead>
@@ -186,16 +205,41 @@ export const WithFooter = () => {
           <TableDatum center>1</TableDatum>
           <TableDatum center>A</TableDatum>
           <TableDatum center>Some Guy</TableDatum>
+          <TableDatum center>16</TableDatum>
+          <TableDatum center>France</TableDatum>
+          <TableDatum center>Trekking</TableDatum>
         </TableRow>
         <TableRow addEmptyTDAtEnd>
           <TableDatum center>2</TableDatum>
           <TableDatum center>B</TableDatum>
           <TableDatum center>Some Girl</TableDatum>
+          <TableDatum center>21</TableDatum>
+          <TableDatum center>Germany</TableDatum>
+          <TableDatum center>Cooking</TableDatum>
         </TableRow>
         <TableRow isNew>
           <TableDatum center>3</TableDatum>
           <TableDatum center>C</TableDatum>
           <TableDatum center>Some Non-Binary Individual</TableDatum>
+          <TableDatum center>42</TableDatum>
+          <TableDatum center>Spain</TableDatum>
+          <TableDatum center>Fishing</TableDatum>
+        </TableRow>
+        <TableRow>
+          <TableDatum center>4</TableDatum>
+          <TableDatum center>D</TableDatum>
+          <TableDatum center>Some Guy 2</TableDatum>
+          <TableDatum center>33</TableDatum>
+          <TableDatum center>Brazil</TableDatum>
+          <TableDatum center>Soccer</TableDatum>
+        </TableRow>
+        <TableRow>
+          <TableDatum center>5</TableDatum>
+          <TableDatum center>3</TableDatum>
+          <TableDatum center>Some Girl 2</TableDatum>
+          <TableDatum center>63</TableDatum>
+          <TableDatum center>Japan</TableDatum>
+          <TableDatum center>Chess</TableDatum>
         </TableRow>
       </TableBody>
       <TableFooter
@@ -207,9 +251,8 @@ export const WithFooter = () => {
         itemsFrom="0"
         itemsTo="100"
         itemsTotal="1000"
-        itemsPerPage={+ITEMS_PER_PAGE_OPTIONS[1].label}
         itemsPerPageOptions={ITEMS_PER_PAGE_OPTIONS}
-        onSetItemsPerPage={() => null}
+        onSetItemsPerPage={(option) => handleItemsPerPageChange(option.id)}
       ></TableFooter>
     </Table>
   );
