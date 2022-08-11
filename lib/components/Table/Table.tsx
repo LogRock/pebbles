@@ -238,7 +238,6 @@ export const TableFooter: FC<TableFooterProps> = ({
         <td colSpan={2}>{itemsPerPageSelector}</td>
         <td colSpan={100}>
           {children}
-          {itemsPerPageSelector}
           {itemsCount}
           {goToFirstPage}
           {goToPreviousPage}
