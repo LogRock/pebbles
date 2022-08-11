@@ -1,3 +1,12 @@
+## [7.8.1](https://github.com/LogRock/pebbles/compare/v7.8.0...v7.8.1) (2022-08-11)
+
+### Bug Fixes
+
+- fixing table layout and logic issues after item per page selector added ([6b8d51c](https://github.com/LogRock/pebbles/commit/6b8d51c50b7f94841439e24a9df97ffb8092a678))
+- **table:** :bug: fix dropdown not hiding on select ([6221f15](https://github.com/LogRock/pebbles/commit/6221f1506887a3873fc8d0cd30e82d52e3851279))
+- **table:** :bug: fix table footer page size control ([202f1a9](https://github.com/LogRock/pebbles/commit/202f1a90c5379a212f60cab3727f88932a18b96f))
+- **table:** :lipstick: fix table footer styling ([17d6676](https://github.com/LogRock/pebbles/commit/17d6676f96ffc71bb8ec8be64fc6792719b4a27c))
+
 # [7.8.0](https://github.com/LogRock/pebbles/compare/v7.7.1...v7.8.0) (2022-08-10)
 
 ### Bug Fixes
