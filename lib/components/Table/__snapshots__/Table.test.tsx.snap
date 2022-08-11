@@ -8,20 +8,20 @@ exports[`Table > renders selected rows 1`] = `
     class="sc-jcFjpl eFRaem"
   >
     <tr
-      class="sc-cTAqQK RxiWO"
+      class="sc-efQSVx OeiKQ"
     >
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header A
       </th>
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header B
       </th>
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header C
       </th>
@@ -31,58 +31,58 @@ exports[`Table > renders selected rows 1`] = `
     class="sc-caiLqq imryLE"
   >
     <tr
-      class="sc-cTAqQK RxiWO"
+      class="sc-efQSVx OeiKQ"
     >
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content A1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content B1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content C1
       </td>
     </tr>
     <tr
-      class="sc-cTAqQK dDNzqc"
+      class="sc-efQSVx cTudTS"
     >
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content A2
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content B2
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content C2
       </td>
     </tr>
     <tr
-      class="sc-cTAqQK RxiWO"
+      class="sc-efQSVx OeiKQ"
     >
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content A3
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content B3
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content C3
       </td>
@@ -99,15 +99,15 @@ exports[`Table > renders with some content 1`] = `
     class="sc-jcFjpl eFRaem"
   >
     <tr
-      class="sc-cTAqQK RxiWO"
+      class="sc-efQSVx OeiKQ"
     >
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header A
       </th>
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header A
         <svg
@@ -135,7 +135,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header B
         <svg
@@ -155,7 +155,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <th
-        class="sc-iAKWXU iotlQI"
+        class="sc-iUKqMP UPmei"
       >
         Header C
         <svg
@@ -175,7 +175,7 @@ exports[`Table > renders with some content 1`] = `
         </svg>
       </th>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       />
     </tr>
   </thead>
@@ -183,50 +183,50 @@ exports[`Table > renders with some content 1`] = `
     class="sc-caiLqq imryLE"
   >
     <tr
-      class="sc-cTAqQK RxiWO"
+      class="sc-efQSVx OeiKQ"
     >
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content A1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content B1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content C1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       />
     </tr>
     <tr
-      class="sc-cTAqQK fgcAtr"
+      class="sc-efQSVx dlOsiF"
     >
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content A1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content B1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         Content C1
       </td>
       <td
-        class="sc-efQSVx kHVprq"
+        class="sc-iAKWXU cDDlQQ"
       >
         <span
-          class="sc-jObWnj geYXMO"
+          class="sc-cTAqQK dVxJlT"
         >
           New
         </span>
