@@ -9,7 +9,6 @@ import { isFunction } from "lodash";
 import React, { FC, useContext, useEffect, useMemo, useState } from "react";
 import { ThemeContext } from "styled-components";
 import { BaseItemType } from "../Select/Select.types";
-import { ParagraphSmall } from "../Typography";
 import Ordering from "./Ordering";
 import {
   New,
@@ -21,7 +20,7 @@ import {
   TablePerPage,
   TablePerPageLabel,
   TablePerPageSelector,
-  FooterSection,
+  ItemsCount,
 } from "./Table.styled";
 import {
   TableHeaderProps,
@@ -107,9 +106,9 @@ export const TableFooter: FC<TableFooterProps> = ({
           `${from}-${to} of ${total}`;
 
   const itemsCount = showItemsCount ? (
-    <ParagraphSmall>
+    <ItemsCount>
       {format(itemsFrom || "", itemsTo || "", itemsTotal || "")}
-    </ParagraphSmall>
+    </ItemsCount>
   ) : null;
 
   const goToFirstPage = useMemo(() => {
@@ -216,7 +215,7 @@ export const TableFooter: FC<TableFooterProps> = ({
     if (itemsPerPageOptions) {
       return (
         <TablePerPage>
-          <TablePerPageLabel weight="bolder">Items per page</TablePerPageLabel>
+          <TablePerPageLabel>Items per page</TablePerPageLabel>
           <TablePerPageSelector
             id="itemsPerPageSelector"
             autoCompleteItems={itemsPerPageOptions || []}
@@ -240,37 +239,17 @@ export const TableFooter: FC<TableFooterProps> = ({
 
   return (
     <TFoot>
-      {/* <tr>
-        <td>{itemsPerPageSelector}</td>
-        <td>{itemsCount}</td>
-        <td></td>
-        <td colSpan={4}>
+      <tr>
+        <td colSpan={2}>{itemsPerPageSelector}</td>
+        <td colSpan={100}>
+          {children}
+          {itemsCount}
           {goToFirstPage}
           {goToPreviousPage}
           {goToNextPage}
           {goToLastPage}
         </td>
-      </tr> */}
-      <tr>
-        <td colSpan={100}>
-          <FooterSection>
-            {itemsPerPageSelector}
-            {itemsCount}
-          </FooterSection>
-          <FooterSection>
-            {goToFirstPage}
-            {goToPreviousPage}
-            {goToNextPage}
-            {goToLastPage}
-          </FooterSection>
-        </td>
       </tr>
-
-      {children && (
-        <tr>
-          <td colSpan={100}>{children}</td>
-        </tr>
-      )}
     </TFoot>
   );
 };
