@@ -6,9 +6,8 @@ import {
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import { isFunction } from "lodash";
-import React, { FC, useContext, useEffect, useMemo, useState } from "react";
+import React, { FC, useContext, useMemo } from "react";
 import { ThemeContext } from "styled-components";
-import { BaseItemType } from "../Select/Select.types";
 import Ordering from "./Ordering";
 import {
   New,
@@ -87,17 +86,12 @@ export const TableFooter: FC<TableFooterProps> = ({
   showGoToLastPage,
   goToLastPageContent,
   onGoToLastPageClicked,
-  itemsPerPageOptions,
-  onSetItemsPerPage,
+  pageSize,
+  pageSizeOptions,
+  onPageSizeSelected,
   children,
 }) => {
   const theme = useContext(ThemeContext);
-
-  const [pageLimit, setPageLimit] = useState(10);
-
-  useEffect(() => {
-    // console.log("pageLimit: ", pageLimit);
-  }, [pageLimit]);
 
   const format =
     itemsFromToTotalFormatter && isFunction(itemsFromToTotalFormatter)
@@ -212,30 +206,31 @@ export const TableFooter: FC<TableFooterProps> = ({
   }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
 
   const itemsPerPageSelector = useMemo(() => {
-    if (itemsPerPageOptions) {
+    if (pageSizeOptions && onPageSizeSelected) {
       return (
         <TablePerPage>
           <TablePerPageLabel>Items per page</TablePerPageLabel>
           <TablePerPageSelector
             id="itemsPerPageSelector"
-            autoCompleteItems={itemsPerPageOptions || []}
+            autoCompleteItems={pageSizeOptions.map((pageSizeOption) => ({
+              id: pageSizeOption,
+              label: pageSizeOption.toFixed(0),
+              name: pageSizeOption.toFixed(0),
+            }))}
             inputProps={{
-              value: pageLimit,
+              value: pageSize,
+              onChange: () => null,
             }}
-            onItemSelected={(item) => {
-              const option = item as BaseItemType;
-              setPageLimit(+option.id);
-              return isFunction(onSetItemsPerPage)
-                ? onSetItemsPerPage(option)
-                : () => null;
-            }}
+            onItemSelected={(pageSizeSelectedSelectItem) =>
+              onPageSizeSelected(pageSizeSelectedSelectItem.id as number)
+            }
           />
         </TablePerPage>
       );
     }
 
     return "";
-  }, [showGoToLastPage, onGoToLastPageClicked, goToLastPageContent]);
+  }, [pageSize, pageSizeOptions, onPageSizeSelected]);
 
   return (
     <TFoot>
@@ -243,6 +238,7 @@ export const TableFooter: FC<TableFooterProps> = ({
         <td colSpan={2}>{itemsPerPageSelector}</td>
         <td colSpan={100}>
           {children}
+          {itemsPerPageSelector}
           {itemsCount}
           {goToFirstPage}
           {goToPreviousPage}
