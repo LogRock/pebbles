@@ -80,6 +80,10 @@ const Select = <ItemType extends BaseItemType>({
   }, [keyPressHandler]);
 
   useEffect(() => {
+    // console.log("inputProps: ", inputProps);
+  }, [inputProps]);
+
+  useEffect(() => {
     if (firstFocus) {
       setHasFocus(true);
     }

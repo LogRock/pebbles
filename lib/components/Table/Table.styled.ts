@@ -151,12 +151,14 @@ export const TablePaginationButton = styled.button`
 export const TablePerPage = styled.div`
   display: flex;
   align-items: center;
-  width: max-content;
+  width: 250px;
 `;
 
-export const FooterLeftArea = styled.td`
-  display: flex;
-  align-items: center;
+export const TablePerPageLabel = styled(ParagraphXSmall)`
+  margin-right: 8px;
+
+  color: ${({ theme }) => theme.colors.neutral[500]};
+  text-transform: uppercase;
 `;
 
 export const TablePerPageSelector = styled(Select)`
@@ -181,9 +183,7 @@ export const TablePerPageSelector = styled(Select)`
   }
 `;
 
-export const TablePerPageLabel = styled(ParagraphXSmall)`
-  margin-right: 8px;
-
-  color: ${({ theme }) => theme.colors.neutral[500]};
-  text-transform: uppercase;
+export const FooterSection = styled.span`
+  display: flex;
+  align-items: center;
 `;
