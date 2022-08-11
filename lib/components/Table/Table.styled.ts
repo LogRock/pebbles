@@ -5,7 +5,6 @@ import {
   overlineXSmallCSS,
   paragraphMediumCSS,
   paragraphSmallCSS,
-  ParagraphXSmall,
   paragraphXSmallCSS,
 } from "../Typography";
 
@@ -42,27 +41,6 @@ export const TableHead = styled.thead`
 
 export const TableBody = styled.tbody`
   /* stylelint-disable-next-line */
-`;
-
-export const TFoot = styled.tfoot`
-  position: relative;
-  ${paragraphXSmallCSS}
-
-  width: 100%;
-
-  background-color: ${({ theme }) => theme.colors.shades[0]};
-
-  tr {
-    td {
-      padding-top: ${({ theme }) => theme.spacings.md};
-      padding-right: ${({ theme }) => theme.spacings.big};
-      padding-bottom: ${({ theme }) => theme.spacings.md};
-      padding-left: ${({ theme }) => theme.spacings.big};
-
-      text-align: right;
-      vertical-align: middle;
-    }
-  }
 `;
 
 export const TH = styled.th<TableHeaderProps>`
@@ -148,13 +126,15 @@ export const TablePaginationButton = styled.button`
   }
 `;
 
-export const TablePerPage = styled.div`
-  display: flex;
+export const TablePerPage = styled.span`
+  display: inline-flex;
   align-items: center;
-  width: 250px;
+  width: 280px;
 `;
 
-export const TablePerPageLabel = styled(ParagraphXSmall)`
+export const TablePerPageLabel = styled.label`
+  ${paragraphSmallCSS}
+
   margin-right: 8px;
 
   color: ${({ theme }) => theme.colors.neutral[500]};
@@ -183,7 +163,28 @@ export const TablePerPageSelector = styled(Select)`
   }
 `;
 
-export const FooterSection = styled.span`
-  display: flex;
-  align-items: center;
+export const TFoot = styled.tfoot`
+  ${paragraphXSmallCSS}
+
+  width: 100%;
+
+  background-color: ${({ theme }) => theme.colors.shades[0]};
+
+  tr {
+    td {
+      padding-top: ${({ theme }) => theme.spacings.md};
+      padding-right: ${({ theme }) => theme.spacings.big};
+      padding-bottom: ${({ theme }) => theme.spacings.md};
+      padding-left: ${({ theme }) => theme.spacings.big};
+
+      text-align: right;
+      vertical-align: middle;
+    }
+  }
+`;
+
+export const ItemsCount = styled.span`
+  ${paragraphSmallCSS}
+
+  margin-left: auto;
 `;
