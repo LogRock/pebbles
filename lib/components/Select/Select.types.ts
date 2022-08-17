@@ -31,4 +31,5 @@ export type SelectProps<ItemType> = {
   inputProps?: InputBoxProps;
   spaced?: boolean;
   maxHeight?: number;
+  expandUp?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;

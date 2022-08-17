@@ -140,7 +140,9 @@ export const TablePerPageLabel = styled.label`
   text-transform: uppercase;
 `;
 
-export const TablePerPageSelector = styled(Select)`
+export const TablePerPageSelector = styled(Select)<
+  Pick<any, "autoCompleteItems" | "expandUp">
+>`
   max-width: 120px;
   margin-right: ${({ theme }) => theme.spacings.xbig};
 
@@ -158,7 +160,8 @@ export const TablePerPageSelector = styled(Select)`
   }
 
   ${SelectItems} {
-    top: 48px;
+    top: ${({ autoCompleteItems, expandUp }) =>
+      expandUp ? autoCompleteItems.length * -36 : 48}px;
   }
 `;
 
