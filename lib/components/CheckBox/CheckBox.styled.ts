@@ -4,6 +4,7 @@ import { paragraphMediumCSS } from "../Typography/Typography.styled";
 export const CheckMark = styled.span<{ disabled?: boolean }>`
   position: relative;
   width: ${({ theme }) => theme.checkBox.width};
+  min-width: ${({ theme }) => theme.checkBox.width};
   height: ${({ theme }) => theme.checkBox.height};
   margin-top: 2px;
   margin-right: ${({ theme }) => theme.checkBox.marginRight};
@@ -51,6 +52,7 @@ export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
 
 export const Input = styled.input`
   position: absolute;
+  flex-shrink: 0;
   width: 0;
   height: 0;
 
