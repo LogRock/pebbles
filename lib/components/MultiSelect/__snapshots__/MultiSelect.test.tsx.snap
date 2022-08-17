@@ -25,12 +25,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
               A
               <input
                 checked=""
-                class="sc-hBUSln hlAOnG"
+                class="sc-hBUSln bHBirw"
                 id="A"
                 type="checkbox"
               />
               <span
-                class="sc-bqiRlB ddOyiM"
+                class="sc-bqiRlB iRRMvO"
               />
             </label>
             <label
@@ -39,12 +39,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             >
               B
               <input
-                class="sc-hBUSln hlAOnG"
+                class="sc-hBUSln bHBirw"
                 id="B"
                 type="checkbox"
               />
               <span
-                class="sc-bqiRlB ddOyiM"
+                class="sc-bqiRlB iRRMvO"
               />
             </label>
             <label
@@ -54,12 +54,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
               C
               <input
                 checked=""
-                class="sc-hBUSln hlAOnG"
+                class="sc-hBUSln bHBirw"
                 id="C"
                 type="checkbox"
               />
               <span
-                class="sc-bqiRlB ddOyiM"
+                class="sc-bqiRlB iRRMvO"
               />
             </label>
           </div>
@@ -95,12 +95,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             A
             <input
               checked=""
-              class="sc-hBUSln hlAOnG"
+              class="sc-hBUSln bHBirw"
               id="A"
               type="checkbox"
             />
             <span
-              class="sc-bqiRlB ddOyiM"
+              class="sc-bqiRlB iRRMvO"
             />
           </label>
           <label
@@ -109,12 +109,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
           >
             B
             <input
-              class="sc-hBUSln hlAOnG"
+              class="sc-hBUSln bHBirw"
               id="B"
               type="checkbox"
             />
             <span
-              class="sc-bqiRlB ddOyiM"
+              class="sc-bqiRlB iRRMvO"
             />
           </label>
           <label
@@ -124,12 +124,12 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             C
             <input
               checked=""
-              class="sc-hBUSln hlAOnG"
+              class="sc-hBUSln bHBirw"
               id="C"
               type="checkbox"
             />
             <span
-              class="sc-bqiRlB ddOyiM"
+              class="sc-bqiRlB iRRMvO"
             />
           </label>
         </div>
