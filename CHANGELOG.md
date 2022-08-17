@@ -1,3 +1,9 @@
+## [7.8.3](https://github.com/LogRock/pebbles/compare/v7.8.2...v7.8.3) (2022-08-17)
+
+### Bug Fixes
+
+- **checkbox:** :lipstick: fix checkbox sizing on smaller widths ([bae9b77](https://github.com/LogRock/pebbles/commit/bae9b776ad4c389f10f553a1707999b191c1a346))
+
 ## [7.8.2](https://github.com/LogRock/pebbles/compare/v7.8.1...v7.8.2) (2022-08-11)
 
 ### Bug Fixes
