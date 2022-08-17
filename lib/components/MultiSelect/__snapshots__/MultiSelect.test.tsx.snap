@@ -25,7 +25,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
               A
               <input
                 checked=""
-                class="sc-hBUSln bHBirw"
+                class="sc-hBUSln gZaPxe"
                 id="A"
                 type="checkbox"
               />
@@ -39,7 +39,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             >
               B
               <input
-                class="sc-hBUSln bHBirw"
+                class="sc-hBUSln gZaPxe"
                 id="B"
                 type="checkbox"
               />
@@ -54,7 +54,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
               C
               <input
                 checked=""
-                class="sc-hBUSln bHBirw"
+                class="sc-hBUSln gZaPxe"
                 id="C"
                 type="checkbox"
               />
@@ -95,7 +95,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             A
             <input
               checked=""
-              class="sc-hBUSln bHBirw"
+              class="sc-hBUSln gZaPxe"
               id="A"
               type="checkbox"
             />
@@ -109,7 +109,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
           >
             B
             <input
-              class="sc-hBUSln bHBirw"
+              class="sc-hBUSln gZaPxe"
               id="B"
               type="checkbox"
             />
@@ -124,7 +124,7 @@ exports[`MultiSelect Component > should match snapshot 1`] = `
             C
             <input
               checked=""
-              class="sc-hBUSln bHBirw"
+              class="sc-hBUSln gZaPxe"
               id="C"
               type="checkbox"
             />
