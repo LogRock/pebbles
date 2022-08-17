@@ -15,6 +15,7 @@ const Select = <ItemType extends BaseItemType>({
   spaced,
   maxHeight,
   multiSelect,
+  expandUp,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;

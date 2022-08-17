@@ -240,7 +240,7 @@ export const WithFooter = () => {
         itemsTo="100"
         itemsTotal="1000"
         pageSize={pageLimit}
-        pageSizeOptions={[10, 20, 30, 40, 9999]}
+        pageSizeOptions={[10, 20, 50, 100]}
         onPageSizeSelected={pageSizeChangedHandler}
       ></TableFooter>
     </Table>
