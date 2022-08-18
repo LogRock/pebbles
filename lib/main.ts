@@ -96,9 +96,9 @@ export { default as CardContent } from "./components/Card/CardContent";
 export { default as CardFooter } from "./components/Card/CardFooter";
 export type { CardProps } from "./components/Card";
 
-// expose MultiSelect
-export { default as MultiSelect } from "./components/MultiSelect";
-export type { MultiSelectProps } from "./components/MultiSelect";
+// expose CheckBoxGroup
+export { default as CheckBoxGroup } from "./components/CheckBoxGroup";
+export type { CheckBoxGroupProps } from "./components/CheckBoxGroup";
 
 // expose TabView
 export {

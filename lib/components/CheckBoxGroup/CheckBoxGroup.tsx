@@ -3,12 +3,12 @@ import React, { FC } from "react";
 import CheckBox from "../CheckBox";
 import BaseInputBox, { BaseInputBoxProps } from "../InputBox/BaseInputBox";
 
-export interface MultiSelectProps extends BaseInputBoxProps {
+export interface CheckBoxGroupProps extends BaseInputBoxProps {
   possibleValues?: string[];
   values?: string[];
 }
 
-const MultiSelect: FC<MultiSelectProps> = ({
+const CheckBoxGroup: FC<CheckBoxGroupProps> = ({
   possibleValues,
   values,
   ...inputProps
@@ -43,4 +43,4 @@ const MultiSelect: FC<MultiSelectProps> = ({
   );
 };
 
-export default MultiSelect;
+export default CheckBoxGroup;

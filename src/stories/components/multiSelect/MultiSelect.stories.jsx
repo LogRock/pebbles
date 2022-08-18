@@ -1,10 +1,10 @@
 import React, { FC, useState } from "react";
-import MultiSelect from "../../../../lib/components/MultiSelect";
+import CheckBoxGroup from "../../../../lib/components/CheckBoxGroup";
 import Form from "@rjsf/core";
 
 export default {
-  title: "Components/MultiSelect",
-  component: MultiSelect,
+  title: "Components/CheckBoxGroup",
+  component: CheckBoxGroup,
 };
 
 const Template = (props) => {
@@ -14,7 +14,7 @@ const Template = (props) => {
 
   return (
     <>
-      <MultiSelect
+      <CheckBoxGroup
         {...props}
         values={values}
         onChange={async (data) => {
@@ -60,9 +60,9 @@ const basaltSchema = {
     },
   },
 };
-const CustomMultiSelect: FC = (props) => {
+const CustomCheckBoxGroup: FC = (props) => {
   return (
-    <MultiSelect
+    <CheckBoxGroup
       description={props.schema.title}
       possibleValues={props.schema.items.enum}
       values={props.formData || null}
@@ -80,7 +80,7 @@ const DynamicForm: FC = (props) => {
     <Form
       schema={basaltSchema}
       fields={{
-        ArrayField: CustomMultiSelect,
+        ArrayField: CustomCheckBoxGroup,
       }}
     />
   );
@@ -89,4 +89,4 @@ const DynamicForm: FC = (props) => {
 const FormTemplate = (args) => {
   return <DynamicForm values={["(T) Double/Triples"]} />;
 };
-export const FormMultiSelect = FormTemplate.bind({});
+export const FormCheckBoxGroup = FormTemplate.bind({});

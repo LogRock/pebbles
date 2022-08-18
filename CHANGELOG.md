@@ -1,3 +1,10 @@
+## [7.8.4](https://github.com/LogRock/pebbles/compare/v7.8.3...v7.8.4) (2022-08-18)
+
+### Bug Fixes
+
+- **select:** set padding right so the text doesn't get overriden by the open control ([6599a71](https://github.com/LogRock/pebbles/commit/6599a71466ea28d03cd5d44c962263a066ae13a0))
+- update snapshot ([b4e94ea](https://github.com/LogRock/pebbles/commit/b4e94eac8bd63f49b74f42671964e80f2f784b85))
+
 ## [7.8.3](https://github.com/LogRock/pebbles/compare/v7.8.2...v7.8.3) (2022-08-17)
 
 ### Bug Fixes
