@@ -224,7 +224,6 @@ export const TableFooter: FC<TableFooterProps> = ({
             onItemSelected={(pageSizeSelectedSelectItem) =>
               onPageSizeSelected(pageSizeSelectedSelectItem.id as number)
             }
-            expandUp={true}
           />
         </TablePerPage>
       );

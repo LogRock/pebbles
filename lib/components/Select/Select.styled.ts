@@ -32,6 +32,8 @@ export const SelectItems = styled.div<{
   helper?: React.ReactNode;
   description?: string;
   maxHeight?: number;
+  expandUp?: boolean;
+  menuHeight?: number;
 }>`
   display: ${({ focus }) => (focus ? "flex" : "hidden")};
   box-sizing: border-box;
@@ -50,13 +52,17 @@ export const SelectItems = styled.div<{
     display: ${({ focus }) => (focus ? "flex" : "none")};
     position: absolute;
     z-index: 99999999;
-    top: ${({ theme, description, helper }) =>
-      `calc(
+    top: ${({ theme, description, helper, expandUp, menuHeight }) =>
+      expandUp
+        ? `-${menuHeight}px`
+        : `calc(
         ${theme.spacings.xxlg} 
         + ${description ? theme.inputBox.label.lineHeight : "0px"} 
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
         + ${helper ? "14px" : "0px"}
       )`};
+    flex-direction: ${({ expandUp }) =>
+      expandUp ? "column-reverse" : "column"};
     flex-grow: unset;
     flex-shrink: unset;
 

@@ -15,16 +15,41 @@ const Select = <ItemType extends BaseItemType>({
   spaced,
   maxHeight,
   multiSelect,
-  expandUp,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
 
+  const ref = useRef<HTMLDivElement>(null);
+  const itemsMenuRef = useRef<HTMLDivElement>(null);
+
   const [currentHighlight, setCurrentHighlight] = useState(0);
   const [hasFocus, setHasFocus] = useState(false);
   const [firstFocus, setFirstFocus] = useState(false);
+  const [expandUp, setExpandUp] = useState(true);
+  const [menuHeight, setMenuHeight] = useState<number | undefined>(0);
 
-  const ref = useRef<HTMLDivElement>(null);
+  const evaluateExpandDirection = useCallback(() => {
+    let distToBottom = 0;
+
+    const minDistanceToBotton = itemsMenuRef?.current?.clientHeight
+      ? itemsMenuRef?.current.clientHeight + 12
+      : 80;
+
+    setMenuHeight(itemsMenuRef?.current?.clientHeight);
+
+    if (ref?.current?.offsetTop && ref?.current?.offsetHeight) {
+      distToBottom =
+        window.innerHeight -
+        ref?.current?.offsetTop -
+        ref?.current?.offsetHeight;
+    }
+
+    if (distToBottom < minDistanceToBotton) {
+      setExpandUp(true);
+    } else {
+      setExpandUp(false);
+    }
+  }, [ref, itemsMenuRef]);
 
   const keyPressHandler = useCallback(
     (e: KeyboardEvent) => {
@@ -86,6 +111,12 @@ const Select = <ItemType extends BaseItemType>({
     }
   }, [autoCompleteItems, firstFocus]);
 
+  useEffect(() => {
+    if (hasFocus) {
+      evaluateExpandDirection();
+    }
+  }, [hasFocus]);
+
   return (
     <SelectWrapper
       focus={hasFocus}
@@ -131,10 +162,13 @@ const Select = <ItemType extends BaseItemType>({
       />
       {hasFocus && (
         <SelectItems
+          ref={itemsMenuRef}
           focus={hasFocus}
           helper={inputProps?.helper}
           description={inputProps?.description}
           maxHeight={maxHeight}
+          expandUp={expandUp}
+          menuHeight={menuHeight}
         >
           {renderHeader || null}
           {autoCompleteItems?.map((item, index) => (
