@@ -180,6 +180,10 @@ export const TFoot = styled.tfoot`
       text-align: right;
       vertical-align: middle;
     }
+
+    td:first-child {
+      text-align: left !important;
+    }
   }
 `;
 
