@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import Select from "../Select";
-import { SelectItems } from "../Select/Select.styled";
 import {
   overlineXSmallCSS,
   paragraphMediumCSS,
@@ -140,9 +139,7 @@ export const TablePerPageLabel = styled.label`
   text-transform: uppercase;
 `;
 
-export const TablePerPageSelector = styled(Select)<
-  Pick<any, "autoCompleteItems" | "expandUp">
->`
+export const TablePerPageSelector = styled(Select)`
   max-width: 120px;
   margin-right: ${({ theme }) => theme.spacings.xbig};
 
@@ -157,11 +154,6 @@ export const TablePerPageSelector = styled(Select)<
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  ${SelectItems} {
-    top: ${({ autoCompleteItems, expandUp }) =>
-      expandUp ? autoCompleteItems.length * -36 : 48}px;
   }
 `;
 
