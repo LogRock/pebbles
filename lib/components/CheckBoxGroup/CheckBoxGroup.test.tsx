@@ -7,19 +7,19 @@ import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "../../utils/test-utils";
 // import { render } from "@testing-library/react"
 
-import MultiSelect from "./MultiSelect";
+import CheckBoxGroup from "./CheckBoxGroup";
 
-describe("MultiSelect Component", () => {
+describe("CheckBoxGroup Component", () => {
   it("should match snapshot", () => {
-    const multiSelect = render(
-      <MultiSelect possibleValues={["A", "B", "C"]} values={["A", "C"]} />
+    const checkBoxGroup = render(
+      <CheckBoxGroup possibleValues={["A", "B", "C"]} values={["A", "C"]} />
     );
 
-    expect(multiSelect).toMatchSnapshot();
+    expect(checkBoxGroup).toMatchSnapshot();
   });
   it("should show a helper message snapshot", () => {
     render(
-      <MultiSelect
+      <CheckBoxGroup
         description="test"
         helper="you should provide a value"
         possibleValues={["A", "B", "C"]}
@@ -29,11 +29,11 @@ describe("MultiSelect Component", () => {
     expect(screen.getByText(/you should provide a value/)).toBeInTheDocument();
   });
   it("should select options to trigger change event", () => {
-    const onChange = (data: {}) => { };
+    const onChange = (data: {}) => {};
     const onChangeMock = vi.fn().mockImplementation(onChange);
 
     render(
-      <MultiSelect
+      <CheckBoxGroup
         description="test"
         helper="you should provide a value"
         possibleValues={["A-test", "B-test", "C-test"]}
