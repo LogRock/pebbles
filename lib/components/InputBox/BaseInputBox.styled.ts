@@ -83,6 +83,7 @@ export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
   height: ${({ theme }) => theme.inputBox.height};
   margin: ${({ theme }) => theme.inputBox.margin};
   padding: ${({ theme }) => theme.inputBox.padding};
+  padding-right: 58px;
 
   border: ${({ theme, status }) =>
     theme.inputBox[status || defaultStatus].border};
