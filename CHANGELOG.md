@@ -1,3 +1,9 @@
+## [7.8.5](https://github.com/LogRock/pebbles/compare/v7.8.4...v7.8.5) (2022-08-19)
+
+### Bug Fixes
+
+- fixed page size elements, now aligned to the left of the cell ([4b843dc](https://github.com/LogRock/pebbles/commit/4b843dc83dd6d9ea267b6f81f4f6cc0260455af0))
+
 ## [7.8.4](https://github.com/LogRock/pebbles/compare/v7.8.3...v7.8.4) (2022-08-18)
 
 ### Bug Fixes
