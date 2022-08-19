@@ -129,7 +129,6 @@ export const TablePaginationButton = styled.button`
 export const TablePerPage = styled.span`
   display: inline-flex;
   align-items: center;
-  width: 280px;
 `;
 
 export const TablePerPageLabel = styled.label`
@@ -143,7 +142,7 @@ export const TablePerPageLabel = styled.label`
 
 export const TablePerPageSelector = styled(Select)`
   max-width: 120px;
-  margin-right: ${({ theme }) => theme.spacings.md};
+  margin-right: ${({ theme }) => theme.spacings.xbig};
 
   input,
   button {
@@ -191,4 +190,6 @@ export const ItemsCount = styled.span`
   ${paragraphSmallCSS}
 
   margin-left: auto;
+
+  color: ${({ theme }) => theme.colors.neutral["500"]};
 `;
