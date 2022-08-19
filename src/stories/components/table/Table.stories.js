@@ -169,7 +169,7 @@ export const WithFooter = () => {
       <TableHead>
         <TableRow addEmptyTDAtEnd>
           <TableHeader showOrdering currentOrder={OrderingEnum.DESC} center>
-            User ID
+            User Identification (ID)
           </TableHeader>
           <TableHeader showOrdering currentOrder={OrderingEnum.ASC} center>
             Ordered ASC
@@ -191,7 +191,7 @@ export const WithFooter = () => {
       <TableBody>
         <TableRow isNew>
           <TableDatum center>1</TableDatum>
-          <TableDatum center>A</TableDatum>
+          <TableDatum center>Angola</TableDatum>
           <TableDatum center>Some Guy</TableDatum>
           <TableDatum center>16</TableDatum>
           <TableDatum center>France</TableDatum>
@@ -199,7 +199,7 @@ export const WithFooter = () => {
         </TableRow>
         <TableRow addEmptyTDAtEnd>
           <TableDatum center>2</TableDatum>
-          <TableDatum center>B</TableDatum>
+          <TableDatum center>Belgium</TableDatum>
           <TableDatum center>Some Girl</TableDatum>
           <TableDatum center>21</TableDatum>
           <TableDatum center>Germany</TableDatum>
@@ -207,7 +207,7 @@ export const WithFooter = () => {
         </TableRow>
         <TableRow isNew>
           <TableDatum center>3</TableDatum>
-          <TableDatum center>C</TableDatum>
+          <TableDatum center>Cameroon</TableDatum>
           <TableDatum center>Some Non-Binary Individual</TableDatum>
           <TableDatum center>42</TableDatum>
           <TableDatum center>Spain</TableDatum>
@@ -215,7 +215,7 @@ export const WithFooter = () => {
         </TableRow>
         <TableRow>
           <TableDatum center>4</TableDatum>
-          <TableDatum center>D</TableDatum>
+          <TableDatum center>Denmark</TableDatum>
           <TableDatum center>Some Guy 2</TableDatum>
           <TableDatum center>33</TableDatum>
           <TableDatum center>Brazil</TableDatum>
@@ -223,7 +223,7 @@ export const WithFooter = () => {
         </TableRow>
         <TableRow>
           <TableDatum center>5</TableDatum>
-          <TableDatum center>3</TableDatum>
+          <TableDatum center>Etiopia</TableDatum>
           <TableDatum center>Some Girl 2</TableDatum>
           <TableDatum center>63</TableDatum>
           <TableDatum center>Japan</TableDatum>

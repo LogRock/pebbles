@@ -97,7 +97,7 @@ export const TableFooter: FC<TableFooterProps> = ({
     itemsFromToTotalFormatter && isFunction(itemsFromToTotalFormatter)
       ? itemsFromToTotalFormatter
       : (from: string, to: string, total: string) =>
-          `${from}-${to} of ${total}`;
+          to === total ? `${from} to ${total}` : `${from}-${to} of ${total}`;
 
   const itemsCount = showItemsCount ? (
     <ItemsCount>
@@ -235,10 +235,11 @@ export const TableFooter: FC<TableFooterProps> = ({
   return (
     <TFoot>
       <tr>
-        <td colSpan={2}>{itemsPerPageSelector}</td>
+        <td colSpan={4}>
+          {itemsPerPageSelector} {itemsCount}
+        </td>
         <td colSpan={100}>
           {children}
-          {itemsCount}
           {goToFirstPage}
           {goToPreviousPage}
           {goToNextPage}
