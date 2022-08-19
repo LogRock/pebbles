@@ -52,15 +52,15 @@ export const SelectItems = styled.div<{
     display: ${({ focus }) => (focus ? "flex" : "none")};
     position: absolute;
     z-index: 99999999;
-    top: ${({ theme, description, helper, expandUp, menuHeight }) =>
-      expandUp
-        ? `-${menuHeight}px`
-        : `calc(
-        ${theme.spacings.xxlg} 
+    top: ${({ theme, description, helper, expandUp }) =>
+      !expandUp &&
+      `calc(
+        ${theme.spacings.xlg} 
         + ${description ? theme.inputBox.label.lineHeight : "0px"} 
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
         + ${helper ? "14px" : "0px"}
       )`};
+    bottom: ${({ expandUp }) => expandUp && `50px`};
     flex-direction: ${({ expandUp }) =>
       expandUp ? "column-reverse" : "column"};
     flex-grow: unset;
