@@ -27,9 +27,13 @@ const Select = <ItemType extends BaseItemType>({
   const [firstFocus, setFirstFocus] = useState(false);
   const [expandUp, setExpandUp] = useState(true);
   const [menuHeight, setMenuHeight] = useState<number | undefined>(0);
+  const [inputHeight, setInputHeight] = useState<number | undefined>(0);
 
   const evaluateExpandDirection = useCallback(() => {
     let distToBottom = 0;
+
+    const inputHeight = ref?.current?.clientHeight;
+    setInputHeight(inputHeight);
 
     const minDistanceToBotton = itemsMenuRef?.current?.clientHeight
       ? itemsMenuRef?.current.clientHeight + 12
@@ -169,6 +173,7 @@ const Select = <ItemType extends BaseItemType>({
           maxHeight={maxHeight}
           expandUp={expandUp}
           menuHeight={menuHeight}
+          inputHeight={inputHeight}
         >
           {renderHeader || null}
           {autoCompleteItems?.map((item, index) => (

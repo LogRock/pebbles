@@ -34,6 +34,7 @@ export const SelectItems = styled.div<{
   maxHeight?: number;
   expandUp?: boolean;
   menuHeight?: number;
+  inputHeight?: number;
 }>`
   display: ${({ focus }) => (focus ? "flex" : "hidden")};
   box-sizing: border-box;
@@ -60,7 +61,8 @@ export const SelectItems = styled.div<{
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
         + ${helper ? "14px" : "0px"}
       )`};
-    bottom: ${({ expandUp, theme }) => expandUp && theme.spacings.xxxlg};
+    bottom: ${({ expandUp, theme, inputHeight }) =>
+      expandUp && `${inputHeight}px`};
     flex-direction: ${({ expandUp }) =>
       expandUp ? "column-reverse" : "column"};
     flex-grow: unset;
