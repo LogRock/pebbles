@@ -55,12 +55,12 @@ export const SelectItems = styled.div<{
     top: ${({ theme, description, helper, expandUp }) =>
       !expandUp &&
       `calc(
-        ${theme.spacings.xlg} 
-        + ${description ? theme.inputBox.label.lineHeight : "0px"} 
+        ${theme.spacings.xxlg}
+        + ${description ? theme.inputBox.label.lineHeight : "0px"}
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
         + ${helper ? "14px" : "0px"}
       )`};
-    bottom: ${({ expandUp }) => expandUp && `50px`};
+    bottom: ${({ expandUp, theme }) => expandUp && theme.spacings.xxxlg};
     flex-direction: ${({ expandUp }) =>
       expandUp ? "column-reverse" : "column"};
     flex-grow: unset;
