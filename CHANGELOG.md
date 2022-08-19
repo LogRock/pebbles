@@ -1,3 +1,9 @@
+## [7.9.2](https://github.com/LogRock/pebbles/compare/v7.9.1...v7.9.2) (2022-08-19)
+
+### Bug Fixes
+
+- uses inputHeight dinamically to position select menu upwards, more robust ([fbef020](https://github.com/LogRock/pebbles/commit/fbef020d087fa1f76149eed8e58ddc0b3c3e5118))
+
 ## [7.9.1](https://github.com/LogRock/pebbles/compare/v7.9.0...v7.9.1) (2022-08-19)
 
 ### Bug Fixes
