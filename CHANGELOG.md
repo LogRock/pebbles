@@ -1,3 +1,14 @@
+# [7.9.0](https://github.com/LogRock/pebbles/compare/v7.8.5...v7.9.0) (2022-08-19)
+
+### Bug Fixes
+
+- **items-per-page:** avoid show total twice at the last page ([aea4d7f](https://github.com/LogRock/pebbles/commit/aea4d7fbd75be5a64ae8141229041949a59e1e1d))
+
+### Features
+
+- select menu opens up or downwards, according to dist to window bottom ([1648ce9](https://github.com/LogRock/pebbles/commit/1648ce90f89f8a54099b8fab190133c3d0500a0a))
+- table with pagesize menu up, select now has a expandUp option ([224f0df](https://github.com/LogRock/pebbles/commit/224f0dfdbc1e75d9cbb42103ec25fd4b1ccafda4))
+
 ## [7.8.5](https://github.com/LogRock/pebbles/compare/v7.8.4...v7.8.5) (2022-08-19)
 
 ### Bug Fixes
