@@ -1,3 +1,10 @@
+## [7.9.1](https://github.com/LogRock/pebbles/compare/v7.9.0...v7.9.1) (2022-08-19)
+
+### Bug Fixes
+
+- fixes issue with select menu up position when using autocomplete ([9b34fa8](https://github.com/LogRock/pebbles/commit/9b34fa86e0eb7d1ee2c1ba371a539833c5449442))
+- **select:** increase the top for the select dropdown box ([c067530](https://github.com/LogRock/pebbles/commit/c06753037453e0f1166b468cc710275d65a09794))
+
 # [7.9.0](https://github.com/LogRock/pebbles/compare/v7.8.5...v7.9.0) (2022-08-19)
 
 ### Bug Fixes
