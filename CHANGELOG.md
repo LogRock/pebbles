@@ -1,3 +1,10 @@
+## [7.9.3](https://github.com/LogRock/pebbles/compare/v7.9.2...v7.9.3) (2022-08-22)
+
+### Bug Fixes
+
+- changed if logic to avoid menu having both top and bottom pos rules ([c55d553](https://github.com/LogRock/pebbles/commit/c55d553fb5a60e5fd768e2e43f24df99db020fcb))
+- removes selects label height from calc, menu will cover it when expanded ([74ef61c](https://github.com/LogRock/pebbles/commit/74ef61c347e24922f62523c7d7c82d743be0f25a))
+
 ## [7.9.2](https://github.com/LogRock/pebbles/compare/v7.9.1...v7.9.2) (2022-08-19)
 
 ### Bug Fixes
