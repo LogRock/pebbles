@@ -26,8 +26,8 @@ const Select = <ItemType extends BaseItemType>({
   const [hasFocus, setHasFocus] = useState(false);
   const [firstFocus, setFirstFocus] = useState(false);
   const [expandUp, setExpandUp] = useState(false);
-  const [menuHeight, setMenuHeight] = useState<number | undefined>(0);
-  const [inputHeight, setInputHeight] = useState<number | undefined>(0);
+  const [menuHeight, setMenuHeight] = useState<number | undefined>(100);
+  const [inputHeight, setInputHeight] = useState<number | undefined>(50);
 
   const evaluateExpandDirection = useCallback(() => {
     let distToBottom = 0;
@@ -39,7 +39,9 @@ const Select = <ItemType extends BaseItemType>({
       ? itemsMenuRef?.current.clientHeight + 12
       : 80;
 
-    setMenuHeight(itemsMenuRef?.current?.clientHeight);
+    if (itemsMenuRef?.current?.clientHeight) {
+      setMenuHeight(itemsMenuRef?.current?.clientHeight);
+    }
 
     if (ref?.current?.offsetTop && ref?.current?.offsetHeight) {
       distToBottom =
@@ -50,9 +52,9 @@ const Select = <ItemType extends BaseItemType>({
 
     if (distToBottom < minDistanceToBotton) {
       setExpandUp(true);
-    } else {
-      setExpandUp(false);
+      return;
     }
+    setExpandUp(false);
   }, [ref, itemsMenuRef]);
 
   const keyPressHandler = useCallback(
