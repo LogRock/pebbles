@@ -61,8 +61,11 @@ export const SelectItems = styled.div<{
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
         + ${helper ? "14px" : "0px"}
       )`};
-    bottom: ${({ expandUp, theme, inputHeight }) =>
-      expandUp && `${inputHeight}px`};
+    bottom: ${({ expandUp, theme, description, inputHeight }) =>
+      expandUp &&
+      `calc(${inputHeight}px + -${
+        description ? theme.inputBox.label.lineHeight : "0px"
+      })`};
     flex-direction: ${({ expandUp }) =>
       expandUp ? "column-reverse" : "column"};
     flex-grow: unset;
