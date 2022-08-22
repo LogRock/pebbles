@@ -1,3 +1,9 @@
+## [7.9.4](https://github.com/LogRock/pebbles/compare/v7.9.3...v7.9.4) (2022-08-22)
+
+### Bug Fixes
+
+- smartExpand prop added, menu upwards position logic fixed, uses inputHeight ([8c620b0](https://github.com/LogRock/pebbles/commit/8c620b0ee418d006384e2b9c2f9fb55312e047d9))
+
 ## [7.9.3](https://github.com/LogRock/pebbles/compare/v7.9.2...v7.9.3) (2022-08-22)
 
 ### Bug Fixes
