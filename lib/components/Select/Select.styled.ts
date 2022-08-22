@@ -53,13 +53,12 @@ export const SelectItems = styled.div<{
     display: ${({ focus }) => (focus ? "flex" : "none")};
     position: absolute;
     z-index: 99999999;
-    top: ${({ theme, description, helper, expandUp }) =>
+    top: ${({ theme, inputHeight, helper, expandUp }) =>
       !expandUp &&
       `calc(
-        ${theme.spacings.xxlg}
-        + ${description ? theme.inputBox.label.lineHeight : "0px"}
+        ${inputHeight}px
         + -${helper ? theme.inputBox.helper.fontSize : "0px"}
-        + ${helper ? "14px" : "0px"}
+        - 4px
       )`};
     bottom: ${({ expandUp, theme, description, inputHeight }) =>
       expandUp &&

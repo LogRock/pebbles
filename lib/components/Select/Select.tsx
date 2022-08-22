@@ -15,6 +15,7 @@ const Select = <ItemType extends BaseItemType>({
   spaced,
   maxHeight,
   multiSelect,
+  smartExpand = false,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
@@ -50,7 +51,7 @@ const Select = <ItemType extends BaseItemType>({
         ref?.current?.offsetHeight;
     }
 
-    if (distToBottom < minDistanceToBotton) {
+    if (smartExpand && distToBottom < minDistanceToBotton) {
       setExpandUp(true);
       return;
     }
