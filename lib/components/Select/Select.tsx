@@ -25,7 +25,7 @@ const Select = <ItemType extends BaseItemType>({
   const [currentHighlight, setCurrentHighlight] = useState(0);
   const [hasFocus, setHasFocus] = useState(false);
   const [firstFocus, setFirstFocus] = useState(false);
-  const [expandUp, setExpandUp] = useState(true);
+  const [expandUp, setExpandUp] = useState(false);
   const [menuHeight, setMenuHeight] = useState<number | undefined>(0);
   const [inputHeight, setInputHeight] = useState<number | undefined>(0);
 
