@@ -1,3 +1,9 @@
+## [7.9.5](https://github.com/LogRock/pebbles/compare/v7.9.4...v7.9.5) (2022-08-25)
+
+### Bug Fixes
+
+- **datepicker:** :bug: remove mask when range picking ([dd8965d](https://github.com/LogRock/pebbles/commit/dd8965d159484898199ba17e0768238e728b5aea))
+
 ## [7.9.4](https://github.com/LogRock/pebbles/compare/v7.9.3...v7.9.4) (2022-08-22)
 
 ### Bug Fixes
