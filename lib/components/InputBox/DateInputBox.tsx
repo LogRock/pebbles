@@ -58,21 +58,24 @@ const DateInputBox: FC<DateInputBoxProps> = ({
               showMonthDropdown
               showYearDropdown
               customInput={
-                <MaskedTextInput
-                  type="text"
-                  mask={[
-                    /\d/,
-                    /\d/,
-                    "/",
-                    /\d/,
-                    /\d/,
-                    "/",
-                    /\d/,
-                    /\d/,
-                    /\d/,
-                    /\d/,
-                  ]}
-                />
+                // @ts-ignore
+                inputProps.selectsRange ? undefined : (
+                  <MaskedTextInput
+                    type="text"
+                    mask={[
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                )
               }
               {...inputProps}
             />
