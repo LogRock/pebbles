@@ -1,3 +1,13 @@
+# [8.0.0](https://github.com/LogRock/pebbles/compare/v7.9.5...v8.0.0) (2022-08-30)
+
+### Bug Fixes
+
+- **table:** :lipstick: fix styling rules for tables and cards ([f6b410a](https://github.com/LogRock/pebbles/commit/f6b410a4ebe0f8aa4fe53707056dffb3466f5905))
+
+### BREAKING CHANGES
+
+- **table:** api for cards changed
+
 ## [7.9.5](https://github.com/LogRock/pebbles/compare/v7.9.4...v7.9.5) (2022-08-25)
 
 ### Bug Fixes
