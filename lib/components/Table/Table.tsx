@@ -90,6 +90,7 @@ export const TableFooter: FC<TableFooterProps> = ({
   pageSizeOptions,
   onPageSizeSelected,
   children,
+  numberOfColumns,
 }) => {
   const theme = useContext(ThemeContext);
 
@@ -233,13 +234,21 @@ export const TableFooter: FC<TableFooterProps> = ({
     return "";
   }, [pageSize, pageSizeOptions, onPageSizeSelected]);
 
+  const firstTDColSpan = useMemo(() => {
+    if (!numberOfColumns) return 4;
+    if (numberOfColumns <= 4) return numberOfColumns - 1;
+    return 4;
+  }, []);
+
   return (
     <TFoot>
       <tr>
-        <td colSpan={4}>
-          {itemsPerPageSelector} {itemsCount}
-        </td>
-        <td colSpan={100}>
+        {(itemsPerPageSelector || itemsCount) && (
+          <td colSpan={firstTDColSpan}>
+            {itemsPerPageSelector} {itemsCount}
+          </td>
+        )}
+        <td colSpan={999999}>
           {children}
           {goToFirstPage}
           {goToPreviousPage}

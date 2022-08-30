@@ -24,6 +24,7 @@ export interface TableRowProps extends React.ComponentPropsWithoutRef<"tr"> {
 }
 
 export interface TableFooterProps {
+  numberOfColumns?: number;
   showItemsCount?: boolean;
   itemsFrom?: string;
   itemsTo?: string;
