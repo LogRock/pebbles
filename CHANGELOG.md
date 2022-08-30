@@ -1,3 +1,9 @@
+## [8.0.1](https://github.com/LogRock/pebbles/compare/v8.0.0...v8.0.1) (2022-08-30)
+
+### Bug Fixes
+
+- **table:** :bug: fix some sizing issues with the footer ([21d8506](https://github.com/LogRock/pebbles/commit/21d85067f36e94d92d3ab3e3d941af33f79ba757))
+
 # [8.0.0](https://github.com/LogRock/pebbles/compare/v7.9.5...v8.0.0) (2022-08-30)
 
 ### Bug Fixes
