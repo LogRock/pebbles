@@ -9,6 +9,7 @@ import Table, {
   TableFooter,
 } from "../../../../lib/components/Table";
 import { OrderingEnum } from "../../../../lib/components/Table/Table.types";
+import { Card } from "../../../../lib/main";
 
 export default {
   title: "Components/Table",
@@ -52,6 +53,47 @@ export const SimpleTable = () => (
       </TableRow>
     </TableBody>
   </Table>
+);
+
+export const SimpleTableInCard = () => (
+  <Card noPadding>
+    <Table>
+      <TableHead>
+        <TableRow>
+          <TableHeader>Number</TableHeader>
+          <TableHeader>Letter</TableHeader>
+          <TableHeader>Orderable</TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableDatum>1</TableDatum>
+          <TableDatum>A</TableDatum>
+          <TableDatum>Some Guy</TableDatum>
+        </TableRow>
+        <TableRow>
+          <TableDatum>2</TableDatum>
+          <TableDatum>B</TableDatum>
+          <TableDatum>Some Girl</TableDatum>
+        </TableRow>
+        <TableRow>
+          <TableDatum>3</TableDatum>
+          <TableDatum>C</TableDatum>
+          <TableDatum>Some Non-Binary Individual</TableDatum>
+        </TableRow>
+        <TableRow isSelected>
+          <TableDatum>4</TableDatum>
+          <TableDatum>D</TableDatum>
+          <TableDatum>Not sure Who</TableDatum>
+        </TableRow>
+        <TableRow isNew>
+          <TableDatum>5</TableDatum>
+          <TableDatum>E</TableDatum>
+          <TableDatum>Someone I Knew</TableDatum>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Card>
 );
 
 export const OrderableTable = () => (

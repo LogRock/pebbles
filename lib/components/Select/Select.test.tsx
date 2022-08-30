@@ -48,6 +48,7 @@ describe("Select", () => {
           hint: {
             icon: "drop",
             content: "",
+            type: "text",
           },
         }}
       />
