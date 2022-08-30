@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 
-import { CardProps } from "./Card.types";
-
-const CardContent: FC<CardProps> = ({ children, ...props }) => {
+const CardContent: FC = ({ children, ...props }) => {
   return <div {...props}>{children}</div>;
 };
 
