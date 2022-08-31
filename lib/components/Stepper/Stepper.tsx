@@ -5,6 +5,7 @@ import {
   StepCheckMark,
   StepIndex,
   StepLabel,
+  StepLine,
   Steps,
 } from "./Stepper.styled";
 import { StepperProps } from "./Stepper.types";
@@ -55,8 +56,15 @@ const Stepper = (props: StepperProps) => {
             isFinished={finished}
           >
             <p>{adjustStepDisplay(stepNum)}</p>
+            <StepLine
+              isCurStep={current}
+              isLastItem={last}
+              isFinished={finished}
+            />
             <StepCheckMark isCurStep={current} isFinished={finished} />
           </StepIndex>
+
+          {/* TO-DO: must accept React.Node, have a more versatile step content */}
           <StepLabel isCurStep={current}>{label}</StepLabel>
         </Step>
       );

@@ -35,24 +35,26 @@ export const StepIndex = styled.div<{
         : props.theme.colors.neutral[500]};
     font-weight: 500;
   }
+`;
 
-  &:after {
-    content: "";
+export const StepLine = styled.div<{
+  isCurStep: Boolean;
+  isLastItem: Boolean;
+  isFinished: Boolean;
+}>`
+  display: ${(props: any) => (props.isLastItem ? "none" : "block")};
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  width: 2px;
+  height: 32px;
 
-    display: ${(props: any) => (props.isLastItem ? "none" : "block")};
-    position: absolute;
-    top: 38px;
-    left: 50%;
-    height: 32px;
+  transform: translate(-50%, 0);
 
-    transform: translate(-50%, 0);
-
-    border: 1px solid
-      ${(props: any) =>
-        props.isFinished
-          ? props.theme.colors.primary[500]
-          : props.theme.colors.neutral[200]};
-  }
+  background-color: ${(props: any) =>
+    props.isFinished
+      ? props.theme.colors.primary[500]
+      : props.theme.colors.neutral[200]};
 `;
 
 export const StepCheckMark = styled.div<{
