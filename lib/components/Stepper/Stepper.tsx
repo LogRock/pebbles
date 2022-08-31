@@ -10,17 +10,27 @@ import {
 import { StepperProps } from "./Stepper.types";
 
 const Stepper = (props: StepperProps) => {
-  const { labels, finishedSteps, curStep, onStepClick } = props;
+  const {
+    labels,
+    finishedSteps,
+    curStep,
+    onStepClick,
+    forceTwoDigitsIndicator = true,
+    showHoverEffect = true,
+  } = props;
 
   const adjustStepDisplay = (stepNum: number) => {
-    if (stepNum < 10) {
+    if (forceTwoDigitsIndicator && stepNum < 10) {
       return stepNum.toString().padStart(2, "0");
     }
     return stepNum.toString();
   };
 
   const stepIsFinished = (stepNum: number) => {
-    return finishedSteps?.indexOf(stepNum) !== -1;
+    if (finishedSteps && finishedSteps.length !== 0) {
+      return finishedSteps?.indexOf(stepNum) !== -1;
+    }
+    return false;
   };
 
   let itens;
@@ -37,6 +47,7 @@ const Stepper = (props: StepperProps) => {
           onClick={() => {
             onStepClick && onStepClick(stepNum);
           }}
+          showHoverEffect={showHoverEffect}
         >
           <StepIndex
             isCurStep={current}

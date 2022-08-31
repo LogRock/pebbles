@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StepIndex = styled.div<{
   isCurStep: Boolean;
@@ -101,24 +101,28 @@ export const StepLabel = styled.div<{ isCurStep: Boolean }>`
   font-weight: 500;
 `;
 
-export const Step = styled.div`
+export const Step = styled.div<{ showHoverEffect: Boolean }>`
   display: flex;
   align-items: center;
   margin-bottom: 34px;
 
-  cursor: pointer;
+  ${({ showHoverEffect }) =>
+    showHoverEffect &&
+    css`
+      cursor: pointer;
 
-  &:hover > ${StepLabel} {
-    color: ${({ theme }) => theme.colors.neutral[900]};
-  }
+      &:hover > ${StepLabel} {
+        color: theme.colors.neutral[900];
+      }
 
-  &:hover > ${StepIndex} {
-    border: 2px solid ${({ theme }) => theme.colors.primary[400]};
+      &:hover > ${StepIndex} {
+        border: 2px solid ${({ theme }) => theme.colors.primary[400]};
 
-    p {
-      color: ${({ theme }) => theme.colors.neutral[900]};
-    }
-  }
+        p {
+          color: ${({ theme }) => theme.colors.neutral[900]};
+        }
+      }
+    `}
 `;
 
 export const Steps = styled.div`

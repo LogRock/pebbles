@@ -9,9 +9,15 @@ export default {
 const Template = (args) => <Stepper {...args}>{args.label}</Stepper>;
 
 export const Default = Template.bind({});
-
 Default.args = {
   labels: ["Personal", "Company", "ELD", "Documents", "Finish"],
   finishedSteps: [1, 2, 3],
   curStep: 4,
+};
+
+export const InformativeOnly = Template.bind({});
+InformativeOnly.args = {
+  labels: ["Personal", "Company", "ELD", "Documents", "Finish"],
+  forceTwoDigitsIndicator: false,
+  showHoverEffect: false,
 };
