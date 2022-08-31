@@ -15,7 +15,7 @@ const Stepper = (props: StepperProps) => {
     finishedSteps,
     curStep,
     onStepClick,
-    forceTwoDigitsIndicator = true,
+    forceTwoDigitsIndicator = false,
     showHoverEffect = true,
   } = props;
 
