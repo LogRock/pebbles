@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { StepperProps, StepperStepProps } from "./Stepper.types";
 
 export const StepIndicatorContainer = styled.div`
   display: grid;
@@ -9,11 +10,7 @@ export const StepIndicatorContainer = styled.div`
   justify-items: center;
 `;
 
-export const StepIndicator = styled.div<{
-  current: Boolean;
-  last: Boolean;
-  completed: Boolean;
-}>`
+export const StepIndicator = styled.div<StepperStepProps>`
   display: flex;
   position: relative;
   align-items: center;
@@ -47,9 +44,7 @@ export const StepIndicator = styled.div<{
   }
 `;
 
-export const StepLine = styled.div<{
-  completed: Boolean;
-}>`
+export const StepLine = styled.div<StepperStepProps>`
   width: 2px;
   height: 100%;
 
@@ -59,10 +54,7 @@ export const StepLine = styled.div<{
       : props.theme.colors.neutral[200]};
 `;
 
-export const StepCheckMark = styled.div<{
-  current: Boolean;
-  completed: Boolean;
-}>`
+export const StepCheckMark = styled.div<StepperStepProps>`
   display: ${(props: any) => (props.completed ? "block" : "none")};
   position: absolute;
 
@@ -97,7 +89,7 @@ export const StepCheckMark = styled.div<{
   }
 `;
 
-export const StepContent = styled.div<{ current: Boolean }>`
+export const StepContent = styled.div<StepperStepProps>`
   min-height: 48px;
   margin-top: 12px;
 
@@ -108,12 +100,12 @@ export const StepContent = styled.div<{ current: Boolean }>`
   font-weight: 500;
 `;
 
-export const Step = styled.div<{ showHoverEffect: Boolean }>`
+export const Step = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
 `;
 
-export const Steps = styled.div<{ showHoverEffect: boolean }>`
+export const Steps = styled.div<StepperProps>`
   display: flex;
   flex-direction: column;
 

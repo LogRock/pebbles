@@ -2,7 +2,7 @@
 
 exports[`Table > renders selected rows 1`] = `
 <table
-  class="sc-cidDSM gJjQwx"
+  class="sc-cidDSM btgGwg"
 >
   <thead
     class="sc-jcFjpl eFRaem"
@@ -93,7 +93,7 @@ exports[`Table > renders selected rows 1`] = `
 
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-cidDSM gJjQwx"
+  class="sc-cidDSM btgGwg"
 >
   <thead
     class="sc-jcFjpl eFRaem"

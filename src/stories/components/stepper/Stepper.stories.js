@@ -24,28 +24,16 @@ Default.args = {
   showHoverEffect: true,
   children: (
     <>
-      <StepperStep
-        stepIndex={1}
-        completed
-        onStepClick={(idx) => handleOnClick(idx)}
-      >
+      <StepperStep stepIndex={1} completed onStepClick={() => handleOnClick(1)}>
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep
-        stepIndex={2}
-        completed
-        onStepClick={(idx) => handleOnClick(idx)}
-      >
+      <StepperStep stepIndex={2} completed onStepClick={() => handleOnClick(2)}>
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep
-        stepIndex={3}
-        current
-        onStepClick={(idx) => handleOnClick(idx)}
-      >
+      <StepperStep stepIndex={3} current onStepClick={() => handleOnClick(3)}>
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={4} last onStepClick={(idx) => handleOnClick(idx)}>
+      <StepperStep stepIndex={4} last onStepClick={() => handleOnClick(4)}>
         <NoMarginText>Finish</NoMarginText>
       </StepperStep>
     </>

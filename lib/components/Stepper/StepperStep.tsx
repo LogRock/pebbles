@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { StepperProps } from "./Stepper.types";
+import { StepperStepProps } from "./Stepper.types";
 import {
   Step,
   StepIndicatorContainer,
@@ -10,21 +10,19 @@ import {
   StepLine,
 } from "./Stepper.styled";
 
-const StepperStep: FC<StepperProps> = ({
+const StepperStep: FC<StepperStepProps> = ({
   stepIndex,
-  last = false,
-  completed = false,
-  current = false,
+  last,
+  completed,
+  current,
   onStepClick,
-  showHoverEffect = true,
   children,
 }) => {
   return (
     <Step
       key={`${stepIndex}`}
-      showHoverEffect={showHoverEffect}
       onClick={() => {
-        onStepClick && stepIndex && onStepClick(stepIndex);
+        onStepClick && onStepClick();
       }}
     >
       <StepIndicatorContainer>
