@@ -15,10 +15,18 @@ const StepperStep: FC<StepperProps> = ({
   last = false,
   completed = false,
   current = false,
+  onStepClick,
+  showHoverEffect = true,
   children,
 }) => {
   return (
-    <Step>
+    <Step
+      key={`${stepIndex}`}
+      showHoverEffect={showHoverEffect}
+      onClick={() => {
+        onStepClick && onStepClick(stepIndex);
+      }}
+    >
       <StepIndicatorContainer>
         <StepIndicator current={current} last={last} completed={completed}>
           <p>{stepIndex}</p>

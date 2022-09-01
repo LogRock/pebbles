@@ -15,21 +15,37 @@ const NoMarginText = styled.h4`
 
 const Template = (args) => <Stepper {...args}></Stepper>;
 
+const handleOnClick = (stepIndex) => {
+  alert(`clicked step is: ${stepIndex}`);
+};
+
 export const Default = Template.bind({});
 Default.args = {
   showHoverEffect: true,
   children: (
     <>
-      <StepperStep stepIndex={1} completed>
+      <StepperStep
+        stepIndex={1}
+        completed
+        onStepClick={(idx) => handleOnClick(idx)}
+      >
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={2} completed>
+      <StepperStep
+        stepIndex={2}
+        completed
+        onStepClick={(idx) => handleOnClick(idx)}
+      >
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={3} current>
+      <StepperStep
+        stepIndex={3}
+        current
+        onStepClick={(idx) => handleOnClick(idx)}
+      >
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={4} last>
+      <StepperStep stepIndex={4} last onStepClick={(idx) => handleOnClick(idx)}>
         <NoMarginText>Finish</NoMarginText>
       </StepperStep>
     </>
@@ -41,16 +57,16 @@ InformativeOnly.args = {
   showHoverEffect: false,
   children: (
     <>
-      <StepperStep stepIndex={"01"}>
+      <StepperStep stepIndex="01">
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={"02"}>
+      <StepperStep stepIndex="02">
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={"03"}>
+      <StepperStep stepIndex="03">
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={"04"}>
+      <StepperStep stepIndex="04">
         <NoMarginText>Documents</NoMarginText>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
@@ -64,7 +80,7 @@ InformativeOnly.args = {
           repellat sequi. Facere, atque!
         </p>
       </StepperStep>
-      <StepperStep stepIndex={"05"} last>
+      <StepperStep stepIndex="05" last>
         <NoMarginText>Last Step</NoMarginText>
         <div>
           <p>
