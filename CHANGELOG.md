@@ -1,3 +1,23 @@
+# [9.0.0](https://github.com/LogRock/pebbles/compare/v8.0.1...v9.0.0) (2022-09-01)
+
+### Bug Fixes
+
+- forceTwoDigitsIndicator default now is false ([f5562f2](https://github.com/LogRock/pebbles/commit/f5562f25b714eb555ba6bdc6ae463bd2fcfe62ac))
+- hoverEffect now working as an option ([002b85a](https://github.com/LogRock/pebbles/commit/002b85a2231de6d464a69458db3a472083f196a1))
+- indicator line now as a div, no pseudo-element ([78ebc65](https://github.com/LogRock/pebbles/commit/78ebc65204a2bafc54bdfac3facc51d3a46e1ae0))
+- onStepClick logic set up ([7c37b20](https://github.com/LogRock/pebbles/commit/7c37b2076e9fa31287c8603ea46ac3e1aa530296))
+- tested with different content on the last step ([bff910f](https://github.com/LogRock/pebbles/commit/bff910fe18b51a8d74447a82dcafd59adc1567ed))
+
+### Features
+
+- stepper - hides active and hover effects according to two new props ([90dd7b0](https://github.com/LogRock/pebbles/commit/90dd7b03f6f74bf255d19e030114111a979150e6))
+- stepper items layout css all ok now ([39f2a18](https://github.com/LogRock/pebbles/commit/39f2a1820ac052c71087ba70cbc0d17f30be44fd))
+- **stepper upgraded component, added tests:** simple unit test to stepper component ([774482f](https://github.com/LogRock/pebbles/commit/774482f682b508d96377dbdf1e1c5d1f81456271))
+
+### BREAKING CHANGES
+
+- **stepper upgraded component, added tests:** No longer uses props like labels, each step must be added as children
+
 ## [8.0.1](https://github.com/LogRock/pebbles/compare/v8.0.0...v8.0.1) (2022-08-30)
 
 ### Bug Fixes
