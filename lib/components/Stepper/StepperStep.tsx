@@ -8,7 +8,7 @@ import {
   StepCheckMark,
   StepContent,
   StepLine,
-} from "./StepperStep.styled";
+} from "./Stepper.styled";
 
 const StepperStep: FC<StepperProps> = ({
   stepIndex,
@@ -16,10 +16,9 @@ const StepperStep: FC<StepperProps> = ({
   completed = false,
   current = false,
   children,
-  ...props
 }) => {
   return (
-    <Step key={`${stepIndex}_${Math.random()}`} showHoverEffect={true}>
+    <Step>
       <StepIndicatorContainer>
         <StepIndicator current={current} last={last} completed={completed}>
           <p>{stepIndex}</p>

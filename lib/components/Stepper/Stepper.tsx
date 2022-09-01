@@ -5,12 +5,15 @@ import { StepperProps } from "./Stepper.types";
 
 const Stepper: FC<StepperProps> = ({
   onStepClick,
-  forceTwoDigitsIndicator = false,
   showHoverEffect = true,
   children,
   ...props
 }) => {
-  return <Steps>{children}</Steps>;
+  return (
+    <Steps showHoverEffect={showHoverEffect} {...props}>
+      {children}
+    </Steps>
+  );
 };
 
 export default Stepper;

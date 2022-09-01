@@ -17,7 +17,6 @@ const Template = (args) => <Stepper {...args}></Stepper>;
 
 export const Default = Template.bind({});
 Default.args = {
-  forceTwoDigitsIndicator: true,
   showHoverEffect: true,
   children: (
     <>
@@ -39,20 +38,19 @@ Default.args = {
 
 export const InformativeOnly = Template.bind({});
 InformativeOnly.args = {
-  forceTwoDigitsIndicator: true,
-  showHoverEffect: true,
+  showHoverEffect: false,
   children: (
     <>
-      <StepperStep stepIndex={1}>
+      <StepperStep stepIndex={"01"}>
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={2}>
+      <StepperStep stepIndex={"02"}>
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={3}>
+      <StepperStep stepIndex={"03"}>
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex={4}>
+      <StepperStep stepIndex={"04"}>
         <NoMarginText>Documents</NoMarginText>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
@@ -66,7 +64,7 @@ InformativeOnly.args = {
           repellat sequi. Facere, atque!
         </p>
       </StepperStep>
-      <StepperStep stepIndex={5} last>
+      <StepperStep stepIndex={"05"} last>
         <NoMarginText>Last Step</NoMarginText>
         <div>
           <p>
