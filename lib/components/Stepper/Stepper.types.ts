@@ -1,5 +1,5 @@
 export interface StepperProps {
-  stepIndex: number | string;
+  stepIndex?: number | string;
   current?: boolean;
   last?: boolean;
   completed?: boolean;
