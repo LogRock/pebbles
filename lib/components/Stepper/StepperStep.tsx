@@ -24,7 +24,7 @@ const StepperStep: FC<StepperProps> = ({
       key={`${stepIndex}`}
       showHoverEffect={showHoverEffect}
       onClick={() => {
-        onStepClick && onStepClick(stepIndex);
+        onStepClick && stepIndex && onStepClick(stepIndex);
       }}
     >
       <StepIndicatorContainer>

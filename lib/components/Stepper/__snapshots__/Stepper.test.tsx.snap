@@ -1,0 +1,92 @@
+// Vitest Snapshot v1
+
+exports[`Stepper test > renders stepper with some content 1`] = `
+<div
+  class="sc-gKclnd crjQZq"
+>
+  <div
+    class="sc-jRQBWg dOJeqP"
+  >
+    <div
+      class="sc-bdvvtL lhlca-d"
+    >
+      <div
+        class="sc-gsDKAQ gjaaiv"
+      >
+        <p>
+          01
+        </p>
+        <div
+          class="sc-hKwDye liOWKU"
+        />
+      </div>
+      <div
+        class="sc-dkPtRN lcEOOn"
+      />
+    </div>
+    <div
+      class="sc-eCImPb dBPSTP"
+    >
+      <h4>
+        Personal
+      </h4>
+    </div>
+  </div>
+  <div
+    class="sc-jRQBWg dOJeqP"
+  >
+    <div
+      class="sc-bdvvtL lhlca-d"
+    >
+      <div
+        class="sc-gsDKAQ gjaaiv"
+      >
+        <p>
+          02
+        </p>
+        <div
+          class="sc-hKwDye liOWKU"
+        />
+      </div>
+      <div
+        class="sc-dkPtRN lcEOOn"
+      />
+    </div>
+    <div
+      class="sc-eCImPb dBPSTP"
+    >
+      <h4>
+        Company
+      </h4>
+    </div>
+  </div>
+  <div
+    class="sc-jRQBWg dOJeqP"
+  >
+    <div
+      class="sc-bdvvtL lhlca-d"
+    >
+      <div
+        class="sc-gsDKAQ gjaaiv"
+      >
+        <p>
+          03
+        </p>
+        <div
+          class="sc-hKwDye liOWKU"
+        />
+      </div>
+      <div
+        class="sc-dkPtRN lcEOOn"
+      />
+    </div>
+    <div
+      class="sc-eCImPb dBPSTP"
+    >
+      <h4>
+        ELD
+      </h4>
+    </div>
+  </div>
+</div>
+`;
