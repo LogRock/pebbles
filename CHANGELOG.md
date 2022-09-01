@@ -1,3 +1,10 @@
+## [9.0.1](https://github.com/LogRock/pebbles/compare/v9.0.0...v9.0.1) (2022-09-01)
+
+### Bug Fixes
+
+- **stepper:** :bug: fix lib exposure of stepper and props ([7ad1f3f](https://github.com/LogRock/pebbles/commit/7ad1f3f1a84e9c5d69b0e5e126b717034045f5d7))
+- **table:** :bug: fix table rounding corners without resorting to overflow hidden ([71dbb6f](https://github.com/LogRock/pebbles/commit/71dbb6f241d505f553f05361fc101edffbd47898))
+
 # [9.0.0](https://github.com/LogRock/pebbles/compare/v8.0.1...v9.0.0) (2022-09-01)
 
 ### Bug Fixes
