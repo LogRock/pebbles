@@ -1,9 +1,8 @@
 export interface StepperProps {
-  stepIndex: number;
+  stepIndex: number | string;
   current?: boolean;
   last?: boolean;
   completed?: boolean;
-  forceTwoDigitsIndicator?: boolean;
   showHoverEffect?: boolean;
   onStepClick?: (stepNum: number) => void;
 }
