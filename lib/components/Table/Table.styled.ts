@@ -14,8 +14,6 @@ export const Table = styled.table`
 
   border-radius: 10px;
 
-  box-shadow: ${({ theme }) => theme.shadows.medium};
-
   tbody tr::after,
   tfoot tr::after {
     content: "";

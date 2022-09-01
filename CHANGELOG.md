@@ -1,3 +1,25 @@
+## [8.0.1](https://github.com/LogRock/pebbles/compare/v8.0.0...v8.0.1) (2022-08-30)
+
+### Bug Fixes
+
+- **table:** :bug: fix some sizing issues with the footer ([21d8506](https://github.com/LogRock/pebbles/commit/21d85067f36e94d92d3ab3e3d941af33f79ba757))
+
+# [8.0.0](https://github.com/LogRock/pebbles/compare/v7.9.5...v8.0.0) (2022-08-30)
+
+### Bug Fixes
+
+- **table:** :lipstick: fix styling rules for tables and cards ([f6b410a](https://github.com/LogRock/pebbles/commit/f6b410a4ebe0f8aa4fe53707056dffb3466f5905))
+
+### BREAKING CHANGES
+
+- **table:** api for cards changed
+
+## [7.9.5](https://github.com/LogRock/pebbles/compare/v7.9.4...v7.9.5) (2022-08-25)
+
+### Bug Fixes
+
+- **datepicker:** :bug: remove mask when range picking ([dd8965d](https://github.com/LogRock/pebbles/commit/dd8965d159484898199ba17e0768238e728b5aea))
+
 ## [7.9.4](https://github.com/LogRock/pebbles/compare/v7.9.3...v7.9.4) (2022-08-22)
 
 ### Bug Fixes
