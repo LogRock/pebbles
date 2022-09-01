@@ -81,8 +81,28 @@ InformativeOnly.args = {
         </p>
       </StepperStep>
       <StepperStep stepIndex="05" last>
-        <NoMarginText>Last Step</NoMarginText>
+        <NoMarginText
+          style={{
+            color: "#262",
+          }}
+        >
+          Last Step
+        </NoMarginText>
         <div>
+          <div
+            style={{
+              backgroundColor: "#afa",
+              padding: "12px",
+              margin: "12px 0",
+              borderRadius: "5px",
+              color: "#262",
+            }}
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestias, consequuntur?
+            </p>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
             voluptatem delectus at dolorem, modi harum, omnis ea atque saepe
