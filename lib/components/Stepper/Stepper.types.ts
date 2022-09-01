@@ -4,5 +4,5 @@ export interface StepperProps {
   last?: boolean;
   completed?: boolean;
   showHoverEffect?: boolean;
-  onStepClick?: (stepNum: number) => void;
+  onStepClick?: (stepNum: number | string) => void;
 }

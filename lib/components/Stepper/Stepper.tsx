@@ -4,7 +4,6 @@ import { Steps } from "./Stepper.styled";
 import { StepperProps } from "./Stepper.types";
 
 const Stepper: FC<StepperProps> = ({
-  onStepClick,
   showHoverEffect = true,
   children,
   ...props
