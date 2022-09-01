@@ -12,8 +12,6 @@ import { TableHeaderProps, TableRowProps } from "./Table.types";
 export const Table = styled.table`
   border-spacing: 0;
 
-  border-radius: 10px;
-
   tbody tr::after,
   tfoot tr::after {
     content: "";
