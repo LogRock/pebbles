@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
-export const RadioButtonContainer = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
-  margin-top: ${({ theme }) => theme.spacings.sm};
-  margin-bottom: ${({ theme }) => theme.spacings.sm};
-`;
-
 export const RadioButtonInput = styled.input`
-  width: 0;
-  height: 0;
+  position: absolute;
+  width: ${({ theme }) => theme.spacings.md};
+  height: ${({ theme }) => theme.spacings.md};
+  margin: 0;
+  padding: 0;
+
+  opacity: 0;
 `;
 
 export const RadioButtonRadio = styled.div<{ checked?: boolean }>`
@@ -38,5 +35,22 @@ export const RadioButtonMarker = styled.div`
 
   border-radius: ${({ theme }) => theme.spacings.xsm};
 
+  opacity: 0;
   background-color: ${({ theme }) => theme.colors.primary[500]};
+`;
+
+export const RadioButtonContainer = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  margin-top: ${({ theme }) => theme.spacings.sm};
+  margin-bottom: ${({ theme }) => theme.spacings.sm};
+
+  ${RadioButtonInput}:checked + ${RadioButtonRadio} > ${RadioButtonMarker} {
+    opacity: 1;
+  }
+
+  ${RadioButtonInput}:checked + ${RadioButtonRadio} {
+    border: 1.5px solid ${({ theme }) => theme.colors.primary[500]};
+  }
 `;

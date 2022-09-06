@@ -17,14 +17,9 @@ const RadioButton: FC<InputHTMLAttributes<HTMLInputElement>> = ({
 
   return (
     <RadioButtonContainer>
-      <RadioButtonInput
-        type="radio"
-        {...props}
-        id={newID}
-        checked={checked}
-      ></RadioButtonInput>
+      <RadioButtonInput type="radio" {...props} id={newID} checked={checked} />
       <RadioButtonRadio checked={checked}>
-        {checked && <RadioButtonMarker />}
+        <RadioButtonMarker />
       </RadioButtonRadio>
       <label htmlFor={newID}>{children}</label>
     </RadioButtonContainer>
