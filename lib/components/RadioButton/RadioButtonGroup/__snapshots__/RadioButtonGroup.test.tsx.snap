@@ -5,7 +5,7 @@ exports[`RadioButtonGroup > render properly 1`] = `
   grouptitle="Pick at least 6 options"
 >
   <div
-    class="sc-bqiRlB hnwbD"
+    class="sc-bqiRlB esGaMg"
   >
     Pick at least 6 options
   </div>
