@@ -10,16 +10,20 @@ exports[`RadioButtonGroup > render properly 1`] = `
     Pick at least 6 options
   </div>
   <div
-    class="sc-ksdxgE efOgbO"
+    class="sc-fFeiMQ gZqCdu"
   >
     <input
-      class="sc-hBUSln gmFNpe"
+      class="sc-ksdxgE gRYfSo"
       id="logrock_pebbles_radiobutton1"
       type="radio"
     />
     <div
-      class="sc-fotOHu bkTqMp"
-    />
+      class="sc-hBUSln clbhns"
+    >
+      <div
+        class="sc-fotOHu eMZCAq"
+      />
+    </div>
     <label
       for="logrock_pebbles_radiobutton1"
     >
@@ -27,16 +31,20 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-ksdxgE efOgbO"
+    class="sc-fFeiMQ gZqCdu"
   >
     <input
-      class="sc-hBUSln gmFNpe"
+      class="sc-ksdxgE gRYfSo"
       id="logrock_pebbles_radiobutton2"
       type="radio"
     />
     <div
-      class="sc-fotOHu bkTqMp"
-    />
+      class="sc-hBUSln clbhns"
+    >
+      <div
+        class="sc-fotOHu eMZCAq"
+      />
+    </div>
     <label
       for="logrock_pebbles_radiobutton2"
     >
@@ -44,16 +52,20 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-ksdxgE efOgbO"
+    class="sc-fFeiMQ gZqCdu"
   >
     <input
-      class="sc-hBUSln gmFNpe"
+      class="sc-ksdxgE gRYfSo"
       id="logrock_pebbles_radiobutton3"
       type="radio"
     />
     <div
-      class="sc-fotOHu bkTqMp"
-    />
+      class="sc-hBUSln clbhns"
+    >
+      <div
+        class="sc-fotOHu eMZCAq"
+      />
+    </div>
     <label
       for="logrock_pebbles_radiobutton3"
     >
@@ -61,16 +73,20 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-ksdxgE efOgbO"
+    class="sc-fFeiMQ gZqCdu"
   >
     <input
-      class="sc-hBUSln gmFNpe"
+      class="sc-ksdxgE gRYfSo"
       id="logrock_pebbles_radiobutton4"
       type="radio"
     />
     <div
-      class="sc-fotOHu bkTqMp"
-    />
+      class="sc-hBUSln clbhns"
+    >
+      <div
+        class="sc-fotOHu eMZCAq"
+      />
+    </div>
     <label
       for="logrock_pebbles_radiobutton4"
     >
@@ -78,16 +94,20 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-ksdxgE efOgbO"
+    class="sc-fFeiMQ gZqCdu"
   >
     <input
-      class="sc-hBUSln gmFNpe"
+      class="sc-ksdxgE gRYfSo"
       id="logrock_pebbles_radiobutton5"
       type="radio"
     />
     <div
-      class="sc-fotOHu bkTqMp"
-    />
+      class="sc-hBUSln clbhns"
+    >
+      <div
+        class="sc-fotOHu eMZCAq"
+      />
+    </div>
     <label
       for="logrock_pebbles_radiobutton5"
     >
