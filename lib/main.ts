@@ -130,3 +130,8 @@ export type {
   TableHeaderProps,
   TableRowProps,
 } from "./components/Table";
+
+export {
+  default as RadioButton,
+  RadioButtonGroup,
+} from "./components/RadioButton";

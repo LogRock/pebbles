@@ -1,0 +1,98 @@
+// Vitest Snapshot v1
+
+exports[`RadioButtonGroup > render properly 1`] = `
+<div
+  grouptitle="Pick at least 6 options"
+>
+  <div
+    class="sc-bqiRlB hnwbD"
+  >
+    Pick at least 6 options
+  </div>
+  <div
+    class="sc-ksdxgE efOgbO"
+  >
+    <input
+      class="sc-hBUSln gmFNpe"
+      id="logrock_pebbles_radiobutton1"
+      type="radio"
+    />
+    <div
+      class="sc-fotOHu bkTqMp"
+    />
+    <label
+      for="logrock_pebbles_radiobutton1"
+    >
+      First option
+    </label>
+  </div>
+  <div
+    class="sc-ksdxgE efOgbO"
+  >
+    <input
+      class="sc-hBUSln gmFNpe"
+      id="logrock_pebbles_radiobutton2"
+      type="radio"
+    />
+    <div
+      class="sc-fotOHu bkTqMp"
+    />
+    <label
+      for="logrock_pebbles_radiobutton2"
+    >
+      Option B
+    </label>
+  </div>
+  <div
+    class="sc-ksdxgE efOgbO"
+  >
+    <input
+      class="sc-hBUSln gmFNpe"
+      id="logrock_pebbles_radiobutton3"
+      type="radio"
+    />
+    <div
+      class="sc-fotOHu bkTqMp"
+    />
+    <label
+      for="logrock_pebbles_radiobutton3"
+    >
+      #3
+    </label>
+  </div>
+  <div
+    class="sc-ksdxgE efOgbO"
+  >
+    <input
+      class="sc-hBUSln gmFNpe"
+      id="logrock_pebbles_radiobutton4"
+      type="radio"
+    />
+    <div
+      class="sc-fotOHu bkTqMp"
+    />
+    <label
+      for="logrock_pebbles_radiobutton4"
+    >
+      Last one
+    </label>
+  </div>
+  <div
+    class="sc-ksdxgE efOgbO"
+  >
+    <input
+      class="sc-hBUSln gmFNpe"
+      id="logrock_pebbles_radiobutton5"
+      type="radio"
+    />
+    <div
+      class="sc-fotOHu bkTqMp"
+    />
+    <label
+      for="logrock_pebbles_radiobutton5"
+    >
+      Option the V
+    </label>
+  </div>
+</div>
+`;
