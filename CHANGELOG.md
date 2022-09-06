@@ -1,3 +1,9 @@
+# [9.1.0](https://github.com/LogRock/pebbles/compare/v9.0.1...v9.1.0) (2022-09-06)
+
+### Features
+
+- :sparkles: add radio button and radio group ([fb3075d](https://github.com/LogRock/pebbles/commit/fb3075d149b56ef90b92a809289c4fa086f16716))
+
 ## [9.0.1](https://github.com/LogRock/pebbles/compare/v9.0.0...v9.0.1) (2022-09-01)
 
 ### Bug Fixes
