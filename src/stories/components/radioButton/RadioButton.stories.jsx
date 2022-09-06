@@ -11,7 +11,6 @@ const Template = (args) => <RadioButton {...args} />;
 export const Default = Template.bind();
 Default.args = {
   children: "Default",
-  checked: false,
 };
 
 export const Checked = Template.bind();
@@ -23,5 +22,10 @@ Checked.args = {
       ajskdhakjshdkjashdkajshdkajshdajkshd
     </>
   ),
+};
+
+export const Controlled = Template.bind();
+Controlled.args = {
+  children: "Checked forever. U mad?",
   checked: true,
 };
