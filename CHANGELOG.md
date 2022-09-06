@@ -1,3 +1,11 @@
+## [9.1.1](https://github.com/LogRock/pebbles/compare/v9.1.0...v9.1.1) (2022-09-06)
+
+### Bug Fixes
+
+- **radio:** :adhesive_bandage: fix clickthrough on radios ([ca4b581](https://github.com/LogRock/pebbles/commit/ca4b581920eec1eb9558f1f341c61a492f47f9a0))
+- **radio:** :lipstick: change radio group title color ([cd165ea](https://github.com/LogRock/pebbles/commit/cd165ea2b80e86cc14d6169565d72a4c3f6b8072))
+- **radio:** :lipstick: improve checkbox styling for uncontrolled mode ([f9faa7e](https://github.com/LogRock/pebbles/commit/f9faa7e81d1177c4bafcb30cb5411de9b0abd661))
+
 # [9.1.0](https://github.com/LogRock/pebbles/compare/v9.0.1...v9.1.0) (2022-09-06)
 
 ### Features
