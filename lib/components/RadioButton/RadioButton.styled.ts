@@ -12,6 +12,7 @@ export const RadioButtonInput = styled.input`
 
 export const RadioButtonRadio = styled.div<{ checked?: boolean }>`
   position: relative;
+  z-index: -1;
   box-sizing: border-box;
   width: ${({ theme }) => theme.spacings.md};
   height: ${({ theme }) => theme.spacings.md};
