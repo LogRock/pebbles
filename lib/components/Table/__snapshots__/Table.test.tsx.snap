@@ -5,30 +5,42 @@ exports[`Table > renders selected rows 1`] = `
   class="sc-cidDSM btgGwg"
 >
   <thead
-    class="sc-jcFjpl eFRaem"
+    class="sc-jcFjpl erwhVE"
   >
     <tr
       class="sc-efQSVx OeiKQ"
     >
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header A
+        <span
+          style="display: flex; align-items: flex-start;"
+        >
+          Header A
+        </span>
       </th>
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header B
+        <span
+          style="display: flex; align-items: flex-start;"
+        >
+          Header B
+        </span>
       </th>
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header C
+        <span
+          style="display: flex; align-items: flex-start;"
+        >
+          Header C
+        </span>
       </th>
     </tr>
   </thead>
   <tbody
-    class="sc-caiLqq imryLE"
+    class="sc-caiLqq iaIheK"
   >
     <tr
       class="sc-efQSVx OeiKQ"
@@ -96,83 +108,101 @@ exports[`Table > renders with some content 1`] = `
   class="sc-cidDSM btgGwg"
 >
   <thead
-    class="sc-jcFjpl eFRaem"
+    class="sc-jcFjpl erwhVE"
   >
     <tr
       class="sc-efQSVx OeiKQ"
     >
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header A
+        <span
+          style="display: flex; align-items: flex-start;"
+        >
+          Header A
+        </span>
       </th>
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header A
-        <svg
-          fill="none"
-          height="16"
-          style="vertical-align: middle;"
-          viewBox="0 0 11 16"
-          width="11"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          style="display: flex; align-items: flex-start;"
         >
-          <path
-            d="M1.375 5L5.375 1L9.375 5M9.375"
-            stroke="#9CA3AF"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.67"
-          />
-          <path
-            d="M1.375 5M9.375 11L5.375 15L1.375 11"
-            stroke="#9CA3AF"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.67"
-          />
-        </svg>
+          Header A
+          <svg
+            fill="none"
+            height="16"
+            style="vertical-align: middle;"
+            viewBox="0 0 11 16"
+            width="11"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.375 5L5.375 1L9.375 5M9.375"
+              stroke="#9CA3AF"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.67"
+            />
+            <path
+              d="M1.375 5M9.375 11L5.375 15L1.375 11"
+              stroke="#9CA3AF"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.67"
+            />
+          </svg>
+        </span>
       </th>
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header B
-        <svg
-          fill="none"
-          height="7"
-          viewBox="0 0 12 7"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          style="display: flex; align-items: flex-start;"
         >
-          <path
-            d="M11 6L6 1L1 6"
-            stroke="#6B7280"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.67"
-          />
-        </svg>
+          Header B
+          <svg
+            fill="none"
+            height="7"
+            style="margin-top: 6px;"
+            viewBox="0 0 12 7"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 6L6 1L1 6"
+              stroke="#6B7280"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.67"
+            />
+          </svg>
+        </span>
       </th>
       <th
-        class="sc-iUKqMP UPmei"
+        class="sc-iUKqMP cGgLGU"
       >
-        Header C
-        <svg
-          fill="none"
-          height="7"
-          viewBox="0 0 12 7"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          style="display: flex; align-items: flex-start;"
         >
-          <path
-            d="M11 1L6 6L1 1"
-            stroke="#6B7280"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.67"
-          />
-        </svg>
+          Header C
+          <svg
+            fill="none"
+            height="7"
+            style="margin-top: 6px;"
+            viewBox="0 0 12 7"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1L6 6L1 1"
+              stroke="#6B7280"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.67"
+            />
+          </svg>
+        </span>
       </th>
       <td
         class="sc-iAKWXU cDDlQQ"
@@ -180,7 +210,7 @@ exports[`Table > renders with some content 1`] = `
     </tr>
   </thead>
   <tbody
-    class="sc-caiLqq imryLE"
+    class="sc-caiLqq iaIheK"
   >
     <tr
       class="sc-efQSVx OeiKQ"
