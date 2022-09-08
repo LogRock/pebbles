@@ -1,3 +1,9 @@
+## [9.1.2](https://github.com/LogRock/pebbles/compare/v9.1.1...v9.1.2) (2022-09-08)
+
+### Bug Fixes
+
+- **table:** :lipstick: fix styling of the ordering icon ([cbdcb77](https://github.com/LogRock/pebbles/commit/cbdcb7724dab9ded9bb2ca8f947eda7dbc995b57))
+
 ## [9.1.1](https://github.com/LogRock/pebbles/compare/v9.1.0...v9.1.1) (2022-09-06)
 
 ### Bug Fixes
