@@ -62,8 +62,10 @@ export const TableHeader: FC<TableHeaderProps> = ({
 }) => {
   return (
     <TH {...props}>
-      {children}
-      {showOrdering && <Ordering currentOrder={currentOrder} />}
+      <span style={{ display: "flex", alignItems: "flex-start" }}>
+        {children}
+        {showOrdering && <Ordering currentOrder={currentOrder} />}
+      </span>
     </TH>
   );
 };

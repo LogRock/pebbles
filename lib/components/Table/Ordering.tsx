@@ -13,6 +13,7 @@ const Ordering: FC<OrderingProps> = ({ currentOrder }) => {
         viewBox="0 0 12 7"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{ marginTop: 6 }}
       >
         <path
           d="M11 6L6 1L1 6"
@@ -32,6 +33,7 @@ const Ordering: FC<OrderingProps> = ({ currentOrder }) => {
         viewBox="0 0 12 7"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{ marginTop: 6 }}
       >
         <path
           d="M11 1L6 6L1 1"

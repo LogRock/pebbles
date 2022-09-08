@@ -101,12 +101,12 @@ export const OrderableTable = () => (
     <TableHead>
       <TableRow>
         <TableHeader showOrdering currentOrder={OrderingEnum.DESC}>
-          Ordered DESC
+          Ordered DESC Ordered DESC Ordered DESC
         </TableHeader>
         <TableHeader showOrdering currentOrder={OrderingEnum.ASC}>
-          Ordered ASC
+          Ordered ASC Ordered ASC Ordered ASC
         </TableHeader>
-        <TableHeader showOrdering>Orderable</TableHeader>
+        <TableHeader showOrdering>Orderable Orderable Orderable</TableHeader>
       </TableRow>
     </TableHead>
     <TableBody>
