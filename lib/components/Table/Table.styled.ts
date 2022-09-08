@@ -31,21 +31,26 @@ export const Table = styled.table`
 `;
 
 export const TableHead = styled.thead`
-  /* stylelint-disable-next-line */
+  /* NOOP */
 `;
 
 export const TableBody = styled.tbody`
-  /* stylelint-disable-next-line */
+  /* NOOP */
 `;
 
 export const TH = styled.th<TableHeaderProps>`
   ${overlineXSmallCSS}
 
+  align-items: flex-start;
   padding: ${({ theme }) => theme.spacings.md};
 
   text-align: ${({ center }) => (center ? "center" : "left")};
+  vertical-align: top;
 
   svg {
+    flex-shrink: 0;
+    width: 10px;
+    min-width: 10px;
     height: 100%;
     margin-left: 10px;
   }
