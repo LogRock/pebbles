@@ -10,107 +10,77 @@ exports[`RadioButtonGroup > render properly 1`] = `
     Pick at least 6 options
   </div>
   <div
-    class="sc-fFeiMQ gZqCdu"
+    class="sc-hBUSln gRKVco"
   >
-    <input
-      class="sc-ksdxgE gRYfSo"
-      id="logrock_pebbles_radiobutton1"
-      type="radio"
-    />
-    <div
-      class="sc-hBUSln gwEYPe"
-    >
-      <div
-        class="sc-fotOHu eMZCAq"
-      />
-    </div>
     <label
       for="logrock_pebbles_radiobutton1"
     >
+      <input
+        class="sc-ksdxgE kOPNPP"
+        id="logrock_pebbles_radiobutton1"
+        name="radio-button"
+        type="radio"
+      />
       First option
     </label>
   </div>
   <div
-    class="sc-fFeiMQ gZqCdu"
+    class="sc-hBUSln gRKVco"
   >
-    <input
-      class="sc-ksdxgE gRYfSo"
-      id="logrock_pebbles_radiobutton2"
-      type="radio"
-    />
-    <div
-      class="sc-hBUSln gwEYPe"
-    >
-      <div
-        class="sc-fotOHu eMZCAq"
-      />
-    </div>
     <label
       for="logrock_pebbles_radiobutton2"
     >
+      <input
+        class="sc-ksdxgE kOPNPP"
+        id="logrock_pebbles_radiobutton2"
+        name="radio-button"
+        type="radio"
+      />
       Option B
     </label>
   </div>
   <div
-    class="sc-fFeiMQ gZqCdu"
+    class="sc-hBUSln gRKVco"
   >
-    <input
-      class="sc-ksdxgE gRYfSo"
-      id="logrock_pebbles_radiobutton3"
-      type="radio"
-    />
-    <div
-      class="sc-hBUSln gwEYPe"
-    >
-      <div
-        class="sc-fotOHu eMZCAq"
-      />
-    </div>
     <label
       for="logrock_pebbles_radiobutton3"
     >
+      <input
+        class="sc-ksdxgE kOPNPP"
+        id="logrock_pebbles_radiobutton3"
+        name="radio-button"
+        type="radio"
+      />
       #3
     </label>
   </div>
   <div
-    class="sc-fFeiMQ gZqCdu"
+    class="sc-hBUSln gRKVco"
   >
-    <input
-      class="sc-ksdxgE gRYfSo"
-      id="logrock_pebbles_radiobutton4"
-      type="radio"
-    />
-    <div
-      class="sc-hBUSln gwEYPe"
-    >
-      <div
-        class="sc-fotOHu eMZCAq"
-      />
-    </div>
     <label
       for="logrock_pebbles_radiobutton4"
     >
+      <input
+        class="sc-ksdxgE kOPNPP"
+        id="logrock_pebbles_radiobutton4"
+        name="radio-button"
+        type="radio"
+      />
       Last one
     </label>
   </div>
   <div
-    class="sc-fFeiMQ gZqCdu"
+    class="sc-hBUSln gRKVco"
   >
-    <input
-      class="sc-ksdxgE gRYfSo"
-      id="logrock_pebbles_radiobutton5"
-      type="radio"
-    />
-    <div
-      class="sc-hBUSln gwEYPe"
-    >
-      <div
-        class="sc-fotOHu eMZCAq"
-      />
-    </div>
     <label
       for="logrock_pebbles_radiobutton5"
     >
+      <input
+        class="sc-ksdxgE kOPNPP"
+        id="logrock_pebbles_radiobutton5"
+        name="radio-button"
+        type="radio"
+      />
       Option the V
     </label>
   </div>
