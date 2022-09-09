@@ -20,6 +20,10 @@ export const RadioButtonInput = styled.input<{ checked?: boolean }>`
 
   cursor: pointer;
 
+  &:focus {
+    outline: 1px solid transparent;
+  }
+
   ${({ checked }) =>
     checked &&
     css`
