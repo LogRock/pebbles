@@ -1,11 +1,6 @@
 import uniqueId from "lodash.uniqueid";
 import React, { FC, InputHTMLAttributes } from "react";
-import {
-  RadioButtonContainer,
-  RadioButtonInput,
-  RadioButtonMarker,
-  RadioButtonRadio,
-} from "./RadioButton.styled";
+import { RadioButtonContainer, RadioButtonInput } from "./RadioButton.styled";
 
 const RadioButton: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   children,
@@ -17,11 +12,16 @@ const RadioButton: FC<InputHTMLAttributes<HTMLInputElement>> = ({
 
   return (
     <RadioButtonContainer>
-      <RadioButtonInput type="radio" {...props} id={newID} checked={checked} />
-      <RadioButtonRadio checked={checked}>
-        <RadioButtonMarker />
-      </RadioButtonRadio>
-      <label htmlFor={newID}>{children}</label>
+      <label htmlFor={newID}>
+        <RadioButtonInput
+          type="radio"
+          {...props}
+          id={newID}
+          checked={checked}
+          name="radio-button"
+        />
+        {children}
+      </label>
     </RadioButtonContainer>
   );
 };
