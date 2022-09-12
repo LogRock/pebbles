@@ -5,13 +5,13 @@ exports[`Table > renders selected rows 1`] = `
   class="sc-cidDSM btgGwg"
 >
   <thead
-    class="sc-jcFjpl erwhVE"
+    class="sc-jcFjpl sJFYt"
   >
     <tr
-      class="sc-efQSVx OeiKQ"
+      class="sc-efQSVx hxiekL"
     >
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -20,7 +20,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -29,7 +29,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -43,7 +43,7 @@ exports[`Table > renders selected rows 1`] = `
     class="sc-caiLqq iaIheK"
   >
     <tr
-      class="sc-efQSVx OeiKQ"
+      class="sc-efQSVx hxiekL"
     >
       <td
         class="sc-iAKWXU cDDlQQ"
@@ -62,7 +62,7 @@ exports[`Table > renders selected rows 1`] = `
       </td>
     </tr>
     <tr
-      class="sc-efQSVx cTudTS"
+      class="sc-efQSVx ioOCmN"
     >
       <td
         class="sc-iAKWXU cDDlQQ"
@@ -81,7 +81,7 @@ exports[`Table > renders selected rows 1`] = `
       </td>
     </tr>
     <tr
-      class="sc-efQSVx OeiKQ"
+      class="sc-efQSVx hxiekL"
     >
       <td
         class="sc-iAKWXU cDDlQQ"
@@ -108,13 +108,13 @@ exports[`Table > renders with some content 1`] = `
   class="sc-cidDSM btgGwg"
 >
   <thead
-    class="sc-jcFjpl erwhVE"
+    class="sc-jcFjpl sJFYt"
   >
     <tr
-      class="sc-efQSVx OeiKQ"
+      class="sc-efQSVx hxiekL"
     >
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -123,7 +123,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -155,7 +155,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -180,7 +180,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP cGgLGU"
+        class="sc-iUKqMP gKuCvj"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -213,7 +213,7 @@ exports[`Table > renders with some content 1`] = `
     class="sc-caiLqq iaIheK"
   >
     <tr
-      class="sc-efQSVx OeiKQ"
+      class="sc-efQSVx hxiekL"
     >
       <td
         class="sc-iAKWXU cDDlQQ"
@@ -235,7 +235,7 @@ exports[`Table > renders with some content 1`] = `
       />
     </tr>
     <tr
-      class="sc-efQSVx dlOsiF"
+      class="sc-efQSVx eWqWEW"
     >
       <td
         class="sc-iAKWXU cDDlQQ"

@@ -31,7 +31,9 @@ export const Table = styled.table`
 `;
 
 export const TableHead = styled.thead`
-  /* NOOP */
+  & td {
+    background-color: ${({ theme }) => theme.colors.shades[0]};
+  }
 `;
 
 export const TableBody = styled.tbody`
@@ -43,6 +45,8 @@ export const TH = styled.th<TableHeaderProps>`
 
   align-items: flex-start;
   padding: ${({ theme }) => theme.spacings.md};
+
+  background-color: ${({ theme }) => theme.colors.shades[0]};
 
   text-align: ${({ center }) => (center ? "center" : "left")};
   vertical-align: top;
@@ -69,7 +73,7 @@ export const TR = styled.tr<TableRowProps>`
   background-color: ${({ theme, isSelected }) =>
     isSelected ? theme.colors.primary[50] : theme.colors.shades[0]} !important;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: ${({ theme, isSelected }) =>
       !isSelected && theme.colors.neutral[50]} !important;
   }
