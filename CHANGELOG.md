@@ -1,3 +1,9 @@
+## [9.1.5](https://github.com/LogRock/pebbles/compare/v9.1.4...v9.1.5) (2022-09-13)
+
+### Bug Fixes
+
+- fixed radio button group title font style ([921e565](https://github.com/LogRock/pebbles/commit/921e565d6153ae13c15a86fb9c8f145b5319fe74))
+
 ## [9.1.4](https://github.com/LogRock/pebbles/compare/v9.1.3...v9.1.4) (2022-09-13)
 
 ### Bug Fixes
