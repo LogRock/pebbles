@@ -10,7 +10,6 @@ import { BaseItemType, SelectProps } from "./Select.types";
  * @deprecated in favor of Select2
  */
 const Select = <ItemType extends BaseItemType>({
-  autoComplete,
   autoCompleteItems,
   renderItem,
   inputProps,
@@ -20,6 +19,7 @@ const Select = <ItemType extends BaseItemType>({
   maxHeight,
   multiSelect,
   smartExpand = false,
+  hideHintIcon,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
@@ -147,7 +147,7 @@ const Select = <ItemType extends BaseItemType>({
           inputProps?.onClick?.(e);
         }}
         hint={{
-          icon: !autoComplete ? (
+          icon: !hideHintIcon ? (
             inputProps?.hint?.icon ? (
               <IconWrapper
                 onClick={() => {

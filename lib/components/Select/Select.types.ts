@@ -24,7 +24,6 @@ export type SelectProps<ItemType> = {
   status?: "info" | "error";
   helper?: string;
   placeholder?: string;
-  autoComplete?: boolean;
   autoCompleteItems: ItemType[];
   renderItem?: FC<{
     item?: ItemType;
@@ -39,4 +38,5 @@ export type SelectProps<ItemType> = {
   spaced?: boolean;
   maxHeight?: number;
   smartExpand?: boolean;
+  hideHintIcon?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
