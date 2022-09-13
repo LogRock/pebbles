@@ -24,6 +24,7 @@ export type SelectProps<ItemType> = {
   status?: "info" | "error";
   helper?: string;
   placeholder?: string;
+  autoComplete?: boolean;
   autoCompleteItems: ItemType[];
   renderItem?: FC<{
     item?: ItemType;
