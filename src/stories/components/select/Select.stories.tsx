@@ -46,5 +46,32 @@ WithLabel.args = {
 
 export const WithHelper = Template.bind({});
 WithHelper.args = {
-  helper: "Some helper",
+  helper: "Some helper, Notice the dropdown now has some margin-top around me",
+};
+
+export const Clearable = Template.bind({});
+Clearable.args = {
+  isClearable: true,
+  label: "Select something and you can then erase it",
+};
+
+export const Searchable = Template.bind({});
+Searchable.args = {
+  isSearchable: true,
+  label: "Type something",
+};
+
+export const Multi = Template.bind({});
+Multi.args = {
+  isMulti: true,
+  label: "Select many",
+};
+
+export const AllInOne = Template.bind({});
+AllInOne.args = {
+  isClearable: true,
+  isMulti: true,
+  isSearchable: true,
+  label: "Turn everything ON at once!",
+  helper: "For all available options, see the react-select docs",
 };
