@@ -55,8 +55,5 @@ export const RadioButtonContainer = styled.div`
   label {
     display: flex;
     align-items: center;
-
-    font-family: "Archivo", sans-serif;
-    font-size: 18px;
   }
 `;
