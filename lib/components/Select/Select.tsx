@@ -10,6 +10,7 @@ import { BaseItemType, SelectProps } from "./Select.types";
  * @deprecated in favor of Select2
  */
 const Select = <ItemType extends BaseItemType>({
+  autoComplete,
   autoCompleteItems,
   renderItem,
   inputProps,
@@ -146,26 +147,28 @@ const Select = <ItemType extends BaseItemType>({
           inputProps?.onClick?.(e);
         }}
         hint={{
-          icon: inputProps?.hint?.icon ? (
-            <IconWrapper
-              onClick={() => {
-                setHasFocus((focus) => !focus);
-              }}
-            >
-              {inputProps.hint.icon}
-            </IconWrapper>
-          ) : (
-            <IconWrapper
-              onClick={() => {
-                setHasFocus((focus) => !focus);
-              }}
-            >
-              <Icon
-                path={hasFocus ? mdiChevronUp : mdiChevronDown}
-                size={0.9}
-              />
-            </IconWrapper>
-          ),
+          icon: !autoComplete ? (
+            inputProps?.hint?.icon ? (
+              <IconWrapper
+                onClick={() => {
+                  setHasFocus((focus) => !focus);
+                }}
+              >
+                {inputProps.hint.icon}
+              </IconWrapper>
+            ) : (
+              <IconWrapper
+                onClick={() => {
+                  setHasFocus((focus) => !focus);
+                }}
+              >
+                <Icon
+                  path={hasFocus ? mdiChevronUp : mdiChevronDown}
+                  size={0.9}
+                />
+              </IconWrapper>
+            )
+          ) : undefined,
           content: inputProps?.hint?.content || "",
         }}
         spaced={false}
