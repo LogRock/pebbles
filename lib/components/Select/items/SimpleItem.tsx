@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const DefaultItem = styled.button<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   box-sizing: border-box;
@@ -19,6 +22,9 @@ export const DefaultItem = styled.button<{ highlighted?: boolean }>`
   }
 `;
 
+/**
+ * @deprecated in favor of Select2
+ */
 const SimpleItem: FC<{
   item: {
     name?: string;

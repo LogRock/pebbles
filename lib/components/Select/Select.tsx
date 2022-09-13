@@ -6,6 +6,9 @@ import SimpleItem from "./items/SimpleItem";
 import { IconWrapper, SelectItems, SelectWrapper } from "./Select.styled";
 import { BaseItemType, SelectProps } from "./Select.types";
 
+/**
+ * @deprecated in favor of Select2
+ */
 const Select = <ItemType extends BaseItemType>({
   autoCompleteItems,
   renderItem,

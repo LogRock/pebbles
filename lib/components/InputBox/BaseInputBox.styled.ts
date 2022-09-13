@@ -23,6 +23,8 @@ export const Label = styled.label`
 
 export const HelperDiv = styled.div`
   display: flex;
+  margin-top: ${({ theme }) => theme.spacings.xxsm};
+  margin-left: ${({ theme }) => theme.spacings.xxsm};
 `;
 
 export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`

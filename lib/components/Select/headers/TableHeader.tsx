@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const THead = styled.div<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   display: flex;

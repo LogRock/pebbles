@@ -2,6 +2,9 @@ import React from "react";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
   display: flex;
   position: ${({ focus }) => (focus ? "fixed" : "relative")};
@@ -27,6 +30,9 @@ export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
   }
 `;
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const SelectItems = styled.div<{
   focus?: boolean;
   helper?: React.ReactNode;
@@ -74,6 +80,9 @@ export const SelectItems = styled.div<{
   }
 `;
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const IconWrapper = styled.span`
   display: flex;
   position: absolute;

@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const DefaultItem = styled.button<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   display: flex;
@@ -35,6 +38,9 @@ const NameTD = styled.div`
   flex-grow: 1;
 `;
 
+/**
+ * @deprecated in favor of Select2
+ */
 const TableItem: FC<{
   item: {
     id?: string | number;

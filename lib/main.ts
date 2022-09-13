@@ -38,8 +38,12 @@ export type { ButtonProps } from "./components/Button";
 // expose InputBox
 export { InputBox } from "./components/InputBox";
 
-// expose Select
+/**
+ * @deprecated in favor of Select2
+ */
 export { default as Select } from "./components/Select";
+
+export { default as Select2 } from "./components/Select2";
 
 export { default as SelectSimpleItem } from "./components/Select/items/SimpleItem";
 export { default as SelectTableItem } from "./components/Select/items/TableItem";

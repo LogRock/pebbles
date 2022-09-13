@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { InputBoxProps } from "../InputBox";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export interface BaseItemType {
   id: string | number;
   name?: string;
@@ -8,6 +11,9 @@ export interface BaseItemType {
   toString?: () => string;
 }
 
+/**
+ * @deprecated in favor of Select2
+ */
 export type SelectProps<ItemType> = {
   multiSelect?: boolean;
   description?: string;
