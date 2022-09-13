@@ -1,3 +1,10 @@
+## [9.1.3](https://github.com/LogRock/pebbles/compare/v9.1.2...v9.1.3) (2022-09-13)
+
+### Bug Fixes
+
+- **zebra-mesa:** dark stripe starts first ([2d4be28](https://github.com/LogRock/pebbles/commit/2d4be28942694a2e30352f3282bdb2ad931386f8))
+- **zebra-mesa:** update snapshot ([804cb11](https://github.com/LogRock/pebbles/commit/804cb11ca69941a64d1a681826f9235b1ef15a05))
+
 ## [9.1.2](https://github.com/LogRock/pebbles/compare/v9.1.1...v9.1.2) (2022-09-08)
 
 ### Bug Fixes
