@@ -1,3 +1,12 @@
+## [9.1.4](https://github.com/LogRock/pebbles/compare/v9.1.3...v9.1.4) (2022-09-13)
+
+### Bug Fixes
+
+- fixed issues with radio button, simplified css rules ([d58d0cf](https://github.com/LogRock/pebbles/commit/d58d0cfc9c2f79e6adfc2aad2b5d42ce68575e29))
+- fixed some css issues brought up on the PR review ([aedab7f](https://github.com/LogRock/pebbles/commit/aedab7f775d48994aafa02ecf32af3c1f6b0f8f5))
+- no font styling on the radio button label ([f25077f](https://github.com/LogRock/pebbles/commit/f25077f87bb31fbb1193a2003c2ccbb8dae19046))
+- radio button with no focus effect ([afddc58](https://github.com/LogRock/pebbles/commit/afddc58420c2a8e354a07e984a66b54e0ad05df9))
+
 ## [9.1.3](https://github.com/LogRock/pebbles/compare/v9.1.2...v9.1.3) (2022-09-13)
 
 ### Bug Fixes
