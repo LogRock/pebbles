@@ -5,7 +5,6 @@ export const RadioButtonInput = styled.input<{ checked?: boolean }>`
   appearance: none;
 
   position: relative;
-  top: 3px;
   box-sizing: border-box;
   width: ${({ theme }) => theme.spacings.md};
   height: ${({ theme }) => theme.spacings.md};
@@ -19,10 +18,6 @@ export const RadioButtonInput = styled.input<{ checked?: boolean }>`
   border-radius: 100%;
 
   cursor: pointer;
-
-  &:focus {
-    outline: 1px solid transparent;
-  }
 
   ${({ checked }) =>
     checked &&
@@ -41,7 +36,7 @@ export const RadioButtonInput = styled.input<{ checked?: boolean }>`
         margin: auto;
         overflow: hidden;
 
-        border-radius: 50%;
+        border-radius: ${({ theme }) => theme.spacings.md};
 
         box-shadow: ${({ theme }) =>
           `inset ${theme.spacings.xsm} ${theme.spacings.xsm} ${theme.colors.primary[500]}`};
@@ -58,6 +53,9 @@ export const RadioButtonContainer = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.sm};
 
   label {
+    display: flex;
+    align-items: center;
+
     font-family: "Archivo", sans-serif;
     font-size: 18px;
   }
