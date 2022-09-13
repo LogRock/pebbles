@@ -19,7 +19,7 @@ const Select = <ItemType extends BaseItemType>({
   maxHeight,
   multiSelect,
   smartExpand = false,
-  hideHintIcon,
+  hideHintIcon = false,
   ...props
 }: SelectProps<ItemType>) => {
   const Item = renderItem || SimpleItem;
