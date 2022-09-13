@@ -3,6 +3,9 @@ import styled from "styled-components";
 import CheckBox from "../../CheckBox";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
+/**
+ * @deprecated in favor of Select2
+ */
 export const CheckBoxItemWrapper = styled.div<{ highlighted?: boolean }>`
   ${paragraphMediumCSS}
   box-sizing: border-box;
@@ -20,6 +23,9 @@ export const CheckBoxItemWrapper = styled.div<{ highlighted?: boolean }>`
   }
 `;
 
+/**
+ * @deprecated in favor of Select2
+ */
 const CheckBoxItem: FC<{
   item?: {
     id: number;

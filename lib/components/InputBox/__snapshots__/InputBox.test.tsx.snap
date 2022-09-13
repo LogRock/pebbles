@@ -22,7 +22,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
         />
       </div>
       <div
-        class="sc-dkPtRN cgynxk"
+        class="sc-dkPtRN hYUIdw"
       >
         <label
           class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
@@ -1314,7 +1314,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         </div>
       </div>
       <div
-        class="sc-dkPtRN cgynxk"
+        class="sc-dkPtRN hYUIdw"
       >
         <label
           class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
@@ -1343,7 +1343,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       />
     </div>
     <div
-      class="sc-dkPtRN cgynxk"
+      class="sc-dkPtRN hYUIdw"
     >
       <label
         class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
@@ -1404,7 +1404,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       </button>
     </div>
     <div
-      class="sc-dkPtRN cgynxk"
+      class="sc-dkPtRN hYUIdw"
     >
       <label
         class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
@@ -2690,7 +2690,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       </div>
     </div>
     <div
-      class="sc-dkPtRN cgynxk"
+      class="sc-dkPtRN hYUIdw"
     >
       <label
         class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
