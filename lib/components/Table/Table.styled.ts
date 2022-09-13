@@ -60,11 +60,13 @@ export const TH = styled.th<TableHeaderProps>`
   }
 `;
 
-export const TableDatum = styled.td<{ center?: boolean }>`
+export const TableDatum = styled.td<{ center?: boolean; expand?: boolean }>`
   ${paragraphMediumCSS}
+  width: ${({ expand }) => (expand ? "99%" : undefined)};
   padding: ${({ theme }) => theme.spacings.md};
 
   text-align: ${({ center }) => (center ? "center" : undefined)};
+  white-space: ${({ expand }) => (expand ? undefined : "nowrap")};
 `;
 
 export const TR = styled.tr<TableRowProps>`
