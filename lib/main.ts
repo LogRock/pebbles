@@ -44,6 +44,7 @@ export { InputBox } from "./components/InputBox";
 export { default as Select } from "./components/Select";
 
 export { default as Select2 } from "./components/Select2";
+export { default as SelectAsync } from "./components/SelectAsync";
 
 export { default as SelectSimpleItem } from "./components/Select/items/SimpleItem";
 export { default as SelectTableItem } from "./components/Select/items/TableItem";
