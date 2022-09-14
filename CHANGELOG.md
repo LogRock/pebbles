@@ -1,3 +1,15 @@
+# [9.2.0](https://github.com/LogRock/pebbles/compare/v9.1.5...v9.2.0) (2022-09-14)
+
+### Bug Fixes
+
+- **select:** :lipstick: reduce gutter size for helper situations ([f6c6d7a](https://github.com/LogRock/pebbles/commit/f6c6d7ad78ba2dba1b9e0ed35b55ebaf1f5a694f))
+- **select:** :lipstick: remove border radius ([9b5f839](https://github.com/LogRock/pebbles/commit/9b5f839eddeb13af79d1cae3b6b0cfc5c1a701d6))
+
+### Features
+
+- **select:** :sparkles: add the async select variant ([70b35e9](https://github.com/LogRock/pebbles/commit/70b35e94b914bb455f5ede0e80e1fa144cc0d1f3))
+- **select:** :sparkles: rework select into select2 ([0acaea6](https://github.com/LogRock/pebbles/commit/0acaea68f4374301c314bb19be8d20c00ddb5880))
+
 ## [9.1.5](https://github.com/LogRock/pebbles/compare/v9.1.4...v9.1.5) (2022-09-13)
 
 ### Bug Fixes
