@@ -85,7 +85,7 @@ function SelectAsync<
       spacing: {
         baseUnit: 4,
         controlHeight: 50,
-        menuGutter: helper ? 30 : 3,
+        menuGutter: helper ? 24 : 3,
       },
     }),
     [helper]
