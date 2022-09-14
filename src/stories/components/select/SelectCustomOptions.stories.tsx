@@ -1,7 +1,8 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CheckBoxOption from "../../../../lib/components/Select2/items/CheckBoxItem";
+import CheckBoxOption from "../../../../lib/components/Select2/options/CheckBoxOption";
+import RadioButtonOption from "../../../../lib/components/Select2/options/RadioButtonOption";
 
 const autoCompleteItems = [
   {
@@ -46,3 +47,14 @@ WithCheckBoxes.args = {
 };
 
 export const WithRadioButtons = Template.bind({});
+WithRadioButtons.args = {
+  isClearable: true,
+  isMulti: false,
+  isSearchable: true,
+  hideSelectedOptions: false,
+  label: "This shows radio buttons instead of plain text",
+  helper: "Using the isMulti prop is probably a bad idea in this case",
+  components: {
+    Option: RadioButtonOption,
+  },
+};

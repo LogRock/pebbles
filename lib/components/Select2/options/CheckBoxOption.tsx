@@ -4,15 +4,12 @@ import styled from "styled-components";
 import CheckBox from "../../CheckBox";
 import { paragraphMediumCSS } from "../../Typography/Typography.styled";
 
-export const CheckBoxOptionWrapper = styled.div<{ highlighted?: boolean }>`
+export const CheckBoxOptionWrapper = styled.div`
   ${paragraphMediumCSS}
   box-sizing: border-box;
   padding: 18px 10px;
 
   border: none;
-
-  background: ${({ theme, highlighted }) =>
-    highlighted ? theme.select.items.hover.background : "none"};
 
   text-align: left;
 
@@ -25,7 +22,6 @@ const CheckBoxOption: FC<OptionProps> = ({
   innerProps: { ref, ...innerProps },
   isSelected,
   label,
-  ...props
 }) => {
   return (
     <CheckBoxOptionWrapper
