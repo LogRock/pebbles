@@ -1,3 +1,11 @@
+# [9.4.0](https://github.com/LogRock/pebbles/compare/v9.3.0...v9.4.0) (2022-09-14)
+
+### Features
+
+- **select:** :sparkles: add the radio button option component for use in select ([15c5bef](https://github.com/LogRock/pebbles/commit/15c5beff0a02d81fd0bf0bf0507b1fed194c0419))
+- **select:** :sparkles: expose new custom select items to the lib ([bb53707](https://github.com/LogRock/pebbles/commit/bb5370764aa22e23262bd5f32c067932c1a93deb))
+- **select:** :sparkles: port the checkbox item to the new select model ([326c968](https://github.com/LogRock/pebbles/commit/326c968b215a7604bc964973128030244e66ebfb))
+
 # [9.3.0](https://github.com/LogRock/pebbles/compare/v9.2.0...v9.3.0) (2022-09-14)
 
 ### Features
