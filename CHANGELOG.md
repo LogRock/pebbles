@@ -1,3 +1,9 @@
+# [9.3.0](https://github.com/LogRock/pebbles/compare/v9.2.0...v9.3.0) (2022-09-14)
+
+### Features
+
+- **autocomplete-select:** remove hint icon ([87ddac0](https://github.com/LogRock/pebbles/commit/87ddac039aa18fd20ca58497eae1dbc8c7a3681c))
+
 # [9.2.0](https://github.com/LogRock/pebbles/compare/v9.1.5...v9.2.0) (2022-09-14)
 
 ### Bug Fixes
