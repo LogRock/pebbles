@@ -56,6 +56,10 @@ function Select<
         fontSize: theme.inputBox.fontSize,
         padding: theme.inputBox.padding,
       }),
+      menu: (provided, state) => ({
+        ...provided,
+        borderRadius: 0,
+      }),
     }),
     [status]
   );
