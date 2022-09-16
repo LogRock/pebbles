@@ -9,6 +9,7 @@ import ReactSelect, {
   GroupBase,
   components,
   ValueContainerProps,
+  Options,
 } from "react-select";
 import { ThemeContext } from "styled-components";
 import {
@@ -21,27 +22,31 @@ import { CustomSelectProps } from "./Select.types";
 
 const defaultStatus = "info";
 
-const ValueContainer: FC<Pick<ValueContainerProps, "getValue">> = ({
+const { ValueContainer } = components;
+
+interface CustomValueContainerProps extends ValueContainerProps {
+  getValue: () => Options<any>;
+}
+
+const CustomValueContainer: FC<CustomValueContainerProps> = ({
   children,
-  getValue,
   ...props
 }) => {
-  let nbValues = 0;
+  const { getValue } = props;
+  let selectedValues = 0;
 
   if (Array.isArray(getValue())) {
-    nbValues = getValue().length;
+    selectedValues = getValue().length;
   }
 
-  if (nbValues > 1) {
+  if (selectedValues > 1) {
     return (
-      <components.ValueContainer {...props}>
-        {`${nbValues} items selected`}
-      </components.ValueContainer>
+      <ValueContainer {...props}>
+        {`${selectedValues} items selected.`}
+      </ValueContainer>
     );
   }
-  return (
-    <components.ValueContainer {...props}>{children}</components.ValueContainer>
-  );
+  return <ValueContainer {...props}>{children}</ValueContainer>;
 };
 
 function Select<
@@ -130,7 +135,10 @@ function Select<
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
-        components={{ ...props.components, ValueContainer }}
+        components={{
+          ...props.components,
+          ValueContainer: CustomValueContainer as any,
+        }}
       />
       {helper && (
         <HelperDiv>
