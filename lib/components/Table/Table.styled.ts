@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Select from "../Select";
+import Select2 from "../Select2";
 import {
   overlineXSmallCSS,
   paragraphMediumCSS,
@@ -144,7 +145,7 @@ export const TablePerPageLabel = styled.label`
   text-transform: uppercase;
 `;
 
-export const TablePerPageSelector = styled(Select)`
+export const TablePerPageSelectorOLD = styled(Select)`
   max-width: 120px;
   margin-right: ${({ theme }) => theme.spacings.xbig};
 
@@ -160,6 +161,12 @@ export const TablePerPageSelector = styled(Select)`
     flex-direction: column;
     justify-content: center;
   }
+`;
+
+export const TablePerPageSelector = styled(Select2)`
+  min-width: 94px;
+  max-width: 120px;
+  margin-right: ${({ theme }) => theme.spacings.xbig};
 `;
 
 export const TFoot = styled.tfoot`
