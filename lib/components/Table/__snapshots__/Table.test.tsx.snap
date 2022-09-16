@@ -2,16 +2,16 @@
 
 exports[`Table > renders selected rows 1`] = `
 <table
-  class="sc-cidDSM btgGwg"
+  class="sc-fKVqWL dXnGYZ"
 >
   <thead
-    class="sc-jcFjpl sJFYt"
+    class="sc-bBHxTw fLDrD"
   >
     <tr
-      class="sc-efQSVx hxiekL"
+      class="sc-iJKOTD citbaf"
     >
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -20,7 +20,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -29,7 +29,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -40,61 +40,61 @@ exports[`Table > renders selected rows 1`] = `
     </tr>
   </thead>
   <tbody
-    class="sc-caiLqq iaIheK"
+    class="sc-iwjdpV eQANqL"
   >
     <tr
-      class="sc-efQSVx hxiekL"
+      class="sc-iJKOTD citbaf"
     >
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content A1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content B1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content C1
       </td>
     </tr>
     <tr
-      class="sc-efQSVx ioOCmN"
+      class="sc-iJKOTD fvaJtJ"
     >
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content A2
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content B2
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content C2
       </td>
     </tr>
     <tr
-      class="sc-efQSVx hxiekL"
+      class="sc-iJKOTD citbaf"
     >
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content A3
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content B3
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content C3
       </td>
@@ -105,16 +105,16 @@ exports[`Table > renders selected rows 1`] = `
 
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-cidDSM btgGwg"
+  class="sc-fKVqWL dXnGYZ"
 >
   <thead
-    class="sc-jcFjpl sJFYt"
+    class="sc-bBHxTw fLDrD"
   >
     <tr
-      class="sc-efQSVx hxiekL"
+      class="sc-iJKOTD citbaf"
     >
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -123,7 +123,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -155,7 +155,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -180,7 +180,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-iUKqMP dBCEfj"
+        class="sc-cxpSdN TWwRi"
       >
         <span
           style="display: flex; align-items: flex-start;"
@@ -205,58 +205,58 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       />
     </tr>
   </thead>
   <tbody
-    class="sc-caiLqq iaIheK"
+    class="sc-iwjdpV eQANqL"
   >
     <tr
-      class="sc-efQSVx hxiekL"
+      class="sc-iJKOTD citbaf"
     >
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content A1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content B1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content C1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       />
     </tr>
     <tr
-      class="sc-efQSVx eWqWEW"
+      class="sc-iJKOTD eSjhbm"
     >
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content A1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content B1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         Content C1
       </td>
       <td
-        class="sc-iAKWXU cDDlQQ"
+        class="sc-llYSUQ kRFSPb"
       >
         <span
-          class="sc-cTAqQK dVxJlT"
+          class="sc-giYglK chRHkB"
         >
           New
         </span>
