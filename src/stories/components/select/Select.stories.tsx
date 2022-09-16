@@ -64,6 +64,7 @@ Searchable.args = {
 export const Multi = Template.bind({});
 Multi.args = {
   isMulti: true,
+  hideSelectedOptions: false,
   label: "Select many",
 };
 
