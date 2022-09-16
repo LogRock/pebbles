@@ -229,6 +229,7 @@ export const TableFooter: FC<TableFooterProps> = ({
               onPageSizeSelected(selectedPageSize.value);
             }}
             defaultValue={{ label: pageSize?.toFixed(0), value: pageSize }}
+            menuPlacement="auto"
           />
         </TablePerPage>
       );
