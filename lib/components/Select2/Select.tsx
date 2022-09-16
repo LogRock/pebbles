@@ -1,12 +1,14 @@
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
 import uniqueId from "lodash.uniqueid";
-import React, { useContext, useMemo } from "react";
+import React, { FC, useContext, useMemo } from "react";
 import ReactSelect, {
   StylesConfig,
   Theme,
   Props,
   GroupBase,
+  components,
+  ValueContainerProps,
 } from "react-select";
 import { ThemeContext } from "styled-components";
 import {
@@ -18,6 +20,29 @@ import {
 import { CustomSelectProps } from "./Select.types";
 
 const defaultStatus = "info";
+
+const ValueContainer: FC<Pick<ValueContainerProps, "getValue">> = ({
+  children,
+  getValue,
+  ...props
+}) => {
+  let nbValues = 0;
+
+  if (Array.isArray(getValue())) {
+    nbValues = getValue().length;
+  }
+
+  if (nbValues > 1) {
+    return (
+      <components.ValueContainer {...props}>
+        {`${nbValues} items selected`}
+      </components.ValueContainer>
+    );
+  }
+  return (
+    <components.ValueContainer {...props}>{children}</components.ValueContainer>
+  );
+};
 
 function Select<
   Option,
@@ -105,6 +130,7 @@ function Select<
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
+        components={{ ...props.components, ValueContainer }}
       />
       {helper && (
         <HelperDiv>
