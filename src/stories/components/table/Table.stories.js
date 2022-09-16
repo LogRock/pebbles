@@ -200,7 +200,7 @@ export const NewRows = () => (
 );
 
 export const WithFooter = () => {
-  const [pageLimit, setPageLimit] = React.useState(10);
+  const [pageLimit, setPageLimit] = React.useState(50);
 
   const pageSizeChangedHandler = (pageSize) => {
     setPageLimit(pageSize);

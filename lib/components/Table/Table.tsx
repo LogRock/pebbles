@@ -35,6 +35,11 @@ export {
   TFoot,
 } from "./Table.styled";
 
+interface PageSizeOption {
+  value: number;
+  label: string;
+}
+
 export const TableRow: FC<TableRowProps> = ({
   isNew,
   children,
@@ -214,20 +219,16 @@ export const TableFooter: FC<TableFooterProps> = ({
         <TablePerPage>
           <TablePerPageLabel>Items per page</TablePerPageLabel>
           <TablePerPageSelector
-            id="itemsPerPageSelector"
-            autoCompleteItems={pageSizeOptions.map((pageSizeOption) => ({
-              id: pageSizeOption,
+            isMulti={false}
+            options={pageSizeOptions.map((pageSizeOption) => ({
+              value: pageSizeOption,
               label: pageSizeOption.toFixed(0),
-              name: pageSizeOption.toFixed(0),
             }))}
-            inputProps={{
-              value: pageSize,
-              readOnly: true,
+            onChange={(option) => {
+              const selectedPageSize = option as PageSizeOption;
+              onPageSizeSelected(selectedPageSize.value);
             }}
-            onItemSelected={(pageSizeSelectedSelectItem) =>
-              onPageSizeSelected(pageSizeSelectedSelectItem.id as number)
-            }
-            smartExpand
+            defaultValue={{ label: pageSize?.toFixed(0), value: pageSize }}
           />
         </TablePerPage>
       );
