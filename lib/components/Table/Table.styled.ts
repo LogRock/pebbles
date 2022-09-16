@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Select from "../Select";
 import Select2 from "../Select2";
 import {
   overlineXSmallCSS,
@@ -143,24 +142,6 @@ export const TablePerPageLabel = styled.label`
 
   color: ${({ theme }) => theme.colors.neutral[500]};
   text-transform: uppercase;
-`;
-
-export const TablePerPageSelectorOLD = styled(Select)`
-  max-width: 120px;
-  margin-right: ${({ theme }) => theme.spacings.xbig};
-
-  input,
-  button {
-    height: 36px !important;
-
-    font-size: 14px !important;
-  }
-
-  button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 `;
 
 export const TablePerPageSelector = styled(Select2)`
