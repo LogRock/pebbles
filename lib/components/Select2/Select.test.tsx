@@ -146,4 +146,28 @@ describe("Select2", () => {
       }
     );
   });
+
+  it("should shows N items selected after selecting multiple options", async () => {
+    const mockedOnChange = vi.fn();
+    render(
+      <Select
+        options={mockedOptions}
+        onChange={mockedOnChange}
+        label="my-select-component"
+        isMulti
+      />
+    );
+
+    const mySelectComponent = screen.getByLabelText("my-select-component");
+
+    fireEvent.keyDown(mySelectComponent, { key: "ArrowDown" });
+    await screen.findByText("Mocked option 1");
+    fireEvent.click(screen.getByText("Mocked option 1"));
+
+    fireEvent.keyDown(mySelectComponent, { key: "ArrowDown" });
+    await screen.findByText("Mocked option 2");
+    fireEvent.click(screen.getByText("Mocked option 2"));
+
+    expect(screen.getByText(/items selected/i)).toBeInTheDocument();
+  });
 });
