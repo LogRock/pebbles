@@ -1,3 +1,17 @@
+# [9.5.0](https://github.com/LogRock/pebbles/compare/v9.4.0...v9.5.0) (2022-09-19)
+
+### Bug Fixes
+
+- fixed typescript issues ([ab9ed64](https://github.com/LogRock/pebbles/commit/ab9ed6423ab1b5ef5bee942cc97dbb8f95ccf7f3))
+- removed CustomValueContainerProps, no need for it ([9f9b9b4](https://github.com/LogRock/pebbles/commit/9f9b9b4f56ec6b26b63386ab841a9ecda83b8141))
+- removed old code and unused import on Table.styled.ts ([896eb8b](https://github.com/LogRock/pebbles/commit/896eb8bd5381806f8105a109bdd76849dfe3194b))
+
+### Features
+
+- menu expands upwards when no space below ([73439ca](https://github.com/LogRock/pebbles/commit/73439cadcbb4605acb3b3c1f4ecb785b03cdd0b2))
+- shows N items selected on multi-select, on Select2 component ([8dcbab4](https://github.com/LogRock/pebbles/commit/8dcbab4d978e256e14c3a2dac087bce9783cacc8))
+- table page size now uses the new select ([4620bd6](https://github.com/LogRock/pebbles/commit/4620bd6b985d1553129a1935dff55fd8809d58ae))
+
 # [9.4.0](https://github.com/LogRock/pebbles/compare/v9.3.0...v9.4.0) (2022-09-14)
 
 ### Features
