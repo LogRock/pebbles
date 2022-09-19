@@ -9,7 +9,6 @@ import ReactSelect, {
   GroupBase,
   components,
   ValueContainerProps,
-  Options,
 } from "react-select";
 import { ThemeContext } from "styled-components";
 import {
@@ -24,11 +23,7 @@ const defaultStatus = "info";
 
 const { ValueContainer } = components;
 
-interface CustomValueContainerProps extends ValueContainerProps {
-  getValue: () => Options<any>;
-}
-
-const CustomValueContainer: FC<CustomValueContainerProps> = ({
+const CustomValueContainer: FC<ValueContainerProps> = ({
   children,
   ...props
 }) => {
