@@ -1,3 +1,10 @@
+# [9.6.0](https://github.com/LogRock/pebbles/compare/v9.5.0...v9.6.0) (2022-09-20)
+
+### Features
+
+- **panel:** add panel component ([b29058e](https://github.com/LogRock/pebbles/commit/b29058e606988eda846841b3f3751d6652e42902))
+- **panel:** add to main file ([d0887b0](https://github.com/LogRock/pebbles/commit/d0887b0ac6c3cbc8236e5ccf6b27bda9b62b74dc))
+
 # [9.5.0](https://github.com/LogRock/pebbles/compare/v9.4.0...v9.5.0) (2022-09-19)
 
 ### Bug Fixes
