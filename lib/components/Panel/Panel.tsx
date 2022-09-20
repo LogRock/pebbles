@@ -34,14 +34,14 @@ const PanelTitle = styled.div`
 `;
 
 const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
-  const [selected, setSelected] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
-    if (selected === index) {
-      return setSelected(null);
+    if (expanded === index) {
+      return setExpanded(null);
     }
 
-    setSelected(index);
+    setExpanded(index);
   };
 
   return (
@@ -51,11 +51,11 @@ const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
           <PanelTitle onClick={() => handleToggle(index)}>
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
             <Icon
-              path={selected === index ? mdiChevronUp : mdiChevronDown}
+              path={expanded === index ? mdiChevronUp : mdiChevronDown}
               size={1}
             />
           </PanelTitle>
-          {selected === index && content}
+          {expanded === index && content}
         </PanelContainer>
       ))}
     </>
