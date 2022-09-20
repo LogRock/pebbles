@@ -2,21 +2,21 @@ import React, { FC, ReactNode, useState } from "react";
 import styled from "styled-components";
 import Icon from "@mdi/react";
 import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
-import { ParagraphLarge } from "../Typography/Typography.styled";
+import { ParagraphLarge } from "../Typography";
 import Card from "../Card";
 
-interface PanelsItems {
+export interface PanelsItems {
   title: string;
   content: ReactNode;
-};
+}
 
-interface PanelProps {
+export interface PanelProps {
   panelsItems: PanelsItems[];
 }
 
 const PanelContainer = styled(Card)`
   & + div {
-    margin-top: ${({theme}) => theme.spacings.sm};
+    margin-top: ${({ theme }) => theme.spacings.sm};
   }
 `;
 
@@ -29,7 +29,7 @@ const PanelTitle = styled.div`
   svg {
     margin-left: 18px;
 
-    color: ${({theme}) => theme.colors.primary[500]};
+    color: ${({ theme }) => theme.colors.primary[500]};
   }
 `;
 
@@ -38,11 +38,11 @@ const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
 
   const handleToggle = (index: number) => {
     if (selected === index) {
-      return setSelected(null)
-    };
+      return setSelected(null);
+    }
 
-    setSelected(index)
-  }
+    setSelected(index);
+  };
 
   return (
     <>
@@ -50,13 +50,16 @@ const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
         <PanelContainer key={index} {...props}>
           <PanelTitle onClick={() => handleToggle(index)}>
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
-            <Icon path={selected === index ? mdiChevronUp : mdiChevronDown} size={1} />
+            <Icon
+              path={selected === index ? mdiChevronUp : mdiChevronDown}
+              size={1}
+            />
           </PanelTitle>
-            {selected === index && content}
+          {selected === index && content}
         </PanelContainer>
       ))}
     </>
   );
-}
+};
 
 export default Panel;
