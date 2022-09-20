@@ -142,3 +142,7 @@ export {
   default as RadioButton,
   RadioButtonGroup,
 } from "./components/RadioButton";
+
+// Panel
+export { default as Panel } from "./components/Panel";
+export type { PanelProps, PanelsItems } from "./components/Panel";
