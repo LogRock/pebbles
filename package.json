@@ -113,7 +113,8 @@
     "react": "*",
     "react-dom": "*",
     "styled-breakpoints": "*",
-    "styled-components": "*"
+    "styled-components": "*",
+    "react-select": ">= 5"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
