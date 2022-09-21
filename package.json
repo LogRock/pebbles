@@ -92,6 +92,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-jsonschema-form": "^1.8.1",
+    "react-select": "^5.4.0",
     "rollup-plugin-typescript": "1.0.1",
     "semantic-release": "^18.0.1",
     "semantic-release-slack-bot": "^3.5.2",
@@ -112,9 +113,9 @@
     "@mdi/react": "*",
     "react": "*",
     "react-dom": "*",
+    "react-select": ">= 5",
     "styled-breakpoints": "*",
-    "styled-components": "*",
-    "react-select": ">= 5"
+    "styled-components": "*"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",
