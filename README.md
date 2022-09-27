@@ -20,6 +20,7 @@ This library is meant to be used in React projects. To use it, you will have to 
 # styled components
 yarn add styled-components
 yarn add styled-breakpoints
+yarn add react-select
 
 # fonts
 yarn add @fontsource/archivo
