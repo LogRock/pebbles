@@ -1,3 +1,13 @@
+## [9.6.1](https://github.com/LogRock/pebbles/compare/v9.6.0...v9.6.1) (2022-09-28)
+
+### Bug Fixes
+
+- added react-select install instruction on README.ME ([ea09975](https://github.com/LogRock/pebbles/commit/ea0997511f82774c5f8a81f05380a8225828f2d4))
+- added react-select to devDependencies too ([2fa062d](https://github.com/LogRock/pebbles/commit/2fa062d15ea5cc034567dd69f55c06225692c164))
+- react-select v5 as a peer dependency ([770b98f](https://github.com/LogRock/pebbles/commit/770b98f1708b7586aab4c2926e8ba71f0c149145))
+- removed react-select from depencies list ([2e6fee7](https://github.com/LogRock/pebbles/commit/2e6fee711e094df2974406ab733552eb10761d87))
+- updated package.json and yarn.lock files ([7a9d559](https://github.com/LogRock/pebbles/commit/7a9d559d3ab206565f73b322e098bb132baaf51d))
+
 # [9.6.0](https://github.com/LogRock/pebbles/compare/v9.5.0...v9.6.0) (2022-09-20)
 
 ### Features
