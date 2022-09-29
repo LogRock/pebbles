@@ -127,3 +127,11 @@ export const Steps = styled.div<StepperProps>`
       `}
   }
 `;
+
+export const StepIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: ${({ theme }) => theme.colors.neutral[400]};
+`;

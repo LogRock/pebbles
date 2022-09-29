@@ -1,3 +1,11 @@
+import {
+  mdiBullhornVariantOutline,
+  mdiFaceManOutline,
+  mdiFileDocumentOutline,
+  mdiMedalOutline,
+  mdiStorefrontOutline,
+} from "@mdi/js";
+import Icon from "@mdi/react";
 import React from "react";
 import styled from "styled-components";
 
@@ -45,16 +53,28 @@ InformativeOnly.args = {
   showHoverEffect: false,
   children: (
     <>
-      <StepperStep stepIndex="01">
+      <StepperStep
+        stepIndex="01"
+        icon={<Icon size={1.05} path={mdiFaceManOutline} />}
+      >
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex="02">
+      <StepperStep
+        stepIndex="02"
+        icon={<Icon size={1.05} path={mdiStorefrontOutline} />}
+      >
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex="03">
+      <StepperStep
+        stepIndex="03"
+        icon={<Icon size={1.05} path={mdiBullhornVariantOutline} />}
+      >
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep stepIndex="04">
+      <StepperStep
+        stepIndex="04"
+        icon={<Icon size={1.05} path={mdiFileDocumentOutline} />}
+      >
         <NoMarginText>Documents</NoMarginText>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
@@ -68,7 +88,11 @@ InformativeOnly.args = {
           repellat sequi. Facere, atque!
         </p>
       </StepperStep>
-      <StepperStep stepIndex="05" last>
+      <StepperStep
+        stepIndex="05"
+        last
+        icon={<Icon size={1.05} path={mdiMedalOutline} />}
+      >
         <NoMarginText
           style={{
             color: "#262",
