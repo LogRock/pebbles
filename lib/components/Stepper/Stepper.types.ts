@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface StepperProps {
   showHoverEffect?: boolean;
 }
@@ -8,4 +10,5 @@ export interface StepperStepProps {
   last?: boolean;
   completed?: boolean;
   onStepClick?: () => void;
+  icon?: React.ReactNode;
 }

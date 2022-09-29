@@ -8,6 +8,7 @@ import {
   StepCheckMark,
   StepContent,
   StepLine,
+  StepIconWrapper,
 } from "./Stepper.styled";
 
 const StepperStep: FC<StepperStepProps> = ({
@@ -16,6 +17,7 @@ const StepperStep: FC<StepperStepProps> = ({
   completed,
   current,
   onStepClick,
+  icon,
   children,
 }) => {
   return (
@@ -27,7 +29,11 @@ const StepperStep: FC<StepperStepProps> = ({
     >
       <StepIndicatorContainer>
         <StepIndicator current={current} last={last} completed={completed}>
-          <p>{stepIndex}</p>
+          {icon ? (
+            <StepIconWrapper>{icon}</StepIconWrapper>
+          ) : (
+            <p>{stepIndex}</p>
+          )}
           <StepCheckMark current={current} completed={completed} />
         </StepIndicator>
         {!last && <StepLine completed={completed} />}
