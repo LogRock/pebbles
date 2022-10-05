@@ -1,3 +1,9 @@
+# [9.7.0](https://github.com/LogRock/pebbles/compare/v9.6.1...v9.7.0) (2022-10-05)
+
+### Features
+
+- stepper step now accepts icon on the step indicator ([97c7b9e](https://github.com/LogRock/pebbles/commit/97c7b9ee35dad7f9a27becbf1cca0e9a65526ce0))
+
 ## [9.6.1](https://github.com/LogRock/pebbles/compare/v9.6.0...v9.6.1) (2022-09-28)
 
 ### Bug Fixes
