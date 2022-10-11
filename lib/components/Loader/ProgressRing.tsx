@@ -7,8 +7,8 @@ import { ProgressRingProps } from "./Loader.types";
 
 export const RingWrapper = styled.div<{ size: number }>`
   position: relative;
-  width: ${(props: any) => props.size}px;
-  height: ${(props: any) => props.size}px;
+  width: ${(props) => props.size}px;
+  height: ${(props) => props.size}px;
 
   svg {
     position: absolute;
@@ -44,7 +44,6 @@ export const Label = styled.div<TypographyParagraphProps>`
 `;
 
 const ProgressRing: FC<ProgressRingProps> = ({
-  children,
   radius,
   stroke,
   percentage,
@@ -52,7 +51,6 @@ const ProgressRing: FC<ProgressRingProps> = ({
   showBaseRing,
   label,
   variant = "primary",
-  ...inputProps
 }) => {
   const theme = useContext(ThemeContext);
 

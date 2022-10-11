@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
 import Form from "@rjsf/core";
 import { mdiCalendar } from "@mdi/js";
@@ -42,7 +43,7 @@ DateInputBox.args = {
   placeholder: "input date",
 };
 
-const CustomDatePicker = function (props: any) {
+const CustomDatePicker = function (props) {
   const [myDate, setMyDate] = useState();
   return (
     <InputBox
@@ -89,7 +90,7 @@ const basaltSchema = {
   },
 };
 
-const DynamicForm: FC = () => {
+const DynamicForm = () => {
   return (
     <Form
       schema={basaltSchema}
@@ -100,7 +101,7 @@ const DynamicForm: FC = () => {
   );
 };
 
-const RegularDateInputTemplate = (args) => {
+const RegularDateInputTemplate = () => {
   return <DynamicForm />;
 };
 export const RegularDateInputBox = RegularDateInputTemplate.bind({});

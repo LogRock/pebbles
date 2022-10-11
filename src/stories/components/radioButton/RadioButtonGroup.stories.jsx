@@ -26,7 +26,7 @@ WithTitle.args = {
   groupTitle: "Pick at least 3 options",
 };
 
-const TemplateFrequencyOptions = (args) => {
+const TemplateFrequencyOptions = () => {
   const frequencyOptions = ["daily", "weekly", "monthly", "never"];
   const [frequency, setFrequency] = useState(frequencyOptions[0]);
 

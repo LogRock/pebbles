@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
 import CheckBoxGroup from "../../../../lib/components/CheckBoxGroup";
 import Form from "@rjsf/core";
 
@@ -60,7 +61,7 @@ const basaltSchema = {
     },
   },
 };
-const CustomCheckBoxGroup: FC = (props) => {
+const CustomCheckBoxGroup = (props) => {
   return (
     <CheckBoxGroup
       description={props.schema.title}
@@ -75,7 +76,7 @@ const CustomCheckBoxGroup: FC = (props) => {
   );
 };
 
-const DynamicForm: FC = (props) => {
+const DynamicForm = () => {
   return (
     <Form
       schema={basaltSchema}
@@ -86,7 +87,7 @@ const DynamicForm: FC = (props) => {
   );
 };
 
-const FormTemplate = (args) => {
+const FormTemplate = () => {
   return <DynamicForm values={["(T) Double/Triples"]} />;
 };
 export const FormCheckBoxGroup = FormTemplate.bind({});

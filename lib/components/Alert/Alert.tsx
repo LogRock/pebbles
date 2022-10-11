@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button";
@@ -30,7 +31,7 @@ const AlertWrapper = styled.div<Pick<AlertProps, "status" | "sticky">>`
   margin: 8px;
   padding: ${({ sticky }) => (sticky ? "6px 10px" : "12px 20px")};
 
-  border-radius: ${({ theme, status }) => theme.alert.borderRadius};
+  border-radius: ${({ theme }) => theme.alert.borderRadius};
 
   background: ${({ theme, status }) =>
     theme.alert[status || "neutral"].background};
