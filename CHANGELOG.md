@@ -1,3 +1,13 @@
+# [10.0.0](https://github.com/LogRock/pebbles/compare/v9.7.0...v10.0.0) (2022-10-11)
+
+### Features
+
+- **status-tag:** :sparkles: remake status tag and notification dot ([ccf7a08](https://github.com/LogRock/pebbles/commit/ccf7a089dbbf65d39dc91f5e15c8558ae097ee88))
+
+### BREAKING CHANGES
+
+- **status-tag:** StatusTag API changed
+
 # [9.7.0](https://github.com/LogRock/pebbles/compare/v9.6.1...v9.7.0) (2022-10-05)
 
 ### Features
