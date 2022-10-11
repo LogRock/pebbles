@@ -2537,7 +2537,6 @@ __metadata:
     "@mdi/react": "*"
     react: "*"
     react-dom: "*"
-    react-select: ">= 5"
     styled-breakpoints: "*"
     styled-components: "*"
   languageName: unknown
