@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { mdiAlert } from "@mdi/js";
 import Icon from "@mdi/react";
 import uniqueId from "lodash.uniqueid";
@@ -73,7 +74,7 @@ function Select<
           fontSize: theme.inputBox.fontSize,
         };
       },
-      option: (provided, state) => ({
+      option: (provided) => ({
         ...provided,
         fontFamily: theme.inputBox.fontFamily,
         fontWeight: theme.inputBox.fontWeight,
@@ -81,7 +82,7 @@ function Select<
         fontSize: theme.inputBox.fontSize,
         padding: theme.inputBox.padding,
       }),
-      menu: (provided, state) => ({
+      menu: (provided) => ({
         ...provided,
         borderRadius: 0,
       }),

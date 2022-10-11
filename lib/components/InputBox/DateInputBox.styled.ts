@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { createGlobalStyle } from "styled-components";
 import { Theme } from "../../main";
 import { BaseInputBoxProps } from "./BaseInputBox";

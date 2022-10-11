@@ -5,7 +5,7 @@ import { vi } from "vitest";
 import { fireEvent, screen } from "@testing-library/react";
 
 describe("Select2", () => {
-  const mockedOptionsGetter = (inputValue: string) =>
+  const mockedOptionsGetter = () =>
     new Promise<{ value: string; label: string }[]>((resolve) => {
       setTimeout(() => {
         resolve([

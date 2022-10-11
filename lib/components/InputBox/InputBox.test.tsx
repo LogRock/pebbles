@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
 
 import "@testing-library/jest-dom";
@@ -18,7 +19,7 @@ describe("InputBox", () => {
           type="text"
           id="textId"
           description="User Name"
-          onChange={(event) => {}}
+          onChange={() => null}
         />
       </div>
     );
@@ -47,7 +48,7 @@ describe("InputBox", () => {
         type="tel"
         // @ts-ignore
         defaultCountry="US"
-        onChange={(data) => {}}
+        onChange={() => null}
       />
     );
 
@@ -62,7 +63,7 @@ describe("InputBox", () => {
           description="Phone Info"
           // @ts-ignore
           defaultCountry="US"
-          onChange={(data) => {}}
+          onChange={() => null}
         />
       </div>
     );

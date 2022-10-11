@@ -44,7 +44,7 @@ function SelectAsync<
           fontSize: theme.inputBox.fontSize,
         };
       },
-      option: (provided, state) => ({
+      option: (provided) => ({
         ...provided,
         fontFamily: theme.inputBox.fontFamily,
         fontWeight: theme.inputBox.fontWeight,
@@ -52,7 +52,7 @@ function SelectAsync<
         fontSize: theme.inputBox.fontSize,
         padding: theme.inputBox.padding,
       }),
-      menu: (provided, state) => ({
+      menu: (provided) => ({
         ...provided,
         borderRadius: 0,
       }),
