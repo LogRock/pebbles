@@ -2517,7 +2517,7 @@ __metadata:
     react-dom: ^17.0.0
     react-jsonschema-form: ^1.8.1
     react-phone-number-input: ^3.2.2
-    react-select: ^5.4.0
+    react-select: 5.4.0
     react-text-mask: ^5.4.3
     rollup-plugin-typescript: 1.0.1
     semantic-release: ^18.0.1
@@ -17400,7 +17400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-select@npm:^5.4.0":
+"react-select@npm:5.4.0":
   version: 5.4.0
   resolution: "react-select@npm:5.4.0"
   dependencies:

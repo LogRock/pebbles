@@ -136,7 +136,7 @@
     "lodash.uniqueid": "^4.0.1",
     "react-datepicker": "^4.7.0",
     "react-phone-number-input": "^3.2.2",
-    "react-select": "^5.4.0",
+    "react-select": "5.4.0",
     "react-text-mask": "^5.4.3"
   },
   "stackblitz": {
