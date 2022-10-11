@@ -1,3 +1,9 @@
+## [10.0.1](https://github.com/LogRock/pebbles/compare/v10.0.0...v10.0.1) (2022-10-11)
+
+### Bug Fixes
+
+- **project:** :pushpin: pin react-select version ([15ac918](https://github.com/LogRock/pebbles/commit/15ac918a71b7ad0a6f82736f4f9b8df6351a155f))
+
 # [10.0.0](https://github.com/LogRock/pebbles/compare/v9.7.0...v10.0.0) (2022-10-11)
 
 ### Features
