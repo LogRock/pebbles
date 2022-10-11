@@ -25,6 +25,7 @@ import {
   shades,
   success,
   warning,
+  destructive,
 } from "./colors";
 import {
   displayLarge,
@@ -55,8 +56,13 @@ import {
   synthwave,
   teaLeaves,
 } from "./gradients";
+import {
+  STATUS_TAG_SIZES,
+  STATUS_TAG_VARIANTS,
+} from "../../components/StatusTag/StatusTag.types";
 
 const spacings = {
+  xxxsm: "2px",
   xxsm: "4px",
   xsm: "8px",
   sm: "12px",
@@ -602,57 +608,45 @@ const statusTrend: StatusTrend = {
 const statusTag: StatusTag = {
   color: {
     background: {
-      error: error["50"],
-      errorAlt: error["400"],
-      warning: warning["50"],
-      warningAlt: warning["50"],
-      success: success["50"],
-      neutral: neutral["100"],
-      collapsed: {
-        error: error["500"],
-        errorAlt: error["500"],
-        warning: warning["500"],
-        warningAlt: warning["500"],
-        success: success["500"],
-        neutral: neutral["500"],
-      },
+      [STATUS_TAG_VARIANTS.DESTRUCTIVE]: destructive["400"],
+      [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["50"],
+      [STATUS_TAG_VARIANTS.NEUTRAL]: neutral["400"],
+      [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["100"],
+      [STATUS_TAG_VARIANTS.SUCCESS]: success["400"],
+      [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["50"],
+      [STATUS_TAG_VARIANTS.WARNING]: warning["600"],
+      [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["50"],
     },
-    icon: {
-      error: error["600"],
-      errorAlt: neutral["50"],
-      warning: warning["600"],
-      warningAlt: warning["900"],
-      success: success["600"],
-      neutral: neutral["600"],
-    },
-    label: {
-      error: error["600"],
-      errorAlt: neutral["50"],
-      warning: warning["600"],
-      warningAlt: warning["900"],
-      success: success["600"],
-      neutral: neutral["600"],
-      collapsed: {
-        error: neutral["50"],
-        warning: neutral["50"],
-        success: neutral["50"],
-        neutral: neutral["50"],
-      },
+    content: {
+      [STATUS_TAG_VARIANTS.DESTRUCTIVE]: shades["0"],
+      [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["500"],
+      [STATUS_TAG_VARIANTS.NEUTRAL]: shades["0"],
+      [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["500"],
+      [STATUS_TAG_VARIANTS.SUCCESS]: shades["0"],
+      [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["600"],
+      [STATUS_TAG_VARIANTS.WARNING]: shades["0"],
+      [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["600"],
     },
   },
-  size: {
-    tag: {
-      micro: "13px",
-      small: "28px",
-      medium: "36px",
-      large: "44px",
-    },
-    label: {
-      micro: "9px",
-      small: "11px",
-      medium: "12px",
-      large: "14px",
-    },
+  typography: {
+    [STATUS_TAG_SIZES.LARGE]: overlineMedium,
+    [STATUS_TAG_SIZES.MEDIUM]: overlineXSmall,
+    [STATUS_TAG_SIZES.SMALL]: overlineXSmall,
+  },
+  paddingX: {
+    [STATUS_TAG_SIZES.LARGE]: spacings.md,
+    [STATUS_TAG_SIZES.MEDIUM]: spacings.sm,
+    [STATUS_TAG_SIZES.SMALL]: spacings.xsm,
+  },
+  paddingY: {
+    [STATUS_TAG_SIZES.LARGE]: spacings.xsm,
+    [STATUS_TAG_SIZES.MEDIUM]: spacings.xxsm,
+    [STATUS_TAG_SIZES.SMALL]: 0,
+  },
+  radius: {
+    [STATUS_TAG_SIZES.LARGE]: spacings.sm,
+    [STATUS_TAG_SIZES.MEDIUM]: spacings.sm,
+    [STATUS_TAG_SIZES.SMALL]: spacings.xsm,
   },
 };
 

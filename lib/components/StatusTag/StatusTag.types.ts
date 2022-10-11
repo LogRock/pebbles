@@ -1,15 +1,24 @@
 import React from "react";
 
+export enum STATUS_TAG_SIZES {
+  SMALL = "SMALL",
+  MEDIUM = "MEDIUM",
+  LARGE = "LARGE",
+}
+
+export enum STATUS_TAG_VARIANTS {
+  DESTRUCTIVE = "DESTRUCTIVE",
+  DESTRUCTIVE_ALT = "DESTRUCTIVE_ALT",
+  WARNING = "WARNING",
+  WARNING_ALT = "WARNING_ALT",
+  SUCCESS = "SUCCESS",
+  SUCCESS_ALT = "SUCCESS_ALT",
+  NEUTRAL = "NEUTRAL",
+  NEUTRAL_ALT = "NEUTRAL_ALT",
+}
+
 export interface StatusTagProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string;
-  size: "micro" | "small" | "medium" | "large";
-  variant?:
-    | "error"
-    | "errorAlt"
-    | "warning"
-    | "warningAlt"
-    | "success"
-    | "neutral";
-  icon?: React.ReactNode;
-  collapsed?: boolean | false;
+  size: STATUS_TAG_SIZES;
+  variant: STATUS_TAG_VARIANTS;
 }
