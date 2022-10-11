@@ -612,9 +612,9 @@ const statusTag: StatusTag = {
       [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["50"],
       [STATUS_TAG_VARIANTS.NEUTRAL]: neutral["400"],
       [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["100"],
-      [STATUS_TAG_VARIANTS.SUCCESS]: success["400"],
+      [STATUS_TAG_VARIANTS.SUCCESS]: success["500"],
       [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["50"],
-      [STATUS_TAG_VARIANTS.WARNING]: warning["600"],
+      [STATUS_TAG_VARIANTS.WARNING]: warning["50"],
       [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["50"],
     },
     content: {
@@ -624,8 +624,8 @@ const statusTag: StatusTag = {
       [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["500"],
       [STATUS_TAG_VARIANTS.SUCCESS]: shades["0"],
       [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["600"],
-      [STATUS_TAG_VARIANTS.WARNING]: shades["0"],
-      [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["600"],
+      [STATUS_TAG_VARIANTS.WARNING]: warning["600"],
+      [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["900"],
     },
   },
   typography: {
