@@ -1,3 +1,9 @@
+## [10.0.2](https://github.com/LogRock/pebbles/compare/v10.0.1...v10.0.2) (2022-10-11)
+
+### Bug Fixes
+
+- fix status tag warning and sucess colors ([81624df](https://github.com/LogRock/pebbles/commit/81624df8802c409663079941272d35a9f2e4f041))
+
 ## [10.0.1](https://github.com/LogRock/pebbles/compare/v10.0.0...v10.0.1) (2022-10-11)
 
 ### Bug Fixes
