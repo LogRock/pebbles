@@ -1,4 +1,8 @@
 import * as CSS from "csstype";
+import {
+  STATUS_TAG_SIZES,
+  STATUS_TAG_VARIANTS,
+} from "../components/StatusTag/StatusTag.types";
 
 interface Spacings {
   xxsm: CSS.Property.Width;
@@ -463,13 +467,6 @@ export interface StatusNumber {
   labelColor: ColorByVariant;
 }
 
-interface SizeByCategory {
-  micro?: CSS.Property.Inset;
-  small: CSS.Property.Inset;
-  medium: CSS.Property.Inset;
-  large: CSS.Property.Inset;
-}
-
 export interface StatusTrend {
   iconColor: {
     positive: CSS.Property.Color;
@@ -485,20 +482,15 @@ export interface StatusTrend {
   fontWeight: CSS.Property.FontWeight;
 }
 
-interface StatusTagColor extends ColorByVariant {
-  collapsed?: ColorByVariant;
-}
-
 export interface StatusTag {
   color: {
-    background: StatusTagColor;
-    icon: ColorByVariant;
-    label: StatusTagColor;
+    background: Record<STATUS_TAG_VARIANTS, CSS.Property.BackgroundColor>;
+    content: Record<STATUS_TAG_VARIANTS, CSS.Property.Color>;
   };
-  size: {
-    tag: SizeByCategory;
-    label: SizeByCategory;
-  };
+  paddingX: Record<STATUS_TAG_SIZES, CSS.Property.Width>;
+  paddingY: Record<STATUS_TAG_SIZES, CSS.Property.Width>;
+  typography: Record<STATUS_TAG_SIZES, OverlineProps>;
+  radius: Record<STATUS_TAG_SIZES, CSS.Property.BorderRadius>;
 }
 
 export interface StatusPercentage {

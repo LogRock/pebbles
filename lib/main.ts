@@ -89,8 +89,16 @@ export { default as StatusNumber } from "./components/StatusNumber";
 export type { StatusNumberProps } from "./components/StatusNumber";
 
 // expose StatusTag
-export { default as StatusTag } from "./components/StatusTag";
+export {
+  default as StatusTag,
+  STATUS_TAG_SIZES,
+  STATUS_TAG_VARIANTS,
+} from "./components/StatusTag";
 export type { StatusTagProps } from "./components/StatusTag";
+
+// expose NotificationDot
+export { default as NotificationDot } from "./components/NotificationDot";
+export type { NotificationDotProps } from "./components/NotificationDot";
 
 // expose StatusTrend
 export { default as StatusTrend } from "./components/StatusTrend";

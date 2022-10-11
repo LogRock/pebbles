@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`NotificationDot > renders 1`] = `
+<div
+  class="sc-gsDKAQ gfLDRT"
+>
+  Foo
+</div>
+`;

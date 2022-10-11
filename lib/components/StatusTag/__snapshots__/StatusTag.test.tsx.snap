@@ -2,29 +2,8 @@
 
 exports[`StatusTag > renders properly 1`] = `
 <div
-  class="sc-bqiRlB djBTmM"
+  class="sc-bdvvtL jWlIWk"
 >
-  <div
-    class="sc-ksdxgE Eewgt"
-    label="High Risk"
-  >
-    <p
-      class="sc-iqseJM sc-fotOHu xyHVy bjDOzb"
-    />
-  </div>
-</div>
-`;
-
-exports[`StatusTag > should render Notification Status 1`] = `
-<div
-  class="sc-bqiRlB gbZIMP"
->
-  <div
-    class="sc-ksdxgE iMoYvL"
-  >
-    <p
-      class="sc-iqseJM sc-fotOHu xyHVy eiKoEC"
-    />
-  </div>
+  High Risk
 </div>
 `;
