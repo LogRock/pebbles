@@ -4,28 +4,28 @@ exports[`InputBox > get InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-bdvvtL dsMVeT"
+      class="sc-bqiRlB djhLrX"
     >
       <label
-        class="sc-gsDKAQ dhbaiu"
+        class="sc-ksdxgE goqJBX"
         for="textId"
       >
         User Name
       </label>
       <div
-        class="sc-furwcr gLQxJk"
+        class="sc-hGPBjI fefdZJ"
       >
         <input
-          class="sc-pVTFL jqsxnY"
+          class="sc-dlVxhl jtkHNF"
           id="textId"
           type="text"
         />
       </div>
       <div
-        class="sc-dkPtRN hYUIdw"
+        class="sc-hBUSln cGVCQJ"
       >
         <label
-          class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+          class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
         />
       </div>
     </div>
@@ -37,19 +37,19 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-bdvvtL dsMVeT"
+      class="sc-bqiRlB djhLrX"
     >
       <label
-        class="sc-gsDKAQ dhbaiu"
+        class="sc-ksdxgE goqJBX"
         for="phoneId"
       >
         Phone Info
       </label>
       <div
-        class="sc-furwcr gLQxJk"
+        class="sc-hGPBjI fefdZJ"
       >
         <div
-          class="sc-ikJyIC gdzLPX PhoneInput PhoneInput--focus"
+          class="sc-ikJyIC ggzOrE PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1314,10 +1314,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         </div>
       </div>
       <div
-        class="sc-dkPtRN hYUIdw"
+        class="sc-hBUSln cGVCQJ"
       >
         <label
-          class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+          class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
         />
       </div>
     </div>
@@ -1328,25 +1328,25 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL dsMVeT"
+    class="sc-bqiRlB djhLrX"
   >
     <label
-      class="sc-gsDKAQ dhbaiu"
+      class="sc-ksdxgE goqJBX"
       for="pebbles__input__1"
     />
     <div
-      class="sc-furwcr gLQxJk"
+      class="sc-hGPBjI fefdZJ"
     >
       <input
-        class="sc-pVTFL jqsxnY"
+        class="sc-dlVxhl jtkHNF"
         id="pebbles__input__1"
       />
     </div>
     <div
-      class="sc-dkPtRN hYUIdw"
+      class="sc-hBUSln cGVCQJ"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
       />
     </div>
   </div>
@@ -1356,10 +1356,10 @@ exports[`InputBox > renders InputBox properly 1`] = `
 exports[`InputBox > renders Number InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL dsMVeT"
+    class="sc-bqiRlB djhLrX"
   >
     <label
-      class="sc-gsDKAQ dhbaiu"
+      class="sc-ksdxgE goqJBX"
     />
     <div
       class="sc-giYglK kGrFoY"
@@ -1383,7 +1383,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-bYoBSM dZxkAw"
       >
         <input
-          class="sc-pVTFL sc-ezbkAF jqsxnY hPUPOl"
+          class="sc-dlVxhl sc-ezbkAF jtkHNF hPUPOl"
           type="number"
         />
       </div>
@@ -1404,10 +1404,10 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       </button>
     </div>
     <div
-      class="sc-dkPtRN hYUIdw"
+      class="sc-hBUSln cGVCQJ"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
       />
     </div>
   </div>
@@ -1417,17 +1417,17 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
 exports[`InputBox > renders Phone InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL dsMVeT"
+    class="sc-bqiRlB djhLrX"
   >
     <label
-      class="sc-gsDKAQ dhbaiu"
+      class="sc-ksdxgE goqJBX"
       for="pebbles__input__2"
     />
     <div
-      class="sc-furwcr gLQxJk"
+      class="sc-hGPBjI fefdZJ"
     >
       <div
-        class="sc-ikJyIC gdzLPX PhoneInput"
+        class="sc-ikJyIC ggzOrE PhoneInput"
       >
         <div
           class="PhoneInputCountry"
@@ -2690,10 +2690,10 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       </div>
     </div>
     <div
-      class="sc-dkPtRN hYUIdw"
+      class="sc-hBUSln cGVCQJ"
     >
       <label
-        class="sc-gsDKAQ sc-hKwDye dhbaiu dmPXlL"
+        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
       />
     </div>
   </div>

@@ -307,12 +307,6 @@ const buttons: Buttons = {
 
 const inputBox: InputBox = {
   spacing: spacings.xxbig,
-  fontFamily: "Archivo",
-  fontWeight: "normal",
-  fontStyle: "normal",
-  fontSize: spacings.md,
-  lineHeight: spacings.xbig,
-  fontFeatureSettings: "'salt' on",
   padding: `10px ${spacings.sm}`,
   boxSizing: "border-box",
   boxShadow: shadows.xSmall,
@@ -391,27 +385,27 @@ const select: Select = {
 const checkBox: CheckBox = {
   checkMark: {
     color: shades[0],
-    width: "3px",
-    height: "6px",
-    left: "5px",
-    top: "2px",
+    width: spacings.xxsm,
+    height: spacings.sm,
+    left: "50%",
+    top: "50%",
   },
-  width: spacings.md,
-  height: spacings.md,
+  width: spacings.xbig,
+  height: spacings.xbig,
   marginRight: spacings.sm,
   default: {
     background: shades[0],
     borderColor: neutral[300],
     borderWidth: "1px",
     borderStyle: "solid",
-    borderRadius: "1.33333px",
+    borderRadius: spacings.xxxsm,
   },
   checked: {
     background: primary["500"],
     borderColor: primary["500"],
     borderWidth: "1px",
     borderStyle: "solid",
-    borderRadius: "1.33333px",
+    borderRadius: spacings.xxxsm,
   },
 };
 

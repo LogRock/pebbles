@@ -3,6 +3,7 @@ import { paragraphMediumCSS } from "../Typography/Typography.styled";
 
 export const CheckMark = styled.span<{ disabled?: boolean }>`
   position: relative;
+  box-sizing: border-box;
   width: ${({ theme }) => theme.checkBox.width};
   min-width: ${({ theme }) => theme.checkBox.width};
   height: ${({ theme }) => theme.checkBox.height};
@@ -27,10 +28,10 @@ export const CheckMark = styled.span<{ disabled?: boolean }>`
     width: ${({ theme }) => theme.checkBox.checkMark.width};
     height: ${({ theme }) => theme.checkBox.checkMark.height};
 
-    transform: rotate(45deg);
+    transform: translate(-50%, -60%) rotate(45deg);
 
     border: solid ${({ theme }) => theme.checkBox.checkMark.color};
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
   }
 `;
 
@@ -43,11 +44,15 @@ export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
   flex-flow: row-reverse nowrap;
   align-items: start;
   justify-content: flex-end;
-  margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
+  margin: ${({ theme, spaced }) => (spaced ? theme.spacings.big : 0)} 0;
 
   &:hover input ~ ${CheckMark} {
     border-color: ${({ theme }) => theme.checkBox.checked.background};
   }
+`;
+
+export const LabelContent = styled.div`
+  margin-top: ${({ theme }) => theme.spacings.xxxsm};
 `;
 
 export const Input = styled.input`

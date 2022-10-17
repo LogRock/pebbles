@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { css } from "styled-components";
+import { overlineXSmallCSS } from "../Typography";
 import { BaseInputBoxProps } from "./BaseInputBox";
 
 const defaultStatus = "info";
@@ -11,14 +12,9 @@ export const StyledDiv = styled.div<{ spaced?: boolean }>`
 `;
 
 export const Label = styled.label`
-  color: ${({ theme }) => theme.inputBox.label.color};
-  font-family: ${({ theme }) => theme.inputBox.fontFamily};
-  font-size: ${({ theme }) => theme.inputBox.label.fontSize};
-  font-style: ${({ theme }) => theme.inputBox.label.fontStyle};
-  font-weight: ${({ theme }) => theme.inputBox.fontWeight};
-  line-height: ${({ theme }) => theme.inputBox.label.lineHeight};
-  font-feature-settings: ${({ theme }) => theme.inputBox.fontFeatureSettings};
+  ${overlineXSmallCSS}
 
+  color: ${({ theme }) => theme.inputBox.label.color};
   text-transform: uppercase;
 `;
 
