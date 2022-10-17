@@ -1,3 +1,10 @@
+## [10.0.4](https://github.com/LogRock/pebbles/compare/v10.0.3...v10.0.4) (2022-10-17)
+
+### Bug Fixes
+
+- **build:** :green_heart: fix ci build ([62b53e6](https://github.com/LogRock/pebbles/commit/62b53e60db05016b912d489d2e4876dfb1ab628f))
+- **select:** :bug: fix some styles ([7e0839b](https://github.com/LogRock/pebbles/commit/7e0839b57b841196bc7fbefeb535e86cce3f2b2a))
+
 ## [10.0.3](https://github.com/LogRock/pebbles/compare/v10.0.2...v10.0.3) (2022-10-17)
 
 ### Bug Fixes
