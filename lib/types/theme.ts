@@ -234,12 +234,6 @@ export interface Focused {
 
 export interface InputBox {
   spacing?: CSS.Property.MarginTop;
-  fontFamily: CSS.Property.FontFamily;
-  fontWeight: CSS.Property.FontWeight;
-  fontStyle: CSS.Property.FontStyle;
-  fontSize: CSS.Property.FontSize;
-  lineHeight: CSS.Property.LineHeight;
-  fontFeatureSettings: CSS.Property.FontFeatureSettings;
   padding: CSS.Property.Padding;
   boxSizing: CSS.Property.BoxSizing;
   boxShadow: CSS.Property.BoxShadow;

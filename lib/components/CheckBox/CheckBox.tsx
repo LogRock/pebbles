@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { CheckMark, Input, Label } from "./CheckBox.styled";
+import { CheckMark, Input, Label, LabelContent } from "./CheckBox.styled";
 import { CheckBoxProps } from "./CheckBox.types";
 
 const CheckBox: FC<CheckBoxProps> = ({ children, spaced, ...inputProps }) => {
@@ -9,7 +9,7 @@ const CheckBox: FC<CheckBoxProps> = ({ children, spaced, ...inputProps }) => {
       spaced={spaced}
       htmlFor={inputProps.id}
     >
-      {children}
+      <LabelContent>{children}</LabelContent>
       <Input
         type="checkbox"
         {...inputProps}
