@@ -19,6 +19,7 @@ import {
   Label,
 } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./Select.types";
+import ThemeType from "../../types/theme";
 
 const defaultStatus = "info";
 
@@ -55,7 +56,7 @@ function Select<
   label,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
-  const theme = useContext(ThemeContext);
+  const theme = useContext<ThemeType>(ThemeContext);
 
   const customStyles: StylesConfig<Option, IsMulti, Group> = useMemo(
     () => ({
@@ -68,18 +69,16 @@ function Select<
           border: state.isFocused
             ? theme.inputBox[status || defaultStatus].focused.border
             : theme.inputBox[status || defaultStatus].border,
-          fontFamily: theme.inputBox.fontFamily,
-          fontWeight: theme.inputBox.fontWeight,
-          fontStyle: theme.inputBox.fontStyle,
-          fontSize: theme.inputBox.fontSize,
+          fontFamily: theme.typography.paragraphMedium.fontFamily,
+          fontWeight: theme.typography.paragraphMedium.weights.normal,
+          fontSize: theme.typography.paragraphMedium.fontSize,
         };
       },
       option: (provided) => ({
         ...provided,
-        fontFamily: theme.inputBox.fontFamily,
-        fontWeight: theme.inputBox.fontWeight,
-        fontStyle: theme.inputBox.fontStyle,
-        fontSize: theme.inputBox.fontSize,
+        fontFamily: theme.typography.paragraphMedium.fontFamily,
+        fontWeight: theme.typography.paragraphMedium.weights.normal,
+        fontSize: theme.typography.paragraphMedium.fontSize,
         padding: theme.inputBox.padding,
       }),
       menu: (provided) => ({
@@ -92,7 +91,7 @@ function Select<
 
   const selectTheme: Theme = useMemo(
     () => ({
-      borderRadius: theme.inputBox.borderRadius,
+      borderRadius: theme.inputBox.borderRadius as number,
       colors: {
         danger: theme.colors.error[500],
         dangerLight: theme.colors.error[300],

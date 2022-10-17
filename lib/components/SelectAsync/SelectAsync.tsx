@@ -38,18 +38,16 @@ function SelectAsync<
           border: state.isFocused
             ? theme.inputBox[status || defaultStatus].focused.border
             : theme.inputBox[status || defaultStatus].border,
-          fontFamily: theme.inputBox.fontFamily,
-          fontWeight: theme.inputBox.fontWeight,
-          fontStyle: theme.inputBox.fontStyle,
-          fontSize: theme.inputBox.fontSize,
+          fontFamily: theme.typography.paragraphMedium.fontFamily,
+          fontWeight: theme.typography.paragraphMedium.weights.normal,
+          fontSize: theme.typography.paragraphMedium.fontSize,
         };
       },
       option: (provided) => ({
         ...provided,
-        fontFamily: theme.inputBox.fontFamily,
-        fontWeight: theme.inputBox.fontWeight,
-        fontStyle: theme.inputBox.fontStyle,
-        fontSize: theme.inputBox.fontSize,
+        fontFamily: theme.typography.paragraphMedium.fontFamily,
+        fontWeight: theme.typography.paragraphMedium.weights.normal,
+        fontSize: theme.typography.paragraphMedium.fontSize,
         padding: theme.inputBox.padding,
       }),
       menu: (provided) => ({
