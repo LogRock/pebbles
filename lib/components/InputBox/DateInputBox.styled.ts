@@ -81,7 +81,8 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
 
       box-shadow: ${({ theme }) => theme.shadows.large};
 
-      font-family: ${({ theme }) => theme.inputBox.fontFamily};
+      font-family: ${({ theme }) =>
+        theme.typography.paragraphMedium.fontFamily};
 
       /* Top triangle, that "connects" the date picker to the form field */
       &__triangle {
