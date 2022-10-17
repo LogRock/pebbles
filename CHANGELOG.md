@@ -1,3 +1,10 @@
+## [10.0.3](https://github.com/LogRock/pebbles/compare/v10.0.2...v10.0.3) (2022-10-17)
+
+### Bug Fixes
+
+- **checkbox:** :lipstick: fix checkbox and input UI styling ([571c3b6](https://github.com/LogRock/pebbles/commit/571c3b681eb5665da74e7877391fc472e945e7ee))
+- **project:** :bug: fix build ([5546f6e](https://github.com/LogRock/pebbles/commit/5546f6ed5dcf58456d15aa04e289dc6ad06334a1))
+
 ## [10.0.2](https://github.com/LogRock/pebbles/compare/v10.0.1...v10.0.2) (2022-10-11)
 
 ### Bug Fixes
