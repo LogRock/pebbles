@@ -142,7 +142,7 @@ function Select<
               <Icon
                 path={mdiAlert}
                 size={0.7}
-                color={theme.inputBox[status || defaultStatus].helperColor}
+                color={theme.inputBox.helper.color}
               />
             </HelperIcon>
           )}
