@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   mdiBullhornVariantOutline,
   mdiFaceManOutline,
@@ -6,8 +8,8 @@ import {
   mdiStorefrontOutline,
 } from "@mdi/js";
 import Icon from "@mdi/react";
-import React from "react";
 import styled from "styled-components";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Stepper from "../../../../lib/components/Stepper";
 import StepperStep from "../../../../lib/components/Stepper/StepperStep";
@@ -15,15 +17,17 @@ import StepperStep from "../../../../lib/components/Stepper/StepperStep";
 export default {
   title: "Components/Stepper",
   component: Stepper,
-};
+} as ComponentMeta<typeof Stepper>;
 
 const NoMarginText = styled.h4`
   margin: 0;
 `;
 
-const Template = (args) => <Stepper {...args}></Stepper>;
+const Template: ComponentStory<typeof Stepper> = (args) => (
+  <Stepper {...args}></Stepper>
+);
 
-const handleOnClick = (stepIndex) => {
+const handleOnClick = (stepIndex: number) => {
   alert(`clicked step is: ${stepIndex}`);
 };
 
