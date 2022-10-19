@@ -1,3 +1,9 @@
+# [10.1.0](https://github.com/LogRock/pebbles/compare/v10.0.4...v10.1.0) (2022-10-19)
+
+### Features
+
+- **panel:** add suport for starting opened ([7ea1f8d](https://github.com/LogRock/pebbles/commit/7ea1f8d19abc1cfb649b6774c2180624dbe0860c))
+
 ## [10.0.4](https://github.com/LogRock/pebbles/compare/v10.0.3...v10.0.4) (2022-10-17)
 
 ### Bug Fixes
