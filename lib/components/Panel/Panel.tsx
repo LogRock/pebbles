@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, ReactNode, useEffect, useState } from "react";
 import styled from "styled-components";
 import Icon from "@mdi/react";
 import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
@@ -8,6 +8,7 @@ import Card from "../Card";
 export interface PanelsItems {
   title: string;
   content: ReactNode;
+  startsOpened?: boolean;
 }
 
 export interface PanelProps {
@@ -43,6 +44,14 @@ const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
 
     setExpanded(index);
   };
+
+  useEffect(() => {
+    panelsItems.forEach((item, index) => {
+      if (item.startsOpened) {
+        return setExpanded(index);
+      }
+    });
+  }, []);
 
   return (
     <>
