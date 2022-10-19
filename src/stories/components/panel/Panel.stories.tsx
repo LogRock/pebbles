@@ -14,6 +14,7 @@ const panelsItems = [
         ex, sit amet blandit leo lobortis eget.
       </p>
     ),
+    startsOpened: true,
   },
   {
     title: "Panel 2",
