@@ -13,7 +13,7 @@ export interface PanelsItems {
 
 export interface PanelProps {
   panelsItems: PanelsItems[];
-  openedPanelIndex?: number;
+  openedPanelIndex?: number | null;
   openedPanelIndexCb?: (index: number) => void;
 }
 
