@@ -1,3 +1,14 @@
+# [10.2.0](https://github.com/LogRock/pebbles/compare/v10.1.1...v10.2.0) (2022-10-25)
+
+### Bug Fixes
+
+- openedPanelIndex type ([5d9db89](https://github.com/LogRock/pebbles/commit/5d9db89d06ec6d44a4e35f03e9cf41e12163b846))
+
+### Features
+
+- **panel:** add disabled state ([d216e99](https://github.com/LogRock/pebbles/commit/d216e9973054e351de6b82e6835a7ee8f139f4c4))
+- **panel:** add suport to toggle panel ([76eb54d](https://github.com/LogRock/pebbles/commit/76eb54d342beb26d57d2ab70c930807d41f8f605))
+
 ## [10.1.1](https://github.com/LogRock/pebbles/compare/v10.1.0...v10.1.1) (2022-10-25)
 
 ### Bug Fixes
