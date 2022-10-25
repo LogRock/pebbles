@@ -14,7 +14,6 @@ const panelsItems = [
         ex, sit amet blandit leo lobortis eget.
       </p>
     ),
-    startsOpened: true,
   },
   {
     title: "Panel 2",
@@ -41,4 +40,5 @@ const Template: ComponentStory<typeof Panel> = (args) => <Panel {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   panelsItems: panelsItems,
+  openedPanelIndex: 0,
 };
