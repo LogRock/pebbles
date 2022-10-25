@@ -8,11 +8,12 @@ import Card from "../Card";
 export interface PanelsItems {
   title: string;
   content: ReactNode;
-  startsOpened?: boolean;
 }
 
 export interface PanelProps {
   panelsItems: PanelsItems[];
+  openedPanelIndex?: number;
+  openedPanelIndexCb?: (index: number) => void;
 }
 
 const PanelContainer = styled(Card)`
@@ -34,24 +35,29 @@ const PanelTitle = styled.div`
   }
 `;
 
-const Panel: FC<PanelProps> = ({ panelsItems, ...props }) => {
-  const [expanded, setExpanded] = useState<number | null>(null);
+const Panel: FC<PanelProps> = ({
+  panelsItems,
+  openedPanelIndex,
+  openedPanelIndexCb,
+  ...props
+}) => {
+  const [expanded, setExpanded] = useState<number | null>();
 
   const handleToggle = (index: number) => {
+    openedPanelIndexCb && openedPanelIndexCb(index);
     if (expanded === index) {
-      return setExpanded(null);
+      setExpanded(null);
+      return;
     }
 
     setExpanded(index);
   };
 
   useEffect(() => {
-    panelsItems.forEach((item, index) => {
-      if (item.startsOpened) {
-        return setExpanded(index);
-      }
-    });
-  }, []);
+    if (expanded !== openedPanelIndex) {
+      setExpanded(openedPanelIndex);
+    }
+  }, [openedPanelIndex]);
 
   return (
     <>
