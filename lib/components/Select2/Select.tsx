@@ -85,6 +85,10 @@ function Select<
         ...provided,
         borderRadius: 0,
       }),
+      placeholder: (provided) => ({
+        ...provided,
+        color: theme.colors.neutral[400],
+      }),
     }),
     [status]
   );

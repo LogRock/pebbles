@@ -1,3 +1,10 @@
+## [10.1.1](https://github.com/LogRock/pebbles/compare/v10.1.0...v10.1.1) (2022-10-25)
+
+### Bug Fixes
+
+- **select:** :lipstick: update placehodler colors ([282b755](https://github.com/LogRock/pebbles/commit/282b75578c88f5fcd7eccce653fac19a07dbf469))
+- stepper stories converted to a tsx file ([2b79271](https://github.com/LogRock/pebbles/commit/2b792714e9d1eea9ccde4220781ec2f40730e032))
+
 # [10.1.0](https://github.com/LogRock/pebbles/compare/v10.0.4...v10.1.0) (2022-10-19)
 
 ### Features
