@@ -38,9 +38,7 @@ const PhoneInputBox: FC<PhoneInputBoxProps> = ({
 }) => {
   const [selectedPhoneCountry, setSelectedPhoneCountry] = useState<
     string | undefined
-  >(
-    internationalFormatCountries?.find((country) => defaultCountry === country)
-  );
+  >(defaultCountry);
 
   return (
     <BaseInputBox {...inputProps}>
