@@ -36,4 +36,5 @@ Default.args = {
   countryOptionsOrder: ["US", "CA", "MX", "|", "..."],
   defaultCountry: "US",
   status: "info",
+  internationalFormatCountries: ["US"],
 };

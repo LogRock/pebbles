@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
@@ -25,6 +25,7 @@ const StyledPhoneInputBox = styled(PhoneInput)<
 export interface PhoneInputBoxProps extends BaseInputBoxProps {
   countryOptionsOrder?: string[];
   defaultCountry?: string;
+  internationalFormatCountries?: string[];
 }
 
 const PhoneInputBox: FC<PhoneInputBoxProps> = ({
@@ -32,8 +33,15 @@ const PhoneInputBox: FC<PhoneInputBoxProps> = ({
   onChange,
   countryOptionsOrder,
   defaultCountry,
+  internationalFormatCountries,
   ...inputProps
 }) => {
+  const [selectedPhoneCountry, setSelectedPhoneCountry] = useState<
+    string | undefined
+  >(
+    internationalFormatCountries?.find((country) => defaultCountry === country)
+  );
+
   return (
     <BaseInputBox {...inputProps}>
       <StyledPhoneInputBox
@@ -42,6 +50,12 @@ const PhoneInputBox: FC<PhoneInputBoxProps> = ({
         defaultCountry={defaultCountry}
         value={value}
         onChange={onChange}
+        onCountryChange={(c: string) => setSelectedPhoneCountry(c)}
+        international={
+          !!internationalFormatCountries?.find(
+            (country) => country === selectedPhoneCountry
+          )
+        }
         {...inputProps}
       />
     </BaseInputBox>
