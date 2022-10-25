@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Icon from "@mdi/react";
 import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
 import { ParagraphLarge } from "../Typography";
@@ -8,6 +8,7 @@ import Card from "../Card";
 export interface PanelsItems {
   title: string;
   content: ReactNode;
+  disabled?: boolean;
 }
 
 export interface PanelProps {
@@ -16,7 +17,18 @@ export interface PanelProps {
   openedPanelIndexCb?: (index: number) => void;
 }
 
-const PanelContainer = styled(Card)`
+const PanelContainer = styled(Card)<{ disabled: boolean }>`
+  ${({ disabled, theme }) =>
+    disabled &&
+    css`
+      background-color: ${theme.colors.neutral[100]};
+      &,
+      div {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    `}
+
   & + div {
     margin-top: ${({ theme }) => theme.spacings.sm};
   }
@@ -61,8 +73,8 @@ const Panel: FC<PanelProps> = ({
 
   return (
     <>
-      {panelsItems.map(({ title, content }, index) => (
-        <PanelContainer key={index} {...props}>
+      {panelsItems.map(({ title, content, disabled = false }, index) => (
+        <PanelContainer key={index} disabled={disabled} {...props}>
           <PanelTitle onClick={() => handleToggle(index)}>
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
             <Icon
