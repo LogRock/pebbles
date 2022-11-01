@@ -1,7 +1,6 @@
 import React from "react";
 
-import Icon from "@mdi/react";
-import { mdiInformation, mdiAlertCircle } from "@mdi/js";
+import { BsInfoCircle, BsExclamationCircle } from "react-icons/bs";
 
 import Card from "../../../../lib/components/Card";
 import CardContent from "../../../../lib/components/Card/CardContent";
@@ -9,7 +8,9 @@ import CardHeader from "../../../../lib/components/Card/CardHeader";
 import CardFooter from "../../../../lib/components/Card/CardFooter";
 import StatusTrend from "../../../../lib/components/StatusTrend";
 import { ParagraphLarge } from "../../../../lib/components/Typography";
-import StatusTag from "../../../../lib/components/StatusTag";
+import StatusTag, {
+  STATUS_TAG_SIZES,
+} from "../../../../lib/components/StatusTag";
 import StatusPercentage from "../../../../lib/components/StatusPercentage";
 
 export default {
@@ -66,14 +67,14 @@ StatusWithTag.args = {
           <ParagraphLarge style={{ marginRight: "32px" }}>
             Audit Risk
           </ParagraphLarge>
-          <Icon size={0.95} path={mdiInformation} />
+          <BsExclamationCircle />
         </div>
       </CardHeader>
       <CardFooter>
         <StatusTag
-          size="medium"
+          size={STATUS_TAG_SIZES.MEDIUM}
           variant="error"
-          icon={<Icon size={0.75} path={mdiAlertCircle} />}
+          icon={<BsInfoCircle />}
         >
           High Risk
         </StatusTag>
@@ -101,7 +102,7 @@ StatusWithPercentage.args = {
           <ParagraphLarge style={{ marginRight: "32px" }}>
             Document Missing
           </ParagraphLarge>
-          <Icon size={0.95} path={mdiInformation} />
+          <BsInfoCircle />
         </div>
       </CardHeader>
       <CardFooter>

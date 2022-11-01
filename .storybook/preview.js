@@ -1,10 +1,13 @@
+import React from "react";
 import { ThemeProvider } from "styled-components";
 import { withThemes } from "@react-theming/storybook-addon";
 import { light, dark } from "../lib/theme";
 import { addDecorator } from "@storybook/react";
 
-import "@fontsource/archivo"
-import "@fontsource/archivo/variable-full.css"
+import "@fontsource/archivo";
+import "@fontsource/archivo/variable-full.css";
+
+import { IconContext } from "react-icons";
 
 const themingDecorator = withThemes(ThemeProvider, [light, dark]);
 addDecorator(themingDecorator);
@@ -18,3 +21,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <IconContext.Provider value={{ style: { fontSize: 20 } }}>
+      {<Story />}
+    </IconContext.Provider>
+  ),
+];

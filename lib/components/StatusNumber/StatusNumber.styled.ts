@@ -22,6 +22,7 @@ export const IconWrapper = styled.div<Pick<StatusNumberProps, "variant">>`
   margin-right: ${({ theme }) => theme.spacings.sm};
 
   color: ${({ theme, variant }) => theme.statusNumber.iconColor[variant]};
+  font-size: 21px;
 `;
 
 export const StyledValueMedium = styled(ParagraphLarge)<

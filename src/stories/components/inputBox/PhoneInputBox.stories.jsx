@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
 
-import { mdiPhoneOutline } from "@mdi/js";
-import { Icon } from "@mdi/react";
+import { BsTelephoneFill } from "react-icons/bs";
 
 export default {
   title: "Components/PhoneInput",
@@ -31,7 +30,7 @@ Default.args = {
   description: "Preferred Telephone Number",
   hint: {
     content: "optional",
-    icon: <Icon path={mdiPhoneOutline} size={0.7} />,
+    icon: <BsTelephoneFill />,
   },
   countryOptionsOrder: ["US", "CA", "MX", "|", "..."],
   defaultCountry: "US",

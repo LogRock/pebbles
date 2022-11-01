@@ -1,7 +1,6 @@
 import React, { FC, ReactNode, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import Icon from "@mdi/react";
-import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { ParagraphLarge } from "../Typography";
 import Card from "../Card";
 
@@ -77,10 +76,7 @@ const Panel: FC<PanelProps> = ({
         <PanelContainer key={index} disabled={disabled} {...props}>
           <PanelTitle onClick={() => handleToggle(index)}>
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
-            <Icon
-              path={expanded === index ? mdiChevronUp : mdiChevronDown}
-              size={1}
-            />
+            {expanded === index ? <BsChevronUp /> : <BsChevronDown />}
           </PanelTitle>
           {expanded === index && content}
         </PanelContainer>

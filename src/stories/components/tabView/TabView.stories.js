@@ -1,7 +1,6 @@
 import React from "react";
 
-import Icon from "@mdi/react";
-import { mdiAlert } from "@mdi/js";
+import { BsExclamationDiamond } from "react-icons/bs";
 
 import TabView from "../../../../lib/components/TabView";
 import TabLinks from "../../../../lib/components/TabView/TabLinks";
@@ -27,7 +26,7 @@ FirstTabActive.args = {
           Multiline!
         </TabLink>
         <TabLink href="">
-          <Icon size={0.95} path={mdiAlert} /> Tab 2
+          <BsExclamationDiamond /> Tab 2
         </TabLink>
         <TabLink href="" disabled>
           Tab 3

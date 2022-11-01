@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { mdiAlert } from "@mdi/js";
-import Icon from "@mdi/react";
+import { BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
 import React, { FC, useContext, useMemo } from "react";
 import ReactSelect, {
@@ -143,11 +142,7 @@ function Select<
         <HelperDiv>
           {status === "error" && (
             <HelperIcon status={status}>
-              <Icon
-                path={mdiAlert}
-                size={0.7}
-                color={theme.inputBox.helper.color}
-              />
+              <BsExclamationTriangleFill />
             </HelperIcon>
           )}
           <Helper status={status}>{helper}</Helper>

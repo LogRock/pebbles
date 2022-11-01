@@ -2,8 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from "react";
 
-import { mdiAlert } from "@mdi/js";
-import Icon from "@mdi/react";
+import { BsExclamationTriangleFill } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import MaskedTextInput from "react-text-mask";
@@ -98,7 +97,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
       <HelperDiv>
         {status === "error" && (
           <HelperIcon status={status}>
-            <Icon path={mdiAlert} size={0.7} />
+            <BsExclamationTriangleFill />
           </HelperIcon>
         )}
         <Helper status={status}>{helper}</Helper>

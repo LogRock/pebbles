@@ -2456,8 +2456,6 @@ __metadata:
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@fontsource/archivo": ^4.5.3
-    "@mdi/js": ^6.5.95
-    "@mdi/react": ^1.5.0
     "@mdx-js/react": ^1.6.22
     "@react-theming/storybook-addon": ^1.1.5
     "@rjsf/core": ^4.2.0
@@ -2515,6 +2513,7 @@ __metadata:
     react: ^17.0.0
     react-datepicker: ^4.7.0
     react-dom: ^17.0.0
+    react-icons: ^4.6.0
     react-jsonschema-form: ^1.8.1
     react-phone-number-input: ^3.2.2
     react-select: 5.4.0
@@ -2533,28 +2532,13 @@ __metadata:
     vite: ^2.6.4
     vitest: latest
   peerDependencies:
-    "@mdi/js": "*"
-    "@mdi/react": "*"
     react: "*"
     react-dom: "*"
+    react-icons: "*"
     styled-breakpoints: "*"
     styled-components: "*"
   languageName: unknown
   linkType: soft
-
-"@mdi/js@npm:^6.5.95":
-  version: 6.5.95
-  resolution: "@mdi/js@npm:6.5.95"
-  checksum: b1db7713d216c119f584bf973514a2f9d8f2e671e91bf19ce8e56cfa7a9843c0a060328e794507ac31f2bded1032123294f39ff8e987ea5acb2719ab522ef146
-  languageName: node
-  linkType: hard
-
-"@mdi/react@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "@mdi/react@npm:1.5.0"
-  checksum: bf79b881cd87611179b02e004f1a4155f9bee0ccbc465b18da13a6387bc08a3fa42f8686c9d9678a27ad74016ab0c3a6779ba4d86416f9fb0048e980f2d0a6e2
-  languageName: node
-  linkType: hard
 
 "@mdx-js/loader@npm:^1.6.22":
   version: 1.6.22
@@ -17247,6 +17231,15 @@ __metadata:
     react: ^16.6.0 || ^17.0.0
     react-dom: ^16.6.0 || ^17.0.0
   checksum: af7041314f6ebaefa64f3c06f75cf1ad62602b93228798615c2ca3365065688ee2b8c58bde98a9ae0d728aecfda5a757e9fc7695da3af2a504ff7e5291c716c9
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "react-icons@npm:4.6.0"
+  peerDependencies:
+    react: "*"
+  checksum: a08375d4563e381e156d826a8d551dd26c1bf7c424a79139173bf4c8df71e884badd7d4f5fe9faa0d73d18ace265bcc89891b65fd8f808812b1011b612ebbc53
   languageName: node
   linkType: hard
 

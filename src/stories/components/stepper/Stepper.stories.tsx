@@ -1,13 +1,13 @@
 import React from "react";
 
 import {
-  mdiBullhornVariantOutline,
-  mdiFaceManOutline,
-  mdiFileDocumentOutline,
-  mdiMedalOutline,
-  mdiStorefrontOutline,
-} from "@mdi/js";
-import Icon from "@mdi/react";
+  BsAlarm,
+  BsFileMedical,
+  BsHammer,
+  BsOctagon,
+  BsVectorPen,
+} from "react-icons/bs";
+
 import styled from "styled-components";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
@@ -57,28 +57,16 @@ InformativeOnly.args = {
   showHoverEffect: false,
   children: (
     <>
-      <StepperStep
-        stepIndex="01"
-        icon={<Icon size={1.05} path={mdiFaceManOutline} />}
-      >
+      <StepperStep stepIndex="01" icon={<BsFileMedical />}>
         <NoMarginText>Personal</NoMarginText>
       </StepperStep>
-      <StepperStep
-        stepIndex="02"
-        icon={<Icon size={1.05} path={mdiStorefrontOutline} />}
-      >
+      <StepperStep stepIndex="02" icon={<BsAlarm />}>
         <NoMarginText>Company</NoMarginText>
       </StepperStep>
-      <StepperStep
-        stepIndex="03"
-        icon={<Icon size={1.05} path={mdiBullhornVariantOutline} />}
-      >
+      <StepperStep stepIndex="03" icon={<BsVectorPen />}>
         <NoMarginText>ELD</NoMarginText>
       </StepperStep>
-      <StepperStep
-        stepIndex="04"
-        icon={<Icon size={1.05} path={mdiFileDocumentOutline} />}
-      >
+      <StepperStep stepIndex="04" icon={<BsHammer />}>
         <NoMarginText>Documents</NoMarginText>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
@@ -92,11 +80,7 @@ InformativeOnly.args = {
           repellat sequi. Facere, atque!
         </p>
       </StepperStep>
-      <StepperStep
-        stepIndex="05"
-        last
-        icon={<Icon size={1.05} path={mdiMedalOutline} />}
-      >
+      <StepperStep stepIndex="05" last icon={<BsOctagon />}>
         <NoMarginText
           style={{
             color: "#262",

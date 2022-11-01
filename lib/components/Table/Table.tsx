@@ -1,13 +1,12 @@
 import {
-  mdiChevronDoubleLeft,
-  mdiChevronDoubleRight,
-  mdiChevronLeft,
-  mdiChevronRight,
-} from "@mdi/js";
-import Icon from "@mdi/react";
+  BsChevronRight,
+  BsChevronDoubleRight,
+  BsChevronLeft,
+  BsChevronDoubleLeft,
+} from "react-icons/bs";
+
 import { isFunction } from "lodash";
-import React, { FC, useContext, useMemo } from "react";
-import { ThemeContext } from "styled-components";
+import React, { FC, useMemo } from "react";
 import Ordering from "./Ordering";
 import {
   New,
@@ -99,8 +98,6 @@ export const TableFooter: FC<TableFooterProps> = ({
   children,
   numberOfColumns,
 }) => {
-  const theme = useContext(ThemeContext);
-
   const format =
     itemsFromToTotalFormatter && isFunction(itemsFromToTotalFormatter)
       ? itemsFromToTotalFormatter
@@ -123,13 +120,7 @@ export const TableFooter: FC<TableFooterProps> = ({
               : () => null
           }
         >
-          {goToFirstPageContent || (
-            <Icon
-              path={mdiChevronDoubleLeft}
-              size="18px"
-              color={theme.colors.neutral[700]}
-            />
-          )}
+          {goToFirstPageContent || <BsChevronDoubleLeft />}
         </TablePaginationButton>
       );
     }
@@ -147,13 +138,7 @@ export const TableFooter: FC<TableFooterProps> = ({
               : () => null
           }
         >
-          {goToPreviousPageContent || (
-            <Icon
-              path={mdiChevronLeft}
-              size="18px"
-              color={theme.colors.neutral[700]}
-            />
-          )}
+          {goToPreviousPageContent || <BsChevronLeft />}
         </TablePaginationButton>
       );
     }
@@ -175,13 +160,7 @@ export const TableFooter: FC<TableFooterProps> = ({
               : () => null
           }
         >
-          {goToNextPageContent || (
-            <Icon
-              path={mdiChevronRight}
-              size="18px"
-              color={theme.colors.neutral[700]}
-            />
-          )}
+          {goToNextPageContent || <BsChevronRight />}
         </TablePaginationButton>
       );
     }
@@ -199,13 +178,7 @@ export const TableFooter: FC<TableFooterProps> = ({
               : () => null
           }
         >
-          {goToLastPageContent || (
-            <Icon
-              path={mdiChevronDoubleRight}
-              size="18px"
-              color={theme.colors.neutral[700]}
-            />
-          )}
+          {goToLastPageContent || <BsChevronDoubleRight />}
         </TablePaginationButton>
       );
     }

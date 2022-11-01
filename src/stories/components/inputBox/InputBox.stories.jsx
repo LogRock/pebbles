@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
+
 import {
-  mdiAlert,
-  mdiCardAccountDetailsOutline,
-  mdiEmailOutline,
-  mdiLock,
-} from "@mdi/js";
-import { Icon } from "@mdi/react";
+  BsExclamationTriangleFill,
+  BsFillPersonBadgeFill,
+  BsEnvelope,
+  BsLock,
+} from "react-icons/bs";
 
 export default {
   title: "Components/InputBox",
@@ -26,7 +26,7 @@ Default.args = {
   description: "Profile information",
   hint: {
     content: "username",
-    icon: <Icon size={0.7} path={mdiCardAccountDetailsOutline} />,
+    icon: <BsFillPersonBadgeFill />,
   },
   status: "info",
   helper: "",
@@ -43,7 +43,7 @@ InputBoxError.args = {
   helper: "please provide the VIN number",
   status: "error",
   placeholder: "VIN",
-  errorIcon: <Icon size={0.7} path={mdiAlert} />,
+  errorIcon: <BsExclamationTriangleFill />,
 };
 
 export const HintedInputBox = Template.bind({});
@@ -51,7 +51,7 @@ HintedInputBox.args = {
   description: "",
   hint: {
     content: "e-mail",
-    icon: <Icon size={0.7} path={mdiEmailOutline} />,
+    icon: <BsEnvelope />,
   },
   status: "info",
   helper: "",
@@ -63,7 +63,7 @@ DisabledInputBox.args = {
   description: "",
   hint: {
     content: "e-mail",
-    icon: <Icon size={0.7} path={mdiEmailOutline} />,
+    icon: <BsEnvelope />,
   },
   status: "info",
   helper: "",
@@ -92,7 +92,7 @@ InteractiveInputBox.args = {
     description: "",
     hint: {
       content: "e-mail",
-      icon: <Icon size={0.7} path={mdiEmailOutline} />,
+      icon: <BsEnvelope />,
     },
     status: "info",
     helper: "",
@@ -107,7 +107,7 @@ InteractivePasswordInput.args = {
     description: "",
     hint: {
       content: "",
-      icon: <Icon size={0.7} path={mdiLock} />,
+      icon: <BsLock />,
     },
     status: "info",
     helper: "",
@@ -122,7 +122,7 @@ DisabledPasswordInput.args = {
     description: "",
     hint: {
       content: "",
-      icon: <Icon size={0.7} path={mdiLock} />,
+      icon: <BsLock />,
     },
     status: "info",
     helper: "",

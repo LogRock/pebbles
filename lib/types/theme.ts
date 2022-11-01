@@ -509,6 +509,11 @@ export interface TabView {
   fontSize: CSS.Property.FontSize;
 }
 
+export interface Icons {
+  size: CSS.Property.FontSize;
+  color: CSS.Property.Color;
+}
+
 export default interface Theme {
   breakpoints: {
     mobile: string;
@@ -537,4 +542,5 @@ export default interface Theme {
   statusTrend: StatusTrend;
   card: Card;
   tabView: TabView;
+  icons: Icons;
 }

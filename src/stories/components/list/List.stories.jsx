@@ -2,8 +2,14 @@ import React from "react";
 import List, { ListItem } from "../../../../lib/components/List";
 import Button from "../../../../lib/components/Button";
 import CheckBox from "../../../../lib/components/CheckBox";
-import Icon from "@mdi/react";
-import { mdiAbacus, mdiBiohazard, mdiHeart } from "@mdi/js";
+
+import {
+  BsCoin,
+  BsHeart,
+  BsHeartHalf,
+  BsKanban,
+  BsLightbulbOff,
+} from "react-icons/bs";
 
 export default {
   title: "Components/List",
@@ -124,8 +130,8 @@ DescriptionOnly.args = {
 export const WithIcons = Template.bind({});
 WithIcons.args = {
   label: "Nice icons, bro",
-  contentStart: <Icon path={mdiHeart} size={0.7} />,
-  contentEnd: <Icon path={mdiAbacus} size={0.7} />,
+  contentStart: <BsHeart />,
+  contentEnd: <BsHeartHalf />,
 };
 
 export const ContentsCanBeAnything = Template.bind({});
@@ -133,11 +139,11 @@ ContentsCanBeAnything.args = {
   label: (
     <>
       Icons
-      <Icon path={mdiBiohazard} size={0.7} />
+      <BsCoin />
       On
-      <Icon path={mdiBiohazard} size={0.7} />
+      <BsLightbulbOff />
       Label
-      <Icon path={mdiBiohazard} size={0.7} />?
+      <BsKanban />?
     </>
   ),
   description: <Button>Button on description? This is anarchy!</Button>,

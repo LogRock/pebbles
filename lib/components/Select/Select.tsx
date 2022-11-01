@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
-import Icon from "@mdi/react";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { InputBox } from "../InputBox";
 import SimpleItem from "./items/SimpleItem";
@@ -163,10 +162,7 @@ const Select = <ItemType extends BaseItemType>({
                   setHasFocus((focus) => !focus);
                 }}
               >
-                <Icon
-                  path={hasFocus ? mdiChevronUp : mdiChevronDown}
-                  size={0.9}
-                />
+                {hasFocus ? <BsChevronUp /> : <BsChevronDown />}
               </IconWrapper>
             )
           ) : undefined,
