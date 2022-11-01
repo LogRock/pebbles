@@ -1369,13 +1369,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
       >
         <svg
-          role="presentation"
-          style="width: 2.0250000000000004rem; height: 2.0250000000000004rem;"
-          viewBox="0 0 24 24"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M19,13H5V11H19V13Z"
-            style="fill: currentColor;"
+            d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"
           />
         </svg>
       </button>
@@ -1392,13 +1395,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
       >
         <svg
-          role="presentation"
-          style="width: 2.0250000000000004rem; height: 2.0250000000000004rem;"
-          viewBox="0 0 24 24"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            style="fill: currentColor;"
+            d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"
           />
         </svg>
       </button>
