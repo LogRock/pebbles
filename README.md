@@ -51,7 +51,7 @@ yarn add @logrock/pebbles
 
 Now, wrap your app (or whatever components you plan on using this library at) with a styled-components' `ThemeProvider`, passing along a theme.
 
-Also, this is a google place for the global icon configuration, using react-select's `IconContext.Provider` you can specify the global settings for the icons.
+Also, this is a google place for the global icon configuration, using react-select's `IconContext.Provider` you can specify the global settings for the icons. This is optional but recommended.
 
 ```js
 import { ThemeProvider } from "styled-components";
