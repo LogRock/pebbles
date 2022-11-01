@@ -1,3 +1,17 @@
+# [11.0.0](https://github.com/LogRock/pebbles/compare/v10.2.0...v11.0.0) (2022-11-01)
+
+### Documentation
+
+- **project:** :memo: update readme ([c4fed1c](https://github.com/LogRock/pebbles/commit/c4fed1c8410ea553078fde6a58628ff7e9ef539a))
+
+### Features
+
+- **icons:** :sparkles: migrate icons to react-icons ([eedc5cf](https://github.com/LogRock/pebbles/commit/eedc5cfd269e6b05e04d26c9dab667095a07c894))
+
+### BREAKING CHANGES
+
+- **project:** no longer compatible with mdi
+
 # [10.2.0](https://github.com/LogRock/pebbles/compare/v10.1.1...v10.2.0) (2022-10-25)
 
 ### Bug Fixes
