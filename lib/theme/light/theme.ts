@@ -735,6 +735,10 @@ const theme: Theme = {
   statusTrend,
   card,
   tabView,
+  icons: {
+    size: spacings.big,
+    color: neutral[500],
+  },
 };
 
 export default theme;

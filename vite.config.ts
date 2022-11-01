@@ -36,8 +36,7 @@ export default defineConfig({
         "react",
         "styled-components",
         "styled-breakpoints",
-        "@mdi/js",
-        "@mdi/react",
+        "react-icons",
       ],
       output: {
         // Provide global variables to use in the UMD build
@@ -46,8 +45,7 @@ export default defineConfig({
           react: "React",
           "styled-components": "styled",
           "styled-breakpoints": "styled-breakpoints",
-          "@mdi/js": "mdijs",
-          "@mdi/react": "Icon",
+          "react-icons": "react-icons",
         },
       },
       plugins: [

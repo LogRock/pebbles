@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
 import Form from "@rjsf/core";
-import { mdiCalendar } from "@mdi/js";
-import { Icon } from "@mdi/react";
+import { BsCalendar } from "react-icons/bs";
 
 export default {
   title: "Components/InputBox/Date",
@@ -34,7 +33,7 @@ DateInputBox.args = {
   description: "Valid until:",
   hint: {
     content: "",
-    icon: <Icon size={0.7} path={mdiCalendar} />,
+    icon: <BsCalendar />,
   },
   id: "my-date",
   name: "my-date",

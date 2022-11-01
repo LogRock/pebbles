@@ -1,5 +1,4 @@
-import { mdiAlert } from "@mdi/js";
-import Icon from "@mdi/react";
+import { BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
 import React, { useContext, useMemo } from "react";
 import { StylesConfig, Theme, GroupBase } from "react-select";
@@ -104,11 +103,7 @@ function SelectAsync<
         <HelperDiv>
           {status === "error" && (
             <HelperIcon status={status}>
-              <Icon
-                path={mdiAlert}
-                size={0.7}
-                color={theme.inputBox[status || defaultStatus].helperColor}
-              />
+              <BsExclamationTriangleFill />
             </HelperIcon>
           )}
           <Helper status={status}>{helper}</Helper>

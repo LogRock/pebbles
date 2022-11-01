@@ -1,7 +1,10 @@
 import React from "react";
 
-import Icon from "@mdi/react";
-import { mdiAlert, mdiAlertCircle, mdiCheckCircle } from "@mdi/js";
+import {
+  BsCheckCircle,
+  BsExclamationCircle,
+  BsExclamationTriangleFill,
+} from "react-icons/bs";
 
 import StatusNumber from "../../../../lib/components/StatusNumber";
 
@@ -17,7 +20,7 @@ Error.args = {
   currentValue: "85",
   totalValue: "85",
   variant: "error",
-  icon: <Icon size={0.95} path={mdiAlert} />,
+  icon: <BsExclamationTriangleFill />,
 };
 
 export const Warning = Template.bind({});
@@ -25,7 +28,7 @@ Warning.args = {
   currentValue: "75",
   totalValue: "85",
   variant: "warning",
-  icon: <Icon size={0.95} path={mdiAlertCircle} />,
+  icon: <BsExclamationCircle />,
 };
 
 export const Success = Template.bind({});
@@ -33,7 +36,7 @@ Success.args = {
   currentValue: 15,
   totalValue: 85,
   variant: "success",
-  icon: <Icon size={0.95} path={mdiCheckCircle} />,
+  icon: <BsCheckCircle />,
 };
 
 export const Neutral = Template.bind({});

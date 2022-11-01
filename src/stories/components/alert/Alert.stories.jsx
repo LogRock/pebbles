@@ -1,14 +1,12 @@
 import {
-  mdiAlert,
-  mdiAlertBox,
-  mdiBrain,
-  mdiCheckCircle,
-  mdiHeart,
-  mdiInformationOutline,
-} from "@mdi/js";
-import Icon from "@mdi/react";
+  BsExclamationTriangleFill,
+  BsExclamationSquareFill,
+  BsCheckCircleFill,
+  BsHeart,
+  BsInfoCircle,
+} from "react-icons/bs";
+
 import React, { useState } from "react";
-import styled from "styled-components";
 import Alert from "../../../../lib/components/Alert";
 
 export default {
@@ -26,7 +24,7 @@ Default.args = {
   status: "neutral",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiInformationOutline} size={0.7} />,
+  icon: <BsInfoCircle />,
   showCloseButton: true,
 };
 
@@ -38,7 +36,7 @@ Primary.args = {
   status: "primary",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiInformationOutline} size={0.7} />,
+  icon: <BsInfoCircle />,
   showCloseButton: true,
 };
 
@@ -50,7 +48,7 @@ Success.args = {
   status: "success",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiCheckCircle} size={0.7} />,
+  icon: <BsCheckCircleFill />,
   showCloseButton: true,
 };
 
@@ -62,7 +60,7 @@ Warning.args = {
   status: "warning",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiAlertBox} size={0.7} />,
+  icon: <BsExclamationSquareFill />,
   showCloseButton: true,
 };
 
@@ -74,7 +72,7 @@ Error.args = {
   status: "error",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiAlert} size={0.7} />,
+  icon: <BsExclamationTriangleFill />,
   showCloseButton: true,
 };
 
@@ -94,7 +92,7 @@ MultiSticky.args = {
   auxButtonContent: "Hint",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiHeart} size={0.7} />,
+  icon: <BsHeart />,
   showCloseButton: true,
 };
 
@@ -122,23 +120,11 @@ InteractiveAlert.args = {
   status: "error",
   visible: true,
   mainButtonContent: "OK",
-  icon: <Icon path={mdiAlert} size={0.7} />,
+  icon: <BsExclamationTriangleFill />,
   showCloseButton: true,
 };
 
 export const TextOnly = Template.bind({});
 TextOnly.args = {
   children: "Text only",
-};
-
-const StyledAlert = styled(Alert)`
-  margin: 200px;
-  background: red;
-`;
-const CustomTemplate = (args) => <StyledAlert {...args} />;
-export const CustomizedWithStyled = CustomTemplate.bind({});
-CustomizedWithStyled.args = {
-  children: "This is a styled(Alert) with some wacky styles added",
-  icon: <Icon path={mdiBrain} size={0.7} />,
-  showCloseButton: true,
 };

@@ -37,8 +37,6 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@fontsource/archivo": "^4.5.3",
-    "@mdi/js": "^6.5.95",
-    "@mdi/react": "^1.5.0",
     "@mdx-js/react": "^1.6.22",
     "@react-theming/storybook-addon": "^1.1.5",
     "@rjsf/core": "^4.2.0",
@@ -91,6 +89,7 @@
     "prettier": "2.5.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-icons": "^4.6.0",
     "react-jsonschema-form": "^1.8.1",
     "rollup-plugin-typescript": "1.0.1",
     "semantic-release": "^18.0.1",
@@ -108,10 +107,9 @@
   },
   "packageManager": "yarn@3.2.0",
   "peerDependencies": {
-    "@mdi/js": "*",
-    "@mdi/react": "*",
     "react": "*",
     "react-dom": "*",
+    "react-icons": "*",
     "styled-breakpoints": "*",
     "styled-components": "*"
   },

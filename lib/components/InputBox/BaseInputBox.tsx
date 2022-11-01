@@ -1,5 +1,4 @@
-import { mdiAlert } from "@mdi/js";
-import Icon from "@mdi/react";
+import { BsExclamationTriangleFill } from "react-icons/bs";
 import React, { FC, useState } from "react";
 import {
   StyledDiv,
@@ -86,7 +85,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
       <HelperDiv>
         {status === "error" && (
           <HelperIcon status={status}>
-            <Icon path={mdiAlert} size={0.7} />
+            <BsExclamationTriangleFill />
           </HelperIcon>
         )}
         <Helper status={status}>{helper}</Helper>

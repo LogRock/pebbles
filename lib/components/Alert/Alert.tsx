@@ -2,8 +2,7 @@
 import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../Button";
-import Icon from "@mdi/react";
-import { mdiClose } from "@mdi/js";
+import { BsX } from "react-icons/bs";
 import { paragraphMediumCSS } from "../Typography/Typography.styled";
 
 export interface AlertProps {
@@ -176,7 +175,7 @@ const AlertInline: FC<AlertProps> = ({
           status={status}
           sticky={sticky || false}
         >
-          <Icon path={mdiClose} size={0.7} aria-label="close alert" />
+          <BsX />
         </IconPanel>
       )}
     </AlertWrapper>

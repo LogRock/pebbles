@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useRef } from "react";
 import styled from "styled-components";
-import { mdiAlert, mdiMinus, mdiPlus } from "@mdi/js";
+import { BsExclamationTriangleFill, BsPlusLg, BsDashLg } from "react-icons/bs";
 import { BaseInputBoxProps } from "./BaseInputBox";
 import Button from "../Button";
-import { Icon } from "@mdi/react";
 import {
   Helper,
   HelperDiv,
@@ -87,7 +86,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           buttonSize="xSmall"
           disabled={disableMinus}
         >
-          <Icon path={mdiMinus} size={1.35} />
+          <BsDashLg />
         </StyledButton>
         <InputWrapper>
           <StyledStyledInput status={status} {...props} ref={inputRef} />
@@ -108,13 +107,13 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           buttonSize="xSmall"
           disabled={disablePlus}
         >
-          <Icon path={mdiPlus} size={1.35} />
+          <BsPlusLg />
         </StyledButton>
       </NumberInputBoxWrapper>
       <HelperDiv>
         {status === "error" && (
           <HelperIcon status={status}>
-            <Icon path={mdiAlert} size={0.7} />
+            <BsExclamationTriangleFill />
           </HelperIcon>
         )}
         <Helper status={status}>{helper}</Helper>
