@@ -27,4 +27,24 @@ describe("TabView", () => {
     expect(screen.getByText("Tab Content here")).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
+
+  it("shouldn't have href when disabled", () => {
+    const { container } = render(
+      <TabView>
+        <TabLinks>
+          <TabLink href="/" disabled>
+            Tab 1
+          </TabLink>
+        </TabLinks>
+        <TabContent>
+          <h4>Tab Content here</h4>
+        </TabContent>
+      </TabView>
+    );
+
+    expect(screen.getByText("Tab 1") as HTMLAnchorElement).not.toHaveAttribute(
+      "href"
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
