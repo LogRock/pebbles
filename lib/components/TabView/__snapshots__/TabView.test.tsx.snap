@@ -35,3 +35,29 @@ exports[`TabView > renders TabView properly 1`] = `
   </div>
 </div>
 `;
+
+exports[`TabView > shouldn't have href when disabled 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL eukWAO"
+  >
+    <div
+      class="sc-gsDKAQ lfSFVJ"
+    >
+      <a
+        class="sc-dkPtRN dBSncu"
+        disabled=""
+      >
+        Tab 1
+      </a>
+    </div>
+    <div
+      class="sc-hKwDye fyhOfe"
+    >
+      <h4>
+        Tab Content here
+      </h4>
+    </div>
+  </div>
+</div>
+`;
