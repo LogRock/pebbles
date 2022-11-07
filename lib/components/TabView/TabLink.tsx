@@ -1,8 +1,9 @@
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { TabLinkProps } from "./TabView.types";
 
-const TabLink = styled.a<TabLinkProps>`
+const TabLinkAnchor = styled.a<TabLinkProps>`
   display: flex;
   position: relative;
   align-items: flex-end;
@@ -49,5 +50,13 @@ const TabLink = styled.a<TabLinkProps>`
     return "";
   }}
 `;
+
+const TabLink: FC<TabLinkProps> = ({ disabled, href, ...props }) => (
+  <TabLinkAnchor
+    href={disabled ? undefined : href}
+    disabled={disabled}
+    {...props}
+  />
+);
 
 export default TabLink;
