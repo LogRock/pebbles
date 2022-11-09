@@ -4,7 +4,7 @@ import {
   STATUS_TAG_VARIANTS,
 } from "../components/StatusTag/StatusTag.types";
 
-interface Spacings {
+export interface Spacings {
   xxsm: CSS.Property.Width;
   xsm: CSS.Property.Width;
   sm: CSS.Property.Width;
@@ -112,7 +112,7 @@ interface Typography {
   overlineXSmall: OverlineProps;
 }
 
-interface Shadows {
+export interface Shadows {
   xSmall: CSS.Property.BoxShadow;
   small: CSS.Property.BoxShadow;
   medium: CSS.Property.BoxShadow;

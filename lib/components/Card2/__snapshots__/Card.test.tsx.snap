@@ -1,0 +1,14 @@
+// Vitest Snapshot v1
+
+exports[`Card > renders with custom props 1`] = `
+<div
+  class="sc-bdvvtL khlVPq"
+  radius="xxhuge"
+/>
+`;
+
+exports[`Card > renders with default props 1`] = `
+<div
+  class="sc-bdvvtL jPxIoV"
+/>
+`;

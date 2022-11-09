@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { CardProps } from "./Card.types";
 
+/**
+ * @deprecated in favor of Card2
+ */
 const Card = styled.div<CardProps>`
   display: flex;
   flex-direction: column;
@@ -34,4 +37,7 @@ const Card = styled.div<CardProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Card2
+ */
 export default Card;
