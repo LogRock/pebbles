@@ -7,6 +7,8 @@ const TabLinkAnchor = styled.a<TabLinkProps>`
   display: flex;
   position: relative;
   align-items: flex-end;
+  gap: ${({ theme }) => theme.spacings.xsm};
+
   margin: 0 ${({ theme }) => theme.spacings.md};
   padding-top: 0;
   padding-right: ${({ theme }) => theme.spacings.xbig};
