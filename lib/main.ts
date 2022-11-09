@@ -105,11 +105,29 @@ export { default as StatusTrend } from "./components/StatusTrend";
 export type { StatusTrendProps } from "./components/StatusTrend";
 
 // expose Card
+/**
+ * @deprecated in favor of Card2
+ */
 export { default as Card } from "./components/Card";
+/**
+ * @deprecated in favor of Card2
+ */
 export { default as CardHeader } from "./components/Card/CardHeader";
+/**
+ * @deprecated in favor of Card2
+ */
 export { default as CardContent } from "./components/Card/CardContent";
+/**
+ * @deprecated in favor of Card2
+ */
 export { default as CardFooter } from "./components/Card/CardFooter";
+/**
+ * @deprecated in favor of Card2Props
+ */
 export type { CardProps } from "./components/Card";
+
+export { default as Card2 } from "./components/Card2";
+export type { CardProps as Card2Props } from "./components/Card2";
 
 // expose CheckBoxGroup
 export { default as CheckBoxGroup } from "./components/CheckBoxGroup";
