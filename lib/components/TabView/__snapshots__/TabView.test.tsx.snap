@@ -9,17 +9,17 @@ exports[`TabView > renders TabView properly 1`] = `
       class="sc-gsDKAQ lfSFVJ"
     >
       <a
-        class="sc-dkPtRN htQWIk"
+        class="sc-dkPtRN haLYMA"
       >
         Tab 1
       </a>
       <a
-        class="sc-dkPtRN pjDii"
+        class="sc-dkPtRN buMyNm"
       >
         Tab 2
       </a>
       <a
-        class="sc-dkPtRN dBSncu"
+        class="sc-dkPtRN kakPny"
         disabled=""
       >
         Tab 3
@@ -45,7 +45,7 @@ exports[`TabView > shouldn't have href when disabled 1`] = `
       class="sc-gsDKAQ lfSFVJ"
     >
       <a
-        class="sc-dkPtRN dBSncu"
+        class="sc-dkPtRN kakPny"
         disabled=""
       >
         Tab 1
