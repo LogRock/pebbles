@@ -1,3 +1,15 @@
+# [11.1.0](https://github.com/LogRock/pebbles/compare/v11.0.0...v11.1.0) (2022-11-09)
+
+### Bug Fixes
+
+- **tab-link:** prevent link to be clicked when disabled ([9122be0](https://github.com/LogRock/pebbles/commit/9122be09fcc3c0064edb38b0815f08cc696e4006))
+
+### Features
+
+- **card:** :sparkles: add card2 and deprecate card ([d6cea83](https://github.com/LogRock/pebbles/commit/d6cea839169ea549780e2e77b1d00e9166079126))
+- **tab-link:** add gap between icon and text content ([75c1edd](https://github.com/LogRock/pebbles/commit/75c1eddfdb56ecae64d7f6eb0fb3607810925beb))
+- **table:** add cursor pointer to pagination button ([29e5704](https://github.com/LogRock/pebbles/commit/29e5704279d914ec74277b1a6227454d92bd37fc))
+
 # [11.0.0](https://github.com/LogRock/pebbles/compare/v10.2.0...v11.0.0) (2022-11-01)
 
 ### Documentation
