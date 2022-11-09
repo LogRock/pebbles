@@ -125,6 +125,8 @@ export const TablePaginationButton = styled.button`
 
   vertical-align: middle;
 
+  cursor: pointer;
+
   &:active {
     background-color: ${({ theme }) => theme.colors.neutral[100]};
   }
