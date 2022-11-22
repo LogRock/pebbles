@@ -16,6 +16,7 @@ import Theme, {
   StatusTrend,
   Card,
   TabView,
+  Icons,
 } from "../../types/theme";
 import {
   neutral,
@@ -102,6 +103,119 @@ const shadows = {
   upXLarge:
     "0px -20px 25px -5px rgba(16, 24, 40, 0.1), 0px -8px 10px -6px rgba(16, 24, 40, 0.1)",
   upXxLarge: "0px -25px 50px -12px rgba(16, 24, 40, 0.25)",
+};
+
+const icons: Icons = {
+  size: spacings.big,
+  color: neutral[600],
+  spacing: spacings.sm,
+
+  menu: {
+    active: {
+      color: neutral[900],
+    },
+  },
+
+  input: {
+    helper: {
+      color: neutral[400],
+    },
+    dropdown: {
+      color: neutral[600],
+    },
+  },
+
+  button: {
+    xSmall: {
+      paddingTop: spacings.xsm,
+      paddingRight: spacings.sm,
+      paddingBottom: spacings.xsm,
+      paddingLeft: spacings.sm,
+    },
+    small: {
+      paddingTop: "10px",
+      paddingRight: spacings.md,
+      paddingBottom: "10px",
+      paddingLeft: spacings.md,
+    },
+    medium: {
+      paddingTop: "10px",
+      paddingRight: spacings.md,
+      paddingBottom: "10px",
+      paddingLeft: spacings.md,
+    },
+    large: {
+      paddingTop: spacings.md,
+      paddingRight: spacings.xbig,
+      paddingBottom: spacings.md,
+      paddingLeft: spacings.xbig,
+    },
+  },
+
+  table: {
+    pageSizeSelector: {
+      size: spacings.md,
+      spacing: `10px ${spacings.xsm}`,
+    },
+    ordering: {
+      spacing: spacings.xxsm,
+    },
+    pagination: {
+      spacing: spacings.xlg,
+    },
+  },
+
+  tabs: {
+    spacing: `10px ${spacings.xsm} ${spacings.md} ${spacings.md}`,
+    color: neutral[400],
+    active: {
+      color: neutral[900],
+    },
+  },
+
+  panel: {
+    color: primary[500],
+    spacing: ` ${spacings.md} ${spacings.sm}`,
+  },
+
+  alerts: {
+    spacing: `${spacings.sm} ${spacings.xsm} ${spacings.sm} ${spacings.big}`,
+    destructive: {
+      color: destructive[500],
+    },
+    warning: {
+      color: warning[500],
+    },
+    neutral: {
+      color: neutral[500],
+    },
+    primary: {
+      color: primary[600],
+    },
+    success: {
+      color: success[600],
+    },
+  },
+
+  tags: {
+    spacing: `${spacings.xsm} ${spacings.xsm} ${spacings.xsm} ${spacings.md}`,
+    destructive: {
+      color: destructive[500],
+    },
+    destructiveAlt: {
+      color: destructive[50],
+    },
+    warning: {
+      color: warning[500],
+    },
+    success: {
+      color: success[600],
+    },
+  },
+
+  modal: {
+    size: spacings.xbig,
+  },
 };
 
 const primaryVariant: ButtonVariant = {
@@ -277,27 +391,35 @@ const buttons: Buttons = {
   icon: {
     xSmall: {
       borderRadius: "6px",
-      size: "14px",
-      horizontalPadding: "11px",
-      verticalPadding: "10px",
+      fontSize: icons.size,
+      paddingTop: icons.button.xSmall.paddingTop,
+      paddingRight: icons.button.xSmall.paddingTop,
+      paddingBottom: icons.button.xSmall.paddingTop,
+      paddingLeft: icons.button.xSmall.paddingTop,
     },
     small: {
       borderRadius: "6px",
-      size: "14px",
-      horizontalPadding: "13px",
-      verticalPadding: "14px",
+      fontSize: icons.size,
+      paddingTop: icons.button.small.paddingTop,
+      paddingRight: icons.button.small.paddingTop,
+      paddingBottom: icons.button.small.paddingTop,
+      paddingLeft: icons.button.small.paddingTop,
     },
     medium: {
       borderRadius: "6px",
-      size: spacings.md,
-      horizontalPadding: "14px",
-      verticalPadding: spacings.md,
+      fontSize: icons.size,
+      paddingTop: icons.button.medium.paddingTop,
+      paddingRight: icons.button.medium.paddingTop,
+      paddingBottom: icons.button.medium.paddingTop,
+      paddingLeft: icons.button.medium.paddingTop,
     },
     large: {
       borderRadius: "6px",
-      size: spacings.md,
-      horizontalPadding: spacings.md,
-      verticalPadding: "22px",
+      fontSize: icons.size,
+      paddingTop: icons.button.large.paddingTop,
+      paddingRight: icons.button.large.paddingTop,
+      paddingBottom: icons.button.large.paddingTop,
+      paddingLeft: icons.button.large.paddingTop,
     },
     primary: primaryVariant,
     destructive: destructiveVariant,
@@ -735,10 +857,7 @@ const theme: Theme = {
   statusTrend,
   card,
   tabView,
-  icons: {
-    size: spacings.big,
-    color: neutral[500],
-  },
+  icons,
 };
 
 export default theme;

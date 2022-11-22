@@ -1,7 +1,8 @@
 import React from "react";
 
-
 import Button from "../../../../lib/components/Button";
+
+import { BsBricks } from "react-icons/bs";
 
 export default {
   title: "Components/Buttons/IconButtons",
@@ -34,71 +35,71 @@ const Template = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const SizeXSmall = Template.bind({});
 SizeXSmall.args = {
   buttonSize: "xSmall",
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const SizeSmall = Template.bind({});
 SizeSmall.args = {
   buttonSize: "small",
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const SizeMedium = Template.bind({});
 SizeMedium.args = {
   buttonSize: "medium",
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const SizeLarge = Template.bind({});
 SizeLarge.args = {
   buttonSize: "large",
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const VariantPrimary = Template.bind({});
 VariantPrimary.args = {
-  content: "A",
+  content: <BsBricks />,
   variant: "primary",
 };
 
 export const VariantDestructive = Template.bind({});
 VariantDestructive.args = {
-  content: "A",
+  content: <BsBricks />,
   variant: "destructive",
 };
 
 export const VariantDisabled = Template.bind({});
 VariantDisabled.args = {
   disabled: true,
-  content: "A",
+  content: <BsBricks />,
 };
 
 export const StylePrimary = Template.bind({});
 StylePrimary.args = {
-  content: "A",
+  content: <BsBricks />,
   buttonStyle: "primary",
 };
 
 export const StyleSecondary = Template.bind({});
 StyleSecondary.args = {
-  content: "A",
+  content: <BsBricks />,
   buttonStyle: "secondary",
 };
 
 export const StyleTertiary = Template.bind({});
 StyleTertiary.args = {
-  content: "A",
+  content: <BsBricks />,
   buttonStyle: "tertiary",
 };
 
 export const StyleOutlined = Template.bind({});
 StyleOutlined.args = {
-  content: "A",
+  content: <BsBricks />,
   buttonStyle: "outlined",
 };

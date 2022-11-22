@@ -136,8 +136,10 @@ export const EndIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
 
 const iconButtonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
   ${({ buttonSize, theme }) => css`
-    padding: ${theme.buttons.icon[buttonSize || "medium"].verticalPadding}
-      ${theme.buttons.icon[buttonSize || "medium"].horizontalPadding};
+    padding-top: ${theme.buttons.icon[buttonSize || "medium"].paddingTop};
+    padding-right: ${theme.buttons.icon[buttonSize || "medium"].paddingRight};
+    padding-bottom: ${theme.buttons.icon[buttonSize || "medium"].paddingBottom};
+    padding-left: ${theme.buttons.icon[buttonSize || "medium"].paddingLeft};
 
     border-radius: ${theme.buttons.icon[buttonSize || "medium"].borderRadius};
 
