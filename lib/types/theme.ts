@@ -346,7 +346,11 @@ export interface Alert {
   primary: AlertColor;
   warning: AlertColor;
   success: AlertColor;
+  /**
+   * @deprecated in favor of destructive
+   */
   error: AlertColor;
+  destructive: AlertColor;
   title: {
     fontSize: CSS.Property.FontSize;
     fontWeight: CSS.Property.FontWeight;
@@ -359,6 +363,7 @@ export interface Alert {
     lineHeight: CSS.Property.LineHeight;
     height: CSS.Property.Height;
   };
+  iconSize: CSS.Property.FontSize;
   fontFamily: CSS.Property.FontFamily;
   borderRadius: CSS.Property.BorderRadius;
 }

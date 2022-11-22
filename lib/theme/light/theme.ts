@@ -547,35 +547,45 @@ const alert: Alert = {
     borderColor: neutral[200],
     titleColor: neutral[800],
     descriptionColor: neutral[700],
-    iconColor: neutral[500],
+    iconColor: icons.alerts.neutral.color,
   },
   primary: {
     background: primary[50],
     borderColor: primary[600],
     titleColor: primary[900],
     descriptionColor: neutral[700],
-    iconColor: primary[600],
+    iconColor: icons.alerts.primary.color,
   },
   success: {
     background: success[50],
     borderColor: success[200],
     titleColor: success[800],
     descriptionColor: success[700],
-    iconColor: success[500],
+    iconColor: icons.alerts.success.color,
   },
   warning: {
     background: warning[50],
     borderColor: warning[200],
     titleColor: warning[800],
     descriptionColor: warning[700],
-    iconColor: warning[500],
+    iconColor: icons.alerts.warning.color,
   },
+  /**
+   * @deprecated in favor of destructive
+   */
   error: {
     background: error[50],
     borderColor: error[200],
     titleColor: error[800],
     descriptionColor: error[700],
-    iconColor: error[500],
+    iconColor: icons.alerts.destructive.color,
+  },
+  destructive: {
+    background: destructive[50],
+    borderColor: destructive[200],
+    titleColor: destructive[800],
+    descriptionColor: destructive[700],
+    iconColor: icons.alerts.destructive.color,
   },
   title: {
     fontWeight: "600",
@@ -590,6 +600,7 @@ const alert: Alert = {
     height: "20px",
   },
 
+  iconSize: icons.size,
   fontFamily: "Archivo",
   borderRadius: spacings.sm,
 };
