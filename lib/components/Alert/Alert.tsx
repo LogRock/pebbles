@@ -45,9 +45,7 @@ const IconPanel = styled.div<Pick<AlertProps, "status" | "sticky">>`
   margin: ${({ sticky }) => (sticky ? "4px 0px" : "0px")};
 
   color: ${({ theme, status }) => theme.alert[status || "neutral"].iconColor};
-  > * {
-    cursor: pointer;
-  }
+  font-size: ${({ theme }) => theme.alert.iconSize};
 `;
 
 const MainPanel = styled.div<Pick<AlertProps, "sticky">>`
