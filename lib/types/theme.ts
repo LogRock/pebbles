@@ -194,9 +194,11 @@ interface ButtonSize {
 }
 
 interface IconButtonSize {
-  verticalPadding: CSS.Property.PaddingTop;
-  horizontalPadding: CSS.Property.PaddingLeft;
-  size: CSS.Property.Width;
+  paddingTop: CSS.Property.PaddingTop;
+  paddingLeft: CSS.Property.PaddingLeft;
+  paddingBottom: CSS.Property.PaddingBottom;
+  paddingRight: CSS.Property.PaddingRight;
+  fontSize: CSS.Property.FontSize;
   borderRadius: CSS.Property.BorderRadius;
 }
 
@@ -512,6 +514,114 @@ export interface TabView {
 export interface Icons {
   size: CSS.Property.FontSize;
   color: CSS.Property.Color;
+  spacing: CSS.Property.Margin;
+
+  menu: {
+    active: {
+      color: CSS.Property.Color;
+    };
+  };
+
+  input: {
+    helper: {
+      color: CSS.Property.Color;
+    };
+    dropdown: {
+      color: CSS.Property.Color;
+    };
+  };
+
+  button: {
+    xSmall: {
+      paddingTop: CSS.Property.MarginTop;
+      paddingRight: CSS.Property.MarginRight;
+      paddingBottom: CSS.Property.MarginBottom;
+      paddingLeft: CSS.Property.MarginLeft;
+    };
+    small: {
+      paddingTop: CSS.Property.MarginTop;
+      paddingRight: CSS.Property.MarginRight;
+      paddingBottom: CSS.Property.MarginBottom;
+      paddingLeft: CSS.Property.MarginLeft;
+    };
+    medium: {
+      paddingTop: CSS.Property.MarginTop;
+      paddingRight: CSS.Property.MarginRight;
+      paddingBottom: CSS.Property.MarginBottom;
+      paddingLeft: CSS.Property.MarginLeft;
+    };
+    large: {
+      paddingTop: CSS.Property.MarginTop;
+      paddingRight: CSS.Property.MarginRight;
+      paddingBottom: CSS.Property.MarginBottom;
+      paddingLeft: CSS.Property.MarginLeft;
+    };
+  };
+
+  table: {
+    pageSizeSelector: {
+      size: CSS.Property.FontSize;
+      spacing: CSS.Property.Margin;
+    };
+    ordering: {
+      spacing: CSS.Property.Margin;
+    };
+    pagination: {
+      spacing: CSS.Property.Margin;
+    };
+  };
+
+  tabs: {
+    spacing: CSS.Property.Margin;
+    color: CSS.Property.Color;
+    active: {
+      color: CSS.Property.Color;
+    };
+  };
+
+  panel: {
+    color: CSS.Property.Color;
+    spacing: CSS.Property.Margin;
+  };
+
+  alerts: {
+    spacing: CSS.Property.Margin;
+    destructive: {
+      color: CSS.Property.Color;
+    };
+    warning: {
+      color: CSS.Property.Color;
+    };
+    neutral: {
+      color: CSS.Property.Color;
+    };
+    primary: {
+      color: CSS.Property.Color;
+    };
+    success: {
+      color: CSS.Property.Color;
+    };
+  };
+
+  tags: {
+    spacing: CSS.Property.Margin;
+    destructive: {
+      color: CSS.Property.Color;
+    };
+    destructiveAlt: {
+      color: CSS.Property.Color;
+    };
+    warning: {
+      color: CSS.Property.Color;
+    };
+    success: {
+      color: CSS.Property.Color;
+    };
+  };
+
+  modal: {
+    size: CSS.Property.FontSize;
+  };
 }
 
 export default interface Theme {
