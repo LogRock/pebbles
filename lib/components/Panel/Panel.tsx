@@ -35,14 +35,15 @@ const PanelContainer = styled(Card)<{ disabled: boolean }>`
 
 const PanelTitle = styled.div`
   display: flex;
+  align-items: center;
   justify-content: flex-start;
 
   cursor: pointer;
 
   svg {
-    margin-left: 18px;
+    margin: ${({ theme }) => theme.icons.panel.spacing};
 
-    color: ${({ theme }) => theme.colors.primary[500]};
+    color: ${({ theme }) => theme.icons.panel.color};
   }
 `;
 
