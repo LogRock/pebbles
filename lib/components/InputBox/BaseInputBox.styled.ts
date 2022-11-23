@@ -64,7 +64,7 @@ export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "disabled">>`
   margin-left: 4px;
 
   color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
+    disabled ? theme.colors.neutral[300] : theme.icons.input.helper.color};
 `;
 
 export const InputDiv = styled.div`
