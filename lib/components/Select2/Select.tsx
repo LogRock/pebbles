@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BsExclamationTriangleFill } from "react-icons/bs";
+import { BsChevronDown, BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
 import React, { FC, useContext, useMemo } from "react";
 import ReactSelect, {
@@ -19,6 +19,7 @@ import {
 } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./Select.types";
 import ThemeType from "../../types/theme";
+import { DropdownIndicatorWrapper } from "./Select.styled";
 
 const defaultStatus = "info";
 
@@ -136,6 +137,11 @@ function Select<
         components={{
           ...props.components,
           ValueContainer: CustomValueContainer as any,
+          DropdownIndicator: () => (
+            <DropdownIndicatorWrapper>
+              <BsChevronDown />
+            </DropdownIndicatorWrapper>
+          ),
         }}
       />
       {helper && (
