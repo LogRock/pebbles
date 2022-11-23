@@ -6,9 +6,8 @@ import { TabLinkProps } from "./TabView.types";
 const TabLinkAnchor = styled.a<TabLinkProps>`
   display: flex;
   position: relative;
-  align-items: flex-end;
-  gap: ${({ theme }) => theme.spacings.xsm};
-
+  align-items: center;
+  justify-content: flex-start;
   margin: 0 ${({ theme }) => theme.spacings.md};
   padding-top: 0;
   padding-right: ${({ theme }) => theme.spacings.xbig};
@@ -27,6 +26,13 @@ const TabLinkAnchor = styled.a<TabLinkProps>`
 
   &:hover {
     color: ${({ theme, disabled }) => !disabled && theme.colors.neutral[900]};
+  }
+
+  svg {
+    margin: ${({ theme }) => theme.icons.tabs.spacing};
+
+    color: ${({ theme, active }) =>
+      active ? theme.icons.tabs.active.color : theme.icons.tabs.color};
   }
 
   ${({ active, theme }) => {
