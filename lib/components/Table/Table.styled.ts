@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Select2 from "../Select2";
+import { DropdownIndicatorWrapper } from "../Select2/Select.styled";
 import {
   overlineXSmallCSS,
   paragraphMediumCSS,
@@ -53,10 +54,7 @@ export const TH = styled.th<TableHeaderProps>`
 
   svg {
     flex-shrink: 0;
-    width: 10px;
-    min-width: 10px;
-    height: 100%;
-    margin-left: 10px;
+    margin-left: ${({ theme }) => theme.icons.table.ordering.spacing};
   }
 `;
 
@@ -117,7 +115,8 @@ export const New = styled.span`
 `;
 
 export const TablePaginationButton = styled.button`
-  padding: 0 18px;
+  margin-left: ${({ theme }) => theme.icons.table.pagination.spacing};
+  padding: 0;
 
   border: none;
 
@@ -150,6 +149,15 @@ export const TablePerPageSelector = styled(Select2)`
   min-width: 94px;
   max-width: 120px;
   margin-right: ${({ theme }) => theme.spacings.xbig};
+
+  ${DropdownIndicatorWrapper} {
+    padding: ${({ theme }) => theme.icons.table.pageSizeSelector.spacing};
+
+    svg {
+      font-size: ${({ theme }) =>
+        theme.icons.table.pageSizeSelector.size} !important;
+    }
+  }
 `;
 
 export const TFoot = styled.tfoot`
