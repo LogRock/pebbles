@@ -166,7 +166,7 @@ const icons: Icons = {
   },
 
   tabs: {
-    spacing: `10px ${spacings.xsm} ${spacings.md} ${spacings.md}`,
+    spacing: `${spacings.md} ${spacings.xsm} ${spacings.md} ${spacings.xsm}`,
     color: neutral[400],
     active: {
       color: neutral[900],
