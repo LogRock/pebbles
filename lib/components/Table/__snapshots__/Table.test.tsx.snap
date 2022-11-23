@@ -2,37 +2,37 @@
 
 exports[`Table > renders selected rows 1`] = `
 <table
-  class="sc-fKVqWL dXnGYZ"
+  class="sc-bBHxTw dMRFpD"
 >
   <thead
-    class="sc-bBHxTw fLDrD"
+    class="sc-iwjdpV gvtLUC"
   >
     <tr
-      class="sc-iJKOTD citbaf"
+      class="sc-giYglK hyaMCf"
     >
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header A
         </span>
       </th>
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header B
         </span>
       </th>
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header C
         </span>
@@ -40,61 +40,61 @@ exports[`Table > renders selected rows 1`] = `
     </tr>
   </thead>
   <tbody
-    class="sc-iwjdpV eQANqL"
+    class="sc-cxpSdN YQwvn"
   >
     <tr
-      class="sc-iJKOTD citbaf"
+      class="sc-giYglK hyaMCf"
     >
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content A1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content B1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content C1
       </td>
     </tr>
     <tr
-      class="sc-iJKOTD fvaJtJ"
+      class="sc-giYglK gDZzfB"
     >
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content A2
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content B2
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content C2
       </td>
     </tr>
     <tr
-      class="sc-iJKOTD citbaf"
+      class="sc-giYglK hyaMCf"
     >
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content A3
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content B3
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content C3
       </td>
@@ -105,158 +105,145 @@ exports[`Table > renders selected rows 1`] = `
 
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-fKVqWL dXnGYZ"
+  class="sc-bBHxTw dMRFpD"
 >
   <thead
-    class="sc-bBHxTw fLDrD"
+    class="sc-iwjdpV gvtLUC"
   >
     <tr
-      class="sc-iJKOTD citbaf"
+      class="sc-giYglK hyaMCf"
     >
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header A
         </span>
       </th>
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header A
           <svg
-            fill="none"
-            height="16"
-            style="vertical-align: middle;"
-            viewBox="0 0 11 16"
-            width="11"
+            fill="currentColor"
+            height="20px"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="20px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M1.375 5L5.375 1L9.375 5M9.375"
-              stroke="#9CA3AF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.67"
-            />
-            <path
-              d="M1.375 5M9.375 11L5.375 15L1.375 11"
-              stroke="#9CA3AF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.67"
+              d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"
+              fill-rule="evenodd"
             />
           </svg>
         </span>
       </th>
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header B
           <svg
-            fill="none"
-            height="7"
-            style="margin-top: 6px;"
-            viewBox="0 0 12 7"
-            width="12"
+            fill="currentColor"
+            height="16px"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M11 6L6 1L1 6"
-              stroke="#6B7280"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.67"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+              fill-rule="evenodd"
             />
           </svg>
         </span>
       </th>
       <th
-        class="sc-cxpSdN TWwRi"
+        class="sc-llYSUQ iHTMeq"
       >
         <span
-          style="display: flex; align-items: flex-start;"
+          style="display: flex; align-items: center;"
         >
           Header C
           <svg
-            fill="none"
-            height="7"
-            style="margin-top: 6px;"
-            viewBox="0 0 12 7"
-            width="12"
+            fill="currentColor"
+            height="16px"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M11 1L6 6L1 1"
-              stroke="#6B7280"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.67"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+              fill-rule="evenodd"
             />
           </svg>
         </span>
       </th>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       />
     </tr>
   </thead>
   <tbody
-    class="sc-iwjdpV eQANqL"
+    class="sc-cxpSdN YQwvn"
   >
     <tr
-      class="sc-iJKOTD citbaf"
+      class="sc-giYglK hyaMCf"
     >
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content A1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content B1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content C1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       />
     </tr>
     <tr
-      class="sc-iJKOTD eSjhbm"
+      class="sc-giYglK iPayEy"
     >
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content A1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content B1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         Content C1
       </td>
       <td
-        class="sc-llYSUQ kRFSPb"
+        class="sc-iJKOTD NFJUK"
       >
         <span
-          class="sc-giYglK chRHkB"
+          class="sc-ezbkAF fNroCL"
         >
           New
         </span>
