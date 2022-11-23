@@ -66,7 +66,7 @@ export const TableHeader: FC<TableHeaderProps> = ({
 }) => {
   return (
     <TH {...props}>
-      <span style={{ display: "flex", alignItems: "flex-start" }}>
+      <span style={{ display: "flex", alignItems: "center" }}>
         {children}
         {showOrdering && <Ordering currentOrder={currentOrder} />}
       </span>
