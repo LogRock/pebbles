@@ -1,3 +1,15 @@
+# [11.2.0](https://github.com/LogRock/pebbles/compare/v11.1.0...v11.2.0) (2022-11-25)
+
+### Features
+
+- **alert:** :lipstick: update styling for icons on alerts ([d71e7f0](https://github.com/LogRock/pebbles/commit/d71e7f0de3c282dc8cf9fcd7f1ff07418ddfc545))
+- **button:** :sparkles: update icon-button sizings based on new design specs ([f6e00eb](https://github.com/LogRock/pebbles/commit/f6e00eb6b3788cfe3b9d66e1303c04d784454656))
+- **input-box:** :lipstick: update icon styling for inputs ([17a1c95](https://github.com/LogRock/pebbles/commit/17a1c95db087a47120991ab99c16568015ee9573))
+- **panel:** :lipstick: update Panel icon stylings ([45ff18c](https://github.com/LogRock/pebbles/commit/45ff18cbf1aeb136c398ee4e311497ed6af3e2e9))
+- **select:** :lipstick: update styling for dropdown icons ([0afb411](https://github.com/LogRock/pebbles/commit/0afb411266587121298eac2f92538c0dad6eab14))
+- **table:** :lipstick: update all icon spacings and sizes ([39adf42](https://github.com/LogRock/pebbles/commit/39adf4283faa22b27fdfafdc04fbd95f5c230ded))
+- **tabs:** :lipstick: update icon styling for tabs ([6390b3f](https://github.com/LogRock/pebbles/commit/6390b3fcca1b68399611aad8b1595ba34527b39b))
+
 # [11.1.0](https://github.com/LogRock/pebbles/compare/v11.0.0...v11.1.0) (2022-11-09)
 
 ### Bug Fixes
