@@ -137,6 +137,8 @@ interface Blurs {
 
 interface LinearGradient {
   background: CSS.Property.Background;
+  colors: CSS.Property.Color[];
+  angle: number;
 }
 
 // interface MeshGradient {
