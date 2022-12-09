@@ -1,3 +1,9 @@
+## [11.2.1](https://github.com/LogRock/pebbles/compare/v11.2.0...v11.2.1) (2022-12-09)
+
+### Bug Fixes
+
+- **theme:** :label: add missing Gradient types ([20d39ae](https://github.com/LogRock/pebbles/commit/20d39aef9274c128340a65180819581032aadca5))
+
 # [11.2.0](https://github.com/LogRock/pebbles/compare/v11.1.0...v11.2.0) (2022-11-25)
 
 ### Features
