@@ -63,7 +63,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
 
         {hint && (
           <HintDiv>
-            {inputProps?.type === "password" && (
+            {inputProps?.type === "password" && !inputProps.disabled && (
               <ShowHidePasswordBtn
                 disabled={inputProps.disabled}
                 onClick={() => switchShowPassword()}
