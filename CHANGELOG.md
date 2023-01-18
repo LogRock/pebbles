@@ -1,3 +1,10 @@
+## [11.2.2](https://github.com/LogRock/pebbles/compare/v11.2.1...v11.2.2) (2023-01-18)
+
+### Bug Fixes
+
+- **input-box:** remove hide button when input is disabled ([fc1d8d2](https://github.com/LogRock/pebbles/commit/fc1d8d2e466aceac937c22e1f0a538062aa13494))
+- **select:** custom value component no opening with defaultValue ([312767d](https://github.com/LogRock/pebbles/commit/312767d5e5a77ddda08b472c914786046d8d1765))
+
 ## [11.2.1](https://github.com/LogRock/pebbles/compare/v11.2.0...v11.2.1) (2022-12-09)
 
 ### Bug Fixes
