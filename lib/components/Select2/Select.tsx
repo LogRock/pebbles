@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { BsChevronDown, BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
-import React, { FC, useContext, useMemo, forwardRef } from "react";
+import React, { FC, useContext, useMemo } from "react";
 import ReactSelect, {
   StylesConfig,
   Theme,
@@ -40,25 +40,23 @@ const CustomValueContainer: FC<ValueContainerProps> = ({
     return (
       <ValueContainer {...props}>
         {`${selectedValues} items selected.`}
+        {children?.[1 as keyof unknown]}
       </ValueContainer>
     );
   }
   return <ValueContainer {...props}>{children}</ValueContainer>;
 };
 
-const Select = forwardRef(function SelectWithRef<
+function Select<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
->(
-  {
-    status,
-    helper,
-    label,
-    ...props
-  }: Props<Option, IsMulti, Group> & CustomSelectProps,
-  ref: any
-) {
+>({
+  status,
+  helper,
+  label,
+  ...props
+}: Props<Option, IsMulti, Group> & CustomSelectProps) {
   const theme = useContext<ThemeType>(ThemeContext);
 
   const customStyles: StylesConfig<Option, IsMulti, Group> = useMemo(
@@ -134,7 +132,6 @@ const Select = forwardRef(function SelectWithRef<
       <Label htmlFor={selectID}>{label}</Label>
       <ReactSelect
         {...props}
-        ref={ref}
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
@@ -160,6 +157,6 @@ const Select = forwardRef(function SelectWithRef<
       )}
     </div>
   );
-});
+}
 
 export default Select;
