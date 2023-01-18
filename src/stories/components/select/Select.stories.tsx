@@ -68,6 +68,23 @@ Multi.args = {
   label: "Select many",
 };
 
+export const MultiWithValue = Template.bind({});
+MultiWithValue.args = {
+  isMulti: true,
+  hideSelectedOptions: false,
+  label: "Select many",
+  defaultValue: [
+    {
+      value: "1",
+      label: "First Item",
+    },
+    {
+      value: "2",
+      label: "Second Item",
+    },
+  ],
+};
+
 export const AllInOne = Template.bind({});
 AllInOne.args = {
   isClearable: true,
