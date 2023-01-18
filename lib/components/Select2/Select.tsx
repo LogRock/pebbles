@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { BsChevronDown, BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
-import React, { FC, useContext, useMemo } from "react";
+import React, { FC, useContext, useMemo, forwardRef } from "react";
 import ReactSelect, {
   StylesConfig,
   Theme,
@@ -46,16 +46,19 @@ const CustomValueContainer: FC<ValueContainerProps> = ({
   return <ValueContainer {...props}>{children}</ValueContainer>;
 };
 
-function Select<
+const Select = forwardRef(function SelectWithRef<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
->({
-  status,
-  helper,
-  label,
-  ...props
-}: Props<Option, IsMulti, Group> & CustomSelectProps) {
+>(
+  {
+    status,
+    helper,
+    label,
+    ...props
+  }: Props<Option, IsMulti, Group> & CustomSelectProps,
+  ref: any
+) {
   const theme = useContext<ThemeType>(ThemeContext);
 
   const customStyles: StylesConfig<Option, IsMulti, Group> = useMemo(
@@ -131,6 +134,7 @@ function Select<
       <Label htmlFor={selectID}>{label}</Label>
       <ReactSelect
         {...props}
+        ref={ref}
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
@@ -156,6 +160,6 @@ function Select<
       )}
     </div>
   );
-}
+});
 
 export default Select;
