@@ -35,6 +35,7 @@ export const secondary = {
   "900": "#0A0A79",
 };
 export const success = {
+  "25": "#F7FFF7",
   "50": "#D4F9E1",
   "100": "#A9F3C4",
   "200": "#7EEDA6",
