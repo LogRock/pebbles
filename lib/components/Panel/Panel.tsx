@@ -74,7 +74,12 @@ const Panel: FC<PanelProps> = ({
   return (
     <>
       {panelsItems.map(({ title, content, disabled = false }, index) => (
-        <PanelContainer key={index} disabled={disabled} {...props}>
+        <PanelContainer
+          padding="xbig"
+          key={index}
+          disabled={disabled}
+          {...props}
+        >
           <PanelTitle onClick={() => handleToggle(index)}>
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
             {expanded === index ? <BsChevronUp /> : <BsChevronDown />}

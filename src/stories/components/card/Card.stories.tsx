@@ -1,15 +1,15 @@
 import React, { PropsWithChildren } from "react";
-import Card2 from "../../../../lib/components/Card2";
+import Card from "../../../../lib/components/Card";
 import { ComponentMeta, Story } from "@storybook/react";
-import { CardProps } from "../../../../lib/components/Card2/Card";
+import { CardProps } from "../../../../lib/components/Card/Card";
 
 export default {
   title: "components/Card",
-  component: Card2,
-} as ComponentMeta<typeof Card2>;
+  component: Card,
+} as ComponentMeta<typeof Card>;
 
 const Template: Story<PropsWithChildren<CardProps>> = (args) => (
-  <Card2 {...args} />
+  <Card {...args} />
 );
 
 export const Default = Template.bind({});
