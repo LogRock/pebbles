@@ -1,3 +1,21 @@
+# [12.0.0](https://github.com/LogRock/pebbles/compare/v11.2.2...v12.0.0) (2023-01-19)
+
+### Bug Fixes
+
+- update card snapshots ([c3fcbdc](https://github.com/LogRock/pebbles/commit/c3fcbdcbc977099c9367c46e52aca52c99afc2e9))
+
+### Code Refactoring
+
+- **card:** delete card and make card2 take its place ([0d6a1ff](https://github.com/LogRock/pebbles/commit/0d6a1ff39923da0f15b66e78e9c3de1ee7c57398))
+
+### Features
+
+- **card:** add noPadding prop ([690160b](https://github.com/LogRock/pebbles/commit/690160bdd36e75351820f414523debb82373d47d))
+
+### BREAKING CHANGES
+
+- **card:** delete card and make card2 take its place
+
 ## [11.2.2](https://github.com/LogRock/pebbles/compare/v11.2.1...v11.2.2) (2023-01-18)
 
 ### Bug Fixes
