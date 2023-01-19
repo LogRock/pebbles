@@ -56,7 +56,7 @@ export const SimpleTable = () => (
 );
 
 export const SimpleTableInCard = () => (
-  <Card noPadding>
+  <Card>
     <Table>
       <TableHead>
         <TableRow>
