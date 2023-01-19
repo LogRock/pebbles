@@ -2,13 +2,13 @@
 
 exports[`Card > renders with custom props 1`] = `
 <div
-  class="sc-bdvvtL fKFwXa"
+  class="sc-bdvvtL eAUJku"
   radius="xxhuge"
 />
 `;
 
 exports[`Card > renders with default props 1`] = `
 <div
-  class="sc-bdvvtL gCAtDt"
+  class="sc-bdvvtL kQlaV"
 />
 `;
