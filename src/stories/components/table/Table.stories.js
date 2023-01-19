@@ -56,8 +56,8 @@ export const SimpleTable = () => (
 );
 
 export const SimpleTableInCard = () => (
-  <Card>
-    <Table>
+  <Card noPadding>
+    <Table width="100%">
       <TableHead>
         <TableRow>
           <TableHeader>Number</TableHeader>
