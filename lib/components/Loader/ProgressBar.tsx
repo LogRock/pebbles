@@ -23,13 +23,19 @@ const InnerBar = styled.div`
   border-radius: ${({ theme, size }) =>
     theme.progressBar.borderRadius[size || "medium"]};
 
-  background-color: ${({ theme }) => theme.progressBar.barColor};
+  background-color: ${({ theme, variant }) =>
+    theme.progressBar.barColor[variant || "primary"]};
 `;
 
-const ProgressBar = (props: ProgressBarProps) => {
+const ProgressBar = ({ variant = "primary", ...props }: ProgressBarProps) => {
   return (
-    <Bar {...props}>
-      <InnerBar {...props} />
+    <Bar
+      role="progressbar"
+      aria-label="progressbar"
+      aria-valuenow={props.percentage}
+      {...props}
+    >
+      <InnerBar variant={variant} {...props} />
     </Bar>
   );
 };

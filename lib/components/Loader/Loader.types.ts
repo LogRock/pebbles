@@ -1,6 +1,15 @@
 export interface ProgressBarProps {
   percentage: number;
   size: "small" | "medium" | "large" | "xLarge";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "warning"
+    | "neutral"
+    | "destructive"
+    | "destructiveAlt";
 }
 
 export interface LoaderProps {
