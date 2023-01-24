@@ -371,7 +371,6 @@ export interface Alert {
 }
 
 export interface ProgressBar {
-  barColor: CSS.Property.Color;
   bgColor: CSS.Property.Color;
   sizes: {
     small: CSS.Property.Width;
@@ -384,6 +383,16 @@ export interface ProgressBar {
     medium: CSS.Property.Width;
     large: CSS.Property.Width;
     xLarge: CSS.Property.Width;
+  };
+  barColor: {
+    primary: CSS.Property.Color;
+    secondary: CSS.Property.Color;
+    error: CSS.Property.Color;
+    warning: CSS.Property.Color;
+    success: CSS.Property.Color;
+    neutral: CSS.Property.Color;
+    destructive: CSS.Property.Color;
+    destructiveAlt: CSS.Property.Color;
   };
 }
 

@@ -606,7 +606,6 @@ const alert: Alert = {
 };
 
 const progressBar: ProgressBar = {
-  barColor: primary[500],
   bgColor: neutral[100],
   sizes: {
     small: "8px",
@@ -619,6 +618,16 @@ const progressBar: ProgressBar = {
     medium: "32px",
     large: "48px",
     xLarge: "64px",
+  },
+  barColor: {
+    primary: primary["500"],
+    secondary: secondary["500"],
+    error: error["500"],
+    warning: warning["500"],
+    success: success["500"],
+    neutral: neutral["500"],
+    destructive: destructive["600"],
+    destructiveAlt: destructive["300"],
   },
 };
 
