@@ -1,3 +1,13 @@
+# [12.1.0](https://github.com/LogRock/pebbles/compare/v12.0.0...v12.1.0) (2023-01-27)
+
+### Bug Fixes
+
+- **table:** :bug: fix menu opening direction ([116d376](https://github.com/LogRock/pebbles/commit/116d376c326ba0276637e4982ac0face892da7c1))
+
+### Features
+
+- **status-tag:** update success alt colors ([59bc27f](https://github.com/LogRock/pebbles/commit/59bc27f65feb8e96053d718217d6efe9bacb2c1f))
+
 # [12.0.0](https://github.com/LogRock/pebbles/compare/v11.2.2...v12.0.0) (2023-01-19)
 
 ### Bug Fixes
