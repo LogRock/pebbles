@@ -147,7 +147,7 @@ function Select<
       />
       {helper && (
         <HelperDiv>
-          {status === "error" && (
+          {status === "destructive" && (
             <HelperIcon status={status}>
               <BsExclamationTriangleFill />
             </HelperIcon>

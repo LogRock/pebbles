@@ -21,7 +21,7 @@ export type SelectProps<ItemType> = {
     content: string;
     icon: null;
   };
-  status?: "info" | "error";
+  status?: "info" | "destructive";
   helper?: string;
   placeholder?: string;
   autoCompleteItems: ItemType[];

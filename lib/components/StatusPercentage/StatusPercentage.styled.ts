@@ -9,5 +9,5 @@ export const StatusPctWrapper = styled.div<Pick<StatusPercentageProps, "size">>`
   font-family: ${({ theme }) => theme.statusPercentage.fontFamily};
   font-size: ${({ theme, size }) => theme.statusPercentage.fontSize[size]};
   font-weight: ${({ theme }) => theme.statusPercentage.fontWeight};
-  text-align: center; 
+  text-align: center;
 `;

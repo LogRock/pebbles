@@ -39,14 +39,14 @@ function SelectAsync<
             : theme.inputBox[status || defaultStatus].border,
           fontFamily: theme.typography.paragraphMedium.fontFamily,
           fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
-          fontSize: theme.typography.paragraphMedium.fontSize,
+          fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         };
       },
       option: (provided) => ({
         ...provided,
         fontFamily: theme.typography.paragraphMedium.fontFamily,
         fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
-        fontSize: theme.typography.paragraphMedium.fontSize,
+        fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         padding: theme.inputBox.padding,
       }),
       menu: (provided) => ({
@@ -59,7 +59,7 @@ function SelectAsync<
 
   const selectTheme: Theme = useMemo(
     () => ({
-      borderRadius: theme.inputBox.borderRadius,
+      borderRadius: 8,
       colors: {
         danger: theme.colors.destructive[500],
         dangerLight: theme.colors.destructive[300],
@@ -101,7 +101,7 @@ function SelectAsync<
       />
       {helper && (
         <HelperDiv>
-          {status === "error" && (
+          {status === "destructive" && (
             <HelperIcon status={status}>
               <BsExclamationTriangleFill />
             </HelperIcon>

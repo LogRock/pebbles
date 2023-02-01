@@ -44,12 +44,12 @@ Success.args = {
   variant: "success",
 };
 
-export const Error = Template.bind({});
-Error.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   percentage: 67,
   size: "large",
   children: "67%",
-  variant: "error",
+  variant: "destructive",
 };
 
 export const Primary = Template.bind({});

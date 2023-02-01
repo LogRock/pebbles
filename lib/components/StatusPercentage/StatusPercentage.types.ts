@@ -5,7 +5,7 @@ export interface StatusPercentageProps {
     | "primary"
     | "secondary"
     | "success"
-    | "error"
+    | "destructive"
     | "warning"
     | "neutral";
 }

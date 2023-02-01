@@ -24,7 +24,7 @@ export interface BaseInputBoxProps
     content: string;
     icon: React.ReactNode;
   };
-  status?: "info" | "error";
+  status?: "info" | "destructive";
   helper?: React.ReactNode;
   spaced?: boolean;
   disableMinus?: boolean;
@@ -83,7 +83,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         )}
       </InputDiv>
       <HelperDiv>
-        {status === "error" && (
+        {status === "destructive" && (
           <HelperIcon status={status}>
             <BsExclamationTriangleFill />
           </HelperIcon>

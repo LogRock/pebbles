@@ -5,7 +5,7 @@ export interface ProgressBarProps {
     | "primary"
     | "secondary"
     | "success"
-    | "error"
+    | "destructive"
     | "warning"
     | "neutral"
     | "destructive"
@@ -27,7 +27,7 @@ export interface ProgressRingProps {
     | "primary"
     | "secondary"
     | "success"
-    | "error"
+    | "destructive"
     | "warning"
     | "neutral";
 }

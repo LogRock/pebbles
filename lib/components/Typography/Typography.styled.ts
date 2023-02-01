@@ -262,28 +262,34 @@ export const ParagraphLarge = styled.p<TypographyParagraphProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphLarge.fontFamily};
-  font-size: ${({ theme }) => theme.typography.paragraphLarge.fontSize};
+  font-size: ${({ theme }) => theme.typography.paragraphLarge.desktop.fontSize};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
       ? theme.typography.paragraphLarge.desktop.weights[weight]
       : theme.typography.paragraphLarge.desktop.weights.normal};
-  line-height: ${({ theme }) => theme.typography.paragraphLarge.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.paragraphLarge.desktop.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const paragraphMediumCSS = css<TypographyParagraphProps>`
   margin: 0;
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphMedium.fontFamily};
-  font-size: ${({ theme }) => theme.typography.paragraphMedium.fontSize};
+  font-size: ${({ theme }) =>
+    theme.typography.paragraphMedium.desktop.fontSize};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
       ? theme.typography.paragraphMedium.desktop.weights[weight]
       : theme.typography.paragraphMedium.desktop.weights.normal};
-  line-height: ${({ theme }) => theme.typography.paragraphMedium.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.paragraphMedium.desktop.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
 
@@ -302,13 +308,14 @@ export const paragraphSmallCSS = css<TypographyParagraphProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphSmall.fontFamily};
-  font-size: ${({ theme }) => theme.typography.paragraphSmall.fontSize};
+  font-size: ${({ theme }) => theme.typography.paragraphSmall.desktop.fontSize};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
       ? theme.typography.paragraphSmall.desktop.weights[weight]
       : theme.typography.paragraphSmall.desktop.weights.normal};
-  line-height: ${({ theme }) => theme.typography.paragraphSmall.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.paragraphSmall.desktop.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
 
@@ -327,13 +334,15 @@ export const paragraphXSmallCSS = css<TypographyParagraphProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphXSmall.fontFamily};
-  font-size: ${({ theme }) => theme.typography.paragraphXSmall.fontSize};
+  font-size: ${({ theme }) =>
+    theme.typography.paragraphXSmall.desktop.fontSize};
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
       ? theme.typography.paragraphXSmall.desktop.weights[weight]
       : theme.typography.paragraphXSmall.desktop.weights.normal};
-  line-height: ${({ theme }) => theme.typography.paragraphXSmall.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.paragraphXSmall.desktop.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
 
@@ -352,10 +361,12 @@ export const OverlineLarge = styled.p<TypographyOverlineProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineLarge.fontFamily};
-  font-size: ${({ theme }) => theme.typography.overlineLarge.fontSize};
-  font-weight: ${({ theme }) => theme.typography.overlineLarge.weight};
+  font-size: ${({ theme }) => theme.typography.overlineLarge.desktop.fontSize};
+  font-weight: ${({ theme }) =>
+    theme.typography.overlineLarge.desktop.weights.bold};
   letter-spacing: 1px;
-  line-height: ${({ theme }) => theme.typography.overlineLarge.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.overlineLarge.desktop.lineHeight};
   text-transform: uppercase;
 `;
 
@@ -367,10 +378,12 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineMedium.fontFamily};
-  font-size: ${({ theme }) => theme.typography.overlineMedium.fontSize};
-  font-weight: ${({ theme }) => theme.typography.overlineMedium.weight};
+  font-size: ${({ theme }) => theme.typography.overlineMedium.desktop.fontSize};
+  font-weight: ${({ theme }) =>
+    theme.typography.overlineMedium.desktop.weights.bold};
   letter-spacing: 1px;
-  line-height: ${({ theme }) => theme.typography.overlineMedium.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.overlineMedium.desktop.lineHeight};
   text-transform: uppercase;
 `;
 
@@ -382,10 +395,12 @@ export const overlineXSmallCSS = css`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineXSmall.fontFamily};
-  font-size: ${({ theme }) => theme.typography.overlineXSmall.fontSize};
-  font-weight: ${({ theme }) => theme.typography.overlineXSmall.weight};
+  font-size: ${({ theme }) => theme.typography.overlineXSmall.desktop.fontSize};
+  font-weight: ${({ theme }) =>
+    theme.typography.overlineXSmall.desktop.weights.bold};
   letter-spacing: 1px;
-  line-height: ${({ theme }) => theme.typography.overlineXSmall.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.overlineXSmall.desktop.lineHeight};
   text-transform: uppercase;
 `;
 

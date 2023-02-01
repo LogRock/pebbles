@@ -15,11 +15,11 @@ export default {
 
 const Template = (args) => <StatusNumber {...args}>{args.label}</StatusNumber>;
 
-export const Error = Template.bind({});
-Error.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   currentValue: "85",
   totalValue: "85",
-  variant: "error",
+  variant: "destructive",
   icon: <BsExclamationTriangleFill />,
 };
 
@@ -62,5 +62,5 @@ export const NoIcon = Template.bind({});
 NoIcon.args = {
   currentValue: "85",
   totalValue: "85",
-  variant: "error",
+  variant: "destructive",
 };
