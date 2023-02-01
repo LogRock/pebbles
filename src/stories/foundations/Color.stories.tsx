@@ -1,4 +1,5 @@
-import React from "react";
+import { ComponentMeta, Story } from "@storybook/react";
+import React, { ComponentProps, PropsWithChildren } from "react";
 
 import Color from "./Color";
 
@@ -12,27 +13,31 @@ export default {
         "primary",
         "secondary",
         "success",
-        "alert",
         "warning",
         "destructive",
       ],
-      control: { type: "radio" },
+      control: { type: "select", default: "neutral" },
+    },
+    shade: {
+      control: { type: "hidden" },
     },
   },
-};
+} as ComponentMeta<typeof Color>;
 
-const Template = (args) => (
+const Template: Story<PropsWithChildren<ComponentProps<typeof Color>>> = (
+  args
+) => (
   <>
-    <Color {...args} value="50" />
-    <Color {...args} value="100" />
-    <Color {...args} value="200" />
-    <Color {...args} value="300" />
-    <Color {...args} value="400" />
-    <Color {...args} value="500" />
-    <Color {...args} value="600" />
-    <Color {...args} value="700" />
-    <Color {...args} value="800" />
-    <Color {...args} value="900" />
+    <Color {...args} shade="50" />
+    <Color {...args} shade="100" />
+    <Color {...args} shade="200" />
+    <Color {...args} shade="300" />
+    <Color {...args} shade="400" />
+    <Color {...args} shade="500" />
+    <Color {...args} shade="600" />
+    <Color {...args} shade="700" />
+    <Color {...args} shade="800" />
+    <Color {...args} shade="900" />
   </>
 );
 

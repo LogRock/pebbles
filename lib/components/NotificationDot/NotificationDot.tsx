@@ -6,7 +6,7 @@ export interface NotificationDotProps {
 }
 
 const NotificationDot = styled.div<NotificationDotProps>`
-  ${({ theme, variant = "NEUTRAL_ALT" }) => css`
+  ${({ theme, variant = STATUS_TAG_VARIANTS.NEUTRAL_ALT }) => css`
     display: inline-flex;
     box-sizing: border-box;
     flex-flow: row nowrap;
@@ -23,8 +23,8 @@ const NotificationDot = styled.div<NotificationDotProps>`
     color: ${theme.statusTag.color.content[variant]};
     font-family: ${theme.statusTag.typography.SMALL.fontFamily};
     font-size: 10px;
-    font-weight: ${theme.statusTag.typography.SMALL.weight};
-    line-height: ${theme.statusTag.typography.SMALL.lineHeight};
+    font-weight: ${theme.statusTag.typography.SMALL.desktop.weights.normal};
+    line-height: ${theme.statusTag.typography.SMALL.desktop.lineHeight};
     text-transform: ${theme.statusTag.typography.SMALL.textTransform};
     vertical-align: super;
   `}

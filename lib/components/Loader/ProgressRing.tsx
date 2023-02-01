@@ -34,13 +34,15 @@ export const Label = styled.div<TypographyParagraphProps>`
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphXSmall.fontFamily};
-  font-size: ${({ theme }) => theme.typography.paragraphXSmall.fontSize};
+  font-size: ${({ theme }) =>
+    theme.typography.paragraphXSmall.desktop.fontSize};
   font-style: normal;
   font-weight: ${({ theme, weight }) =>
     weight
       ? theme.typography.paragraphXSmall.desktop.weights[weight]
       : theme.typography.paragraphXSmall.desktop.weights.normal};
-  line-height: ${({ theme }) => theme.typography.paragraphXSmall.lineHeight};
+  line-height: ${({ theme }) =>
+    theme.typography.paragraphXSmall.desktop.lineHeight};
 `;
 
 const ProgressRing: FC<ProgressRingProps> = ({

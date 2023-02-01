@@ -29,7 +29,8 @@ export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
     color: ${({ theme, status }) =>
       theme.inputBox[status || defaultStatus].color};
     font-family: ${({ theme }) => theme.typography.paragraphMedium.fontFamily};
-    font-size: ${({ theme }) => theme.typography.paragraphMedium.fontSize};
+    font-size: ${({ theme }) =>
+      theme.typography.paragraphMedium.desktop.fontSize};
 
     &:focus {
       box-sizing: ${({ theme, status }) =>

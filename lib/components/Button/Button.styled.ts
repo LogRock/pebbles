@@ -147,20 +147,11 @@ const iconButtonSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
   `}
 `;
 
-const iconButtonIconSizeCSS = css<Pick<ButtonProps, "buttonSize">>`
-  width: ${({ theme, buttonSize }) =>
-    theme.buttons.icon[buttonSize || "medium"].buttonSize};
-  height: ${({ theme, buttonSize }) =>
-    theme.buttons.icon[buttonSize || "medium"].buttonSize};
-`;
-
 export const IconButtonIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-
-  ${iconButtonIconSizeCSS}
 `;
 
 export const IconButton = styled.button<

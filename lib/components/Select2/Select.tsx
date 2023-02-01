@@ -100,7 +100,7 @@ function Select<
       colors: {
         danger: theme.colors.destructive[500],
         dangerLight: theme.colors.destructive[300],
-        neutral0: "black",
+        neutral0: "white",
         neutral5: theme.colors.neutral[50],
         neutral10: theme.colors.neutral[100],
         neutral20: theme.colors.neutral[200],

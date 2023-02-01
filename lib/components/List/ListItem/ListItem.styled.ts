@@ -5,9 +5,9 @@ const typographyCSS = css<Pick<ListItemProps, "size">>`
   font-family: ${({ theme, size }) =>
     theme.list.item[size || "medium"].typography.fontFamily};
   font-size: ${({ theme, size }) =>
-    theme.list.item[size || "medium"].typography.fontSize};
+    theme.list.item[size || "medium"].typography.desktop.fontSize};
   line-height: ${({ theme, size }) =>
-    theme.list.item[size || "medium"].typography.lineHeight};
+    theme.list.item[size || "medium"].typography.desktop.lineHeight};
 `;
 
 export const ListItemWrapper = styled.li<Pick<ListItemProps, "size">>`

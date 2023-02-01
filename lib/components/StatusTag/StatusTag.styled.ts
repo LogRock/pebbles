@@ -16,9 +16,9 @@ export const StatusTagContainer = styled.div<StatusTagProps>`
 
     color: ${theme.statusTag.color.content[variant]};
     font-family: ${theme.statusTag.typography[size].fontFamily};
-    font-size: ${theme.statusTag.typography[size].fontSize};
-    font-weight: ${theme.statusTag.typography[size].weight};
-    line-height: ${theme.statusTag.typography[size].lineHeight};
+    font-size: ${theme.statusTag.typography[size].desktop.fontSize};
+    font-weight: ${theme.statusTag.typography[size].desktop.weights.bold};
+    line-height: ${theme.statusTag.typography[size].desktop.lineHeight};
     text-transform: ${theme.statusTag.typography[size].textTransform};
   `}
 `;
