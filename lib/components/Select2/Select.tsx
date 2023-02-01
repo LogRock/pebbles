@@ -71,15 +71,15 @@ function Select<
             ? theme.inputBox[status || defaultStatus].focused.border
             : theme.inputBox[status || defaultStatus].border,
           fontFamily: theme.typography.paragraphMedium.fontFamily,
-          fontWeight: theme.typography.paragraphMedium.weights.normal,
-          fontSize: theme.typography.paragraphMedium.fontSize,
+          fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
+          fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         };
       },
       option: (provided) => ({
         ...provided,
         fontFamily: theme.typography.paragraphMedium.fontFamily,
-        fontWeight: theme.typography.paragraphMedium.weights.normal,
-        fontSize: theme.typography.paragraphMedium.fontSize,
+        fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
+        fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         padding: theme.inputBox.padding,
       }),
       menu: (provided) => ({
@@ -98,9 +98,9 @@ function Select<
     () => ({
       borderRadius: theme.inputBox.borderRadius as number,
       colors: {
-        danger: theme.colors.error[500],
-        dangerLight: theme.colors.error[300],
-        neutral0: theme.colors.shades[0],
+        danger: theme.colors.destructive[500],
+        dangerLight: theme.colors.destructive[300],
+        neutral0: "black",
         neutral5: theme.colors.neutral[50],
         neutral10: theme.colors.neutral[100],
         neutral20: theme.colors.neutral[200],

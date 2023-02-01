@@ -1,3 +1,6 @@
+/**
+ * @deprecated in favor of Title and Text
+ */
 export {
   DisplayLarge,
   DisplaySmall,
@@ -23,4 +26,8 @@ export type {
   TypographyHeaderProps,
   TypographyOverlineProps,
   TypographyParagraphProps,
+  TitleProps,
+  TextProps,
 } from "./Typography.types";
+
+export { Title, Text } from "./Typography";

@@ -147,7 +147,7 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
       &__month-year-dropdown {
         border: 1px solid rgba(0,0,0,0.04);
 
-        background-color: ${({ theme }) => theme.colors.shades[0]};
+        background-color: white;
         box-shadow: ${({ theme }) => theme.shadows.xxLarge};
       }
 

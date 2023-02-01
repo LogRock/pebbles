@@ -96,7 +96,7 @@
     "semantic-release-slack-bot": "^3.5.2",
     "storybook-addon-styled-component-theme": "^2.0.0",
     "styled-breakpoints": "^10.0.1",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.6",
     "stylelint": "^14.0.1",
     "stylelint-config-property-sort-order-smacss": "^8.0.0",
     "stylelint-config-recommended": "^6.0.0",

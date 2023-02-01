@@ -24,11 +24,15 @@ export {
   paragraphSmallCSS,
   ParagraphXSmall,
   paragraphXSmallCSS,
+  Text,
+  Title,
 } from "./components/Typography";
 export type {
   TypographyHeaderProps,
   TypographyOverlineProps,
   TypographyParagraphProps,
+  TextProps,
+  TitleProps,
 } from "./components/Typography";
 
 // expose Button

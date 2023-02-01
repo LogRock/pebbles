@@ -13,7 +13,7 @@ const Card = styled.div<CardProps>`
 
   border-radius: ${({ theme, radius }) => theme.spacings[radius || "sm"]};
 
-  background: ${({ theme }) => theme.colors.shades[0]};
+  background: white;
   box-shadow: ${({ theme, shadow }) => theme.shadows[shadow || "small"]};
 
   ${({ noPadding }) =>
