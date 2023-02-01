@@ -3,30 +3,30 @@
 exports[`TabView > renders TabView properly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL eukWAO"
+    class="sc-bcXHqe hngVog"
   >
     <div
-      class="sc-gsDKAQ lfSFVJ"
+      class="sc-gswNZR cOzQFi"
     >
       <a
-        class="sc-dkPtRN jEbEwJ"
+        class="sc-dkrFOg flirZo"
       >
         Tab 1
       </a>
       <a
-        class="sc-dkPtRN ghfpms"
+        class="sc-dkrFOg iPkxDF"
       >
         Tab 2
       </a>
       <a
-        class="sc-dkPtRN iRTjME"
+        class="sc-dkrFOg dwmmvd"
         disabled=""
       >
         Tab 3
       </a>
     </div>
     <div
-      class="sc-hKwDye fyhOfe"
+      class="sc-hLBbgP dbjBHo"
     >
       <h4>
         Tab Content here
@@ -39,20 +39,20 @@ exports[`TabView > renders TabView properly 1`] = `
 exports[`TabView > shouldn't have href when disabled 1`] = `
 <div>
   <div
-    class="sc-bdvvtL eukWAO"
+    class="sc-bcXHqe hngVog"
   >
     <div
-      class="sc-gsDKAQ lfSFVJ"
+      class="sc-gswNZR cOzQFi"
     >
       <a
-        class="sc-dkPtRN iRTjME"
+        class="sc-dkrFOg dwmmvd"
         disabled=""
       >
         Tab 1
       </a>
     </div>
     <div
-      class="sc-hKwDye fyhOfe"
+      class="sc-hLBbgP dbjBHo"
     >
       <h4>
         Tab Content here

@@ -38,8 +38,8 @@ export const Label = styled.div<TypographyParagraphProps>`
   font-style: normal;
   font-weight: ${({ theme, weight }) =>
     weight
-      ? theme.typography.paragraphXSmall.weights[weight]
-      : theme.typography.paragraphXSmall.weights.normal};
+      ? theme.typography.paragraphXSmall.desktop.weights[weight]
+      : theme.typography.paragraphXSmall.desktop.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphXSmall.lineHeight};
 `;
 

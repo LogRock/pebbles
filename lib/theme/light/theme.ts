@@ -610,7 +610,7 @@ const progressBar: ProgressBar = {
   barColor: {
     primary: primary["500"],
     secondary: secondary["500"],
-    error: error["500"],
+    error: destructive["500"],
     warning: warning["500"],
     success: success["500"],
     neutral: neutral["500"],
