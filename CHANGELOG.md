@@ -1,3 +1,18 @@
+# [13.0.0](https://github.com/LogRock/pebbles/compare/v12.1.0...v13.0.0) (2023-02-01)
+
+### Features
+
+- **progress-bar:** add color variants ([02ecaac](https://github.com/LogRock/pebbles/commit/02ecaacc06195ff5a007db8dedbc29ef8568f77e))
+- **typography:** :sparkles: remake the typography components ([be64ccf](https://github.com/LogRock/pebbles/commit/be64ccf2d58949b91a1a1e28069ca1d0be01f8d6))
+
+### Tests
+
+- **typography:** :camera_flash: update relevant snapshots ([a3ed625](https://github.com/LogRock/pebbles/commit/a3ed625e372fbddfec9d71538503535337198a8d))
+
+### BREAKING CHANGES
+
+- **typography:** colors api changed
+
 # [12.1.0](https://github.com/LogRock/pebbles/compare/v12.0.0...v12.1.0) (2023-01-27)
 
 ### Bug Fixes

@@ -14,7 +14,7 @@
       "require": "./dist/logrock-pebbles.umd.js"
     }
   },
-  "version": "12.1.0",
+  "version": "13.0.0",
   "scripts": {
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
