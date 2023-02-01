@@ -9,7 +9,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
         class="sc-idXgbr fGGvwS"
       >
         <label
-          class="sc-dIfARi fQSKAt"
+          class="sc-dIfARi jlslW"
           for="pebbles__input__1"
         />
         <div
@@ -19,11 +19,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             style="padding: 10px 12px;"
           >
             <label
-              class="sc-fnGiBr hXyikL"
+              class="sc-fnGiBr UYpaC"
               for="A"
             >
               <div
-                class="sc-fEXmlR cNDkQi"
+                class="sc-fEXmlR cNDMXI"
               >
                 A
               </div>
@@ -38,11 +38,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
               />
             </label>
             <label
-              class="sc-fnGiBr hXyikL"
+              class="sc-fnGiBr UYpaC"
               for="B"
             >
               <div
-                class="sc-fEXmlR cNDkQi"
+                class="sc-fEXmlR cNDMXI"
               >
                 B
               </div>
@@ -56,11 +56,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
               />
             </label>
             <label
-              class="sc-fnGiBr hXyikL"
+              class="sc-fnGiBr UYpaC"
               for="C"
             >
               <div
-                class="sc-fEXmlR cNDkQi"
+                class="sc-fEXmlR cNDMXI"
               >
                 C
               </div>
@@ -80,7 +80,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
           class="sc-hHTYSt kZyfYY"
         >
           <label
-            class="sc-dIfARi sc-dmctIk fQSKAt dXKLIS"
+            class="sc-dIfARi sc-dmctIk jlslW kQdzNI"
           />
         </div>
       </div>
@@ -91,7 +91,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
       class="sc-idXgbr fGGvwS"
     >
       <label
-        class="sc-dIfARi fQSKAt"
+        class="sc-dIfARi jlslW"
         for="pebbles__input__1"
       />
       <div
@@ -101,11 +101,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
           style="padding: 10px 12px;"
         >
           <label
-            class="sc-fnGiBr hXyikL"
+            class="sc-fnGiBr UYpaC"
             for="A"
           >
             <div
-              class="sc-fEXmlR cNDkQi"
+              class="sc-fEXmlR cNDMXI"
             >
               A
             </div>
@@ -120,11 +120,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             />
           </label>
           <label
-            class="sc-fnGiBr hXyikL"
+            class="sc-fnGiBr UYpaC"
             for="B"
           >
             <div
-              class="sc-fEXmlR cNDkQi"
+              class="sc-fEXmlR cNDMXI"
             >
               B
             </div>
@@ -138,11 +138,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             />
           </label>
           <label
-            class="sc-fnGiBr hXyikL"
+            class="sc-fnGiBr UYpaC"
             for="C"
           >
             <div
-              class="sc-fEXmlR cNDkQi"
+              class="sc-fEXmlR cNDMXI"
             >
               C
             </div>
@@ -162,7 +162,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
         class="sc-hHTYSt kZyfYY"
       >
         <label
-          class="sc-dIfARi sc-dmctIk fQSKAt dXKLIS"
+          class="sc-dIfARi sc-dmctIk jlslW kQdzNI"
         />
       </div>
     </div>

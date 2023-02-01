@@ -39,7 +39,7 @@ exports[`ProgressRing tests > matches the component snapshot 1`] = `
     />
   </svg>
   <div
-    class="sc-gswNZR jznAPk"
+    class="sc-gswNZR gydReF"
   >
     75%
   </div>
