@@ -1,11 +1,12 @@
 import React, { FC, useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
+import { colorTokens, shadeTokens } from "../../../lib/types/tokens";
 
-const ColorBox = styled.div<{ color: string; value: string }>`
+const ColorBox = styled.div<{ color: colorTokens; shade: shadeTokens }>`
   width: 147px;
   height: 72px;
-  background: ${({ theme, color, value }) => {
-    return theme.colors[color][value];
+  background: ${({ theme, color, shade }) => {
+    return theme.colors[color][shade];
   }};
   border-radius: 4px;
 `;
@@ -23,15 +24,18 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Color: FC<{ color: string; value: string }> = ({ color, value }) => {
+const Color: FC<{ color: colorTokens; shade: shadeTokens }> = ({
+  color,
+  shade,
+}) => {
   const theme = useContext(ThemeContext);
 
   return (
     <Wrapper>
-      <ColorBox color={color} value={value} />
+      <ColorBox color={color} shade={shade} />
       <Values>
-        <div>{value}</div>
-        <div>{theme.colors[color][value]}</div>
+        <div>{shade}</div>
+        <div>{theme.colors[color][shade]}</div>
       </Values>
     </Wrapper>
   );

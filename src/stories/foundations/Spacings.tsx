@@ -1,5 +1,6 @@
 import React, { FC, useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
+import { spacingTokens } from "../../../lib/types/tokens";
 
 const Table = styled.table`
   text-align: left;
@@ -23,12 +24,12 @@ const Spacings: FC = () => {
       {Object.keys(theme.spacings).map((spacing) => (
         <tr key={spacing}>
           <td>{spacing}</td>
-          <td>{theme.spacings[spacing]}</td>
+          <td>{theme.spacings[spacing as spacingTokens]}</td>
           <td>
             <div
               style={{
                 background: theme.colors.primary["400"],
-                width: theme.spacings[spacing],
+                width: theme.spacings[spacing as spacingTokens],
                 height: 20,
               }}
             />

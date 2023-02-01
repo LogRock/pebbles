@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { gradientTokens } from "../../../lib/types/tokens";
 
-const LinearGradientBox = styled.div<{ name: string }>`
+const LinearGradientBox = styled.div<{ name: gradientTokens }>`
   width: 392px;
   height: 72px;
   background: ${({ theme, name }) => {
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Shade: FC<{ name: string }> = ({ name }) => {
+const Shade: FC<{ name: gradientTokens }> = ({ name }) => {
   return (
     <Wrapper>
       <LinearGradientBox name={name} />

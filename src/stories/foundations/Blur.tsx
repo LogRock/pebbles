@@ -1,8 +1,9 @@
 import React, { FC, useContext } from "react";
 
 import styled, { ThemeContext } from "styled-components";
+import { blurTokens } from "../../../lib/types/tokens";
 
-const BlurBox = styled.img<{ blur: string }>`
+const BlurBox = styled.img<{ blur: blurTokens }>`
   width: 176px;
   height: 176px;
   filter: blur(${({ theme, blur }) => theme.blurs[blur]});
@@ -25,7 +26,7 @@ const Outer = styled.div`
   width: 176px;
 `;
 
-const Color: FC<{ blur: string }> = ({ blur }) => {
+const Color: FC<{ blur: blurTokens }> = ({ blur }) => {
   const theme = useContext(ThemeContext);
 
   return (

@@ -62,7 +62,7 @@ export const SelectItems = styled.div<{
       !expandUp &&
       `calc(
         ${inputHeight}px
-        + -${helper ? theme.typography.paragraphMedium.fontSize : "0px"}
+        + -${helper ? theme.typography.paragraphMedium.desktop.fontSize : "0px"}
         - 4px
       )`};
     bottom: ${({ expandUp, theme, description, inputHeight }) =>

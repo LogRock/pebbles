@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { shadowTokens } from "../../../lib/types/tokens";
 
-const ShadowBox = styled.div<{ variant: string }>`
+const ShadowBox = styled.div<{ variant: shadowTokens }>`
   width: 176px;
   height: 176px;
   background: white;
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Shadow: FC<{ variant: string }> = ({ variant }) => {
+const Shadow: FC<{ variant: shadowTokens }> = ({ variant }) => {
   return (
     <Wrapper>
       <ShadowBox variant={variant} />
