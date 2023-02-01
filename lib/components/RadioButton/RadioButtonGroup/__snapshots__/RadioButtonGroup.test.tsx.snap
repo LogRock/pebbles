@@ -5,18 +5,18 @@ exports[`RadioButtonGroup > render properly 1`] = `
   grouptitle="Pick at least 6 options"
 >
   <div
-    class="sc-bqiRlB bcdMtC"
+    class="sc-hBxehG kTxnaN"
   >
     Pick at least 6 options
   </div>
   <div
-    class="sc-hBUSln beONfL"
+    class="sc-fEXmlR PlfTg"
   >
     <label
       for="logrock_pebbles_radiobutton1"
     >
       <input
-        class="sc-ksdxgE gFrZGZ"
+        class="sc-fnGiBr lJDMo"
         id="logrock_pebbles_radiobutton1"
         name="radio-button"
         type="radio"
@@ -25,13 +25,13 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-hBUSln beONfL"
+    class="sc-fEXmlR PlfTg"
   >
     <label
       for="logrock_pebbles_radiobutton2"
     >
       <input
-        class="sc-ksdxgE gFrZGZ"
+        class="sc-fnGiBr lJDMo"
         id="logrock_pebbles_radiobutton2"
         name="radio-button"
         type="radio"
@@ -40,13 +40,13 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-hBUSln beONfL"
+    class="sc-fEXmlR PlfTg"
   >
     <label
       for="logrock_pebbles_radiobutton3"
     >
       <input
-        class="sc-ksdxgE gFrZGZ"
+        class="sc-fnGiBr lJDMo"
         id="logrock_pebbles_radiobutton3"
         name="radio-button"
         type="radio"
@@ -55,13 +55,13 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-hBUSln beONfL"
+    class="sc-fEXmlR PlfTg"
   >
     <label
       for="logrock_pebbles_radiobutton4"
     >
       <input
-        class="sc-ksdxgE gFrZGZ"
+        class="sc-fnGiBr lJDMo"
         id="logrock_pebbles_radiobutton4"
         name="radio-button"
         type="radio"
@@ -70,13 +70,13 @@ exports[`RadioButtonGroup > render properly 1`] = `
     </label>
   </div>
   <div
-    class="sc-hBUSln beONfL"
+    class="sc-fEXmlR PlfTg"
   >
     <label
       for="logrock_pebbles_radiobutton5"
     >
       <input
-        class="sc-ksdxgE gFrZGZ"
+        class="sc-fnGiBr lJDMo"
         id="logrock_pebbles_radiobutton5"
         name="radio-button"
         type="radio"

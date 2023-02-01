@@ -2,16 +2,16 @@
 
 exports[`Table > renders selected rows 1`] = `
 <table
-  class="sc-bBHxTw dMRFpD"
+  class="sc-cwSeag iGwFxV"
 >
   <thead
-    class="sc-iwjdpV gvtLUC"
+    class="sc-lllmON cOPMjC"
   >
     <tr
-      class="sc-giYglK hyaMCf"
+      class="sc-bYMpWt hHNmTI"
     >
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -20,7 +20,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -29,7 +29,7 @@ exports[`Table > renders selected rows 1`] = `
         </span>
       </th>
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -40,61 +40,61 @@ exports[`Table > renders selected rows 1`] = `
     </tr>
   </thead>
   <tbody
-    class="sc-cxpSdN YQwvn"
+    class="sc-iJnaPW hwvfhX"
   >
     <tr
-      class="sc-giYglK hyaMCf"
+      class="sc-bYMpWt hHNmTI"
     >
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content A1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content B1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content C1
       </td>
     </tr>
     <tr
-      class="sc-giYglK gDZzfB"
+      class="sc-bYMpWt ghLukq"
     >
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content A2
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content B2
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content C2
       </td>
     </tr>
     <tr
-      class="sc-giYglK hyaMCf"
+      class="sc-bYMpWt hHNmTI"
     >
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content A3
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content B3
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content C3
       </td>
@@ -105,16 +105,16 @@ exports[`Table > renders selected rows 1`] = `
 
 exports[`Table > renders with some content 1`] = `
 <table
-  class="sc-bBHxTw dMRFpD"
+  class="sc-cwSeag iGwFxV"
 >
   <thead
-    class="sc-iwjdpV gvtLUC"
+    class="sc-lllmON cOPMjC"
   >
     <tr
-      class="sc-giYglK hyaMCf"
+      class="sc-bYMpWt hHNmTI"
     >
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -123,7 +123,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -146,7 +146,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -169,7 +169,7 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <th
-        class="sc-llYSUQ iHTMeq"
+        class="sc-gikAfH kHzrOR"
       >
         <span
           style="display: flex; align-items: center;"
@@ -192,58 +192,58 @@ exports[`Table > renders with some content 1`] = `
         </span>
       </th>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       />
     </tr>
   </thead>
   <tbody
-    class="sc-cxpSdN YQwvn"
+    class="sc-iJnaPW hwvfhX"
   >
     <tr
-      class="sc-giYglK hyaMCf"
+      class="sc-bYMpWt hHNmTI"
     >
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content A1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content B1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content C1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       />
     </tr>
     <tr
-      class="sc-giYglK iPayEy"
+      class="sc-bYMpWt ZnTbF"
     >
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content A1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content B1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         Content C1
       </td>
       <td
-        class="sc-iJKOTD NFJUK"
+        class="sc-ezOQGI jAHLeW"
       >
         <span
-          class="sc-ezbkAF fNroCL"
+          class="sc-kMjNwy iIcjrg"
         >
           New
         </span>

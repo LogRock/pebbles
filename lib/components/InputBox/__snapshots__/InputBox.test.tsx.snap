@@ -4,28 +4,28 @@ exports[`InputBox > get InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-bqiRlB djhLrX"
+      class="sc-hBxehG dGHBVY"
     >
       <label
-        class="sc-ksdxgE goqJBX"
+        class="sc-fnGiBr cVJaPi"
         for="textId"
       >
         User Name
       </label>
       <div
-        class="sc-hGPBjI fefdZJ"
+        class="sc-kgTSHT eUhlhh"
       >
         <input
-          class="sc-dlVxhl jtkHNF"
+          class="sc-fLcnxK iypHzK"
           id="textId"
           type="text"
         />
       </div>
       <div
-        class="sc-hBUSln cGVCQJ"
+        class="sc-fEXmlR gBtkIG"
       >
         <label
-          class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
+          class="sc-fnGiBr sc-bjfHbI cVJaPi kqwkSf"
         />
       </div>
     </div>
@@ -37,19 +37,19 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-bqiRlB djhLrX"
+      class="sc-hBxehG dGHBVY"
     >
       <label
-        class="sc-ksdxgE goqJBX"
+        class="sc-fnGiBr cVJaPi"
         for="phoneId"
       >
         Phone Info
       </label>
       <div
-        class="sc-hGPBjI fefdZJ"
+        class="sc-kgTSHT eUhlhh"
       >
         <div
-          class="sc-ikJyIC ggzOrE PhoneInput PhoneInput--focus"
+          class="sc-hhOBVt jtKHTV PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1314,10 +1314,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         </div>
       </div>
       <div
-        class="sc-hBUSln cGVCQJ"
+        class="sc-fEXmlR gBtkIG"
       >
         <label
-          class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
+          class="sc-fnGiBr sc-bjfHbI cVJaPi kqwkSf"
         />
       </div>
     </div>
@@ -1328,25 +1328,25 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bqiRlB djhLrX"
+    class="sc-hBxehG dGHBVY"
   >
     <label
-      class="sc-ksdxgE goqJBX"
+      class="sc-fnGiBr cVJaPi"
       for="pebbles__input__1"
     />
     <div
-      class="sc-hGPBjI fefdZJ"
+      class="sc-kgTSHT eUhlhh"
     >
       <input
-        class="sc-dlVxhl jtkHNF"
+        class="sc-fLcnxK iypHzK"
         id="pebbles__input__1"
       />
     </div>
     <div
-      class="sc-hBUSln cGVCQJ"
+      class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
+        class="sc-fnGiBr sc-bjfHbI cVJaPi kqwkSf"
       />
     </div>
   </div>
@@ -1356,17 +1356,17 @@ exports[`InputBox > renders InputBox properly 1`] = `
 exports[`InputBox > renders Number InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bqiRlB djhLrX"
+    class="sc-hBxehG dGHBVY"
   >
     <label
-      class="sc-ksdxgE goqJBX"
+      class="sc-fnGiBr cVJaPi"
     />
     <div
-      class="sc-giYglK kGrFoY"
+      class="sc-bYMpWt jjOoVb"
     >
       <button
         aria-label="decrease button"
-        class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
+        class="sc-cwSeag iSEmUk sc-jIRcFI gvUhET"
       >
         <svg
           fill="currentColor"
@@ -1383,16 +1383,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         </svg>
       </button>
       <div
-        class="sc-bYoBSM dZxkAw"
+        class="sc-ilhmMj gzYeiu"
       >
         <input
-          class="sc-dlVxhl sc-ezbkAF jtkHNF hPUPOl"
+          class="sc-fLcnxK sc-kMjNwy iypHzK hecmlh"
           type="number"
         />
       </div>
       <button
         aria-label="increase button"
-        class="sc-bBHxTw vrFXW sc-kLwhqv cZnskk"
+        class="sc-cwSeag iSEmUk sc-jIRcFI gvUhET"
       >
         <svg
           fill="currentColor"
@@ -1410,10 +1410,10 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       </button>
     </div>
     <div
-      class="sc-hBUSln cGVCQJ"
+      class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
+        class="sc-fnGiBr sc-bjfHbI cVJaPi kqwkSf"
       />
     </div>
   </div>
@@ -1423,17 +1423,17 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
 exports[`InputBox > renders Phone InputBox properly 1`] = `
 <div>
   <div
-    class="sc-bqiRlB djhLrX"
+    class="sc-hBxehG dGHBVY"
   >
     <label
-      class="sc-ksdxgE goqJBX"
+      class="sc-fnGiBr cVJaPi"
       for="pebbles__input__2"
     />
     <div
-      class="sc-hGPBjI fefdZJ"
+      class="sc-kgTSHT eUhlhh"
     >
       <div
-        class="sc-ikJyIC ggzOrE PhoneInput"
+        class="sc-hhOBVt jtKHTV PhoneInput"
       >
         <div
           class="PhoneInputCountry"
@@ -2696,10 +2696,10 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       </div>
     </div>
     <div
-      class="sc-hBUSln cGVCQJ"
+      class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-ksdxgE sc-fotOHu goqJBX kERcqs"
+        class="sc-fnGiBr sc-bjfHbI cVJaPi kqwkSf"
       />
     </div>
   </div>

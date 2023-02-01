@@ -266,8 +266,8 @@ export const ParagraphLarge = styled.p<TypographyParagraphProps>`
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
-      ? theme.typography.paragraphLarge.weights[weight]
-      : theme.typography.paragraphLarge.weights.normal};
+      ? theme.typography.paragraphLarge.desktop.weights[weight]
+      : theme.typography.paragraphLarge.desktop.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphLarge.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
@@ -281,8 +281,8 @@ export const paragraphMediumCSS = css<TypographyParagraphProps>`
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
-      ? theme.typography.paragraphMedium.weights[weight]
-      : theme.typography.paragraphMedium.weights.normal};
+      ? theme.typography.paragraphMedium.desktop.weights[weight]
+      : theme.typography.paragraphMedium.desktop.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphMedium.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
@@ -306,8 +306,8 @@ export const paragraphSmallCSS = css<TypographyParagraphProps>`
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
-      ? theme.typography.paragraphSmall.weights[weight]
-      : theme.typography.paragraphSmall.weights.normal};
+      ? theme.typography.paragraphSmall.desktop.weights[weight]
+      : theme.typography.paragraphSmall.desktop.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphSmall.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
@@ -331,8 +331,8 @@ export const paragraphXSmallCSS = css<TypographyParagraphProps>`
   font-style: ${({ italic }) => (italic ? "italic" : "normal")};
   font-weight: ${({ theme, weight }) =>
     weight
-      ? theme.typography.paragraphXSmall.weights[weight]
-      : theme.typography.paragraphXSmall.weights.normal};
+      ? theme.typography.paragraphXSmall.desktop.weights[weight]
+      : theme.typography.paragraphXSmall.desktop.weights.normal};
   line-height: ${({ theme }) => theme.typography.paragraphXSmall.lineHeight};
   text-decoration: ${decorationsFromProps};
 `;
