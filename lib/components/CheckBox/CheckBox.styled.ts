@@ -52,7 +52,7 @@ export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
 `;
 
 export const LabelContent = styled.div`
-  margin-top: ${({ theme }) => theme.spacings.xxxsm};
+  margin-top: ${({ theme }) => theme.spacings.xxsm};
 `;
 
 export const Input = styled.input`

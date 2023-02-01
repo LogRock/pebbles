@@ -111,7 +111,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
         </StyledButton>
       </NumberInputBoxWrapper>
       <HelperDiv>
-        {status === "error" && (
+        {status === "destructive" && (
           <HelperIcon status={status}>
             <BsExclamationTriangleFill />
           </HelperIcon>

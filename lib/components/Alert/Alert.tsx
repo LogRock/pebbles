@@ -7,7 +7,7 @@ import { paragraphMediumCSS } from "../Typography/Typography.styled";
 
 export interface AlertProps {
   title?: React.ReactNode;
-  status?: "neutral" | "primary" | "success" | "warning" | "error";
+  status?: "neutral" | "primary" | "success" | "warning" | "destructive";
   visible?: boolean;
   mainButtonContent?: React.ReactNode;
   auxButtonContent?: React.ReactNode;
@@ -69,7 +69,7 @@ const Title = styled.span<Pick<AlertProps, "status">>`
 
   color: ${({ theme, status }) => theme.alert[status || "neutral"].titleColor};
   font-weight: ${({ theme }) => theme.alert.title.fontWeight};
-  line-height: ${({ theme }) => theme.alert.title.lineWeight};
+  line-height: ${({ theme }) => theme.alert.title.lineHeight};
 `;
 
 const Description = styled.span<Pick<AlertProps, "status" | "sticky">>`
@@ -99,7 +99,7 @@ const mainButtonStyle = {
     buttonStyle: "secondary",
     variant: "primary",
   },
-  error: {
+  destructive: {
     buttonStyle: "primary",
     variant: "destructive",
   },
@@ -199,7 +199,7 @@ const Alert: FC<AlertProps> = ({
       if (onMainButtonClick) onMainButtonClick(event);
       setIsAlertVisible(false);
     } catch (e) {
-      setStatusState("error");
+      setStatusState("destructive");
     }
   };
   const onHintClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -207,7 +207,7 @@ const Alert: FC<AlertProps> = ({
       if (onAuxButtonClick) onAuxButtonClick(event);
       setIsAlertVisible(false);
     } catch (e) {
-      setStatusState("error");
+      setStatusState("destructive");
     }
   };
 
@@ -216,7 +216,7 @@ const Alert: FC<AlertProps> = ({
       if (props.onCloseRequested) props.onCloseRequested(event);
       setIsAlertVisible(false);
     } catch (e) {
-      setStatusState("error");
+      setStatusState("destructive");
     }
   };
 

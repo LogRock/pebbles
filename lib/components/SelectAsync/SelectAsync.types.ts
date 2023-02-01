@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface CustomSelectProps {
-  status?: "info" | "error";
+  status?: "info" | "destructive";
   label?: React.ReactNode;
   helper?: React.ReactNode;
 }

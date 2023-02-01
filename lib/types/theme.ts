@@ -145,7 +145,7 @@ export interface InputBox {
     color: CSS.Property.Color;
   };
 
-  error: {
+  destructive: {
     color: CSS.Property.Color;
     border: CSS.Property.Border;
     boxShadow: CSS.Property.BoxShadow;
@@ -276,7 +276,6 @@ export interface ProgressBar {
   barColor: {
     primary: CSS.Property.Color;
     secondary: CSS.Property.Color;
-    error: CSS.Property.Color;
     warning: CSS.Property.Color;
     success: CSS.Property.Color;
     neutral: CSS.Property.Color;
@@ -289,7 +288,7 @@ export interface ProgressRing {
   ringForegroundColor: {
     primary: CSS.Property.Color;
     secondary: CSS.Property.Color;
-    error: CSS.Property.Color;
+    destructive: CSS.Property.Color;
     warning: CSS.Property.Color;
     success: CSS.Property.Color;
     neutral: CSS.Property.Color;
@@ -297,7 +296,7 @@ export interface ProgressRing {
   ringBackgroundColor: {
     primary: CSS.Property.Color;
     secondary: CSS.Property.Color;
-    error: CSS.Property.Color;
+    destructive: CSS.Property.Color;
     warning: CSS.Property.Color;
     success: CSS.Property.Color;
     neutral: CSS.Property.Color;
@@ -355,7 +354,7 @@ export interface Toggle {
 }
 
 interface ColorByVariant {
-  error: CSS.Property.Color;
+  destructive: CSS.Property.Color;
   errorAlt?: CSS.Property.Color;
   warning: CSS.Property.Color;
   warningAlt?: CSS.Property.Color;

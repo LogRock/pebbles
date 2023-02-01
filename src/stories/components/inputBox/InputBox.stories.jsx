@@ -41,7 +41,7 @@ InputBoxError.args = {
     icon: null,
   },
   helper: "please provide the VIN number",
-  status: "error",
+  status: "destructive",
   placeholder: "VIN",
   errorIcon: <BsExclamationTriangleFill />,
 };

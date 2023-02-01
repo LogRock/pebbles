@@ -41,9 +41,9 @@ const Template: ComponentStory<typeof SelectAsync> = (args) => (
 export const Default = Template.bind({});
 Default.args = {};
 
-export const Error = Template.bind({});
-Error.args = {
-  status: "error",
+export const Destructive = Template.bind({});
+Destructive.args = {
+  status: "destructive",
 };
 
 export const WithLabel = Template.bind({});

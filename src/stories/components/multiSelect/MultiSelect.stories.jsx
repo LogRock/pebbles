@@ -32,7 +32,7 @@ Default.args = {
   possibleValues: ["1st", "2nd", "3rd"],
   title: "Title Alternatives",
   description: "Description Alternatives",
-  status: "error",
+  status: "destructive",
   helper: "Please provide the alternatives",
 };
 
@@ -68,7 +68,7 @@ const CustomCheckBoxGroup = (props) => {
       possibleValues={props.schema.items.enum}
       values={props.formData || null}
       helper={props?.rawErrors?.length ? props.rawErrors.join("; ") : undefined}
-      status={props?.rawErrors?.length ? "error" : "info"}
+      status={props?.rawErrors?.length ? "destructive" : "info"}
       onChange={(data) => {
         props.onChange(data);
       }}

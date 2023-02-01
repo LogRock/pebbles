@@ -437,7 +437,7 @@ const inputBox: InputBox = {
   height: "50px",
   width: "100%",
 
-  error: {
+  destructive: {
     color: destructive[900],
     border: `1px solid ${destructive[300]}`,
     boxShadow: shadows.xSmall,
@@ -610,7 +610,6 @@ const progressBar: ProgressBar = {
   barColor: {
     primary: primary["500"],
     secondary: secondary["500"],
-    error: destructive["500"],
     warning: warning["500"],
     success: success["500"],
     neutral: neutral["500"],
@@ -623,7 +622,7 @@ const progressRing: ProgressRing = {
   ringForegroundColor: {
     primary: primary["500"],
     secondary: secondary["500"],
-    error: destructive["500"],
+    destructive: destructive["500"],
     warning: warning["500"],
     success: success["500"],
     neutral: neutral["500"],
@@ -631,7 +630,7 @@ const progressRing: ProgressRing = {
   ringBackgroundColor: {
     primary: primary["50"],
     secondary: secondary["50"],
-    error: destructive["50"],
+    destructive: destructive["50"],
     warning: warning["50"],
     success: success["50"],
     neutral: neutral["50"],
@@ -702,13 +701,13 @@ const toggle: Toggle = {
 
 const statusNumber: StatusNumber = {
   iconColor: {
-    error: destructive["600"],
+    destructive: destructive["600"],
     warning: warning["600"],
     success: success["600"],
     neutral: neutral["600"],
   },
   labelColor: {
-    error: destructive["600"],
+    destructive: destructive["600"],
     warning: warning["600"],
     success: success["600"],
     neutral: neutral["600"],

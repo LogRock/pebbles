@@ -62,7 +62,7 @@ const CustomDatePicker = function (props) {
       }}
       selected={myDate}
       helper={props?.rawErrors?.length ? props.rawErrors.join("; ") : undefined}
-      status={props?.rawErrors?.length ? "error" : "info"}
+      status={props?.rawErrors?.length ? "destructive" : "info"}
       disabled={props?.disabled || false}
     />
   );

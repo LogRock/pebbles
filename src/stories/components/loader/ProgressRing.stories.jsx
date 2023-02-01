@@ -36,13 +36,13 @@ Success.args = {
   label: "35%",
 };
 
-export const Error = Template.bind();
-Error.args = {
+export const Destructive = Template.bind();
+Destructive.args = {
   percentage: 15,
   radius: 40,
   stroke: 8,
   showBaseRing: true,
-  variant: "error",
+  variant: "destructive",
   label: "15%",
 };
 

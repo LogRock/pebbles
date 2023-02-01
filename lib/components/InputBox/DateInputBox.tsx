@@ -30,7 +30,7 @@ export interface DateInputBoxProps
     content: string;
     icon: React.ReactNode;
   };
-  status?: "info" | "error";
+  status?: "info" | "destructive";
   helper?: React.ReactNode;
   spaced?: boolean;
   onChange?: any;
@@ -95,7 +95,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
         )}
       </InputDiv>
       <HelperDiv>
-        {status === "error" && (
+        {status === "destructive" && (
           <HelperIcon status={status}>
             <BsExclamationTriangleFill />
           </HelperIcon>

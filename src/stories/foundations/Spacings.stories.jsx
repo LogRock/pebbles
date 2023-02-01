@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import Spacings from "./Spacings";
 
 export default {

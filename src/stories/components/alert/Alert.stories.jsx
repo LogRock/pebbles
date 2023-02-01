@@ -64,12 +64,12 @@ Warning.args = {
   showCloseButton: true,
 };
 
-export const Error = Template.bind({});
-Error.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   title: "Title here",
   children: "Description here",
   auxButtonContent: "Hint here",
-  status: "error",
+  status: "destructive",
   visible: true,
   mainButtonContent: "OK",
   icon: <BsExclamationTriangleFill />,
@@ -82,7 +82,7 @@ const MultiStickyTemplate = (args) => (
     <Alert status="neutral" sticky {...args} />
     <Alert status="success" sticky {...args} />
     <Alert status="warning" sticky {...args} />
-    <Alert status="error" sticky {...args} />
+    <Alert status="destructive" sticky {...args} />
   </>
 );
 
@@ -117,7 +117,7 @@ InteractiveAlert.args = {
   title: "Title here",
   children: "Description here",
   auxButtonContent: "Hint here",
-  status: "error",
+  status: "destructive",
   visible: true,
   mainButtonContent: "OK",
   icon: <BsExclamationTriangleFill />,
