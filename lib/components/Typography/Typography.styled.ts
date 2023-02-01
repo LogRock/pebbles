@@ -4,6 +4,8 @@ import {
   TypographyParagraphProps,
   TypographyHeaderProps,
   TypographyOverlineProps,
+  TitleProps,
+  TextProps,
 } from "./Typography.types";
 
 const decorationsFromProps = ({
@@ -16,6 +18,9 @@ const decorationsFromProps = ({
   return decorations.join(" ");
 };
 
+/**
+ * @deprecated in favor of Title
+ */
 export const DisplayLarge = styled.h1<TypographyHeaderProps>`
   margin: 0;
 
@@ -44,6 +49,9 @@ export const DisplayLarge = styled.h1<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const DisplaySmall = styled.h2<TypographyHeaderProps>`
   margin: 0;
 
@@ -72,6 +80,9 @@ export const DisplaySmall = styled.h2<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH1 = styled.h1<TypographyHeaderProps>`
   margin: 0;
 
@@ -98,6 +109,9 @@ export const HeadingH1 = styled.h1<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH2 = styled.h2<TypographyHeaderProps>`
   margin: 0;
 
@@ -124,6 +138,9 @@ export const HeadingH2 = styled.h2<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH3 = styled.h3<TypographyHeaderProps>`
   margin: 0;
 
@@ -150,6 +167,9 @@ export const HeadingH3 = styled.h3<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH4 = styled.h4<TypographyHeaderProps>`
   margin: 0;
 
@@ -176,6 +196,9 @@ export const HeadingH4 = styled.h4<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH5 = styled.h5<TypographyHeaderProps>`
   margin: 0;
 
@@ -202,6 +225,9 @@ export const HeadingH5 = styled.h5<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Title
+ */
 export const HeadingH6 = styled.h6<TypographyHeaderProps>`
   margin: 0;
 
@@ -228,6 +254,9 @@ export const HeadingH6 = styled.h6<TypographyHeaderProps>`
   }
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const ParagraphLarge = styled.p<TypographyParagraphProps>`
   margin: 0;
 
@@ -258,10 +287,16 @@ export const paragraphMediumCSS = css<TypographyParagraphProps>`
   text-decoration: ${decorationsFromProps};
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const ParagraphMedium = styled.p<TypographyParagraphProps>`
   ${paragraphMediumCSS}
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const paragraphSmallCSS = css<TypographyParagraphProps>`
   margin: 0;
 
@@ -277,10 +312,16 @@ export const paragraphSmallCSS = css<TypographyParagraphProps>`
   text-decoration: ${decorationsFromProps};
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const ParagraphSmall = styled.p<TypographyParagraphProps>`
   ${paragraphSmallCSS}
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const paragraphXSmallCSS = css<TypographyParagraphProps>`
   margin: 0;
 
@@ -296,10 +337,16 @@ export const paragraphXSmallCSS = css<TypographyParagraphProps>`
   text-decoration: ${decorationsFromProps};
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
   ${paragraphXSmallCSS}
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const OverlineLarge = styled.p<TypographyOverlineProps>`
   margin: 0;
 
@@ -312,6 +359,9 @@ export const OverlineLarge = styled.p<TypographyOverlineProps>`
   text-transform: uppercase;
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const OverlineMedium = styled.p<TypographyOverlineProps>`
   margin: 0;
 
@@ -324,6 +374,9 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
   text-transform: uppercase;
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const overlineXSmallCSS = css`
   margin: 0;
 
@@ -336,6 +389,63 @@ export const overlineXSmallCSS = css`
   text-transform: uppercase;
 `;
 
+/**
+ * @deprecated in favor of Text
+ */
 export const OverlineXSmall = styled.p<TypographyOverlineProps>`
   ${overlineXSmallCSS}
+`;
+
+export const StyledTitle = styled.h1<TitleProps>`
+  ${({
+    theme,
+    weight = "normal",
+    color = "neutral",
+    shade = "900",
+    type = "headingH1",
+  }) => css`
+    margin: 0;
+
+    color: ${theme.colors[color][shade]};
+    font-family: ${theme.typography[type].fontFamily};
+    font-size: ${theme.typography[type].mobile.fontSize};
+    font-weight: ${theme.typography[type].mobile.weights[weight]};
+    letter-spacing: ${theme.typography[type].mobile.tracking};
+    line-height: ${theme.typography[type].mobile.lineHeight};
+    text-transform: ${theme.typography[type].textTransform};
+
+    ${up("desktop")} {
+      font-size: ${theme.typography[type].desktop.fontSize};
+      font-weight: ${theme.typography[type].desktop.weights[weight]};
+      letter-spacing: ${theme.typography[type].desktop.tracking};
+      line-height: ${theme.typography[type].desktop.lineHeight};
+    }
+  `}
+`;
+
+export const StyledText = styled.p<TextProps>`
+  ${({
+    theme,
+    weight = "normal",
+    color = "neutral",
+    shade = "900",
+    type = "paragraphMedium",
+  }) => css`
+    margin: 0;
+
+    color: ${theme.colors[color][shade]};
+    font-family: ${theme.typography[type].fontFamily};
+    font-size: ${theme.typography[type].mobile.fontSize};
+    font-weight: ${theme.typography[type].mobile.weights[weight]};
+    letter-spacing: ${theme.typography[type].mobile.tracking};
+    line-height: ${theme.typography[type].mobile.lineHeight};
+    text-transform: ${theme.typography[type].textTransform};
+
+    ${up("desktop")} {
+      font-size: ${theme.typography[type].desktop.fontSize};
+      font-weight: ${theme.typography[type].desktop.weights[weight]};
+      letter-spacing: ${theme.typography[type].desktop.tracking};
+      line-height: ${theme.typography[type].desktop.lineHeight};
+    }
+  `}
 `;

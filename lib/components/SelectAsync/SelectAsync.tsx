@@ -61,9 +61,9 @@ function SelectAsync<
     () => ({
       borderRadius: theme.inputBox.borderRadius,
       colors: {
-        danger: theme.colors.error[500],
-        dangerLight: theme.colors.error[300],
-        neutral0: theme.colors.shades[0],
+        danger: theme.colors.destructive[500],
+        dangerLight: theme.colors.destructive[300],
+        neutral0: "white",
         neutral5: theme.colors.neutral[50],
         neutral10: theme.colors.neutral[100],
         neutral20: theme.colors.neutral[200],

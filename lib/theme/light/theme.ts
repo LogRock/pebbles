@@ -20,10 +20,8 @@ import Theme, {
 } from "../../types/theme";
 import {
   neutral,
-  error,
   primary,
   secondary,
-  shades,
   success,
   warning,
   destructive,
@@ -223,7 +221,7 @@ const primaryVariant: ButtonVariant = {
     background: primary["500"],
     borderColor: primary["500"],
     borderWidth: 0,
-    contentColor: shades["100"],
+    contentColor: "black",
     boxShadow: shadows.small,
     filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
@@ -252,18 +250,18 @@ const primaryVariant: ButtonVariant = {
 
 const destructiveVariant: ButtonVariant = {
   primary: {
-    background: error["500"],
-    borderColor: error["500"],
+    background: destructive["500"],
+    borderColor: destructive["500"],
     borderWidth: 0,
-    contentColor: shades["0"],
+    contentColor: "white",
     boxShadow: shadows.small,
     filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
   secondary: {
-    background: error["50"],
-    borderColor: error["50"],
+    background: destructive["50"],
+    borderColor: destructive["50"],
     borderWidth: 0,
-    contentColor: error["600"],
+    contentColor: destructive["600"],
     boxShadow: shadows.small,
     filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
   },
@@ -271,14 +269,14 @@ const destructiveVariant: ButtonVariant = {
     background: "transparent",
     borderColor: "transparent",
     borderWidth: 0,
-    contentColor: error["600"],
+    contentColor: destructive["600"],
     textDecorationLine: "none",
   },
   outlined: {
     background: "transparent",
-    borderColor: error["300"],
+    borderColor: destructive["300"],
     borderWidth: "1px",
-    contentColor: error["500"],
+    contentColor: destructive["500"],
   },
 };
 
@@ -319,7 +317,7 @@ const roundedVariant: ButtonVariant = {
     background: primary["500"],
     borderColor: primary["500"],
     borderWidth: 0,
-    contentColor: shades["100"],
+    contentColor: "black",
     borderRadius: "100px",
     boxShadow: shadows.small,
     filter: "drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1))",
@@ -440,15 +438,15 @@ const inputBox: InputBox = {
   width: "100%",
 
   error: {
-    color: error[900],
-    border: `1px solid ${error[300]}`,
+    color: destructive[900],
+    border: `1px solid ${destructive[300]}`,
     boxShadow: shadows.xSmall,
     hintColor: neutral[500],
     focused: {
       boxSizing: "border-box",
-      boxShadow: `0px 0px 0px ${spacings.xxsm} ${error["100"]}`,
+      boxShadow: `0px 0px 0px ${spacings.xxsm} ${destructive["100"]}`,
       borderRadius: "2px",
-      border: `1px solid ${error["300"]}`,
+      border: `1px solid ${destructive["300"]}`,
     },
   },
   info: {
@@ -506,7 +504,7 @@ const select: Select = {
 
 const checkBox: CheckBox = {
   checkMark: {
-    color: shades[0],
+    color: "white",
     width: spacings.xxsm,
     height: spacings.sm,
     left: "50%",
@@ -516,7 +514,7 @@ const checkBox: CheckBox = {
   height: spacings.xbig,
   marginRight: spacings.sm,
   default: {
-    background: shades[0],
+    background: "white",
     borderColor: neutral[300],
     borderWidth: "1px",
     borderStyle: "solid",
@@ -569,16 +567,6 @@ const alert: Alert = {
     titleColor: warning[800],
     descriptionColor: warning[700],
     iconColor: icons.alerts.warning.color,
-  },
-  /**
-   * @deprecated in favor of destructive
-   */
-  error: {
-    background: error[50],
-    borderColor: error[200],
-    titleColor: error[800],
-    descriptionColor: error[700],
-    iconColor: icons.alerts.destructive.color,
   },
   destructive: {
     background: destructive[50],
@@ -635,7 +623,7 @@ const progressRing: ProgressRing = {
   ringForegroundColor: {
     primary: primary["500"],
     secondary: secondary["500"],
-    error: error["500"],
+    error: destructive["500"],
     warning: warning["500"],
     success: success["500"],
     neutral: neutral["500"],
@@ -643,7 +631,7 @@ const progressRing: ProgressRing = {
   ringBackgroundColor: {
     primary: primary["50"],
     secondary: secondary["50"],
-    error: error["50"],
+    error: destructive["50"],
     warning: warning["50"],
     success: success["50"],
     neutral: neutral["50"],
@@ -658,7 +646,7 @@ const list: List = {
     margin: spacings.xxxbig,
     shadow: shadows.small,
     background: {
-      regular: shades[0],
+      regular: "white",
       hover: neutral[50],
       active: neutral[100],
     },
@@ -685,7 +673,7 @@ const list: List = {
 
 const toggle: Toggle = {
   indicator: {
-    color: shades[0],
+    color: "white",
     width: "22px",
     height: "22px",
     left1: "1px",
@@ -714,13 +702,13 @@ const toggle: Toggle = {
 
 const statusNumber: StatusNumber = {
   iconColor: {
-    error: error["600"],
+    error: destructive["600"],
     warning: warning["600"],
     success: success["600"],
     neutral: neutral["600"],
   },
   labelColor: {
-    error: error["600"],
+    error: destructive["600"],
     warning: warning["600"],
     success: success["600"],
     neutral: neutral["600"],
@@ -729,12 +717,12 @@ const statusNumber: StatusNumber = {
 const statusTrend: StatusTrend = {
   iconColor: {
     positive: success["600"],
-    negative: error["600"],
+    negative: destructive["600"],
     neutral: neutral["600"],
   },
   labelColor: {
     positive: success["600"],
-    negative: error["600"],
+    negative: destructive["600"],
     neutral: neutral["600"],
   },
   fontSize: "12px",
@@ -754,11 +742,11 @@ const statusTag: StatusTag = {
       [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["50"],
     },
     content: {
-      [STATUS_TAG_VARIANTS.DESTRUCTIVE]: shades["0"],
+      [STATUS_TAG_VARIANTS.DESTRUCTIVE]: "white",
       [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["500"],
-      [STATUS_TAG_VARIANTS.NEUTRAL]: shades["0"],
+      [STATUS_TAG_VARIANTS.NEUTRAL]: "white",
       [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["500"],
-      [STATUS_TAG_VARIANTS.SUCCESS]: shades["0"],
+      [STATUS_TAG_VARIANTS.SUCCESS]: "white",
       [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["500"],
       [STATUS_TAG_VARIANTS.WARNING]: warning["600"],
       [STATUS_TAG_VARIANTS.WARNING_ALT]: warning["900"],
@@ -819,10 +807,9 @@ const theme: Theme = {
     neutral,
     primary,
     secondary,
-    error,
+    destructive,
     success,
     warning,
-    shades,
   },
   typography: {
     displayLarge,

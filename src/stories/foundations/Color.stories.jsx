@@ -14,7 +14,7 @@ export default {
         "success",
         "alert",
         "warning",
-        "error",
+        "destructive",
       ],
       control: { type: "radio" },
     },
@@ -61,7 +61,7 @@ Warning.args = {
   color: "warning",
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  color: "error",
+export const Destructive = Template.bind({});
+Destructive.args = {
+  color: "destructive",
 };

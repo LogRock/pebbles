@@ -49,15 +49,3 @@ export const blueberryWine = {
   colors: ["#4568DC", "#B06AB3"],
   angle: 98.41,
 };
-
-// MeshGradients still not CSS definable
-// export const chillNight: MeshGradient
-// export const sunrise: MeshGradient
-// export const kingCrimsom: MeshGradient
-// export const crazyDiamong: MeshGradient
-// export const sunsetOverdrive: MeshGradient
-// export const auroraBorealis: MeshGradient
-// export const emeraldSplash: MeshGradient
-// export const overcast: MeshGradient
-// export const feverish: MeshGradient
-// export const spriteCrush: MeshGradient

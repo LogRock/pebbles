@@ -18,8 +18,7 @@ export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
   margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
   padding: ${({ theme, focus }) => (focus ? theme.spacings.md : undefined)};
 
-  background: ${({ theme, focus }) =>
-    focus ? theme.colors.shades["0"] : "none"};
+  background: ${({ focus }) => (focus ? "white" : "none")};
 
   ${up("desktop")} {
     position: relative;
@@ -51,7 +50,7 @@ export const SelectItems = styled.div<{
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight + "px" : "240px")};
   overflow-y: auto;
 
-  background: ${({ theme }) => theme.colors.shades["0"]};
+  background: white;
   box-shadow: ${({ theme, focus }) =>
     focus ? undefined : theme.select.items.shadow};
 

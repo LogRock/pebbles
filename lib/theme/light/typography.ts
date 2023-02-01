@@ -1,6 +1,6 @@
-import { OverlineProps, HeaderProps, ParagraphProps } from "../../types/theme";
+import { TypographyProperties } from "../../types/theme";
 
-export const displayLarge: HeaderProps = {
+export const displayLarge: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -24,9 +24,10 @@ export const displayLarge: HeaderProps = {
     lineHeight: "56px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const displaySmall: HeaderProps = {
+export const displaySmall: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -50,9 +51,10 @@ export const displaySmall: HeaderProps = {
     lineHeight: "56px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH1: HeaderProps = {
+export const headingH1: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -76,9 +78,10 @@ export const headingH1: HeaderProps = {
     lineHeight: "44px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH2: HeaderProps = {
+export const headingH2: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -102,9 +105,10 @@ export const headingH2: HeaderProps = {
     lineHeight: "40px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH3: HeaderProps = {
+export const headingH3: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -128,9 +132,10 @@ export const headingH3: HeaderProps = {
     lineHeight: "36px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH4: HeaderProps = {
+export const headingH4: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -154,9 +159,10 @@ export const headingH4: HeaderProps = {
     lineHeight: "32px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH5: HeaderProps = {
+export const headingH5: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -180,9 +186,10 @@ export const headingH5: HeaderProps = {
     lineHeight: "28px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const headingH6: HeaderProps = {
+export const headingH6: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
   desktop: {
     weights: {
@@ -206,72 +213,196 @@ export const headingH6: HeaderProps = {
     lineHeight: "24px",
     tracking: "-0.02em",
   },
+  textTransform: "unset",
 };
 
-export const paragraphLarge: ParagraphProps = {
+export const paragraphLarge: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "18px",
-  lineHeight: "28px",
-  weights: {
-    normal: 400,
-    bold: 500,
-    bolder: 600,
+  textTransform: "unset",
+
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: "800",
+    },
+    fontSize: "18px",
+    lineHeight: "28px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: "800",
+    },
+    fontSize: "18px",
+    lineHeight: "28px",
+    tracking: "unset",
   },
 };
 
-export const paragraphMedium: ParagraphProps = {
+export const paragraphMedium: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "16px",
-  lineHeight: "24px",
-  weights: {
-    normal: 400,
-    bold: 500,
-    bolder: 600,
+  textTransform: "unset",
+
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "16px",
+    lineHeight: "24px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "16px",
+    lineHeight: "24px",
+    tracking: "unset",
   },
 };
 
-export const paragraphSmall: ParagraphProps = {
+export const paragraphSmall: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "14px",
-  lineHeight: "20px",
-  weights: {
-    normal: 400,
-    bold: 500,
-    bolder: 600,
+  textTransform: "unset",
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "14px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "14px",
+    lineHeight: "20px",
+    tracking: "unset",
   },
 };
 
-export const paragraphXSmall: ParagraphProps = {
+export const paragraphXSmall: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "12px",
-  lineHeight: "20px",
-  weights: {
-    normal: 400,
-    bold: 500,
-    bolder: 600,
+  textTransform: "unset",
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "12px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "12px",
+    lineHeight: "20px",
+    tracking: "unset",
   },
 };
 
-export const overlineLarge: OverlineProps = {
+export const overlineLarge: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "14px",
-  lineHeight: "20px",
-  weight: 600,
   textTransform: "uppercase",
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "14px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "14px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
 };
 
-export const overlineMedium: OverlineProps = {
+export const overlineMedium: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "12px",
-  lineHeight: "20px",
-  weight: 600,
   textTransform: "uppercase",
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "12px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "12px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
 };
 
-export const overlineXSmall: OverlineProps = {
+export const overlineXSmall: TypographyProperties = {
   fontFamily: "Archivo, sans-serif",
-  fontSize: "11px",
-  lineHeight: "20px",
-  weight: 600,
   textTransform: "uppercase",
+  desktop: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "11px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
+  mobile: {
+    weights: {
+      normal: 400,
+      bold: 500,
+      bolder: 600,
+      boldest: 800,
+    },
+    fontSize: "11px",
+    lineHeight: "20px",
+    tracking: "unset",
+  },
 };
