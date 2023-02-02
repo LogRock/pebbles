@@ -1,3 +1,13 @@
+# [13.1.0](https://github.com/LogRock/pebbles/compare/v13.0.0...v13.1.0) (2023-02-02)
+
+### Bug Fixes
+
+- **types:** :bug: fix all type issues ([f8308dd](https://github.com/LogRock/pebbles/commit/f8308ddc7d7c7ad2ff34460b95e38c1f2f7417b9))
+
+### Features
+
+- **project:** :fire: remove error states in favor of destructive ([0f446d2](https://github.com/LogRock/pebbles/commit/0f446d2c0d9df65d7446a52c5ff48c96c09e495b))
+
 # [13.0.0](https://github.com/LogRock/pebbles/compare/v12.1.0...v13.0.0) (2023-02-01)
 
 ### Features
