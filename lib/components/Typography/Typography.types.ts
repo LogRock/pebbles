@@ -34,17 +34,17 @@ export type TypographyOverlineProps = {
 };
 
 export type TitleProps = {
-  color: colorTokens;
-  shade: shadeTokens;
-  type: titleTokens;
-  weight: weightTokens;
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "div";
+  color?: colorTokens;
+  shade?: shadeTokens;
+  type?: titleTokens;
+  weight?: weightTokens;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "div";
 };
 
 export type TextProps = {
-  color: colorTokens;
-  shade: shadeTokens;
-  type: textTokens;
-  weight: weightTokens;
-  as: "p" | "span" | "div";
+  color?: colorTokens;
+  shade?: shadeTokens;
+  type?: textTokens;
+  weight?: weightTokens;
+  as?: "p" | "span" | "div";
 };
