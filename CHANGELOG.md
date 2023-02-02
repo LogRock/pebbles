@@ -1,3 +1,9 @@
+## [13.1.1](https://github.com/LogRock/pebbles/compare/v13.1.0...v13.1.1) (2023-02-02)
+
+### Bug Fixes
+
+- **typography:** :label: fix typography types, making them optional with defaults ([4173ae2](https://github.com/LogRock/pebbles/commit/4173ae25acc059e9031869e2dbe12b69e425454c))
+
 # [13.1.0](https://github.com/LogRock/pebbles/compare/v13.0.0...v13.1.0) (2023-02-02)
 
 ### Bug Fixes
