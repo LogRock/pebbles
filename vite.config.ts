@@ -18,7 +18,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./lib/test/setup.ts",
+    setupFiles: path.resolve(__dirname, "lib/test/setup.ts"),
     coverage: {
       reporter: ["text", "lcov"],
     },

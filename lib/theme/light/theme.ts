@@ -25,6 +25,8 @@ import {
   success,
   warning,
   destructive,
+  white,
+  black,
 } from "./colors";
 import {
   displayLarge,
@@ -61,6 +63,7 @@ import {
 } from "../../components/StatusTag/StatusTag.types";
 
 const spacings = {
+  zero: "0",
   xxxsm: "2px",
   xxsm: "4px",
   xsm: "8px",
@@ -81,6 +84,7 @@ const spacings = {
 };
 
 const shadows = {
+  none: "none",
   xSmall: "0px 1px 2px rgba(16, 24, 40, 0.05)",
   small:
     "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1)",
@@ -809,6 +813,8 @@ const theme: Theme = {
     destructive,
     success,
     warning,
+    white,
+    black,
   },
   typography: {
     displayLarge,
