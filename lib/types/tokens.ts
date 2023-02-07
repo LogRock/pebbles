@@ -1,4 +1,5 @@
 export type spacingTokens =
+  | "zero"
   | "xxsm"
   | "xsm"
   | "sm"
@@ -34,7 +35,9 @@ export type colorTokens =
   | "secondary"
   | "success"
   | "warning"
-  | "destructive";
+  | "destructive"
+  | "white"
+  | "black";
 
 export type sizeTokens = "xSmall" | "small" | "medium" | "large";
 
@@ -60,6 +63,7 @@ export type textTokens =
   | "overlineXSmall";
 
 export type shadowTokens =
+  | "none"
   | "xSmall"
   | "small"
   | "medium"

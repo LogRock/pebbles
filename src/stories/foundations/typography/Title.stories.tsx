@@ -2,37 +2,24 @@ import { ComponentMeta, Story } from "@storybook/react";
 import React, { PropsWithChildren } from "react";
 
 import { Title, TitleProps } from "../../../../lib/components/Typography";
+import {
+  colorOptions,
+  shadeOptions,
+  weightOptions,
+} from "../../../constants/options";
 
 export default {
   title: "Foundations/Typography/Title",
   component: Title,
   argTypes: {
     color: {
-      options: [
-        "neutral",
-        "primary",
-        "secondary",
-        "success",
-        "warning",
-        "destructive",
-      ],
+      options: colorOptions,
       control: {
         type: "select",
       },
     },
     shade: {
-      options: [
-        "50",
-        "100",
-        "200",
-        "300",
-        "400",
-        "500",
-        "600",
-        "700",
-        "800",
-        "900",
-      ],
+      options: shadeOptions,
       control: {
         type: "select",
       },
@@ -53,7 +40,7 @@ export default {
       },
     },
     weight: {
-      options: ["normal", "bold", "bolder", "boldest"],
+      options: weightOptions,
       control: {
         type: "select",
       },

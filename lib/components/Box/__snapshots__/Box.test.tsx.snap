@@ -1,0 +1,8 @@
+// Vitest Snapshot v1
+
+exports[`Box > renders with default style 1`] = `
+<div
+  class="sc-bcXHqe jCfDwr"
+  direction="column"
+/>
+`;
