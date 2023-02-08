@@ -116,7 +116,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "vitest --findRelatedTests --bail"
+      "vitest related --run"
     ],
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
     "*.{css,md,js,jsx,ts,tsx}": "prettier --write"

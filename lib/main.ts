@@ -155,3 +155,6 @@ export {
 // Panel
 export { default as Panel } from "./components/Panel";
 export type { PanelProps, PanelsItems } from "./components/Panel";
+
+export { default as Box } from "./components/Box";
+export type { BoxProps } from "./components/Box";
