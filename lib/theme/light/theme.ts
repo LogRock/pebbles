@@ -435,7 +435,7 @@ const inputBox: InputBox = {
   boxSizing: "border-box",
   boxShadow: shadows.xSmall,
   borderRadius: "8px",
-  border: `1px solid ${neutral[100]}`,
+  border: `1px solid ${neutral[200]}`,
   margin: `${spacings.xsm} 0px`,
   background: "white",
   height: "50px",
@@ -444,7 +444,7 @@ const inputBox: InputBox = {
   destructive: {
     color: destructive[900],
     border: `1px solid ${destructive[300]}`,
-    boxShadow: shadows.xSmall,
+    boxShadow: shadows.small,
     hintColor: neutral[500],
     focused: {
       boxSizing: "border-box",
@@ -455,8 +455,8 @@ const inputBox: InputBox = {
   },
   info: {
     color: neutral[900],
-    border: `1px solid ${neutral[100]}`,
-    boxShadow: shadows.xSmall,
+    border: `1px solid ${neutral[200]}`,
+    boxShadow: shadows.small,
     hintColor: neutral[500],
     focused: {
       boxSizing: "border-box",
