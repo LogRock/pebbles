@@ -1,3 +1,15 @@
+# [13.2.0](https://github.com/LogRock/pebbles/compare/v13.1.1...v13.2.0) (2023-02-08)
+
+### Bug Fixes
+
+- update snapshots ([1b8d350](https://github.com/LogRock/pebbles/commit/1b8d350b87a2772fca5bfe1d89b8608d26914a39))
+
+### Features
+
+- add test when commiting ([f2c4c42](https://github.com/LogRock/pebbles/commit/f2c4c426c7dbf3b455275cc663ef2fb31b16d19c))
+- **box:** :sparkles: add box component ([701bb2f](https://github.com/LogRock/pebbles/commit/701bb2f69cb459b9b45303672623f26c53ec2327))
+- **space-after:** add space after property to the components ([dca5461](https://github.com/LogRock/pebbles/commit/dca546162147d3114e59875213741f67b70f24da))
+
 ## [13.1.1](https://github.com/LogRock/pebbles/compare/v13.1.0...v13.1.1) (2023-02-02)
 
 ### Bug Fixes
