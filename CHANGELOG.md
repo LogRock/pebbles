@@ -1,3 +1,9 @@
+## [13.3.1](https://github.com/LogRock/pebbles/compare/v13.3.0...v13.3.1) (2023-02-08)
+
+### Bug Fixes
+
+- input box border color and increase shadow ([7ae353b](https://github.com/LogRock/pebbles/commit/7ae353b706727d7836d96eaa7263f2002b1f8b11))
+
 # [13.3.0](https://github.com/LogRock/pebbles/compare/v13.2.0...v13.3.0) (2023-02-08)
 
 ### Features
