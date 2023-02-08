@@ -114,7 +114,7 @@
     "styled-components": "*"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "vitest --findRelatedTests --bail"],
     "*.{css,js,jsx,ts,tsx}": "stylelint --fix",
     "*.{css,md,js,jsx,ts,tsx}": "prettier --write"
   },
