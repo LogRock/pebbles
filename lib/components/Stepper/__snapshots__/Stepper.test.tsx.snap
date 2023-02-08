@@ -2,7 +2,7 @@
 
 exports[`Stepper test > renders in display only mode 1`] = `
 <div
-  class="sc-gKPRtg buorzf"
+  class="sc-gKPRtg lhTsxv"
 >
   <div
     class="sc-jSUZER eeLiNk"
@@ -93,7 +93,7 @@ exports[`Stepper test > renders in display only mode 1`] = `
 
 exports[`Stepper test > renders stepper with some content 1`] = `
 <div
-  class="sc-gKPRtg gHXbGX"
+  class="sc-gKPRtg byjfNn"
 >
   <div
     class="sc-jSUZER eeLiNk"

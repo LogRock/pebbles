@@ -2,7 +2,7 @@
 
 exports[`StatusTrend > renders properly 1`] = `
 <div
-  class="sc-bcXHqe YEUhu"
+  class="sc-bcXHqe jcBxip"
 >
   <svg
     data-testid="down-arrow"

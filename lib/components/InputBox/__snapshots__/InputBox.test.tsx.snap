@@ -4,7 +4,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-hBxehG dGHBVY"
+      class="sc-hBxehG kurttc"
     >
       <label
         class="sc-fnGiBr jYdWkJ"
@@ -37,7 +37,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-hBxehG dGHBVY"
+      class="sc-hBxehG kurttc"
     >
       <label
         class="sc-fnGiBr jYdWkJ"
@@ -1328,7 +1328,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG dGHBVY"
+    class="sc-hBxehG kurttc"
   >
     <label
       class="sc-fnGiBr jYdWkJ"
@@ -1356,7 +1356,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
 exports[`InputBox > renders Number InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG dGHBVY"
+    class="sc-hBxehG kurttc"
   >
     <label
       class="sc-fnGiBr jYdWkJ"
@@ -1366,7 +1366,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
     >
       <button
         aria-label="decrease button"
-        class="sc-cwSeag iSEmUk sc-jIRcFI gvUhET"
+        class="sc-cwSeag jbRVZA sc-jIRcFI gvUhET"
       >
         <svg
           fill="currentColor"
@@ -1392,7 +1392,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       </div>
       <button
         aria-label="increase button"
-        class="sc-cwSeag iSEmUk sc-jIRcFI gvUhET"
+        class="sc-cwSeag jbRVZA sc-jIRcFI gvUhET"
       >
         <svg
           fill="currentColor"
@@ -1423,7 +1423,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
 exports[`InputBox > renders Phone InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG dGHBVY"
+    class="sc-hBxehG kurttc"
   >
     <label
       class="sc-fnGiBr jYdWkJ"
