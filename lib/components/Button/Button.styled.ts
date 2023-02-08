@@ -1,12 +1,15 @@
 import styled, { css } from "styled-components";
 import { ButtonProps } from "./Button.types";
+import { spacingTokens } from "../../types/tokens";
 
 // GLOBAL DEFINITIONS
 
-const baseButtonCSS = css`
+const baseButtonCSS = css<Pick<ButtonProps, "spaceAfter">>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   border-style: solid;
 

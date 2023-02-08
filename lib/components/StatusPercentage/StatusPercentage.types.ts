@@ -1,3 +1,5 @@
+import { spacingTokens } from "../../types/tokens";
+
 export interface StatusPercentageProps {
   percentage: number;
   size: "small" | "medium" | "large";
@@ -8,4 +10,5 @@ export interface StatusPercentageProps {
     | "destructive"
     | "warning"
     | "neutral";
+  spaceAfter?: spacingTokens;
 }

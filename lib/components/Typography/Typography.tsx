@@ -8,6 +8,7 @@ export function Text({
   color = "neutral",
   shade = "900",
   weight = "normal",
+  spaceAfter,
   children,
 }: PropsWithChildren<TextProps>) {
   if (!as) {
@@ -20,6 +21,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -32,6 +34,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -44,6 +47,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -56,6 +60,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -68,6 +73,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -80,6 +86,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -92,6 +99,7 @@ export function Text({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
           >
             {children}
           </StyledText>
@@ -100,7 +108,14 @@ export function Text({
   }
 
   return (
-    <StyledText type={type} color={color} shade={shade} weight={weight} as={as}>
+    <StyledText
+      type={type}
+      color={color}
+      shade={shade}
+      weight={weight}
+      spaceAfter={spaceAfter}
+      as={as}
+    >
       {children}
     </StyledText>
   );
@@ -112,6 +127,7 @@ export function Title({
   color = "neutral",
   shade = "900",
   weight = "bold",
+  spaceAfter,
   children,
 }: PropsWithChildren<TitleProps>) {
   if (!as) {
@@ -123,6 +139,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h1"
           >
             {children}
@@ -135,6 +152,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h2"
           >
             {children}
@@ -147,6 +165,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h1"
           >
             {children}
@@ -159,6 +178,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h2"
           >
             {children}
@@ -171,6 +191,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h3"
           >
             {children}
@@ -183,6 +204,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h4"
           >
             {children}
@@ -195,6 +217,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h5"
           >
             {children}
@@ -207,6 +230,7 @@ export function Title({
             color={color}
             shade={shade}
             weight={weight}
+            spaceAfter={spaceAfter}
             as="h6"
           >
             {children}
@@ -222,6 +246,7 @@ export function Title({
       color={color}
       shade={shade}
       weight={weight}
+      spaceAfter={spaceAfter}
     >
       {children}
     </StyledTitle>

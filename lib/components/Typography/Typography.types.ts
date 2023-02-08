@@ -5,6 +5,7 @@ import {
   textTokens,
   titleTokens,
   weightTokens,
+  spacingTokens,
 } from "../../types/tokens";
 
 /**
@@ -38,6 +39,7 @@ export type TitleProps = {
   shade?: shadeTokens;
   type?: titleTokens;
   weight?: weightTokens;
+  spaceAfter?: spacingTokens;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | "div";
 };
 
@@ -46,5 +48,6 @@ export type TextProps = {
   shade?: shadeTokens;
   type?: textTokens;
   weight?: weightTokens;
+  spaceAfter?: spacingTokens;
   as?: "p" | "span" | "div";
 };

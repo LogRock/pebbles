@@ -1,4 +1,5 @@
 import React from "react";
+import { spacingTokens } from "../../types/tokens";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -8,4 +9,5 @@ export interface ButtonProps
   iconOnly?: boolean;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
+  spaceAfter?: spacingTokens;
 }

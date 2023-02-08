@@ -2,13 +2,19 @@
 import styled, { css } from "styled-components";
 import { overlineXSmallCSS } from "../Typography";
 import { BaseInputBoxProps } from "./BaseInputBox";
+import { spacingTokens } from "../../types/tokens";
 
 const defaultStatus = "info";
 
-export const StyledDiv = styled.div<{ spaced?: boolean }>`
+export const StyledDiv = styled.div<{
+  spaced?: boolean;
+  spaceAfter?: spacingTokens;
+}>`
   display: flex;
   flex-direction: column;
   margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 `;
 
 export const Label = styled.label`

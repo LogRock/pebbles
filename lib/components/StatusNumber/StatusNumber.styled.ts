@@ -2,14 +2,17 @@ import styled from "styled-components";
 
 import { ParagraphLarge } from "../Typography";
 import { StatusNumberProps } from "./StatusNumber.types";
+import { spacingTokens } from "../../types/tokens";
 
 export const StatusNumberWrapper = styled.div<
-  Pick<StatusNumberProps, "variant">
+  Pick<StatusNumberProps, "variant" | "spaceAfter">
 >`
   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: max-content;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 `;
 
 export const LabelWrapper = styled.div`

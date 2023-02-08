@@ -14,6 +14,7 @@ const StatusNumber: FC<StatusNumberProps> = ({
   totalValue,
   variant = "neutral",
   icon,
+  spaceAfter,
   ...props
 }) => {
   const adaptValue = (value: string | number | null | undefined) => {
@@ -24,7 +25,7 @@ const StatusNumber: FC<StatusNumberProps> = ({
   };
 
   return (
-    <StatusNumberWrapper variant={variant} {...props}>
+    <StatusNumberWrapper variant={variant} spaceAfter={spaceAfter} {...props}>
       {icon && <IconWrapper variant={variant}>{icon}</IconWrapper>}
       <LabelWrapper>
         <StyledValueLarge variant={variant}>

@@ -10,7 +10,7 @@ import ReactSelect, {
   components,
   ValueContainerProps,
 } from "react-select";
-import { ThemeContext } from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import {
   Helper,
   HelperDiv,
@@ -20,10 +20,16 @@ import {
 import { CustomSelectProps } from "./Select.types";
 import ThemeType from "../../types/theme";
 import { DropdownIndicatorWrapper } from "./Select.styled";
+import { spacingTokens } from "../../types/tokens";
 
 const defaultStatus = "info";
 
 const { ValueContainer } = components;
+
+export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
+`;
 
 const CustomValueContainer: FC<ValueContainerProps> = ({
   children,
@@ -55,6 +61,7 @@ function Select<
   status,
   helper,
   label,
+  spaceAfter,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
   const theme = useContext<ThemeType>(ThemeContext);
@@ -128,7 +135,7 @@ function Select<
   const selectID = uniqueId("pebbles_select");
 
   return (
-    <div>
+    <StyledDiv spaceAfter={spaceAfter}>
       <Label htmlFor={selectID}>{label}</Label>
       <ReactSelect
         {...props}
@@ -155,7 +162,7 @@ function Select<
           <Helper status={status}>{helper}</Helper>
         </HelperDiv>
       )}
-    </div>
+    </StyledDiv>
   );
 }
 
