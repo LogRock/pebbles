@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { spacingTokens } from "../../types/tokens";
 
 export const RadioButtonInput = styled.input<{ checked?: boolean }>`
   display: inline-block;
@@ -44,13 +45,16 @@ export const RadioButtonInput = styled.input<{ checked?: boolean }>`
     `}
 `;
 
-export const RadioButtonContainer = styled.div`
+export const RadioButtonContainer = styled.div<{ spaceAfter?: spacingTokens }>`
   display: flex;
   box-sizing: border-box;
   flex-flow: row nowrap;
   align-items: flex-start;
   margin-top: ${({ theme }) => theme.spacings.sm};
-  margin-bottom: ${({ theme }) => theme.spacings.sm};
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter
+      ? theme.spacings?.[spaceAfter as spacingTokens]
+      : theme.spacings.sm};
 
   label {
     display: flex;

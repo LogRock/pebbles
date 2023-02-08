@@ -8,10 +8,11 @@ const StatusTrend: FC<StatusTrendProps> = ({
   direction = "neutral",
   variant = "neutral",
   children,
+  spaceAfter,
   ...props
 }) => {
   return (
-    <StatusTrendWrapper variant={variant} {...props}>
+    <StatusTrendWrapper variant={variant} spaceAfter={spaceAfter} {...props}>
       <StatusTrendSymbol direction={direction} variant={variant} />
       {children}
     </StatusTrendWrapper>

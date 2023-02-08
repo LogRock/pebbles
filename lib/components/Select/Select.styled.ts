@@ -1,11 +1,16 @@
 import React from "react";
 import { up } from "styled-breakpoints";
 import styled from "styled-components";
+import { spacingTokens } from "../../types/tokens";
 
 /**
  * @deprecated in favor of Select2
  */
-export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
+export const SelectWrapper = styled.div<{
+  focus?: boolean;
+  spaced?: boolean;
+  spaceAfter?: spacingTokens;
+}>`
   display: flex;
   position: ${({ focus }) => (focus ? "fixed" : "relative")};
   z-index: ${({ focus }) => (focus ? "99999" : "9")};
@@ -16,6 +21,8 @@ export const SelectWrapper = styled.div<{ focus?: boolean; spaced?: boolean }>`
   box-sizing: border-box;
   flex-flow: column nowrap;
   margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
   padding: ${({ theme, focus }) => (focus ? theme.spacings.md : undefined)};
 
   background: ${({ focus }) => (focus ? "white" : "none")};

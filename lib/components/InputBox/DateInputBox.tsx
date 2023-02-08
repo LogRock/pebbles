@@ -22,6 +22,7 @@ import {
   DatePickerWrapperStyles,
   StyledDatePicker,
 } from "./DateInputBox.styled";
+import { spacingTokens } from "../../types/tokens";
 
 export interface DateInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -32,6 +33,7 @@ export interface DateInputBoxProps
   };
   status?: "info" | "destructive";
   helper?: React.ReactNode;
+  spaceAfter?: spacingTokens;
   spaced?: boolean;
   onChange?: any;
   name?: string;
@@ -43,10 +45,11 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   status,
   hint,
   helper,
+  spaceAfter,
   ...inputProps
 }) => {
   return (
-    <StyledDiv spaced={spaced}>
+    <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Label>{description}</Label>
 
       <InputDiv>

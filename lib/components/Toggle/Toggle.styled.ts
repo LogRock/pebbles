@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../Typography/Typography.styled";
+import { spacingTokens } from "../../types/tokens";
 
 export const ToggleIndicator = styled.span<{ disabled?: boolean }>`
   position: relative;
@@ -32,7 +33,11 @@ export const ToggleIndicator = styled.span<{ disabled?: boolean }>`
   }
 `;
 
-export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
+export const Label = styled.label<{
+  disabled?: boolean;
+  spaced?: boolean;
+  spaceAfter?: spacingTokens;
+}>`
   ${paragraphMediumCSS}
   ${({ theme, disabled }) =>
     disabled ? `color: ${theme.colors.neutral[300]};` : ""}
@@ -42,6 +47,8 @@ export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
   align-items: start;
   justify-content: flex-end;
   margin-top: ${({ theme, spaced }) => (spaced ? theme.inputBox.spacing : 0)};
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   &:hover input ~ ${ToggleIndicator} {
     border-color: ${({ theme }) => theme.toggle.checked.background};

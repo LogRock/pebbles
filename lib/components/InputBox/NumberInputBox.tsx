@@ -45,6 +45,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
   helper,
   disableMinus,
   disablePlus,
+  spaceAfter,
   ...props
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -77,7 +78,7 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
   }, []);
 
   return (
-    <StyledDiv spaced={spaced}>
+    <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Label>{description}</Label>
       <NumberInputBoxWrapper>
         <StyledButton

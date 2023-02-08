@@ -1,3 +1,5 @@
+import { spacingTokens } from "../../types/tokens";
+
 export interface ProgressBarProps {
   percentage: number;
   size: "small" | "medium" | "large" | "xLarge";
@@ -10,10 +12,12 @@ export interface ProgressBarProps {
     | "neutral"
     | "destructive"
     | "destructiveAlt";
+  spaceAfter?: spacingTokens;
 }
 
 export interface LoaderProps {
   message: string;
+  spaceAfter?: spacingTokens;
 }
 
 export interface ProgressRingProps {
@@ -30,4 +34,5 @@ export interface ProgressRingProps {
     | "destructive"
     | "warning"
     | "neutral";
+  spaceAfter?: spacingTokens;
 }

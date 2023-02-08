@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { css } from "styled-components";
 import { StepperProps, StepperStepProps } from "./Stepper.types";
+import { spacingTokens } from "../../types/tokens";
 
 export const StepIndicatorContainer = styled.div`
   display: grid;
@@ -106,9 +107,13 @@ export const Step = styled.div`
   grid-template-columns: auto 1fr;
 `;
 
-export const Steps = styled.div<StepperProps>`
+export const Steps = styled.div<
+  Pick<StepperProps, "spaceAfter" | "showHoverEffect">
+>`
   display: flex;
   flex-direction: column;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   font-family: ${({ theme }) => theme.loader.fontFamily};
 

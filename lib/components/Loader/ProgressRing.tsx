@@ -4,11 +4,17 @@ import styled, { ThemeContext } from "styled-components";
 import { TypographyParagraphProps } from "../Typography";
 
 import { ProgressRingProps } from "./Loader.types";
+import { spacingTokens } from "../../types/tokens";
 
-export const RingWrapper = styled.div<{ size: number }>`
+export const RingWrapper = styled.div<{
+  size: number;
+  spaceAfter?: spacingTokens;
+}>`
   position: relative;
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   svg {
     position: absolute;
@@ -52,6 +58,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
   colorGradient,
   showBaseRing,
   label,
+  spaceAfter,
   variant = "primary",
 }) => {
   const theme = useContext(ThemeContext);
@@ -75,7 +82,7 @@ const ProgressRing: FC<ProgressRingProps> = ({
   }, [colorGradient, variant]);
 
   return (
-    <RingWrapper size={radius * 2}>
+    <RingWrapper size={radius * 2} spaceAfter={spaceAfter}>
       {showBaseRing && (
         <svg height={radius * 2} width={radius * 2}>
           <circle

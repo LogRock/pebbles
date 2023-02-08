@@ -16,6 +16,7 @@ import {
 import uniqueid from "lodash.uniqueid";
 import { E164Number } from "libphonenumber-js";
 import { ParagraphMedium } from "../Typography";
+import { spacingTokens } from "../../types/tokens";
 
 export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -26,6 +27,7 @@ export interface BaseInputBoxProps
   };
   status?: "info" | "destructive";
   helper?: React.ReactNode;
+  spaceAfter?: spacingTokens;
   spaced?: boolean;
   disableMinus?: boolean;
   disablePlus?: boolean;
@@ -38,6 +40,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   status,
   hint,
   helper,
+  spaceAfter,
   ...inputProps
 }) => {
   const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
@@ -48,7 +51,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   };
 
   return (
-    <StyledDiv spaced={spaced}>
+    <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Label htmlFor={inputID}>{description}</Label>
       <InputDiv>
         {!inputProps?.children && (

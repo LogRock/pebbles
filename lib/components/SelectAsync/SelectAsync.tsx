@@ -3,7 +3,7 @@ import uniqueId from "lodash.uniqueid";
 import React, { useContext, useMemo } from "react";
 import { StylesConfig, Theme, GroupBase } from "react-select";
 import ReactSelectAsync, { AsyncProps } from "react-select/async";
-import { ThemeContext } from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import {
   Helper,
   HelperDiv,
@@ -11,8 +11,14 @@ import {
   Label,
 } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./SelectAsync.types";
+import { spacingTokens } from "../../types/tokens";
 
 const defaultStatus = "info";
+
+export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
+`;
 
 function SelectAsync<
   Option,
@@ -21,6 +27,7 @@ function SelectAsync<
 >({
   status,
   helper,
+  spaceAfter,
   label,
   ...props
 }: AsyncProps<Option, IsMulti, Group> & CustomSelectProps) {
@@ -91,7 +98,7 @@ function SelectAsync<
   const selectID = uniqueId("pebbles_select");
 
   return (
-    <div>
+    <StyledDiv spaceAfter={spaceAfter}>
       <Label htmlFor={selectID}>{label}</Label>
       <ReactSelectAsync
         {...props}
@@ -109,7 +116,7 @@ function SelectAsync<
           <Helper status={status}>{helper}</Helper>
         </HelperDiv>
       )}
-    </div>
+    </StyledDiv>
   );
 }
 

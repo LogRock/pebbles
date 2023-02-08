@@ -1,7 +1,9 @@
 import React from "react";
+import { spacingTokens } from "../../types/tokens";
 
 export interface StepperProps {
   showHoverEffect?: boolean;
+  spaceAfter?: spacingTokens;
 }
 
 export interface StepperStepProps {

@@ -1,4 +1,5 @@
 import React from "react";
+import { spacingTokens } from "../../types/tokens";
 
 export enum STATUS_TAG_SIZES {
   SMALL = "SMALL",
@@ -21,4 +22,5 @@ export interface StatusTagProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string;
   size: STATUS_TAG_SIZES;
   variant: STATUS_TAG_VARIANTS;
+  spaceAfter?: spacingTokens;
 }

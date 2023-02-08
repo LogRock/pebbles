@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 import { STATUS_TAG_VARIANTS } from "../StatusTag";
+import { spacingTokens } from "../../types/tokens";
 
 export interface NotificationDotProps {
   variant: STATUS_TAG_VARIANTS;
+  spaceAfter?: spacingTokens;
 }
 
 const NotificationDot = styled.div<NotificationDotProps>`
-  ${({ theme, variant = STATUS_TAG_VARIANTS.NEUTRAL_ALT }) => css`
+  ${({ theme, spaceAfter, variant = STATUS_TAG_VARIANTS.NEUTRAL_ALT }) => css`
     display: inline-flex;
     box-sizing: border-box;
     flex-flow: row nowrap;
@@ -14,6 +16,9 @@ const NotificationDot = styled.div<NotificationDotProps>`
     justify-content: center;
     min-width: ${theme.spacings.md};
     height: ${theme.spacings.md};
+    margin-bottom: ${spaceAfter
+      ? theme.spacings?.[spaceAfter as spacingTokens]
+      : 0};
     padding: 0 ${theme.spacings.xxsm};
 
     border-radius: ${theme.spacings.md};

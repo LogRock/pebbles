@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { paragraphMediumCSS } from "../Typography/Typography.styled";
+import { spacingTokens } from "../../types/tokens";
 
 export const CheckMark = styled.span<{ disabled?: boolean }>`
   position: relative;
@@ -35,7 +36,11 @@ export const CheckMark = styled.span<{ disabled?: boolean }>`
   }
 `;
 
-export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
+export const Label = styled.label<{
+  disabled?: boolean;
+  spaced?: boolean;
+  spaceAfter?: spacingTokens;
+}>`
   ${paragraphMediumCSS}
   ${({ theme, disabled }) =>
     disabled ? `color: ${theme.colors.neutral[300]};` : ""}
@@ -45,6 +50,12 @@ export const Label = styled.label<{ disabled?: boolean; spaced?: boolean }>`
   align-items: start;
   justify-content: flex-end;
   margin: ${({ theme, spaced }) => (spaced ? theme.spacings.big : 0)} 0;
+  margin-bottom: ${({ theme, spaced, spaceAfter }) =>
+    spaceAfter
+      ? theme.spacings?.[spaceAfter as spacingTokens]
+      : spaced
+      ? theme.spacings.big
+      : 0};
 
   &:hover input ~ ${CheckMark} {
     border-color: ${({ theme }) => theme.checkBox.checked.background};

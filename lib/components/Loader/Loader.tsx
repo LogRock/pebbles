@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { FC } from "react";
 
 import { LoaderProps } from "./Loader.types";
+import { spacingTokens } from "../../types/tokens";
 
 const StyledLoader = styled.div`
   width: ${({ theme }) => theme.loader.size};
@@ -22,11 +23,13 @@ const StyledLoader = styled.div`
   }
 `;
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   display: flex;
   flex-flow: column;
   align-content: center;
   align-items: center;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 `;
 
 const Label = styled.span`
@@ -35,9 +38,9 @@ const Label = styled.span`
   font-family: ${({ theme }) => theme.loader.fontFamily};
 `;
 
-const Loader: FC<LoaderProps> = (props) => {
+const Loader: FC<LoaderProps> = ({ spaceAfter, ...props }) => {
   return (
-    <StyledDiv>
+    <StyledDiv spaceAfter={spaceAfter}>
       <StyledLoader />
       <Label>{props.message}</Label>
     </StyledDiv>

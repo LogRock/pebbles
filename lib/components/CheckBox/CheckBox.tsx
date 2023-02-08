@@ -2,11 +2,17 @@ import React, { FC } from "react";
 import { CheckMark, Input, Label, LabelContent } from "./CheckBox.styled";
 import { CheckBoxProps } from "./CheckBox.types";
 
-const CheckBox: FC<CheckBoxProps> = ({ children, spaced, ...inputProps }) => {
+const CheckBox: FC<CheckBoxProps> = ({
+  children,
+  spaced,
+  spaceAfter,
+  ...inputProps
+}) => {
   return (
     <Label
       disabled={inputProps.disabled}
       spaced={spaced}
+      spaceAfter={spaceAfter}
       htmlFor={inputProps.id}
     >
       <LabelContent>{children}</LabelContent>
