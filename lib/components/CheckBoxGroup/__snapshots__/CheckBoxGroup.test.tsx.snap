@@ -6,7 +6,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-idXgbr fGGvwS"
+        class="sc-idXgbr cHqexO"
       >
         <label
           class="sc-dIfARi jlslW"
@@ -19,7 +19,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             style="padding: 10px 12px;"
           >
             <label
-              class="sc-fnGiBr UYpaC"
+              class="sc-fnGiBr fBOXgG"
               for="A"
             >
               <div
@@ -38,7 +38,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
               />
             </label>
             <label
-              class="sc-fnGiBr UYpaC"
+              class="sc-fnGiBr fBOXgG"
               for="B"
             >
               <div
@@ -56,7 +56,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
               />
             </label>
             <label
-              class="sc-fnGiBr UYpaC"
+              class="sc-fnGiBr fBOXgG"
               for="C"
             >
               <div
@@ -88,7 +88,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-idXgbr fGGvwS"
+      class="sc-idXgbr cHqexO"
     >
       <label
         class="sc-dIfARi jlslW"
@@ -101,7 +101,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
           style="padding: 10px 12px;"
         >
           <label
-            class="sc-fnGiBr UYpaC"
+            class="sc-fnGiBr fBOXgG"
             for="A"
           >
             <div
@@ -120,7 +120,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             />
           </label>
           <label
-            class="sc-fnGiBr UYpaC"
+            class="sc-fnGiBr fBOXgG"
             for="B"
           >
             <div
@@ -138,7 +138,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             />
           </label>
           <label
-            class="sc-fnGiBr UYpaC"
+            class="sc-fnGiBr fBOXgG"
             for="C"
           >
             <div
