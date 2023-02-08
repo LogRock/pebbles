@@ -1,3 +1,9 @@
+# [13.3.0](https://github.com/LogRock/pebbles/compare/v13.2.0...v13.3.0) (2023-02-08)
+
+### Features
+
+- **box:** :sparkles: expose box component ([a973114](https://github.com/LogRock/pebbles/commit/a9731149deefb99df728f79208710b7708462cae))
+
 # [13.2.0](https://github.com/LogRock/pebbles/compare/v13.1.1...v13.2.0) (2023-02-08)
 
 ### Bug Fixes
