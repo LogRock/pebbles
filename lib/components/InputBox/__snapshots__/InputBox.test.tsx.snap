@@ -7,7 +7,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
       class="sc-hBxehG kurttc"
     >
       <label
-        class="sc-fnGiBr jYdWkJ"
+        class="sc-fnGiBr gfWFFU"
         for="textId"
       >
         User Name
@@ -25,7 +25,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
         class="sc-fEXmlR gBtkIG"
       >
         <label
-          class="sc-fnGiBr sc-bjfHbI jYdWkJ SVeHB"
+          class="sc-fnGiBr sc-bjfHbI gfWFFU SVeHB"
         />
       </div>
     </div>
@@ -40,7 +40,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
       class="sc-hBxehG kurttc"
     >
       <label
-        class="sc-fnGiBr jYdWkJ"
+        class="sc-fnGiBr gfWFFU"
         for="phoneId"
       >
         Phone Info
@@ -1317,7 +1317,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         class="sc-fEXmlR gBtkIG"
       >
         <label
-          class="sc-fnGiBr sc-bjfHbI jYdWkJ SVeHB"
+          class="sc-fnGiBr sc-bjfHbI gfWFFU SVeHB"
         />
       </div>
     </div>
@@ -1331,7 +1331,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-fnGiBr jYdWkJ"
+      class="sc-fnGiBr gfWFFU"
       for="pebbles__input__1"
     />
     <div
@@ -1346,7 +1346,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-fnGiBr sc-bjfHbI jYdWkJ SVeHB"
+        class="sc-fnGiBr sc-bjfHbI gfWFFU SVeHB"
       />
     </div>
   </div>
@@ -1359,7 +1359,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-fnGiBr jYdWkJ"
+      class="sc-fnGiBr gfWFFU"
     />
     <div
       class="sc-bYMpWt jjOoVb"
@@ -1413,7 +1413,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-fnGiBr sc-bjfHbI jYdWkJ SVeHB"
+        class="sc-fnGiBr sc-bjfHbI gfWFFU SVeHB"
       />
     </div>
   </div>
@@ -1426,7 +1426,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-fnGiBr jYdWkJ"
+      class="sc-fnGiBr gfWFFU"
       for="pebbles__input__2"
     />
     <div
@@ -2699,7 +2699,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-fEXmlR gBtkIG"
     >
       <label
-        class="sc-fnGiBr sc-bjfHbI jYdWkJ SVeHB"
+        class="sc-fnGiBr sc-bjfHbI gfWFFU SVeHB"
       />
     </div>
   </div>

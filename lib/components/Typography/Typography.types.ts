@@ -14,6 +14,7 @@ import {
 export type TypographyHeaderProps = {
   weight?: "normal" | "bold" | "bolder" | "boldest";
   theme: Theme;
+  spaceAfter?: spacingTokens;
 };
 
 /**
@@ -25,6 +26,7 @@ export type TypographyParagraphProps = {
   underlined?: boolean;
   italic?: boolean;
   strikedThrough?: boolean;
+  spaceAfter?: spacingTokens;
 };
 
 /**
@@ -32,6 +34,7 @@ export type TypographyParagraphProps = {
  */
 export type TypographyOverlineProps = {
   theme: Theme;
+  spaceAfter?: spacingTokens;
 };
 
 export type TitleProps = {

@@ -7,6 +7,7 @@ import {
   TitleProps,
   TextProps,
 } from "./Typography.types";
+import { spacingTokens } from "../../types/tokens";
 
 const decorationsFromProps = ({
   underlined,
@@ -22,7 +23,8 @@ const decorationsFromProps = ({
  * @deprecated in favor of Title
  */
 export const DisplayLarge = styled.h1<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.displayLarge.fontFamily};
@@ -53,7 +55,8 @@ export const DisplayLarge = styled.h1<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const DisplaySmall = styled.h2<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.displaySmall.fontFamily};
@@ -84,7 +87,8 @@ export const DisplaySmall = styled.h2<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH1 = styled.h1<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH1.fontFamily};
@@ -113,7 +117,8 @@ export const HeadingH1 = styled.h1<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH2 = styled.h2<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH2.fontFamily};
@@ -142,7 +147,8 @@ export const HeadingH2 = styled.h2<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH3 = styled.h3<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH3.fontFamily};
@@ -171,7 +177,8 @@ export const HeadingH3 = styled.h3<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH4 = styled.h4<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH4.fontFamily};
@@ -200,7 +207,8 @@ export const HeadingH4 = styled.h4<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH5 = styled.h5<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH5.fontFamily};
@@ -229,7 +237,8 @@ export const HeadingH5 = styled.h5<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH6 = styled.h6<TypographyHeaderProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.headingH6.fontFamily};
@@ -258,7 +267,8 @@ export const HeadingH6 = styled.h6<TypographyHeaderProps>`
  * @deprecated in favor of Text
  */
 export const ParagraphLarge = styled.p<TypographyParagraphProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphLarge.fontFamily};
@@ -277,7 +287,8 @@ export const ParagraphLarge = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphMediumCSS = css<TypographyParagraphProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphMedium.fontFamily};
@@ -304,7 +315,8 @@ export const ParagraphMedium = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphSmallCSS = css<TypographyParagraphProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphSmall.fontFamily};
@@ -330,7 +342,8 @@ export const ParagraphSmall = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphXSmallCSS = css<TypographyParagraphProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.paragraphXSmall.fontFamily};
@@ -357,7 +370,8 @@ export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const OverlineLarge = styled.p<TypographyOverlineProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineLarge.fontFamily};
@@ -374,7 +388,8 @@ export const OverlineLarge = styled.p<TypographyOverlineProps>`
  * @deprecated in favor of Text
  */
 export const OverlineMedium = styled.p<TypographyOverlineProps>`
-  margin: 0;
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineMedium.fontFamily};
@@ -390,8 +405,11 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
 /**
  * @deprecated in favor of Text
  */
-export const overlineXSmallCSS = css`
-  margin: 0;
+export const overlineXSmallCSS = css<
+  Pick<TypographyOverlineProps, "spaceAfter">
+>`
+  margin-bottom: ${({ theme, spaceAfter }) =>
+    spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
   color: ${({ theme }) => theme.colors.neutral["900"]};
   font-family: ${({ theme }) => theme.typography.overlineXSmall.fontFamily};
@@ -418,8 +436,11 @@ export const StyledTitle = styled.h1<TitleProps>`
     color = "neutral",
     shade = "900",
     type = "headingH1",
+    spaceAfter,
   }) => css`
-    margin: 0;
+    margin-bottom: ${spaceAfter
+      ? theme.spacings?.[spaceAfter as spacingTokens]
+      : 0};
 
     color: ${theme.colors[color][shade]};
     font-family: ${theme.typography[type].fontFamily};
@@ -445,8 +466,11 @@ export const StyledText = styled.p<TextProps>`
     color = "neutral",
     shade = "900",
     type = "paragraphMedium",
+    spaceAfter,
   }) => css`
-    margin: 0;
+    margin-bottom: ${spaceAfter
+      ? theme.spacings?.[spaceAfter as spacingTokens]
+      : 0};
 
     color: ${theme.colors[color][shade]};
     font-family: ${theme.typography[type].fontFamily};
