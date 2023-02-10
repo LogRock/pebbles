@@ -6,16 +6,20 @@ export default function Box({
   align = "center",
   backgroundColor = "white",
   backgroundShade = "500",
-  borderRadius = "xxsm",
-  colGap = "md",
+  borderRadius = "zero",
+  colGap = "zero",
   direction = "column",
   justify = "flex-start",
-  margin = "md",
-  padding = "md",
-  rowGap = "md",
+  margin = "zero",
+  padding = "zero",
+  rowGap = "zero",
   shadow = "none",
   noWrap = false,
-  children,
+  width = "12/12",
+  grow = false,
+  shrink = false,
+  spaceAfter = "zero",
+  ...rest
 }: PropsWithChildren<BoxProps>) {
   const props = {
     align,
@@ -30,7 +34,11 @@ export default function Box({
     rowGap,
     shadow,
     noWrap,
+    width,
+    grow,
+    shrink,
+    spaceAfter,
   };
 
-  return <StyledBox {...props}>{children}</StyledBox>;
+  return <StyledBox {...props} {...rest} />;
 }
