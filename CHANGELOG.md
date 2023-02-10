@@ -1,3 +1,9 @@
+## [13.3.2](https://github.com/LogRock/pebbles/compare/v13.3.1...v13.3.2) (2023-02-10)
+
+### Bug Fixes
+
+- **typography:** fix the space after to Text and Title components ([797d242](https://github.com/LogRock/pebbles/commit/797d242d9a548eb03c5a7bee6614456643b0fae6))
+
 ## [13.3.1](https://github.com/LogRock/pebbles/compare/v13.3.0...v13.3.1) (2023-02-08)
 
 ### Bug Fixes
