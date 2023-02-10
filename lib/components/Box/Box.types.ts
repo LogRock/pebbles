@@ -5,6 +5,7 @@ import {
   shadeTokens,
   shadowTokens,
   spacingTokens,
+  widthTokens,
 } from "../../types/tokens";
 
 export type BoxProps = {
@@ -20,4 +21,8 @@ export type BoxProps = {
   align?: CSS.Property.AlignItems;
   justify?: CSS.Property.JustifyContent;
   noWrap?: boolean;
+  width?: widthTokens;
+  grow?: boolean;
+  shrink?: boolean;
+  spaceAfter?: spacingTokens;
 };

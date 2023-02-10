@@ -88,6 +88,12 @@ export default {
     wrap: {
       type: "boolean",
     },
+    spaceAfter: {
+      control: {
+        type: "select",
+        options: spacingOptions,
+      },
+    },
   },
 } as ComponentMeta<typeof Box>;
 
@@ -152,3 +158,53 @@ const Template: Story<BoxProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {};
+
+const TemplateWidths: Story<BoxProps> = (args) => (
+  <Box
+    direction="row"
+    backgroundColor="secondary"
+    padding="md"
+    margin="zero"
+    colGap="zero"
+    rowGap="zero"
+  >
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+    <Box backgroundColor="destructive" {...args}>
+      Child
+    </Box>
+  </Box>
+);
+
+export const DifferentWidths = TemplateWidths.bind({});
