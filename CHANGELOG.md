@@ -1,3 +1,9 @@
+# [13.4.0](https://github.com/LogRock/pebbles/compare/v13.3.2...v13.4.0) (2023-02-10)
+
+### Features
+
+- **box:** :sparkles: add witdth, grow, shrink and spaceAfter to box ([63b4b85](https://github.com/LogRock/pebbles/commit/63b4b85e031da8493767db45e7a7bbf84fbb02a3))
+
 ## [13.3.2](https://github.com/LogRock/pebbles/compare/v13.3.1...v13.3.2) (2023-02-10)
 
 ### Bug Fixes
