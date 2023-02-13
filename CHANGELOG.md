@@ -1,3 +1,10 @@
+## [13.4.1](https://github.com/LogRock/pebbles/compare/v13.4.0...v13.4.1) (2023-02-13)
+
+### Bug Fixes
+
+- **space-after:** :bug: fix space-after issues introduced ([01b4111](https://github.com/LogRock/pebbles/commit/01b4111030a843a34e653b468c63e3271502acde))
+- **space-after:** :bug: fix space-after issues introduced ([c504da9](https://github.com/LogRock/pebbles/commit/c504da94964e78820b95a92b1ad9990c54368932))
+
 # [13.4.0](https://github.com/LogRock/pebbles/compare/v13.3.2...v13.4.0) (2023-02-10)
 
 ### Features
