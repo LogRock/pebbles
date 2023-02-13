@@ -23,6 +23,7 @@ const decorationsFromProps = ({
  * @deprecated in favor of Title
  */
 export const DisplayLarge = styled.h1<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -55,6 +56,7 @@ export const DisplayLarge = styled.h1<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const DisplaySmall = styled.h2<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -87,6 +89,7 @@ export const DisplaySmall = styled.h2<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH1 = styled.h1<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -117,6 +120,7 @@ export const HeadingH1 = styled.h1<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH2 = styled.h2<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -147,6 +151,7 @@ export const HeadingH2 = styled.h2<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH3 = styled.h3<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -177,6 +182,7 @@ export const HeadingH3 = styled.h3<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH4 = styled.h4<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -207,6 +213,7 @@ export const HeadingH4 = styled.h4<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH5 = styled.h5<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -237,6 +244,7 @@ export const HeadingH5 = styled.h5<TypographyHeaderProps>`
  * @deprecated in favor of Title
  */
 export const HeadingH6 = styled.h6<TypographyHeaderProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -267,6 +275,7 @@ export const HeadingH6 = styled.h6<TypographyHeaderProps>`
  * @deprecated in favor of Text
  */
 export const ParagraphLarge = styled.p<TypographyParagraphProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -287,6 +296,7 @@ export const ParagraphLarge = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphMediumCSS = css<TypographyParagraphProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -315,6 +325,7 @@ export const ParagraphMedium = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphSmallCSS = css<TypographyParagraphProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -342,6 +353,7 @@ export const ParagraphSmall = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const paragraphXSmallCSS = css<TypographyParagraphProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -370,6 +382,7 @@ export const ParagraphXSmall = styled.p<TypographyParagraphProps>`
  * @deprecated in favor of Text
  */
 export const OverlineLarge = styled.p<TypographyOverlineProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -388,6 +401,7 @@ export const OverlineLarge = styled.p<TypographyOverlineProps>`
  * @deprecated in favor of Text
  */
 export const OverlineMedium = styled.p<TypographyOverlineProps>`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -408,6 +422,7 @@ export const OverlineMedium = styled.p<TypographyOverlineProps>`
 export const overlineXSmallCSS = css<
   Pick<TypographyOverlineProps, "spaceAfter">
 >`
+  margin: 0;
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 
@@ -438,6 +453,7 @@ export const StyledTitle = styled.h1<TitleProps>`
     type = "headingH1",
     spaceAfter,
   }) => css`
+    margin: 0;
     margin-bottom: ${spaceAfter
       ? theme.spacings?.[spaceAfter as spacingTokens]
       : 0};
@@ -468,6 +484,7 @@ export const StyledText = styled.p<TextProps>`
     type = "paragraphMedium",
     spaceAfter,
   }) => css`
+    margin: 0;
     margin-bottom: ${spaceAfter
       ? theme.spacings?.[spaceAfter as spacingTokens]
       : 0};

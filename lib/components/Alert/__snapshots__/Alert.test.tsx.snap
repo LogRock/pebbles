@@ -2,13 +2,13 @@
 
 exports[`Alert > renders properly 1`] = `
 <div
-  class="sc-dIfARi iOFYkK"
+  class="sc-dIfARi klszbf"
 >
   <div
     class="sc-dmctIk fhryCP"
   >
     <span
-      class="sc-bBABsx dwiQRo"
+      class="sc-bBABsx kqSJUh"
     >
       Foo
     </span>
