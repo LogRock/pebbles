@@ -9,11 +9,13 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
         class="sc-idXgbr cHqexO"
       >
         <label
-          class="sc-dIfARi gHlbJC"
+          class="sc-ksBlkl csMath"
+          color="neutral"
           for="pebbles__input__1"
+          type="overlineXSmall"
         />
         <div
-          class="sc-cwSeag dXgssi"
+          class="sc-iveFHk jnTCMt"
         >
           <div
             style="padding: 10px 12px;"
@@ -76,13 +78,6 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             </label>
           </div>
         </div>
-        <div
-          class="sc-hHTYSt kZyfYY"
-        >
-          <label
-            class="sc-dIfARi sc-dmctIk gHlbJC kQdzNI"
-          />
-        </div>
       </div>
     </div>
   </body>,
@@ -91,11 +86,13 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
       class="sc-idXgbr cHqexO"
     >
       <label
-        class="sc-dIfARi gHlbJC"
+        class="sc-ksBlkl csMath"
+        color="neutral"
         for="pebbles__input__1"
+        type="overlineXSmall"
       />
       <div
-        class="sc-cwSeag dXgssi"
+        class="sc-iveFHk jnTCMt"
       >
         <div
           style="padding: 10px 12px;"
@@ -157,13 +154,6 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
             />
           </label>
         </div>
-      </div>
-      <div
-        class="sc-hHTYSt kZyfYY"
-      >
-        <label
-          class="sc-dIfARi sc-dmctIk gHlbJC kQdzNI"
-        />
       </div>
     </div>
   </div>,

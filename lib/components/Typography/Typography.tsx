@@ -8,8 +8,8 @@ export function Text({
   color = "neutral",
   shade = "900",
   weight = "normal",
-  spaceAfter,
-  children,
+  spaceAfter = "zero",
+  ...rest
 }: PropsWithChildren<TextProps>) {
   if (!as) {
     switch (type) {
@@ -22,9 +22,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "overlineMedium":
         return (
@@ -35,9 +34,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "overlineXSmall":
         return (
@@ -48,9 +46,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "paragraphLarge":
         return (
@@ -61,9 +58,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "paragraphMedium":
         return (
@@ -74,9 +70,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "paragraphSmall":
         return (
@@ -87,9 +82,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
       case "paragraphXSmall":
         return (
@@ -100,9 +94,8 @@ export function Text({
             shade={shade}
             weight={weight}
             spaceAfter={spaceAfter}
-          >
-            {children}
-          </StyledText>
+            {...rest}
+          />
         );
     }
   }
@@ -115,9 +108,8 @@ export function Text({
       weight={weight}
       spaceAfter={spaceAfter}
       as={as}
-    >
-      {children}
-    </StyledText>
+      {...rest}
+    />
   );
 }
 

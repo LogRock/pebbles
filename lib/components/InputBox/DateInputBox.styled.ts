@@ -15,7 +15,6 @@ export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
     align-self: stretch;
     width: ${({ theme }) => theme.inputBox.width};
     height: ${({ theme }) => theme.inputBox.height};
-    margin: ${({ theme }) => theme.inputBox.margin};
     padding: ${({ theme }) => theme.inputBox.padding};
 
     border: ${({ theme, status }) =>

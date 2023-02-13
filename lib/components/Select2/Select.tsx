@@ -11,16 +11,12 @@ import ReactSelect, {
   ValueContainerProps,
 } from "react-select";
 import styled, { ThemeContext } from "styled-components";
-import {
-  Helper,
-  HelperDiv,
-  HelperIcon,
-  Label,
-} from "../InputBox/BaseInputBox.styled";
+import { Helper, HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./Select.types";
 import ThemeType from "../../types/theme";
 import { DropdownIndicatorWrapper } from "./Select.styled";
 import { spacingTokens } from "../../types/tokens";
+import { Text } from "../Typography";
 
 const defaultStatus = "info";
 
@@ -29,6 +25,10 @@ const { ValueContainer } = components;
 export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
+
+  label {
+    display: block;
+  }
 `;
 
 const CustomValueContainer: FC<ValueContainerProps> = ({
@@ -136,7 +136,14 @@ function Select<
 
   return (
     <StyledDiv spaceAfter={spaceAfter}>
-      <Label htmlFor={selectID}>{label}</Label>
+      <Text
+        as="label"
+        htmlFor={selectID}
+        spaceAfter="xsm"
+        type="overlineXSmall"
+      >
+        {label}
+      </Text>
       <ReactSelect
         {...props}
         styles={customStyles}

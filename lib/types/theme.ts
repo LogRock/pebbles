@@ -136,7 +136,6 @@ export interface InputBox {
   boxShadow: CSS.Property.BoxShadow;
   borderRadius: CSS.Property.BorderRadius;
   border: CSS.Property.Border;
-  margin: CSS.Property.Margin;
   background: CSS.Property.Background;
   height: CSS.Property.Height;
   width: CSS.Property.Width;

@@ -9,7 +9,6 @@ import MaskedTextInput from "react-text-mask";
 
 import {
   StyledDiv,
-  Label,
   Helper,
   HelperDiv,
   Hint,
@@ -23,6 +22,7 @@ import {
   StyledDatePicker,
 } from "./DateInputBox.styled";
 import { spacingTokens } from "../../types/tokens";
+import { Text } from "../Typography";
 
 export interface DateInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -50,7 +50,14 @@ const DateInputBox: FC<DateInputBoxProps> = ({
 }) => {
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
-      <Label>{description}</Label>
+      <Text
+        as="label"
+        htmlFor={inputProps.id}
+        spaceAfter="xsm"
+        type="overlineXSmall"
+      >
+        {description}
+      </Text>
 
       <InputDiv>
         <StyledDatePicker status={status}>

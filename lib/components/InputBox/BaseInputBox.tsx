@@ -2,7 +2,6 @@ import { BsExclamationTriangleFill } from "react-icons/bs";
 import React, { FC, useState } from "react";
 import {
   StyledDiv,
-  Label,
   Helper,
   HelperDiv,
   Hint,
@@ -15,7 +14,7 @@ import {
 } from "./BaseInputBox.styled";
 import uniqueid from "lodash.uniqueid";
 import { E164Number } from "libphonenumber-js";
-import { ParagraphMedium } from "../Typography";
+import { Text } from "../Typography";
 import { spacingTokens } from "../../types/tokens";
 
 export interface BaseInputBoxProps
@@ -52,7 +51,9 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
 
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
-      <Label htmlFor={inputID}>{description}</Label>
+      <Text as="label" htmlFor={inputID} spaceAfter="xsm" type="overlineXSmall">
+        {description}
+      </Text>
       <InputDiv>
         {!inputProps?.children && (
           <StyledInput
@@ -71,12 +72,14 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
                 disabled={inputProps.disabled}
                 onClick={() => switchShowPassword()}
               >
-                <ParagraphMedium>
+                <Text type="paragraphMedium">
                   {showPassword ? "hide" : "show"}
-                </ParagraphMedium>
+                </Text>
               </ShowHidePasswordBtn>
             )}
-            <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
+            <Hint disabled={inputProps.disabled} type="overlineXSmall">
+              {hint.content}
+            </Hint>
             {hint.icon && (
               <HintIconWrapper disabled={inputProps.disabled}>
                 {hint.icon}
@@ -85,14 +88,18 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
           </HintDiv>
         )}
       </InputDiv>
-      <HelperDiv>
-        {status === "destructive" && (
-          <HelperIcon status={status}>
-            <BsExclamationTriangleFill />
-          </HelperIcon>
-        )}
-        <Helper status={status}>{helper}</Helper>
-      </HelperDiv>
+      {helper && (
+        <HelperDiv>
+          {status === "destructive" && (
+            <HelperIcon status={status}>
+              <BsExclamationTriangleFill />
+            </HelperIcon>
+          )}
+          <Helper status={status} type="overlineXSmall">
+            {helper}
+          </Helper>
+        </HelperDiv>
+      )}
     </StyledDiv>
   );
 };

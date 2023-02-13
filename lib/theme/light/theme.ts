@@ -436,7 +436,6 @@ const inputBox: InputBox = {
   boxShadow: shadows.xSmall,
   borderRadius: "8px",
   border: `1px solid ${neutral[200]}`,
-  margin: `${spacings.xsm} 0px`,
   background: "white",
   height: "50px",
   width: "100%",

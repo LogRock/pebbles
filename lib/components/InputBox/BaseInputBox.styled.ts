@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import styled, { css } from "styled-components";
-import { overlineXSmallCSS } from "../Typography";
 import { BaseInputBoxProps } from "./BaseInputBox";
 import { spacingTokens } from "../../types/tokens";
+import { Text } from "../Typography";
 
 const defaultStatus = "info";
 
@@ -17,20 +17,13 @@ export const StyledDiv = styled.div<{
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 `;
 
-export const Label = styled.label`
-  ${overlineXSmallCSS}
-
-  color: ${({ theme }) => theme.inputBox.label.color};
-  text-transform: uppercase;
-`;
-
 export const HelperDiv = styled.div`
   display: flex;
   margin-top: ${({ theme }) => theme.spacings.xxsm};
   margin-left: ${({ theme }) => theme.spacings.xxsm};
 `;
 
-export const Helper = styled(Label)<Pick<BaseInputBoxProps, "status">>`
+export const Helper = styled(Text)<Pick<BaseInputBoxProps, "status">>`
   color: ${({ theme }) => theme.inputBox.helper.color};
   font-size: ${({ theme }) => theme.inputBox.helper.fontSize};
   font-style: ${({ theme }) => theme.inputBox.helper.fontStyle};
@@ -52,11 +45,10 @@ export const HintDiv = styled.div`
   right: 16px;
   flex-direction: row;
   align-items: center;
-  height: calc(100% - 16px);
-  margin: ${({ theme }) => theme.inputBox.margin};
+  height: 50px;
 `;
 
-export const Hint = styled(Label)<Pick<BaseInputBoxProps, "disabled">>`
+export const Hint = styled(Text)<Pick<BaseInputBoxProps, "disabled">>`
   color: ${({ theme, disabled }) =>
     disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
 `;
@@ -84,7 +76,6 @@ export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
   align-self: stretch;
   width: ${({ theme }) => theme.inputBox.width};
   height: ${({ theme }) => theme.inputBox.height};
-  margin: ${({ theme }) => theme.inputBox.margin};
   padding: ${({ theme }) => theme.inputBox.padding};
   padding-right: 58px;
 

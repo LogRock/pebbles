@@ -4,20 +4,20 @@ import React, { useContext, useMemo } from "react";
 import { StylesConfig, Theme, GroupBase } from "react-select";
 import ReactSelectAsync, { AsyncProps } from "react-select/async";
 import styled, { ThemeContext } from "styled-components";
-import {
-  Helper,
-  HelperDiv,
-  HelperIcon,
-  Label,
-} from "../InputBox/BaseInputBox.styled";
+import { Helper, HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./SelectAsync.types";
 import { spacingTokens } from "../../types/tokens";
+import { Text } from "../Typography";
 
 const defaultStatus = "info";
 
 export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   margin-bottom: ${({ theme, spaceAfter }) =>
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
+
+  label {
+    display: block;
+  }
 `;
 
 function SelectAsync<
@@ -99,7 +99,14 @@ function SelectAsync<
 
   return (
     <StyledDiv spaceAfter={spaceAfter}>
-      <Label htmlFor={selectID}>{label}</Label>
+      <Text
+        as="label"
+        htmlFor={selectID}
+        spaceAfter="xsm"
+        type="overlineXSmall"
+      >
+        {label}
+      </Text>
       <ReactSelectAsync
         {...props}
         styles={customStyles}

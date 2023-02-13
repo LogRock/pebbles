@@ -52,5 +52,6 @@ export type TextProps = {
   type?: textTokens;
   weight?: weightTokens;
   spaceAfter?: spacingTokens;
-  as?: "p" | "span" | "div";
+  as?: "p" | "span" | "div" | "label";
+  htmlFor?: string;
 };

@@ -37,8 +37,8 @@ export const InputBoxError = Template.bind({});
 InputBoxError.args = {
   description: "Vehicle Id Number",
   hint: {
-    content: "",
-    icon: null,
+    content: "Some Hint",
+    icon: <BsEnvelope />,
   },
   helper: "please provide the VIN number",
   status: "destructive",
