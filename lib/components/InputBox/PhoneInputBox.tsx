@@ -10,9 +10,16 @@ import { BaseStyleInput } from "./BaseInputBox.styled";
 const StyledPhoneInputBox = styled(PhoneInput)<
   Pick<BaseInputBoxProps, "status">
 >`
+  .PhoneInput {
+    position: relative;
+
+    background: red;
+  }
+
   & .PhoneInputCountry {
     z-index: 1;
-    padding: 24px 18px;
+    left: 16px;
+    height: 50px;
   }
 
   & input {

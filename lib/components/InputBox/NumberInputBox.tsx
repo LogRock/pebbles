@@ -10,10 +10,10 @@ import {
   Hint,
   HintDiv,
   HintIconWrapper,
-  Label,
   StyledDiv,
   StyledInput,
 } from "./BaseInputBox.styled";
+import { Text } from "../Typography";
 
 const NumberInputBoxWrapper = styled.div`
   display: flex;
@@ -34,7 +34,6 @@ const InputWrapper = styled.div`
 
 const StyledButton = styled(Button)`
   flex-shrink: 0;
-  margin: ${({ theme }) => theme.inputBox.margin};
 `;
 
 const NumberInputBox: FC<BaseInputBoxProps> = ({
@@ -79,7 +78,14 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
 
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
-      <Label>{description}</Label>
+      <Text
+        as="label"
+        htmlFor={props.id}
+        spaceAfter="xsm"
+        type="overlineXSmall"
+      >
+        {description}
+      </Text>
       <NumberInputBoxWrapper>
         <StyledButton
           aria-label="decrease button"
