@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { paragraphMediumCSS } from "../Typography/Typography.styled";
 import { spacingTokens } from "../../types/tokens";
 
@@ -50,12 +50,12 @@ export const Label = styled.label<{
   align-items: start;
   justify-content: flex-end;
   margin: ${({ theme, spaced }) => (spaced ? theme.spacings.big : 0)} 0;
-  margin-bottom: ${({ theme, spaced, spaceAfter }) =>
+  ${({ theme, spaceAfter }) =>
     spaceAfter
-      ? theme.spacings?.[spaceAfter as spacingTokens]
-      : spaced
-      ? theme.spacings.big
-      : 0};
+      ? css`
+          margin-bottom: ${theme.spacings?.[spaceAfter as spacingTokens]};
+        `
+      : ""}
 
   &:hover input ~ ${CheckMark} {
     border-color: ${({ theme }) => theme.checkBox.checked.background};
