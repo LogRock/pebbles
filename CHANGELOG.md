@@ -1,3 +1,9 @@
+## [13.4.2](https://github.com/LogRock/pebbles/compare/v13.4.1...v13.4.2) (2023-02-14)
+
+### Bug Fixes
+
+- **input-box:** :bug: neutralize spacings ([fe87cb7](https://github.com/LogRock/pebbles/commit/fe87cb7a52649b47b20e9c009e54f24c0dec3b6d))
+
 ## [13.4.1](https://github.com/LogRock/pebbles/compare/v13.4.0...v13.4.1) (2023-02-13)
 
 ### Bug Fixes
