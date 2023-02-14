@@ -2,18 +2,13 @@
 
 exports[`Box > renders with custom styles 1`] = `
 <div
-  class="sc-bcXHqe jtzYpn"
+  class="sc-bcXHqe IifmQ"
   direction="row"
-  display="flex"
-  width="12/12"
 />
 `;
 
 exports[`Box > renders with default style 1`] = `
 <div
-  class="sc-bcXHqe cUPION"
-  direction="column"
-  display="flex"
-  width="12/12"
+  class="sc-bcXHqe cACTZi"
 />
 `;
