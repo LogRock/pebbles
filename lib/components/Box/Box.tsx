@@ -19,6 +19,13 @@ export default function Box({
   grow = false,
   shrink = false,
   spaceAfter = "zero",
+  borderColor = "neutral",
+  borderShade = "200",
+  borderWidth = "zero",
+  display = "flex",
+  gridColumns = "unset",
+  gridRows = "unset",
+  gridArea = "unset",
   ...rest
 }: PropsWithChildren<BoxProps>) {
   const props = {
@@ -38,6 +45,13 @@ export default function Box({
     grow,
     shrink,
     spaceAfter,
+    borderColor,
+    borderShade,
+    borderWidth,
+    display,
+    gridColumns,
+    gridRows,
+    gridArea,
   };
 
   return <StyledBox {...props} {...rest} />;

@@ -94,6 +94,24 @@ export default {
         options: spacingOptions,
       },
     },
+    borderColor: {
+      control: {
+        type: "select",
+        options: colorOptions,
+      },
+    },
+    borderShade: {
+      control: {
+        type: "select",
+        options: shadeOptions,
+      },
+    },
+    borderWidth: {
+      control: {
+        type: "select",
+        options: spacingOptions,
+      },
+    },
   },
 } as ComponentMeta<typeof Box>;
 
@@ -208,3 +226,50 @@ const TemplateWidths: Story<BoxProps> = (args) => (
 );
 
 export const DifferentWidths = TemplateWidths.bind({});
+
+export const GridMode = Template.bind({});
+GridMode.args = {
+  display: "grid",
+  gridColumns: "1fr 2fr 1fr",
+  gridRows: "1fr 2fr",
+  justify: "stretch",
+  align: "stretch",
+  colGap: "md",
+  rowGap: "md",
+};
+
+export const CustomGrid: Story<BoxProps> = () => (
+  <Box
+    backgroundColor="white"
+    colGap="md"
+    rowGap="md"
+    gridRows="1fr 2fr 1fr"
+    gridColumns="1fr 2fr 1fr 1fr"
+    display="grid"
+    align="stretch"
+  >
+    <Box
+      backgroundColor="destructive"
+      gridArea="1 / 1 / 4 / 2"
+      justify="center"
+    >
+      1 / 1 / 4 / 2
+    </Box>
+    <Box
+      backgroundColor="destructive"
+      gridArea="2 / 2 / -1 / -1"
+      justify="center"
+    >
+      2 / 2 / -1 / -1
+    </Box>
+    <Box backgroundColor="destructive" justify="center">
+      auto
+    </Box>
+    <Box backgroundColor="destructive" justify="center">
+      auto
+    </Box>
+    <Box backgroundColor="destructive" justify="center">
+      auto
+    </Box>
+  </Box>
+);

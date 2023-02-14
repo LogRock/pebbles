@@ -1,5 +1,7 @@
 export type spacingTokens =
   | "zero"
+  | "xxxxsm"
+  | "xxxsm"
   | "xxsm"
   | "xsm"
   | "sm"

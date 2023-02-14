@@ -25,4 +25,11 @@ export type BoxProps = {
   grow?: boolean;
   shrink?: boolean;
   spaceAfter?: spacingTokens;
+  borderColor?: colorTokens;
+  borderShade?: shadeTokens;
+  borderWidth?: spacingTokens;
+  display?: CSS.Property.Display;
+  gridColumns?: CSS.Property.GridTemplateColumns;
+  gridRows?: CSS.Property.GridTemplateRows;
+  gridArea?: CSS.Property.GridArea;
 };

@@ -37,6 +37,8 @@ export const weightOptions: Array<weightTokens> = [
 
 export const spacingOptions: Array<spacingTokens> = [
   "zero",
+  "xxxxsm",
+  "xxxsm",
   "xxsm",
   "xsm",
   "sm",
