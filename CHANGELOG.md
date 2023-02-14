@@ -1,3 +1,10 @@
+# [13.5.0](https://github.com/LogRock/pebbles/compare/v13.4.2...v13.5.0) (2023-02-14)
+
+### Features
+
+- **box:** :sparkles: add grid mode to box ([0628e29](https://github.com/LogRock/pebbles/commit/0628e291b7a246d05fbffe946b6272eb5c231fab))
+- **divider:** :sparkles: add divider component ([dce5e2f](https://github.com/LogRock/pebbles/commit/dce5e2fe02931741b59acd037c1b43429e8d1299))
+
 ## [13.4.2](https://github.com/LogRock/pebbles/compare/v13.4.1...v13.4.2) (2023-02-14)
 
 ### Bug Fixes
