@@ -1,3 +1,9 @@
+## [13.6.1](https://github.com/LogRock/pebbles/compare/v13.6.0...v13.6.1) (2023-02-14)
+
+### Bug Fixes
+
+- **divider:** :bug: make divider 100% width by default ([8e05979](https://github.com/LogRock/pebbles/commit/8e05979cae7b332c9129e90125b47b0dd3aa97c4))
+
 # [13.6.0](https://github.com/LogRock/pebbles/compare/v13.5.0...v13.6.0) (2023-02-14)
 
 ### Features
