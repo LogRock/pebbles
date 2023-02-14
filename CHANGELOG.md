@@ -1,3 +1,9 @@
+# [13.6.0](https://github.com/LogRock/pebbles/compare/v13.5.0...v13.6.0) (2023-02-14)
+
+### Features
+
+- **divider:** :sparkles: expose divider ([469d4e6](https://github.com/LogRock/pebbles/commit/469d4e6e14461f5964ee1d509cb599f3c8e5f12e))
+
 # [13.5.0](https://github.com/LogRock/pebbles/compare/v13.4.2...v13.5.0) (2023-02-14)
 
 ### Features
