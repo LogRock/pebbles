@@ -20,8 +20,11 @@ const widthMap: Record<widthTokens, CSS.Property.Width> = {
 
 export const StyledBox = styled.div<Required<BoxProps>>`
   ${({ theme, ...props }) => css`
-    display: flex;
+    display: ${props.display};
     box-sizing: border-box;
+    grid-area: ${props.gridArea};
+    grid-template-columns: ${props.gridColumns};
+    grid-template-rows: ${props.gridRows};
     flex-direction: ${props.direction};
     flex-grow: ${props.grow ? "1" : "0"};
     flex-shrink: ${props.shrink ? "1" : "0"};
@@ -38,7 +41,10 @@ export const StyledBox = styled.div<Required<BoxProps>>`
     padding: ${theme.spacings[props.padding]};
     column-gap: ${theme.spacings[props.colGap]};
 
+    border-width: ${theme.spacings[props.borderWidth]};
+    border-style: solid;
     border-radius: ${theme.spacings[props.borderRadius]};
+    border-color: ${theme.colors[props.borderColor][props.borderShade]};
 
     background-color: ${theme.colors[props.backgroundColor][
       props.backgroundShade

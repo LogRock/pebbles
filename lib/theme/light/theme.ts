@@ -61,9 +61,11 @@ import {
   STATUS_TAG_SIZES,
   STATUS_TAG_VARIANTS,
 } from "../../components/StatusTag/StatusTag.types";
+import { spacingTokens } from "../../types/tokens";
 
-const spacings = {
+const spacings: Record<spacingTokens, string> = {
   zero: "0",
+  xxxxsm: "1px",
   xxxsm: "2px",
   xxsm: "4px",
   xsm: "8px",
