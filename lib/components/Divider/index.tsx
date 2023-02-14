@@ -16,6 +16,7 @@ const Divider = styled.hr<DividerProps>`
     thickness = "xxxxsm",
     spaceAfter = "zero",
   }) => css`
+    width: 100%;
     margin-bottom: ${theme.spacings[spaceAfter]};
 
     border: 0px solid white;
