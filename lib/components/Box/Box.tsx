@@ -22,7 +22,7 @@ const Box = styled.div<BoxProps>`
   ${({
     theme,
     align = "center",
-    backgroundColor = "white",
+    backgroundColor,
     backgroundShade = "500",
     borderRadius = "zero",
     colGap = "zero",
@@ -71,7 +71,9 @@ const Box = styled.div<BoxProps>`
     border-radius: ${theme.spacings[borderRadius]};
     border-color: ${theme.colors[borderColor][borderShade]};
 
-    background-color: ${theme.colors[backgroundColor][backgroundShade]};
+    background-color: ${backgroundColor
+      ? theme.colors[backgroundColor][backgroundShade]
+      : "transparent"};
     box-shadow: ${theme.shadows[shadow]};
     row-gap: ${theme.spacings[rowGap]};
   `}

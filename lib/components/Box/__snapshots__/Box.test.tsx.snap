@@ -9,6 +9,6 @@ exports[`Box > renders with custom styles 1`] = `
 
 exports[`Box > renders with default style 1`] = `
 <div
-  class="sc-bcXHqe cACTZi"
+  class="sc-bcXHqe kIZXyb"
 />
 `;

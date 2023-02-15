@@ -1,4 +1,5 @@
 import * as CSS from "csstype";
+import { ButtonProps } from "../components/Button";
 import {
   STATUS_TAG_SIZES,
   STATUS_TAG_VARIANTS,
@@ -228,34 +229,29 @@ export interface Loader {
 }
 
 interface AlertColor {
-  descriptionColor: CSS.Property.Color;
-  background: CSS.Property.Background;
-  borderColor: CSS.Property.Color;
-  iconColor: CSS.Property.Color;
-  titleColor: CSS.Property.Color;
+  textColor: colorTokens;
+  textShade: shadeTokens;
+  backgroundColor: colorTokens;
+  backgroundShade: shadeTokens;
+  iconColor: colorTokens;
+  iconShade: shadeTokens;
+}
+
+interface AlertButtons {
+  primaryButtonVariant: ButtonProps["variant"];
+  primaryButtonStyle: ButtonProps["buttonStyle"];
+  secondaryButtonVariant: ButtonProps["variant"];
+  secondaryButtonStyle: ButtonProps["buttonStyle"];
 }
 
 export interface Alert {
-  neutral: AlertColor;
-  primary: AlertColor;
-  warning: AlertColor;
-  success: AlertColor;
-  destructive: AlertColor;
-  title: {
-    fontSize: CSS.Property.FontSize;
-    fontWeight: CSS.Property.FontWeight;
-    lineHeight: CSS.Property.LineHeight;
-    height: CSS.Property.Height;
-  };
-  description: {
-    fontSize: CSS.Property.FontSize;
-    fontWeight: CSS.Property.FontWeight;
-    lineHeight: CSS.Property.LineHeight;
-    height: CSS.Property.Height;
-  };
-  iconSize: CSS.Property.FontSize;
-  fontFamily: CSS.Property.FontFamily;
-  borderRadius: CSS.Property.BorderRadius;
+  colors: Record<colorTokens, AlertColor>;
+  buttons: Record<colorTokens, AlertButtons>;
+  textType: textTokens;
+  iconSize: spacingTokens;
+  borderRadius: spacingTokens;
+  horizontalPadding: spacingTokens;
+  verticalPadding: spacingTokens;
 }
 
 export interface ProgressBar {
@@ -502,6 +498,9 @@ export interface Icons {
       color: CSS.Property.Color;
     };
     success: {
+      color: CSS.Property.Color;
+    };
+    secondary: {
       color: CSS.Property.Color;
     };
   };
