@@ -1,3 +1,9 @@
+# [13.7.0](https://github.com/LogRock/pebbles/compare/v13.6.1...v13.7.0) (2023-02-15)
+
+### Features
+
+- **alert:** :sparkles: remake alert component according to design system ([691d127](https://github.com/LogRock/pebbles/commit/691d127e72a13539929cc81e76be44b62a72f842))
+
 ## [13.6.1](https://github.com/LogRock/pebbles/compare/v13.6.0...v13.6.1) (2023-02-14)
 
 ### Bug Fixes
