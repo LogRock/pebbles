@@ -1,3 +1,13 @@
+# [13.8.0](https://github.com/LogRock/pebbles/compare/v13.7.0...v13.8.0) (2023-02-15)
+
+### Bug Fixes
+
+- **alert:** :bug: fix primary and secondary buttons ordering ([ef89c5a](https://github.com/LogRock/pebbles/commit/ef89c5aa102608972800cf678008f912ae62b8ab))
+
+### Features
+
+- **box:** :sparkles: add box props customization to alerts ([bf52023](https://github.com/LogRock/pebbles/commit/bf520237b28c1ea5dd8b09f65d51cd271d4b96df))
+
 # [13.7.0](https://github.com/LogRock/pebbles/compare/v13.6.1...v13.7.0) (2023-02-15)
 
 ### Features
