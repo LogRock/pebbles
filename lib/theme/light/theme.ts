@@ -199,6 +199,9 @@ const icons: Icons = {
     success: {
       color: success[600],
     },
+    secondary: {
+      color: secondary[600],
+    },
   },
 
   tags: {
@@ -545,57 +548,127 @@ const loader: Loader = {
 };
 
 const alert: Alert = {
-  neutral: {
-    background: neutral[50],
-    borderColor: neutral[200],
-    titleColor: neutral[800],
-    descriptionColor: neutral[700],
-    iconColor: icons.alerts.neutral.color,
+  colors: {
+    white: {
+      backgroundColor: "white",
+      backgroundShade: "500",
+      iconColor: "black",
+      iconShade: "500",
+      textColor: "black",
+      textShade: "500",
+    },
+    black: {
+      backgroundColor: "black",
+      backgroundShade: "500",
+      iconColor: "white",
+      iconShade: "500",
+      textColor: "white",
+      textShade: "500",
+    },
+    secondary: {
+      backgroundColor: "secondary",
+      backgroundShade: "50",
+      iconColor: "secondary",
+      iconShade: "800",
+      textColor: "secondary",
+      textShade: "700",
+    },
+    neutral: {
+      backgroundColor: "neutral",
+      backgroundShade: "50",
+      iconColor: "neutral",
+      iconShade: "800",
+      textColor: "neutral",
+      textShade: "700",
+    },
+    primary: {
+      backgroundColor: "primary",
+      backgroundShade: "50",
+      iconColor: "primary",
+      iconShade: "500",
+      textColor: "neutral",
+      textShade: "900",
+    },
+    success: {
+      backgroundColor: "success",
+      backgroundShade: "50",
+      iconColor: "success",
+      iconShade: "500",
+      textColor: "success",
+      textShade: "900",
+    },
+    warning: {
+      backgroundColor: "warning",
+      backgroundShade: "50",
+      iconColor: "warning",
+      iconShade: "600",
+      textColor: "warning",
+      textShade: "900",
+    },
+    destructive: {
+      backgroundColor: "destructive",
+      backgroundShade: "50",
+      iconColor: "destructive",
+      iconShade: "600",
+      textColor: "destructive",
+      textShade: "700",
+    },
   },
-  primary: {
-    background: primary[50],
-    borderColor: primary[600],
-    titleColor: primary[900],
-    descriptionColor: neutral[700],
-    iconColor: icons.alerts.primary.color,
+  buttons: {
+    black: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "secondary",
+      secondaryButtonVariant: "primary",
+    },
+    white: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "secondary",
+      secondaryButtonVariant: "primary",
+    },
+    primary: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "secondary",
+      secondaryButtonVariant: "primary",
+    },
+    secondary: {
+      primaryButtonStyle: "secondary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "tertiary",
+      secondaryButtonVariant: "primary",
+    },
+    success: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "secondary",
+      secondaryButtonVariant: "primary",
+    },
+    warning: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "secondary",
+      secondaryButtonVariant: "primary",
+    },
+    destructive: {
+      primaryButtonStyle: "primary",
+      primaryButtonVariant: "destructive",
+      secondaryButtonStyle: "tertiary",
+      secondaryButtonVariant: "destructive",
+    },
+    neutral: {
+      primaryButtonStyle: "secondary",
+      primaryButtonVariant: "primary",
+      secondaryButtonStyle: "outlined",
+      secondaryButtonVariant: "primary",
+    },
   },
-  success: {
-    background: success[50],
-    borderColor: success[200],
-    titleColor: success[800],
-    descriptionColor: success[700],
-    iconColor: icons.alerts.success.color,
-  },
-  warning: {
-    background: warning[50],
-    borderColor: warning[200],
-    titleColor: warning[800],
-    descriptionColor: warning[700],
-    iconColor: icons.alerts.warning.color,
-  },
-  destructive: {
-    background: destructive[50],
-    borderColor: destructive[200],
-    titleColor: destructive[800],
-    descriptionColor: destructive[700],
-    iconColor: icons.alerts.destructive.color,
-  },
-  title: {
-    fontWeight: "600",
-    fontSize: "18px",
-    lineHeight: "24px",
-    height: "24px",
-  },
-  description: {
-    fontWeight: "400",
-    fontSize: "18px",
-    lineHeight: "20px",
-    height: "20px",
-  },
-
-  iconSize: icons.size,
-  fontFamily: "Archivo",
-  borderRadius: spacings.sm,
+  textType: "paragraphMedium",
+  iconSize: "big",
+  borderRadius: "sm",
+  horizontalPadding: "xxbig",
+  verticalPadding: "sm",
 };
 
 const progressBar: ProgressBar = {

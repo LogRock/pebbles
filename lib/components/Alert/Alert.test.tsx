@@ -7,7 +7,15 @@ import Alert from ".";
 
 describe("Alert", () => {
   it("renders properly", () => {
-    const { container } = render(<Alert>Foo</Alert>);
+    const { container } = render(
+      <Alert
+        onCloseClicked={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      >
+        Foo
+      </Alert>
+    );
 
     expect(container.firstChild).toMatchSnapshot();
   });
