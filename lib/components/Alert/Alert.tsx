@@ -107,26 +107,26 @@ export default function Alert(props: PropsWithChildren<AlertProps>) {
 
       {(!!onPrimaryButtonClicked || !!onSecondaryButtonClicked) && (
         <Box direction="row" colGap="sm">
-          {!!onPrimaryButtonClicked && (
+          {!!onSecondaryButtonClicked && (
             <Button
               variant={secondaryButtonVariant}
               buttonStyle={secondaryButtonStyle}
-              endIcon={primaryButtonIconEnd}
-              startIcon={primaryButtonIconStart}
-              onClick={onPrimaryButtonClicked}
-            >
-              {primaryButtonContents}
-            </Button>
-          )}
-          {!!onSecondaryButtonClicked && (
-            <Button
-              variant={primaryButtonVariant}
-              buttonStyle={primaryButtonStyle}
               endIcon={secondaryButtonIconEnd}
               startIcon={secondaryButtonIconStart}
               onClick={onSecondaryButtonClicked}
             >
               {secondaryButtonContents}
+            </Button>
+          )}
+          {!!onPrimaryButtonClicked && (
+            <Button
+              variant={primaryButtonVariant}
+              buttonStyle={primaryButtonStyle}
+              endIcon={primaryButtonIconEnd}
+              startIcon={primaryButtonIconStart}
+              onClick={onPrimaryButtonClicked}
+            >
+              {primaryButtonContents}
             </Button>
           )}
         </Box>
