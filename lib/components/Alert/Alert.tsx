@@ -3,7 +3,7 @@ import React, { PropsWithChildren, ReactNode, useContext } from "react";
 import { BsX } from "react-icons/bs";
 import styled, { ThemeContext } from "styled-components";
 import { colorTokens, shadeTokens, spacingTokens } from "../../types/tokens";
-import Box from "../Box";
+import Box, { BoxProps } from "../Box";
 import Button from "../Button";
 import { Text } from "../Typography";
 
@@ -15,13 +15,15 @@ const StyledBox = styled(Box)<{
   horizontalPadding: spacingTokens;
   verticalPadding: spacingTokens;
 }>`
-  padding: ${({ horizontalPadding, verticalPadding, theme }) =>
-    `${theme.spacings[verticalPadding]} ${theme.spacings[horizontalPadding]}`};
+  padding: ${({ horizontalPadding, verticalPadding, padding, theme }) => {
+    if (padding) return theme.spacings[padding];
+    return `${theme.spacings[verticalPadding]} ${theme.spacings[horizontalPadding]}`;
+  }};
 
   justify-items: start;
 `;
 
-export interface AlertProps {
+export interface AlertProps extends BoxProps {
   status?: colorTokens;
   icon?: ReactNode;
   onPrimaryButtonClicked?: () => void;
@@ -51,6 +53,14 @@ export default function Alert(props: PropsWithChildren<AlertProps>) {
     secondaryButtonIconEnd,
     secondaryButtonIconStart,
     onCloseClicked,
+
+    shadow = "xSmall",
+    width = "12/12",
+    align = "center",
+    display = "grid",
+    gridColumns = "max-content 1fr max-content max-content",
+    colGap = "sm",
+    ...rest
   } = props;
 
   const color = theme.alert.colors[status].backgroundColor;
@@ -72,16 +82,18 @@ export default function Alert(props: PropsWithChildren<AlertProps>) {
 
   return (
     <StyledBox
-      width="12/12"
-      align="center"
+      width={width}
+      align={align}
       backgroundColor={color}
       backgroundShade={shade}
       borderRadius={theme.alert.borderRadius}
-      display="grid"
-      gridColumns="max-content 1fr max-content max-content"
+      display={display}
+      gridColumns={gridColumns}
       horizontalPadding={theme.alert.horizontalPadding}
       verticalPadding={theme.alert.verticalPadding}
-      colGap="sm"
+      colGap={colGap}
+      shadow={shadow}
+      {...rest}
     >
       {icon && (
         <IconBox color={iconColor} shade={iconShade}>

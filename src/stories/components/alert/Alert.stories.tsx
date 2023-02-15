@@ -115,3 +115,20 @@ Black.args = {
   primaryButtonContents: "Black",
   secondaryButtonContents: "Black",
 };
+
+export const Custom = Template.bind({});
+Custom.args = {
+  children: "You can override everything with Box props",
+  icon: <BsCheckCircleFill />,
+  primaryButtonContents: "Black",
+  secondaryButtonContents: "Black",
+  colGap: "huge",
+  borderRadius: "xxxhuge",
+  backgroundColor: "success",
+  backgroundShade: "300",
+  borderColor: "destructive",
+  borderShade: "500",
+  borderWidth: "xxbig",
+
+  padding: "huge",
+};
