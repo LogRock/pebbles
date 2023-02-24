@@ -121,6 +121,7 @@ export function Title({
   weight = "bold",
   spaceAfter,
   children,
+  ...rest
 }: PropsWithChildren<TitleProps>) {
   if (!as) {
     switch (type) {
@@ -133,6 +134,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h1"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -146,6 +148,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h2"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -159,6 +162,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h1"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -172,6 +176,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h2"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -185,6 +190,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h3"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -198,6 +204,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h4"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -211,6 +218,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h5"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -224,6 +232,7 @@ export function Title({
             weight={weight}
             spaceAfter={spaceAfter}
             as="h6"
+            {...rest}
           >
             {children}
           </StyledTitle>
@@ -239,6 +248,7 @@ export function Title({
       shade={shade}
       weight={weight}
       spaceAfter={spaceAfter}
+      {...rest}
     >
       {children}
     </StyledTitle>
