@@ -1,3 +1,9 @@
+## [13.8.1](https://github.com/LogRock/pebbles/compare/v13.8.0...v13.8.1) (2023-02-24)
+
+### Bug Fixes
+
+- **title:** include the rest of props ([cef40f9](https://github.com/LogRock/pebbles/commit/cef40f97f5b6f59e7aa3dd3b627b2b9dd6db8aca))
+
 # [13.8.0](https://github.com/LogRock/pebbles/compare/v13.7.0...v13.8.0) (2023-02-15)
 
 ### Bug Fixes
