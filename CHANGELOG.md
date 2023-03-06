@@ -1,3 +1,9 @@
+## [13.8.2](https://github.com/LogRock/pebbles/compare/v13.8.1...v13.8.2) (2023-03-06)
+
+### Bug Fixes
+
+- **button:** :lipstick: make outlined button white background ([e9ab1ac](https://github.com/LogRock/pebbles/commit/e9ab1ac7a694c9586fa1faaff406c243af768ed5))
+
 ## [13.8.1](https://github.com/LogRock/pebbles/compare/v13.8.0...v13.8.1) (2023-02-24)
 
 ### Bug Fixes
