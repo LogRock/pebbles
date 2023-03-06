@@ -250,7 +250,7 @@ const primaryVariant: ButtonVariant = {
     textDecorationLine: "none",
   },
   outlined: {
-    background: "transparent",
+    background: white[500],
     borderColor: neutral["300"],
     borderWidth: "1px",
     contentColor: neutral["700"],
@@ -282,7 +282,7 @@ const destructiveVariant: ButtonVariant = {
     textDecorationLine: "none",
   },
   outlined: {
-    background: "transparent",
+    background: white[500],
     borderColor: destructive["300"],
     borderWidth: "1px",
     contentColor: destructive["500"],
@@ -314,7 +314,7 @@ const disabledVariant: ButtonVariant = {
     textDecorationLine: "none",
   },
   outlined: {
-    background: "transparent",
+    background: white[500],
     borderColor: neutral["400"],
     borderWidth: "1px",
     contentColor: neutral["300"],
@@ -349,7 +349,7 @@ const roundedVariant: ButtonVariant = {
     borderRadius: "100px",
   },
   outlined: {
-    background: "transparent",
+    background: white[500],
     borderColor: neutral["300"],
     borderWidth: "1px",
     contentColor: neutral["700"],
