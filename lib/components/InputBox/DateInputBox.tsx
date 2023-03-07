@@ -5,7 +5,7 @@ import React, { FC } from "react";
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import MaskedTextInput from "react-text-mask";
+import InputMask from "react-input-mask";
 
 import {
   StyledDiv,
@@ -71,21 +71,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
               customInput={
                 // @ts-ignore
                 inputProps.selectsRange ? undefined : (
-                  <MaskedTextInput
-                    type="text"
-                    mask={[
-                      /\d/,
-                      /\d/,
-                      "/",
-                      /\d/,
-                      /\d/,
-                      "/",
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                    ]}
-                  />
+                  <InputMask type="text" mask="99/99/9999" />
                 )
               }
               {...inputProps}

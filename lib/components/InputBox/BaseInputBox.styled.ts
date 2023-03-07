@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { BaseInputBoxProps } from "./BaseInputBox";
 import { spacingTokens } from "../../types/tokens";
 import { Text } from "../Typography";
+import InputMask from "react-input-mask";
 
 const defaultStatus = "info";
 
@@ -133,6 +134,10 @@ export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
 `;
 
 export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
+  ${BaseStyleInput}
+`;
+
+export const StyledMaskInput = styled(InputMask)`
   ${BaseStyleInput}
 `;
 
