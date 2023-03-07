@@ -6,6 +6,7 @@ import {
   BsFillPersonBadgeFill,
   BsEnvelope,
   BsLock,
+  BsCardList,
 } from "react-icons/bs";
 
 export default {
@@ -129,6 +130,22 @@ DisabledPasswordInput.args = {
     placeholder: "input your password",
     isPassword: true,
     disabled: true,
+  },
+};
+
+export const MaskedInput = InteractiveTemplate.bind({});
+MaskedInput.args = {
+  inputBoxArgs: {
+    type: "text",
+    mask: "999-99-9999",
+    placeholder: "000-00-0000",
+    description: "",
+    hint: {
+      content: "",
+      icon: <BsCardList />,
+    },
+    status: "info",
+    helper: "",
   },
 };
 

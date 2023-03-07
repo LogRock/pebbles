@@ -132,13 +132,13 @@
   },
   "dependencies": {
     "@types/react-datepicker": "^4.4.1",
-    "@types/react-text-mask": "^5.4.11",
+    "@types/react-input-mask": "^3.0.2",
     "libphonenumber-js": "^1.10.6",
     "lodash.uniqueid": "^4.0.1",
     "react-datepicker": "^4.7.0",
     "react-phone-number-input": "^3.2.2",
     "react-select": "5.4.0",
-    "react-text-mask": "^5.4.3"
+    "react-input-mask": "^2.0.4"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"

@@ -11,6 +11,7 @@ import {
   HintIconWrapper,
   HelperIcon,
   ShowHidePasswordBtn,
+  StyledMaskInput,
 } from "./BaseInputBox.styled";
 import uniqueid from "lodash.uniqueid";
 import { E164Number } from "libphonenumber-js";
@@ -31,6 +32,7 @@ export interface BaseInputBoxProps
   disableMinus?: boolean;
   disablePlus?: boolean;
   value?: string | ReadonlyArray<string> | number | E164Number | undefined;
+  mask?: string;
 }
 
 const BaseInputBox: FC<BaseInputBoxProps> = ({
@@ -55,11 +57,18 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         {description}
       </Text>
       <InputDiv>
-        {!inputProps?.children && (
+        {!inputProps?.children && !inputProps?.mask && (
           <StyledInput
             status={status}
             {...inputProps}
             type={showPassword ? "text" : inputProps.type}
+            id={inputID}
+          />
+        )}
+        {!inputProps?.children && inputProps?.mask && (
+          <StyledMaskInput
+            {...inputProps}
+            mask={inputProps.mask}
             id={inputID}
           />
         )}
