@@ -139,12 +139,12 @@ MaskedInput.args = {
     type: "text",
     mask: "999-99-9999",
     placeholder: "000-00-0000",
-    description: "",
+    description: "MaskedInpyt",
     hint: {
       content: "",
       icon: <BsCardList />,
     },
-    status: "info",
+    status: "destructive",
     helper: "",
   },
 };

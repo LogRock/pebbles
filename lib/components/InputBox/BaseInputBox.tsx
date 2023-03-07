@@ -26,6 +26,7 @@ export interface BaseInputBoxProps
     icon: React.ReactNode;
   };
   status?: "info" | "destructive";
+  maskStatus?: "info" | "destructive";
   helper?: React.ReactNode;
   spaceAfter?: spacingTokens;
   spaced?: boolean;
@@ -68,6 +69,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         {!inputProps?.children && inputProps?.mask && (
           <StyledMaskInput
             {...inputProps}
+            maskStatus={status}
             mask={inputProps.mask}
             id={inputID}
           />

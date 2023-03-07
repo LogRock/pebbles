@@ -68,7 +68,9 @@ export const InputDiv = styled.div`
   position: relative;
 `;
 
-export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
+export const BaseStyleInput = css<
+  Pick<BaseInputBoxProps, "status" | "maskStatus">
+>`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
   flex-direction: row;
@@ -80,30 +82,31 @@ export const BaseStyleInput = css<Pick<BaseInputBoxProps, "status">>`
   padding: ${({ theme }) => theme.inputBox.padding};
   padding-right: 58px;
 
-  border: ${({ theme, status }) =>
-    theme.inputBox[status || defaultStatus].border};
+  border: ${({ theme, status, maskStatus }) =>
+    theme.inputBox[status || maskStatus || defaultStatus].border};
   border-radius: ${({ theme }) => theme.inputBox.borderRadius};
 
   background: ${({ theme }) => theme.inputBox.background};
-  box-shadow: ${({ theme, status }) =>
-    theme.inputBox[status || defaultStatus].boxShadow};
+  box-shadow: ${({ theme, status, maskStatus }) =>
+    theme.inputBox[status || maskStatus || defaultStatus].boxShadow};
 
-  color: ${({ theme, status }) =>
-    theme.inputBox[status || defaultStatus].color};
+  color: ${({ theme, status, maskStatus }) =>
+    theme.inputBox[status || maskStatus || defaultStatus].color};
 
   &:focus {
-    box-sizing: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].focused.boxSizing};
+    box-sizing: ${({ theme, status, maskStatus }) =>
+      theme.inputBox[status || maskStatus || defaultStatus].focused.boxSizing};
 
-    border: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].focused.border};
-    border-radius: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].focused.borderRadius};
+    border: ${({ theme, status, maskStatus }) =>
+      theme.inputBox[status || maskStatus || defaultStatus].focused.border};
+    border-radius: ${({ theme, status, maskStatus }) =>
+      theme.inputBox[status || maskStatus || defaultStatus].focused
+        .borderRadius};
     outline: none;
 
     background: ${({ theme }) => theme.inputBox.background};
-    box-shadow: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].focused.boxShadow};
+    box-shadow: ${({ theme, status, maskStatus }) =>
+      theme.inputBox[status || maskStatus || defaultStatus].focused.boxShadow};
   }
 
   &::placeholder {
@@ -137,7 +140,9 @@ export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
   ${BaseStyleInput}
 `;
 
-export const StyledMaskInput = styled(InputMask)`
+export const StyledMaskInput = styled(InputMask)<
+  Pick<BaseInputBoxProps, "maskStatus">
+>`
   ${BaseStyleInput}
 `;
 
