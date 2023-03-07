@@ -1,3 +1,14 @@
+# [13.9.0](https://github.com/LogRock/pebbles/compare/v13.8.2...v13.9.0) (2023-03-07)
+
+### Bug Fixes
+
+- **input-box-mask:** set status ([680b12c](https://github.com/LogRock/pebbles/commit/680b12c480114e06239bdadbe5b1bdaa39fbafc4))
+- removing react text mask ([2c9ed97](https://github.com/LogRock/pebbles/commit/2c9ed970270a5dffcf771862156d18febfc077ac))
+
+### Features
+
+- **input-box:** apply react input mask ([9daf487](https://github.com/LogRock/pebbles/commit/9daf487a73c4f1082f0e37acb7400c7de54eda3f))
+
 ## [13.8.2](https://github.com/LogRock/pebbles/compare/v13.8.1...v13.8.2) (2023-03-06)
 
 ### Bug Fixes
