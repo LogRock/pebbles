@@ -40,7 +40,7 @@ export { default as Button } from "./components/Button";
 export type { ButtonProps } from "./components/Button";
 
 // expose InputBox
-export { InputBox } from "./components/InputBox";
+export { InputBox, TextArea } from "./components/InputBox";
 
 /**
  * @deprecated in favor of Select2
