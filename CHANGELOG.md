@@ -1,3 +1,9 @@
+# [13.10.0](https://github.com/LogRock/pebbles/compare/v13.9.0...v13.10.0) (2023-03-09)
+
+### Features
+
+- **textarea:** add text area ([a1e13e9](https://github.com/LogRock/pebbles/commit/a1e13e9bc1e34d2706aab9a869f94396d239a09e))
+
 # [13.9.0](https://github.com/LogRock/pebbles/compare/v13.8.2...v13.9.0) (2023-03-07)
 
 ### Bug Fixes
