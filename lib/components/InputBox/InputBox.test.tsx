@@ -4,7 +4,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 // we should also import screen, userEvent, etc from this file.
 import { render, screen, userEvent } from "../../utils/test-utils";
-import { InputBox } from ".";
+import { InputBox, TextArea } from ".";
 
 describe("InputBox", () => {
   it("renders InputBox properly", () => {
@@ -28,6 +28,22 @@ describe("InputBox", () => {
     // @ts-ignore
     expect(textInput.value).toBe("Mascarenhas");
     expect(container).toMatchSnapshot();
+    expect(textInput).not.toBeNull();
+  });
+
+  it("get TextArea value", async () => {
+    render(
+      <div>
+        <TextArea id="textAreaId" description="Story" />
+      </div>
+    );
+    const textInput = screen.getByLabelText("Story");
+    await userEvent.type(
+      textInput,
+      "larari larila larari larila larari larila"
+    );
+    // @ts-ignore
+    expect(textInput.value).toBe("larari larila larari larila larari larila");
     expect(textInput).not.toBeNull();
   });
 
