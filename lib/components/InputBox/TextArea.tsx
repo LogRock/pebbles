@@ -36,9 +36,7 @@ const TextArea: FC<TextAreaProps> = ({
   helper,
   spaceAfter,
   placeholder,
-  disabled,
-  rows,
-  cols,
+  ...props
 }) => {
   return (
     <BaseInputBox
@@ -55,10 +53,7 @@ const TextArea: FC<TextAreaProps> = ({
         value={value}
         onChange={onChange}
         status={status}
-        placeholder={placeholder}
-        disabled={disabled}
-        rows={rows}
-        cols={cols}
+        {...props}
       />
     </BaseInputBox>
   );
