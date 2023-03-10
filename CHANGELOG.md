@@ -1,3 +1,11 @@
+## [13.10.1](https://github.com/LogRock/pebbles/compare/v13.10.0...v13.10.1) (2023-03-10)
+
+### Bug Fixes
+
+- **textarea:** pass all props to textarea ([e28e71d](https://github.com/LogRock/pebbles/commit/e28e71ddb4c7bbf7baf6c0fad6efacc8481a4ab8))
+- **textarea:** use the correct attribute props ([407e74e](https://github.com/LogRock/pebbles/commit/407e74e77b6fbbdf4d79bdc83ba81049795e86cc))
+- **textarea:** use the correct attribute props and set disabled ([dc121b9](https://github.com/LogRock/pebbles/commit/dc121b9853c832fc5a23555a33e20fda3c5873eb))
+
 # [13.10.0](https://github.com/LogRock/pebbles/compare/v13.9.0...v13.10.0) (2023-03-09)
 
 ### Features
