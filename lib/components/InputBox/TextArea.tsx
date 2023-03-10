@@ -12,7 +12,7 @@ const StyledTextArea = styled.textarea<Pick<BaseInputBoxProps, "status">>`
 `;
 
 export interface TextAreaProps
-  extends React.AreaHTMLAttributes<HTMLTextAreaElement> {
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   description?: string;
   hint?: {
     content: string;
