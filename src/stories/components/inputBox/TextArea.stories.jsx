@@ -27,3 +27,17 @@ Default.args = {
   rows: 10,
   id: "textarea-plus",
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  description: "Write a lyric",
+  hint: {
+    icon: <BsEnvelope />,
+  },
+  status: "info",
+  helper: "Test",
+  placeholder: "provide your lyrics when available",
+  disabled: true,
+  rows: 5,
+  id: "textarea-disabled",
+};

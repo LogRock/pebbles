@@ -36,6 +36,7 @@ const TextArea: FC<TextAreaProps> = ({
   helper,
   spaceAfter,
   placeholder,
+  disabled,
   rows,
   cols,
 }) => {
@@ -55,6 +56,7 @@ const TextArea: FC<TextAreaProps> = ({
         onChange={onChange}
         status={status}
         placeholder={placeholder}
+        disabled={disabled}
         rows={rows}
         cols={cols}
       />
