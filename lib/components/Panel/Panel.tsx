@@ -5,7 +5,7 @@ import { ParagraphLarge } from "../Typography";
 import Card from "../Card";
 
 export interface PanelsItems {
-  title: string;
+  title: string | ReactNode;
   content: ReactNode;
   disabled?: boolean;
 }
@@ -14,6 +14,7 @@ export interface PanelProps {
   panelsItems: PanelsItems[];
   openedPanelIndex?: number | null;
   openedPanelIndexCb?: (index: number) => void;
+  expandButtonAlign?: "left" | "right";
 }
 
 const PanelContainer = styled(Card)<{ disabled: boolean }>`
@@ -33,10 +34,11 @@ const PanelContainer = styled(Card)<{ disabled: boolean }>`
   }
 `;
 
-const PanelTitle = styled.div`
+const PanelTitle = styled.div<{ expandAlign: "left" | "right" }>`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: ${({ expandAlign }) =>
+    expandAlign === "right" ? "space-between" : "flex-start"};
 
   cursor: pointer;
 
@@ -51,6 +53,7 @@ const Panel: FC<PanelProps> = ({
   panelsItems,
   openedPanelIndex,
   openedPanelIndexCb,
+  expandButtonAlign = "left",
   ...props
 }) => {
   const [expanded, setExpanded] = useState<number | null>();
@@ -80,7 +83,10 @@ const Panel: FC<PanelProps> = ({
           disabled={disabled}
           {...props}
         >
-          <PanelTitle onClick={() => handleToggle(index)}>
+          <PanelTitle
+            expandAlign={expandButtonAlign}
+            onClick={() => handleToggle(index)}
+          >
             <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
             {expanded === index ? <BsChevronUp /> : <BsChevronDown />}
           </PanelTitle>
