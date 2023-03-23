@@ -1,3 +1,9 @@
+# [13.11.0](https://github.com/LogRock/pebbles/compare/v13.10.1...v13.11.0) (2023-03-23)
+
+### Features
+
+- **panel:** title as react node and expand button alignment ([66a3d13](https://github.com/LogRock/pebbles/commit/66a3d13908d389f6cdd3b230a8717d1395016dad))
+
 ## [13.10.1](https://github.com/LogRock/pebbles/compare/v13.10.0...v13.10.1) (2023-03-10)
 
 ### Bug Fixes
