@@ -13,29 +13,29 @@ exports[`Table > renders selected rows 1`] = `
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header A
-        </span>
+        </div>
       </th>
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header B
-        </span>
+        </div>
       </th>
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header C
-        </span>
+        </div>
       </th>
     </tr>
   </thead>
@@ -116,17 +116,17 @@ exports[`Table > renders with some content 1`] = `
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header A
-        </span>
+        </div>
       </th>
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header A
           <svg
@@ -143,13 +143,13 @@ exports[`Table > renders with some content 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-        </span>
+        </div>
       </th>
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header B
           <svg
@@ -166,13 +166,13 @@ exports[`Table > renders with some content 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-        </span>
+        </div>
       </th>
       <th
         class="sc-ezOQGI betmzq"
       >
-        <span
-          style="display: flex; align-items: center;"
+        <div
+          style="display: flex; align-items: center; justify-content: unset;"
         >
           Header C
           <svg
@@ -189,7 +189,7 @@ exports[`Table > renders with some content 1`] = `
               fill-rule="evenodd"
             />
           </svg>
-        </span>
+        </div>
       </th>
       <td
         class="sc-bYMpWt fbjkRd"

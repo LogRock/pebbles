@@ -66,10 +66,16 @@ export const TableHeader: FC<TableHeaderProps> = ({
 }) => {
   return (
     <TH {...props}>
-      <span style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: props.center ? "center" : "unset",
+        }}
+      >
         {children}
         {showOrdering && <Ordering currentOrder={currentOrder} />}
-      </span>
+      </div>
     </TH>
   );
 };
