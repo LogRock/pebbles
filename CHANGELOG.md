@@ -1,3 +1,10 @@
+## [13.11.1](https://github.com/LogRock/pebbles/compare/v13.11.0...v13.11.1) (2023-04-07)
+
+### Bug Fixes
+
+- **table:** :bug: fix table not centering properly ([67d4ee9](https://github.com/LogRock/pebbles/commit/67d4ee99386a99c1aedd0d5bd2e563cc8a8bd8fe))
+- **table:** :bug: fix table not centering properly ([f7e8624](https://github.com/LogRock/pebbles/commit/f7e86243885adf28e3317c165eedb99cc7a4e93e))
+
 # [13.11.0](https://github.com/LogRock/pebbles/compare/v13.10.1...v13.11.0) (2023-03-23)
 
 ### Features
