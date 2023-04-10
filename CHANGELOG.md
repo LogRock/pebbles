@@ -1,3 +1,9 @@
+## [13.11.2](https://github.com/LogRock/pebbles/compare/v13.11.1...v13.11.2) (2023-04-10)
+
+### Bug Fixes
+
+- **textarea:** fix placeholder ([05a2480](https://github.com/LogRock/pebbles/commit/05a24802b49e5c52d377e749d648def8e67dcdb3))
+
 ## [13.11.1](https://github.com/LogRock/pebbles/compare/v13.11.0...v13.11.1) (2023-04-07)
 
 ### Bug Fixes
