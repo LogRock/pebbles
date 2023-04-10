@@ -46,13 +46,13 @@ const TextArea: FC<TextAreaProps> = ({
       hint={hint}
       helper={helper}
       spaceAfter={spaceAfter}
-      placeholder={placeholder}
     >
       <StyledTextArea
         id={id}
         value={value}
         onChange={onChange}
         status={status}
+        placeholder={placeholder}
         {...props}
       />
     </BaseInputBox>
