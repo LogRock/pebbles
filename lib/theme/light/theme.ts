@@ -811,6 +811,8 @@ const statusTag: StatusTag = {
     background: {
       [STATUS_TAG_VARIANTS.DESTRUCTIVE]: destructive["400"],
       [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["50"],
+      [STATUS_TAG_VARIANTS.SECONDARY]: neutral["900"],
+      [STATUS_TAG_VARIANTS.SECONDARY_ALT]: neutral["50"],
       [STATUS_TAG_VARIANTS.NEUTRAL]: neutral["400"],
       [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["100"],
       [STATUS_TAG_VARIANTS.SUCCESS]: success["500"],
@@ -821,6 +823,8 @@ const statusTag: StatusTag = {
     content: {
       [STATUS_TAG_VARIANTS.DESTRUCTIVE]: "white",
       [STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT]: destructive["500"],
+      [STATUS_TAG_VARIANTS.SECONDARY]: "white",
+      [STATUS_TAG_VARIANTS.SECONDARY_ALT]: neutral["500"],
       [STATUS_TAG_VARIANTS.NEUTRAL]: "white",
       [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["500"],
       [STATUS_TAG_VARIANTS.SUCCESS]: "white",
