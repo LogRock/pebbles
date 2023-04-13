@@ -21,6 +21,18 @@ DestructiveAlt.args = {
   children: "DESTRUCTIVE_ALT",
 };
 
+export const SecondaryAlt = Template.bind({});
+SecondaryAlt.args = {
+  variant: "SECONDARY_ALT",
+  children: "SECONDARY_ALT",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "SECONDARY",
+  children: "SECONDARY",
+};
+
 export const Warning = Template.bind({});
 Warning.args = {
   variant: "WARNING",
