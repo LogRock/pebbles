@@ -1,3 +1,9 @@
+# [13.12.0](https://github.com/LogRock/pebbles/compare/v13.11.2...v13.12.0) (2023-04-13)
+
+### Features
+
+- **status-tag:** add secondary status tag ([bc65ccb](https://github.com/LogRock/pebbles/commit/bc65ccbc60ba2c7365fe4f71436730c7cb890f2e))
+
 ## [13.11.2](https://github.com/LogRock/pebbles/compare/v13.11.1...v13.11.2) (2023-04-10)
 
 ### Bug Fixes
