@@ -1,3 +1,9 @@
+## [13.12.1](https://github.com/LogRock/pebbles/compare/v13.12.0...v13.12.1) (2023-04-17)
+
+### Bug Fixes
+
+- **date-picker:** add placeholder text ([92eeaeb](https://github.com/LogRock/pebbles/commit/92eeaeb93e2befe14cc2eb2c561cf8c3d178b50b))
+
 # [13.12.0](https://github.com/LogRock/pebbles/compare/v13.11.2...v13.12.0) (2023-04-13)
 
 ### Features
