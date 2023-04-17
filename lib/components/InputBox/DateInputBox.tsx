@@ -46,6 +46,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   hint,
   helper,
   spaceAfter,
+  placeholder,
   ...inputProps
 }) => {
   return (
@@ -68,6 +69,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
               wrapperClassName="logrock-datepicker"
               showMonthDropdown
               showYearDropdown
+              placeholderText={placeholder}
               customInput={
                 // @ts-ignore
                 inputProps.selectsRange ? undefined : (
