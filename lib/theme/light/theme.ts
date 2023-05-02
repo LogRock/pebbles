@@ -444,6 +444,7 @@ const inputBox: InputBox = {
   background: "white",
   height: "50px",
   width: "100%",
+  fontSize: paragraphMedium.desktop.fontSize,
 
   destructive: {
     color: destructive[900],

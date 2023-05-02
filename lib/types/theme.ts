@@ -140,6 +140,7 @@ export interface InputBox {
   background: CSS.Property.Background;
   height: CSS.Property.Height;
   width: CSS.Property.Width;
+  fontSize: CSS.Property.FontSize;
 
   placeholder: {
     color: CSS.Property.Color;
