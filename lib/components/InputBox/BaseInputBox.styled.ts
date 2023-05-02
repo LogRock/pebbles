@@ -92,6 +92,7 @@ export const BaseStyleInput = css<
 
   color: ${({ theme, status, maskStatus }) =>
     theme.inputBox[status || maskStatus || defaultStatus].color};
+  font-size: ${({ theme }) => theme.inputBox.fontSize};
 
   &:focus {
     box-sizing: ${({ theme, status, maskStatus }) =>
