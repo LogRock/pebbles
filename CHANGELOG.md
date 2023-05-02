@@ -1,3 +1,10 @@
+## [13.12.2](https://github.com/LogRock/pebbles/compare/v13.12.1...v13.12.2) (2023-05-02)
+
+### Bug Fixes
+
+- **input-box:** :lipstick: make all input types have the same font size ([6f0686a](https://github.com/LogRock/pebbles/commit/6f0686ad8d8c6dd71aa6aa2417744645826d9835))
+- **input-box:** :lipstick: make padding adapt to hint width ([4fac6d9](https://github.com/LogRock/pebbles/commit/4fac6d95b42e3e5e030d9fb60ac3e4f7ebaf4809))
+
 ## [13.12.1](https://github.com/LogRock/pebbles/compare/v13.12.0...v13.12.1) (2023-04-17)
 
 ### Bug Fixes
