@@ -69,7 +69,7 @@ export const InputDiv = styled.div`
 `;
 
 export const BaseStyleInput = css<
-  Pick<BaseInputBoxProps, "status" | "maskStatus">
+  Pick<BaseInputBoxProps, "status" | "maskStatus"> & { hintSize?: number }
 >`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
@@ -80,7 +80,11 @@ export const BaseStyleInput = css<
   width: ${({ theme }) => theme.inputBox.width};
   height: ${({ theme }) => theme.inputBox.height};
   padding: ${({ theme }) => theme.inputBox.padding};
-  padding-right: 58px;
+  padding-right: ${(props) => {
+    if (props.hintSize) {
+      return `calc(${props.hintSize}px + ${props.theme.spacings.big})`;
+    }
+  }};
 
   border: ${({ theme, status, maskStatus }) =>
     theme.inputBox[status || maskStatus || defaultStatus].border};
@@ -137,12 +141,14 @@ export const BaseStyleInput = css<
   }
 `;
 
-export const StyledInput = styled.input<Pick<BaseInputBoxProps, "status">>`
+export const StyledInput = styled.input<
+  Pick<BaseInputBoxProps, "status"> & { hintSize?: number }
+>`
   ${BaseStyleInput}
 `;
 
 export const StyledMaskInput = styled(InputMask)<
-  Pick<BaseInputBoxProps, "maskStatus">
+  Pick<BaseInputBoxProps, "maskStatus"> & { hintSize?: number }
 >`
   ${BaseStyleInput}
 `;
