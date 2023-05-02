@@ -52,6 +52,8 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
     if (!inputProps?.disabled) setShowPassword((prevState) => !prevState);
   };
 
+  const hintRef = React.useRef<HTMLDivElement>(null);
+
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Text as="label" htmlFor={inputID} spaceAfter="xsm" type="overlineXSmall">
@@ -62,6 +64,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
           <StyledInput
             status={status}
             {...inputProps}
+            hintSize={hintRef?.current?.clientWidth}
             type={showPassword ? "text" : inputProps.type}
             id={inputID}
           />
@@ -69,6 +72,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         {!inputProps?.children && inputProps?.mask && (
           <StyledMaskInput
             {...inputProps}
+            hintSize={hintRef?.current?.clientWidth}
             maskStatus={status}
             mask={inputProps.mask}
             id={inputID}
@@ -77,7 +81,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         {inputProps?.children && inputProps?.children}
 
         {hint && (
-          <HintDiv>
+          <HintDiv ref={hintRef}>
             {inputProps?.type === "password" && !inputProps.disabled && (
               <ShowHidePasswordBtn
                 disabled={inputProps.disabled}
