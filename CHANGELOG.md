@@ -1,3 +1,10 @@
+## [13.12.3](https://github.com/LogRock/pebbles/compare/v13.12.2...v13.12.3) (2023-05-12)
+
+### Bug Fixes
+
+- **text-overline:** add letter spacing to the overline texts according to the design ([f7bca90](https://github.com/LogRock/pebbles/commit/f7bca904599714a23471382ba1ffe97b997f2627))
+- **text-overline:** update snapshot ([1c18b6d](https://github.com/LogRock/pebbles/commit/1c18b6ddd49fa6a1ddf1994f03dc322be400eb73))
+
 ## [13.12.2](https://github.com/LogRock/pebbles/compare/v13.12.1...v13.12.2) (2023-05-02)
 
 ### Bug Fixes
