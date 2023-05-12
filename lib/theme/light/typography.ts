@@ -338,7 +338,7 @@ export const overlineLarge: TypographyProperties = {
     },
     fontSize: "14px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
   mobile: {
     weights: {
@@ -349,7 +349,7 @@ export const overlineLarge: TypographyProperties = {
     },
     fontSize: "14px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
 };
 
@@ -365,7 +365,7 @@ export const overlineMedium: TypographyProperties = {
     },
     fontSize: "12px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
   mobile: {
     weights: {
@@ -376,7 +376,7 @@ export const overlineMedium: TypographyProperties = {
     },
     fontSize: "12px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
 };
 
@@ -392,7 +392,7 @@ export const overlineXSmall: TypographyProperties = {
     },
     fontSize: "11px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
   mobile: {
     weights: {
@@ -403,6 +403,6 @@ export const overlineXSmall: TypographyProperties = {
     },
     fontSize: "11px",
     lineHeight: "20px",
-    tracking: "unset",
+    tracking: "1px",
   },
 };
