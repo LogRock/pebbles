@@ -7,7 +7,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
       class="sc-hBxehG kurttc"
     >
       <label
-        class="sc-ksBlkl csMath"
+        class="sc-ksBlkl epDjLp"
         color="neutral"
         for="textId"
         type="overlineXSmall"
@@ -35,7 +35,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
       class="sc-hBxehG kurttc"
     >
       <label
-        class="sc-ksBlkl csMath"
+        class="sc-ksBlkl epDjLp"
         color="neutral"
         for="phoneId"
         type="overlineXSmall"
@@ -1321,7 +1321,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-ksBlkl csMath"
+      class="sc-ksBlkl epDjLp"
       color="neutral"
       for="pebbles__input__1"
       type="overlineXSmall"
@@ -1344,7 +1344,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-ksBlkl csMath"
+      class="sc-ksBlkl epDjLp"
       color="neutral"
       type="overlineXSmall"
     />
@@ -1415,7 +1415,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
     class="sc-hBxehG kurttc"
   >
     <label
-      class="sc-ksBlkl csMath"
+      class="sc-ksBlkl epDjLp"
       color="neutral"
       for="pebbles__input__2"
       type="overlineXSmall"
