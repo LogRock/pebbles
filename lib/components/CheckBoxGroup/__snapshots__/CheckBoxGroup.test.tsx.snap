@@ -9,7 +9,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
         class="sc-idXgbr cHqexO"
       >
         <label
-          class="sc-ksBlkl csMath"
+          class="sc-ksBlkl epDjLp"
           color="neutral"
           for="pebbles__input__1"
           type="overlineXSmall"
@@ -86,7 +86,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
       class="sc-idXgbr cHqexO"
     >
       <label
-        class="sc-ksBlkl csMath"
+        class="sc-ksBlkl epDjLp"
         color="neutral"
         for="pebbles__input__1"
         type="overlineXSmall"
