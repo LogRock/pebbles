@@ -1,3 +1,10 @@
+## [13.12.4](https://github.com/LogRock/pebbles/compare/v13.12.3...v13.12.4) (2023-05-31)
+
+### Bug Fixes
+
+- **base-input-box:** avoid hint to be override ([d2873b0](https://github.com/LogRock/pebbles/commit/d2873b07837a65bd19c4f5a425be290f11ea39bb))
+- snapshot ([3da9037](https://github.com/LogRock/pebbles/commit/3da9037d145a661e830903fb0475e5906c79ab0c))
+
 ## [13.12.3](https://github.com/LogRock/pebbles/compare/v13.12.2...v13.12.3) (2023-05-12)
 
 ### Bug Fixes
