@@ -18,7 +18,7 @@ exports[`InputBox > get InputBox by label text 1`] = `
         class="sc-dmctIk ggHTBC"
       >
         <input
-          class="sc-kgTSHT bFalrf"
+          class="sc-kgTSHT edUolb"
           id="textId"
           type="text"
         />
@@ -46,7 +46,7 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
         class="sc-dmctIk ggHTBC"
       >
         <div
-          class="sc-hhOBVt jqvvKG PhoneInput PhoneInput--focus"
+          class="sc-hhOBVt fEmiuK PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1330,7 +1330,7 @@ exports[`InputBox > renders InputBox properly 1`] = `
       class="sc-dmctIk ggHTBC"
     >
       <input
-        class="sc-kgTSHT bFalrf"
+        class="sc-kgTSHT edUolb"
         id="pebbles__input__1"
       />
     </div>
@@ -1373,7 +1373,7 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         class="sc-ilhmMj gzYeiu"
       >
         <input
-          class="sc-kgTSHT sc-kMjNwy bFalrf hecmlh"
+          class="sc-kgTSHT sc-kMjNwy edUolb hecmlh"
           type="number"
         />
       </div>
@@ -1424,7 +1424,7 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
       class="sc-dmctIk ggHTBC"
     >
       <div
-        class="sc-hhOBVt jqvvKG PhoneInput"
+        class="sc-hhOBVt fEmiuK PhoneInput"
       >
         <div
           class="PhoneInputCountry"
