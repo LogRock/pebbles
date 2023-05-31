@@ -128,6 +128,11 @@ export const BaseStyleInput = css<
     box-sizing: ${({ theme }) => theme.inputBox.disabled.boxSizing};
     align-items: center;
     padding: ${({ theme }) => theme.inputBox.padding};
+    padding-right: ${(props) => {
+      if (props.hintSize) {
+        return `calc(${props.hintSize}px + ${props.theme.spacings.big})`;
+      }
+    }};
 
     border: ${({ theme }) => theme.inputBox.disabled.border};
     border-radius: ${({ theme }) => theme.inputBox.borderRadius};
