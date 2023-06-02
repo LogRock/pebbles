@@ -1,3 +1,9 @@
+## [13.12.5](https://github.com/LogRock/pebbles/compare/v13.12.4...v13.12.5) (2023-06-02)
+
+### Bug Fixes
+
+- **panel:** update panel design ([a6b2789](https://github.com/LogRock/pebbles/commit/a6b27894059ff6c6f8ac10208f215a87dfe3a4a0))
+
 ## [13.12.4](https://github.com/LogRock/pebbles/compare/v13.12.3...v13.12.4) (2023-05-31)
 
 ### Bug Fixes
