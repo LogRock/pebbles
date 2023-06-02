@@ -1,3 +1,9 @@
+## [13.12.6](https://github.com/LogRock/pebbles/compare/v13.12.5...v13.12.6) (2023-06-02)
+
+### Bug Fixes
+
+- **panel:** fix panel design to have title to occupy the whole panel ([c3ba8d6](https://github.com/LogRock/pebbles/commit/c3ba8d60fc72e345c83a3da9bd5b729600dc2491))
+
 ## [13.12.5](https://github.com/LogRock/pebbles/compare/v13.12.4...v13.12.5) (2023-06-02)
 
 ### Bug Fixes
