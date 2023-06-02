@@ -1,10 +1,10 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Select2 } from "../../../../lib/main";
-import Panel from "../../../../lib/components/Panel";
+import Panel, { PanelsItems } from "../../../../lib/components/Panel";
 import { BsAlarm, BsArrowBarUp } from "react-icons/bs";
 
-const panelsItems = [
+const panelsItems: PanelsItems[] = [
   {
     title: "Panel 1",
     content: (
@@ -15,6 +15,7 @@ const panelsItems = [
         ex, sit amet blandit leo lobortis eget.
       </p>
     ),
+    padding: "zero",
   },
   {
     title: "Panel 2",
