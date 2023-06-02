@@ -1,3 +1,9 @@
+## [13.12.7](https://github.com/LogRock/pebbles/compare/v13.12.6...v13.12.7) (2023-06-02)
+
+### Bug Fixes
+
+- **panel:** background color ([b1fb232](https://github.com/LogRock/pebbles/commit/b1fb232ebe7c16dee70872de72547dc72a50ade8))
+
 ## [13.12.6](https://github.com/LogRock/pebbles/compare/v13.12.5...v13.12.6) (2023-06-02)
 
 ### Bug Fixes
