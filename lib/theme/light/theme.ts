@@ -178,7 +178,7 @@ const icons: Icons = {
   },
 
   panel: {
-    color: primary[500],
+    color: neutral[600],
     spacing: ` ${spacings.md} ${spacings.sm}`,
   },
 
