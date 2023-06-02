@@ -29,20 +29,19 @@ Default.args = {
     content: "username",
     icon: <BsFillPersonBadgeFill />,
   },
-  status: "info",
   helper: "",
   placeholder: "provide your name here",
 };
 
-export const InputBoxError = Template.bind({});
-InputBoxError.args = {
+export const Destructive = Template.bind({});
+Destructive.args = {
   description: "Vehicle Id Number",
   hint: {
     content: "Some Hint",
     icon: <BsEnvelope />,
   },
   helper: "please provide the VIN number",
-  status: "destructive",
+  destructive: true,
   placeholder: "VIN",
   errorIcon: <BsExclamationTriangleFill />,
 };
@@ -54,7 +53,6 @@ HintedInputBox.args = {
     content: "e-mail",
     icon: <BsEnvelope />,
   },
-  status: "info",
   helper: "",
   placeholder: "no ads or spams.",
 };
@@ -66,11 +64,23 @@ DisabledInputBox.args = {
     content: "e-mail",
     icon: <BsEnvelope />,
   },
-  status: "info",
   helper: "",
   placeholder: "this input is disabled, sorry",
   disabled: true,
   value: "Some value here",
+};
+
+export const RequiredInputBox = Template.bind({});
+RequiredInputBox.args = {
+  required: true,
+  description: "This field is required",
+  placeholder: "Placeholder",
+  hint: {
+    content: "e-mail",
+    icon: <BsEnvelope />,
+  },
+  helper: "please provide your email",
+  helperIcon: <BsEnvelope />,
 };
 
 const InteractiveTemplate = (args) => {
@@ -95,7 +105,6 @@ InteractiveInputBox.args = {
       content: "e-mail",
       icon: <BsEnvelope />,
     },
-    status: "info",
     helper: "",
     placeholder: "no ads or spams.",
   },
@@ -110,7 +119,6 @@ InteractivePasswordInput.args = {
       content: "",
       icon: <BsLock />,
     },
-    status: "info",
     helper: "",
     placeholder: "input your password",
     isPassword: true,
@@ -125,7 +133,6 @@ DisabledPasswordInput.args = {
       content: "",
       icon: <BsLock />,
     },
-    status: "info",
     helper: "",
     placeholder: "input your password",
     isPassword: true,
@@ -144,7 +151,7 @@ MaskedInput.args = {
       content: "",
       icon: <BsCardList />,
     },
-    status: "destructive",
+    destructive: true,
     helper: "",
   },
 };

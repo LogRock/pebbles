@@ -11,14 +11,13 @@ import ReactSelect, {
   ValueContainerProps,
 } from "react-select";
 import styled, { ThemeContext } from "styled-components";
-import { Helper, HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
+import { HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./Select.types";
 import ThemeType from "../../types/theme";
 import { DropdownIndicatorWrapper } from "./Select.styled";
 import { spacingTokens } from "../../types/tokens";
 import { Text } from "../Typography";
-
-const defaultStatus = "info";
+import { RequiredAsterisk } from "../InputBox/BaseInputBox";
 
 const { ValueContainer } = components;
 
@@ -31,7 +30,7 @@ export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   }
 `;
 
-const CustomValueContainer: FC<ValueContainerProps> = ({
+export const CustomValueContainer: FC<ValueContainerProps> = ({
   children,
   ...props
 }) => {
@@ -58,9 +57,11 @@ function Select<
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
 >({
-  status,
+  required,
   helper,
+  helperIcon,
   label,
+  destructive,
   spaceAfter,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
@@ -71,17 +72,32 @@ function Select<
       control: (provided, state) => {
         return {
           ...provided,
+          outline: state.isFocused
+            ? destructive
+              ? `0px 0px 0px 3px ${theme.colors.destructive[100]}`
+              : `0px 0px 0px 3px ${theme.colors.primary[100]}`
+            : "none",
           boxShadow: state.isFocused
-            ? `0px 0px 0px 3px ${theme.colors.primary[100]}`
-            : theme.inputBox[status || defaultStatus].boxShadow,
+            ? destructive
+              ? `0px 0px 0px 3px ${theme.colors.destructive[100]}`
+              : `0px 0px 0px 3px ${theme.colors.primary[100]}`
+            : theme.inputBox[destructive ? "destructive" : "info"].boxShadow,
           border: state.isFocused
-            ? theme.inputBox[status || defaultStatus].focused.border
-            : theme.inputBox[status || defaultStatus].border,
+            ? theme.inputBox[destructive ? "destructive" : "info"].focused
+                .border
+            : theme.inputBox[destructive ? "destructive" : "info"].border,
           fontFamily: theme.typography.paragraphMedium.fontFamily,
           fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
           fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         };
       },
+      indicatorSeparator: (provided) => ({
+        ...provided,
+        margin: 0,
+        backgroundColor: destructive
+          ? theme.colors.destructive[400]
+          : theme.colors.neutral[200],
+      }),
       option: (provided) => ({
         ...provided,
         fontFamily: theme.typography.paragraphMedium.fontFamily,
@@ -125,7 +141,7 @@ function Select<
       },
       spacing: {
         baseUnit: 4,
-        controlHeight: 50,
+        controlHeight: 40,
         menuGutter: helper ? 24 : 3,
       },
     }),
@@ -142,10 +158,11 @@ function Select<
         spaceAfter="xsm"
         type="overlineXSmall"
       >
-        {label}
+        {label} {required && <RequiredAsterisk />}
       </Text>
       <ReactSelect
         {...props}
+        required={required}
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
@@ -154,19 +171,28 @@ function Select<
           ValueContainer: CustomValueContainer as any,
           DropdownIndicator: () => (
             <DropdownIndicatorWrapper>
-              <BsChevronDown />
+              <BsChevronDown size={16} />
             </DropdownIndicatorWrapper>
           ),
         }}
       />
       {helper && (
         <HelperDiv>
-          {status === "destructive" && (
-            <HelperIcon status={status}>
+          {destructive && !helperIcon && (
+            <HelperIcon destructive={destructive}>
               <BsExclamationTriangleFill />
             </HelperIcon>
           )}
-          <Helper status={status}>{helper}</Helper>
+          {helperIcon && (
+            <HelperIcon destructive={destructive}>{helperIcon}</HelperIcon>
+          )}
+          <Text
+            type="paragraphSmall"
+            color={destructive ? "destructive" : "neutral"}
+            shade="400"
+          >
+            {helper}
+          </Text>
         </HelperDiv>
       )}
     </StyledDiv>

@@ -9,7 +9,6 @@ import InputMask from "react-input-mask";
 
 import {
   StyledDiv,
-  Helper,
   HelperDiv,
   Hint,
   HintDiv,
@@ -28,11 +27,12 @@ export interface DateInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   description?: string;
   hint?: {
-    content: string;
+    content: React.ReactNode;
     icon: React.ReactNode;
   };
-  status?: "info" | "destructive";
+  destructive?: boolean;
   helper?: React.ReactNode;
+  helperIcon?: React.ReactNode;
   spaceAfter?: spacingTokens;
   spaced?: boolean;
   onChange?: any;
@@ -42,9 +42,10 @@ export interface DateInputBoxProps
 const DateInputBox: FC<DateInputBoxProps> = ({
   spaced,
   description,
-  status,
+  destructive,
   hint,
   helper,
+  helperIcon,
   spaceAfter,
   placeholder,
   ...inputProps
@@ -61,7 +62,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
       </Text>
 
       <InputDiv>
-        <StyledDatePicker status={status}>
+        <StyledDatePicker destructive={destructive}>
           {
             // @ts-ignore
             // typescript issue here, the date picker onChange event has a different type than the HTML input's event
@@ -92,14 +93,25 @@ const DateInputBox: FC<DateInputBoxProps> = ({
           </HintDiv>
         )}
       </InputDiv>
-      <HelperDiv>
-        {status === "destructive" && (
-          <HelperIcon status={status}>
-            <BsExclamationTriangleFill />
-          </HelperIcon>
-        )}
-        <Helper status={status}>{helper}</Helper>
-      </HelperDiv>
+      {helper && (
+        <HelperDiv>
+          {destructive && !helperIcon && (
+            <HelperIcon destructive={destructive}>
+              <BsExclamationTriangleFill />
+            </HelperIcon>
+          )}
+          {helperIcon && (
+            <HelperIcon destructive={destructive}>{helperIcon}</HelperIcon>
+          )}
+          <Text
+            type="paragraphSmall"
+            color={destructive ? "destructive" : "neutral"}
+            shade="400"
+          >
+            {helper}
+          </Text>
+        </HelperDiv>
+      )}
     </StyledDiv>
   );
 };

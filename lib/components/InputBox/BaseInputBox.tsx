@@ -2,7 +2,6 @@ import { BsExclamationTriangleFill } from "react-icons/bs";
 import React, { FC, useState } from "react";
 import {
   StyledDiv,
-  Helper,
   HelperDiv,
   Hint,
   HintDiv,
@@ -22,12 +21,12 @@ export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   description?: string;
   hint?: {
-    content: string;
+    content: React.ReactNode;
     icon: React.ReactNode;
   };
-  status?: "info" | "destructive";
-  maskStatus?: "info" | "destructive";
+  destructive?: boolean;
   helper?: React.ReactNode;
+  helperIcon?: React.ReactNode;
   spaceAfter?: spacingTokens;
   spaced?: boolean;
   disableMinus?: boolean;
@@ -36,12 +35,19 @@ export interface BaseInputBoxProps
   mask?: string;
 }
 
+export const RequiredAsterisk = () => (
+  <Text as="span" type="overlineLarge" color="destructive" shade="600">
+    *
+  </Text>
+);
+
 const BaseInputBox: FC<BaseInputBoxProps> = ({
   spaced,
   description,
-  status,
+  destructive,
   hint,
   helper,
+  helperIcon,
   spaceAfter,
   ...inputProps
 }) => {
@@ -57,12 +63,12 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Text as="label" htmlFor={inputID} spaceAfter="xsm" type="overlineXSmall">
-        {description}
+        {description} {inputProps.required && <RequiredAsterisk />}
       </Text>
       <InputDiv>
         {!inputProps?.children && !inputProps?.mask && (
           <StyledInput
-            status={status}
+            destructive={destructive}
             {...inputProps}
             hintSize={hintRef?.current?.clientWidth}
             type={showPassword ? "text" : inputProps.type}
@@ -73,7 +79,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
           <StyledMaskInput
             {...inputProps}
             hintSize={hintRef?.current?.clientWidth}
-            maskStatus={status}
+            destructive={destructive}
             mask={inputProps.mask}
             id={inputID}
           />
@@ -105,14 +111,21 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
       </InputDiv>
       {helper && (
         <HelperDiv>
-          {status === "destructive" && (
-            <HelperIcon status={status}>
+          {destructive && !helperIcon && (
+            <HelperIcon destructive={destructive}>
               <BsExclamationTriangleFill />
             </HelperIcon>
           )}
-          <Helper status={status} type="overlineXSmall">
+          {helperIcon && (
+            <HelperIcon destructive={destructive}>{helperIcon}</HelperIcon>
+          )}
+          <Text
+            type="paragraphSmall"
+            color={destructive ? "destructive" : "neutral"}
+            shade="400"
+          >
             {helper}
-          </Helper>
+          </Text>
         </HelperDiv>
       )}
     </StyledDiv>

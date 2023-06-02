@@ -4,7 +4,6 @@ import { BsExclamationTriangleFill, BsPlusLg, BsDashLg } from "react-icons/bs";
 import { BaseInputBoxProps } from "./BaseInputBox";
 import Button from "../Button";
 import {
-  Helper,
   HelperDiv,
   HelperIcon,
   Hint,
@@ -38,10 +37,11 @@ const StyledButton = styled(Button)`
 
 const NumberInputBox: FC<BaseInputBoxProps> = ({
   spaced,
-  status,
+  destructive,
   description,
   hint,
   helper,
+  helperIcon,
   disableMinus,
   disablePlus,
   spaceAfter,
@@ -59,10 +59,10 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
       ? +inputRef?.current?.value + inputValue
       : inputValue;
 
-    if (props.min && updatedValue < props.min) {
+    if (props.min && updatedValue < (props.min as number)) {
       updatedValue = +props.min;
     }
-    if (props.max && updatedValue > props.max) {
+    if (props.max && updatedValue > (props.max as number)) {
       updatedValue = +props.max;
     }
 
@@ -96,7 +96,11 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           <BsDashLg />
         </StyledButton>
         <InputWrapper>
-          <StyledStyledInput status={status} {...props} ref={inputRef} />
+          <StyledStyledInput
+            destructive={destructive}
+            ref={inputRef}
+            {...props}
+          />
           {hint && (
             <HintDiv>
               <Hint disabled={props.disabled}>{hint.content}</Hint>
@@ -117,14 +121,25 @@ const NumberInputBox: FC<BaseInputBoxProps> = ({
           <BsPlusLg />
         </StyledButton>
       </NumberInputBoxWrapper>
-      <HelperDiv>
-        {status === "destructive" && (
-          <HelperIcon status={status}>
-            <BsExclamationTriangleFill />
-          </HelperIcon>
-        )}
-        <Helper status={status}>{helper}</Helper>
-      </HelperDiv>
+      {helper && (
+        <HelperDiv>
+          {destructive && !helperIcon && (
+            <HelperIcon destructive={destructive}>
+              <BsExclamationTriangleFill />
+            </HelperIcon>
+          )}
+          {helperIcon && (
+            <HelperIcon destructive={destructive}>{helperIcon}</HelperIcon>
+          )}
+          <Text
+            type="paragraphSmall"
+            color={destructive ? "destructive" : "neutral"}
+            shade="400"
+          >
+            {helper}
+          </Text>
+        </HelperDiv>
+      )}
     </StyledDiv>
   );
 };

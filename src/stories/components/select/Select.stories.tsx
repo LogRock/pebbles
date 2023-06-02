@@ -36,7 +36,15 @@ Default.args = {};
 
 export const Destructive = Template.bind({});
 Destructive.args = {
-  status: "destructive",
+  destructive: true,
+  helper: "I am a destructive select",
+  label: "Destructive select",
+};
+
+export const Required = Template.bind({});
+Required.args = {
+  required: true,
+  label: "Required select",
 };
 
 export const WithLabel = Template.bind({});

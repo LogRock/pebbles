@@ -6,7 +6,7 @@ import BaseInputBox, { BaseInputBoxProps } from "./BaseInputBox";
 import { BaseStyleInput } from "./BaseInputBox.styled";
 import { spacingTokens } from "../../types/tokens";
 
-const StyledTextArea = styled.textarea<Pick<BaseInputBoxProps, "status">>`
+const StyledTextArea = styled.textarea<Pick<BaseInputBoxProps, "destructive">>`
   ${BaseStyleInput}
   height: unset;
 `;
@@ -14,13 +14,13 @@ const StyledTextArea = styled.textarea<Pick<BaseInputBoxProps, "status">>`
 export interface TextAreaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   description?: string;
+  destructive?: boolean;
   hint?: {
     content: string;
     icon: React.ReactNode;
   };
   helper?: React.ReactNode;
   spaceAfter?: spacingTokens;
-  status?: "info" | "destructive";
   value?: string | ReadonlyArray<string> | undefined;
   rows?: number;
   cols?: number;
@@ -30,7 +30,7 @@ const TextArea: FC<TextAreaProps> = ({
   id,
   value,
   onChange,
-  status,
+  destructive,
   description,
   hint,
   helper,
@@ -41,7 +41,7 @@ const TextArea: FC<TextAreaProps> = ({
   return (
     <BaseInputBox
       id={id}
-      status={status}
+      destructive={destructive}
       description={description}
       hint={hint}
       helper={helper}
@@ -51,7 +51,7 @@ const TextArea: FC<TextAreaProps> = ({
         id={id}
         value={value}
         onChange={onChange}
-        status={status}
+        destructive={destructive}
         placeholder={placeholder}
         {...props}
       />

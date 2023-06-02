@@ -442,13 +442,14 @@ const inputBox: InputBox = {
   borderRadius: "8px",
   border: `1px solid ${neutral[200]}`,
   background: "white",
-  height: "50px",
+  height: "40px",
   width: "100%",
   fontSize: paragraphMedium.desktop.fontSize,
 
   destructive: {
     color: destructive[900],
-    border: `1px solid ${destructive[300]}`,
+    helperColor: destructive[400],
+    border: `1px solid ${destructive[500]}`,
     boxShadow: shadows.small,
     hintColor: neutral[500],
     focused: {
@@ -460,6 +461,7 @@ const inputBox: InputBox = {
   },
   info: {
     color: neutral[900],
+    helperColor: neutral[400],
     border: `1px solid ${neutral[200]}`,
     boxShadow: shadows.small,
     hintColor: neutral[500],
@@ -479,7 +481,6 @@ const inputBox: InputBox = {
     fontWeight: 600,
   },
   helper: {
-    color: neutral[500],
     fontStyle: "normal",
     fontSize: "14px",
     lineHeight: "20px",

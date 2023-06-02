@@ -5,7 +5,9 @@ import { BaseInputBoxProps } from "./BaseInputBox";
 
 const defaultStatus = "info";
 
-export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
+export const StyledDatePicker = styled.div<
+  Pick<BaseInputBoxProps, "destructive">
+>`
   input {
     display: flex;
     box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
@@ -17,33 +19,37 @@ export const StyledDatePicker = styled.div<Pick<BaseInputBoxProps, "status">>`
     height: ${({ theme }) => theme.inputBox.height};
     padding: ${({ theme }) => theme.inputBox.padding};
 
-    border: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].border};
+    border: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].border};
     border-radius: ${({ theme }) => theme.inputBox.borderRadius};
 
     background: ${({ theme }) => theme.inputBox.background};
-    box-shadow: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].boxShadow};
+    box-shadow: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].boxShadow};
 
-    color: ${({ theme, status }) =>
-      theme.inputBox[status || defaultStatus].color};
+    color: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].color};
     font-family: ${({ theme }) => theme.typography.paragraphMedium.fontFamily};
     font-size: ${({ theme }) =>
       theme.typography.paragraphMedium.desktop.fontSize};
 
     &:focus {
-      box-sizing: ${({ theme, status }) =>
-        theme.inputBox[status || defaultStatus].focused.boxSizing};
+      box-sizing: ${({ theme, destructive }) =>
+        theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+          .boxSizing};
 
-      border: ${({ theme, status }) =>
-        theme.inputBox[status || defaultStatus].focused.border};
-      border-radius: ${({ theme, status }) =>
-        theme.inputBox[status || defaultStatus].focused.borderRadius};
+      border: ${({ theme, destructive }) =>
+        theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+          .border};
+      border-radius: ${({ theme, destructive }) =>
+        theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+          .borderRadius};
       outline: none;
 
       background: ${({ theme }) => theme.inputBox.background};
-      box-shadow: ${({ theme, status }) =>
-        theme.inputBox[status || defaultStatus].focused.boxShadow};
+      box-shadow: ${({ theme, destructive }) =>
+        theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+          .boxShadow};
     }
 
     &::placeholder {
