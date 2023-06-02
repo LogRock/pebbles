@@ -1,13 +1,16 @@
 import React, { FC, ReactNode, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
-import { ParagraphLarge } from "../Typography";
-import Card from "../Card";
+import { Text } from "../Typography";
+import { spacingTokens } from "../../types/tokens";
+
+import Box from "../Box/Box";
 
 export interface PanelsItems {
   title: string | ReactNode;
   content: ReactNode;
   disabled?: boolean;
+  padding?: spacingTokens;
 }
 
 export interface PanelProps {
@@ -17,7 +20,7 @@ export interface PanelProps {
   expandButtonAlign?: "left" | "right";
 }
 
-const PanelContainer = styled(Card)<{ disabled: boolean }>`
+const PanelContainer = styled(Box)<{ disabled: boolean }>`
   ${({ disabled, theme }) =>
     disabled &&
     css`
@@ -39,6 +42,7 @@ const PanelTitle = styled.div<{ expandAlign: "left" | "right" }>`
   align-items: center;
   justify-content: ${({ expandAlign }) =>
     expandAlign === "right" ? "space-between" : "flex-start"};
+  padding: ${({ theme }) => theme.spacings.xbig};
 
   cursor: pointer;
 
@@ -76,23 +80,42 @@ const Panel: FC<PanelProps> = ({
 
   return (
     <>
-      {panelsItems.map(({ title, content, disabled = false }, index) => (
-        <PanelContainer
-          padding="xbig"
-          key={index}
-          disabled={disabled}
-          {...props}
-        >
-          <PanelTitle
-            expandAlign={expandButtonAlign}
-            onClick={() => handleToggle(index)}
+      {panelsItems.map(
+        ({ title, content, disabled = false, padding = "xbig" }, index) => (
+          <PanelContainer
+            display="flex"
+            align="flex-start"
+            justify="flex-start"
+            shadow="small"
+            borderRadius="sm"
+            borderWidth="xxxxsm"
+            borderColor="neutral"
+            borderShade="200"
+            padding="zero"
+            key={index}
+            disabled={disabled}
+            {...props}
           >
-            <ParagraphLarge weight="bolder">{title}</ParagraphLarge>
-            {expanded === index ? <BsChevronUp /> : <BsChevronDown />}
-          </PanelTitle>
-          {expanded === index && content}
-        </PanelContainer>
-      ))}
+            <PanelTitle
+              expandAlign={expandButtonAlign}
+              onClick={() => handleToggle(index)}
+            >
+              <Text type="paragraphLarge">{title}</Text>
+              {expanded === index ? <BsChevronUp /> : <BsChevronDown />}
+            </PanelTitle>
+            {expanded === index && (
+              <Box
+                display="flex"
+                align="flex-start"
+                justify="flex-start"
+                padding={padding}
+              >
+                {content}
+              </Box>
+            )}
+          </PanelContainer>
+        )
+      )}
     </>
   );
 };
