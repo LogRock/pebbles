@@ -1,15 +1,16 @@
-import { BsExclamationTriangleFill } from "react-icons/bs";
+import { BsChevronDown, BsExclamationTriangleFill } from "react-icons/bs";
 import uniqueId from "lodash.uniqueid";
 import React, { useContext, useMemo } from "react";
 import { StylesConfig, Theme, GroupBase } from "react-select";
 import ReactSelectAsync, { AsyncProps } from "react-select/async";
 import styled, { ThemeContext } from "styled-components";
-import { Helper, HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
+import { HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
 import { CustomSelectProps } from "./SelectAsync.types";
 import { spacingTokens } from "../../types/tokens";
 import { Text } from "../Typography";
-
-const defaultStatus = "info";
+import { CustomValueContainer } from "../Select2/Select";
+import { DropdownIndicatorWrapper } from "../Select2/Select.styled";
+import { RequiredAsterisk } from "../InputBox/BaseInputBox";
 
 export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   margin-bottom: ${({ theme, spaceAfter }) =>
@@ -25,8 +26,10 @@ function SelectAsync<
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>
 >({
-  status,
+  required,
+  destructive,
   helper,
+  helperIcon,
   spaceAfter,
   label,
   ...props
@@ -38,17 +41,32 @@ function SelectAsync<
       control: (provided, state) => {
         return {
           ...provided,
+          outline: state.isFocused
+            ? destructive
+              ? `0px 0px 0px 3px ${theme.colors.destructive[100]}`
+              : `0px 0px 0px 3px ${theme.colors.primary[100]}`
+            : "none",
           boxShadow: state.isFocused
-            ? `0px 0px 0px 3px ${theme.colors.primary[100]}`
-            : theme.inputBox[status || defaultStatus].boxShadow,
+            ? destructive
+              ? `0px 0px 0px 3px ${theme.colors.destructive[100]}`
+              : `0px 0px 0px 3px ${theme.colors.primary[100]}`
+            : theme.inputBox[destructive ? "destructive" : "info"].boxShadow,
           border: state.isFocused
-            ? theme.inputBox[status || defaultStatus].focused.border
-            : theme.inputBox[status || defaultStatus].border,
+            ? theme.inputBox[destructive ? "destructive" : "info"].focused
+                .border
+            : theme.inputBox[destructive ? "destructive" : "info"].border,
           fontFamily: theme.typography.paragraphMedium.fontFamily,
           fontWeight: theme.typography.paragraphMedium.desktop.weights.normal,
           fontSize: theme.typography.paragraphMedium.desktop.fontSize,
         };
       },
+      indicatorSeparator: (provided) => ({
+        ...provided,
+        margin: 0,
+        backgroundColor: destructive
+          ? theme.colors.destructive[400]
+          : theme.colors.neutral[200],
+      }),
       option: (provided) => ({
         ...provided,
         fontFamily: theme.typography.paragraphMedium.fontFamily,
@@ -59,6 +77,10 @@ function SelectAsync<
       menu: (provided) => ({
         ...provided,
         borderRadius: 0,
+      }),
+      placeholder: (provided) => ({
+        ...provided,
+        color: theme.colors.neutral[400],
       }),
     }),
     [status]
@@ -88,7 +110,7 @@ function SelectAsync<
       },
       spacing: {
         baseUnit: 4,
-        controlHeight: 50,
+        controlHeight: 40,
         menuGutter: helper ? 24 : 3,
       },
     }),
@@ -105,22 +127,40 @@ function SelectAsync<
         spaceAfter="xsm"
         type="overlineXSmall"
       >
-        {label}
+        {label} {required && <RequiredAsterisk />}
       </Text>
       <ReactSelectAsync
         {...props}
         styles={customStyles}
+        required={required}
         theme={selectTheme}
         inputId={selectID}
+        components={{
+          ValueContainer: CustomValueContainer as never,
+          DropdownIndicator: () => (
+            <DropdownIndicatorWrapper>
+              <BsChevronDown size={16} />
+            </DropdownIndicatorWrapper>
+          ),
+        }}
       />
       {helper && (
         <HelperDiv>
-          {status === "destructive" && (
-            <HelperIcon status={status}>
+          {destructive && !helperIcon && (
+            <HelperIcon destructive={destructive}>
               <BsExclamationTriangleFill />
             </HelperIcon>
           )}
-          <Helper status={status}>{helper}</Helper>
+          {helperIcon && (
+            <HelperIcon destructive={destructive}>{helperIcon}</HelperIcon>
+          )}
+          <Text
+            type="paragraphSmall"
+            color={destructive ? "destructive" : "neutral"}
+            shade="400"
+          >
+            {helper}
+          </Text>
         </HelperDiv>
       )}
     </StyledDiv>

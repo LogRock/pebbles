@@ -13,9 +13,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
           color="neutral"
           for="pebbles__input__1"
           type="overlineXSmall"
-        />
+        >
+           
+        </label>
         <div
-          class="sc-iveFHk jnTCMt"
+          class="sc-bBABsx gBzJtW"
         >
           <div
             style="padding: 10px 12px;"
@@ -90,9 +92,11 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
         color="neutral"
         for="pebbles__input__1"
         type="overlineXSmall"
-      />
+      >
+         
+      </label>
       <div
-        class="sc-iveFHk jnTCMt"
+        class="sc-bBABsx gBzJtW"
       >
         <div
           style="padding: 10px 12px;"

@@ -7,9 +7,7 @@ import styled from "styled-components";
 import BaseInputBox, { BaseInputBoxProps } from "./BaseInputBox";
 import { BaseStyleInput } from "./BaseInputBox.styled";
 
-const StyledPhoneInputBox = styled(PhoneInput)<
-  Pick<BaseInputBoxProps, "status">
->`
+const StyledPhoneInputBox = styled(PhoneInput)`
   .PhoneInput {
     position: relative;
 
@@ -19,7 +17,7 @@ const StyledPhoneInputBox = styled(PhoneInput)<
   & .PhoneInputCountry {
     z-index: 1;
     left: 16px;
-    height: 50px;
+    height: 40px;
   }
 
   & input {

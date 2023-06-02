@@ -148,6 +148,7 @@ export interface InputBox {
 
   destructive: {
     color: CSS.Property.Color;
+    helperColor: CSS.Property.Color;
     border: CSS.Property.Border;
     boxShadow: CSS.Property.BoxShadow;
     hintColor: CSS.Property.Color;
@@ -155,6 +156,7 @@ export interface InputBox {
   };
   info: {
     color: CSS.Property.Color;
+    helperColor: CSS.Property.Color;
     border: CSS.Property.Border;
     boxShadow: CSS.Property.BoxShadow;
     hintColor: CSS.Property.Color;
@@ -173,7 +175,6 @@ export interface InputBox {
     lineHeight: CSS.Property.LineHeight;
   };
   helper: {
-    color: CSS.Property.Color;
     fontStyle: CSS.Property.FontStyle;
     fontSize: CSS.Property.FontSize;
     fontWeight: CSS.Property.FontWeight;

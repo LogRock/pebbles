@@ -18,25 +18,32 @@ export const StyledDiv = styled.div<{
     spaceAfter ? theme.spacings?.[spaceAfter as spacingTokens] : 0};
 `;
 
-export const HelperDiv = styled.div`
+export const HelperDiv = styled.div<{ destructive?: boolean }>`
   display: flex;
-  margin-top: ${({ theme }) => theme.spacings.xxsm};
-  margin-left: ${({ theme }) => theme.spacings.xxsm};
+  align-items: center;
+  margin-top: ${({ theme }) => theme.spacings.xsm};
+
+  color: ${({ theme, destructive }) =>
+    destructive
+      ? theme.inputBox.destructive.helperColor
+      : theme.inputBox.info.helperColor};
 `;
 
-export const Helper = styled(Text)<Pick<BaseInputBoxProps, "status">>`
-  color: ${({ theme }) => theme.inputBox.helper.color};
-  font-size: ${({ theme }) => theme.inputBox.helper.fontSize};
-  font-style: ${({ theme }) => theme.inputBox.helper.fontStyle};
-  font-weight: ${({ theme }) => theme.inputBox.helper.fontWeight};
-  line-height: ${({ theme }) => theme.inputBox.helper.lineHeight};
-  text-transform: none;
-`;
-
-export const HelperIcon = styled.div<Pick<BaseInputBoxProps, "status">>`
+export const HelperIcon = styled.div<{ destructive?: boolean }>`
+  display: flex;
+  align-items: center;
   margin-right: ${({ theme }) => theme.inputBox.helper.margin};
 
-  color: ${({ theme }) => theme.inputBox.helper.color};
+  color: ${({ theme, destructive }) =>
+    destructive
+      ? theme.inputBox.destructive.helperColor
+      : theme.inputBox.info.helperColor};
+  font-size: 16px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 `;
 
 export const HintDiv = styled.div`
@@ -46,12 +53,12 @@ export const HintDiv = styled.div`
   right: 16px;
   flex-direction: row;
   align-items: center;
-  height: 50px;
+  height: 40px;
 `;
 
 export const Hint = styled(Text)<Pick<BaseInputBoxProps, "disabled">>`
   color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.neutral[300] : theme.inputBox.helper.color};
+    disabled ? theme.colors.neutral[300] : theme.inputBox.info.helperColor};
 `;
 
 export const HintIconWrapper = styled.div<Pick<BaseInputBoxProps, "disabled">>`
@@ -68,9 +75,7 @@ export const InputDiv = styled.div`
   position: relative;
 `;
 
-export const BaseStyleInput = css<
-  Pick<BaseInputBoxProps, "status" | "maskStatus"> & { hintSize?: number }
->`
+export const BaseStyleInput = css<{ hintSize?: number; destructive?: boolean }>`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
   flex-direction: row;
@@ -86,42 +91,39 @@ export const BaseStyleInput = css<
     }
   }};
 
-  border: ${({ theme, status, maskStatus }) =>
-    theme.inputBox[status || maskStatus || defaultStatus].border};
+  border: ${({ theme, destructive }) =>
+    theme.inputBox[destructive ? "destructive" : defaultStatus].border};
   border-radius: ${({ theme }) => theme.inputBox.borderRadius};
 
   background: ${({ theme }) => theme.inputBox.background};
-  box-shadow: ${({ theme, status, maskStatus }) =>
-    theme.inputBox[status || maskStatus || defaultStatus].boxShadow};
+  box-shadow: ${({ theme, destructive }) =>
+    theme.inputBox[destructive ? "destructive" : defaultStatus].boxShadow};
 
-  color: ${({ theme, status, maskStatus }) =>
-    theme.inputBox[status || maskStatus || defaultStatus].color};
+  color: ${({ theme, destructive }) =>
+    theme.inputBox[destructive ? "destructive" : defaultStatus].color};
   font-size: ${({ theme }) => theme.inputBox.fontSize};
 
   &:focus {
-    box-sizing: ${({ theme, status, maskStatus }) =>
-      theme.inputBox[status || maskStatus || defaultStatus].focused.boxSizing};
+    box-sizing: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+        .boxSizing};
 
-    border: ${({ theme, status, maskStatus }) =>
-      theme.inputBox[status || maskStatus || defaultStatus].focused.border};
-    border-radius: ${({ theme, status, maskStatus }) =>
-      theme.inputBox[status || maskStatus || defaultStatus].focused
+    border: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+        .border};
+    border-radius: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].focused
         .borderRadius};
     outline: none;
 
     background: ${({ theme }) => theme.inputBox.background};
-    box-shadow: ${({ theme, status, maskStatus }) =>
-      theme.inputBox[status || maskStatus || defaultStatus].focused.boxShadow};
+    box-shadow: ${({ theme, destructive }) =>
+      theme.inputBox[destructive ? "destructive" : defaultStatus].focused
+        .boxShadow};
   }
 
   &::placeholder {
-    display: flex;
-    align-items: center;
-
-    color: ${(props: any) =>
-      props.disabled
-        ? props.theme.colors.neutral[300]
-        : props.theme.inputBox.placeholder.color};
+    color: ${(props) => props.theme.colors.neutral[400]};
   }
 
   &:disabled {
@@ -140,20 +142,20 @@ export const BaseStyleInput = css<
     background: ${({ theme }) => theme.inputBox.background};
     box-shadow: ${({ theme }) => theme.inputBox.disabled.boxShadow};
 
-    color: ${({ theme }) => theme.colors.neutral[300]};
+    color: ${({ theme }) => theme.colors.neutral[400]};
 
     cursor: not-allowed;
   }
 `;
 
 export const StyledInput = styled.input<
-  Pick<BaseInputBoxProps, "status"> & { hintSize?: number }
+  Pick<BaseInputBoxProps, "destructive"> & { hintSize?: number }
 >`
   ${BaseStyleInput}
 `;
 
 export const StyledMaskInput = styled(InputMask)<
-  Pick<BaseInputBoxProps, "maskStatus"> & { hintSize?: number }
+  Pick<BaseInputBoxProps, "destructive"> & { hintSize?: number }
 >`
   ${BaseStyleInput}
 `;

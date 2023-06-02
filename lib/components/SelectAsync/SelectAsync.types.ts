@@ -2,8 +2,10 @@ import React from "react";
 import { spacingTokens } from "../../types/tokens";
 
 export interface CustomSelectProps {
-  status?: "info" | "destructive";
+  required?: boolean;
+  destructive?: boolean;
   label?: React.ReactNode;
   helper?: React.ReactNode;
+  helperIcon?: React.ReactNode;
   spaceAfter?: spacingTokens;
 }
