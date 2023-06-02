@@ -84,7 +84,7 @@ const Panel: FC<PanelProps> = ({
         ({ title, content, disabled = false, padding = "xbig" }, index) => (
           <PanelContainer
             display="flex"
-            align="flex-start"
+            align="stretch"
             justify="flex-start"
             shadow="small"
             borderRadius="sm"
@@ -106,7 +106,7 @@ const Panel: FC<PanelProps> = ({
             {expanded === index && (
               <Box
                 display="flex"
-                align="flex-start"
+                align="stretch"
                 justify="flex-start"
                 padding={padding}
               >
