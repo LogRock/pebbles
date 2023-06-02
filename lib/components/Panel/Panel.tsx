@@ -91,6 +91,7 @@ const Panel: FC<PanelProps> = ({
             borderWidth="xxxxsm"
             borderColor="neutral"
             borderShade="200"
+            backgroundColor="white"
             padding="zero"
             key={index}
             disabled={disabled}
