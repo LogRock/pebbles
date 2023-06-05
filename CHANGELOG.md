@@ -1,3 +1,13 @@
+# [14.0.0](https://github.com/LogRock/pebbles/compare/v13.12.7...v14.0.0) (2023-06-05)
+
+### Features
+
+- **input-box:** :lipstick: add support for required prop and adjust styles ([09aec4b](https://github.com/LogRock/pebbles/commit/09aec4bf65fc725909be214ee5d3ebaffa413616))
+
+### BREAKING CHANGES
+
+- **input-box:** input api changed
+
 ## [13.12.7](https://github.com/LogRock/pebbles/compare/v13.12.6...v13.12.7) (2023-06-02)
 
 ### Bug Fixes
