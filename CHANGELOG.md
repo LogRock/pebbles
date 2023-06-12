@@ -1,3 +1,9 @@
+# [14.1.0](https://github.com/LogRock/pebbles/compare/v14.0.0...v14.1.0) (2023-06-12)
+
+### Features
+
+- **select2:** add custom scroll bar ([9eb8989](https://github.com/LogRock/pebbles/commit/9eb898902a2060d4024a6dc2f4feb6d767246b5c))
+
 # [14.0.0](https://github.com/LogRock/pebbles/compare/v13.12.7...v14.0.0) (2023-06-05)
 
 ### Features
