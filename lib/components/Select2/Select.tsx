@@ -28,6 +28,25 @@ export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   label {
     display: block;
   }
+
+  & ::-webkit-scrollbar {
+    width: 12px;
+
+    background-color: transparent;
+  }
+
+  & ::-webkit-scrollbar-track {
+    border-radius: 100px;
+
+    background-color: ${({ theme }) => theme.colors.neutral[100]};
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+
+    background-clip: padding-box;
+    background-color: ${({ theme }) => theme.colors.neutral[400]};
+  }
 `;
 
 export const CustomValueContainer: FC<ValueContainerProps> = ({
@@ -108,6 +127,7 @@ function Select<
       menu: (provided) => ({
         ...provided,
         borderRadius: 0,
+        padding: "12px",
       }),
       placeholder: (provided) => ({
         ...provided,
