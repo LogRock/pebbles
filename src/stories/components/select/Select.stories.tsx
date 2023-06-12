@@ -19,6 +19,22 @@ const autoCompleteItems = [
     value: "4",
     label: "You guessed it",
   },
+  {
+    value: "5",
+    label: "Fifth Item",
+  },
+  {
+    value: "6",
+    label: "Sixth Item",
+  },
+  {
+    value: "7",
+    label: "Seventh Item",
+  },
+  {
+    value: "8",
+    label: "Eighth it",
+  },
 ];
 
 export default {
@@ -28,7 +44,7 @@ export default {
 } as ComponentMeta<typeof Select>;
 
 const Template: ComponentStory<typeof Select> = (args) => (
-  <Select {...args} options={autoCompleteItems} />
+  <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
 );
 
 export const Default = Template.bind({});
