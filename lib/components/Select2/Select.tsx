@@ -30,22 +30,23 @@ export const StyledDiv = styled.div<{ spaceAfter?: spacingTokens }>`
   }
 
   & ::-webkit-scrollbar {
-    width: 12px;
+    width: 12px !important;
 
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   & ::-webkit-scrollbar-track {
-    border-radius: 100px;
+    border-radius: 100px !important;
 
-    background-color: ${({ theme }) => theme.colors.neutral[100]};
+    background-color: ${({ theme }) => theme.colors.neutral[100]} !important;
   }
 
   & ::-webkit-scrollbar-thumb {
-    border-radius: 100px;
+    border: 0px solid transparent !important;
+    border-radius: 100px !important;
 
-    background-clip: padding-box;
-    background-color: ${({ theme }) => theme.colors.neutral[400]};
+    background-clip: padding-box !important;
+    background-color: ${({ theme }) => theme.colors.neutral[400]} !important;
   }
 `;
 
