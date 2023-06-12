@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import styled from "styled-components";
 
 const autoCompleteItems = [
   {
@@ -43,8 +44,33 @@ export default {
   argTypes: { onChange: { action: "changed" } },
 } as ComponentMeta<typeof Select>;
 
+const DivStyled = styled.div`
+  /* CUSTOM SCROLL BAR */
+  & ::-webkit-scrollbar {
+    width: 18px;
+    background-color: transparent;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    background-clip: content-box;
+    border-radius: 100px;
+    background-color: transparent;
+  }
+
+  & div:hover::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+  }
+`;
+
 const Template: ComponentStory<typeof Select> = (args) => (
-  <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+  <DivStyled>
+    <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+  </DivStyled>
 );
 
 export const Default = Template.bind({});
