@@ -1,3 +1,9 @@
+## [14.1.1](https://github.com/LogRock/pebbles/compare/v14.1.0...v14.1.1) (2023-06-12)
+
+### Bug Fixes
+
+- **select2:** make sure select2 design is more important ([b231376](https://github.com/LogRock/pebbles/commit/b231376dda97e11b2b5233b7fbee4d2fe8841baf))
+
 # [14.1.0](https://github.com/LogRock/pebbles/compare/v14.0.0...v14.1.0) (2023-06-12)
 
 ### Features
