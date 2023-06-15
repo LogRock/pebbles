@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 import { colorTokens, shadeTokens, spacingTokens } from "../../types/tokens";
+import { Text } from "../Typography";
+import React, { FC } from "react";
 
 export interface DividerProps {
   color?: colorTokens;
@@ -8,7 +10,7 @@ export interface DividerProps {
   spaceAfter?: spacingTokens;
 }
 
-const Divider = styled.hr<DividerProps>`
+const LineDivider = styled(Text)<DividerProps>`
   ${({
     theme,
     color = "neutral",
@@ -16,13 +18,45 @@ const Divider = styled.hr<DividerProps>`
     thickness = "xxxxsm",
     spaceAfter = "zero",
   }) => css`
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    margin-bottom: ${theme.spacings[spaceAfter]};
+    padding: ${theme.spacings.xsm} 0px;
+    padding-bottom: ${theme.spacings[spaceAfter]};
 
     border: 0px solid white;
-    border-top-width: ${theme.spacings[thickness]};
-    border-top-color: ${theme.colors[color][shade]};
+
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+
+      flex: 1 1;
+      margin: auto;
+
+      border-top: ${theme.spacings[thickness]} solid
+        ${theme.colors[color][shade]};
+    }
   `}
 `;
+
+const LabelDivider = styled(Text)<{ thickness?: spacingTokens }>`
+  padding: 0px ${({ theme }) => theme.spacings.xsm};
+
+  border: ${({ theme, thickness = "xxxxsm" }) => theme.spacings[thickness]}
+    solid ${({ theme }) => theme.colors.neutral[300]};
+  border-radius: ${({ theme }) => theme.spacings.xbig};
+`;
+
+const Divider: FC<DividerProps> = ({ children, ...props }) => {
+  return (
+    <LineDivider {...props}>
+      {children && (
+        <LabelDivider thickness={props.thickness}>{children}</LabelDivider>
+      )}
+    </LineDivider>
+  );
+};
 
 export default Divider;
