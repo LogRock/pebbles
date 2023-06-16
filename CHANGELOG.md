@@ -1,3 +1,10 @@
+## [14.2.1](https://github.com/LogRock/pebbles/compare/v14.2.0...v14.2.1) (2023-06-16)
+
+### Bug Fixes
+
+- **input-box:** start icon padding left when disabled ([e390e55](https://github.com/LogRock/pebbles/commit/e390e55a0dd89215f0588dd5cc7ee1e42d1a3a69))
+- update snapshot ([d3ceea9](https://github.com/LogRock/pebbles/commit/d3ceea9e2cc04a0830c836733794727eeeba247a))
+
 # [14.2.0](https://github.com/LogRock/pebbles/compare/v14.1.1...v14.2.0) (2023-06-16)
 
 ### Bug Fixes
