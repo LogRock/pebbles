@@ -46,7 +46,6 @@ const Template: Story<DividerProps> = (args) => (
     <Divider {...args} />
     <Divider {...args} />
     <Divider {...args} />
-    <Divider {...args}> Testes </Divider>
   </>
 );
 
