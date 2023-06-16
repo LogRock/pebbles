@@ -62,7 +62,6 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   };
 
   const hintRef = React.useRef<HTMLDivElement>(null);
-  const startIconRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
@@ -71,7 +70,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
       </Text>
       <InputDiv>
         {startIcon && (
-          <StartIconDiv ref={startIconRef}>
+          <StartIconDiv>
             <HintIconWrapper>{startIcon}</HintIconWrapper>
           </StartIconDiv>
         )}
@@ -79,7 +78,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
           <StyledInput
             destructive={destructive}
             {...inputProps}
-            startIconSize={startIconRef?.current?.clientWidth}
+            startIconSize={startIcon ? 32 : 0}
             hintSize={hintRef?.current?.clientWidth}
             type={showPassword ? "text" : inputProps.type}
             id={inputID}
