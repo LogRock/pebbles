@@ -154,6 +154,11 @@ export const BaseStyleInput = css<{
         return `calc(${props.hintSize}px + ${props.theme.spacings.big})`;
       }
     }};
+    padding-left: ${(props) => {
+      if (props.startIconSize) {
+        return `calc(${props.startIconSize}px + ${props.theme.spacings.big})`;
+      }
+    }};
 
     border: ${({ theme }) => theme.inputBox.disabled.border};
     border-radius: ${({ theme }) => theme.inputBox.borderRadius};
