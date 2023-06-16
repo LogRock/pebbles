@@ -37,6 +37,7 @@ Default.args = {
 export const Sized = Template.bind({});
 Sized.args = {
   description: "Profile information",
+  disabled: true,
   style: { height: "62px" },
   startIcon: <BsEnvelope />,
   hint: {
