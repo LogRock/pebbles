@@ -1,3 +1,16 @@
+# [14.2.0](https://github.com/LogRock/pebbles/compare/v14.1.1...v14.2.0) (2023-06-16)
+
+### Bug Fixes
+
+- **base-input:** add start icon and centralize the hint ([e4eac85](https://github.com/LogRock/pebbles/commit/e4eac856482745df6ef26bda4dd55c65379f077e))
+- **divider:** fix divider story ([0a08f7b](https://github.com/LogRock/pebbles/commit/0a08f7bfd1687d7163625c8fa99de38fab9b42ef))
+- **divider:** undo divider bubble text ([8b07654](https://github.com/LogRock/pebbles/commit/8b07654096189c177d939936ceb2ad0372058f6f))
+- update snapshot ([ae54e18](https://github.com/LogRock/pebbles/commit/ae54e18e2b53b57c3c246d93fc5c12e92400c47b))
+
+### Features
+
+- **divider:** add text to the divider component ([d1ef624](https://github.com/LogRock/pebbles/commit/d1ef624dff97837ac655cbcdc340ff69a721caf1))
+
 ## [14.1.1](https://github.com/LogRock/pebbles/compare/v14.1.0...v14.1.1) (2023-06-12)
 
 ### Bug Fixes
