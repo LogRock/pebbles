@@ -17,7 +17,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
            
         </label>
         <div
-          class="sc-bBABsx gBzJtW"
+          class="sc-iveFHk jnTCMt"
         >
           <div
             style="padding: 10px 12px;"
@@ -96,7 +96,7 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
          
       </label>
       <div
-        class="sc-bBABsx gBzJtW"
+        class="sc-iveFHk jnTCMt"
       >
         <div
           style="padding: 10px 12px;"
