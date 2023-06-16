@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { InputBox } from "../../../../lib/components/InputBox";
+import Button from "../../../../lib/components/Button";
 
 import {
   BsExclamationTriangleFill,
@@ -28,6 +29,23 @@ Default.args = {
   hint: {
     content: "username",
     icon: <BsFillPersonBadgeFill />,
+  },
+  helper: "",
+  placeholder: "provide your name here",
+};
+
+export const Sized = Template.bind({});
+Sized.args = {
+  description: "Profile information",
+  style: { height: "62px" },
+  startIcon: <BsEnvelope />,
+  hint: {
+    content: "username",
+    icon: (
+      <Button variant="primary" buttonStyle="secondary" buttonSize="medium">
+        Edit
+      </Button>
+    ),
   },
   helper: "",
   placeholder: "provide your name here",

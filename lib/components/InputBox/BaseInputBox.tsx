@@ -11,6 +11,7 @@ import {
   HelperIcon,
   ShowHidePasswordBtn,
   StyledMaskInput,
+  StartIconDiv,
 } from "./BaseInputBox.styled";
 import uniqueid from "lodash.uniqueid";
 import { E164Number } from "libphonenumber-js";
@@ -20,6 +21,7 @@ import { spacingTokens } from "../../types/tokens";
 export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   description?: string;
+  startIcon?: React.ReactNode;
   hint?: {
     content: React.ReactNode;
     icon: React.ReactNode;
@@ -49,6 +51,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   helper,
   helperIcon,
   spaceAfter,
+  startIcon,
   ...inputProps
 }) => {
   const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
@@ -59,6 +62,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   };
 
   const hintRef = React.useRef<HTMLDivElement>(null);
+  const startIconRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
@@ -66,10 +70,16 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         {description} {inputProps.required && <RequiredAsterisk />}
       </Text>
       <InputDiv>
+        {startIcon && (
+          <StartIconDiv ref={startIconRef}>
+            <HintIconWrapper>{startIcon}</HintIconWrapper>
+          </StartIconDiv>
+        )}
         {!inputProps?.children && !inputProps?.mask && (
           <StyledInput
             destructive={destructive}
             {...inputProps}
+            startIconSize={startIconRef?.current?.clientWidth}
             hintSize={hintRef?.current?.clientWidth}
             type={showPassword ? "text" : inputProps.type}
             id={inputID}
