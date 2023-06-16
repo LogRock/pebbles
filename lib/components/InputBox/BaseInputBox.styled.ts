@@ -46,6 +46,16 @@ export const HelperIcon = styled.div<{ destructive?: boolean }>`
   }
 `;
 
+export const StartIconDiv = styled.div`
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 16px;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+`;
+
 export const HintDiv = styled.div`
   display: flex;
   position: absolute;
@@ -53,7 +63,7 @@ export const HintDiv = styled.div`
   right: 16px;
   flex-direction: row;
   align-items: center;
-  height: 40px;
+  height: 100%;
 `;
 
 export const Hint = styled(Text)<Pick<BaseInputBoxProps, "disabled">>`
@@ -75,7 +85,11 @@ export const InputDiv = styled.div`
   position: relative;
 `;
 
-export const BaseStyleInput = css<{ hintSize?: number; destructive?: boolean }>`
+export const BaseStyleInput = css<{
+  hintSize?: number;
+  startIconSize?: number;
+  destructive?: boolean;
+}>`
   display: flex;
   box-sizing: ${({ theme }) => theme.inputBox.boxSizing};
   flex-direction: row;
@@ -88,6 +102,11 @@ export const BaseStyleInput = css<{ hintSize?: number; destructive?: boolean }>`
   padding-right: ${(props) => {
     if (props.hintSize) {
       return `calc(${props.hintSize}px + ${props.theme.spacings.big})`;
+    }
+  }};
+  padding-left: ${(props) => {
+    if (props.startIconSize) {
+      return `calc(${props.startIconSize}px + ${props.theme.spacings.big})`;
     }
   }};
 
@@ -149,7 +168,10 @@ export const BaseStyleInput = css<{ hintSize?: number; destructive?: boolean }>`
 `;
 
 export const StyledInput = styled.input<
-  Pick<BaseInputBoxProps, "destructive"> & { hintSize?: number }
+  Pick<BaseInputBoxProps, "destructive"> & {
+    hintSize?: number;
+    startIconSize?: number;
+  }
 >`
   ${BaseStyleInput}
 `;

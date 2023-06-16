@@ -816,7 +816,7 @@ const statusTag: StatusTag = {
       [STATUS_TAG_VARIANTS.SECONDARY]: neutral["900"],
       [STATUS_TAG_VARIANTS.SECONDARY_ALT]: neutral["50"],
       [STATUS_TAG_VARIANTS.NEUTRAL]: neutral["400"],
-      [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["100"],
+      [STATUS_TAG_VARIANTS.NEUTRAL_ALT]: neutral["200"],
       [STATUS_TAG_VARIANTS.SUCCESS]: success["500"],
       [STATUS_TAG_VARIANTS.SUCCESS_ALT]: success["25"],
       [STATUS_TAG_VARIANTS.WARNING]: warning["50"],
