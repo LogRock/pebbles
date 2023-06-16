@@ -16,10 +16,10 @@ exports[`InputBox > get InputBox by label text 1`] = `
          
       </label>
       <div
-        class="sc-hHTYSt cmimTA"
+        class="sc-dmctIk ggHTBC"
       >
         <input
-          class="sc-dmctIk KBWSG"
+          class="sc-kgTSHT fwolqG"
           id="textId"
           type="text"
         />
@@ -45,10 +45,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
          
       </label>
       <div
-        class="sc-hHTYSt cmimTA"
+        class="sc-dmctIk ggHTBC"
       >
         <div
-          class="sc-jIRcFI hQDPtv PhoneInput PhoneInput--focus"
+          class="sc-hhOBVt jElBIa PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1331,10 +1331,10 @@ exports[`InputBox > renders InputBox properly 1`] = `
        
     </label>
     <div
-      class="sc-hHTYSt cmimTA"
+      class="sc-dmctIk ggHTBC"
     >
       <input
-        class="sc-dmctIk KBWSG"
+        class="sc-kgTSHT fwolqG"
         id="pebbles__input__1"
       />
     </div>
@@ -1353,11 +1353,11 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
       type="overlineXSmall"
     />
     <div
-      class="sc-ezOQGI ljJUjZ"
+      class="sc-bYMpWt jjOoVb"
     >
       <button
         aria-label="decrease button"
-        class="sc-iveFHk gCiVNH sc-ilhmMj dEwtoP"
+        class="sc-cwSeag jbRVZA sc-jIRcFI cUfmtV"
       >
         <svg
           fill="currentColor"
@@ -1374,16 +1374,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         </svg>
       </button>
       <div
-        class="sc-kMjNwy dtTnrB"
+        class="sc-ilhmMj gzYeiu"
       >
         <input
-          class="sc-dmctIk sc-bYMpWt KBWSG dLsoWk"
+          class="sc-kgTSHT sc-kMjNwy fwolqG hecmlh"
           type="number"
         />
       </div>
       <button
         aria-label="increase button"
-        class="sc-iveFHk gCiVNH sc-ilhmMj dEwtoP"
+        class="sc-cwSeag jbRVZA sc-jIRcFI cUfmtV"
       >
         <svg
           fill="currentColor"
@@ -1418,10 +1418,10 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
        
     </label>
     <div
-      class="sc-hHTYSt cmimTA"
+      class="sc-dmctIk ggHTBC"
     >
       <div
-        class="sc-jIRcFI hQDPtv PhoneInput"
+        class="sc-hhOBVt jElBIa PhoneInput"
       >
         <div
           class="PhoneInputCountry"
