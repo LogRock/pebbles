@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import DatePicker from "react-datepicker";
@@ -50,6 +50,8 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   placeholder,
   ...inputProps
 }) => {
+  const datePickerContainerRef = useRef<HTMLDivElement>(null);
+
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Text
@@ -62,6 +64,7 @@ const DateInputBox: FC<DateInputBoxProps> = ({
       </Text>
 
       <InputDiv>
+<<<<<<< HEAD
         <StyledDatePicker destructive={destructive}>
           {
             // @ts-ignore
@@ -82,8 +85,32 @@ const DateInputBox: FC<DateInputBoxProps> = ({
           }
           <DatePickerWrapperStyles />
         </StyledDatePicker>
+=======
+        <label htmlFor={inputProps.id}>
+          <StyledDatePicker ref={datePickerContainerRef} status={status}>
+            {
+              // @ts-ignore
+              // typescript issue here, the date picker onChange event has a different type than the HTML input's event
+              <DatePicker
+                wrapperClassName="logrock-datepicker"
+                showMonthDropdown
+                showYearDropdown
+                placeholderText={placeholder}
+                customInput={
+                  // @ts-ignore
+                  inputProps.selectsRange ? undefined : (
+                    <InputMask type="text" mask="99/99/9999" />
+                  )
+                }
+                {...inputProps}
+              />
+            }
+            <DatePickerWrapperStyles />
+          </StyledDatePicker>
+        </label>
+>>>>>>> 0e1a239 (feat: input calendar will open if user click in any part of the component)
         {hint && (
-          <HintDiv>
+          <HintDiv onClick={() => datePickerContainerRef?.current?.click()}>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
             {hint.icon && (
               <HintIconWrapper disabled={inputProps.disabled}>
