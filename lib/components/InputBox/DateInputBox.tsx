@@ -64,28 +64,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
       </Text>
 
       <InputDiv>
-<<<<<<< HEAD
-        <StyledDatePicker destructive={destructive}>
-          {
-            // @ts-ignore
-            // typescript issue here, the date picker onChange event has a different type than the HTML input's event
-            <DatePicker
-              wrapperClassName="logrock-datepicker"
-              showMonthDropdown
-              showYearDropdown
-              placeholderText={placeholder}
-              customInput={
-                // @ts-ignore
-                inputProps.selectsRange ? undefined : (
-                  <InputMask type="text" mask="99/99/9999" />
-                )
-              }
-              {...inputProps}
-            />
-          }
-          <DatePickerWrapperStyles />
-        </StyledDatePicker>
-=======
         <label htmlFor={inputProps.id}>
           <StyledDatePicker ref={datePickerContainerRef} status={status}>
             {
@@ -108,7 +86,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
             <DatePickerWrapperStyles />
           </StyledDatePicker>
         </label>
->>>>>>> 0e1a239 (feat: input calendar will open if user click in any part of the component)
         {hint && (
           <HintDiv onClick={() => datePickerContainerRef?.current?.click()}>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
