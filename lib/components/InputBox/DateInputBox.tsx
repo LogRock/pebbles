@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { FC, useRef } from "react";
+import React, { FC } from "react";
 
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import DatePicker from "react-datepicker";
@@ -50,8 +50,6 @@ const DateInputBox: FC<DateInputBoxProps> = ({
   placeholder,
   ...inputProps
 }) => {
-  const datePickerContainerRef = useRef<HTMLDivElement>(null);
-
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Text
@@ -64,30 +62,28 @@ const DateInputBox: FC<DateInputBoxProps> = ({
       </Text>
 
       <InputDiv>
-        <label htmlFor={inputProps.id}>
-          <StyledDatePicker ref={datePickerContainerRef} status={status}>
-            {
-              // @ts-ignore
-              // typescript issue here, the date picker onChange event has a different type than the HTML input's event
-              <DatePicker
-                wrapperClassName="logrock-datepicker"
-                showMonthDropdown
-                showYearDropdown
-                placeholderText={placeholder}
-                customInput={
-                  // @ts-ignore
-                  inputProps.selectsRange ? undefined : (
-                    <InputMask type="text" mask="99/99/9999" />
-                  )
-                }
-                {...inputProps}
-              />
-            }
-            <DatePickerWrapperStyles />
-          </StyledDatePicker>
-        </label>
+        <StyledDatePicker destructive={destructive}>
+          {
+            // @ts-ignore
+            // typescript issue here, the date picker onChange event has a different type than the HTML input's event
+            <DatePicker
+              wrapperClassName="logrock-datepicker"
+              showMonthDropdown
+              showYearDropdown
+              placeholderText={placeholder}
+              customInput={
+                // @ts-ignore
+                inputProps.selectsRange ? undefined : (
+                  <InputMask type="text" mask="99/99/9999" />
+                )
+              }
+              {...inputProps}
+            />
+          }
+          <DatePickerWrapperStyles />
+        </StyledDatePicker>
         {hint && (
-          <HintDiv onClick={() => datePickerContainerRef?.current?.click()}>
+          <HintDiv style={{ pointerEvents: "none" }}>
             <Hint disabled={inputProps.disabled}>{hint.content}</Hint>
             {hint.icon && (
               <HintIconWrapper disabled={inputProps.disabled}>
