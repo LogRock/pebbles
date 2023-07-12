@@ -1,3 +1,13 @@
+# [14.3.0](https://github.com/LogRock/pebbles/compare/v14.2.2...v14.3.0) (2023-07-12)
+
+### Bug Fixes
+
+- removed ref in favor of pointer-events solution ([026eb1b](https://github.com/LogRock/pebbles/commit/026eb1b8decc258224ffb56b9cf674e5265e633c))
+
+### Features
+
+- input calendar will open if user click in any part of the component ([bf97b3e](https://github.com/LogRock/pebbles/commit/bf97b3ea4d874bb0b3d48e50ec37c182b326d670))
+
 ## [14.2.2](https://github.com/LogRock/pebbles/compare/v14.2.1...v14.2.2) (2023-06-16)
 
 ### Bug Fixes
