@@ -147,10 +147,6 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
         color: ${({ theme }) => theme.colors.neutral[400]};
       }
 
-      &__day--disabled {
-        opacity: 0.5;
-      }
-
       /* Month/year dropdowns (select menu) */
       &__year-dropdown,
       &__month-dropdown,
@@ -281,5 +277,8 @@ export const DatePickerWrapperStyles = createGlobalStyle<{ theme: Theme }>`
           vertical-align: top;
         }
       }
-    }    
+    }   
+    .react-datepicker__day--disabled {
+      color: ${({ theme }) => theme.colors.neutral[300]};
+    } 
 `;
