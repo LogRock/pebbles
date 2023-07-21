@@ -1,3 +1,9 @@
+# [14.4.0](https://github.com/LogRock/pebbles/compare/v14.3.0...v14.4.0) (2023-07-21)
+
+### Features
+
+- added style for disabled dates on datepicker ([1e4760c](https://github.com/LogRock/pebbles/commit/1e4760cf829416302ad9294127ceed06634d6f58))
+
 # [14.3.0](https://github.com/LogRock/pebbles/compare/v14.2.2...v14.3.0) (2023-07-12)
 
 ### Bug Fixes
