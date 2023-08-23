@@ -8,4 +8,5 @@ export interface CustomSelectProps {
   spaceAfter?: spacingTokens;
   destructive?: boolean;
   required?: boolean;
+  useBottomSheet?: boolean;
 }

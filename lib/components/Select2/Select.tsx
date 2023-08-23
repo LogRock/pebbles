@@ -9,6 +9,7 @@ import ReactSelect, {
   GroupBase,
   components,
   ValueContainerProps,
+  SelectComponentsConfig,
 } from "react-select";
 import styled, { ThemeContext } from "styled-components";
 import { HelperDiv, HelperIcon } from "../InputBox/BaseInputBox.styled";
@@ -18,6 +19,8 @@ import { DropdownIndicatorWrapper } from "./Select.styled";
 import { spacingTokens } from "../../types/tokens";
 import { Text } from "../Typography";
 import { RequiredAsterisk } from "../InputBox/BaseInputBox";
+import SelectBottomSheet from "./SelectBottomSheet";
+import { SelectOption } from "./SelectOption";
 
 const { ValueContainer } = components;
 
@@ -72,6 +75,14 @@ export const CustomValueContainer: FC<ValueContainerProps> = ({
   return <ValueContainer {...props}>{children}</ValueContainer>;
 };
 
+function CustomChevronIndicator() {
+  return (
+    <DropdownIndicatorWrapper>
+      <BsChevronDown size={16} />
+    </DropdownIndicatorWrapper>
+  );
+}
+
 function Select<
   Option,
   IsMulti extends boolean = false,
@@ -83,8 +94,13 @@ function Select<
   label,
   destructive,
   spaceAfter,
+  useBottomSheet,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
+  // only used for bottom sheet mode
+  const [menuIsOpen, setMenuIsOpen] = React.useState(false);
+  const [filterValue, setFilterValue] = React.useState("");
+
   const theme = useContext<ThemeType>(ThemeContext);
 
   const customStyles: StylesConfig<Option, IsMulti, Group> = useMemo(
@@ -135,7 +151,7 @@ function Select<
         color: theme.colors.neutral[400],
       }),
     }),
-    [status]
+    []
   );
 
   const selectTheme: Theme = useMemo(
@@ -171,6 +187,21 @@ function Select<
 
   const selectID = uniqueId("pebbles_select");
 
+  const customComponents: SelectComponentsConfig<Option, IsMulti, Group> =
+    useMemo(() => {
+      const components = { ...props.components } || {};
+
+      components.ValueContainer = CustomValueContainer as any;
+      components.DropdownIndicator = CustomChevronIndicator as any;
+
+      if (useBottomSheet) {
+        components.Menu = SelectBottomSheet as any;
+        components.Option = SelectOption as any;
+      }
+
+      return components;
+    }, [props.components, useBottomSheet, label]);
+
   return (
     <StyledDiv spaceAfter={spaceAfter}>
       <Text
@@ -181,21 +212,23 @@ function Select<
       >
         {label} {required && <RequiredAsterisk />}
       </Text>
-      <ReactSelect
+      <ReactSelect<Option, IsMulti, Group>
         {...props}
         required={required}
         styles={customStyles}
         theme={selectTheme}
         inputId={selectID}
-        components={{
-          ...props.components,
-          ValueContainer: CustomValueContainer as any,
-          DropdownIndicator: () => (
-            <DropdownIndicatorWrapper>
-              <BsChevronDown size={16} />
-            </DropdownIndicatorWrapper>
-          ),
-        }}
+        components={customComponents}
+        menuIsOpen={useBottomSheet ? menuIsOpen : undefined}
+        openMenuOnClick={useBottomSheet ? true : undefined}
+        onMenuOpen={() => setMenuIsOpen(true)}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        maxMenuHeight={useBottomSheet ? "100%" : 200}
+        filter={filterValue}
+        setFilter={setFilterValue}
+        label={label}
+        setMenuIsOpen={setMenuIsOpen}
       />
       {helper && (
         <HelperDiv>
