@@ -138,7 +138,8 @@
     "react-datepicker": "^4.7.0",
     "react-input-mask": "^2.0.4",
     "react-phone-number-input": "^3.2.2",
-    "react-select": "5.7.3"
+    "react-select": "5.7.4",
+    "react-spring-bottom-sheet": "^3.4.1"
   },
   "stackblitz": {
     "startCommand": "npm run test:ui"
