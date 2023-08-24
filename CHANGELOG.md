@@ -1,3 +1,9 @@
+## [15.0.1](https://github.com/LogRock/pebbles/compare/v15.0.0...v15.0.1) (2023-08-24)
+
+### Bug Fixes
+
+- **bottom-sheet:** :bug: fix select taking over backspace event ([934ddc4](https://github.com/LogRock/pebbles/commit/934ddc48deebe74fd201a890d84c05e002947f51))
+
 # [15.0.0](https://github.com/LogRock/pebbles/compare/v14.5.0...v15.0.0) (2023-08-24)
 
 ### Build System
