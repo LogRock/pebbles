@@ -24,16 +24,16 @@ export function SelectOption(props: OptionProps<unknown>) {
     isSelected,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    selectProps: { filter, setMenuIsOpen },
+    selectProps: { filter, setMenuIsOpen, getOptionLabel, getOptionValue },
   } = props;
 
-  const transformedData = data as { label: string };
-
-  if (
-    filter &&
-    !transformedData.label.toLowerCase().includes(filter.toLowerCase())
-  ) {
-    return null;
+  if (filter) {
+    if (
+      !getOptionLabel(data).toLowerCase().includes(filter.toLowerCase()) &&
+      !getOptionValue(data).toLowerCase().includes(filter.toLowerCase())
+    ) {
+      return null;
+    }
   }
 
   return (
@@ -50,7 +50,7 @@ export function SelectOption(props: OptionProps<unknown>) {
         padding="xxsm"
         align="start"
       >
-        <Text>{transformedData.label}</Text>
+        <Text>{getOptionLabel(data)}</Text>
       </StyledBox>
     </div>
   );
