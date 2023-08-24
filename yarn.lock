@@ -2568,6 +2568,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-icons: "*"
+    react-spring-bottom-sheet: ^3
     styled-breakpoints: "*"
     styled-components: "*"
   languageName: unknown

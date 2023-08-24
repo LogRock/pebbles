@@ -21,6 +21,7 @@ This library is meant to be used in React projects. To use it, you will have to 
 yarn add styled-components
 yarn add styled-breakpoints
 yarn add react-select
+yarn add react-spring-bottom-sheet
 
 # fonts
 yarn add @fontsource/archivo
@@ -42,6 +43,12 @@ import "@fontsource/archivo/800.css";
 You can, alternatively, make it available as a Variable font if you want. The only requirement is having all weights from 400 to 800 available for the default theme to work best.
 
 If you customize the theme by changing any of the fontFamily properties, make sure that the font you want to use is also made available, by exposing it in any ways you like (fontsource is the best!)
+
+If you intend on using the Bottom sheet component, you will also need to import the styles for it:
+
+```js
+import "react-spring-bottom-sheet/dist/style.css";
+```
 
 Install this lib:
 
