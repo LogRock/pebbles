@@ -1,3 +1,10 @@
+# [14.5.0](https://github.com/LogRock/pebbles/compare/v14.4.0...v14.5.0) (2023-08-24)
+
+### Features
+
+- **bottom-sheet:** :sparkles: add bottom sheet ([ef18109](https://github.com/LogRock/pebbles/commit/ef181092ff7217eabbcf7c66710893013e0a22f4))
+- **select:** :sparkles: add bottom sheet mode ([814fc81](https://github.com/LogRock/pebbles/commit/814fc81a72df3aecf7d38d56204bd7ce5257afca))
+
 # [14.4.0](https://github.com/LogRock/pebbles/compare/v14.3.0...v14.4.0) (2023-07-21)
 
 ### Features
