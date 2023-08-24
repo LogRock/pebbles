@@ -1,3 +1,13 @@
+# [15.0.0](https://github.com/LogRock/pebbles/compare/v14.5.0...v15.0.0) (2023-08-24)
+
+### Build System
+
+- **project:** :heavy_minus_sign: react spring bottom sheet is now a peer dep ([21c3fbe](https://github.com/LogRock/pebbles/commit/21c3fbe04a608ccf6bdf4208ebbe714143dcf30c))
+
+### BREAKING CHANGES
+
+- **project:** you must provide react spring bottom sheet now
+
 # [14.5.0](https://github.com/LogRock/pebbles/compare/v14.4.0...v14.5.0) (2023-08-24)
 
 ### Features
