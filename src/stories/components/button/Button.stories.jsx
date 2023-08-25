@@ -113,3 +113,12 @@ StyleOutlined.args = {
   content: "Outlined Button",
   buttonStyle: "outlined",
 };
+
+export const CustomColors = TwoButtonsTemplate.bind({});
+CustomColors.args = {
+  content: "Custom Colors",
+  color: "neutral",
+  shade: "200",
+  textColor: "success",
+  textShade: "900",
+};
