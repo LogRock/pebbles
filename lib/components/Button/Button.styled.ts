@@ -78,22 +78,38 @@ const buttonDisabledCSS = css<Pick<ButtonProps, "buttonStyle">>`
   `}
 `;
 
-const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
-  ${({ theme, buttonStyle, variant }) => css`
+const buttonVariantCSS = css<
+  Pick<
+    ButtonProps,
+    "buttonStyle" | "variant" | "color" | "shade" | "textColor" | "textShade"
+  >
+>`
+  ${({
+    theme,
+    buttonStyle,
+    variant,
+    color,
+    shade,
+    textColor,
+    textShade,
+  }) => css`
     border-width: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].borderWidth};
-    border-color: ${theme.buttons.regular[variant || "primary"][
-      buttonStyle || "primary"
-    ].borderColor};
+    border-color: ${color
+      ? theme.colors[color][shade || "500"]
+      : theme.buttons.regular[variant || "primary"][buttonStyle || "primary"]
+          .borderColor};
 
-    background: ${theme.buttons.regular[variant || "primary"][
-      buttonStyle || "primary"
-    ].background};
+    background: ${color
+      ? theme.colors[color][shade || "500"]
+      : theme.buttons.regular[variant || "primary"][buttonStyle || "primary"]
+          .background};
 
-    color: ${theme.buttons.regular[variant || "primary"][
-      buttonStyle || "primary"
-    ].contentColor};
+    color: ${textColor
+      ? theme.colors[textColor][textShade || "500"]
+      : theme.buttons.regular[variant || "primary"][buttonStyle || "primary"]
+          .contentColor};
     text-decoration-line: ${theme.buttons.regular[variant || "primary"][
       buttonStyle || "primary"
     ].textDecorationLine || "none"};
@@ -107,7 +123,16 @@ const buttonVariantCSS = css<Pick<ButtonProps, "buttonStyle" | "variant">>`
 `;
 
 export const RegularButton = styled.button<
-  Pick<ButtonProps, "buttonSize" | "buttonStyle" | "variant">
+  Pick<
+    ButtonProps,
+    | "buttonSize"
+    | "buttonStyle"
+    | "variant"
+    | "color"
+    | "shade"
+    | "textColor"
+    | "textShade"
+  >
 >`
   ${baseButtonCSS}
   ${buttonSizeCSS}
@@ -158,7 +183,16 @@ export const IconButtonIcon = styled.div<Pick<ButtonProps, "buttonSize">>`
 `;
 
 export const IconButton = styled.button<
-  Pick<ButtonProps, "buttonSize" | "buttonStyle" | "variant">
+  Pick<
+    ButtonProps,
+    | "buttonSize"
+    | "buttonStyle"
+    | "variant"
+    | "color"
+    | "shade"
+    | "textColor"
+    | "textShade"
+  >
 >`
   ${baseButtonCSS}
   ${iconButtonSizeCSS}

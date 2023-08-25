@@ -103,3 +103,12 @@ StyleOutlined.args = {
   content: <BsBricks />,
   buttonStyle: "outlined",
 };
+
+export const CustomColor = Template.bind({});
+CustomColor.args = {
+  content: <BsBricks />,
+  color: "success",
+  shade: "200",
+  textColor: "destructive",
+  textShade: "700",
+};
