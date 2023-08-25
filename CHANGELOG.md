@@ -1,3 +1,9 @@
+# [15.1.0](https://github.com/LogRock/pebbles/compare/v15.0.1...v15.1.0) (2023-08-25)
+
+### Features
+
+- **button:** :sparkles: make button accept color and shade props ([3d7848d](https://github.com/LogRock/pebbles/commit/3d7848d56ddb57ca42bf72319e98f243a7d32c3f))
+
 ## [15.0.1](https://github.com/LogRock/pebbles/compare/v15.0.0...v15.0.1) (2023-08-24)
 
 ### Bug Fixes
