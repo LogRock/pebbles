@@ -20,8 +20,9 @@ This library is meant to be used in React projects. To use it, you will have to 
 # styled components
 yarn add styled-components
 yarn add styled-breakpoints
-yarn add react-select
-yarn add react-spring-bottom-sheet
+yarn add react-select # if you intend on using the Select component
+yarn add react-spring-bottom-sheet # if you intend on using the BottomSheet component
+yarn add date-fns # if you intend on using the DateInput component
 
 # fonts
 yarn add @fontsource/archivo
