@@ -6,10 +6,10 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-idXgbr cHqexO"
+        class="sc-gFqAkR cbhzNS"
       >
         <label
-          class="sc-ksBlkl epDjLp"
+          class="sc-cPiKLX gQejGr"
           color="neutral"
           for="pebbles__input__1"
           type="overlineXSmall"
@@ -17,65 +17,65 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
            
         </label>
         <div
-          class="sc-iveFHk jnTCMt"
+          class="sc-hmdomO jqEVRc"
         >
           <div
             style="padding: 10px 12px;"
           >
             <label
-              class="sc-fnGiBr dIHaIL"
+              class="sc-eDPEul kSKwvk"
               for="A"
             >
               <div
-                class="sc-fEXmlR cNDMXI"
+                class="sc-eldPxv aBlwZ"
               >
                 A
               </div>
               <input
                 checked=""
-                class="sc-bjfHbI kHtxiO"
+                class="sc-fPXMVe zzeoB"
                 id="A"
                 type="checkbox"
               />
               <span
-                class="sc-hBxehG Vrkis"
+                class="sc-dLMFU gCsEgs"
               />
             </label>
             <label
-              class="sc-fnGiBr dIHaIL"
+              class="sc-eDPEul kSKwvk"
               for="B"
             >
               <div
-                class="sc-fEXmlR cNDMXI"
+                class="sc-eldPxv aBlwZ"
               >
                 B
               </div>
               <input
-                class="sc-bjfHbI kHtxiO"
+                class="sc-fPXMVe zzeoB"
                 id="B"
                 type="checkbox"
               />
               <span
-                class="sc-hBxehG Vrkis"
+                class="sc-dLMFU gCsEgs"
               />
             </label>
             <label
-              class="sc-fnGiBr dIHaIL"
+              class="sc-eDPEul kSKwvk"
               for="C"
             >
               <div
-                class="sc-fEXmlR cNDMXI"
+                class="sc-eldPxv aBlwZ"
               >
                 C
               </div>
               <input
                 checked=""
-                class="sc-bjfHbI kHtxiO"
+                class="sc-fPXMVe zzeoB"
                 id="C"
                 type="checkbox"
               />
               <span
-                class="sc-hBxehG Vrkis"
+                class="sc-dLMFU gCsEgs"
               />
             </label>
           </div>
@@ -85,10 +85,10 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-idXgbr cHqexO"
+      class="sc-gFqAkR cbhzNS"
     >
       <label
-        class="sc-ksBlkl epDjLp"
+        class="sc-cPiKLX gQejGr"
         color="neutral"
         for="pebbles__input__1"
         type="overlineXSmall"
@@ -96,65 +96,65 @@ exports[`CheckBoxGroup Component > should match snapshot 1`] = `
          
       </label>
       <div
-        class="sc-iveFHk jnTCMt"
+        class="sc-hmdomO jqEVRc"
       >
         <div
           style="padding: 10px 12px;"
         >
           <label
-            class="sc-fnGiBr dIHaIL"
+            class="sc-eDPEul kSKwvk"
             for="A"
           >
             <div
-              class="sc-fEXmlR cNDMXI"
+              class="sc-eldPxv aBlwZ"
             >
               A
             </div>
             <input
               checked=""
-              class="sc-bjfHbI kHtxiO"
+              class="sc-fPXMVe zzeoB"
               id="A"
               type="checkbox"
             />
             <span
-              class="sc-hBxehG Vrkis"
+              class="sc-dLMFU gCsEgs"
             />
           </label>
           <label
-            class="sc-fnGiBr dIHaIL"
+            class="sc-eDPEul kSKwvk"
             for="B"
           >
             <div
-              class="sc-fEXmlR cNDMXI"
+              class="sc-eldPxv aBlwZ"
             >
               B
             </div>
             <input
-              class="sc-bjfHbI kHtxiO"
+              class="sc-fPXMVe zzeoB"
               id="B"
               type="checkbox"
             />
             <span
-              class="sc-hBxehG Vrkis"
+              class="sc-dLMFU gCsEgs"
             />
           </label>
           <label
-            class="sc-fnGiBr dIHaIL"
+            class="sc-eDPEul kSKwvk"
             for="C"
           >
             <div
-              class="sc-fEXmlR cNDMXI"
+              class="sc-eldPxv aBlwZ"
             >
               C
             </div>
             <input
               checked=""
-              class="sc-bjfHbI kHtxiO"
+              class="sc-fPXMVe zzeoB"
               id="C"
               type="checkbox"
             />
             <span
-              class="sc-hBxehG Vrkis"
+              class="sc-dLMFU gCsEgs"
             />
           </label>
         </div>

@@ -4,10 +4,10 @@ exports[`InputBox > get InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-hBxehG kurttc"
+      class="sc-dLMFU bVkILs"
     >
       <label
-        class="sc-ksBlkl epDjLp"
+        class="sc-cPiKLX gQejGr"
         color="neutral"
         for="textId"
         type="overlineXSmall"
@@ -16,10 +16,10 @@ exports[`InputBox > get InputBox by label text 1`] = `
          
       </label>
       <div
-        class="sc-dmctIk ggHTBC"
+        class="sc-feUZmu bfDFvc"
       >
         <input
-          class="sc-kgTSHT cUgNGV"
+          class="sc-fUnMCh bUoMTb"
           id="textId"
           type="text"
         />
@@ -33,10 +33,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 <div>
   <div>
     <div
-      class="sc-hBxehG kurttc"
+      class="sc-dLMFU bVkILs"
     >
       <label
-        class="sc-ksBlkl epDjLp"
+        class="sc-cPiKLX gQejGr"
         color="neutral"
         for="phoneId"
         type="overlineXSmall"
@@ -45,10 +45,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
          
       </label>
       <div
-        class="sc-dmctIk ggHTBC"
+        class="sc-feUZmu bfDFvc"
       >
         <div
-          class="sc-hhOBVt fnpnhB PhoneInput PhoneInput--focus"
+          class="sc-kOPcWz gNRauK PhoneInput PhoneInput--focus"
         >
           <div
             class="PhoneInputCountry"
@@ -1320,10 +1320,10 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
 exports[`InputBox > renders InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG kurttc"
+    class="sc-dLMFU bVkILs"
   >
     <label
-      class="sc-ksBlkl epDjLp"
+      class="sc-cPiKLX gQejGr"
       color="neutral"
       for="pebbles__input__1"
       type="overlineXSmall"
@@ -1331,10 +1331,10 @@ exports[`InputBox > renders InputBox properly 1`] = `
        
     </label>
     <div
-      class="sc-dmctIk ggHTBC"
+      class="sc-feUZmu bfDFvc"
     >
       <input
-        class="sc-kgTSHT cUgNGV"
+        class="sc-fUnMCh bUoMTb"
         id="pebbles__input__1"
       />
     </div>
@@ -1345,19 +1345,19 @@ exports[`InputBox > renders InputBox properly 1`] = `
 exports[`InputBox > renders Number InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG kurttc"
+    class="sc-dLMFU bVkILs"
   >
     <label
-      class="sc-ksBlkl epDjLp"
+      class="sc-cPiKLX gQejGr"
       color="neutral"
       type="overlineXSmall"
     />
     <div
-      class="sc-bYMpWt jjOoVb"
+      class="sc-iHGNWf ghXMVB"
     >
       <button
         aria-label="decrease button"
-        class="sc-cwSeag jbRVZA sc-jIRcFI cUfmtV"
+        class="sc-bXCLTC hSLxpA sc-dtInlm gjgwpk"
       >
         <svg
           fill="currentColor"
@@ -1374,16 +1374,16 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
         </svg>
       </button>
       <div
-        class="sc-ilhmMj gzYeiu"
+        class="sc-kOHTFB kCHjDf"
       >
         <input
-          class="sc-kgTSHT sc-kMjNwy cUgNGV hecmlh"
+          class="sc-fUnMCh sc-dtBdUo bUoMTb kQDXXr"
           type="number"
         />
       </div>
       <button
         aria-label="increase button"
-        class="sc-cwSeag jbRVZA sc-jIRcFI cUfmtV"
+        class="sc-bXCLTC hSLxpA sc-dtInlm gjgwpk"
       >
         <svg
           fill="currentColor"
@@ -1407,10 +1407,10 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
 exports[`InputBox > renders Phone InputBox properly 1`] = `
 <div>
   <div
-    class="sc-hBxehG kurttc"
+    class="sc-dLMFU bVkILs"
   >
     <label
-      class="sc-ksBlkl epDjLp"
+      class="sc-cPiKLX gQejGr"
       color="neutral"
       for="pebbles__input__2"
       type="overlineXSmall"
@@ -1418,10 +1418,10 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
        
     </label>
     <div
-      class="sc-dmctIk ggHTBC"
+      class="sc-feUZmu bfDFvc"
     >
       <div
-        class="sc-hhOBVt fnpnhB PhoneInput"
+        class="sc-kOPcWz gNRauK PhoneInput"
       >
         <div
           class="PhoneInputCountry"

@@ -2,7 +2,7 @@
 
 exports[`ProgressRing tests > matches the component snapshot 1`] = `
 <div
-  class="sc-bcXHqe bMQecf"
+  class="sc-aXZVg bMpjAu"
   size="60"
 >
   <svg
@@ -39,7 +39,7 @@ exports[`ProgressRing tests > matches the component snapshot 1`] = `
     />
   </svg>
   <div
-    class="sc-gswNZR gydReF"
+    class="sc-gEvEer cDlUIc"
   >
     75%
   </div>
