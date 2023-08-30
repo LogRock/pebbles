@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
 import { StepperStepProps } from "./Stepper.types";
 import {
@@ -11,7 +11,7 @@ import {
   StepIconWrapper,
 } from "./Stepper.styled";
 
-const StepperStep: FC<StepperStepProps> = ({
+const StepperStep: FC<PropsWithChildren<StepperStepProps>> = ({
   stepIndex,
   last,
   completed,

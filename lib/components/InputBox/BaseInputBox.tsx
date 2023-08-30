@@ -20,7 +20,9 @@ import { spacingTokens } from "../../types/tokens";
 
 export interface BaseInputBoxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
+  // @ deprecated
   description?: string;
+  label?: React.ReactNode;
   startIcon?: React.ReactNode;
   hint?: {
     content: React.ReactNode;
@@ -35,6 +37,7 @@ export interface BaseInputBoxProps
   disablePlus?: boolean;
   value?: string | ReadonlyArray<string> | number | E164Number | undefined;
   mask?: string;
+  inputRef?: React.Ref<HTMLInputElement>;
 }
 
 export const RequiredAsterisk = () => (
@@ -52,6 +55,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   helperIcon,
   spaceAfter,
   startIcon,
+  label,
   ...inputProps
 }) => {
   const [inputID] = useState(inputProps?.id || uniqueid("pebbles__input__"));
@@ -66,7 +70,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
   return (
     <StyledDiv spaced={spaced} spaceAfter={spaceAfter}>
       <Text as="label" htmlFor={inputID} spaceAfter="xsm" type="overlineXSmall">
-        {description} {inputProps.required && <RequiredAsterisk />}
+        {label || description} {inputProps.required && <RequiredAsterisk />}
       </Text>
       <InputDiv>
         {startIcon && (
@@ -82,6 +86,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
             hintSize={hintRef?.current?.clientWidth}
             type={showPassword ? "text" : inputProps.type}
             id={inputID}
+            ref={inputProps?.inputRef}
           />
         )}
         {!inputProps?.children && inputProps?.mask && (

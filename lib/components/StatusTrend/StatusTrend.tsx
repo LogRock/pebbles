@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
 import { StatusTrendWrapper } from "./StatusTrend.styled";
 import { StatusTrendProps } from "./StatusTrend.types";
 import { StatusTrendSymbol } from "./StatusTrendSymbol";
 
-const StatusTrend: FC<StatusTrendProps> = ({
+const StatusTrend: FC<PropsWithChildren<StatusTrendProps>> = ({
   direction = "neutral",
   variant = "neutral",
   children,
