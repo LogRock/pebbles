@@ -169,3 +169,9 @@ export type { BoxProps } from "./components/Box";
  */
 export { default as Divider } from "./components/Divider";
 export type { DividerProps } from "./components/Divider";
+
+/**
+ * DateInput
+ */
+export { default as DateInput } from "./components/DateInput";
+export type { DateInputProps } from "./components/DateInput";
