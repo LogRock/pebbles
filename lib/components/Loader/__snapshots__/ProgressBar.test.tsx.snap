@@ -4,11 +4,11 @@ exports[`ProgressBar tests > matches the component snapshot 1`] = `
 <div
   aria-label="progressbar"
   aria-valuenow="75"
-  class="sc-bcXHqe kLEIoJ"
+  class="sc-aXZVg dobpBU"
   role="progressbar"
 >
   <div
-    class="sc-gswNZR girbBj"
+    class="sc-gEvEer hFVYeq"
   />
 </div>
 `;

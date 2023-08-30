@@ -2,30 +2,30 @@
 
 exports[`Stepper test > renders in display only mode 1`] = `
 <div
-  class="sc-gKPRtg lhTsxv"
+  class="sc-gsFSXq eOXcbc"
 >
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           01
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         Personal
@@ -33,27 +33,27 @@ exports[`Stepper test > renders in display only mode 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           02
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         Company
@@ -61,27 +61,27 @@ exports[`Stepper test > renders in display only mode 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           03
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         ELD
@@ -93,30 +93,30 @@ exports[`Stepper test > renders in display only mode 1`] = `
 
 exports[`Stepper test > renders stepper with some content 1`] = `
 <div
-  class="sc-gKPRtg byjfNn"
+  class="sc-gsFSXq dZegDz"
 >
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           01
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         Personal
@@ -124,27 +124,27 @@ exports[`Stepper test > renders stepper with some content 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           02
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         Company
@@ -152,27 +152,27 @@ exports[`Stepper test > renders stepper with some content 1`] = `
     </div>
   </div>
   <div
-    class="sc-jSUZER eeLiNk"
+    class="sc-iGgWBj jkGsyx"
   >
     <div
-      class="sc-bcXHqe emxCrP"
+      class="sc-aXZVg cNzDby"
     >
       <div
-        class="sc-gswNZR hkQOUM"
+        class="sc-gEvEer hmfUvh"
       >
         <p>
           03
         </p>
         <div
-          class="sc-hLBbgP fNXyZO"
+          class="sc-fqkvVR dlEvhZ"
         />
       </div>
       <div
-        class="sc-dkrFOg VnjMe"
+        class="sc-eqUAAy kbRTYz"
       />
     </div>
     <div
-      class="sc-eDvSVe fYPDZJ"
+      class="sc-dcJsrY LNwfx"
     >
       <h4>
         ELD

@@ -2,19 +2,19 @@
 
 exports[`Alert > renders properly 1`] = `
 <div
-  class="sc-bcXHqe sc-dmctIk cZJvYo gnfZGk"
+  class="sc-aXZVg sc-feUZmu jLPakF hBKEoS"
   display="grid"
   width="12/12"
 >
   <p
-    class="sc-dIfARi fnompG"
+    class="sc-ikkxIA krgfNw"
     color="neutral"
     type="paragraphMedium"
   >
     Foo
   </p>
   <div
-    class="sc-bcXHqe kqujdr"
+    class="sc-aXZVg bwDBUu"
   >
     <svg
       color="#F1B72C"

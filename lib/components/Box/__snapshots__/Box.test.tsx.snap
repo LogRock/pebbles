@@ -2,13 +2,13 @@
 
 exports[`Box > renders with custom styles 1`] = `
 <div
-  class="sc-bcXHqe IifmQ"
+  class="sc-aXZVg dnhOFF"
   direction="row"
 />
 `;
 
 exports[`Box > renders with default style 1`] = `
 <div
-  class="sc-bcXHqe kIZXyb"
+  class="sc-aXZVg iviBaG"
 />
 `;
