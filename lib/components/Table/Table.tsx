@@ -6,7 +6,7 @@ import {
 } from "react-icons/bs";
 
 import { isFunction } from "lodash";
-import React, { FC, useMemo } from "react";
+import React, { FC, PropsWithChildren, useMemo } from "react";
 import Ordering from "./Ordering";
 import {
   New,
@@ -80,7 +80,7 @@ export const TableHeader: FC<TableHeaderProps> = ({
   );
 };
 
-export const TableFooter: FC<TableFooterProps> = ({
+export const TableFooter: FC<PropsWithChildren<TableFooterProps>> = ({
   showItemsCount,
   itemsFrom,
   itemsTo,

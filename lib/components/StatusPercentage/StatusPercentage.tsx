@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
 import ProgressRing from "../Loader/ProgressRing";
 import { StatusPctWrapper } from "./StatusPercentage.styled";
@@ -9,7 +9,7 @@ export interface StatusPercentageSizeType {
   stroke: number;
 }
 
-const StatusPercentage: FC<StatusPercentageProps> = ({
+const StatusPercentage: FC<PropsWithChildren<StatusPercentageProps>> = ({
   percentage,
   size = "medium",
   children,

@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { FC, PropsWithChildren } from "react";
 
 import { Steps } from "./Stepper.styled";
 import { StepperProps } from "./Stepper.types";
 
-const Stepper: FC<StepperProps> = ({
+const Stepper: FC<PropsWithChildren<StepperProps>> = ({
   showHoverEffect,
   children,
   spaceAfter,
