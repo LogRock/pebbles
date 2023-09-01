@@ -1,3 +1,17 @@
+# [15.2.0](https://github.com/LogRock/pebbles/compare/v15.1.0...v15.2.0) (2023-09-01)
+
+### Features
+
+- **date-input:** :camera_flash: update snapshots ([12b9e9a](https://github.com/LogRock/pebbles/commit/12b9e9adf94db0c06da857473072e097d00cab06))
+- **date-input:** :lipstick: customize styles to match ([6d1d8ee](https://github.com/LogRock/pebbles/commit/6d1d8eeaa0af8eedd21b2342d2e9b6a0b5a0947a))
+- **date-input:** :sparkles: add new dateInput ([aa350f0](https://github.com/LogRock/pebbles/commit/aa350f015cbe5092e68e5f941e32bfce89a65150))
+- **date-input:** :sparkles: expose dateinput ([3bd7931](https://github.com/LogRock/pebbles/commit/3bd7931e8c5f46ec63d855263596f0cffca4f618))
+- **date-input:** :sparkles: init date input, add deps and update readme ([84c54ef](https://github.com/LogRock/pebbles/commit/84c54efda0c87062c833efc2cf65286a26f62338))
+
+### Reverts
+
+- Revert "ci(project): :construction_worker: update ci for parallelism" ([eb91856](https://github.com/LogRock/pebbles/commit/eb918569ec2caa3f41b4d0b162bbeadba78a9f6f))
+
 # [15.1.0](https://github.com/LogRock/pebbles/compare/v15.0.1...v15.1.0) (2023-08-25)
 
 ### Features
