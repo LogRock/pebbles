@@ -1,3 +1,14 @@
+# [15.3.0](https://github.com/LogRock/pebbles/compare/v15.2.0...v15.3.0) (2023-09-03)
+
+### Bug Fixes
+
+- **date-input:** :bug: fix dateinput custom input ([36debd1](https://github.com/LogRock/pebbles/commit/36debd15fdb5e2b0f5952051832ffcd68e88955e))
+- **storybook:** :bug: fix docs ([4420c26](https://github.com/LogRock/pebbles/commit/4420c266349db434523101397f5aecaa5bdeb0a7))
+
+### Features
+
+- **date-input:** :sparkles: expose custom input ([ad6fb33](https://github.com/LogRock/pebbles/commit/ad6fb33083ce14971c9ebb8a39ca5944fb27b791))
+
 # [15.2.0](https://github.com/LogRock/pebbles/compare/v15.1.0...v15.2.0) (2023-09-01)
 
 ### Features
