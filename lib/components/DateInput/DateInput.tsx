@@ -1,9 +1,9 @@
 import React from "react";
 import { DateInputProps } from "./DateInput.types";
-import { DatePicker } from "@mui/x-date-pickers";
 import uniqueId from "lodash.uniqueid";
 import { CustomDateField } from "./CustomField";
 import { createGlobalStyle } from "styled-components";
+import { DatePicker } from "@mui/x-date-pickers";
 
 const GlobalStyle = createGlobalStyle`
   .MuiPickersDay-root:hover:not(.Mui-disabled), .MuiPickersDay-today {

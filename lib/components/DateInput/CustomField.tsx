@@ -4,8 +4,9 @@ import {
   DateValidationError,
   FieldSection,
   UseDateFieldProps,
+  // eslint-disable-next-line camelcase
+  unstable_useDateField,
 } from "@mui/x-date-pickers";
-import { useDateField } from "@mui/x-date-pickers/DateField/useDateField";
 import BaseInputBox from "../InputBox/BaseInputBox";
 
 // Don't @ me. I copied this from the MUI source.
@@ -75,7 +76,7 @@ interface CustomDateFieldProps
 export function CustomDateField(props: CustomDateFieldProps) {
   const { inputRef: externalInputRef, ...textFieldProps } = props;
 
-  const response = useDateField<dateFns, typeof textFieldProps>({
+  const response = unstable_useDateField<dateFns, typeof textFieldProps>({
     props: textFieldProps,
     inputRef: externalInputRef,
   });

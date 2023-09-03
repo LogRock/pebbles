@@ -1,8 +1,6 @@
 import React from "react";
 import DateInput from "../../../../lib/components/DateInput/DateInput";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { BsAlarm } from "react-icons/bs";
 
 export default {
@@ -11,9 +9,7 @@ export default {
 } as ComponentMeta<typeof DateInput>;
 
 const Template: ComponentStory<typeof DateInput> = (args) => (
-  <LocalizationProvider dateAdapter={AdapterDateFns}>
-    <DateInput {...args} />
-  </LocalizationProvider>
+  <DateInput {...args} />
 );
 
 export const Default = Template.bind({});
