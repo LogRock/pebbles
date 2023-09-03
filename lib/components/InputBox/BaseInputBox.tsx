@@ -127,7 +127,7 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
         <HelperDiv>
           {destructive && !helperIcon && (
             <HelperIcon destructive={destructive}>
-              <BsExclamationTriangleFill />
+              <BsExclamationTriangleFill aria-label="error icon" />
             </HelperIcon>
           )}
           {helperIcon && (
