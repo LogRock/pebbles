@@ -175,3 +175,4 @@ export type { DividerProps } from "./components/Divider";
  */
 export { default as DateInput } from "./components/DateInput";
 export type { DateInputProps } from "./components/DateInput";
+export { CustomDateField } from "./components/DateInput/CustomField";
