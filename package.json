@@ -16,17 +16,17 @@
   },
   "version": "15.3.0",
   "scripts": {
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable",
-    "commit": "cz",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider tsc --noEmit && vite build",
+    "preview": "NODE_OPTIONS=--openssl-legacy-provider vite preview",
+    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
+    "build-storybook": "NODE_OPTIONS=--openssl-legacy-provider build-storybook",
+    "postinstall": "NODE_OPTIONS=--openssl-legacy-provider husky install",
+    "prepack": "NODE_OPTIONS=--openssl-legacy-provider pinst --disable",
+    "postpack": "NODE_OPTIONS=--openssl-legacy-provider pinst --enable",
+    "commit": "NODE_OPTIONS=--openssl-legacy-provider cz",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider vitest",
+    "test:ui": "NODE_OPTIONS=--openssl-legacy-provider vitest --ui",
+    "coverage": "NODE_OPTIONS=--openssl-legacy-provider vitest run --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -92,8 +92,8 @@
     "pinst": "^3.0.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "2.5.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-jsonschema-form": "^1.8.1",
     "react-spring-bottom-sheet": "^3.4.1",
@@ -111,7 +111,7 @@
     "vite": "^2.6.4",
     "vitest": "latest"
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.6.3",
   "peerDependencies": {
     "@mui/material": "*",
     "@mui/styled-engine-sc": "*",
