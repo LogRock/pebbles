@@ -18,16 +18,16 @@ jobs:
           cache: "yarn"
 
       - name: Install Deps
-        run: yarn install
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn install
 
       - name: ESLint
-        run: yarn eslint .
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn eslint .
 
       - name: Prettier
-        run: yarn prettier .
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn prettier .
 
       - name: Test
-        run: yarn coverage
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn coverage
 
       - name: Report Coverage
         uses: coverallsapp/github-action@1.1.3
