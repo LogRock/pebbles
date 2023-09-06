@@ -14,20 +14,20 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: "18.x"
           cache: "yarn"
 
       - name: Install Deps
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn install
+        run: yarn install
 
       - name: ESLint
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn eslint .
+        run: yarn eslint .
 
       - name: Prettier
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn prettier .
+        run: yarn prettier .
 
       - name: Test
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn coverage
+        run: yarn coverage
 
       - name: Report Coverage
         uses: coverallsapp/github-action@1.1.3
