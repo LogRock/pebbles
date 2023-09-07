@@ -14,7 +14,7 @@
       "require": "./dist/logrock-pebbles.umd.js"
     }
   },
-  "version": "16.0.0",
+  "version": "16.0.1",
   "scripts": {
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
@@ -37,11 +37,6 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@fontsource/archivo": "^4.5.3",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-icons": "^4.6.0",
-    "react-jsonschema-form": "^1.8.1",
-    "react-spring-bottom-sheet": "^3.4.1",
     "@mdx-js/react": "^1.6.22",
     "@mui/material": "5.14.7",
     "@mui/styled-engine-sc": "5.14.7",
@@ -97,6 +92,11 @@
     "pinst": "^3.0.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "2.5.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-icons": "^4.6.0",
+    "react-jsonschema-form": "^1.8.1",
+    "react-spring-bottom-sheet": "^3.4.1",
     "rollup-plugin-typescript": "1.0.1",
     "semantic-release": "^18.0.1",
     "semantic-release-slack-bot": "^3.5.2",

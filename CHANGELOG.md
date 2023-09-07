@@ -1,3 +1,13 @@
+## [16.0.1](https://github.com/LogRock/pebbles/compare/v16.0.0...v16.0.1) (2023-09-07)
+
+### Bug Fixes
+
+- **react:** downgrade react to v17 ([a59c8d5](https://github.com/LogRock/pebbles/commit/a59c8d54e33e71efc1bf85c87448e8b1264a43e7))
+
+### Reverts
+
+- Revert "refactor(react): upgrade to v18" ([fea9cf1](https://github.com/LogRock/pebbles/commit/fea9cf196701aa518393f7c0f1e0b48605c98597))
+
 # [16.0.0](https://github.com/LogRock/pebbles/compare/v15.3.0...v16.0.0) (2023-09-07)
 
 ### Code Refactoring
