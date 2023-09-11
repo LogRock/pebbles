@@ -17,7 +17,7 @@ export default function SelectBottomSheet(props: MenuProps) {
   // they actually recommend ts-ignore in the docs
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const { filter, setFilter, label, onMenuClose, setMenuIsOpen } =
+  const { label, onMenuClose, setMenuIsOpen, inputValue, onInputChange } =
     props.selectProps;
 
   return (
@@ -26,7 +26,7 @@ export default function SelectBottomSheet(props: MenuProps) {
       onDismiss={() => {
         onMenuClose?.();
         setMenuIsOpen?.(false);
-        setFilter("");
+        onInputChange("", { action: "menu-close", prevInputValue: inputValue });
       }}
       snapPoints={({ maxHeight }) => [
         maxHeight * 0.5,
@@ -42,13 +42,13 @@ export default function SelectBottomSheet(props: MenuProps) {
             placeholder="Type Here"
             startIcon={<BsSearch />}
             spaceAfter="xxxbig"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Backspace") {
-                setFilter(filter.slice(0, -1));
-              }
-            }}
+            value={inputValue}
+            onChange={(e) =>
+              onInputChange(e.target.value, {
+                action: "input-change",
+                prevInputValue: inputValue,
+              })
+            }
           />
           <StyledText type="overlineLarge" color="neutral" shade="400">
             {label}
