@@ -1,3 +1,9 @@
+## [16.0.2](https://github.com/LogRock/pebbles/compare/v16.0.1...v16.0.2) (2023-09-11)
+
+### Bug Fixes
+
+- **select-bottomsheet:** sync bottom sheet value with react-select value ([3f8cf9a](https://github.com/LogRock/pebbles/commit/3f8cf9add1a0263663b8978189b6f10545240e0b))
+
 ## [16.0.1](https://github.com/LogRock/pebbles/compare/v16.0.0...v16.0.1) (2023-09-07)
 
 ### Bug Fixes
