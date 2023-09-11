@@ -99,7 +99,6 @@ function Select<
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
   // only used for bottom sheet mode
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
-  const [filterValue, setFilterValue] = React.useState("");
 
   const theme = useContext<ThemeType>(ThemeContext);
 
@@ -196,7 +195,7 @@ function Select<
 
       if (useBottomSheet) {
         components.Menu = SelectBottomSheet as any;
-        components.Option = SelectOption as any;
+        components.Option = props.components?.Option || (SelectOption as any);
       }
 
       return components;
@@ -219,14 +218,15 @@ function Select<
         theme={selectTheme}
         inputId={selectID}
         components={customComponents}
-        menuIsOpen={useBottomSheet ? menuIsOpen : undefined}
-        openMenuOnClick={useBottomSheet ? true : undefined}
-        onMenuOpen={() => setMenuIsOpen(true)}
+        menuIsOpen={useBottomSheet ? menuIsOpen : props.menuIsOpen}
+        openMenuOnClick={useBottomSheet ? true : props.openMenuOnClick}
+        onMenuOpen={() => {
+          setMenuIsOpen(true);
+          props.onMenuOpen?.();
+        }}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         maxMenuHeight={useBottomSheet ? "100%" : 200}
-        filter={filterValue}
-        setFilter={setFilterValue}
         label={label}
         setMenuIsOpen={setMenuIsOpen}
       />
