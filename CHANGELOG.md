@@ -1,3 +1,9 @@
+# [16.1.0](https://github.com/LogRock/pebbles/compare/v16.0.2...v16.1.0) (2023-09-12)
+
+### Features
+
+- **select-bottomsheet:** add bottom sheet footer and header prop ([c330fde](https://github.com/LogRock/pebbles/commit/c330fdee993331ab9a8f8a0c03cd2fadc8cf96f7))
+
 ## [16.0.2](https://github.com/LogRock/pebbles/compare/v16.0.1...v16.0.2) (2023-09-11)
 
 ### Bug Fixes
