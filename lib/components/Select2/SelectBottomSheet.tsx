@@ -20,6 +20,10 @@ export default function SelectBottomSheet(props: MenuProps) {
   const { label, onMenuClose, setMenuIsOpen, inputValue, onInputChange } =
     props.selectProps;
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { bottomSheetFooter, bottomSheetHeader } = props.selectProps;
+
   return (
     <BottomSheet
       open={true}
@@ -53,8 +57,10 @@ export default function SelectBottomSheet(props: MenuProps) {
           <StyledText type="overlineLarge" color="neutral" shade="400">
             {label}
           </StyledText>
+          {bottomSheetHeader}
         </>
       }
+      footer={bottomSheetFooter}
     >
       {props.children}
     </BottomSheet>
