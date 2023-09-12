@@ -143,3 +143,10 @@ AllInOne.args = {
   label: "Turn everything ON at once!",
   helper: "For all available options, see the react-select docs",
 };
+
+export const BottomSheetWithHeaderAndFooter = Template.bind({});
+BottomSheetWithHeaderAndFooter.args = {
+  useBottomSheet: true,
+  bottomSheetHeader: <p>Header</p>,
+  bottomSheetFooter: <p>Footer</p>,
+};

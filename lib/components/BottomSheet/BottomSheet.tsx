@@ -35,6 +35,13 @@ const StyledRSBS = styled(RSBS)`
       background-color: ${({ theme }) => theme.colors.neutral[400]};
     }
   }
+
+  [data-rsbs-footer] {
+    padding: ${({ theme }) =>
+      `${theme.spacings.xxxbig} ${theme.spacings.md} ${theme.spacings.xxsm}`};
+
+    box-shadow: none !important;
+  }
 `;
 
 export default function BottomSheet(props: ComponentProps<typeof RSBS>) {

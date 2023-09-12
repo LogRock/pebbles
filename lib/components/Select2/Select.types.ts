@@ -9,4 +9,6 @@ export interface CustomSelectProps {
   destructive?: boolean;
   required?: boolean;
   useBottomSheet?: boolean;
+  bottomSheetFooter?: React.ReactNode;
+  bottomSheetHeader?: React.ReactNode;
 }

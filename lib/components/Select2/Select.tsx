@@ -95,6 +95,8 @@ function Select<
   destructive,
   spaceAfter,
   useBottomSheet,
+  bottomSheetFooter,
+  bottomSheetHeader,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
   // only used for bottom sheet mode
@@ -229,6 +231,8 @@ function Select<
         maxMenuHeight={useBottomSheet ? "100%" : 200}
         label={label}
         setMenuIsOpen={setMenuIsOpen}
+        bottomSheetHeader={bottomSheetHeader}
+        bottomSheetFooter={bottomSheetFooter}
       />
       {helper && (
         <HelperDiv>
