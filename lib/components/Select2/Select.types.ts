@@ -11,4 +11,5 @@ export interface CustomSelectProps {
   useBottomSheet?: boolean;
   bottomSheetFooter?: React.ReactNode;
   bottomSheetHeader?: React.ReactNode;
+  bottomSheetPlaceholder?: string;
 }

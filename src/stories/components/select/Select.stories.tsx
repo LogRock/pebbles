@@ -149,4 +149,5 @@ BottomSheetWithHeaderAndFooter.args = {
   useBottomSheet: true,
   bottomSheetHeader: <p>Header</p>,
   bottomSheetFooter: <p>Footer</p>,
+  bottomSheetPlaceholder: "bottomSheetPlaceholder",
 };

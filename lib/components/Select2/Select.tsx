@@ -97,6 +97,7 @@ function Select<
   useBottomSheet,
   bottomSheetFooter,
   bottomSheetHeader,
+  bottomSheetPlaceholder,
   ...props
 }: Props<Option, IsMulti, Group> & CustomSelectProps) {
   // only used for bottom sheet mode
@@ -226,6 +227,13 @@ function Select<
           setMenuIsOpen(true);
           props.onMenuOpen?.();
         }}
+        onFocus={(e) => {
+          props.onFocus?.(e);
+
+          if (useBottomSheet) {
+            e.currentTarget.blur();
+          }
+        }}
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         maxMenuHeight={useBottomSheet ? "100%" : 200}
@@ -233,6 +241,7 @@ function Select<
         setMenuIsOpen={setMenuIsOpen}
         bottomSheetHeader={bottomSheetHeader}
         bottomSheetFooter={bottomSheetFooter}
+        bottomSheetPlaceholder={bottomSheetPlaceholder}
       />
       {helper && (
         <HelperDiv>
