@@ -22,7 +22,8 @@ export default function SelectBottomSheet(props: MenuProps) {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const { bottomSheetFooter, bottomSheetHeader } = props.selectProps;
+  const { bottomSheetFooter, bottomSheetHeader, bottomSheetPlaceholder } =
+    props.selectProps;
 
   return (
     <BottomSheet
@@ -38,12 +39,13 @@ export default function SelectBottomSheet(props: MenuProps) {
         maxHeight * 0.9,
         maxHeight,
       ]}
-      defaultSnap={({ maxHeight }) => maxHeight * 0.7}
+      defaultSnap={({ maxHeight }) => maxHeight * 0.9}
+      initialFocusRef={false}
       header={
         <>
           <InputBox
             type="text"
-            placeholder="Type Here"
+            placeholder={bottomSheetPlaceholder || "Type Here"}
             startIcon={<BsSearch />}
             spaceAfter="xxxbig"
             value={inputValue}
@@ -54,9 +56,11 @@ export default function SelectBottomSheet(props: MenuProps) {
               })
             }
           />
-          <StyledText type="overlineLarge" color="neutral" shade="400">
-            {label}
-          </StyledText>
+          {label && (
+            <StyledText type="overlineLarge" color="neutral" shade="400">
+              {label}
+            </StyledText>
+          )}
           {bottomSheetHeader}
         </>
       }
