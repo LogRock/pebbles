@@ -1,3 +1,9 @@
+## [16.2.1](https://github.com/LogRock/pebbles/compare/v16.2.0...v16.2.1) (2023-09-19)
+
+### Bug Fixes
+
+- remove flex grow from bottom sheet scroll ([f5ff39f](https://github.com/LogRock/pebbles/commit/f5ff39f183ac7410c741bb157e875625c370f9f2))
+
 # [16.2.0](https://github.com/LogRock/pebbles/compare/v16.1.0...v16.2.0) (2023-09-19)
 
 ### Features
