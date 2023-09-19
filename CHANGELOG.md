@@ -1,3 +1,9 @@
+# [16.2.0](https://github.com/LogRock/pebbles/compare/v16.1.0...v16.2.0) (2023-09-19)
+
+### Features
+
+- update bottom sheet behavior ([8699a37](https://github.com/LogRock/pebbles/commit/8699a37804e73941dacc17e75920eba9d27b837c))
+
 # [16.1.0](https://github.com/LogRock/pebbles/compare/v16.0.2...v16.1.0) (2023-09-12)
 
 ### Features
