@@ -42,6 +42,10 @@ const StyledRSBS = styled(RSBS)`
 
     box-shadow: none !important;
   }
+
+  [data-rsbs-scroll] {
+    flex-grow: 0;
+  }
 `;
 
 export default function BottomSheet(props: ComponentProps<typeof RSBS>) {
