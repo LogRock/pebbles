@@ -14,24 +14,28 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
-          cache: "yarn"
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
       - name: Install Deps
-        run: yarn install
+        run: pnpm install
 
       - name: ESLint
-        run: yarn eslint .
+        run: pnpm eslint .
 
       - name: Prettier
-        run: yarn prettier .
+        run: pnpm prettier .
 
       - name: Test
-        run: yarn coverage
-
+        run: pnpm coverage
 
       - name: Build Lib
-        run: yarn build
+        run: pnpm build
 
       - name: Build Storybook
-        run: yarn build-storybook
+        run: pnpm build-storybook
