@@ -19,7 +19,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "NODE_OPTIONS=\"--openssl-legacy-provider\" build-storybook",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",

@@ -6,7 +6,7 @@ Welcome to our Component Library! This is an implementation of our Asphalt Desig
 
 Here are some useful links:
 
-[Documentation/Storybook](https://logrock-pebbles.netlify.app/)
+[Documentation/Storybook](https://logrock-pebbles.vercel.app/)
 
 [NPMJS registry](https://www.npmjs.com/package/@logrock/pebbles)
 
