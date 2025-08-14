@@ -1,6 +1,6 @@
 import React from "react";
 import NotificationDot from "../../../../lib/components/NotificationDot";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 import { STATUS_TAG_VARIANTS } from "../../../../lib/main";
 
 export default {

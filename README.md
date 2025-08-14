@@ -18,17 +18,17 @@ This library is meant to be used in React projects. To use it, you will have to 
 
 ```bash
 # styled components
-yarn add styled-components
-yarn add styled-breakpoints
-yarn add react-select # if you intend on using the Select component
-yarn add react-spring-bottom-sheet # if you intend on using the BottomSheet component
-yarn add date-fns # if you intend on using the DateInput component
+pnpm add styled-components
+pnpm add styled-breakpoints
+pnpm add react-select # if you intend on using the Select component
+pnpm add react-spring-bottom-sheet # if you intend on using the BottomSheet component
+pnpm add date-fns # if you intend on using the DateInput component
 
 # fonts
-yarn add @fontsource/archivo
+pnpm add @fontsource/archivo
 
 # icons
-yarn add react-icons
+pnpm add react-icons
 ```
 
 Make the Archivo font available in your project by importing it
@@ -54,7 +54,7 @@ import "react-spring-bottom-sheet/dist/style.css";
 Install this lib:
 
 ```bash
-yarn add @logrock/pebbles
+pnpm add @logrock/pebbles
 ```
 
 Now, wrap your app (or whatever components you plan on using this library at) with a styled-components' `ThemeProvider`, passing along a theme.

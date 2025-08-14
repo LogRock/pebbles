@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
@@ -7,10 +6,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import typescript from "@rollup/plugin-typescript";
 
-const path = require("path");
-
-const resolvePath = (str: string) => path.resolve(__dirname, str);
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -18,14 +13,14 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: path.resolve(__dirname, "lib/test/setup.ts"),
+    setupFiles: "./lib/test/setup.ts",
     coverage: {
       reporter: ["text", "lcov"],
     },
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "lib/main.ts"),
+      entry: "./lib/main.ts",
       name: "@logrock/pebbles",
       fileName: (format) => `logrock-pebbles.${format}.js`,
     },
@@ -51,12 +46,12 @@ export default defineConfig({
       plugins: [
         typescript({
           target: "es2020",
-          rootDir: resolvePath("lib"),
+          rootDir: "./lib",
           declaration: true,
-          declarationDir: resolvePath("dist"),
-          exclude: resolvePath("node_modules/**"),
+          declarationDir: "./dist",
+          exclude: "./node_modules/**",
           allowSyntheticDefaultImports: true,
-          tsconfig: resolvePath("tsconfig.json"),
+          tsconfig: "./tsconfig.json",
         }),
       ],
     },

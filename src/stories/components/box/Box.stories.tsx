@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react-vite";
 import React from "react";
 
 import Box, { BoxProps } from "../../../../lib/components/Box";

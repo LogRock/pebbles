@@ -28,7 +28,7 @@ We have some automated checks/code quality tools in place to help you write code
 - We use an automated [semantic-release](https://github.com/semantic-release/semantic-release) setup, therefore we must keep our commit messages in the same format.
   - You can se whatever conventional-commits setup you want (like commitizen or VSCode addons).
   - Feel free to add gitmojis as well.
-  - For your convenience, we have a commitizen script setup, you can run it with `yarn cz` once you are ready to commit (and your files are all staged).
+  - For your convenience, we have a commitizen script setup, you can run it with `pnpm cz` once you are ready to commit (and your files are all staged).
 
 That's about it. It sounds like a lot, but most of these tools run automatically and you can just write your code in your prefferred manner and they will mostly make it compliant for you, and if not, let you know what you need to change.
 

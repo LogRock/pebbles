@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react-vite";
 import React from "react";
 
 import Divider, { DividerProps } from "../../../../lib/components/Divider";

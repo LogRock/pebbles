@@ -1,7 +1,9 @@
-import React, { ComponentProps } from "react";
+import React from "react";
 import styled from "styled-components";
 import { BottomSheet as RSBS } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
+
+import type { StyledComponentProps } from "styled-components";
 
 const StyledRSBS = styled(RSBS)`
   :root {
@@ -48,6 +50,9 @@ const StyledRSBS = styled(RSBS)`
   }
 `;
 
-export default function BottomSheet(props: ComponentProps<typeof RSBS>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type BottomSheetProps = StyledComponentProps<typeof RSBS, any, object, never>;
+
+export default function BottomSheet(props: BottomSheetProps) {
   return <StyledRSBS {...props} />;
 }

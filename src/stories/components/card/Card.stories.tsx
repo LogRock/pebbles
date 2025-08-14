@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import Card from "../../../../lib/components/Card";
-import { ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react-vite";
 import { CardProps } from "../../../../lib/components/Card/Card";
 
 export default {

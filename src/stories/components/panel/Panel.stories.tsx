@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 import { Select2 } from "../../../../lib/main";
 import Panel, { PanelsItems } from "../../../../lib/components/Panel";
 import { BsAlarm, BsArrowBarUp } from "react-icons/bs";

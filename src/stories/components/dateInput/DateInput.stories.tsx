@@ -1,6 +1,6 @@
 import React from "react";
 import DateInput from "../../../../lib/components/DateInput/DateInput";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 import { BsAlarm } from "react-icons/bs";
 
 export default {
