@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import Divider, { DividerProps } from "../../../../lib/components/Divider";
+import Divider from "../../../../lib/components/Divider";
 import {
   colorOptions,
   shadeOptions,

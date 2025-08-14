@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import Box, { BoxProps } from "../../../../lib/components/Box";
+import Box from "../../../../lib/components/Box";
 import {
   colorOptions,
   shadeOptions,

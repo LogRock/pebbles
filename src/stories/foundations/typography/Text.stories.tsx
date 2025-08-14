@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
-import { Text, TextProps } from "../../../../lib/components/Typography";
+import { Text } from "../../../../lib/components/Typography";
 import {
   colorOptions,
   shadeOptions,
@@ -69,6 +69,7 @@ export const Default: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -88,6 +89,7 @@ export const OverlineLarge: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -107,6 +109,7 @@ export const OverlineMedium: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -126,6 +129,7 @@ export const OverlineXSmall: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -145,6 +149,7 @@ export const ParagraphLarge: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -164,6 +169,7 @@ export const ParagraphMedium: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -183,6 +189,7 @@ export const ParagraphSmall: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
@@ -202,6 +209,7 @@ export const ParagraphXSmall: Story = {
     weight: "normal",
     as: "p",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
