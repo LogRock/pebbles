@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import CheckBox from "../../../../lib/components/CheckBox";
 import { ParagraphMedium } from "../../../../lib/components/Typography/Typography.styled";
@@ -18,9 +18,7 @@ export const Default: Story = {
   args: {
     children: "This goes as children, render anything you want",
   },
-  render: (args) => (
-    <CheckBox {...args}>{args.children}</CheckBox>
-  ),
+  render: (args) => <CheckBox {...args}>{args.children}</CheckBox>,
 };
 
 export const Disabled: Story = {
@@ -28,9 +26,7 @@ export const Disabled: Story = {
     disabled: true,
     children: "This checkbox is disabled",
   },
-  render: (args) => (
-    <CheckBox {...args}>{args.children}</CheckBox>
-  ),
+  render: (args) => <CheckBox {...args}>{args.children}</CheckBox>,
 };
 
 export const Controlled: Story = {
@@ -42,9 +38,7 @@ export const Controlled: Story = {
       </a>
     ),
   },
-  render: (args) => (
-    <CheckBox {...args}>{args.children}</CheckBox>
-  ),
+  render: (args) => <CheckBox {...args}>{args.children}</CheckBox>,
 };
 
 export const MultipleChildren: Story = {
@@ -63,9 +57,7 @@ export const MultipleChildren: Story = {
       </div>
     ),
   },
-  render: (args) => (
-    <CheckBox {...args}>{args.children}</CheckBox>
-  ),
+  render: (args) => <CheckBox {...args}>{args.children}</CheckBox>,
 };
 
 export const Spaced: Story = {

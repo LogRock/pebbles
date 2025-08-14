@@ -1,6 +1,6 @@
 import React from "react";
 import NotificationDot from "../../../../lib/components/NotificationDot";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { STATUS_TAG_VARIANTS } from "../../../../lib/main";
 
 const meta = {
@@ -19,9 +19,7 @@ export const Default: Story = {
   args: {
     children: "WAIT, THIS IS NEUTRAL ALT!",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const Destructive: Story = {
@@ -29,9 +27,7 @@ export const Destructive: Story = {
     variant: STATUS_TAG_VARIANTS.DESTRUCTIVE,
     children: "X",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const DestructiveAlt: Story = {
@@ -39,9 +35,7 @@ export const DestructiveAlt: Story = {
     variant: STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT,
     children: "0",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const Success: Story = {
@@ -49,9 +43,7 @@ export const Success: Story = {
     variant: STATUS_TAG_VARIANTS.SUCCESS,
     children: "9",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const SuccessAlt: Story = {
@@ -59,9 +51,7 @@ export const SuccessAlt: Story = {
     variant: STATUS_TAG_VARIANTS.SUCCESS_ALT,
     children: "OK",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const Warning: Story = {
@@ -69,9 +59,7 @@ export const Warning: Story = {
     variant: STATUS_TAG_VARIANTS.WARNING,
     children: "NOK",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const WarningAlt: Story = {
@@ -79,9 +67,7 @@ export const WarningAlt: Story = {
     variant: STATUS_TAG_VARIANTS.WARNING_ALT,
     children: "WAIT...",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };
 
 export const Neutral: Story = {
@@ -89,7 +75,5 @@ export const Neutral: Story = {
     variant: STATUS_TAG_VARIANTS.NEUTRAL_ALT,
     children: "NICE",
   },
-  render: (args) => (
-    <NotificationDot {...args} />
-  ),
+  render: (args) => <NotificationDot {...args} />,
 };

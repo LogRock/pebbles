@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`InputBox > get InputBox by label text 1`] = `
 <div>
@@ -236,11 +236,6 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
                 value="BF"
               >
                 Burkina Faso
-              </option>
-              <option
-                value="MM"
-              >
-                Burma
               </option>
               <option
                 value="BI"
@@ -801,6 +796,11 @@ exports[`InputBox > get Phone InputBox by label text 1`] = `
                 value="MZ"
               >
                 Mozambique
+              </option>
+              <option
+                value="MM"
+              >
+                Myanmar
               </option>
               <option
                 value="NA"
@@ -1369,7 +1369,8 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"
+            d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -1395,7 +1396,8 @@ exports[`InputBox > renders Number InputBox properly 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"
+            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+            fill-rule="evenodd"
           />
         </svg>
       </button>
@@ -1609,11 +1611,6 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
               value="BF"
             >
               Burkina Faso
-            </option>
-            <option
-              value="MM"
-            >
-              Burma
             </option>
             <option
               value="BI"
@@ -2174,6 +2171,11 @@ exports[`InputBox > renders Phone InputBox properly 1`] = `
               value="MZ"
             >
               Mozambique
+            </option>
+            <option
+              value="MM"
+            >
+              Myanmar
             </option>
             <option
               value="NA"

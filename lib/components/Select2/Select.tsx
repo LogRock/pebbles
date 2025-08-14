@@ -191,7 +191,7 @@ function Select<
 
   const customComponents: SelectComponentsConfig<Option, IsMulti, Group> =
     useMemo(() => {
-      const components = { ...props.components } || {};
+      const components = { ...props.components };
 
       components.ValueContainer = CustomValueContainer as any;
       components.DropdownIndicator = CustomChevronIndicator as any;

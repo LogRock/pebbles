@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../../../lib/components/Card";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
   title: "components/Card",
@@ -18,9 +18,7 @@ export const Default: Story = {
     children: "Some content",
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  render: (args: any) => (
-    <Card {...args} />
-  ),
+  render: (args: any) => <Card {...args} />,
 };
 
 export const HugePadding: Story = {
@@ -29,9 +27,7 @@ export const HugePadding: Story = {
     children: "Some content",
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  render: (args: any) => (
-    <Card {...args} />
-  ),
+  render: (args: any) => <Card {...args} />,
 };
 
 export const UpXXLargeShadow: Story = {
@@ -40,9 +36,7 @@ export const UpXXLargeShadow: Story = {
     shadow: "upXxLarge",
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  render: (args: any) => (
-    <Card {...args} />
-  ),
+  render: (args: any) => <Card {...args} />,
 };
 
 export const LgRadius: Story = {
@@ -61,9 +55,7 @@ export const LgRadius: Story = {
     radius: "lg",
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  render: (args: any) => (
-    <Card {...args} />
-  ),
+  render: (args: any) => <Card {...args} />,
 };
 
 export const Image: Story = {
@@ -71,7 +63,5 @@ export const Image: Story = {
     children: <img src="https://placekitten.com/200/200" />,
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  render: (args: any) => (
-    <Card {...args} />
-  ),
+  render: (args: any) => <Card {...args} />,
 };

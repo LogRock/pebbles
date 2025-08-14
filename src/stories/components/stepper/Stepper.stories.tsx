@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 
 import styled from "styled-components";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import Stepper from "../../../../lib/components/Stepper";
 import StepperStep from "../../../../lib/components/Stepper/StepperStep";
@@ -38,10 +38,18 @@ export const Default: Story = {
     showHoverEffect: true,
     children: (
       <>
-        <StepperStep stepIndex={1} completed onStepClick={() => handleOnClick(1)}>
+        <StepperStep
+          stepIndex={1}
+          completed
+          onStepClick={() => handleOnClick(1)}
+        >
           <NoMarginText>Personal</NoMarginText>
         </StepperStep>
-        <StepperStep stepIndex={2} completed onStepClick={() => handleOnClick(2)}>
+        <StepperStep
+          stepIndex={2}
+          completed
+          onStepClick={() => handleOnClick(2)}
+        >
           <NoMarginText>Company</NoMarginText>
         </StepperStep>
         <StepperStep stepIndex={3} current onStepClick={() => handleOnClick(3)}>
@@ -53,9 +61,7 @@ export const Default: Story = {
       </>
     ),
   },
-  render: (args) => (
-    <Stepper {...args}></Stepper>
-  ),
+  render: (args) => <Stepper {...args}></Stepper>,
 };
 
 export const InformativeOnly: Story = {
@@ -76,14 +82,14 @@ export const InformativeOnly: Story = {
           <NoMarginText>Documents</NoMarginText>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
-            consequatur ab quas aperiam, eos modi voluptas sit autem tenetur ipsa
-            ex reprehenderit illum voluptates iste, dolorum explicabo. Quaerat,
-            laborum ab? Quos autem suscipit libero commodi reiciendis quam minima,
-            molestias rerum nisi officiis itaque. Debitis expedita qui, velit
-            dolorum quidem tempora aperiam et distinctio perferendis reiciendis
-            hic! Reiciendis nostrum ullam incidunt vel unde at quod assumenda ea
-            modi eos vero labore explicabo debitis iusto ex, temporibus illo
-            repellat sequi. Facere, atque!
+            consequatur ab quas aperiam, eos modi voluptas sit autem tenetur
+            ipsa ex reprehenderit illum voluptates iste, dolorum explicabo.
+            Quaerat, laborum ab? Quos autem suscipit libero commodi reiciendis
+            quam minima, molestias rerum nisi officiis itaque. Debitis expedita
+            qui, velit dolorum quidem tempora aperiam et distinctio perferendis
+            reiciendis hic! Reiciendis nostrum ullam incidunt vel unde at quod
+            assumenda ea modi eos vero labore explicabo debitis iusto ex,
+            temporibus illo repellat sequi. Facere, atque!
           </p>
         </StepperStep>
         <StepperStep stepIndex="05" last icon={<BsOctagon />}>
@@ -112,16 +118,14 @@ export const InformativeOnly: Story = {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
               voluptatem delectus at dolorem, modi harum, omnis ea atque saepe
-              architecto aperiam! Magnam obcaecati ipsa eveniet at deleniti labore
-              non minus suscipit iure placeat cupiditate quas, vero facilis
-              commodi accusamus nemo.
+              architecto aperiam! Magnam obcaecati ipsa eveniet at deleniti
+              labore non minus suscipit iure placeat cupiditate quas, vero
+              facilis commodi accusamus nemo.
             </p>
           </div>
         </StepperStep>
       </>
     ),
   },
-  render: (args) => (
-    <Stepper {...args}></Stepper>
-  ),
+  render: (args) => <Stepper {...args}></Stepper>,
 };

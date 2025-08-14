@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import CheckBoxOption from "../../../../lib/components/Select2/options/CheckBoxOption";
 import RadioButtonOption from "../../../../lib/components/Select2/options/RadioButtonOption";
 
@@ -47,9 +47,7 @@ export const WithCheckBoxes: Story = {
       Option: CheckBoxOption,
     },
   },
-  render: (args) => (
-    <Select {...args} options={autoCompleteItems} />
-  ),
+  render: (args) => <Select {...args} options={autoCompleteItems} />,
 };
 
 export const WithRadioButtons: Story = {
@@ -64,7 +62,5 @@ export const WithRadioButtons: Story = {
       Option: RadioButtonOption,
     },
   },
-  render: (args) => (
-    <Select {...args} options={autoCompleteItems} />
-  ),
+  render: (args) => <Select {...args} options={autoCompleteItems} />,
 };

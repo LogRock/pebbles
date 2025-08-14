@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 
-import StatusTag from "../../../../lib/components/StatusTag";
+import StatusTag, {
+  STATUS_TAG_VARIANTS,
+} from "../../../../lib/components/StatusTag";
 
 const meta = {
   title: "Components/StatusTag/Medium",
@@ -43,7 +45,7 @@ const Template = (args: any) => (
 
 export const Destructive: Story = {
   args: {
-    variant: "DESTRUCTIVE",
+    variant: STATUS_TAG_VARIANTS.DESTRUCTIVE,
     children: "DESTRUCTIVE",
   },
   render: Template,
@@ -51,7 +53,7 @@ export const Destructive: Story = {
 
 export const DestructiveAlt: Story = {
   args: {
-    variant: "DESTRUCTIVE_ALT",
+    variant: STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT,
     children: "DESTRUCTIVE_ALT",
   },
   render: Template,
@@ -59,7 +61,7 @@ export const DestructiveAlt: Story = {
 
 export const Secondary: Story = {
   args: {
-    variant: "SECONDARY",
+    variant: STATUS_TAG_VARIANTS.SECONDARY,
     children: "SECONDARY",
   },
   render: Template,
@@ -67,7 +69,7 @@ export const Secondary: Story = {
 
 export const SecondaryAlt: Story = {
   args: {
-    variant: "SECONDARY_ALT",
+    variant: STATUS_TAG_VARIANTS.SECONDARY_ALT,
     children: "SECONDARY_ALT",
   },
   render: Template,
@@ -75,7 +77,7 @@ export const SecondaryAlt: Story = {
 
 export const Warning: Story = {
   args: {
-    variant: "WARNING",
+    variant: STATUS_TAG_VARIANTS.WARNING,
     children: "WARNING",
   },
   render: Template,
@@ -83,7 +85,7 @@ export const Warning: Story = {
 
 export const WarningAlt: Story = {
   args: {
-    variant: "WARNING_ALT",
+    variant: STATUS_TAG_VARIANTS.WARNING_ALT,
     children: "WARNING_ALT",
   },
   render: Template,
@@ -91,7 +93,7 @@ export const WarningAlt: Story = {
 
 export const Neutral: Story = {
   args: {
-    variant: "NEUTRAL",
+    variant: STATUS_TAG_VARIANTS.NEUTRAL,
     children: "NEUTRAL",
   },
   render: Template,
@@ -99,7 +101,7 @@ export const Neutral: Story = {
 
 export const NeutralAlt: Story = {
   args: {
-    variant: "NEUTRAL_ALT",
+    variant: STATUS_TAG_VARIANTS.NEUTRAL_ALT,
     children: "NEUTRAL_ALT",
   },
   render: Template,
@@ -107,7 +109,7 @@ export const NeutralAlt: Story = {
 
 export const Success: Story = {
   args: {
-    variant: "SUCCESS",
+    variant: STATUS_TAG_VARIANTS.SUCCESS,
     children: "SUCCESS",
   },
   render: Template,
@@ -115,7 +117,7 @@ export const Success: Story = {
 
 export const SuccessAlt: Story = {
   args: {
-    variant: "SUCCESS_ALT",
+    variant: STATUS_TAG_VARIANTS.SUCCESS_ALT,
     children: "SUCCESS_ALT",
   },
   render: Template,

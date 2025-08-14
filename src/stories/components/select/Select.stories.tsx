@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import styled from "styled-components";
 
 const autoCompleteItems = [
@@ -122,7 +122,8 @@ export const WithLabel: Story = {
 
 export const WithHelper: Story = {
   args: {
-    helper: "Some helper, Notice the dropdown now has some margin-top around me",
+    helper:
+      "Some helper, Notice the dropdown now has some margin-top around me",
   },
   render: (args) => (
     <DivStyled>

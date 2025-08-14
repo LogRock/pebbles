@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import Toggle from "../../../../lib/components/Toggle";
 import { ParagraphMedium } from "../../../../lib/components/Typography/Typography.styled";
@@ -29,7 +29,7 @@ const Template = (args: any) => <Toggle {...args}>{args.label}</Toggle>;
 
 export const Default: Story = {
   args: {
-    label: "This goes as children, render anything you want",
+    children: "This goes as children, render anything you want",
   },
   render: Template,
 };
@@ -37,7 +37,7 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    label: "This is currently disabled. Come back later",
+    children: "This is currently disabled. Come back later",
   },
   render: Template,
 };
@@ -99,14 +99,14 @@ export const MultipleChildrenDoneWrong: Story = {
 export const Spaced: Story = {
   args: {
     spaced: true,
-    label: "These have some extra head space",
+    children: "These have some extra head space",
   },
   render: (args) => (
     <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-      <Toggle {...args}>{args.label}</Toggle>
-      <Toggle {...args}>{args.label}</Toggle>
-      <Toggle {...args}>{args.label}</Toggle>
-      <Toggle {...args}>{args.label}</Toggle>
+      <Toggle {...args}>{args.children}</Toggle>
+      <Toggle {...args}>{args.children}</Toggle>
+      <Toggle {...args}>{args.children}</Toggle>
+      <Toggle {...args}>{args.children}</Toggle>
     </div>
   ),
 };
