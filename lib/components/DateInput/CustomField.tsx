@@ -81,5 +81,14 @@ export function CustomDateField(props: CustomDateFieldProps) {
     inputRef: externalInputRef,
   });
 
-  return <CustomField {...response} />;
+  return (
+    <CustomField
+      {...response}
+      placeholder={
+        typeof response.placeholder === "string"
+          ? response.placeholder
+          : undefined
+      }
+    />
+  );
 }

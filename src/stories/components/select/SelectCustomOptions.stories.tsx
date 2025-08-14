@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 import CheckBoxOption from "../../../../lib/components/Select2/options/CheckBoxOption";
 import RadioButtonOption from "../../../../lib/components/Select2/options/RadioButtonOption";
 

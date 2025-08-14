@@ -1,6 +1,6 @@
 import React from "react";
 import SelectAsync from "../../../../lib/components/SelectAsync";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 
 const loadOptionsAsync = (inputValue: string) =>
   new Promise<{ value: string; label: string }[]>((resolve) => {

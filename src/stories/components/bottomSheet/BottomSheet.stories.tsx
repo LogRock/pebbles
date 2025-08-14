@@ -1,5 +1,5 @@
 import React, { ComponentProps } from "react";
-import { ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react-vite";
 
 import BottomSheet from "../../../../lib/components/BottomSheet/BottomSheet";
 

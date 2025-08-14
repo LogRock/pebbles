@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 import styled from "styled-components";
 
 const autoCompleteItems = [
@@ -48,6 +48,7 @@ const DivStyled = styled.div`
   /* CUSTOM SCROLL BAR */
   & ::-webkit-scrollbar {
     width: 18px;
+
     background-color: transparent;
   }
 
@@ -57,8 +58,9 @@ const DivStyled = styled.div`
 
   & ::-webkit-scrollbar-thumb {
     border: 4px solid transparent;
-    background-clip: content-box;
     border-radius: 100px;
+
+    background-clip: content-box;
     background-color: transparent;
   }
 

@@ -96,7 +96,9 @@ const BaseInputBox: FC<BaseInputBoxProps> = ({
             destructive={destructive}
             mask={inputProps.mask}
             id={inputID}
-          />
+          >
+            {undefined}
+          </StyledMaskInput>
         )}
         {inputProps?.children && inputProps?.children}
 

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react-vite";
 import React from "react";
 import CheckBox from "../../../../lib/components/CheckBox";
 import { ParagraphMedium } from "../../../../lib/components/Typography/Typography.styled";

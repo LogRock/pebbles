@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 
 import styled from "styled-components";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
 
 import Stepper from "../../../../lib/components/Stepper";
 import StepperStep from "../../../../lib/components/Stepper/StepperStep";

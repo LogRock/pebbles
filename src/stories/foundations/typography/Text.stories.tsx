@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react-vite";
 import React, { PropsWithChildren } from "react";
 
 import { Text, TextProps } from "../../../../lib/components/Typography";
