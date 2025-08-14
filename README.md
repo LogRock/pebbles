@@ -1,3 +1,7 @@
+# This Library is NO LONGER MAINTAINED. 
+
+Use something else. Thanks for your interest.
+
 # @LogRock/Pebbles
 
 [![Coverage Status](https://coveralls.io/repos/github/LogRock/pebbles/badge.svg?branch=main)](https://coveralls.io/github/LogRock/pebbles?branch=main)
