@@ -1,3 +1,4 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 import { BsExclamationDiamond } from "react-icons/bs";
@@ -7,19 +8,24 @@ import TabLinks from "../../../../lib/components/TabView/TabLinks";
 import TabLink from "../../../../lib/components/TabView/TabLink";
 import TabContent from "../../../../lib/components/TabView/TabContent";
 
-export default {
+const meta = {
   title: "Components/TabView",
   component: TabView,
-};
+  parameters: {
+    layout: "centered",
+  },
+} as Meta<typeof TabView>;
 
-const Template = (args) => <TabView {...args}></TabView>;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const FirstTabActive = Template.bind({});
-FirstTabActive.args = {
-  bgColor: "fafafa",
-  borderRadius: 16,
-  children: (
-    <>
+export const FirstTabActive: Story = {
+  args: {
+    bgColor: "fafafa",
+    borderRadius: 16,
+  },
+  render: (args) => (
+    <TabView {...args}>
       <TabLinks>
         <TabLink href="" active>
           Tab 1 <br />
@@ -36,6 +42,6 @@ FirstTabActive.args = {
       <TabContent>
         <h4>Tab Content here</h4>
       </TabContent>
-    </>
+    </TabView>
   ),
 };
