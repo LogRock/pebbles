@@ -1,6 +1,6 @@
 import React from "react";
 import SelectAsync from "../../../../lib/components/SelectAsync";
-import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 
 const loadOptionsAsync = (inputValue: string) =>
   new Promise<{ value: string; label: string }[]>((resolve) => {
@@ -28,65 +28,103 @@ const loadOptionsAsync = (inputValue: string) =>
     }, 2000);
   });
 
-export default {
+const meta = {
   title: "Components/Select/Async",
   component: SelectAsync,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: { onChange: { action: "changed" } },
-} as ComponentMeta<typeof SelectAsync>;
+} as Meta<typeof SelectAsync>;
 
-const Template: ComponentStory<typeof SelectAsync> = (args) => (
-  <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const Destructive = Template.bind({});
-Destructive.args = {
-  destructive: true,
-  helper: "I am a destructive select",
-  label: "Destructive select",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const Required = Template.bind({});
-Required.args = {
-  required: true,
-  label: "Required select",
+export const Destructive: Story = {
+  args: {
+    destructive: true,
+    helper: "I am a destructive select",
+    label: "Destructive select",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: "Some label",
+export const Required: Story = {
+  args: {
+    required: true,
+    label: "Required select",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const WithHelper = Template.bind({});
-WithHelper.args = {
-  helper: "Some helper, Notice the dropdown now has some margin-top around me",
+export const WithLabel: Story = {
+  args: {
+    label: "Some label",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const Clearable = Template.bind({});
-Clearable.args = {
-  isClearable: true,
-  label: "Select something and you can then erase it",
+export const WithHelper: Story = {
+  args: {
+    helper: "Some helper, Notice the dropdown now has some margin-top around me",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const Searchable = Template.bind({});
-Searchable.args = {
-  isSearchable: true,
-  label: "Type something",
+export const Clearable: Story = {
+  args: {
+    isClearable: true,
+    label: "Select something and you can then erase it",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const Multi = Template.bind({});
-Multi.args = {
-  isMulti: true,
-  label: "Select many",
+export const Searchable: Story = {
+  args: {
+    isSearchable: true,
+    label: "Type something",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };
 
-export const AllInOne = Template.bind({});
-AllInOne.args = {
-  isClearable: true,
-  isMulti: true,
-  isSearchable: true,
-  label: "Turn everything ON at once!",
-  helper: "For all available options, see the react-select docs",
+export const Multi: Story = {
+  args: {
+    isMulti: true,
+    label: "Select many",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
+};
+
+export const AllInOne: Story = {
+  args: {
+    isClearable: true,
+    isMulti: true,
+    isSearchable: true,
+    label: "Turn everything ON at once!",
+    helper: "For all available options, see the react-select docs",
+  },
+  render: (args) => (
+    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
+  ),
 };

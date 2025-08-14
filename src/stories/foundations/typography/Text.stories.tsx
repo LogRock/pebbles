@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import React, { PropsWithChildren } from "react";
 
 import { Text, TextProps } from "../../../../lib/components/Typography";
@@ -8,9 +8,12 @@ import {
   weightOptions,
 } from "../../../constants/options";
 
-export default {
+const meta = {
   title: "Foundations/Typography/Text",
   component: Text,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     color: {
       options: colorOptions,
@@ -51,100 +54,159 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Text>;
+} as Meta<typeof Text>;
 
-const Template: Story<PropsWithChildren<TextProps>> = (args) => (
-  <>
-    {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
-    {args.as}&gt;
-    <Text {...args} />
-  </>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "paragraphMedium",
-  weight: "normal",
-  as: "p",
+export const Default: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "paragraphMedium",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const OverlineLarge = Template.bind({});
-OverlineLarge.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "overlineLarge",
-  weight: "normal",
-  as: "p",
+export const OverlineLarge: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "overlineLarge",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const OverlineMedium = Template.bind({});
-OverlineMedium.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "overlineMedium",
-  weight: "normal",
-  as: "p",
+export const OverlineMedium: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "overlineMedium",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const OverlineXSmall = Template.bind({});
-OverlineXSmall.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "overlineXSmall",
-  weight: "normal",
-  as: "p",
+export const OverlineXSmall: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "overlineXSmall",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const ParagraphLarge = Template.bind({});
-ParagraphLarge.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "paragraphLarge",
-  weight: "normal",
-  as: "p",
+export const ParagraphLarge: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "paragraphLarge",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const ParagraphMedium = Template.bind({});
-ParagraphMedium.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "paragraphMedium",
-  weight: "normal",
-  as: "p",
+export const ParagraphMedium: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "paragraphMedium",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const ParagraphSmall = Template.bind({});
-ParagraphSmall.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "paragraphSmall",
-  weight: "normal",
-  as: "p",
+export const ParagraphSmall: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "paragraphSmall",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };
 
-export const ParagraphXSmall = Template.bind({});
-ParagraphXSmall.args = {
-  children:
-    "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
-  color: "neutral",
-  shade: "900",
-  type: "paragraphXSmall",
-  weight: "normal",
-  as: "p",
+export const ParagraphXSmall: Story = {
+  args: {
+    children:
+      "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
+    color: "neutral",
+    shade: "900",
+    type: "paragraphXSmall",
+    weight: "normal",
+    as: "p",
+  },
+  render: (args: any) => (
+    <>
+      {args.type} {args.color}-{args.shade} {args.weight}; rendered inside &lt;
+      {args.as}&gt;
+      <Text {...args} />
+    </>
+  ),
 };

@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 import Box, { BoxProps } from "../../../../lib/components/Box";
@@ -9,9 +9,12 @@ import {
   spacingOptions,
 } from "../../../constants/options";
 
-export default {
+const meta = {
   title: "Components/Box",
   component: Box,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     margin: {
       control: {
@@ -113,163 +116,229 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Box>;
+} as Meta<typeof Box>;
 
-const Template: Story<BoxProps> = (args) => (
-  <Box {...args}>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-    <Box
-      padding="zero"
-      borderRadius="zero"
-      margin="zero"
-      backgroundColor="primary"
-      backgroundShade="500"
-    >
-      Child
-    </Box>
-  </Box>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
-
-const TemplateWidths: Story<BoxProps> = (args) => (
-  <Box
-    direction="row"
-    backgroundColor="secondary"
-    padding="md"
-    margin="zero"
-    colGap="zero"
-    rowGap="zero"
-  >
-    <Box backgroundColor="destructive" {...args}>
-      Child
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <Box {...args}>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
     </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-    <Box backgroundColor="destructive" {...args}>
-      Child
-    </Box>
-  </Box>
-);
-
-export const DifferentWidths = TemplateWidths.bind({});
-
-export const GridMode = Template.bind({});
-GridMode.args = {
-  display: "grid",
-  gridColumns: "1fr 2fr 1fr",
-  gridRows: "1fr 2fr",
-  justify: "stretch",
-  align: "stretch",
-  colGap: "md",
-  rowGap: "md",
+  ),
 };
 
-export const CustomGrid: Story<BoxProps> = () => (
-  <Box
-    backgroundColor="white"
-    colGap="md"
-    rowGap="md"
-    gridRows="1fr 2fr 1fr"
-    gridColumns="1fr 2fr 1fr 1fr"
-    display="grid"
-    align="stretch"
-  >
+export const DifferentWidths: Story = {
+  args: {},
+  render: (args) => (
     <Box
-      backgroundColor="destructive"
-      gridArea="1 / 1 / 4 / 2"
-      justify="center"
+      direction="row"
+      backgroundColor="secondary"
+      padding="md"
+      margin="zero"
+      colGap="zero"
+      rowGap="zero"
     >
-      1 / 1 / 4 / 2
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
+      <Box backgroundColor="destructive" {...args}>
+        Child
+      </Box>
     </Box>
+  ),
+};
+
+export const GridMode: Story = {
+  args: {
+    display: "grid",
+    gridColumns: "1fr 2fr 1fr",
+    gridRows: "1fr 2fr",
+    justify: "stretch",
+    align: "stretch",
+    colGap: "md",
+    rowGap: "md",
+  },
+  render: (args) => (
+    <Box {...args}>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+      <Box
+        padding="zero"
+        borderRadius="zero"
+        margin="zero"
+        backgroundColor="primary"
+        backgroundShade="500"
+      >
+        Child
+      </Box>
+    </Box>
+  ),
+};
+
+export const CustomGrid: Story = {
+  args: {},
+  render: () => (
     <Box
-      backgroundColor="destructive"
-      gridArea="2 / 2 / -1 / -1"
-      justify="center"
+      backgroundColor="white"
+      colGap="md"
+      rowGap="md"
+      gridRows="1fr 2fr 1fr"
+      gridColumns="1fr 2fr 1fr 1fr"
+      display="grid"
+      align="stretch"
     >
-      2 / 2 / -1 / -1
+      <Box
+        backgroundColor="destructive"
+        gridArea="1 / 1 / 4 / 2"
+        justify="center"
+      >
+        1 / 1 / 4 / 2
+      </Box>
+      <Box
+        backgroundColor="destructive"
+        gridArea="2 / 2 / -1 / -1"
+        justify="center"
+      >
+        2 / 2 / -1 / -1
+      </Box>
+      <Box backgroundColor="destructive" justify="center">
+        auto
+      </Box>
+      <Box backgroundColor="destructive" justify="center">
+        auto
+      </Box>
+      <Box backgroundColor="destructive" justify="center">
+        auto
+      </Box>
     </Box>
-    <Box backgroundColor="destructive" justify="center">
-      auto
-    </Box>
-    <Box backgroundColor="destructive" justify="center">
-      auto
-    </Box>
-    <Box backgroundColor="destructive" justify="center">
-      auto
-    </Box>
-  </Box>
-);
+  ),
+};

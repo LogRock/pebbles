@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 import Divider, { DividerProps } from "../../../../lib/components/Divider";
@@ -8,9 +8,12 @@ import {
   spacingOptions,
 } from "../../../constants/options";
 
-export default {
+const meta = {
   title: "Components/Divider",
   component: Divider,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     spaceAfter: {
       control: {
@@ -37,17 +40,20 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Divider>;
+} as Meta<typeof Divider>;
 
-const Template: Story<DividerProps> = (args) => (
-  <>
-    <Divider {...args} />
-    <Divider {...args} />
-    <Divider {...args} />
-    <Divider {...args} />
-    <Divider {...args} />
-  </>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <>
+      <Divider {...args} />
+      <Divider {...args} />
+      <Divider {...args} />
+      <Divider {...args} />
+      <Divider {...args} />
+    </>
+  ),
+};

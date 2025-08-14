@@ -1,61 +1,95 @@
 import React from "react";
 import NotificationDot from "../../../../lib/components/NotificationDot";
-import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import { STATUS_TAG_VARIANTS } from "../../../../lib/main";
 
-export default {
+const meta = {
   title: "Components/NotificationDot",
   component: NotificationDot,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: { onChange: { action: "changed" } },
-} as ComponentMeta<typeof NotificationDot>;
+} as Meta<typeof NotificationDot>;
 
-const Template: ComponentStory<typeof NotificationDot> = (args) => (
-  <NotificationDot {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: "WAIT, THIS IS NEUTRAL ALT!",
+export const Default: Story = {
+  args: {
+    children: "WAIT, THIS IS NEUTRAL ALT!",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const Destructive = Template.bind({});
-Destructive.args = {
-  variant: STATUS_TAG_VARIANTS.DESTRUCTIVE,
-  children: "X",
+export const Destructive: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.DESTRUCTIVE,
+    children: "X",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const DestructiveAlt = Template.bind({});
-DestructiveAlt.args = {
-  variant: STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT,
-  children: "0",
+export const DestructiveAlt: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.DESTRUCTIVE_ALT,
+    children: "0",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  variant: STATUS_TAG_VARIANTS.SUCCESS,
-  children: "9",
+export const Success: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.SUCCESS,
+    children: "9",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const SuccessAlt = Template.bind({});
-SuccessAlt.args = {
-  variant: STATUS_TAG_VARIANTS.SUCCESS_ALT,
-  children: "OK",
+export const SuccessAlt: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.SUCCESS_ALT,
+    children: "OK",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  variant: STATUS_TAG_VARIANTS.WARNING,
-  children: "NOK",
+export const Warning: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.WARNING,
+    children: "NOK",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const WarningAlt = Template.bind({});
-WarningAlt.args = {
-  variant: STATUS_TAG_VARIANTS.WARNING_ALT,
-  children: "WAIT...",
+export const WarningAlt: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.WARNING_ALT,
+    children: "WAIT...",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };
 
-export const Neutral = Template.bind({});
-Neutral.args = {
-  variant: STATUS_TAG_VARIANTS.NEUTRAL_ALT,
-  children: "NICE",
+export const Neutral: Story = {
+  args: {
+    variant: STATUS_TAG_VARIANTS.NEUTRAL_ALT,
+    children: "NICE",
+  },
+  render: (args) => (
+    <NotificationDot {...args} />
+  ),
 };

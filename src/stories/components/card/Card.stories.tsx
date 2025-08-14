@@ -1,51 +1,73 @@
 import React, { PropsWithChildren } from "react";
 import Card from "../../../../lib/components/Card";
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import { CardProps } from "../../../../lib/components/Card/Card";
 
-export default {
+const meta = {
   title: "components/Card",
   component: Card,
-} as ComponentMeta<typeof Card>;
+  parameters: {
+    layout: "centered",
+  },
+} as Meta<typeof Card>;
 
-const Template: Story<PropsWithChildren<CardProps>> = (args) => (
-  <Card {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: "Some content",
-};
-
-export const HugePadding = Template.bind({});
-HugePadding.args = {
-  padding: "huge",
-  children: "Some content",
-};
-
-export const UpXXLargeShadow = Template.bind({});
-UpXXLargeShadow.args = {
-  children: "Some content",
-  shadow: "upXxLarge",
-};
-
-export const LgRadius = Template.bind({});
-LgRadius.args = {
-  children: (
-    <>
-      Some content
-      <br />
-      Some content
-      <br />
-      Some content
-      <br />
-      Some content
-    </>
+export const Default: Story = {
+  args: {
+    children: "Some content",
+  },
+  render: (args: any) => (
+    <Card {...args} />
   ),
-  radius: "lg",
 };
 
-export const Image = Template.bind({});
-Image.args = {
-  children: <img src="https://placekitten.com/200/200" />,
+export const HugePadding: Story = {
+  args: {
+    padding: "huge",
+    children: "Some content",
+  },
+  render: (args: any) => (
+    <Card {...args} />
+  ),
+};
+
+export const UpXXLargeShadow: Story = {
+  args: {
+    children: "Some content",
+    shadow: "upXxLarge",
+  },
+  render: (args: any) => (
+    <Card {...args} />
+  ),
+};
+
+export const LgRadius: Story = {
+  args: {
+    children: (
+      <>
+        Some content
+        <br />
+        Some content
+        <br />
+        Some content
+        <br />
+        Some content
+      </>
+    ),
+    radius: "lg",
+  },
+  render: (args: any) => (
+    <Card {...args} />
+  ),
+};
+
+export const Image: Story = {
+  args: {
+    children: <img src="https://placekitten.com/200/200" />,
+  },
+  render: (args: any) => (
+    <Card {...args} />
+  ),
 };

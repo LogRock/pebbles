@@ -1,40 +1,62 @@
 import React from "react";
 import DateInput from "../../../../lib/components/DateInput/DateInput";
-import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import { BsAlarm } from "react-icons/bs";
 
-export default {
+const meta = {
   title: "Components/DateInput",
   component: DateInput,
-} as ComponentMeta<typeof DateInput>;
+  parameters: {
+    layout: "centered",
+  },
+} as Meta<typeof DateInput>;
 
-const Template: ComponentStory<typeof DateInput> = (args) => (
-  <DateInput {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: "Date",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <DateInput {...args} />
+  ),
 };
 
-export const WithHelperText = Template.bind({});
-WithHelperText.args = {
-  helper: "Helper text",
+export const WithLabel: Story = {
+  args: {
+    label: "Date",
+  },
+  render: (args) => (
+    <DateInput {...args} />
+  ),
 };
 
-export const WithHelperIcon = Template.bind({});
-WithHelperIcon.args = {
-  helperIcon: <BsAlarm />,
-  label: "email",
-  helper: "something",
+export const WithHelperText: Story = {
+  args: {
+    helper: "Helper text",
+  },
+  render: (args) => (
+    <DateInput {...args} />
+  ),
 };
 
-export const WithError = Template.bind({});
-WithError.args = {
-  label: "email",
-  helper: "something",
-  destructive: true,
+export const WithHelperIcon: Story = {
+  args: {
+    helperIcon: <BsAlarm />,
+    label: "email",
+    helper: "something",
+  },
+  render: (args) => (
+    <DateInput {...args} />
+  ),
+};
+
+export const WithError: Story = {
+  args: {
+    label: "email",
+    helper: "something",
+    destructive: true,
+  },
+  render: (args) => (
+    <DateInput {...args} />
+  ),
 };

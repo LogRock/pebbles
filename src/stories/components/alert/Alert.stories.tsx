@@ -1,5 +1,5 @@
-import React, { ComponentProps } from "react";
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 import {
   BsExclamationSquareFill,
   BsCheckCircleFill,
@@ -9,9 +9,12 @@ import {
 import Alert from "../../../../lib/components/Alert";
 import { colorOptions } from "../../../constants/options";
 
-export default {
+const meta = {
   title: "Components/Alert",
   component: Alert,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     status: {
       control: {
@@ -20,115 +23,135 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Alert>;
+} as Meta<typeof Alert>;
 
-const Template: Story<ComponentProps<typeof Alert>> = (args) => (
-  <Alert {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  children: "Look, I was gonna go easy on you not to hurt your feelings",
-  icon: <BsCheckCircleFill />,
-  primaryButtonContents: "No Icon",
-  secondaryButtonContents: "No Icon",
+const Template = (args: any) => <Alert {...args} />;
+
+export const Default: Story = {
+  args: {
+    children: "Look, I was gonna go easy on you not to hurt your feelings",
+    icon: <BsCheckCircleFill />,
+    primaryButtonContents: "No Icon",
+    secondaryButtonContents: "No Icon",
+  },
+  render: Template,
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: "But I'm only going to get this one chance",
-  status: "primary",
-  icon: "Icon Can Be Anything Renderable",
-  primaryButtonContents: "Start Icon",
-  primaryButtonIconStart: <BsHeart />,
-  secondaryButtonContents: "Start Icon",
-  secondaryButtonIconStart: <BsHeart />,
+export const Primary: Story = {
+  args: {
+    children: "But I'm only going to get this one chance",
+    status: "primary",
+    icon: "Icon Can Be Anything Renderable",
+    primaryButtonContents: "Start Icon",
+    primaryButtonIconStart: <BsHeart />,
+    secondaryButtonContents: "Start Icon",
+    secondaryButtonIconStart: <BsHeart />,
+  },
+  render: Template,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  children: "But I'm only going to get this one chance",
-  status: "secondary",
-  icon: "Icon Can Be Anything Renderable",
-  primaryButtonContents: "End Icon",
-  primaryButtonIconEnd: <BsHeart />,
-  secondaryButtonContents: "End Icon",
-  secondaryButtonIconEnd: <BsHeart />,
+export const Secondary: Story = {
+  args: {
+    children: "But I'm only going to get this one chance",
+    status: "secondary",
+    icon: "Icon Can Be Anything Renderable",
+    primaryButtonContents: "End Icon",
+    primaryButtonIconEnd: <BsHeart />,
+    secondaryButtonContents: "End Icon",
+    secondaryButtonIconEnd: <BsHeart />,
+  },
+  render: Template,
 };
 
-export const Neutral = Template.bind({});
-Neutral.args = {
-  children: "Something's wrong, I can feel it",
-  status: "neutral",
-  icon: "😉",
-  primaryButtonContents: "Dual Icons",
-  primaryButtonIconStart: <BsHeart />,
-  primaryButtonIconEnd: <BsHeart />,
-  secondaryButtonContents: "Dual Icons",
-  secondaryButtonIconStart: <BsHeart />,
-  secondaryButtonIconEnd: <BsHeart />,
+export const Neutral: Story = {
+  args: {
+    children: "Something's wrong, I can feel it",
+    status: "neutral",
+    icon: "😉",
+    primaryButtonContents: "Dual Icons",
+    primaryButtonIconStart: <BsHeart />,
+    primaryButtonIconEnd: <BsHeart />,
+    secondaryButtonContents: "Dual Icons",
+    secondaryButtonIconStart: <BsHeart />,
+    secondaryButtonIconEnd: <BsHeart />,
+  },
+  render: Template,
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  children: "Something's wrong, I can feel it",
-  status: "success",
-  icon: "😉",
-  primaryButtonContents: "OK",
-  secondaryButtonContents: "Nice",
+export const Success: Story = {
+  args: {
+    children: "Something's wrong, I can feel it",
+    status: "success",
+    icon: "😉",
+    primaryButtonContents: "OK",
+    secondaryButtonContents: "Nice",
+  },
+  render: Template,
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  children:
-    "Just a feeling I've got, like something's about to happen, but I don't know what",
-  status: "warning",
-  icon: <img src="https://placekitten.com/80/80" />,
-  primaryButtonContents: "Damn",
-  secondaryButtonContents: "Oops",
+export const Warning: Story = {
+  args: {
+    children:
+      "Just a feeling I've got, like something's about to happen, but I don't know what",
+    status: "warning",
+    icon: <img src="https://placekitten.com/80/80" />,
+    primaryButtonContents: "Damn",
+    secondaryButtonContents: "Oops",
+  },
+  render: Template,
 };
 
-export const Destructive = Template.bind({});
-Destructive.args = {
-  children:
-    "If that means what I think it means, we're in trouble, big trouble",
-  status: "destructive",
-  icon: <BsExclamationSquareFill />,
-  primaryButtonContents: "NOK",
-  secondaryButtonContents: "Bad",
+export const Destructive: Story = {
+  args: {
+    children:
+      "If that means what I think it means, we're in trouble, big trouble",
+    status: "destructive",
+    icon: <BsExclamationSquareFill />,
+    primaryButtonContents: "NOK",
+    secondaryButtonContents: "Bad",
+  },
+  render: Template,
 };
 
-export const White = Template.bind({});
-White.args = {
-  children: "And if he is as bananas as you say, I'm not taking any chances",
-  status: "white",
-  icon: "🅱️",
-  primaryButtonContents: "White",
-  secondaryButtonContents: "White",
+export const White: Story = {
+  args: {
+    children: "And if he is as bananas as you say, I'm not taking any chances",
+    status: "white",
+    icon: "🅱️",
+    primaryButtonContents: "White",
+    secondaryButtonContents: "White",
+  },
+  render: Template,
 };
 
-export const Black = Template.bind({});
-Black.args = {
-  children: "I'm beginnin' to feel like a Rap God, Rap God",
-  status: "black",
-  icon: "X",
-  primaryButtonContents: "Black",
-  secondaryButtonContents: "Black",
+export const Black: Story = {
+  args: {
+    children: "I'm beginnin' to feel like a Rap God, Rap God",
+    status: "black",
+    icon: "X",
+    primaryButtonContents: "Black",
+    secondaryButtonContents: "Black",
+  },
+  render: Template,
 };
 
-export const Custom = Template.bind({});
-Custom.args = {
-  children: "You can override everything with Box props",
-  icon: <BsCheckCircleFill />,
-  primaryButtonContents: "Black",
-  secondaryButtonContents: "Black",
-  colGap: "huge",
-  borderRadius: "xxxhuge",
-  backgroundColor: "success",
-  backgroundShade: "300",
-  borderColor: "destructive",
-  borderShade: "500",
-  borderWidth: "xxbig",
-
-  padding: "huge",
+export const Custom: Story = {
+  args: {
+    children: "You can override everything with Box props",
+    icon: <BsCheckCircleFill />,
+    primaryButtonContents: "Black",
+    secondaryButtonContents: "Black",
+    colGap: "huge",
+    borderRadius: "xxxhuge",
+    backgroundColor: "success",
+    backgroundShade: "300",
+    borderColor: "destructive",
+    borderShade: "500",
+    borderWidth: "xxbig",
+    padding: "huge",
+  },
+  render: Template,
 };
