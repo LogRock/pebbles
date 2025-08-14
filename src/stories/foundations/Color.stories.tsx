@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import React, { ComponentProps, PropsWithChildren } from "react";
+import React from "react";
 
 import Color from "./Color";
 
@@ -34,6 +34,7 @@ export const Neutral: Story = {
   args: {
     color: "neutral",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />
@@ -54,6 +55,7 @@ export const Primary: Story = {
   args: {
     color: "primary",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />
@@ -74,6 +76,7 @@ export const Secondary: Story = {
   args: {
     color: "secondary",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />
@@ -94,6 +97,7 @@ export const Success: Story = {
   args: {
     color: "success",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />
@@ -114,6 +118,7 @@ export const Warning: Story = {
   args: {
     color: "warning",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />
@@ -134,6 +139,7 @@ export const Destructive: Story = {
   args: {
     color: "destructive",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <>
       <Color {...args} shade="50" />

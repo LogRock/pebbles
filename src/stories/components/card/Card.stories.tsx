@@ -1,7 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 import Card from "../../../../lib/components/Card";
 import { Meta, StoryObj } from "@storybook/react";
-import { CardProps } from "../../../../lib/components/Card/Card";
 
 const meta = {
   title: "components/Card",
@@ -18,6 +17,7 @@ export const Default: Story = {
   args: {
     children: "Some content",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <Card {...args} />
   ),
@@ -28,6 +28,7 @@ export const HugePadding: Story = {
     padding: "huge",
     children: "Some content",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <Card {...args} />
   ),
@@ -38,6 +39,7 @@ export const UpXXLargeShadow: Story = {
     children: "Some content",
     shadow: "upXxLarge",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <Card {...args} />
   ),
@@ -58,6 +60,7 @@ export const LgRadius: Story = {
     ),
     radius: "lg",
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <Card {...args} />
   ),
@@ -67,6 +70,7 @@ export const Image: Story = {
   args: {
     children: <img src="https://placekitten.com/200/200" />,
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   render: (args: any) => (
     <Card {...args} />
   ),
