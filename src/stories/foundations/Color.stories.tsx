@@ -1,11 +1,14 @@
-import { ComponentMeta, Story } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import React, { ComponentProps, PropsWithChildren } from "react";
 
 import Color from "./Color";
 
-export default {
+const meta = {
   title: "Foundations/Colors/Primary Colors",
   component: Color,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     color: {
       options: [
@@ -22,51 +25,127 @@ export default {
       control: { type: "hidden" },
     },
   },
-} as ComponentMeta<typeof Color>;
+} as Meta<typeof Color>;
 
-const Template: Story<PropsWithChildren<ComponentProps<typeof Color>>> = (
-  args
-) => (
-  <>
-    <Color {...args} shade="50" />
-    <Color {...args} shade="100" />
-    <Color {...args} shade="200" />
-    <Color {...args} shade="300" />
-    <Color {...args} shade="400" />
-    <Color {...args} shade="500" />
-    <Color {...args} shade="600" />
-    <Color {...args} shade="700" />
-    <Color {...args} shade="800" />
-    <Color {...args} shade="900" />
-  </>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Neutral = Template.bind({});
-Neutral.args = {
-  color: "neutral",
+export const Neutral: Story = {
+  args: {
+    color: "neutral",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  color: "primary",
+export const Primary: Story = {
+  args: {
+    color: "primary",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  color: "secondary",
+export const Secondary: Story = {
+  args: {
+    color: "secondary",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  color: "success",
+export const Success: Story = {
+  args: {
+    color: "success",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  color: "warning",
+export const Warning: Story = {
+  args: {
+    color: "warning",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };
 
-export const Destructive = Template.bind({});
-Destructive.args = {
-  color: "destructive",
+export const Destructive: Story = {
+  args: {
+    color: "destructive",
+  },
+  render: (args: any) => (
+    <>
+      <Color {...args} shade="50" />
+      <Color {...args} shade="100" />
+      <Color {...args} shade="200" />
+      <Color {...args} shade="300" />
+      <Color {...args} shade="400" />
+      <Color {...args} shade="500" />
+      <Color {...args} shade="600" />
+      <Color {...args} shade="700" />
+      <Color {...args} shade="800" />
+      <Color {...args} shade="900" />
+    </>
+  ),
 };

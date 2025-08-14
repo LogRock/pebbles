@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "../../../../lib/components/Select2";
-import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import styled from "styled-components";
 
 const autoCompleteItems = [
@@ -38,11 +38,17 @@ const autoCompleteItems = [
   },
 ];
 
-export default {
+const meta = {
   title: "Components/Select",
   component: Select,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: { onChange: { action: "changed" } },
-} as ComponentMeta<typeof Select>;
+} as Meta<typeof Select>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const DivStyled = styled.div`
   /* CUSTOM SCROLL BAR */
@@ -69,87 +75,147 @@ const DivStyled = styled.div`
   }
 `;
 
-const Template: ComponentStory<typeof Select> = (args) => (
-  <DivStyled>
-    <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
-  </DivStyled>
-);
-
-export const Default = Template.bind({});
-Default.args = {};
-
-export const Destructive = Template.bind({});
-Destructive.args = {
-  destructive: true,
-  helper: "I am a destructive select",
-  label: "Destructive select",
+export const Default: Story = {
+  args: {},
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const Required = Template.bind({});
-Required.args = {
-  required: true,
-  label: "Required select",
+export const Destructive: Story = {
+  args: {
+    destructive: true,
+    helper: "I am a destructive select",
+    label: "Destructive select",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: "Some label",
+export const Required: Story = {
+  args: {
+    required: true,
+    label: "Required select",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const WithHelper = Template.bind({});
-WithHelper.args = {
-  helper: "Some helper, Notice the dropdown now has some margin-top around me",
+export const WithLabel: Story = {
+  args: {
+    label: "Some label",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const Clearable = Template.bind({});
-Clearable.args = {
-  isClearable: true,
-  label: "Select something and you can then erase it",
+export const WithHelper: Story = {
+  args: {
+    helper: "Some helper, Notice the dropdown now has some margin-top around me",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const Searchable = Template.bind({});
-Searchable.args = {
-  isSearchable: true,
-  label: "Type something",
+export const Clearable: Story = {
+  args: {
+    isClearable: true,
+    label: "Select something and you can then erase it",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const Multi = Template.bind({});
-Multi.args = {
-  isMulti: true,
-  hideSelectedOptions: false,
-  label: "Select many",
+export const Searchable: Story = {
+  args: {
+    isSearchable: true,
+    label: "Type something",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const MultiWithValue = Template.bind({});
-MultiWithValue.args = {
-  isMulti: true,
-  hideSelectedOptions: false,
-  label: "Select many",
-  defaultValue: [
-    {
-      value: "1",
-      label: "First Item",
-    },
-    {
-      value: "2",
-      label: "Second Item",
-    },
-  ],
+export const Multi: Story = {
+  args: {
+    isMulti: true,
+    hideSelectedOptions: false,
+    label: "Select many",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const AllInOne = Template.bind({});
-AllInOne.args = {
-  isClearable: true,
-  isMulti: true,
-  isSearchable: true,
-  label: "Turn everything ON at once!",
-  helper: "For all available options, see the react-select docs",
+export const MultiWithValue: Story = {
+  args: {
+    isMulti: true,
+    hideSelectedOptions: false,
+    label: "Select many",
+    defaultValue: [
+      {
+        value: "1",
+        label: "First Item",
+      },
+      {
+        value: "2",
+        label: "Second Item",
+      },
+    ],
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };
 
-export const BottomSheetWithHeaderAndFooter = Template.bind({});
-BottomSheetWithHeaderAndFooter.args = {
-  useBottomSheet: true,
-  bottomSheetHeader: <p>Header</p>,
-  bottomSheetFooter: <p>Footer</p>,
-  bottomSheetPlaceholder: "bottomSheetPlaceholder",
+export const AllInOne: Story = {
+  args: {
+    isClearable: true,
+    isMulti: true,
+    isSearchable: true,
+    label: "Turn everything ON at once!",
+    helper: "For all available options, see the react-select docs",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
+};
+
+export const BottomSheetWithHeaderAndFooter: Story = {
+  args: {
+    useBottomSheet: true,
+    bottomSheetHeader: <p>Header</p>,
+    bottomSheetFooter: <p>Footer</p>,
+    bottomSheetPlaceholder: "bottomSheetPlaceholder",
+  },
+  render: (args) => (
+    <DivStyled>
+      <Select {...args} maxMenuHeight={120} options={autoCompleteItems} />
+    </DivStyled>
+  ),
 };

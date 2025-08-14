@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react-vite";
+import { Meta, StoryObj } from "@storybook/react";
 import { Select2 } from "../../../../lib/main";
 import Panel, { PanelsItems } from "../../../../lib/components/Panel";
 import { BsAlarm, BsArrowBarUp } from "react-icons/bs";
@@ -32,19 +32,25 @@ const panelsItems: PanelsItems[] = [
   },
 ];
 
-export default {
+const meta = {
   title: "Components/Panel",
   component: Panel,
-} as ComponentMeta<typeof Panel>;
+  parameters: {
+    layout: "centered",
+  },
+} as Meta<typeof Panel>;
 
-const Template: ComponentStory<typeof Panel> = (args) => (
-  <Panel expandButtonAlign="right" {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-  panelsItems: panelsItems,
-  openedPanelIndex: 0,
+export const Default: Story = {
+  args: {
+    panelsItems: panelsItems,
+    openedPanelIndex: 0,
+  },
+  render: (args) => (
+    <Panel expandButtonAlign="right" {...args} />
+  ),
 };
 
 const panelTitleItems = [
@@ -82,8 +88,12 @@ const panelTitleItems = [
   },
 ];
 
-export const TitleComponent = Template.bind({});
-TitleComponent.args = {
-  panelsItems: panelTitleItems,
-  openedPanelIndex: 0,
+export const TitleComponent: Story = {
+  args: {
+    panelsItems: panelTitleItems,
+    openedPanelIndex: 0,
+  },
+  render: (args) => (
+    <Panel expandButtonAlign="right" {...args} />
+  ),
 };
