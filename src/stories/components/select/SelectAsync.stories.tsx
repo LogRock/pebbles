@@ -1,6 +1,6 @@
 import React from "react";
 import SelectAsync from "../../../../lib/components/SelectAsync";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 const loadOptionsAsync = (inputValue: string) =>
   new Promise<{ value: string; label: string }[]>((resolve) => {
@@ -42,9 +42,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const Destructive: Story = {
@@ -53,9 +51,7 @@ export const Destructive: Story = {
     helper: "I am a destructive select",
     label: "Destructive select",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const Required: Story = {
@@ -63,27 +59,22 @@ export const Required: Story = {
     required: true,
     label: "Required select",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const WithLabel: Story = {
   args: {
     label: "Some label",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const WithHelper: Story = {
   args: {
-    helper: "Some helper, Notice the dropdown now has some margin-top around me",
+    helper:
+      "Some helper, Notice the dropdown now has some margin-top around me",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const Clearable: Story = {
@@ -91,9 +82,7 @@ export const Clearable: Story = {
     isClearable: true,
     label: "Select something and you can then erase it",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const Searchable: Story = {
@@ -101,9 +90,7 @@ export const Searchable: Story = {
     isSearchable: true,
     label: "Type something",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const Multi: Story = {
@@ -111,9 +98,7 @@ export const Multi: Story = {
     isMulti: true,
     label: "Select many",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };
 
 export const AllInOne: Story = {
@@ -124,7 +109,5 @@ export const AllInOne: Story = {
     label: "Turn everything ON at once!",
     helper: "For all available options, see the react-select docs",
   },
-  render: (args) => (
-    <SelectAsync {...args} loadOptions={loadOptionsAsync} />
-  ),
+  render: (args) => <SelectAsync {...args} loadOptions={loadOptionsAsync} />,
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { Select2 } from "../../../../lib/main";
 import Panel, { PanelsItems } from "../../../../lib/components/Panel";
 import { BsAlarm, BsArrowBarUp } from "react-icons/bs";
@@ -48,9 +48,7 @@ export const Default: Story = {
     panelsItems: panelsItems,
     openedPanelIndex: 0,
   },
-  render: (args) => (
-    <Panel expandButtonAlign="right" {...args} />
-  ),
+  render: (args) => <Panel expandButtonAlign="right" {...args} />,
 };
 
 const panelTitleItems = [
@@ -93,7 +91,5 @@ export const TitleComponent: Story = {
     panelsItems: panelTitleItems,
     openedPanelIndex: 0,
   },
-  render: (args) => (
-    <Panel expandButtonAlign="right" {...args} />
-  ),
+  render: (args) => <Panel expandButtonAlign="right" {...args} />,
 };

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 
 import Color from "./Color";
@@ -20,9 +20,6 @@ const meta = {
         "destructive",
       ],
       control: { type: "select", default: "neutral" },
-    },
-    shade: {
-      control: { type: "hidden" },
     },
   },
 } as Meta<typeof Color>;

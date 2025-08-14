@@ -1,6 +1,6 @@
 import React from "react";
 import DateInput from "../../../../lib/components/DateInput/DateInput";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { BsAlarm } from "react-icons/bs";
 
 const meta = {
@@ -16,27 +16,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
-  render: (args) => (
-    <DateInput {...args} />
-  ),
+  render: (args) => <DateInput {...args} />,
 };
 
 export const WithLabel: Story = {
   args: {
     label: "Date",
   },
-  render: (args) => (
-    <DateInput {...args} />
-  ),
+  render: (args) => <DateInput {...args} />,
 };
 
 export const WithHelperText: Story = {
   args: {
     helper: "Helper text",
   },
-  render: (args) => (
-    <DateInput {...args} />
-  ),
+  render: (args) => <DateInput {...args} />,
 };
 
 export const WithHelperIcon: Story = {
@@ -45,9 +39,7 @@ export const WithHelperIcon: Story = {
     label: "email",
     helper: "something",
   },
-  render: (args) => (
-    <DateInput {...args} />
-  ),
+  render: (args) => <DateInput {...args} />,
 };
 
 export const WithError: Story = {
@@ -56,7 +48,5 @@ export const WithError: Story = {
     helper: "something",
     destructive: true,
   },
-  render: (args) => (
-    <DateInput {...args} />
-  ),
+  render: (args) => <DateInput {...args} />,
 };
