@@ -5,8 +5,10 @@ import { light, dark } from "../lib/theme";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
-import "@fontsource/archivo";
-import "@fontsource/archivo/variable-full.css";
+import "@fontsource/archivo/400.css";
+import "@fontsource/archivo/500.css";
+import "@fontsource/archivo/600.css";
+import "./global.css";
 
 import { IconContext } from "react-icons";
 
